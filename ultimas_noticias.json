@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Wii / WiiFlow Lite",
+    "title": "v5.6.2 June 4th, 2026",
+    "link": "https://github.com/Fledge68/WiiFlow_Lite/releases/tag/v5.6.2",
+    "date": "2026-06-04T23:00:05.000Z"
+  },
+  {
     "tag": "Switch / Switch Theme Injector",
     "title": "NXThemesInstaller 2.9",
     "link": "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-2.9",
@@ -112,12 +118,6 @@
     "title": "WiiLink Patcher v2.1.3",
     "link": "https://github.com/WiiLink24/WiiLink24-Patcher/releases/tag/v2.1.3",
     "date": "2026-01-26T18:25:25.000Z"
-  },
-  {
-    "tag": "Wii / WiiFlow Lite",
-    "title": "v5.6.1 December 22nd, 2025",
-    "link": "https://github.com/Fledge68/WiiFlow_Lite/releases/tag/v5.6.1",
-    "date": "2025-12-22T12:02:07.000Z"
   },
   {
     "tag": "Wii / RiiConnect24 Patcher",
