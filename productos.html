@@ -255,8 +255,9 @@ body{
 .card-info .price-tag {
   color: var(--gold);
   font-weight: bold;
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: auto; /* Empuja el precio hacia la parte inferior de la info de forma simétrica */
+  padding-top: 8px;
+  font-size: 15px;
 }
 
 /* ================= SECCIÓN DE ACCIONES (GRID 2 BOTONES) ================= */
@@ -547,7 +548,7 @@ const translations = {
     home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", primeTitle: "AMAZON PRIME"
   },
   pt: { 
-    title: "Produtos | La Presa", search: "Buscar produtos...", topVentas: "TOP VENDAS", 
+    title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", 
     home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", primeTitle: "AMAZON PRIME"
   },
   de: { 
@@ -683,8 +684,8 @@ function renderConsoleButtons(){
       document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       categoriaActual = cat.id;
-      document.getElementById('productSearch').value = ''; // Limpiar búsqueda al cambiar categoría
-      document.getElementById('featuredContainer').style.display = 'block'; // Mostrar descatacados
+      document.getElementById('productSearch').value = ''; 
+      document.getElementById('featuredContainer').style.display = 'block'; 
       document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
       renderProducts(cat.id, '');
     };
@@ -735,28 +736,33 @@ async function cargarProductos() {
   }
 }
 
-/* ================= CREADOR DE TARJETAS ================= */
+/* ================= CREADOR DE TARJETAS INTELIGENTE CON PRECIO ================= */
 function createProductCard(item, container, isMini = false) {
   const card = document.createElement('div');
   card.className = isMini ? 'card card-recent' : 'card';
   
   const t = translations[idiomaActual] || translations.es;
   const label = item.label?.[idiomaActual] || item.label?.es || 'Producto';
-  const fullDesc = item.desc?.[idiomaActual] || item.desc?.es || '';
+  const desc = item.desc?.[idiomaActual] || item.desc?.es || '';
   
-  // Extraer precio de la segunda línea si existe (muy común en los JSON de Amazon Prime)
-  const lines = fullDesc.split('\n');
-  const desc = lines[0] || '';
-  const price = lines[1] || ''; 
+  // DETECTAR PRECIO: Prioriza el nuevo campo directo 'price'. Si no existe (productos viejos), usa el método anterior.
+  let price = item.price || ''; 
+  let finalDesc = desc;
+
+  if (!price && desc.includes('\n')) {
+    const lines = desc.split('\n');
+    finalDesc = lines[0] || '';
+    price = lines[1] || '';
+  }
 
   const iconCart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
-  const iconZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+  const iconZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
 
   card.innerHTML = `
     <img src="${item.img}" loading="lazy" alt="${label}">
     <div class="card-info">
       <strong>${label}</strong>
-      <p>${desc}</p>
+      <p>${finalDesc}</p>
       ${price ? `<div class="price-tag">${price}</div>` : ''}
     </div>
     <div class="card-actions">
@@ -787,7 +793,6 @@ function renderPrimeList() {
   const container = document.getElementById('primeCarousel');
   container.innerHTML = '';
   
-  // Ocultamos el título original h2
   const titleElement = document.getElementById('titlePrime');
   if(titleElement) titleElement.style.display = 'none';
   
@@ -797,9 +802,7 @@ function renderPrimeList() {
   
   if(primeItems.length > 0) {
     const item = primeItems[0];
-    const t = translations[idiomaActual] || translations.es;
     
-    // Textos estáticos solicitados para el Hero
     const desc = "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.";
     const price = "Suscríbete por 4,99€/mes o 49,90 €/año."; 
     
@@ -808,7 +811,6 @@ function renderPrimeList() {
     const banner = document.createElement('div');
     banner.className = 'prime-hero';
     
-    // Imagen del producto obtenida del JSON
     banner.style.backgroundImage = `url('${item.img}')`;
     
     banner.innerHTML = `
@@ -836,7 +838,6 @@ function renderBestsellers() {
   const container = document.getElementById('bestsellersCarousel');
   container.innerHTML = '';
 
-  // Lógica de "Top Ventas" basada en la fecha para que rote (mantenido del original)
   const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
   const seed = dayOfYear % featuredIds.length;
   const selected = [];
@@ -883,12 +884,11 @@ searchInput.addEventListener('input', () => {
   const val = searchInput.value;
   if(val.trim() !== '') {
     document.getElementById('featuredContainer').style.display = 'none';
-    document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); // Desmarcar categorías
+    document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); 
   } else {
     document.getElementById('featuredContainer').style.display = 'block';
     document.getElementById('currentCategoryTitle').textContent = (categories.find(c => c.id === categoriaActual).label[idiomaActual] || categories.find(c => c.id === categoriaActual).label.es).toUpperCase();
     
-    // Remarcar la categoría actual
     const btns = document.querySelectorAll('.console-btn');
     btns.forEach(btn => {
       if(btn.textContent.includes(categories.find(c => c.id === categoriaActual).label.es)) {
