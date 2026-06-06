@@ -201,6 +201,83 @@ body{
   display:none;
 }
 
+/* ================= BANNER AMAZON PRIME ================= */
+#primeBannerContainer {
+  display: none;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto 10px auto;
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.08), rgba(0, 170, 255, 0.02));
+  border: 1px solid rgba(0, 170, 255, 0.3);
+  border-radius: 12px;
+  padding: 15px 25px;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+#primeBannerContainer:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15);
+  border-color: rgba(0, 170, 255, 0.6);
+}
+#primeBannerContainer img {
+  width: 140px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.prime-banner-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.prime-banner-info strong {
+  font-size: 19px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.prime-banner-info p {
+  font-size: 14.5px;
+  color: #ddd;
+  line-height: 1.5;
+}
+.prime-banner-btn {
+  background: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 14px;
+}
+.prime-banner-btn:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  #primeBannerContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  #primeBannerContainer img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+  }
+  .prime-banner-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
 /* ================= CARDS SIMÉTRICAS ================= */
 .card{
   min-width:300px;
@@ -437,86 +514,6 @@ body{
   .card{ min-width:240px; width: 240px; }
   .card.card-recent{ min-width:180px; width: 180px; }
 }
-
-/* ================= PRIME BANNER ESTÁTICO ================= */
-.prime-banner-container {
-  width: 100%;
-  margin-bottom: 30px;
-  padding: 0 5%;
-}
-.prime-hero {
-  height: 55vh; 
-  min-height: 400px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 6%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px; 
-  overflow: hidden;
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
-}
-.prime-hero:hover {
-  transform: scale(1.02);
-  border-color: #00a8e1; 
-  box-shadow: 0 0 30px rgba(0, 168, 225, 0.4), 0 15px 30px rgba(0,0,0,0.6);
-  z-index: 20;
-}
-.prime-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(20,20,20,.96) 15%, rgba(20,20,20,.4) 60%, rgba(20,20,20,.96));
-}
-.prime-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-.prime-hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
-  color: #00a8e1; 
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-}
-.prime-hero p {
-  font-size: 1.15rem;
-  color: #ddd;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
-.prime-hero-price {
-  font-size: 1.5rem;
-  color: var(--gold);
-  font-weight: bold;
-  margin-bottom: 25px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
-.prime-hero button {
-  border: none;
-  background: #00a8e1; 
-  color: white;
-  padding: 15px 35px;
-  border-radius: 10px;
-  font-size: 1.05rem;
-  font-weight: 800;
-  cursor: pointer;
-  transition: background 0.3s, filter 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.prime-hero button:hover {
-  filter: brightness(1.2);
-}
-@media(max-width: 900px){
-  .prime-hero h1 { font-size: 2.5rem; }
-  .prime-hero p { font-size: 1rem; }
-  .prime-hero-price { font-size: 1.2rem; }
-}
 </style>
 </head>
 <body>
@@ -542,10 +539,8 @@ body{
 
 <div id="mainApp">
   <div id="featuredContainer" style="display:none">
-    <div class="row featured" id="primeRow" style="display:none;">
-      <h2 id="titlePrime">AMAZON PRIME</h2>
-      <div class="carousel" id="primeCarousel"></div>
-    </div>
+    
+    <div id="primeBannerContainer"></div>
     
     <div class="row featured" id="bestsellersRow" style="display:none;">
       <h2 id="titleBestsellers">TOP VENTAS</h2>
@@ -556,12 +551,10 @@ body{
   <div id="rowsContainer">
     <div class="row">
       <h2 id="currentCategoryTitle" style="font-size:2.5rem;">SWITCH</h2>
-      <!-- Paginación superior -->
       <div id="paginationContainerTop" class="pagination"></div>
       
       <div class="carousel" id="productsGrid" style="flex-wrap: wrap; overflow: visible;"></div>
       
-      <!-- Paginación inferior -->
       <div id="paginationContainerBottom" class="pagination"></div>
     </div>
   </div>
@@ -595,13 +588,12 @@ let paginaActual = 1;
 const itemsPorPagina = 24; 
 
 const categories = [
-  { id: 'Switch',   icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
-  { id: 'PS5',      icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
-  { id: 'Xbox',     icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
-  { id: '3DS',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS', en: '3DS' } },
-  { id: 'NDS',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', label: { es: 'NDS', en: 'NDS' } },
-  { id: 'Wii/WiiU', icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII / WII U', en: 'WII / WII U' } },
-  { id: 'SD/USB',   icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
+  { id: 'Switch',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
+  { id: 'PS5',       icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
+  { id: 'Xbox',      icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
+  { id: '3DS_NDS',   icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS / NDS', en: '3DS / NDS' } },
+  { id: 'Wii/WiiU',  icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII / WII U', en: 'WII / WII U' } },
+  { id: 'SD/USB',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
 ];
 
 const featuredIds = [1, 2, 3, 11, 13, 16, 62, 64, 8, 18, 4];
@@ -679,7 +671,8 @@ function updateLanguage(){
   document.title = t.title;
   document.getElementById('productSearch').placeholder = t.search;
   document.getElementById('titleBestsellers').textContent = t.topVentas;
-  document.getElementById('titlePrime').textContent = t.primeTitle;
+  // Actualizar banner si los productos ya están cargados
+  if (allProducts.length > 0) renderPrimeBanner(); 
 }
 
 /* ================= TOPBAR BOTONES DE CONSOLA ================= */
@@ -704,7 +697,7 @@ function renderConsoleButtons(){
       document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       categoriaActual = cat.id;
-      paginaActual = 1; // Resetear página al cambiar categoría
+      paginaActual = 1; 
       document.getElementById('productSearch').value = ''; 
       document.getElementById('featuredContainer').style.display = 'block'; 
       document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
@@ -714,14 +707,13 @@ function renderConsoleButtons(){
   });
 }
 
-/* ================= CARGA DE DATOS MULTI-ARCHIVOS ================= */
+/* ================= CARGA DE DATOS MULTI-ARCHIVOS NUEVOS ================= */
 async function cargarProductos() {
   try {
     const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/';
     const archivos = [
-      'productos.json', 'switch.json', '3ds.json', 'nds.json', 
-      'wii.json', 'wiiu.json', 'wiimini.json', 'ps5.json', 
-      'xbox.json', 'sd.json', 'usb.json', 'discoduro.json'
+      'switch.json', 'playstation.json', 'xbox.json', '3ds.json', 
+      'nds.json', 'wii_wii_u.json', 'sd_usb.json'
     ];
 
     const promesas = archivos.map(archivo => 
@@ -733,6 +725,7 @@ async function cargarProductos() {
     const resultadosArrays = await Promise.all(promesas);
     allProducts = resultadosArrays.flat();
     
+    renderPrimeBanner(); // <-- Renderizar el banner al cargar los productos
     renderProducts(categoriaActual);
 
   } catch (error) {
@@ -740,6 +733,39 @@ async function cargarProductos() {
     document.getElementById('productsGrid').innerHTML = 
       `<p style="color:var(--red); font-size:18px; padding:20px 0;">Error al cargar el catálogo de productos.</p>`;
   }
+}
+
+/* ================= RENDER BANNER PRIME ================= */
+function renderPrimeBanner() {
+  const primeProduct = allProducts.find(item => item.label?.es === "Amazon Prime");
+  const bannerContainer = document.getElementById('primeBannerContainer');
+  
+  if (!primeProduct) {
+     bannerContainer.style.display = 'none';
+     return;
+  }
+  
+  const t = translations[idiomaActual] || translations.es;
+  const label = primeProduct.label?.[idiomaActual] || primeProduct.label?.es || 'Amazon Prime';
+  const desc = primeProduct.desc?.[idiomaActual] || primeProduct.desc?.es || '';
+  
+  bannerContainer.innerHTML = `
+    <img src="${primeProduct.img}" alt="Amazon Prime">
+    <div class="prime-banner-info">
+      <strong>${label}</strong>
+      <p>${desc.replace(/\n/g, '<br>')}</p>
+    </div>
+    <button class="prime-banner-btn">${t.buy}</button>
+  `;
+  
+  bannerContainer.style.display = 'flex';
+  
+  // Hacer que el click en el botón o todo el banner abra el link
+  bannerContainer.onclick = () => window.open(primeProduct.url, '_blank');
+  bannerContainer.querySelector('.prime-banner-btn').onclick = (e) => {
+    e.stopPropagation();
+    window.open(primeProduct.url, '_blank');
+  };
 }
 
 /* ================= CREADOR DE TARJETAS INTELIGENTE ================= */
@@ -792,7 +818,7 @@ function createProductCard(item, container, isMini = false) {
   container.appendChild(card);
 }
 
-/* ================= RENDERIZADO PRINCIPAL ================= */
+/* ================= RENDERIZADO PRINCIPAL CON FILTRADO UNIFICADO ================= */
 function renderProducts(catId, searchTerm = '') {
   const grid = document.getElementById('productsGrid');
   grid.innerHTML = '';
@@ -811,7 +837,12 @@ function renderProducts(catId, searchTerm = '') {
     });
     document.getElementById('currentCategoryTitle').textContent = t.results.toUpperCase();
   } else {
-    filtered = filtered.filter(item => item.console === catId);
+    // UNIFICACIÓN DE FILTRO: Si se elige 3DS_NDS, junta los productos guardados como "3DS" y como "NDS"
+    if (catId === '3DS_NDS') {
+      filtered = filtered.filter(item => item.console === '3DS' || item.console === 'NDS');
+    } else {
+      filtered = filtered.filter(item => item.console === catId);
+    }
   }
 
   // 3. Manejar estado vacío
@@ -899,7 +930,7 @@ const searchInput = document.getElementById('productSearch');
 searchInput.addEventListener('input', () => {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    paginaActual = 1; // Resetear página al buscar
+    paginaActual = 1; 
     const val = searchInput.value;
     if(val.trim() !== '') {
       document.getElementById('featuredContainer').style.display = 'none';
@@ -916,7 +947,7 @@ searchInput.addEventListener('input', () => {
       });
     }
     renderProducts(categoriaActual, val);
-  }, 300); // 300ms debounce
+  }, 300); 
 });
 
 /* ================= MODAL IMAGEN ================= */
