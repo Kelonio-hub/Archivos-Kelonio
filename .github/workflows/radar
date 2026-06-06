@@ -1,4 +1,4 @@
-name: Actualizar Radar de Noticias
+name: Actualizar Radar de Noticias 
 
 on:
   schedule:
