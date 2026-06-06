@@ -255,12 +255,12 @@ body{
 .card-info .price-tag {
   color: var(--gold);
   font-weight: bold;
-  margin-top: auto; /* Empuja el precio hacia la parte inferior de la info de forma simétrica */
+  margin-top: auto;
   padding-top: 8px;
   font-size: 15px;
 }
 
-/* ================= SECCIÓN DE ACCIONES (GRID 2 BOTONES) ================= */
+/* ================= SECCIÓN DE ACCIONES ================= */
 .card-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -317,6 +317,47 @@ body{
 .card.card-recent .card-info p{
   font-size: 12px;
   -webkit-line-clamp: 2;
+}
+
+/* ================= PAGINACIÓN ================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#paginationContainerTop {
+  margin-bottom: 20px;
+}
+#paginationContainerBottom {
+  margin-top: 30px;
+}
+.page-btn {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .3s ease;
+  font-weight: bold;
+  font-size: 13px;
+}
+.page-btn:hover {
+  border-color: var(--red);
+  background: rgba(var(--glow-rgb),.15);
+}
+.page-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5);
+}
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ================= MODAL IMAGEN ================= */
@@ -397,7 +438,7 @@ body{
   .card.card-recent{ min-width:180px; width: 180px; }
 }
 
-/* ================= PRIME BANNER ESTÁTICO (Estilo Cabecera) ================= */
+/* ================= PRIME BANNER ESTÁTICO ================= */
 .prime-banner-container {
   width: 100%;
   margin-bottom: 30px;
@@ -476,7 +517,6 @@ body{
   .prime-hero p { font-size: 1rem; }
   .prime-hero-price { font-size: 1.2rem; }
 }
-
 </style>
 </head>
 <body>
@@ -501,7 +541,7 @@ body{
 </div>
 
 <div id="mainApp">
-  <div id="featuredContainer">
+  <div id="featuredContainer" style="display:none">
     <div class="row featured" id="primeRow" style="display:none;">
       <h2 id="titlePrime">AMAZON PRIME</h2>
       <div class="carousel" id="primeCarousel"></div>
@@ -516,7 +556,13 @@ body{
   <div id="rowsContainer">
     <div class="row">
       <h2 id="currentCategoryTitle" style="font-size:2.5rem;">SWITCH</h2>
+      <!-- Paginación superior -->
+      <div id="paginationContainerTop" class="pagination"></div>
+      
       <div class="carousel" id="productsGrid" style="flex-wrap: wrap; overflow: visible;"></div>
+      
+      <!-- Paginación inferior -->
+      <div id="paginationContainerBottom" class="pagination"></div>
     </div>
   </div>
 </div>
@@ -531,44 +577,22 @@ body{
 <script>
 /* ================= TRANSLACIONES ================= */
 const translations = {
-  en: { 
-    title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", 
-    home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results", primeTitle: "AMAZON PRIME"
-  },
-  es: { 
-    title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", 
-    home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", primeTitle: "AMAZON PRIME"
-  },
-  fr: { 
-    title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", 
-    home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", primeTitle: "AMAZON PRIME"
-  },
-  it: { 
-    title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", 
-    home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", primeTitle: "AMAZON PRIME"
-  },
-  pt: { 
-    title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", 
-    home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", primeTitle: "AMAZON PRIME"
-  },
-  de: { 
-    title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", 
-    home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", primeTitle: "AMAZON PRIME"
-  },
-  ja: { 
-    title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", 
-    home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果", primeTitle: "AMAZON PRIME"
-  },
-  ko: { 
-    title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", 
-    home: "홈", buy: "보기", zoom: "확대", results: "검색 결과", primeTitle: "AMAZON PRIME"
-  }
+  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results", primeTitle: "AMAZON PRIME" },
+  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", primeTitle: "AMAZON PRIME" },
+  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", primeTitle: "AMAZON PRIME" },
+  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", primeTitle: "AMAZON PRIME" },
+  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", primeTitle: "AMAZON PRIME" },
+  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", primeTitle: "AMAZON PRIME" },
+  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果", primeTitle: "AMAZON PRIME" },
+  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과", primeTitle: "AMAZON PRIME" }
 };
 
 /* ================= GLOBAL ================= */
 let idiomaActual = 'es';
 let allProducts = [];
 let categoriaActual = 'Switch';
+let paginaActual = 1;
+const itemsPorPagina = 24; 
 
 const categories = [
   { id: 'Switch',   icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
@@ -582,7 +606,7 @@ const categories = [
 
 const featuredIds = [1, 2, 3, 11, 13, 16, 62, 64, 8, 18, 4];
 
-/* ================= TEMAS (COLORES NETFLIX) ================= */
+/* ================= TEMAS ================= */
 const paletaTemas = {
   rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
   naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
@@ -645,8 +669,6 @@ function createLanguageSelector(){
     updateLanguage();
     if (allProducts.length > 0) {
       renderConsoleButtons();
-      renderPrimeList();
-      renderBestsellers();
       renderProducts(categoriaActual, document.getElementById('productSearch').value);
     }
   });
@@ -666,7 +688,6 @@ function renderConsoleButtons(){
   container.innerHTML = '';
   const t = translations[idiomaActual] || translations.es;
 
-  // Botón "Inicio" para regresar a la web principal
   const homeBtn = document.createElement('button');
   homeBtn.className = 'console-btn';
   const iconHome = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`;
@@ -674,7 +695,6 @@ function renderConsoleButtons(){
   homeBtn.onclick = () => window.location.href = 'index.html';
   container.appendChild(homeBtn);
 
-  // Botones de Consolas
   categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = `console-btn ${cat.id === categoriaActual ? 'active' : ''}`;
@@ -684,6 +704,7 @@ function renderConsoleButtons(){
       document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       categoriaActual = cat.id;
+      paginaActual = 1; // Resetear página al cambiar categoría
       document.getElementById('productSearch').value = ''; 
       document.getElementById('featuredContainer').style.display = 'block'; 
       document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
@@ -698,18 +719,9 @@ async function cargarProductos() {
   try {
     const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/';
     const archivos = [
-      'productos.json',
-      'switch.json', 
-      '3ds.json', 
-      'nds.json', 
-      'wii.json', 
-      'wiiu.json', 
-      'wiimini.json', 
-      'ps5.json', 
-      'xbox.json', 
-      'sd.json', 
-      'usb.json', 
-      'discoduro.json'
+      'productos.json', 'switch.json', '3ds.json', 'nds.json', 
+      'wii.json', 'wiiu.json', 'wiimini.json', 'ps5.json', 
+      'xbox.json', 'sd.json', 'usb.json', 'discoduro.json'
     ];
 
     const promesas = archivos.map(archivo => 
@@ -719,14 +731,8 @@ async function cargarProductos() {
     );
 
     const resultadosArrays = await Promise.all(promesas);
-
     allProducts = resultadosArrays.flat();
     
-    document.getElementById('primeRow').style.display = 'block';
-    document.getElementById('bestsellersRow').style.display = 'block';
-    
-    renderPrimeList();
-    renderBestsellers();
     renderProducts(categoriaActual);
 
   } catch (error) {
@@ -736,7 +742,7 @@ async function cargarProductos() {
   }
 }
 
-/* ================= CREADOR DE TARJETAS INTELIGENTE CON PRECIO ================= */
+/* ================= CREADOR DE TARJETAS INTELIGENTE ================= */
 function createProductCard(item, container, isMini = false) {
   const card = document.createElement('div');
   card.className = isMini ? 'card card-recent' : 'card';
@@ -745,7 +751,6 @@ function createProductCard(item, container, isMini = false) {
   const label = item.label?.[idiomaActual] || item.label?.es || 'Producto';
   const desc = item.desc?.[idiomaActual] || item.desc?.es || '';
   
-  // DETECTAR PRECIO: Prioriza el nuevo campo directo 'price'. Si no existe (productos viejos), usa el método anterior.
   let price = item.price || ''; 
   let finalDesc = desc;
 
@@ -771,7 +776,6 @@ function createProductCard(item, container, isMini = false) {
     </div>
   `;
 
-  // Comportamientos de clic
   card.onclick = () => window.open(item.url, '_blank');
   
   card.querySelector('.buy-btn').onclick = (e) => {
@@ -788,76 +792,16 @@ function createProductCard(item, container, isMini = false) {
   container.appendChild(card);
 }
 
-/* ================= RENDERIZADOS ESPECÍFICOS ================= */
-function renderPrimeList() {
-  const container = document.getElementById('primeCarousel');
-  container.innerHTML = '';
-  
-  const titleElement = document.getElementById('titlePrime');
-  if(titleElement) titleElement.style.display = 'none';
-  
-  container.className = 'prime-banner-container';
-
-  const primeItems = allProducts.filter(item => item.label?.es === "Amazon Prime");
-  
-  if(primeItems.length > 0) {
-    const item = primeItems[0];
-    
-    const desc = "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.";
-    const price = "Suscríbete por 4,99€/mes o 49,90 €/año."; 
-    
-    const iconCart = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
-
-    const banner = document.createElement('div');
-    banner.className = 'prime-hero';
-    
-    banner.style.backgroundImage = `url('${item.img}')`;
-    
-    banner.innerHTML = `
-      <div class="prime-hero-content">
-        <h1>Amazon Prime</h1>
-        <p>${desc}</p>
-        <div class="prime-hero-price">${price}</div>
-        <button class="prime-buy-btn">
-          ${iconCart} <span>Suscribirse</span>
-        </button>
-      </div>
-    `;
-
-    banner.onclick = () => window.open(item.url, '_blank');
-    banner.querySelector('.prime-buy-btn').onclick = (e) => {
-      e.stopPropagation();
-      window.open(item.url, '_blank');
-    };
-
-    container.appendChild(banner);
-  }
-}
-
-function renderBestsellers() {
-  const container = document.getElementById('bestsellersCarousel');
-  container.innerHTML = '';
-
-  const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
-  const seed = dayOfYear % featuredIds.length;
-  const selected = [];
-  
-  for (let i = 0; i < 5; i++) {
-    const index = (seed + i) % featuredIds.length;
-    const product = allProducts.find(p => parseInt(p.id) === featuredIds[index]);
-    if (product) selected.push(product);
-  }
-
-  selected.forEach(item => createProductCard(item, container, true));
-}
-
+/* ================= RENDERIZADO PRINCIPAL ================= */
 function renderProducts(catId, searchTerm = '') {
   const grid = document.getElementById('productsGrid');
   grid.innerHTML = '';
   const t = translations[idiomaActual] || translations.es;
 
+  // 1. Filtrar los productos de "Amazon Prime"
   let filtered = allProducts.filter(item => item.label?.es !== "Amazon Prime");
 
+  // 2. Filtrar por Búsqueda o Categoría
   if (searchTerm.trim() !== '') {
     const term = searchTerm.toLowerCase().trim();
     filtered = filtered.filter(item => {
@@ -870,33 +814,109 @@ function renderProducts(catId, searchTerm = '') {
     filtered = filtered.filter(item => item.console === catId);
   }
 
+  // 3. Manejar estado vacío
   if (filtered.length === 0) {
     grid.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">No se encontraron productos.</p>`;
+    document.getElementById('paginationContainerTop').innerHTML = '';
+    document.getElementById('paginationContainerBottom').innerHTML = '';
     return;
   }
 
-  filtered.forEach(item => createProductCard(item, grid, false));
+  // 4. Aplicar Paginación
+  const totalPages = Math.ceil(filtered.length / itemsPorPagina);
+  if (paginaActual > totalPages) paginaActual = 1; 
+
+  const startIndex = (paginaActual - 1) * itemsPorPagina;
+  const endIndex = startIndex + itemsPorPagina;
+  const pagedItems = filtered.slice(startIndex, endIndex);
+
+  // 5. Renderizar tarjetas
+  pagedItems.forEach(item => createProductCard(item, grid, false));
+
+  // 6. Renderizar paginación
+  renderPagination(totalPages);
+}
+
+function renderPagination(totalPages) {
+  const containerTop = document.getElementById('paginationContainerTop');
+  const containerBottom = document.getElementById('paginationContainerBottom');
+  
+  containerTop.innerHTML = '';
+  containerBottom.innerHTML = '';
+
+  if (totalPages <= 1) return;
+
+  const buildPaginationButtons = (container) => {
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'page-btn';
+    prevBtn.textContent = '←';
+    prevBtn.disabled = paginaActual === 1;
+    prevBtn.onclick = () => {
+      paginaActual--;
+      renderProducts(categoriaActual, document.getElementById('productSearch').value);
+      window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
+    };
+    container.appendChild(prevBtn);
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= paginaActual - 2 && i <= paginaActual + 2)) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = `page-btn ${i === paginaActual ? 'active' : ''}`;
+        pageBtn.textContent = i;
+        pageBtn.onclick = () => {
+          paginaActual = i;
+          renderProducts(categoriaActual, document.getElementById('productSearch').value);
+          window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
+        };
+        container.appendChild(pageBtn);
+      } else if (i === paginaActual - 3 || i === paginaActual + 3) {
+        const dots = document.createElement('span');
+        dots.textContent = '...';
+        dots.style.color = '#fff';
+        container.appendChild(dots);
+      }
+    }
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'page-btn';
+    nextBtn.textContent = '→';
+    nextBtn.disabled = paginaActual === totalPages;
+    nextBtn.onclick = () => {
+      paginaActual++;
+      renderProducts(categoriaActual, document.getElementById('productSearch').value);
+      window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
+    };
+    container.appendChild(nextBtn);
+  };
+
+  buildPaginationButtons(containerTop);
+  buildPaginationButtons(containerBottom);
 }
 
 /* ================= EVENTOS Y SEARCH ================= */
+let debounceTimer;
 const searchInput = document.getElementById('productSearch');
 searchInput.addEventListener('input', () => {
-  const val = searchInput.value;
-  if(val.trim() !== '') {
-    document.getElementById('featuredContainer').style.display = 'none';
-    document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); 
-  } else {
-    document.getElementById('featuredContainer').style.display = 'block';
-    document.getElementById('currentCategoryTitle').textContent = (categories.find(c => c.id === categoriaActual).label[idiomaActual] || categories.find(c => c.id === categoriaActual).label.es).toUpperCase();
-    
-    const btns = document.querySelectorAll('.console-btn');
-    btns.forEach(btn => {
-      if(btn.textContent.includes(categories.find(c => c.id === categoriaActual).label.es)) {
-        btn.classList.add('active');
-      }
-    });
-  }
-  renderProducts(categoriaActual, val);
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    paginaActual = 1; // Resetear página al buscar
+    const val = searchInput.value;
+    if(val.trim() !== '') {
+      document.getElementById('featuredContainer').style.display = 'none';
+      document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); 
+    } else {
+      document.getElementById('featuredContainer').style.display = 'block';
+      document.getElementById('currentCategoryTitle').textContent = (categories.find(c => c.id === categoriaActual).label[idiomaActual] || categories.find(c => c.id === categoriaActual).label.es).toUpperCase();
+      
+      const btns = document.querySelectorAll('.console-btn');
+      btns.forEach(btn => {
+        if(btn.textContent.includes(categories.find(c => c.id === categoriaActual).label.es)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+    renderProducts(categoriaActual, val);
+  }, 300); // 300ms debounce
 });
 
 /* ================= MODAL IMAGEN ================= */
