@@ -1,0 +1,158 @@
+[
+  {
+    "id": "31",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDS Shell",
+      "es": "Nds: Carcasa NDS",
+      "fr": "NDS : Coque NDS",
+      "it": "NDS: Scocca NDS",
+      "pt": "NDS: Carcaça NDS",
+      "de": "NDS: NDS Gehäuse",
+      "ja": "NDS: NDS シェル",
+      "ko": "NDS: NDS 쉘"
+    },
+    "desc": {
+      "en": "Replacement housing for original Nintendo DS (fat).",
+      "es": "Carcasa de repuesto para Nintendo DS original (fat).",
+      "fr": "Coque de remplacement pour Nintendo DS original (fat).",
+      "it": "Scocca di ricambio per Nintendo DS originale (fat).",
+      "pt": "Carcaça de reposição para Nintendo DS original (fat).",
+      "de": "Ersatzgehäuse für originale Nintendo DS (fat).",
+      "ja": "純正Nintendo DS（fat）用交換筐体。",
+      "ko": "오리지널 Nintendo DS (fat)용 교체 하우징."
+    },
+    "img": "https://m.media-amazon.com/images/I/61mFL5MtKxL._AC_SX679_.jpg",
+    "url": "https://amzn.to/3tfup5e"
+  },
+  {
+    "id": "32",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDSi Shell",
+      "es": "Nds: Carcasa NDSi",
+      "fr": "NDS : Coque NDSi",
+      "it": "NDS: Scocca NDSi",
+      "pt": "NDS: Carcaça NDSi",
+      "de": "NDS: NDSi Gehäuse",
+      "ja": "NDS: NDSi シェル",
+      "ko": "NDS: NDSi 쉘"
+    },
+    "desc": {
+      "en": "Full replacement shell for Nintendo DSi.",
+      "es": "Carcasa completa de repuesto para Nintendo DSi.",
+      "fr": "Coque complète de remplacement pour Nintendo DSi.",
+      "it": "Scocca completa di ricambio per Nintendo DSi.",
+      "pt": "Carcaça completa de reposição para Nintendo DSi.",
+      "de": "Komplettes Ersatzgehäuse für Nintendo DSi.",
+      "ja": "Nintendo DSi用フル交換シェル。",
+      "ko": "Nintendo DSi용 완전 교체 쉘."
+    },
+    "img": "https://m.media-amazon.com/images/I/61wZhAut3KL._AC_SX679_.jpg",
+    "url": "https://amzn.to/4pU7zYL"
+  },
+  {
+    "id": "33",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDSi XL Shell",
+      "es": "Nds: Carcasa NDSi XL",
+      "fr": "NDS : Coque NDSi XL",
+      "it": "NDS: Scocca NDSi XL",
+      "pt": "NDS: Carcaça NDSi XL",
+      "de": "NDS: NDSi XL Gehäuse",
+      "ja": "NDS: NDSi XL シェル",
+      "ko": "NDS: NDSi XL 쉘"
+    },
+    "desc": {
+      "en": "Replacement housing for Nintendo DSi XL.",
+      "es": "Carcasa de repuesto para Nintendo DSi XL.",
+      "fr": "Coque de remplacement pour Nintendo DSi XL.",
+      "it": "Scocca di ricambio per Nintendo DSi XL.",
+      "pt": "Carcaça de reposição para Nintendo DSi XL.",
+      "de": "Ersatzgehäuse für Nintendo DSi XL.",
+      "ja": "Nintendo DSi XL用交換筐体。",
+      "ko": "Nintendo DSi XL용 교체 하우징."
+    },
+    "img": "https://m.media-amazon.com/images/I/51kjHZQ6QQL._AC_SY300_SX300_QL70_ML2_.jpg",
+    "url": "https://amzn.to/47Q3SKQ"
+  },
+  {
+    "id": "34",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDS Screen Protector",
+      "es": "Nds: Protector NDS",
+      "fr": "NDS : Protection d'écran NDS",
+      "it": "NDS: Proteggi schermo NDS",
+      "pt": "NDS: Película NDS",
+      "de": "NDS: NDS Displayschutz",
+      "ja": "NDS: NDS 画面保護フィルム",
+      "ko": "NDS: NDS 화면 보호 필름"
+    },
+    "desc": {
+      "en": "Screen protectors for original Nintendo DS dual screens.",
+      "es": "Protectores de pantalla para las dos pantallas de Nintendo DS original.",
+      "fr": "Protections d'écran pour les deux écrans de Nintendo DS original.",
+      "it": "Pellicole protettive per i due schermi di Nintendo DS originale.",
+      "pt": "Películas protetoras para as duas telas do Nintendo DS original.",
+      "de": "Displayschutz für die beiden Bildschirme der originalen Nintendo DS.",
+      "ja": "純正Nintendo DSデュアル画面用保護フィルム。",
+      "ko": "오리지널 Nintendo DS 듀얼 화면용 화면 보호 필름."
+    },
+    "img": "https://m.media-amazon.com/images/I/61OmbFiobkL._AC_SX679_.jpg",
+    "url": "https://amzn.to/48bPA6P"
+  },
+  {
+    "id": "35",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDSi Screen Protector",
+      "es": "Nds: Protector NDSi",
+      "fr": "NDS : Protection d'écran NDSi",
+      "it": "NDS: Proteggi schermo NDSi",
+      "pt": "NDS: Película NDSi",
+      "de": "NDS: NDSi Displayschutz",
+      "ja": "NDS: NDSi 画面保護フィルム",
+      "ko": "NDS: NDSi 화면 보호 필름"
+    },
+    "desc": {
+      "en": "Tempered glass protectors for Nintendo DSi screens.",
+      "es": "Protectores de cristal templado para pantallas de Nintendo DSi.",
+      "fr": "Protections en verre trempé pour écrans Nintendo DSi.",
+      "it": "Pellicole in vetro temperato per schermi Nintendo DSi.",
+      "pt": "Películas de vidro temperado para telas Nintendo DSi.",
+      "de": "Gehärtete Glas Displayschutz für Nintendo DSi Bildschirme.",
+      "ja": "Nintendo DSi画面用強化ガラス保護フィルム。",
+      "ko": "Nintendo DSi 화면용 강화유리 보호 필름."
+    },
+    "img": "https://m.media-amazon.com/images/I/61xDGFQ7C-L._AC_SX679_.jpg",
+    "url": "https://amzn.to/46ZnNFD"
+  },
+  {
+    "id": "36",
+    "console": "NDS",
+    "label": {
+      "en": "NDS: NDSi XL Screen Protector",
+      "es": "Nds: Protector NDSi XL",
+      "fr": "NDS : Protection d'écran NDSi XL",
+      "it": "NDS: Proteggi schermo NDSi XL",
+      "pt": "NDS: Película NDSi XL",
+      "de": "NDS: NDSi XL Displayschutz",
+      "ja": "NDS: NDSi XL 画面保護フィルム",
+      "ko": "NDS: NDSi XL 화면 보호 필름"
+    },
+    "desc": {
+      "en": "Large tempered glass protectors for Nintendo DSi XL.",
+      "es": "Protectores de cristal templado grandes para Nintendo DSi XL.",
+      "fr": "Grandes protections en verre trempé pour Nintendo DSi XL.",
+      "it": "Grandi pellicole in vetro temperato per Nintendo DSi XL.",
+      "pt": "Películas de vidro temperado grandes para Nintendo DSi XL.",
+      "de": "Große gehärtete Glas Displayschutz für Nintendo DSi XL.",
+      "ja": "Nintendo DSi XL用大型強化ガラス保護フィルム。",
+      "ko": "Nintendo DSi XL용 대형 강화유리 보호 필름."
+    },
+    "img": "https://m.media-amazon.com/images/I/611koizmKhL._AC_SX679_.jpg",
+    "url": "https://amzn.to/3teEU8J"
+  }
+]

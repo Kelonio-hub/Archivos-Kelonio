@@ -1,0 +1,393 @@
+[
+  {
+    "id": "62",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SD Card 16GB",
+      "es": "Sd_usb: SD 16GB",
+      "fr": "SD/USB : Carte SD 16 Go",
+      "it": "SD/USB: Scheda SD 16GB",
+      "pt": "SD/USB: Cartão SD 16GB",
+      "de": "SD/USB: SD-Karte 16GB",
+      "ja": "SD/USB: SDカード 16GB",
+      "ko": "SD/USB: SD 카드 16GB"
+    },
+    "desc": {
+      "en": "16GB microSD card, compatible with all Nintendo consoles.",
+      "es": "Tarjeta microSD de 16GB, compatible con todas las consolas Nintendo.",
+      "fr": "Carte microSD 16 Go, compatible avec toutes les consoles Nintendo.",
+      "it": "Scheda microSD da 16GB, compatibile con tutte le console Nintendo.",
+      "pt": "Cartão microSD de 16GB, compatível com todos os consoles Nintendo.",
+      "de": "16GB microSD-Karte, kompatibel mit allen Nintendo Konsolen.",
+      "ja": "全Nintendoコンソール対応16GB microSDカード。",
+      "ko": "모든 Nintendo 콘솔 호환 16GB microSD 카드."
+    },
+    "img": "https://m.media-amazon.com/images/I/416UhcQTcKL._AC_SX679_.jpg",
+    "url": "https://amzn.to/3BflBwO"
+  },
+  {
+    "id": "63",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SD Card 32GB",
+      "es": "Sd_usb: SD 32GB",
+      "fr": "SD/USB : Carte SD 32 Go",
+      "it": "SD/USB: Scheda SD 32GB",
+      "pt": "SD/USB: Cartão SD 32GB",
+      "de": "SD/USB: SD-Karte 32GB",
+      "ja": "SD/USB: SDカード 32GB",
+      "ko": "SD/USB: SD 카드 32GB"
+    },
+    "desc": {
+      "en": "32GB microSD card with good read/write speed for homebrew.",
+      "es": "Tarjeta microSD de 32GB con buena velocidad lectura/escritura para homebrew.",
+      "fr": "Carte microSD 32 Go avec bonne vitesse de lecture/écriture pour homebrew.",
+      "it": "Scheda microSD da 32GB con buona velocità di lettura/scrittura per homebrew.",
+      "pt": "Cartão microSD de 32GB com boa velocidade de leitura/escrita para homebrew.",
+      "de": "32GB microSD-Karte mit guter Lese-/Schreibgeschwindigkeit für Homebrew.",
+      "ja": "ホームブリュー用読み書き速度良好な32GB microSDカード。",
+      "ko": "홈브류용 읽기/쓰기 속도가 좋은 32GB microSD 카드."
+    },
+    "img": "https://m.media-amazon.com/images/I/512kmIP1s3L._AC_SX679_.jpg",
+    "url": "https://amzn.to/3UqdkyU"
+  },
+  {
+    "id": "64",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SD Card 64GB",
+      "es": "Sd_usb: SD 64GB",
+      "fr": "SD/USB : Carte SD 64 Go",
+      "it": "SD/USB: Scheda SD 64GB",
+      "pt": "SD/USB: Cartão SD 64GB",
+      "de": "SD/USB: SD-Karte 64GB",
+      "ja": "SD/USB: SDカード 64GB",
+      "ko": "SD/USB: SD 카드 64GB"
+    },
+    "desc": {
+      "en": "64GB microSD card, ideal for large game libraries.",
+      "es": "Tarjeta microSD de 64GB, ideal para bibliotecas grandes de juegos.",
+      "fr": "Carte microSD 64 Go, idéale pour les grandes bibliothèques de jeux.",
+      "it": "Scheda microSD da 64GB, ideale per grandi librerie di giochi.",
+      "pt": "Cartão microSD de 64GB, ideal para grandes bibliotecas de jogos.",
+      "de": "64GB microSD-Karte, ideal für große Spielebibliotheken.",
+      "ja": "大規模ゲームライブラリに最適な64GB microSDカード。",
+      "ko": "대형 게임 라이브러리에 이상적인 64GB microSD 카드."
+    },
+    "img": "https://m.media-amazon.com/images/I/71AkjCbY8mL._AC_SX679_.jpg",
+    "url": "https://amzn.to/3LlkTTl"
+  },
+  {
+    "id": "65",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SD Card 128GB",
+      "es": "Sd_usb: SD 128GB",
+      "fr": "SD/USB : Carte SD 128 Go",
+      "it": "SD/USB: Scheda SD 128GB",
+      "pt": "SD/USB: Cartão SD 128GB",
+      "de": "SD/USB: SD-Karte 128GB",
+      "ja": "SD/USB: SDカード 128GB",
+      "ko": "SD/USB: SD 카드 128GB"
+    },
+    "desc": {
+      "en": "128GB microSD card, high capacity for Switch, 3DS and Wii.",
+      "es": "Tarjeta microSD de 128GB, alta capacidad para Switch, 3DS y Wii.",
+      "fr": "Carte microSD 128 Go, haute capacité pour Switch, 3DS et Wii.",
+      "it": "Scheda microSD da 128GB, alta capacità per Switch, 3DS e Wii.",
+      "pt": "Cartão microSD de 128GB, alta capacidade para Switch, 3DS e Wii.",
+      "de": "128GB microSD-Karte, hohe Kapazität für Switch, 3DS und Wii.",
+      "ja": "Switch、3DS、Wii用大容量128GB microSDカード。",
+      "ko": "Switch, 3DS, Wii용 고용량 128GB microSD 카드."
+    },
+    "img": "https://m.media-amazon.com/images/I/61DwejyTGkL._AC_SX679_.jpg",
+    "url": "https://amzn.to/3zCCMdP"
+  },
+  {
+    "id": "66",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SD Card 256GB",
+      "es": "Sd_usb: SD 256GB",
+      "fr": "SD/USB : Carte SD 256 Go",
+      "it": "SD/USB: Scheda SD 256GB",
+      "pt": "SD/USB: Cartão SD 256GB",
+      "de": "SD/USB: SD-Karte 256GB",
+      "ja": "SD/USB: SDカード 256GB",
+      "ko": "SD/USB: SD 카드 256GB"
+    },
+    "desc": {
+      "en": "256GB microSD card for extensive digital collections.",
+      "es": "Tarjeta microSD de 256GB para colecciones digitales extensas.",
+      "fr": "Carte microSD 256 Go pour collections numériques étendues.",
+      "it": "Scheda microSD da 256GB per collezioni digitali estese.",
+      "pt": "Cartão microSD de 256GB para coleções digitais extensas.",
+      "de": "256GB microSD-Karte für umfangreiche digitale Sammlungen.",
+      "ja": "大規模デジタルコレクション用256GB microSDカード。",
+      "ko": "광범위한 디지털 컬렉션용 256GB microSD 카드."
+    },
+    "img": "https://m.media-amazon.com/images/I/612SKs+CB1L._AC_SX679_.jpg",
+    "url": "https://amzn.to/4cGcMwE"
+  },
+  {
+    "id": "67",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 16GB",
+      "es": "Sd_usb: USB 16GB",
+      "fr": "SD/USB : Clé USB 16 Go",
+      "it": "SD/USB: USB 16GB",
+      "pt": "SD/USB: Pendrive 16GB",
+      "de": "SD/USB: USB-Stick 16GB",
+      "ja": "SD/USB: USB 16GB",
+      "ko": "SD/USB: USB 16GB"
+    },
+    "desc": {
+      "en": "16GB USB flash drive, useful for Wii backups.",
+      "es": "Pendrive USB de 16GB, útil para backups de Wii.",
+      "fr": "Clé USB 16 Go, utile pour les sauvegardes Wii.",
+      "it": "Chiavetta USB da 16GB, utile per backup Wii.",
+      "pt": "Pendrive USB de 16GB, útil para backups de Wii.",
+      "de": "16GB USB-Stick, nützlich für Wii-Backups.",
+      "ja": "Wiiバックアップ用16GB USBフラッシュドライブ。",
+      "ko": "Wii 백업에 유용한 16GB USB 플래시 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/3xEfoMj"
+  },
+  {
+    "id": "68",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 32GB",
+      "es": "Sd_usb: USB 32GB",
+      "fr": "SD/USB : Clé USB 32 Go",
+      "it": "SD/USB: USB 32GB",
+      "pt": "SD/USB: Pendrive 32GB",
+      "de": "SD/USB: USB-Stick 32GB",
+      "ja": "SD/USB: USB 32GB",
+      "ko": "SD/USB: USB 32GB"
+    },
+    "desc": {
+      "en": "32GB USB drive for Wii and PC file transfer.",
+      "es": "Pendrive USB de 32GB para Wii y transferencia de archivos PC.",
+      "fr": "Clé USB 32 Go pour transfert de fichiers Wii et PC.",
+      "it": "Chiavetta USB da 32GB per trasferimento file Wii e PC.",
+      "pt": "Pendrive USB de 32GB para transferência de arquivos Wii e PC.",
+      "de": "32GB USB-Stick für Wii und PC Dateiübertragung.",
+      "ja": "WiiおよびPCファイル転送用32GB USBドライブ。",
+      "ko": "Wii 및 PC 파일 전송용 32GB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/3L5i7le"
+  },
+  {
+    "id": "69",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 64GB",
+      "es": "Sd_usb: USB 64GB",
+      "fr": "SD/USB : Clé USB 64 Go",
+      "it": "SD/USB: USB 64GB",
+      "pt": "SD/USB: Pendrive 64GB",
+      "de": "SD/USB: USB-Stick 64GB",
+      "ja": "SD/USB: USB 64GB",
+      "ko": "SD/USB: USB 64GB"
+    },
+    "desc": {
+      "en": "64GB USB drive, high capacity for game backups.",
+      "es": "Pendrive USB de 64GB, alta capacidad para backups de juegos.",
+      "fr": "Clé USB 64 Go, haute capacité pour les sauvegardes de jeux.",
+      "it": "Chiavetta USB da 64GB, alta capacità per backup di giochi.",
+      "pt": "Pendrive USB de 64GB, alta capacidade para backups de jogos.",
+      "de": "64GB USB-Stick, hohe Kapazität für Spiel-Backups.",
+      "ja": "ゲームバックアップ用高容量64GB USBドライブ。",
+      "ko": "게임 백업용 고용량 64GB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/3XFwrIA"
+  },
+  {
+    "id": "70",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 128GB",
+      "es": "Sd_usb: USB 128GB",
+      "fr": "SD/USB : Clé USB 128 Go",
+      "it": "SD/USB: USB 128GB",
+      "pt": "SD/USB: Pendrive 128GB",
+      "de": "SD/USB: USB-Stick 128GB",
+      "ja": "SD/USB: USB 128GB",
+      "ko": "SD/USB: USB 128GB"
+    },
+    "desc": {
+      "en": "128GB USB drive for large Wii/Wii U collections.",
+      "es": "Pendrive USB de 128GB para colecciones grandes de Wii/Wii U.",
+      "fr": "Clé USB 128 Go pour grandes collections Wii/Wii U.",
+      "it": "Chiavetta USB da 128GB per grandi collezioni Wii/Wii U.",
+      "pt": "Pendrive USB de 128GB para grandes coleções Wii/Wii U.",
+      "de": "128GB USB-Stick für große Wii/Wii U Sammlungen.",
+      "ja": "大規模Wii/Wii Uコレクション用128GB USBドライブ。",
+      "ko": "대형 Wii/Wii U 컬렉션용 128GB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/3W0Kg34"
+  },
+  {
+    "id": "71",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 256GB",
+      "es": "Sd_usb: USB 256GB",
+      "fr": "SD/USB : Clé USB 256 Go",
+      "it": "SD/USB: USB 256GB",
+      "pt": "SD/USB: Pendrive 256GB",
+      "de": "SD/USB: USB-Stick 256GB",
+      "ja": "SD/USB: USB 256GB",
+      "ko": "SD/USB: USB 256GB"
+    },
+    "desc": {
+      "en": "256GB USB drive, ideal for full Wii library backups.",
+      "es": "Pendrive USB de 256GB, ideal para backups completos de biblioteca Wii.",
+      "fr": "Clé USB 256 Go, idéale pour les sauvegardes complètes de bibliothèque Wii.",
+      "it": "Chiavetta USB da 256GB, ideale per backup completi della libreria Wii.",
+      "pt": "Pendrive USB de 256GB, ideal para backups completos da biblioteca Wii.",
+      "de": "256GB USB-Stick, ideal für vollständige Wii Bibliotheks-Backups.",
+      "ja": "Wiiライブラリ完全バックアップに最適な256GB USBドライブ。",
+      "ko": "Wii 라이브러리 전체 백업에 이상적인 256GB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/4cKvX8r"
+  },
+  {
+    "id": "72",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 512GB",
+      "es": "Sd_usb: USB 512GB",
+      "fr": "SD/USB : Clé USB 512 Go",
+      "it": "SD/USB: USB 512GB",
+      "pt": "SD/USB: Pendrive 512GB",
+      "de": "SD/USB: USB-Stick 512GB",
+      "ja": "SD/USB: USB 512GB",
+      "ko": "SD/USB: USB 512GB"
+    },
+    "desc": {
+      "en": "512GB high-capacity USB drive for massive collections.",
+      "es": "Pendrive USB de 512GB de alta capacidad para colecciones masivas.",
+      "fr": "Clé USB 512 Go haute capacité pour collections massives.",
+      "it": "Chiavetta USB da 512GB ad alta capacità per collezioni massive.",
+      "pt": "Pendrive USB de 512GB de alta capacidade para coleções massivas.",
+      "de": "512GB hochkapazitiver USB-Stick für riesige Sammlungen.",
+      "ja": "大規模コレクション用512GB高容量USBドライブ。",
+      "ko": "대량 컬렉션용 512GB 고용량 USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SL1500_.jpg",
+    "url": "https://amzn.to/3VJA25F"
+  },
+  {
+    "id": "73",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 1TB",
+      "es": "Sd_usb: USB 1TB",
+      "fr": "SD/USB : Clé USB 1 To",
+      "it": "SD/USB: USB 1TB",
+      "pt": "SD/USB: Pendrive 1TB",
+      "de": "SD/USB: USB-Stick 1TB",
+      "ja": "SD/USB: USB 1TB",
+      "ko": "SD/USB: USB 1TB"
+    },
+    "desc": {
+      "en": "1TB USB drive for huge game archives.",
+      "es": "Pendrive USB de 1TB para archivos de juegos enormes.",
+      "fr": "Clé USB 1 To pour archives de jeux énormes.",
+      "it": "Chiavetta USB da 1TB per enormi archivi di giochi.",
+      "pt": "Pendrive USB de 1TB para arquivos de jogos enormes.",
+      "de": "1TB USB-Stick für riesige Spielarchive.",
+      "ja": "巨大ゲームアーカイブ用1TB USBドライブ。",
+      "ko": "거대한 게임 아카이브용 1TB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51VHlRyI+VL._AC_SY879_.jpg",
+    "url": "https://amzn.to/4cGsgAC"
+  },
+  {
+    "id": "74",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 2TB",
+      "es": "Sd_usb: USB 2TB",
+      "fr": "SD/USB : Clé USB 2 To",
+      "it": "SD/USB: USB 2TB",
+      "pt": "SD/USB: Pendrive 2TB",
+      "de": "SD/USB: USB-Stick 2TB",
+      "ja": "SD/USB: USB 2TB",
+      "ko": "SD/USB: USB 2TB"
+    },
+    "desc": {
+      "en": "2TB USB drive, perfect for complete console backups.",
+      "es": "Pendrive USB de 2TB, perfecto para backups completos de consolas.",
+      "fr": "Clé USB 2 To, parfaite pour les sauvegardes complètes de consoles.",
+      "it": "Chiavetta USB da 2TB, perfetta per backup completi di console.",
+      "pt": "Pendrive USB de 2TB, perfeito para backups completos de consoles.",
+      "de": "2TB USB-Stick, perfekt für komplette Konsolen-Backups.",
+      "ja": "完全なコンソールバックアップに最適な2TB USBドライブ。",
+      "ko": "완전한 콘솔 백업에 완벽한 2TB USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51VHlRyI+VL._AC_SY879_.jpg",
+    "url": "https://amzn.to/4cn7pm7"
+  },
+  {
+    "id": "75",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: USB 4TB",
+      "es": "Sd_usb: USB 4TB",
+      "fr": "SD/USB : Clé USB 4 To",
+      "it": "SD/USB: USB 4TB",
+      "pt": "SD/USB: Pendrive 4TB",
+      "de": "SD/USB: USB-Stick 4TB",
+      "ja": "SD/USB: USB 4TB",
+      "ko": "SD/USB: USB 4TB"
+    },
+    "desc": {
+      "en": "4TB ultra-high capacity USB drive for massive storage needs.",
+      "es": "Pendrive USB de 4TB de ultra alta capacidad para necesidades masivas de almacenamiento.",
+      "fr": "Clé USB 4 To ultra haute capacité pour besoins de stockage massifs.",
+      "it": "Chiavetta USB da 4TB ad ultra alta capacità per esigenze di archiviazione massive.",
+      "pt": "Pendrive USB de 4TB de ultra alta capacidade para necessidades massivas de armazenamento.",
+      "de": "4TB ultra-hochkapazitiver USB-Stick für massive Speicheranforderungen.",
+      "ja": "大容量ストレージニーズ対応4TB超高容量USBドライブ。",
+      "ko": "대용량 저장 요구사항을 위한 4TB 초고용량 USB 드라이브."
+    },
+    "img": "https://m.media-amazon.com/images/I/51VHlRyI+VL._AC_SY879_.jpg",
+    "url": "https://amzn.to/4cEc8iU"
+  },
+  {
+    "id": "77",
+    "console": "SD/USB",
+    "label": {
+      "en": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "es": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "fr": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "it": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "pt": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "de": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "ja": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
+      "ko": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ..."
+    },
+    "desc": {
+      "es": "SanDisk 128GB Ultra, Tarjeta de memoria microSDXC,...\n20,69 €",
+      "en": "Get SanDisk 128GB Ultra, Tarjeta de memoria microSDXC, on Amazon at the best price with our affiliate link.",
+      "fr": "Obtenez SanDisk 128GB Ultra, Tarjeta de memoria microSDXC, sur Amazon au meilleur prix avec notre lien d'affiliation.",
+      "it": "Ottieni SanDisk 128GB Ultra, Tarjeta de memoria microSDXC, su Amazon al miglior prezzo con il nostro link di affiliazione.",
+      "pt": "Obtenha SanDisk 128GB Ultra, Tarjeta de memoria microSDXC, na Amazon ao melhor preço con o nosso link de afiliado.",
+      "de": "Holen Sie sich SanDisk 128GB Ultra, Tarjeta de memoria microSDXC, bei Amazon zum besten Preis mit unserem Affiliate-Link.",
+      "ja": "アフィリエイトリンクを使用して、AmazonでSanDisk 128GB Ultra, Tarjeta de memoria microSDXC,を最安値で入手してください。",
+      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 SanDisk 128GB Ultra, Tarjeta de memoria microSDXC,을(를) 구매하세요."
+    },
+    "price": "20,69 €",
+    "img": "https://m.media-amazon.com/images/I/71IXkzFPwHL._AC_SY355_.jpg",
+    "url": "https://www.amazon.es/dp/B0B7NTY2S6?tag=kelonio-21"
+  }
+]
