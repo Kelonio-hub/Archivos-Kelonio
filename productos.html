@@ -172,6 +172,48 @@ body{
   justify-content: center;
 }
 
+/* ================= CONTENEDOR DE SUBFILTROS DINDÁMICOS ================= */
+.subcategories-filter-wrapper {
+  width: 90%;
+  max-width: 1300px;
+  margin: 15px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.subcat-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+.subcat-row::-webkit-scrollbar {
+  display: none;
+}
+.subcat-filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ccc;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.subcat-filter-btn:hover {
+  border-color: var(--red);
+  color: #fff;
+}
+.subcat-filter-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.4);
+}
+
 /* ================= APP ================= */
 #mainApp{
   display:block;
@@ -294,6 +336,38 @@ body{
   flex-shrink: 0;
   background: #000;
 }
+
+/* Nueva insignia de Subcategoría */
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255,255,255,0.15);
+  pointer-events: none;
+}
+/* Nueva insignia de Tamaño */
+.card-size-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--red);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
 .card-info{
   padding:18px 18px 10px 18px;
   flex-grow: 1;
@@ -543,6 +617,11 @@ body{
 <div id="mainApp">
   <div id="primeBanner" class="prime-banner" style="display:none;"></div>
 
+  <div class="subcategories-filter-wrapper">
+    <div id="subcategoriesFilterRow" class="subcat-row" style="display:none;"></div>
+    <div id="sizesFilterRow" class="subcat-row" style="display:none;"></div>
+  </div>
+
   <div id="featuredContainer" style="display:none">
     <div class="row featured" id="bestsellersRow" style="display:none;">
       <h2 id="titleBestsellers">TOP VENTAS</h2>
@@ -572,38 +651,31 @@ body{
 <script>
 /* ================= TRANSLACIONES ================= */
 const translations = {
-  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results" },
-  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda" },
-  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche" },
-  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca" },
-  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa" },
-  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse" },
-  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果" },
-  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과" }
+  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results", all: "All" },
+  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", all: "Todos" },
+  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", all: "Tous" },
+  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", all: "Tutti" },
+  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", all: "Todos" },
+  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", all: "Alle" },
+  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果", all: "すべて" },
+  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과", all: "전체" }
 };
 
 /* ================= PRODUCTO PRIME HARDCODEADO ================= */
 const PRODUCTO_PRIME = {
   "id": "prime-promo",
   "label": {
-    "en": "Amazon Prime",
-    "es": "Amazon Prime",
-    "fr": "Amazon Prime",
-    "it": "Amazon Prime",
-    "pt": "Amazon Prime",
-    "de": "Amazon Prime",
-    "ja": "Amazon Prime",
-    "ko": "Amazon Prime"
+    "en": "Amazon Prime", "es": "Amazon Prime", "fr": "Amazon Prime", "it": "Amazon Prime", "pt": "Amazon Prime", "de": "Amazon Prime", "ja": "Amazon Prime", "ko": "Amazon Prime"
   },
   "desc": {
     "en": "Deals and free shipping on millions of products. Includes: Prime Video, Prime Music, Prime Photos and Prime Reading.\nSubscribe for €4.99/month or €49.90/year.",
     "es": "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.\nSuscríbete por 4,99€/mes o 49,90 €/año.",
     "fr": "Offres et livraison gratuite sur des millions de produits. Comprend : Prime Video, Prime Music, Prime Photos et Prime Reading.\nAbonnez-vous pour 4,99 €/mois ou 49,90 €/an.",
-    "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Prime Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
+    "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
     "pt": "Ofertas e envios grátis em milhões de produtos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês ou 49,90 €/ano.",
     "de": "Angebote und kostenloser Versand bei Millionen von Produkten. Enthält: Prime Video, Prime Music, Prime Photos und Prime Reading.\nAbonniere für 4,99 €/Monat oder 49,90 €/Jahr.",
     "ja": "数百万の商品でお得な特典と無料配送。Prime Video、Prime Music、Prime Photos、Prime Readingが含まれます。\n月額4.99€または年額49.90€で購読。",
-    "ko": "수백만 개의 제품에 대한 혜택과 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
+    "ko": "수백만 개의 제품에 대한 혜택 outdoor 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
   },
   "img": "https://gazetadasemana.com.br/images/colunas/10044/06072023165518_Amazon_Pri.jpg",
   "url": "https://amzn.to/4pq5Pp6"
@@ -613,6 +685,8 @@ const PRODUCTO_PRIME = {
 let idiomaActual = 'es';
 let allProducts = [];
 let categoriaActual = 'Switch';
+let subcategoriaSeleccionada = 'ALL'; // NUEVO: Estado del subfiltro
+let tamanoSeleccionado = 'ALL';         // NUEVO: Estado del filtro de tamaño
 let paginaActual = 1;
 const itemsPorPagina = 24; 
 
@@ -672,6 +746,7 @@ function createLanguageSelector(){
     en:'English', es:'Español', fr:'Français', it:'Italiano',
     pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어'
   };
+  selector.innerHTML = '';
   Object.keys(langs).forEach(code=>{
     const opt = document.createElement('option');
     opt.value = code;
@@ -689,6 +764,7 @@ function createLanguageSelector(){
     if (allProducts.length > 0) {
       renderConsoleButtons();
       renderPrimeProduct();
+      generarBarraSubcategoriasYCapacidades(); // Actualizar textos de los filtros
       renderProducts(categoriaActual, document.getElementById('productSearch').value);
     }
   });
@@ -723,14 +799,122 @@ function renderConsoleButtons(){
       document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       categoriaActual = cat.id;
+      subcategoriaSeleccionada = 'ALL'; // Resetear subfiltro
+      tamanoSeleccionado = 'ALL';         // Resetear tamaño
       paginaActual = 1; 
       document.getElementById('productSearch').value = ''; 
       document.getElementById('primeBanner').style.display = 'flex'; 
       document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
+      
+      generarBarraSubcategoriasYCapacidades(); // Redibujar barra de subfiltros
       renderProducts(cat.id, '');
     };
     container.appendChild(btn);
   });
+}
+
+/* ================= NUEVO: GENERADOR DE SUBFILTROS DINÁMICOS ================= */
+function generarBarraSubcategoriasYCapacidades() {
+  const subcatRow = document.getElementById('subcategoriesFilterRow');
+  const sizesRow = document.getElementById('sizesFilterRow');
+  const t = translations[idiomaActual] || translations.es;
+  
+  subcatRow.innerHTML = '';
+  sizesRow.innerHTML = '';
+  subcatRow.style.display = 'none';
+  sizesRow.style.display = 'none';
+
+  // 1. Obtener todos los productos de la categoría seleccionada para saber qué subcategorías y tamaños existen de verdad
+  let productosCategoria = allProducts.filter(item => {
+    if (categoriaActual === '3DS_NDS') return item.console === '3DS' || item.console === 'NDS';
+    return item.console === categoriaActual;
+  });
+
+  if (productosCategoria.length === 0) return;
+
+  // Extraer subcategorías únicas ignorando vacías o "Ninguno"
+  let subcatsUnicas = new Set();
+  productosCategoria.forEach(p => {
+    if (p.subcategory && p.subcategory !== 'Ninguno') subcatsUnicas.add(p.subcategory);
+  });
+
+  // Si existen subcategorías, renderizar la barra superior de filtros
+  if (subcatsUnicas.size > 0) {
+    subcatRow.style.display = 'flex';
+    
+    // Botón para "Todos"
+    const btnAll = document.createElement('button');
+    btnAll.className = `subcat-filter-btn ${subcategoriaSeleccionada === 'ALL' ? 'active' : ''}`;
+    btnAll.textContent = t.all;
+    btnAll.onclick = () => {
+      subcategoriaSeleccionada = 'ALL';
+      paginaActual = 1;
+      generarBarraSubcategoriasYCapacidades();
+      renderProducts(categoriaActual);
+    };
+    subcatRow.appendChild(btnAll);
+
+    // Botones de las subcategorías encontradas
+    subcatsUnicas.forEach(sub => {
+      const btn = document.createElement('button');
+      btn.className = `subcat-filter-btn ${subcategoriaSeleccionada === sub ? 'active' : ''}`;
+      btn.textContent = sub;
+      btn.onclick = () => {
+        subcategoriaSeleccionada = sub;
+        paginaActual = 1;
+        generarBarraSubcategoriasYCapacidades();
+        renderProducts(categoriaActual);
+      };
+      subcatRow.appendChild(btn);
+    });
+  }
+
+  // 2. LÓGICA EXCLUSIVA PARA TAMAÑOS EN SD/USB
+  if (categoriaActual === 'SD/USB') {
+    sizesRow.style.display = 'flex';
+
+    // Extraer tamaños únicos de almacenamiento detectados en el JSON
+    let tamanosUnicos = new Set();
+    productosCategoria.forEach(p => {
+      if (p.size && p.size !== 'Ninguno') tamanosUnicos.add(p.size);
+    });
+
+    // Ordenar tamaños de menor a mayor (primero GB, luego TB)
+    let listaTamanos = Array.from(tamanosUnicos).sort((a, b) => {
+      let numA = parseInt(a), numB = parseInt(b);
+      if (a.includes('TB') && !b.includes('TB')) return 1;
+      if (!a.includes('TB') && b.includes('TB')) return -1;
+      return numA - numB;
+    });
+
+    if (listaTamanos.length > 0) {
+      // Botón "Todos los tamaños"
+      const btnAllSize = document.createElement('button');
+      btnAllSize.className = `subcat-filter-btn ${tamanoSeleccionado === 'ALL' ? 'active' : ''}`;
+      btnAllSize.textContent = t.all + " (Capacidad)";
+      btnAllSize.onclick = () => {
+        tamanoSeleccionado = 'ALL';
+        paginaActual = 1;
+        generarBarraSubcategoriasYCapacidades();
+        renderProducts(categoriaActual);
+      };
+      sizesRow.appendChild(btnAllSize);
+
+      // Botones para cada tamaño (64 GB, 128 GB, 1 TB...)
+      listaTamanos.forEach(tam => {
+        const btnSize = document.createElement('button');
+        btnSize.className = `subcat-filter-btn ${tamanoSeleccionado === tam ? 'active' : ''}`;
+        btnSize.textContent = tam;
+        btnSize.onclick = () => {
+          tamanoSeleccionado = tam;
+          paginaActual = 1;
+          generarBarraSubcategoriasYCapacidades();
+          renderProducts(categoriaActual);
+        };
+        sizesRow.appendChild(btnSize);
+      });
+    }
+  }
 }
 
 /* ================= CARGA DE DATOS ================= */
@@ -752,6 +936,7 @@ async function cargarProductos() {
     allProducts = resultadosArrays.flat();
     
     renderPrimeProduct();
+    generarBarraSubcategoriasYCapacidades(); // Generar filtros al cargar los datos
     renderProducts(categoriaActual);
 
   } catch (error) {
@@ -770,7 +955,6 @@ function renderPrimeProduct() {
   const label = PRODUCTO_PRIME.label[idiomaActual] || PRODUCTO_PRIME.label.es;
   const desc = PRODUCTO_PRIME.desc[idiomaActual] || PRODUCTO_PRIME.desc.es;
   
-  // Limpiamos los saltos de línea para que todo fluya en una sola tira horizontal
   let cleanDesc = desc.replace(/\n/g, ' — ');
 
   banner.innerHTML = `
@@ -786,7 +970,7 @@ function renderPrimeProduct() {
   banner.style.display = 'flex';
 }
 
-/* ================= CREADOR DE TARJETAS ================= */
+/* ================= CREADOR DE TARJETAS MODIFICADO ================= */
 function createProductCard(item, container, isMini = false) {
   const card = document.createElement('div');
   card.className = isMini ? 'card card-recent' : 'card';
@@ -807,7 +991,13 @@ function createProductCard(item, container, isMini = false) {
   const iconCart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
   const iconZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
 
+  // NUEVO: Crear insignias dinámicas si el producto viene categorizado
+  const badgeHtml = (item.subcategory && item.subcategory !== 'Ninguno') ? `<div class="card-badge">${item.subcategory.toUpperCase()}</div>` : '';
+  const sizeBadgeHtml = (item.size && item.size !== 'Ninguno') ? `<div class="card-size-badge">${item.size}</div>` : '';
+
   card.innerHTML = `
+    ${badgeHtml}
+    ${sizeBadgeHtml}
     <img src="${item.img}" loading="lazy" alt="${label}">
     <div class="card-info">
       <strong>${label}</strong>
@@ -836,7 +1026,7 @@ function createProductCard(item, container, isMini = false) {
   container.appendChild(card);
 }
 
-/* ================= RENDERIZADO PRINCIPAL DE CATÁLOGO ================= */
+/* ================= RENDERIZADO PRINCIPAL DE CATÁLOGO MODIFICADO ================= */
 function renderProducts(catId, searchTerm = '') {
   const grid = document.getElementById('productsGrid');
   grid.innerHTML = '';
@@ -847,7 +1037,7 @@ function renderProducts(catId, searchTerm = '') {
     !(item.label?.es && item.label.es.toLowerCase().includes("amazon prime"))
   );
 
-  // Filtrar por Búsqueda o Categoría
+  // 1. Filtrar por Búsqueda Manual
   if (searchTerm.trim() !== '') {
     const term = searchTerm.toLowerCase().trim();
     filtered = filtered.filter(item => {
@@ -856,17 +1046,33 @@ function renderProducts(catId, searchTerm = '') {
       return label.includes(term) || desc.includes(term);
     });
     document.getElementById('currentCategoryTitle').textContent = t.results.toUpperCase();
-  } else {
+    
+    // Ocultar barras de subfiltros si el usuario busca a mano libre
+    document.getElementById('subcategoriesFilterRow').style.display = 'none';
+    document.getElementById('sizesFilterRow').style.display = 'none';
+  } 
+  // 2. Filtrar por Categoría Consola + Subcategorías + Tamaños
+  else {
     if (catId === '3DS_NDS') {
       filtered = filtered.filter(item => item.console === '3DS' || item.console === 'NDS');
     } else {
       filtered = filtered.filter(item => item.console === catId);
     }
+
+    // NUEVO: Aplicar filtro estricto de Subcategoría si está activo
+    if (subcategoriaSeleccionada !== 'ALL') {
+      filtered = filtered.filter(item => item.subcategory === subcategoriaSeleccionada);
+    }
+
+    // NUEVO: Aplicar filtro estricto de Tamaño si está activo (solo SD/USB)
+    if (catId === 'SD/USB' && tamanoSeleccionado !== 'ALL') {
+      filtered = filtered.filter(item => item.size === tamanoSeleccionado);
+    }
   }
 
   // Manejar estado vacío
   if (filtered.length === 0) {
-    grid.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">No se encontraron productos.</p>`;
+    grid.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">No se encontraron productos con los filtros seleccionados.</p>`;
     document.getElementById('paginationContainerTop').innerHTML = '';
     document.getElementById('paginationContainerBottom').innerHTML = '';
     return;
@@ -961,6 +1167,7 @@ searchInput.addEventListener('input', () => {
           btn.classList.add('active');
         }
       });
+      generarBarraSubcategoriasYCapacidades(); // Recuperar subfiltros al vaciar la búsqueda
     }
     renderProducts(categoriaActual, val);
   }, 300); 
