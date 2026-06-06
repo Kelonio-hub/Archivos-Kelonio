@@ -23,7 +23,9 @@
       "ko": "수백만 개의 제품에 대한 혜택과 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
     },
     "img": "https://gazetadasemana.com.br/images/colunas/10044/06072023165518_Amazon_Pri.jpg",
-    "url": "https://amzn.to/4pq5Pp6"
+    "url": "https://amzn.to/4pq5Pp6",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1",
@@ -49,7 +51,9 @@
       "ko": "Switch, Wii U 또는 PC에서 최대 4개의 정품 GameCube 컨트롤러를 연결하는 어댑터. 스매시 브라더스에 필수."
     },
     "img": "https://m.media-amazon.com/images/I/51LBY7QRbUL._AC_SL1200_.jpg",
-    "url": "https://amzn.to/3LeChwB"
+    "url": "https://amzn.to/3LeChwB",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "2",
@@ -75,7 +79,9 @@
       "ko": "Switch 및 기타 기기에서 빠른 충전과 데이터 전송을 위한 고품질 USB-C 케이블."
     },
     "img": "https://m.media-amazon.com/images/I/61iB-a5cJ2L._AC_SL1500_.jpg",
-    "url": "https://amzn.to/3RDOzzh"
+    "url": "https://amzn.to/3RDOzzh",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "3",
@@ -101,7 +107,9 @@
       "ko": "최대 4개의 Joy-Con 컨트롤러를 동시에 충전하는 충전 스테이션."
     },
     "img": "https://m.media-amazon.com/images/I/71U00z9KfXL._AC_SX569_.jpg",
-    "url": "https://amzn.to/3NmPmCa"
+    "url": "https://amzn.to/3NmPmCa",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "4",
@@ -127,7 +135,9 @@
       "ko": "Nintendo Switch 독과 본체에 호환되는 AC 전원 어댑터."
     },
     "img": "https://m.media-amazon.com/images/I/61gn0qKDOBL._AC_SX466_.jpg",
-    "url": "https://amzn.to/46ZhDW1"
+    "url": "https://amzn.to/46ZhDW1",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "5",
@@ -153,7 +163,9 @@
       "ko": "패치되지 않은 Nintendo Switch (Erista/V1)용 교체 쉘. 커스텀 모드에 완벽."
     },
     "img": "https://m.media-amazon.com/images/I/71o6qD66CjL._AC_SX569_.jpg",
-    "url": "https://amzn.to/41lLO90"
+    "url": "https://amzn.to/41lLO90",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "6",
@@ -179,7 +191,9 @@
       "ko": "Nintendo Switch Lite용 완전 교체 하우징. 수리 또는 커스터마이징에 좋음."
     },
     "img": "https://m.media-amazon.com/images/I/41ilqyZod2S._AC_.jpg",
-    "url": "https://amzn.to/41jXN6S"
+    "url": "https://amzn.to/41jXN6S",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "7",
@@ -205,7 +219,9 @@
       "ko": "Nintendo Switch OLED용 투명 보호 쉘 (글리터 효과)."
     },
     "img": "https://m.media-amazon.com/images/I/61un46Uhz9L._AC_SX569_.jpg",
-    "url": "https://amzn.to/4sm6cny"
+    "url": "https://amzn.to/4sm6cny",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "8",
@@ -231,7 +247,9 @@
       "ko": "오리지널 Nintendo Switch (V1/V2)용 9H 강화유리 화면 보호 필름."
     },
     "img": "https://m.media-amazon.com/images/I/61ibj-0hPpL._AC_SX679_.jpg",
-    "url": "https://amzn.to/4adosGu"
+    "url": "https://amzn.to/4adosGu",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "9",
@@ -257,7 +275,9 @@
       "ko": "Nintendo Switch Lite 전용 강화유리 화면 보호 필름."
     },
     "img": "https://m.media-amazon.com/images/I/71BHZNFfpsL._AC_SL1500_.jpg",
-    "url": "https://amzn.to/46QoHnX"
+    "url": "https://amzn.to/46QoHnX",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "10",
@@ -283,7 +303,9 @@
       "ko": "Nintendo Switch OLED 모델용 고품질 강화유리."
     },
     "img": "https://m.media-amazon.com/images/I/71DNqEMcUuL._AC_SX679_.jpg",
-    "url": "https://amzn.to/3t4Xnon"
+    "url": "https://amzn.to/3t4Xnon",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "11",
@@ -309,7 +331,9 @@
       "ko": "최대 24개의 Nintendo Switch 게임 카트리지를 보관할 수 있는 하드 케이스."
     },
     "img": "https://m.media-amazon.com/images/I/71Uk4IbJNuL._AC_SX466_.jpg",
-    "url": "https://amzn.to/3RlmPhg"
+    "url": "https://amzn.to/3RlmPhg",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "12",
@@ -335,7 +359,9 @@
       "ko": "액세서리 수납 공간이 있는 Nintendo Switch 보호 휴대 케이스."
     },
     "img": "https://m.media-amazon.com/images/I/714L0BZ1KsL._AC_SX466_.jpg",
-    "url": "https://amzn.to/3NmEIuU"
+    "url": "https://amzn.to/3NmEIuU",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "13",
@@ -361,7 +387,9 @@
       "ko": "Nintendo Switch 호환 서드파티 무선 Joy-Con 컨트롤러."
     },
     "img": "https://m.media-amazon.com/images/I/515tx7AhPsS._AC_SX425_.jpg",
-    "url": "https://amzn.to/3RCe2sH"
+    "url": "https://amzn.to/3RCe2sH",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "14",
@@ -387,7 +415,9 @@
       "ko": "Joy-Con용 액세서리 팩: 그립, 스티어링 휠, 스트랩."
     },
     "img": "https://m.media-amazon.com/images/I/81HBuXMa3bL._AC_SX679_.jpg",
-    "url": "https://amzn.to/3NmLmBt"
+    "url": "https://amzn.to/3NmLmBt",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "15",
@@ -413,7 +443,9 @@
       "ko": "Nintendo Switch 호환 GameCube 스타일 컨트롤러 (어댑터 필요)."
     },
     "img": "https://m.media-amazon.com/images/I/61GtSz075NL._AC_SX679_.jpg",
-    "url": "https://amzn.to/4jn5LoW"
+    "url": "https://amzn.to/4jn5LoW",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "16",
@@ -439,7 +471,9 @@
       "ko": "Nintendo Switch용 무선 Pro 컨트롤러 대안."
     },
     "img": "https://m.media-amazon.com/images/I/61RRowenahL._AC_SX466_.jpg",
-    "url": "https://amzn.to/46O2jM9"
+    "url": "https://amzn.to/46O2jM9",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "17",
@@ -465,7 +499,9 @@
       "ko": "패치되지 않은 Switch 콘솔에서 복구 모드로 들어가는 RCM Jig 도구."
     },
     "img": "https://m.media-amazon.com/images/I/61SrbqyZJQL._AC_SX569_.jpg",
-    "url": "https://amzn.to/4sg75Of"
+    "url": "https://amzn.to/4sg75Of",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "18",
@@ -491,7 +527,9 @@
       "ko": "Joy-Con용 스티어링 휠 한 쌍. 마리오 카트 및 레이싱 게임에 완벽."
     },
     "img": "https://m.media-amazon.com/images/I/511hhE7PdaL._AC_SX679_.jpg",
-    "url": "https://amzn.to/3Tqf4cN"
+    "url": "https://amzn.to/3Tqf4cN",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "76",
@@ -518,7 +556,9 @@
     },
     "img": "https://m.media-amazon.com/images/I/7148gs3mRnL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B092JL5NS2?tag=kelonio-21",
-    "price": "214,00 €"
+    "price": "214,00 €",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1250",
@@ -545,7 +585,9 @@
     },
     "price": "210,00 €",
     "img": "https://m.media-amazon.com/images/I/81IQp9uUdRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07WKNQ8JT?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07WKNQ8JT?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1251",
@@ -572,7 +614,9 @@
     },
     "price": "374,65 €",
     "img": "https://m.media-amazon.com/images/I/71KrfLpEMML._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01IU4B6I2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01IU4B6I2?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1252",
@@ -599,7 +643,9 @@
     },
     "price": "227,00 €",
     "img": "https://m.media-amazon.com/images/I/51TJ3ERPBwL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07FSXFJ88?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07FSXFJ88?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1253",
@@ -626,7 +672,9 @@
     },
     "price": "399,49 €",
     "img": "https://m.media-amazon.com/images/I/71bp5WcmSsL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2JCL3NZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2JCL3NZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1254",
@@ -653,7 +701,9 @@
     },
     "price": "247,00 €",
     "img": "https://m.media-amazon.com/images/I/81IQp9uUdRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08231JQN1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08231JQN1?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1255",
@@ -680,7 +730,9 @@
     },
     "price": "247,00 €",
     "img": "https://m.media-amazon.com/images/I/714mELI+eGL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0BLCX83YK?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BLCX83YK?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1256",
@@ -707,7 +759,9 @@
     },
     "price": "44,99 €",
     "img": "https://m.media-amazon.com/images/I/71yYM3uVJOL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0BW3T9YBP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BW3T9YBP?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1257",
@@ -734,7 +788,9 @@
     },
     "price": "569,90 €",
     "img": "https://m.media-amazon.com/images/I/71z-2awg0sL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3HFQ5SY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3HFQ5SY?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1258",
@@ -761,7 +817,9 @@
     },
     "price": "16,23 €",
     "img": "https://m.media-amazon.com/images/I/81TCCzQW+KS._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B091BPSRXL?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B091BPSRXL?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1259",
@@ -788,7 +846,9 @@
     },
     "price": "16,89 €",
     "img": "https://m.media-amazon.com/images/I/91bh-u+yxGL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXDYCKVS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXDYCKVS?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1260",
@@ -815,7 +875,9 @@
     },
     "price": "13,73 €",
     "img": "https://m.media-amazon.com/images/I/91v+ENGfMHL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXF1HR6H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXF1HR6H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1261",
@@ -842,7 +904,9 @@
     },
     "price": "12,71 €",
     "img": "https://m.media-amazon.com/images/I/91LU+ucnz1L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXDX9ZJ3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXDX9ZJ3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1262",
@@ -869,7 +933,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/61wYviQzENL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXDQ3RWL?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXDQ3RWL?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1263",
@@ -896,7 +962,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/71C9pOGlKtL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B01N7RLGIJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N7RLGIJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1264",
@@ -923,7 +991,9 @@
     },
     "price": "22,95 €",
     "img": "https://m.media-amazon.com/images/I/81nxRKxBf3L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FKH7HFR6?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FKH7HFR6?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1265",
@@ -950,7 +1020,9 @@
     },
     "price": "19,54 €",
     "img": "https://m.media-amazon.com/images/I/71e2MSe9EqL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D98BJ7SH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D98BJ7SH?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1266",
@@ -977,7 +1049,9 @@
     },
     "price": "25,73 €",
     "img": "https://m.media-amazon.com/images/I/81yQn-UnPSL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D98BDG3S?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D98BDG3S?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1267",
@@ -1004,7 +1078,9 @@
     },
     "price": "26,88 €",
     "img": "https://m.media-amazon.com/images/I/81iAfj6SgYL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D98BGQRW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D98BGQRW?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1268",
@@ -1031,7 +1107,9 @@
     },
     "price": "32,55 €",
     "img": "https://m.media-amazon.com/images/I/81O-bGS1fxL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D989PC6Y?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D989PC6Y?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1269",
@@ -1058,7 +1136,9 @@
     },
     "price": "26,60 €",
     "img": "https://m.media-amazon.com/images/I/61P-m0FgzLL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07D1L22SD?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07D1L22SD?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1270",
@@ -1085,7 +1165,9 @@
     },
     "price": "249,95 €",
     "img": "https://m.media-amazon.com/images/I/61kA9ep9taL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01N5OPMJW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N5OPMJW?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1271",
@@ -1112,7 +1194,9 @@
     },
     "price": "27,90 €",
     "img": "https://m.media-amazon.com/images/I/71yFBLU59HL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07P6QCPS8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07P6QCPS8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1272",
@@ -1139,7 +1223,9 @@
     },
     "price": "17,90 €",
     "img": "https://m.media-amazon.com/images/I/81KuubwpqoL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07PC3V9F2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07PC3V9F2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1273",
@@ -1166,7 +1252,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/61mdwImF7FL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0CWDYCRS8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CWDYCRS8?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1274",
@@ -1193,7 +1281,9 @@
     },
     "price": "404,88 €",
     "img": "https://m.media-amazon.com/images/I/81lBLvfA6RL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DGGVX1GR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DGGVX1GR?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1275",
@@ -1220,7 +1310,9 @@
     },
     "price": "38,15 €",
     "img": "https://m.media-amazon.com/images/I/71R010yUWaL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0DN6G6FJP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DN6G6FJP?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1276",
@@ -1247,7 +1339,9 @@
     },
     "price": "22,99 €",
     "img": "https://m.media-amazon.com/images/I/61L1EEEsT-L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DJ2PLH9G?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DJ2PLH9G?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1277",
@@ -1274,7 +1368,9 @@
     },
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/617Wl+fKQ6L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FS1JVBBZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FS1JVBBZ?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1278",
@@ -1301,7 +1397,9 @@
     },
     "price": "439,85 €",
     "img": "https://m.media-amazon.com/images/I/8126eieqz5L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07CJWS83Y?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07CJWS83Y?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1279",
@@ -1328,7 +1426,9 @@
     },
     "price": "29,90 €",
     "img": "https://m.media-amazon.com/images/I/81su0WucEcL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FKNQX141?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FKNQX141?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1280",
@@ -1355,7 +1455,9 @@
     },
     "price": "323,99 €",
     "img": "https://m.media-amazon.com/images/I/71O4rtiSpqL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B098BYN3X3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B098BYN3X3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1281",
@@ -1382,7 +1484,9 @@
     },
     "price": "289,00 €",
     "img": "https://m.media-amazon.com/images/I/81Sic9wi4zL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0BHDDH5W1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BHDDH5W1?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1282",
@@ -1409,7 +1513,9 @@
     },
     "price": "457,00 €",
     "img": "https://m.media-amazon.com/images/I/717JrHodikL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2J4SYJ2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2J4SYJ2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1283",
@@ -1436,7 +1542,9 @@
     },
     "price": "54,99 €",
     "img": "https://m.media-amazon.com/images/I/81qadafBqCL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GLHNN1NK?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GLHNN1NK?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1284",
@@ -1463,7 +1571,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81EzN0PFG6L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D7F3WHPV?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D7F3WHPV?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1285",
@@ -1490,7 +1600,9 @@
     },
     "price": "69,90 €",
     "img": "https://m.media-amazon.com/images/I/81OZ6E7IAqL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2N6F62D?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2N6F62D?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1286",
@@ -1517,7 +1629,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/71zMdXzQuqL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01MZ973SY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01MZ973SY?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1287",
@@ -1544,7 +1658,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/81eblOJ2GEL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07JJK2QFG?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07JJK2QFG?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1288",
@@ -1571,7 +1687,9 @@
     },
     "price": "66,99 €",
     "img": "https://m.media-amazon.com/images/I/81ms9g5nWYL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G71JQD6H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G71JQD6H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1289",
@@ -1598,7 +1716,9 @@
     },
     "price": "58,88 €",
     "img": "https://m.media-amazon.com/images/I/810UZa3-MpL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FQWBD5MT?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FQWBD5MT?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1290",
@@ -1625,7 +1745,9 @@
     },
     "price": "29,90 €",
     "img": "https://m.media-amazon.com/images/I/81ijYM3H+OL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D42BGBV3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D42BGBV3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1291",
@@ -1652,7 +1774,9 @@
     },
     "price": "59,90 €",
     "img": "https://m.media-amazon.com/images/I/81KIQqVM1WL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FBMLXK2D?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FBMLXK2D?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1292",
@@ -1679,7 +1803,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/81zy-KHgh1L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D7D9BN9J?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D7D9BN9J?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1293",
@@ -1706,7 +1832,9 @@
     },
     "price": "376,65 €",
     "img": "https://m.media-amazon.com/images/I/71KrfLpEMML._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B071H4KD7W?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B071H4KD7W?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1294",
@@ -1733,7 +1861,9 @@
     },
     "price": "20,99 €",
     "img": "https://m.media-amazon.com/images/I/5139fGpZ77L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DB2LQQMS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DB2LQQMS?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1295",
@@ -1760,7 +1890,9 @@
     },
     "price": "22,99 €",
     "img": "https://m.media-amazon.com/images/I/516F+3Hb3UL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DB2MSGCZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DB2MSGCZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1296",
@@ -1787,7 +1919,9 @@
     },
     "price": "25,99 €",
     "img": "https://m.media-amazon.com/images/I/51WyLVZqkHL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DB2M9X8Q?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DB2M9X8Q?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1297",
@@ -1814,7 +1948,9 @@
     },
     "price": "320,00 €",
     "img": "https://m.media-amazon.com/images/I/71O3wheLjEL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DGGTYDLJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DGGTYDLJ?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1298",
@@ -1841,7 +1977,9 @@
     },
     "price": "434,00 €",
     "img": "https://m.media-amazon.com/images/I/61hs1+3IURL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0BZT51WWW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BZT51WWW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1299",
@@ -1868,7 +2006,9 @@
     },
     "price": "31,90 €",
     "img": "https://m.media-amazon.com/images/I/61n135XcEcL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0DHH7X49B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DHH7X49B?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1300",
@@ -1895,7 +2035,9 @@
     },
     "price": "15,19 €",
     "img": "https://m.media-amazon.com/images/I/816XBM8nEbL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B09YV74R86?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09YV74R86?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1301",
@@ -1922,7 +2064,9 @@
     },
     "price": "26,99 €",
     "img": "https://m.media-amazon.com/images/I/61PhSH0lscL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ6QLXSM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GJ6QLXSM?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1302",
@@ -1949,7 +2093,9 @@
     },
     "price": "44,90 €",
     "img": "https://m.media-amazon.com/images/I/61KakjMq2ZL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07QD6R5L7?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07QD6R5L7?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1303",
@@ -1976,7 +2122,9 @@
     },
     "price": "45,99 €",
     "img": "https://m.media-amazon.com/images/I/71sT6IkxThL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07HCVN3D1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07HCVN3D1?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1304",
@@ -2003,7 +2151,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/81ceJTwaeCL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B084571B4P?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B084571B4P?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1305",
@@ -2030,7 +2180,9 @@
     },
     "price": "69,90 €",
     "img": "https://m.media-amazon.com/images/I/813+7CrWOgL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2N91DQ8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2N91DQ8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1306",
@@ -2057,7 +2209,9 @@
     },
     "price": "490,00 €",
     "img": "https://m.media-amazon.com/images/I/714-Fh3ngmL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3GWXLTS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3GWXLTS?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1307",
@@ -2084,7 +2238,9 @@
     },
     "price": "71,99 €",
     "img": "https://m.media-amazon.com/images/I/51zrgZx4+lL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07VFTVVWX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VFTVVWX?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1308",
@@ -2111,7 +2267,9 @@
     },
     "price": "334,08 €",
     "img": "https://m.media-amazon.com/images/I/61nqNujSF2L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B098RKWHHZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B098RKWHHZ?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1309",
@@ -2138,7 +2296,9 @@
     },
     "price": "58,99 €",
     "img": "https://m.media-amazon.com/images/I/61usfGu+5JL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07BDYT58L?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07BDYT58L?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1310",
@@ -2165,7 +2325,9 @@
     },
     "price": "19,90 €",
     "img": "https://m.media-amazon.com/images/I/51kK9r8+KCL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D6RDDPQ3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D6RDDPQ3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1311",
@@ -2192,7 +2354,9 @@
     },
     "price": "399,90 €",
     "img": "https://m.media-amazon.com/images/I/71m0aFDqciL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B098TVDYZ3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B098TVDYZ3?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1312",
@@ -2219,7 +2383,9 @@
     },
     "price": "27,99 €",
     "img": "https://m.media-amazon.com/images/I/61gn0qKDOBL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01N10NX3M?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N10NX3M?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1313",
@@ -2246,7 +2412,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07HCRY5L9?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07HCRY5L9?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1314",
@@ -2273,7 +2441,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81cHm50auZL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07WJQMN32?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07WJQMN32?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1315",
@@ -2300,7 +2470,9 @@
     },
     "price": "9,99 €",
     "img": "https://m.media-amazon.com/images/I/71eU6QTOsVL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07XYR4FL4?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07XYR4FL4?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1316",
@@ -2327,7 +2499,9 @@
     },
     "price": "164,90 €",
     "img": "https://m.media-amazon.com/images/I/61kpEoE3+bL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DHGP8TZ2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DHGP8TZ2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1317",
@@ -2354,7 +2528,9 @@
     },
     "price": "157,99 €",
     "img": "https://m.media-amazon.com/images/I/71cKBPGmeWL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0CWK6YQ7V?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CWK6YQ7V?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1318",
@@ -2381,7 +2557,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/81AD2iCmL0L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FGQ6DYLJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FGQ6DYLJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1319",
@@ -2408,7 +2586,9 @@
     },
     "price": "299,90 €",
     "img": "https://m.media-amazon.com/images/I/51uSBSWgaYL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D7J3767P?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D7J3767P?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1320",
@@ -2435,7 +2615,9 @@
     },
     "price": "250,00 €",
     "img": "https://m.media-amazon.com/images/I/71Sedv0KNPL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B085SKC29S?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B085SKC29S?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1321",
@@ -2462,7 +2644,9 @@
     },
     "price": "241,41 €",
     "img": "https://m.media-amazon.com/images/I/71SAila1MXL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B092JPSVCS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B092JPSVCS?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1322",
@@ -2489,7 +2673,9 @@
     },
     "price": "219,00 €",
     "img": "https://m.media-amazon.com/images/I/71StlAiVDsL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B09D4K12CZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09D4K12CZ?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1323",
@@ -2516,7 +2702,9 @@
     },
     "price": "22,14 €",
     "img": "https://m.media-amazon.com/images/I/81cSsHQdf+L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0DKK3W82F?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DKK3W82F?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1324",
@@ -2543,7 +2731,9 @@
     },
     "price": "299,90 €",
     "img": "https://m.media-amazon.com/images/I/81wNza8R28L._AC_SX355_.jpg",
-    "url": "https://www.amazon.es/dp/B08NG3X5N8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08NG3X5N8?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1325",
@@ -2570,7 +2760,9 @@
     },
     "price": "33,99 €",
     "img": "https://m.media-amazon.com/images/I/71og8FhOFEL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3WV4WT8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3WV4WT8?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1326",
@@ -2597,7 +2789,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81ZSbL+5UiL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GY5GY45X?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GY5GY45X?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1327",
@@ -2624,7 +2818,9 @@
     },
     "price": "25,50 €",
     "img": "https://m.media-amazon.com/images/I/71LT2c92StL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09QH6N764?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09QH6N764?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1328",
@@ -2651,7 +2847,9 @@
     },
     "price": "47,90 €",
     "img": "https://m.media-amazon.com/images/I/712Kcf7kHVL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0C8YWGST8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C8YWGST8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1329",
@@ -2678,7 +2876,9 @@
     },
     "price": "57,90 €",
     "img": "https://m.media-amazon.com/images/I/81XJF97WzQL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GT9R4QMQ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GT9R4QMQ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1330",
@@ -2705,7 +2905,9 @@
     },
     "price": "11,99 €",
     "img": "https://m.media-amazon.com/images/I/61Iv8cQB4zL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B083V1FF77?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B083V1FF77?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1331",
@@ -2732,7 +2934,9 @@
     },
     "price": "14,99 €",
     "img": "https://m.media-amazon.com/images/I/61A+2LMQJ8L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B09BC974S5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09BC974S5?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1332",
@@ -2759,7 +2963,9 @@
     },
     "price": "19,90 €",
     "img": "https://m.media-amazon.com/images/I/710-G9UKs4L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49DHSHJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49DHSHJ?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1333",
@@ -2786,7 +2992,9 @@
     },
     "price": "28,49 €",
     "img": "https://m.media-amazon.com/images/I/71cWqXrp-2L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49Y9WH2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49Y9WH2?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1334",
@@ -2813,7 +3021,9 @@
     },
     "price": "33,24 €",
     "img": "https://m.media-amazon.com/images/I/71AGhkGwIhL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49CTJBW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49CTJBW?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1335",
@@ -2840,7 +3050,9 @@
     },
     "price": "37,99 €",
     "img": "https://m.media-amazon.com/images/I/71gzlTkNEiL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49F1Y99?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49F1Y99?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1336",
@@ -2867,7 +3079,9 @@
     },
     "price": "28,49 €",
     "img": "https://m.media-amazon.com/images/I/71nEd--ORXL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49FWKWZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49FWKWZ?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1337",
@@ -2894,7 +3108,9 @@
     },
     "price": "28,49 €",
     "img": "https://m.media-amazon.com/images/I/71lk---v84L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F49RD95B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F49RD95B?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1338",
@@ -2921,7 +3137,9 @@
     },
     "price": "8,39 €",
     "img": "https://m.media-amazon.com/images/I/61oSJ2W2CFL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0D31L7CN2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D31L7CN2?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1339",
@@ -2948,7 +3166,9 @@
     },
     "price": "64,99 €",
     "img": "https://m.media-amazon.com/images/I/61xhzvDIRKL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B01N4ND1T2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N4ND1T2?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1340",
@@ -2975,7 +3195,9 @@
     },
     "price": "74,99 €",
     "img": "https://m.media-amazon.com/images/I/61i4WR7HNFL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3JR79YY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3JR79YY?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1341",
@@ -3002,7 +3224,9 @@
     },
     "price": "39,90 €",
     "img": "https://m.media-amazon.com/images/I/81ll2ZcI4lL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GYSDMY8H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GYSDMY8H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1342",
@@ -3029,7 +3253,9 @@
     },
     "price": "29,90 €",
     "img": "https://m.media-amazon.com/images/I/81OQ-IBN5bL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GKGN16GX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GKGN16GX?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1343",
@@ -3056,7 +3282,9 @@
     },
     "price": "39,90 €",
     "img": "https://m.media-amazon.com/images/I/81sXPbc5w6L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GKHD3X6Z?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GKHD3X6Z?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1344",
@@ -3083,7 +3311,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/71r+uY1RRKL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B09S5S9L94?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09S5S9L94?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1345",
@@ -3110,7 +3340,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/71YVxGjW1rL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09YYNZJYW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09YYNZJYW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1346",
@@ -3137,7 +3369,9 @@
     },
     "price": "398,88 €",
     "img": "https://m.media-amazon.com/images/I/51BGaHwCqKL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1F16Y8H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1F16Y8H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1347",
@@ -3164,7 +3398,9 @@
     },
     "price": "408,89 €",
     "img": "https://m.media-amazon.com/images/I/61TNcFMJ+9L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1DTCC1M?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1DTCC1M?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1348",
@@ -3191,7 +3427,9 @@
     },
     "price": "74,90 €",
     "img": "https://m.media-amazon.com/images/I/81IOVqgECCL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2N6V24N?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2N6V24N?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1349",
@@ -3218,7 +3456,9 @@
     },
     "price": "7,99 €",
     "img": "https://m.media-amazon.com/images/I/71c6U9t+RVL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DS1SBCRH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DS1SBCRH?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1350",
@@ -3245,7 +3485,9 @@
     },
     "price": "40,50 €",
     "img": "https://m.media-amazon.com/images/I/81Lsc50XhmL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0H3B1MRGT?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H3B1MRGT?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1351",
@@ -3272,7 +3514,9 @@
     },
     "price": "13,99 €",
     "img": "https://m.media-amazon.com/images/I/61hSpg-bYRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01N7RIIR2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N7RIIR2?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1352",
@@ -3299,7 +3543,9 @@
     },
     "price": "56,90 €",
     "img": "https://m.media-amazon.com/images/I/81-mOHTHOxL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G1BDSJ52?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G1BDSJ52?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1353",
@@ -3326,7 +3572,9 @@
     },
     "price": "56,57 €",
     "img": "https://m.media-amazon.com/images/I/91vd7WQ1acL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B01N1081RO?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N1081RO?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1354",
@@ -3353,7 +3601,9 @@
     },
     "price": "42,99 €",
     "img": "https://m.media-amazon.com/images/I/61QgCL-wURL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B09SBYHZJB?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09SBYHZJB?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1355",
@@ -3380,7 +3630,9 @@
     },
     "price": "36,99 €",
     "img": "https://m.media-amazon.com/images/I/815zIDdpGML._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07BF1SNJR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07BF1SNJR?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1356",
@@ -3407,7 +3659,9 @@
     },
     "price": "56,90 €",
     "img": "https://m.media-amazon.com/images/I/81uIdB9nHdL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09S4R3WT1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09S4R3WT1?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1357",
@@ -3434,7 +3688,9 @@
     },
     "price": "63,99 €",
     "img": "https://m.media-amazon.com/images/I/81rHCVjj8nL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2N69SGN?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2N69SGN?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1358",
@@ -3461,7 +3717,9 @@
     },
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/81e6se9NAuL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B076HT7KL3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B076HT7KL3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1359",
@@ -3488,7 +3746,9 @@
     },
     "price": "66,90 €",
     "img": "https://m.media-amazon.com/images/I/81TpJ14MgzL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJTJQ8V9?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GJTJQ8V9?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1360",
@@ -3515,7 +3775,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/71LpajrMpuL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07HD1312V?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07HD1312V?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1361",
@@ -3542,7 +3804,9 @@
     },
     "price": "83,99 €",
     "img": "https://m.media-amazon.com/images/I/71ldS9zWI-L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FYHR3MYZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FYHR3MYZ?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1362",
@@ -3569,7 +3833,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81apvVCVNNL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09GWPYXVH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09GWPYXVH?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1363",
@@ -3596,7 +3862,9 @@
     },
     "price": "65,27 €",
     "img": "https://m.media-amazon.com/images/I/81d2TT-G0bL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2JC9HMR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2JC9HMR?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1364",
@@ -3623,7 +3891,9 @@
     },
     "price": "29,99 €",
     "img": "https://m.media-amazon.com/images/I/61eXKcmeWiL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GYP6D9MM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GYP6D9MM?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1365",
@@ -3650,7 +3920,9 @@
     },
     "price": "5,89 €",
     "img": "https://m.media-amazon.com/images/I/61N9BpqzITL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08WR7WH4R?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08WR7WH4R?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1366",
@@ -3677,7 +3949,9 @@
     },
     "price": "499,65 €",
     "img": "https://m.media-amazon.com/images/I/81ALelRIt5L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B08NYB27Y7?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08NYB27Y7?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1367",
@@ -3704,7 +3978,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71VIZBr9DjL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0H33PMSB2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H33PMSB2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1368",
@@ -3731,7 +4007,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/7198VrnH7rL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GWKDHTG8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GWKDHTG8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1369",
@@ -3758,7 +4036,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81gbYu3ed-L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CJ3XKLDN?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CJ3XKLDN?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1370",
@@ -3785,7 +4065,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/71+9z2FyNxL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CWR99BYJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CWR99BYJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1371",
@@ -3812,7 +4094,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/61NTipuxh1L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0D2NJBGHG?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D2NJBGHG?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1372",
@@ -3839,7 +4123,9 @@
     },
     "price": "44,90 €",
     "img": "https://m.media-amazon.com/images/I/71TB2LpxNBL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FN4F4L55?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FN4F4L55?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1373",
@@ -3866,7 +4152,9 @@
     },
     "price": "29,42 €",
     "img": "https://m.media-amazon.com/images/I/81zgWwSnVfL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0977RRHJG?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0977RRHJG?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1374",
@@ -3893,7 +4181,9 @@
     },
     "price": "26,60 €",
     "img": "https://m.media-amazon.com/images/I/81r3vvmS0IL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GKPV34CK?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GKPV34CK?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1375",
@@ -3920,7 +4210,9 @@
     },
     "price": "368,89 €",
     "img": "https://m.media-amazon.com/images/I/41k3jxWNFzL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DMTM61XW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DMTM61XW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1376",
@@ -3947,7 +4239,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/51IY5qMo-vL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B091VTT67M?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B091VTT67M?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1377",
@@ -3974,7 +4268,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/71VD1Pum1rL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09727G9FS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09727G9FS?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1378",
@@ -4001,7 +4297,9 @@
     },
     "price": "12,99 €",
     "img": "https://m.media-amazon.com/images/I/71AjEQ8XvML._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FNCH477M?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FNCH477M?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1379",
@@ -4028,7 +4326,9 @@
     },
     "price": "7,99 €",
     "img": "https://m.media-amazon.com/images/I/71PtvS43J7L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07JKRDLD2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07JKRDLD2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1380",
@@ -4055,7 +4355,9 @@
     },
     "price": "25,00 €",
     "img": "https://m.media-amazon.com/images/I/61SHk6khcvL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07VJSSFCP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VJSSFCP?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1381",
@@ -4082,7 +4384,9 @@
     },
     "price": "44,90 €",
     "img": "https://m.media-amazon.com/images/I/61YEUD-FRWL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07DPR5PFX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07DPR5PFX?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1382",
@@ -4109,7 +4413,9 @@
     },
     "price": "6,49 €",
     "img": "https://m.media-amazon.com/images/I/71jScNPkrLL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07YRNFG5Q?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07YRNFG5Q?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1383",
@@ -4136,7 +4442,9 @@
     },
     "price": "288,13 €",
     "img": "https://m.media-amazon.com/images/I/71rmzSDQOlL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0CH1NNNG5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CH1NNNG5?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1384",
@@ -4163,7 +4471,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71k3It5GSFL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3P3X5P2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3P3X5P2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1385",
@@ -4190,7 +4500,9 @@
     },
     "price": "79,90 €",
     "img": "https://m.media-amazon.com/images/I/61ipdRXCiwL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B071992NQ2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B071992NQ2?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1386",
@@ -4217,7 +4529,9 @@
     },
     "price": "72,99 €",
     "img": "https://m.media-amazon.com/images/I/61dCCKDN4dL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0C6YD9S1P?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C6YD9S1P?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1387",
@@ -4244,7 +4558,9 @@
     },
     "price": "19,90 €",
     "img": "https://m.media-amazon.com/images/I/81-VzqQqJDL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G2CQ4HBC?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G2CQ4HBC?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1388",
@@ -4271,7 +4587,9 @@
     },
     "price": "28,99 €",
     "img": "https://m.media-amazon.com/images/I/81uY4cPN77L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G2CRZVC3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G2CRZVC3?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1389",
@@ -4298,7 +4616,9 @@
     },
     "price": "19,90 €",
     "img": "https://m.media-amazon.com/images/I/81wQcRoYvEL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0G2CRTFLR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G2CRTFLR?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1390",
@@ -4325,7 +4645,9 @@
     },
     "price": "29,99 €",
     "img": "https://m.media-amazon.com/images/I/81WUoVKvzCL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GP6VPTZK?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GP6VPTZK?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1391",
@@ -4352,7 +4674,9 @@
     },
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/818yV1peV9L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GL3B3L3C?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GL3B3L3C?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1392",
@@ -4379,7 +4703,9 @@
     },
     "price": "24,90 €",
     "img": "https://m.media-amazon.com/images/I/71OugZBT3hL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09BBWTPP2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09BBWTPP2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1393",
@@ -4406,7 +4732,9 @@
     },
     "price": "79,90 €",
     "img": "https://m.media-amazon.com/images/I/51DN8sIYjaL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GFPN1YZP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GFPN1YZP?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1394",
@@ -4433,7 +4761,9 @@
     },
     "price": "41,65 €",
     "img": "https://m.media-amazon.com/images/I/8123L5SWAlL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0CWP9V73C?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CWP9V73C?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1395",
@@ -4460,7 +4790,9 @@
     },
     "price": "81,99 €",
     "img": "https://m.media-amazon.com/images/I/717BOtHxr+L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0H44WGVQJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H44WGVQJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1396",
@@ -4487,7 +4819,9 @@
     },
     "price": "41,99 €",
     "img": "https://m.media-amazon.com/images/I/81Kg6S7eXfL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0H3P88ZNY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H3P88ZNY?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1397",
@@ -4514,7 +4848,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81PtwuehEEL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07TWC17Q8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07TWC17Q8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1398",
@@ -4541,7 +4877,9 @@
     },
     "price": "85,95 €",
     "img": "https://m.media-amazon.com/images/I/714hwkJBliL._AC_SX355_.jpg",
-    "url": "https://www.amazon.es/dp/B08DG7FB61?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08DG7FB61?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1399",
@@ -4568,7 +4906,9 @@
     },
     "price": "373,98 €",
     "img": "https://m.media-amazon.com/images/I/41wiZ4WQIkL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DRW7WSL6?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DRW7WSL6?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1400",
@@ -4595,7 +4935,9 @@
     },
     "price": "343,89 €",
     "img": "https://m.media-amazon.com/images/I/31Wox35BDkL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DMTM9BXM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DMTM9BXM?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1401",
@@ -4622,7 +4964,9 @@
     },
     "price": "439,90 €",
     "img": "https://m.media-amazon.com/images/I/71FfIg9dWqL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07CK7DRRF?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07CK7DRRF?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1402",
@@ -4649,7 +4993,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71f+SDA0xwL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0F3P4FB73?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F3P4FB73?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1403",
@@ -4676,7 +5022,9 @@
     },
     "price": "37,99 €",
     "img": "https://m.media-amazon.com/images/I/61LiNImDQPL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GTVZQVJH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GTVZQVJH?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1404",
@@ -4703,7 +5051,9 @@
     },
     "price": "20,99 €",
     "img": "https://m.media-amazon.com/images/I/61b9NJl82qL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0F7RNNYZY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F7RNNYZY?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1405",
@@ -4730,7 +5080,9 @@
     },
     "price": "20,99 €",
     "img": "https://m.media-amazon.com/images/I/61gX3AGq70L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0F7RMPBRY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F7RMPBRY?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1406",
@@ -4757,7 +5109,9 @@
     },
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/71mw3B0KRaL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0FR8P6Y1N?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FR8P6Y1N?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1407",
@@ -4784,7 +5138,9 @@
     },
     "price": "20,99 €",
     "img": "https://m.media-amazon.com/images/I/618MsppafsL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0FKMRN1W5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FKMRN1W5?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1408",
@@ -4811,7 +5167,9 @@
     },
     "price": "20,99 €",
     "img": "https://m.media-amazon.com/images/I/61AeME6gi+L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0GL7V8K7L?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GL7V8K7L?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1409",
@@ -4838,7 +5196,9 @@
     },
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/61E4dDJeNjL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0F7RL7LRR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F7RL7LRR?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1410",
@@ -4865,7 +5225,9 @@
     },
     "price": "373,98 €",
     "img": "https://m.media-amazon.com/images/I/41+9zXKgyCL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DMTKMWH1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DMTKMWH1?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1411",
@@ -4892,7 +5254,9 @@
     },
     "price": "54,70 €",
     "img": "https://m.media-amazon.com/images/I/81kN3ZgSSGL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0C8VMMX8X?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C8VMMX8X?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1412",
@@ -4919,7 +5283,9 @@
     },
     "price": "44,99 €",
     "img": "https://m.media-amazon.com/images/I/7152i9m6jsL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0H342LD6M?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H342LD6M?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1413",
@@ -4946,7 +5312,9 @@
     },
     "price": "74,90 €",
     "img": "https://m.media-amazon.com/images/I/61PBTDDGMjL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GKHLX13B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GKHLX13B?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1414",
@@ -4973,7 +5341,9 @@
     },
     "price": "8,95 €",
     "img": "https://m.media-amazon.com/images/I/71W72WVMW7L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DS1S2Z7L?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DS1S2Z7L?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1415",
@@ -5000,7 +5370,9 @@
     },
     "price": "109,99 €",
     "img": "https://m.media-amazon.com/images/I/61yr68ftwqL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B8MW46BZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B8MW46BZ?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1416",
@@ -5027,7 +5399,9 @@
     },
     "price": "25,99 €",
     "img": "https://m.media-amazon.com/images/I/81Af0s2j+yL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DRX5SZQZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DRX5SZQZ?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1417",
@@ -5054,7 +5428,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/61JNCrjjPoL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXTMC41C?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXTMC41C?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1418",
@@ -5081,7 +5457,9 @@
     },
     "price": "19,98 €",
     "img": "https://m.media-amazon.com/images/I/81h5C1uXmdL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D7HZPLFW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D7HZPLFW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1419",
@@ -5108,7 +5486,9 @@
     },
     "price": "9,99 €",
     "img": "https://m.media-amazon.com/images/I/51DY9B79IWL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1V4MK8T?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1V4MK8T?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1420",
@@ -5135,7 +5515,9 @@
     },
     "price": "12,00 €",
     "img": "https://m.media-amazon.com/images/I/611YJ620wnL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BSL6PKLC?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BSL6PKLC?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1421",
@@ -5162,7 +5544,9 @@
     },
     "price": "11,90 €",
     "img": "https://m.media-amazon.com/images/I/61-OcDUfVRL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BRQ7RFW9?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BRQ7RFW9?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1422",
@@ -5189,7 +5573,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/71ZUbCB8qQL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0F8WRHMGT?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F8WRHMGT?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1423",
@@ -5216,7 +5602,9 @@
     },
     "price": "104,45 €",
     "img": "https://m.media-amazon.com/images/I/61Z90jFY1hL._AC_SX355_.jpg",
-    "url": "https://www.amazon.es/dp/B0728BF99G?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0728BF99G?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1424",
@@ -5243,7 +5631,9 @@
     },
     "price": "74,99 €",
     "img": "https://m.media-amazon.com/images/I/61GzzRApUQL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0CT3WCTCH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CT3WCTCH?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1425",
@@ -5270,7 +5660,9 @@
     },
     "price": "64,06 €",
     "img": "https://m.media-amazon.com/images/I/813JPZr+pCL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07HCZ7LPW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07HCZ7LPW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1426",
@@ -5297,7 +5689,9 @@
     },
     "price": "15,00 €",
     "img": "https://m.media-amazon.com/images/I/61Ds2tygNiL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07VJRG5VW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VJRG5VW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1427",
@@ -5324,7 +5718,9 @@
     },
     "price": "67,90 €",
     "img": "https://m.media-amazon.com/images/I/81P-+4cH+yL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07C4ZNYHP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07C4ZNYHP?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1428",
@@ -5351,7 +5747,9 @@
     },
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/713LohKsbVL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CFQ8ZB43?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CFQ8ZB43?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1429",
@@ -5378,7 +5776,9 @@
     },
     "price": "50,00 €",
     "img": "https://m.media-amazon.com/images/I/61Wm9CindBL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07VHXPS9Q?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VHXPS9Q?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1430",
@@ -5405,7 +5805,9 @@
     },
     "price": "66,99 €",
     "img": "https://m.media-amazon.com/images/I/71rfpfHdi7L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FR451FFZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FR451FFZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1431",
@@ -5432,7 +5834,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/41yNzz0UKDL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07JKZKV32?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07JKZKV32?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1432",
@@ -5459,7 +5863,9 @@
     },
     "price": "47,50 €",
     "img": "https://m.media-amazon.com/images/I/81b5yJrnO5L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07DDSHSF1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07DDSHSF1?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1433",
@@ -5486,7 +5892,9 @@
     },
     "price": "39,90 €",
     "img": "https://m.media-amazon.com/images/I/71S7A53yb9L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07SG7MQZF?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07SG7MQZF?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1434",
@@ -5513,7 +5921,9 @@
     },
     "price": "46,90 €",
     "img": "https://m.media-amazon.com/images/I/81OkAT4tXjL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07NQR3LKW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07NQR3LKW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1435",
@@ -5540,7 +5950,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71WaIh4GtYL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07V4S2W94?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07V4S2W94?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1436",
@@ -5567,7 +5979,9 @@
     },
     "price": "309,64 €",
     "img": "https://m.media-amazon.com/images/I/81Et7LOO4kL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07T4Q53ZL?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07T4Q53ZL?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1437",
@@ -5594,7 +6008,9 @@
     },
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/61-hJduluSL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07PB4JFF8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07PB4JFF8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1438",
@@ -5621,7 +6037,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/71tjYucxXXL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07R1DT93S?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07R1DT93S?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1439",
@@ -5648,7 +6066,9 @@
     },
     "price": "13,99 €",
     "img": "https://m.media-amazon.com/images/I/51vuDZhNfHL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B073DKR74T?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B073DKR74T?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1440",
@@ -5675,7 +6095,9 @@
     },
     "price": "23,99 €",
     "img": "https://m.media-amazon.com/images/I/71c8OaXidfL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0DFD3S5LM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DFD3S5LM?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1441",
@@ -5702,7 +6124,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/71WZ62XQrlL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0G37319QR?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G37319QR?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1442",
@@ -5729,7 +6153,9 @@
     },
     "price": "24,90 €",
     "img": "https://m.media-amazon.com/images/I/81rEJsclOkL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FXBBXQ5G?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FXBBXQ5G?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1443",
@@ -5756,7 +6182,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81K4Jp99FPL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DV6QH4JB?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DV6QH4JB?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1444",
@@ -5783,7 +6211,9 @@
     },
     "price": "28,99 €",
     "img": "https://m.media-amazon.com/images/I/81RJovRu+cL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FXBDYV6T?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FXBDYV6T?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1445",
@@ -5810,7 +6240,9 @@
     },
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/81c8j42z1vL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0FTJXTGWD?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FTJXTGWD?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1446",
@@ -5837,7 +6269,9 @@
     },
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/610euk9DotL._AC_SX355_.jpg",
-    "url": "https://www.amazon.es/dp/B09ZY7PX53?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09ZY7PX53?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1447",
@@ -5864,7 +6298,9 @@
     },
     "price": "45,91 €",
     "img": "https://m.media-amazon.com/images/I/41+zoydVIfL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07YL4KGWZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07YL4KGWZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1448",
@@ -5891,7 +6327,9 @@
     },
     "price": "16,49 €",
     "img": "https://m.media-amazon.com/images/I/81qwetw2UML._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0B916X8RH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B916X8RH?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1449",
@@ -5918,7 +6356,9 @@
     },
     "price": "56,99 €",
     "img": "https://m.media-amazon.com/images/I/81dRB41yHrL._SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B09SMJG53B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09SMJG53B?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1450",
@@ -5945,7 +6385,9 @@
     },
     "price": "29,99 €",
     "img": "https://m.media-amazon.com/images/I/61czaZmw4PL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GY924GV5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GY924GV5?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1451",
@@ -5972,7 +6414,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/81In49B6heL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09S77J9TX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09S77J9TX?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1452",
@@ -5999,7 +6443,9 @@
     },
     "price": "57,20 €",
     "img": "https://m.media-amazon.com/images/I/714+4AjDQSL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0H1MYYD1H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H1MYYD1H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1453",
@@ -6026,7 +6472,9 @@
     },
     "price": "30,02 €",
     "img": "https://m.media-amazon.com/images/I/81gR2mfYF1L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B08LLN1B47?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08LLN1B47?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1454",
@@ -6053,7 +6501,9 @@
     },
     "price": "21,47 €",
     "img": "https://m.media-amazon.com/images/I/71GlrpJ5xRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08LLR3BX8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08LLR3BX8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1455",
@@ -6080,7 +6530,9 @@
     },
     "price": "35,99 €",
     "img": "https://m.media-amazon.com/images/I/71T3yyTbrQL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B08LLPD9SZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08LLPD9SZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1456",
@@ -6107,7 +6559,9 @@
     },
     "price": "28,89 €",
     "img": "https://m.media-amazon.com/images/I/81oPfXbtB-L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0C6F6RYH4?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C6F6RYH4?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1457",
@@ -6134,7 +6588,9 @@
     },
     "price": "141,99 €",
     "img": "https://m.media-amazon.com/images/I/715+gEiTloL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DTQ35NH6?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DTQ35NH6?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1458",
@@ -6161,7 +6617,9 @@
     },
     "price": "28,50 €",
     "img": "https://m.media-amazon.com/images/I/714LVHbNJML._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FGDWTGCS?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FGDWTGCS?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1459",
@@ -6188,7 +6646,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/81c7mex3PZL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D4LXM9NT?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D4LXM9NT?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1460",
@@ -6215,7 +6675,9 @@
     },
     "price": "56,73 €",
     "img": "https://m.media-amazon.com/images/I/81PDm2hnsjL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0C8ZCR12S?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C8ZCR12S?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1461",
@@ -6242,7 +6704,9 @@
     },
     "price": "165,80 €",
     "img": "https://m.media-amazon.com/images/I/71f2jmOmo0L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08HF8KKT6?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08HF8KKT6?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1462",
@@ -6269,7 +6733,9 @@
     },
     "price": "15,99 €",
     "img": "https://m.media-amazon.com/images/I/81t1YAoLl9L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0F2FG3X9D?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0F2FG3X9D?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1463",
@@ -6296,7 +6762,9 @@
     },
     "price": "329,00 €",
     "img": "https://m.media-amazon.com/images/I/61Va5FKGr4L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07W8QKWZ1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07W8QKWZ1?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1464",
@@ -6323,7 +6791,9 @@
     },
     "price": "33,51 €",
     "img": "https://m.media-amazon.com/images/I/71WKldHat5L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D98C3PDN?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D98C3PDN?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1465",
@@ -6350,7 +6820,9 @@
     },
     "price": "33,99 €",
     "img": "https://m.media-amazon.com/images/I/51hPx8VbayL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07D3ZW98F?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07D3ZW98F?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1466",
@@ -6377,7 +6849,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71kBEpj5ygL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08FJ7XY3B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08FJ7XY3B?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1467",
@@ -6404,7 +6878,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/711fLo+anAL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CFQ99JVQ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CFQ99JVQ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1468",
@@ -6431,7 +6907,9 @@
     },
     "price": "57,33 €",
     "img": "https://m.media-amazon.com/images/I/810QwV0AkfL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D1VP774H?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D1VP774H?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1469",
@@ -6458,7 +6936,9 @@
     },
     "price": "68,57 €",
     "img": "https://m.media-amazon.com/images/I/81g86vuNp1L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJZYSQ2C?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GJZYSQ2C?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1470",
@@ -6485,7 +6965,9 @@
     },
     "price": "78,31 €",
     "img": "https://m.media-amazon.com/images/I/51sRtKpMGIL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07VCHKRVC?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VCHKRVC?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1471",
@@ -6512,7 +6994,9 @@
     },
     "price": "14,24 €",
     "img": "https://m.media-amazon.com/images/I/617019+xdjL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0C65L15GB?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C65L15GB?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1472",
@@ -6539,7 +7023,9 @@
     },
     "price": "59,05 €",
     "img": "https://m.media-amazon.com/images/I/81nHzMe0lrL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B01MUA0D2A?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01MUA0D2A?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1473",
@@ -6566,7 +7052,9 @@
     },
     "price": "107,02 €",
     "img": "https://m.media-amazon.com/images/I/61m6o7Rfs1L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GZ42Z4G6?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GZ42Z4G6?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1474",
@@ -6593,7 +7081,9 @@
     },
     "price": "84,89 €",
     "img": "https://m.media-amazon.com/images/I/71u4Heq+EvL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07XW8BGFQ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07XW8BGFQ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1475",
@@ -6620,7 +7110,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/71TM1WGvoEL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B07VWWMTW9?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07VWWMTW9?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1476",
@@ -6647,7 +7139,9 @@
     },
     "price": "54,98 €",
     "img": "https://m.media-amazon.com/images/I/81muAoYvaZL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07HHN42WK?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07HHN42WK?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1477",
@@ -6674,7 +7168,9 @@
     },
     "price": "44,99 €",
     "img": "https://m.media-amazon.com/images/I/612FPPV9eRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FS147SDG?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FS147SDG?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1478",
@@ -6701,7 +7197,9 @@
     },
     "price": "4,49 €",
     "img": "https://m.media-amazon.com/images/I/71H9yWknzCL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0H1PGZXZZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0H1PGZXZZ?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1479",
@@ -6728,7 +7226,9 @@
     },
     "price": "44,90 €",
     "img": "https://m.media-amazon.com/images/I/81fKbEWOwzL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0CXQPRBB9?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0CXQPRBB9?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1480",
@@ -6755,7 +7255,9 @@
     },
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/81ppyKtcXmL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0D3JHK4T8?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0D3JHK4T8?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1481",
@@ -6782,7 +7284,9 @@
     },
     "price": "53,71 €",
     "img": "https://m.media-amazon.com/images/I/81VrW5EM1NL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B08HJXRB1K?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08HJXRB1K?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1482",
@@ -6809,7 +7313,9 @@
     },
     "price": "46,89 €",
     "img": "https://m.media-amazon.com/images/I/71Vz7zORRpL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0DTKHT2ST?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DTKHT2ST?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1483",
@@ -6836,7 +7342,9 @@
     },
     "price": "32,10 €",
     "img": "https://m.media-amazon.com/images/I/71yCkFY0MaL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G71JJ9FH?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G71JJ9FH?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1484",
@@ -6863,7 +7371,9 @@
     },
     "price": "61,37 €",
     "img": "https://m.media-amazon.com/images/I/81HORio5LmL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B01N1083WZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N1083WZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1485",
@@ -6890,7 +7400,9 @@
     },
     "price": "75,88 €",
     "img": "https://m.media-amazon.com/images/I/81LYDg+mrjL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B00KL32AJA?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B00KL32AJA?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1486",
@@ -6917,7 +7429,9 @@
     },
     "price": "73,00 €",
     "img": "https://m.media-amazon.com/images/I/61dPRWf8OTL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B01N6QJ58Y?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01N6QJ58Y?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1487",
@@ -6944,7 +7458,9 @@
     },
     "price": "55,40 €",
     "img": "https://m.media-amazon.com/images/I/91RqWq40TdL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07BHGDR4L?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B07BHGDR4L?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1488",
@@ -6971,7 +7487,9 @@
     },
     "price": "39,75 €",
     "img": "https://m.media-amazon.com/images/I/81dBMbGm5RL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0G6GBSSKZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G6GBSSKZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1489",
@@ -6998,7 +7516,9 @@
     },
     "price": "56,95 €",
     "img": "https://m.media-amazon.com/images/I/71Sfo2EGuNL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B097F5D8Y1?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B097F5D8Y1?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1490",
@@ -7025,7 +7545,9 @@
     },
     "price": "34,00 €",
     "img": "https://m.media-amazon.com/images/I/71euwyH0FWL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0C2Z3HKG4?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0C2Z3HKG4?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1491",
@@ -7052,7 +7574,9 @@
     },
     "price": "34,84 €",
     "img": "https://m.media-amazon.com/images/I/715hneFOaBL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0BQC57TJJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0BQC57TJJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1492",
@@ -7079,7 +7603,9 @@
     },
     "price": "27,99 €",
     "img": "https://m.media-amazon.com/images/I/818pglm0sAL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DSVJLRHQ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DSVJLRHQ?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1493",
@@ -7106,7 +7632,9 @@
     },
     "price": "34,90 €",
     "img": "https://m.media-amazon.com/images/I/614AQmjvm7L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GWMGDJ24?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GWMGDJ24?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1494",
@@ -7133,7 +7661,9 @@
     },
     "price": "84,90 €",
     "img": "https://m.media-amazon.com/images/I/71F5nnoo8gL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B01NAWKYZ0?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B01NAWKYZ0?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1495",
@@ -7160,7 +7690,9 @@
     },
     "price": "10,99 €",
     "img": "https://m.media-amazon.com/images/I/81cUKrwFy2L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0FDKMJRT5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FDKMJRT5?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1496",
@@ -7187,7 +7719,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/81ld+ON8IyL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B09S4K14ZW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09S4K14ZW?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1497",
@@ -7214,7 +7748,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81SP0hjwKdL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GSBT7ZCX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GSBT7ZCX?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1498",
@@ -7241,7 +7777,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81u9l4upInL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GSBXLXD3?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GSBXLXD3?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1499",
@@ -7268,7 +7806,9 @@
     },
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81mAtzHfpoL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GSBT67ZW?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GSBT67ZW?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1500",
@@ -7295,7 +7835,9 @@
     },
     "price": "41,99 €",
     "img": "https://m.media-amazon.com/images/I/71eeLudodfL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GSBVYS7B?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GSBVYS7B?tag=kelonio-21",
+    "subcategory": "Consolas",
+    "size": "Ninguno"
   },
   {
     "id": "1501",
@@ -7322,7 +7864,9 @@
     },
     "price": "79,90 €",
     "img": "https://m.media-amazon.com/images/I/818eTCERvoL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GS3J5D3Y?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GS3J5D3Y?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1502",
@@ -7349,7 +7893,9 @@
     },
     "price": "9,11 €",
     "img": "https://m.media-amazon.com/images/I/61RqN0ZImuL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GVJTNJT4?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GVJTNJT4?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1503",
@@ -7376,7 +7922,9 @@
     },
     "price": "14,99 €",
     "img": "https://m.media-amazon.com/images/I/612AeJBpGRL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B072BNFM1P?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B072BNFM1P?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1504",
@@ -7403,7 +7951,9 @@
     },
     "price": "1,91 €",
     "img": "https://m.media-amazon.com/images/I/4128TN4PAuL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0G1T1X5LY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0G1T1X5LY?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1505",
@@ -7430,7 +7980,9 @@
     },
     "price": "12,99 €",
     "img": "https://m.media-amazon.com/images/I/61CGwEsyoVL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DQP4SRWP?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DQP4SRWP?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1506",
@@ -7457,7 +8009,9 @@
     },
     "price": "54,99 €",
     "img": "https://m.media-amazon.com/images/I/91IddVouOxL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GZ3QTPLJ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GZ3QTPLJ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1507",
@@ -7484,7 +8038,9 @@
     },
     "price": "6,95 €",
     "img": "https://m.media-amazon.com/images/I/71cAYO7I0sL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08FCW9VVX?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B08FCW9VVX?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1508",
@@ -7511,7 +8067,9 @@
     },
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/61u1GkoSqbL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GZW3S4C2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GZW3S4C2?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1509",
@@ -7538,7 +8096,9 @@
     },
     "price": "69,77 €",
     "img": "https://m.media-amazon.com/images/I/71ur1WOLXNL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0GGXF7G4G?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GGXF7G4G?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1510",
@@ -7565,7 +8125,9 @@
     },
     "price": "45,79 €",
     "img": "https://m.media-amazon.com/images/I/71rca9mk5iL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FS26MCHL?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FS26MCHL?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1511",
@@ -7592,7 +8154,9 @@
     },
     "price": "41,70 €",
     "img": "https://m.media-amazon.com/images/I/71av82dnl1L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FS23TS7L?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FS23TS7L?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1512",
@@ -7619,7 +8183,9 @@
     },
     "price": "34,99 €",
     "img": "https://m.media-amazon.com/images/I/71Ayru-yQHL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FRV2D8QG?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FRV2D8QG?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1513",
@@ -7646,7 +8212,9 @@
     },
     "price": "27,99 €",
     "img": "https://m.media-amazon.com/images/I/71ZrZna8SkL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FRVDL358?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FRVDL358?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1514",
@@ -7673,7 +8241,9 @@
     },
     "price": "41,70 €",
     "img": "https://m.media-amazon.com/images/I/71-eoRpVznL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FS25DTXM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FS25DTXM?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1515",
@@ -7700,7 +8270,9 @@
     },
     "price": "27,99 €",
     "img": "https://m.media-amazon.com/images/I/81gZksWVEdL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0FRVL3B2G?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0FRVL3B2G?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1516",
@@ -7727,7 +8299,9 @@
     },
     "price": "8,99 €",
     "img": "https://m.media-amazon.com/images/I/71rcKnfiVLL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0DW8WQ8L2?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0DW8WQ8L2?tag=kelonio-21",
+    "subcategory": "Fundas-Proteccion",
+    "size": "Ninguno"
   },
   {
     "id": "1517",
@@ -7754,7 +8328,9 @@
     },
     "price": "25,26 €",
     "img": "https://m.media-amazon.com/images/I/61V9HQHiPzL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B09YV67MJ5?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B09YV67MJ5?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1518",
@@ -7781,7 +8357,9 @@
     },
     "price": "4,13 €",
     "img": "https://m.media-amazon.com/images/I/611Vf74VWBL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJS1MVSQ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GJS1MVSQ?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1519",
@@ -7808,7 +8386,9 @@
     },
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71h1qbohC9L._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B0GZQ6HDTZ?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0GZQ6HDTZ?tag=kelonio-21",
+    "subcategory": "Videojuegos",
+    "size": "Ninguno"
   },
   {
     "id": "1520",
@@ -7835,7 +8415,9 @@
     },
     "price": "18,99 €",
     "img": "https://m.media-amazon.com/images/I/61gyqMGjQtL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0968VWGLY?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0968VWGLY?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1521",
@@ -7862,7 +8444,9 @@
     },
     "price": "33,99 €",
     "img": "https://m.media-amazon.com/images/I/611zVcX6HcL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1PT3GCM?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1PT3GCM?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1522",
@@ -7889,7 +8473,9 @@
     },
     "price": "22,87 €",
     "img": "https://m.media-amazon.com/images/I/61DzoZO+K9L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1PPK734?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1PPK734?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   },
   {
     "id": "1523",
@@ -7916,6 +8502,8 @@
     },
     "price": "39,21 €",
     "img": "https://m.media-amazon.com/images/I/61bsRQwuTnL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1PQDX6Z?tag=kelonio-21"
+    "url": "https://www.amazon.es/dp/B0B1PQDX6Z?tag=kelonio-21",
+    "subcategory": "Mandos-Perifericos",
+    "size": "Ninguno"
   }
 ]
