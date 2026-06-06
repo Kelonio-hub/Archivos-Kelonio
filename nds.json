@@ -1243,7 +1243,7 @@
     "price": "8,79 €",
     "img": "https://m.media-amazon.com/images/I/612tY5vmwBL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0DHGNZTKF?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
@@ -2229,7 +2229,7 @@
     "price": "8,99 €",
     "img": "https://m.media-amazon.com/images/I/61AYmhUfQ2L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2WMXM?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
@@ -2436,35 +2436,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1605",
-    "console": "NDS",
-    "label": {
-      "en": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "es": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "fr": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "it": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "pt": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "de": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "ja": "NDS: Hana black Nintendo Hanafuda capital (ja...",
-      "ko": "NDS: Hana black Nintendo Hanafuda capital (ja..."
-    },
-    "desc": {
-      "es": "Hana black Nintendo Hanafuda capital (japan import...\n20,89 €",
-      "en": "Get Hana black Nintendo Hanafuda capital (japan import on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Hana black Nintendo Hanafuda capital (japan import sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Hana black Nintendo Hanafuda capital (japan import su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Hana black Nintendo Hanafuda capital (japan import na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Hana black Nintendo Hanafuda capital (japan import bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでHana black Nintendo Hanafuda capital (japan importを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Hana black Nintendo Hanafuda capital (japan import을(를) 구매하세요."
-    },
-    "price": "20,89 €",
-    "img": "https://m.media-amazon.com/images/I/41mFCBYWvUL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B001FLYYIM?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
     "id": "1606",
     "console": "NDS",
     "label": {
@@ -2519,7 +2490,7 @@
     "price": "4,49 €",
     "img": "https://m.media-amazon.com/images/I/51OuNYeOA8L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2G5SA?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
@@ -3389,7 +3360,7 @@
     "price": "12,99 €",
     "img": "https://m.media-amazon.com/images/I/612Xch+I12S._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2XWD6?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
@@ -5043,7 +5014,7 @@
     "price": "17,75 €",
     "img": "https://m.media-amazon.com/images/I/51u-yj2fjGL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GXMZ3TT7?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
@@ -5304,7 +5275,7 @@
     "price": "22,66 €",
     "img": "https://m.media-amazon.com/images/I/61GiPtVLg-L._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GYZ8V3QK?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
@@ -5594,7 +5565,7 @@
     "price": "22,76 €",
     "img": "https://m.media-amazon.com/images/I/51u-yj2fjGL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GXN96PTP?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
@@ -6116,7 +6087,7 @@
     "price": "22,66 €",
     "img": "https://m.media-amazon.com/images/I/71H1Y+MmKtL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GXBKKQW2?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
