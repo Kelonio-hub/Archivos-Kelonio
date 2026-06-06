@@ -724,10 +724,9 @@ async function iniciarSorteoBienvenida() {
     
     if(url === '#') return; 
 
-    // 3. Etiqueta de afiliación inyectada
-    url = url.replace(/tag=[^&]+/, 'tag=lapresa-21'); 
+    // 3. Respetar la etiqueta del JSON (kelonio-21) o añadirla si falta
     if(!url.includes('tag=')) {
-      url += (url.includes('?') ? '&' : '?') + 'tag=lapresa-21';
+      url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21';
     }
 
     // 4. Imagen segura
