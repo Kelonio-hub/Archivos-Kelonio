@@ -678,7 +678,6 @@ async function iniciarSorteoBienvenida() {
   }
 
   // ENLACES ABSOLUTOS: Forzamos la descarga desde la raíz en bruto de GitHub
-  // Así eludimos que tu navegador local bloquee los archivos
   const baseURL = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
   const catFiles = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
   
@@ -707,20 +706,35 @@ async function iniciarSorteoBienvenida() {
   container.innerHTML = ''; 
 
   selectedProducts.forEach(p => {
-    let title = p.label[idiomaActual] || p.label['en'] || p.label['es'] || 'Producto';
-    let url = p.url[idiomaActual] || p.url['en'] || p.url['es'] || '#';
+    // 1. Manejo seguro del Título
+    let title = 'Producto';
+    if (p.label) {
+        if (typeof p.label === 'string') title = p.label;
+        else title = p.label[idiomaActual] || p.label['es'] || p.label['en'] || 'Producto';
+    }
+
+    // 2. Manejo seguro de la URL
+    let url = '#';
+    if (p.url) {
+        if (typeof p.url === 'string') url = p.url;
+        else url = p.url[idiomaActual] || p.url['es'] || p.url['en'] || '#';
+    }
     
     if(url === '#') return; 
 
-    // Etiqueta de afiliación de amazon inyectada
+    // 3. Etiqueta de afiliación inyectada
     url = url.replace(/tag=[^&]+/, 'tag=lapresa-21'); 
     if(!url.includes('tag=')) {
       url += (url.includes('?') ? '&' : '?') + 'tag=lapresa-21';
     }
 
+    // 4. Imagen segura
+    let imgSrc = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+
+    // 5. Inyección
     container.innerHTML += `
       <div class="welcome-card" onclick="claimGiveaway('${url}')">
-        <img src="${p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'}" alt="Sorteo">
+        <img src="${imgSrc}" alt="Sorteo">
         <p>${title}</p>
       </div>
     `;
