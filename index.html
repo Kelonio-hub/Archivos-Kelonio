@@ -719,4 +719,73 @@ async function iniciarSorteoBienvenida() {
     }
 
     container.innerHTML += `
-      <div
+      <div class="welcome-card" onclick="claimGiveaway('${url}')">
+        <img src="${p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'}" alt="Sorteo">
+        <p>${title}</p>
+      </div>
+    `;
+  });
+
+  document.getElementById('welcome-modal').style.display = 'flex';
+}
+
+function claimGiveaway(url) {
+  localStorage.setItem('lastGiveawayClick', Date.now().toString());
+  cerrarSorteo();
+  window.open(url, '_blank');
+}
+
+function cerrarSorteo() {
+  document.getElementById('welcome-modal').style.display = 'none';
+}
+
+/* ================= NOTIFICACIONES RADAR ================= */
+async function verificarNotificacionesRadar() {
+  const badge = document.getElementById('radarBadge');
+  if (!badge) return;
+  
+  try {
+    const response = await fetch('ultimas_noticias.json');
+    if(!response.ok) return;
+    
+    const noticias = await response.json();
+    if(noticias.length > 0) {
+      const ultimaFechaNoticia = new Date(noticias[0].date).getTime();
+      const ultimaVisitaRadar = localStorage.getItem('ultimaVisitaRadar');
+      
+      if(!ultimaVisitaRadar || ultimaFechaNoticia > parseInt(ultimaVisitaRadar)) {
+        badge.style.display = 'block'; 
+      }
+    }
+  } catch (error) {
+    console.log("Aún no hay base de datos del radar.");
+  }
+}
+
+function abrirRadar() {
+  localStorage.setItem('ultimaVisitaRadar', Date.now().toString());
+  window.open('actualizaciones.html', '_self');
+}
+
+/* ================= LÓGICA BOTÓN SUBIR ARRIBA ================= */
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; }
+};
+
+/* ================= WINDOW.ONLOAD ================= */
+window.onload = async()=>{
+  initThemeDots();
+  createLanguageSelector();
+  updateLanguage();
+
+  document.getElementById('mainApp').style.display = 'block';
+  
+  await loadContent();
+  verificarNotificacionesRadar();
+  
+  // Ejecuta el sorteo un momento después de cargar
+  setTimeout(iniciarSorteoBienvenida, 500);
+};
+</script>
+</body>
+</html>
