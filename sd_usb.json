@@ -1301,7 +1301,7 @@
     "price": "52,99 €",
     "img": "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07LBSBX5L?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -1359,7 +1359,7 @@
     "price": "20,29 €",
     "img": "https://m.media-amazon.com/images/I/513jgap1-IL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07P14QHB7?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -1507,93 +1507,7 @@
     "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
-  {
-    "id": "52",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "es": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "fr": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "it": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "pt": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "de": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "ja": "SD/USB: Instax Mini 12 Cámara instantánea, con a...",
-      "ko": "SD/USB: Instax Mini 12 Cámara instantánea, con a..."
-    },
-    "desc": {
-      "es": "Instax Mini 12 Cámara instantánea, con autoexposic...\n89,00 €",
-      "en": "Get Instax Mini 12 Cámara instantánea, con autoexposic on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Instax Mini 12 Cámara instantánea, con autoexposic sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Instax Mini 12 Cámara instantánea, con autoexposic su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Instax Mini 12 Cámara instantánea, con autoexposic na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Instax Mini 12 Cámara instantánea, con autoexposic bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでInstax Mini 12 Cámara instantánea, con autoexposicを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Instax Mini 12 Cámara instantánea, con autoexposic을(를) 구매하세요."
-    },
-    "price": "89,00 €",
-    "img": "https://m.media-amazon.com/images/I/51EMcRazC8L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BV38RWKK?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
-  {
-    "id": "53",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "es": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "fr": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "it": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "pt": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "de": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "ja": "SD/USB: Cámara instantánea INSTAX Mini 41 con au...",
-      "ko": "SD/USB: Cámara instantánea INSTAX Mini 41 con au..."
-    },
-    "desc": {
-      "es": "Cámara instantánea INSTAX Mini 41 con autoexposici...\n89,00 €",
-      "en": "Get Cámara instantánea INSTAX Mini 41 con autoexposici on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Cámara instantánea INSTAX Mini 41 con autoexposici sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Cámara instantánea INSTAX Mini 41 con autoexposici su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Cámara instantánea INSTAX Mini 41 con autoexposici na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Cámara instantánea INSTAX Mini 41 con autoexposici bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでCámara instantánea INSTAX Mini 41 con autoexposiciを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Cámara instantánea INSTAX Mini 41 con autoexposici을(를) 구매하세요."
-    },
-    "price": "89,00 €",
-    "img": "https://m.media-amazon.com/images/I/71lgMpNipIL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DYVSGMT5?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
-  {
-    "id": "54",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "es": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "fr": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "it": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "pt": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "de": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "ja": "SD/USB: instax - Mini LiPlay, Cámara instantánea...",
-      "ko": "SD/USB: instax - Mini LiPlay, Cámara instantánea..."
-    },
-    "desc": {
-      "es": "instax - Mini LiPlay, Cámara instantánea híbrida...\n149,00 €",
-      "en": "Get instax - Mini LiPlay, Cámara instantánea híbrida on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez instax - Mini LiPlay, Cámara instantánea híbrida sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni instax - Mini LiPlay, Cámara instantánea híbrida su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha instax - Mini LiPlay, Cámara instantánea híbrida na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich instax - Mini LiPlay, Cámara instantánea híbrida bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、Amazonでinstax - Mini LiPlay, Cámara instantánea híbridaを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 instax - Mini LiPlay, Cámara instantánea híbrida을(를) 구매하세요."
-    },
-    "price": "149,00 €",
-    "img": "https://m.media-amazon.com/images/I/51tRgeVtH+L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0D644Q949?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
+
   {
     "id": "55",
     "console": "SD/USB",
@@ -1707,7 +1621,7 @@
     "price": "29,99 €",
     "img": "https://m.media-amazon.com/images/I/71ayiuyV8gL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0GPW2MYH3?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -1939,7 +1853,7 @@
     "price": "53,99 €",
     "img": "https://m.media-amazon.com/images/I/713UL4vZuaL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B084CJ9T2R?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -1968,7 +1882,7 @@
     "price": "79,99 €",
     "img": "https://m.media-amazon.com/images/I/71APoIufuQL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07LBJC2D9?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -2842,35 +2756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "98",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "es": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "fr": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "it": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "pt": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "de": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "ja": "SD/USB: JZK 5 módulos de tarjeta micro SD con in...",
-      "ko": "SD/USB: JZK 5 módulos de tarjeta micro SD con in..."
-    },
-    "desc": {
-      "es": "JZK 5 módulos de tarjeta micro SD con interfaz SPI...\n6,99 €",
-      "en": "Get JZK 5 módulos de tarjeta micro SD con interfaz SPI on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez JZK 5 módulos de tarjeta micro SD con interfaz SPI sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni JZK 5 módulos de tarjeta micro SD con interfaz SPI su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha JZK 5 módulos de tarjeta micro SD con interfaz SPI na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich JZK 5 módulos de tarjeta micro SD con interfaz SPI bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでJZK 5 módulos de tarjeta micro SD con interfaz SPIを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 JZK 5 módulos de tarjeta micro SD con interfaz SPI을(를) 구매하세요."
-    },
-    "price": "6,99 €",
-    "img": "https://m.media-amazon.com/images/I/61sUceHngiL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0CQXNZH8T?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
     "id": "99",
     "console": "SD/USB",
     "label": {
@@ -3099,7 +2984,7 @@
     "price": "30,49 €",
     "img": "https://m.media-amazon.com/images/I/61BWWGgcbXL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B084CJLNM4?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -3331,7 +3216,7 @@
     "price": "89,99 €",
     "img": "https://m.media-amazon.com/images/I/51o5mfoIUNL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0CFVFBGY5?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -4785,35 +4670,6 @@
     "size": "256 GB"
   },
   {
-    "id": "165",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: THEC64 Handheld...",
-      "es": "SD/USB: THEC64 Handheld...",
-      "fr": "SD/USB: THEC64 Handheld...",
-      "it": "SD/USB: THEC64 Handheld...",
-      "pt": "SD/USB: THEC64 Handheld...",
-      "de": "SD/USB: THEC64 Handheld...",
-      "ja": "SD/USB: THEC64 Handheld...",
-      "ko": "SD/USB: THEC64 Handheld..."
-    },
-    "desc": {
-      "es": "THEC64 Handheld...\n129,99 €",
-      "en": "Get THEC64 Handheld on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez THEC64 Handheld sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni THEC64 Handheld su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha THEC64 Handheld na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich THEC64 Handheld bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでTHEC64 Handheldを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 THEC64 Handheld을(를) 구매하세요."
-    },
-    "price": "129,99 €",
-    "img": "https://m.media-amazon.com/images/I/714oNNw3I0L._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B0GYSLVC5K?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
-  {
     "id": "166",
     "console": "SD/USB",
     "label": {
@@ -4868,38 +4724,10 @@
     "price": "26,98 €",
     "img": "https://m.media-amazon.com/images/I/51BWNujltIL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09DVRYZ3N?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "64 GB"
   },
-  {
-    "id": "168",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "es": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "fr": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "it": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "pt": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "de": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "ja": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb...",
-      "ko": "SD/USB: PSP Go!SanDisk Memory Stick Micro M2 2Gb..."
-    },
-    "desc": {
-      "es": "PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac...\n12,00 €",
-      "en": "Get PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでPSP Go!SanDisk Memory Stick Micro M2 2Gb [Importacを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 PSP Go!SanDisk Memory Stick Micro M2 2Gb [Importac을(를) 구매하세요."
-    },
-    "price": "12,00 €",
-    "img": "https://m.media-amazon.com/images/I/61xvjyS1DNL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B000MIDIE0?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
+
   {
     "id": "169",
     "console": "SD/USB",
@@ -5249,35 +5077,6 @@
     "size": "64 GB"
   },
   {
-    "id": "181",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "es": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "fr": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "it": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "pt": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "de": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "ja": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl...",
-      "ko": "SD/USB: FUNLAB Estuche Juegos Switch 2 Compatibl..."
-    },
-    "desc": {
-      "es": "FUNLAB Estuche Juegos Switch 2 Compatible con Nint...\n18,69 €",
-      "en": "Get FUNLAB Estuche Juegos Switch 2 Compatible con Nint on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez FUNLAB Estuche Juegos Switch 2 Compatible con Nint sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni FUNLAB Estuche Juegos Switch 2 Compatible con Nint su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha FUNLAB Estuche Juegos Switch 2 Compatible con Nint na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich FUNLAB Estuche Juegos Switch 2 Compatible con Nint bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでFUNLAB Estuche Juegos Switch 2 Compatible con Nintを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 FUNLAB Estuche Juegos Switch 2 Compatible con Nint을(를) 구매하세요."
-    },
-    "price": "18,69 €",
-    "img": "https://m.media-amazon.com/images/I/818JdbvOkAL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BD8ZKQ4S?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno"
-  },
-  {
     "id": "182",
     "console": "SD/USB",
     "label": {
@@ -5535,7 +5334,7 @@
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/51+1Pgi2zqL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09PTRF3Y5?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
   {
@@ -5738,7 +5537,7 @@
     "price": "249,99 €",
     "img": "https://m.media-amazon.com/images/I/511XB40jO-L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0FQTZVYQD?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "1 TB"
   },
   {
@@ -5800,35 +5599,6 @@
     "size": "64 GB"
   },
   {
-    "id": "200",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "es": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "fr": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "it": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "pt": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "de": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "ja": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic...",
-      "ko": "SD/USB: Chenyang - Kit de tarjeta de memoria Mic..."
-    },
-    "desc": {
-      "es": "Chenyang - Kit de tarjeta de memoria Micro-SD TF m...\n12,99 €",
-      "en": "Get Chenyang - Kit de tarjeta de memoria Micro-SD TF m on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Chenyang - Kit de tarjeta de memoria Micro-SD TF m sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Chenyang - Kit de tarjeta de memoria Micro-SD TF m su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Chenyang - Kit de tarjeta de memoria Micro-SD TF m na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Chenyang - Kit de tarjeta de memoria Micro-SD TF m bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでChenyang - Kit de tarjeta de memoria Micro-SD TF mを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Chenyang - Kit de tarjeta de memoria Micro-SD TF m을(를) 구매하세요."
-    },
-    "price": "12,99 €",
-    "img": "https://m.media-amazon.com/images/I/61S1MpB0XxL._SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B08SW7ZCDM?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
     "id": "201",
     "console": "SD/USB",
     "label": {
@@ -5883,7 +5653,7 @@
     "price": "14,42 €",
     "img": "https://m.media-amazon.com/images/I/71nF7B6mtTL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07VYWVQ8S?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Adaptador",
     "size": "Ninguno"
   },
   {
@@ -5970,64 +5740,6 @@
     "price": "32,66 €",
     "img": "https://m.media-amazon.com/images/I/612vzosudsS._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B083177RKM?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
-    "id": "206",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "es": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "fr": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "it": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "pt": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "de": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "ja": "SD/USB: CY - Cable extensor de 10 cm para tarjet...",
-      "ko": "SD/USB: CY - Cable extensor de 10 cm para tarjet..."
-    },
-    "desc": {
-      "es": "CY - Cable extensor de 10 cm para tarjetas de memo...\n26,99 €",
-      "en": "Get CY - Cable extensor de 10 cm para tarjetas de memo on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez CY - Cable extensor de 10 cm para tarjetas de memo sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni CY - Cable extensor de 10 cm para tarjetas de memo su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha CY - Cable extensor de 10 cm para tarjetas de memo na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich CY - Cable extensor de 10 cm para tarjetas de memo bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでCY - Cable extensor de 10 cm para tarjetas de memoを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 CY - Cable extensor de 10 cm para tarjetas de memo을(를) 구매하세요."
-    },
-    "price": "26,99 €",
-    "img": "https://m.media-amazon.com/images/I/41jTjivpRDL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B078YPFJ4J?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
-    "id": "207",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "es": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "fr": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "it": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "pt": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "de": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "ja": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M...",
-      "ko": "SD/USB: Extensor Micro SD, Extensor de Tarjeta M..."
-    },
-    "desc": {
-      "es": "Extensor Micro SD, Extensor de Tarjeta Micro SD, N...\n8,89 €",
-      "en": "Get Extensor Micro SD, Extensor de Tarjeta Micro SD, N on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Extensor Micro SD, Extensor de Tarjeta Micro SD, N sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Extensor Micro SD, Extensor de Tarjeta Micro SD, N su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Extensor Micro SD, Extensor de Tarjeta Micro SD, N na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Extensor Micro SD, Extensor de Tarjeta Micro SD, N bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでExtensor Micro SD, Extensor de Tarjeta Micro SD, Nを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Extensor Micro SD, Extensor de Tarjeta Micro SD, N을(를) 구매하세요."
-    },
-    "price": "8,89 €",
-    "img": "https://m.media-amazon.com/images/I/61vxY8nkY2L._SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B09KCJNJ81?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
     "size": "Ninguno"
   },
@@ -6148,93 +5860,6 @@
     "size": "128 GB"
   },
   {
-    "id": "212",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "es": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "fr": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "it": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "pt": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "de": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "ja": "SD/USB: Funda Protectora de 40 Ranuras para Tarj...",
-      "ko": "SD/USB: Funda Protectora de 40 Ranuras para Tarj..."
-    },
-    "desc": {
-      "es": "Funda Protectora de 40 Ranuras para Tarjetas de Me...\n18,99 €",
-      "en": "Get Funda Protectora de 40 Ranuras para Tarjetas de Me on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Funda Protectora de 40 Ranuras para Tarjetas de Me sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Funda Protectora de 40 Ranuras para Tarjetas de Me su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Funda Protectora de 40 Ranuras para Tarjetas de Me na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Funda Protectora de 40 Ranuras para Tarjetas de Me bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでFunda Protectora de 40 Ranuras para Tarjetas de Meを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Funda Protectora de 40 Ranuras para Tarjetas de Me을(를) 구매하세요."
-    },
-    "price": "18,99 €",
-    "img": "https://m.media-amazon.com/images/I/8144IvqGlGL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07Z1S1TS5?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
-    "id": "213",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "es": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "fr": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "it": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "pt": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "de": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "ja": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T...",
-      "ko": "SD/USB: Kiwifotos 45 Slots Switch Estuche para T..."
-    },
-    "desc": {
-      "es": "Kiwifotos 45 Slots Switch Estuche para Tarjeta de ...\n19,99 €",
-      "en": "Get Kiwifotos 45 Slots Switch Estuche para Tarjeta de  on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Kiwifotos 45 Slots Switch Estuche para Tarjeta de  sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Kiwifotos 45 Slots Switch Estuche para Tarjeta de  su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Kiwifotos 45 Slots Switch Estuche para Tarjeta de  na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Kiwifotos 45 Slots Switch Estuche para Tarjeta de  bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでKiwifotos 45 Slots Switch Estuche para Tarjeta de を最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Kiwifotos 45 Slots Switch Estuche para Tarjeta de 을(를) 구매하세요."
-    },
-    "price": "19,99 €",
-    "img": "https://m.media-amazon.com/images/I/61IuP-UNswL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B08VJ4FNQT?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
-    "id": "214",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "es": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "fr": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "it": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "pt": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "de": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "ja": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria...",
-      "ko": "SD/USB: KIWIFOTOS Funda para Tarjetas de Memoria..."
-    },
-    "desc": {
-      "es": "KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur...\n19,99 €",
-      "en": "Get KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでKIWIFOTOS Funda para Tarjetas de Memoria (45 Ranurを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 KIWIFOTOS Funda para Tarjetas de Memoria (45 Ranur을(를) 구매하세요."
-    },
-    "price": "19,99 €",
-    "img": "https://m.media-amazon.com/images/I/51BG91IgZQS._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B08VRT9ZYD?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
     "id": "215",
     "console": "SD/USB",
     "label": {
@@ -6248,7 +5873,7 @@
       "ko": "SD/USB: Verbatim Premium U1 SDHC Tarjeta de memo..."
     },
     "desc": {
-      "es": "Verbatim Premium U1 SDHC Tarjeta de memoria - 16 G...\n14,89 €",
+      "es": " - 16 G...\n14,89 €",
       "en": "Get Verbatim Premium U1 SDHC Tarjeta de memoria - 16 G on Amazon at the best price with our affiliate link.",
       "fr": "Obtenez Verbatim Premium U1 SDHC Tarjeta de memoria - 16 G sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
       "it": "Ottieni Verbatim Premium U1 SDHC Tarjeta de memoria - 16 G su Amazon al miglior prezzo con il nostro link di affiliazione.",
@@ -6261,67 +5886,9 @@
     "img": "https://m.media-amazon.com/images/I/71jghg4p-1L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0050OFBWI?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "16 GB"
   },
-  {
-    "id": "216",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "es": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "fr": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "it": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "pt": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "de": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "ja": "SD/USB: Tarjeta de grabación Supercard compatibl...",
-      "ko": "SD/USB: Tarjeta de grabación Supercard compatibl..."
-    },
-    "desc": {
-      "es": "Tarjeta de grabación Supercard compatible con tarj...\n22,05 €",
-      "en": "Get Tarjeta de grabación Supercard compatible con tarj on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Tarjeta de grabación Supercard compatible con tarj sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Tarjeta de grabación Supercard compatible con tarj su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Tarjeta de grabación Supercard compatible con tarj na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Tarjeta de grabación Supercard compatible con tarj bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでTarjeta de grabación Supercard compatible con tarjを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Tarjeta de grabación Supercard compatible con tarj을(를) 구매하세요."
-    },
-    "price": "22,05 €",
-    "img": "https://m.media-amazon.com/images/I/51rJeZofI+L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0D1V6R61V?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
-    "id": "217",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "es": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "fr": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "it": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "pt": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "de": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "ja": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi...",
-      "ko": "SD/USB: GinTai Ranura para Lector de Tarjetas Mi..."
-    },
-    "desc": {
-      "es": "GinTai Ranura para Lector de Tarjetas Micro SD HAC...\n15,55 €",
-      "en": "Get GinTai Ranura para Lector de Tarjetas Micro SD HAC on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez GinTai Ranura para Lector de Tarjetas Micro SD HAC sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni GinTai Ranura para Lector de Tarjetas Micro SD HAC su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha GinTai Ranura para Lector de Tarjetas Micro SD HAC na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich GinTai Ranura para Lector de Tarjetas Micro SD HAC bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでGinTai Ranura para Lector de Tarjetas Micro SD HACを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 GinTai Ranura para Lector de Tarjetas Micro SD HAC을(를) 구매하세요."
-    },
-    "price": "15,55 €",
-    "img": "https://m.media-amazon.com/images/I/614OOVw9t8L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07ZJC4753?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
-  },
-  {
+   {
     "id": "218",
     "console": "SD/USB",
     "label": {
@@ -6378,34 +5945,5 @@
     "url": "https://www.amazon.es/dp/B079H4Y4HF?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
     "size": "64 GB"
-  },
-  {
-    "id": "220",
-    "console": "SD/USB",
-    "label": {
-      "en": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "es": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "fr": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "it": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "pt": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "de": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "ja": "SD/USB: Chenyang Adaptador de Extensión de Tarje...",
-      "ko": "SD/USB: Chenyang Adaptador de Extensión de Tarje..."
-    },
-    "desc": {
-      "es": "Chenyang Adaptador de Extensión de Tarjeta Micro S...\n12,99 €",
-      "en": "Get Chenyang Adaptador de Extensión de Tarjeta Micro S on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Chenyang Adaptador de Extensión de Tarjeta Micro S sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Chenyang Adaptador de Extensión de Tarjeta Micro S su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Chenyang Adaptador de Extensión de Tarjeta Micro S na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Chenyang Adaptador de Extensión de Tarjeta Micro S bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでChenyang Adaptador de Extensión de Tarjeta Micro Sを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Chenyang Adaptador de Extensión de Tarjeta Micro S을(를) 구매하세요."
-    },
-    "price": "12,99 €",
-    "img": "https://m.media-amazon.com/images/I/615yPqt7V1L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B08NXB8H2W?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
   }
 ]
