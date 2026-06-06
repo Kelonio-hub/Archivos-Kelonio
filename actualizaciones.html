@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Radar de Actualizaciones | La Presa</title>
+<link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
+<style>
+:root{
+  --red:#e50914; 
+  --bg:#141414;
+  --glass:rgba(20,20,20,.78);
+  --glass-border:rgba(255,255,255,.08);
+  --accent:#00aaff;
+  --gold:#ffcc00;
+  --discord:#5865F2; 
+  --kofi:#FF5E5B;    
+  --green:#2ecc71;
+  --glow-rgb: 229, 9, 20; /* Variable inicializada */
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; }
+
+/* ================= TOPBAR EXACTA DE TU INDEX ================= */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:9999;
+  background:rgba(0,0,0,.88); backdrop-filter:blur(16px);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 3%; gap: 10px; 
+}
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; flex-shrink: 0; text-decoration: none;}
+.right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
+.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container{ display:flex; gap:5px; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover{ transform:scale(1.3); }
+.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+#fileSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease; }
+#fileSearch:focus { width: 200px; border: 1px solid var(--red); }
+#fileSearch::placeholder{ color:#ccc; }
+
+/* ================= CONSOLE BUTTONS EXACTOS (CON SOPORTE DE IMAGEN E IDIOMA) ================= */
+.console-buttons{ display:flex; gap:6px; flex-grow: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 5px 0; }
+.console-buttons::-webkit-scrollbar { display: none; }
+.console-btn{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:6px 10px; display:flex; align-items:center; gap:6px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.console-btn:hover{ transform:scale(1.05); border-color:var(--red); background:rgba(var(--glow-rgb),.15); }
+.console-btn.fav-active-btn{ border-color:var(--red); background:rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
+.console-btn span{ color:white; letter-spacing:.5px; }
+.console-btn img{ width:18px; height:18px; object-fit:contain; }
+.console-btn .home-icon-btn { font-size: 16px; color: white; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
+
+/* ================= HEADER HERO (RADAR RECEPTOR DE TEMA) ================= */
+.header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
+.header-section h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 800; }
+.header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+/* ================= GRID DE ACTUALIZACIONES RECEPTOR DE TEMA ================= */
+.updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
+.update-card { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+.update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
+.update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.update-tag { background: rgba(255,255,255,0.06); border: 1px solid var(--glass-border); color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+.update-date { color: #777; font-size: 12px; }
+.update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
+.update-card h3 a { color: white; text-decoration: none; transition: color 0.2s; }
+.update-card h3 a:hover { color: var(--red); }
+.update-body { color: #b3b3b3; font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; }
+.update-footer { margin-top: auto; }
+.download-link { display: block; width: 100%; text-align: center; background: var(--red); color: white; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+.download-link:hover { filter: brightness(1.2); }
+
+/* ================= LOADER RECEPTOR DE TEMA ================= */
+.loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; }
+.spinner { width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: var(--red); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ================= BOTÓN SUBIR ARRIBA ================= */
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 1150px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; }
+  .console-buttons { order: 3; width: 100%; margin: 6px 0 0 0; justify-content: flex-start; }
+  .logo { order: 1; }
+  .right-tools { order: 2; }
+}
+@media(max-width: 768px) {
+  .header-section h1 { font-size: 2.3rem; }
+  .updates-container { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
+  
+  <div class="console-buttons" id="consoleButtons"></div>
+
+  <div class="right-tools">
+    <input type="text" id="fileSearch" placeholder="Buscar archivos...">
+    <div class="config-group">
+      <div class="theme-dots-container" id="themeDots"></div>
+      <select id="languageSelector"></select>
+    </div>
+  </div>
+</div>
+
+<div class="header-section">
+  <h1 id="heroTitle">📡 Radar de Actualizaciones</h1>
+  <p id="heroDesc">Monitoreando en tiempo real las últimas versiones detectadas por el satélite.</p>
+</div>
+
+<div class="updates-container" id="updatesGrid">
+  <div class="loader-container" id="mainLoader">
+    <div class="spinner"></div>
+    <p style="color:#aaa;" id="loaderText">Cargando base de datos del radar...</p>
+  </div>
+</div>
+
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<script>
+/* ================= DICCIONARIO EXACTO ================= */
+const translations = {
+  en:{
+    title:"Updates Radar | La Presa", heroTitle: "📡 Updates Radar", heroDesc: "Real-time monitoring of the latest versions detected by our satellite.",
+    search:"Search files...", home: "Home", all: "Todas", download: "📥 Download", bodyText: "New version detected in the official repository. Check the patch notes and download the updated files.",
+    empty: "No updates found for this console or search.", waiting: "⚠️ The satellite hasn't collected data yet.", loading: "Loading radar database..."
+  },
+  es:{
+    title:"Radar de Actualizaciones | La Presa", heroTitle: "📡 Radar de Actualizaciones", heroDesc: "Monitoreando en tiempo real las últimas versiones detectadas por el satélite.",
+    search:"Buscar archivos...", home: "Inicio", all: "Todas", download: "📥 Descargar", bodyText: "Nueva versión detectada en el repositorio oficial. Revisa las notas del parche y descarga los archivos actualizados.",
+    empty: "No se encontraron actualizaciones para esta búsqueda.", waiting: "⚠️ El satélite aún no ha recopilado los datos.", loading: "Cargando base de datos del radar..."
+  },
+  fr:{
+    title:"Radar de Mises à Jour | La Presa", heroTitle: "📡 Radar de Mises à Jour", heroDesc: "Surveillance en temps réel des dernières versions détectées par le satellite.",
+    search:"Rechercher des fichiers...", home: "Accueil", all: "Toutes", download: "📥 Télécharger", bodyText: "Nouvelle version détectée. Consultez les notes de mise à jour et téléchargez les fichiers.",
+    empty: "Aucune mise à jour trouvée.", waiting: "⚠️ Le satellite n'a pas encore collecté de données.", loading: "Chargement de la base de données..."
+  },
+  it:{
+    title:"Radar Aggiornamenti | La Presa", heroTitle: "📡 Radar Aggiornamenti", heroDesc: "Monitoraggio in tempo reale delle ultime versioni rilevate dal satellite.",
+    search:"Cerca file...", home: "Inizio", all: "Tutte", download: "📥 Scarica", bodyText: "Nuova versione rilevata. Controlla le note di rilascio e scarica i file aggiornati.",
+    empty: "Nessun aggiornamento trovato.", waiting: "⚠️ Il satellite non ha ancora raccolto dati.", loading: "Caricamento database..."
+  },
+  pt:{
+    title:"Radar de Atualizações | La Presa", heroTitle: "📡 Radar de Atualizações", heroDesc: "Monitoramento em tempo real das últimas versões detectadas pelo satélite.",
+    search:"Buscar arquivos...", home: "Início", all: "Todas", download: "📥 Baixar", bodyText: "Nova versão detectada no repositório oficial. Verifique as notas e baixe os arquivos.",
+    empty: "Nenhuma atualização encontrada.", waiting: "⚠️ O satélite ainda não coletou dados.", loading: "Carregando banco de dados..."
+  },
+  de:{
+    title:"Update-Radar | La Presa", heroTitle: "📡 Update-Radar", heroDesc: "Echtzeit-Überwachung der neuesten erfassten Versionen.",
+    search:"Dateien suchen...", home: "Startseite", all: "Alle", download: "📥 Download", bodyText: "Neue Version im offiziellen Repository erkannt. Überprüfe die Patch-Notes und lade die Dateien herunter.",
+    empty: "Keine Updates gefunden.", waiting: "⚠️ Der Satellit hat noch keine Daten gesammelt.", loading: "Lade Radar-Datenbank..."
+  },
+  ja:{
+    title:"更新レーダー | La Presa", heroTitle: "📡 更新レーダー", heroDesc: "人工衛星が検知した最新バージョンをリアルタイムで監視しています。",
+    search:"ファイルを検索...", home: "ホーム", all: "すべて", download: "📥 ダウンロード", bodyText: "公式リポジトリで新しいバージョンが検出されました。パッチノートを確認し、ファイルをダウンロードしてください。",
+    empty: "見つかりませんでした。", waiting: "⚠️ 데이터가 아직 굴집되지 않았습니다.", loading: "データベースを読み込み中..."
+  },
+  ko:{
+    title:"업데이트 레이더 | La Presa", heroTitle: "📡 업데이트 레이더", heroDesc: "위성이 감지한 최신 버전을 실시간으로 모니터링합니다.",
+    search:"파일 검색...", home: "홈", all: "모든", download: "📥 다운로드", bodyText: "공식 저장소에서 새 버전이 감지되었습니다. 패치 노트를 확인하고 업데이트된 파일을 다운로드하세요.",
+    empty: "업데이트를 찾을 수 없습니다.", waiting: "⚠️ 위성이 아직 데이터를 수집하지 않았습니다.", loading: "데이터베이스 로드 중..."
+  }
+};
+
+/* ================= VARIABLES GLOBALES ================= */
+let idiomaActual = 'es';
+let todasLasNoticias = [];
+let categoriasUnicas = new Set();
+let filtroActual = 'ALL'; 
+
+const fileSearch = document.getElementById('fileSearch');
+const updatesGrid = document.getElementById('updatesGrid');
+const consoleButtons = document.getElementById('consoleButtons');
+const themeDotsContainer = document.getElementById('themeDots');
+const mybutton = document.getElementById("backToTopBtn");
+
+/* ================= PALETA DE COLORES EXACTA ================= */
+const paletaTemas = {
+  rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
+  naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
+  amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+  verde:    { hex: '#2ecc71', rgb: '46, 204, 113' },
+  azul:     { hex: '#00aaff', rgb: '0, 170, 255' },
+  violeta:  { hex: '#9b59b6', rgb: '155, 89, 182' },
+  rosa:     { hex: '#ff80ab', rgb: '255, 128, 171' }
+};
+
+function initThemeDots() {
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
+  themeDotsContainer.innerHTML = '';
+  Object.keys(paletaTemas).forEach(colorKey => {
+    const dot = document.createElement('div');
+    dot.className = 'color-dot';
+    dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    if (colorKey === savedTheme) dot.classList.add('active-dot');
+    dot.addEventListener('click', () => {
+      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
+      dot.classList.add('active-dot');
+      localStorage.setItem('selectedThemeColor', colorKey);
+      applyTheme(colorKey);
+    });
+    themeDotsContainer.appendChild(dot);
+  });
+  applyTheme(savedTheme);
+}
+
+function applyTheme(colorKey) {
+  const theme = paletaTemas[colorKey] || paletaTemas.rojo;
+  document.documentElement.style.setProperty('--red', theme.hex);
+  document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+}
+
+/* ================= SELECTOR DE IDIOMAS EXACTO ================= */
+function createLanguageSelector(){
+  const selector = document.getElementById('languageSelector');
+  selector.innerHTML = '';
+  const langs = {
+    en:'English', es:'Español', fr:'Français', it:'Italiano',
+    pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어'
+  };
+  Object.keys(langs).forEach(code=>{
+    const opt = document.createElement('option');
+    opt.value = code;
+    opt.textContent = langs[code];
+    selector.appendChild(opt);
+  });
+  
+  const savedLang = localStorage.getItem('preferredLanguage');
+  if(savedLang && translations[savedLang]){
+    idiomaActual = savedLang;
+  } else {
+    const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
+    idiomaActual = translations[browserLang] ? browserLang : 'es';
+  }
+  selector.value = idiomaActual;
+  
+  selector.addEventListener('change', e => {
+    idiomaActual = e.target.value;
+    localStorage.setItem('preferredLanguage', idiomaActual);
+    updateLanguage();
+    renderFilterButtons();
+    renderNoticias();
+  });
+}
+
+function updateLanguage(){
+  const t = translations[idiomaActual];
+  document.title = t.title;
+  document.getElementById('heroTitle').textContent = t.heroTitle;
+  document.getElementById('heroDesc').textContent = t.heroDesc;
+  fileSearch.placeholder = t.search;
+  
+  const loaderText = document.getElementById('loaderText');
+  if(loaderText) loaderText.textContent = t.loading;
+}
+
+/* ================= BOTONES CON LOS ICONOS DE IMAGEN RESTABLECIDOS ================= */
+function renderFilterButtons() {
+  consoleButtons.innerHTML = '';
+  const t = translations[idiomaActual];
+
+  // 1. Botón Inicio con el estilo SVG de productos
+  const btnInicio = document.createElement('button');
+  btnInicio.className = 'console-btn';
+  const iconHome = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="home-icon-btn"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`;
+  btnInicio.innerHTML = `${iconHome}<span>${t.home.toUpperCase()}</span>`;
+  btnInicio.onclick = () => window.open('index.html', '_self');
+  consoleButtons.appendChild(btnInicio);
+
+  // 2. Botón Todas
+  const btnAll = document.createElement('button');
+  btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
+  btnAll.innerHTML = `<span style="font-size:14px; width:18px; height:18px; display:flex; align-items:center; justify-content:center;">🌐</span><span>${t.all.toUpperCase()}</span>`;
+  btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
+  consoleButtons.appendChild(btnAll);
+
+  // Mapeo de imágenes originales recuperado
+  const iconMap = {
+    'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
+    '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
+    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png'
+  };
+
+  // 3. Botones dinámicos según el JSON
+  Array.from(categoriasUnicas).sort().forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
+    
+    const iconSrc = iconMap[cat] 
+      ? `<img src="${iconMap[cat]}">` 
+      : `<img src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">`;
+    
+    btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
+    btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
+    consoleButtons.appendChild(btn);
+  });
+}
+
+/* ================= PARRILLA DE NOVEDADES FILTRADA ================= */
+function renderNoticias() {
+  const t = translations[idiomaActual];
+  const query = fileSearch.value.toLowerCase().trim();
+  updatesGrid.innerHTML = '';
+
+  let filtradas = todasLasNoticias;
+
+  // Filtrado por consola
+  if (filtroActual !== 'ALL') {
+    filtradas = filtradas.filter(n => {
+      if (!n.tag) return false;
+      const catPrincipal = n.tag.split('/')[0].trim().toUpperCase();
+      return catPrincipal === filtroActual;
+    });
+  }
+
+  // Filtrado por el buscador
+  if (query) {
+    filtradas = filtradas.filter(n => 
+      n.title.toLowerCase().includes(query) || 
+      (n.tag && n.tag.toLowerCase().includes(query))
+    );
+  }
+
+  if (filtradas.length === 0) {
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:#aaa; font-size:1.1rem; margin-top:40px;">${t.empty}</p>`;
+    return;
+  }
+
+  let htmlResult = '';
+  filtradas.forEach(noticia => {
+    const dateStr = new Date(noticia.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
+    
+    htmlResult += `
+      <div class="update-card">
+        <div class="update-header">
+          <span class="update-tag">${noticia.tag || 'INFO'}</span>
+          <span class="update-date">📅 ${dateStr}</span>
+        </div>
+        <h3><a href="${noticia.link}" target="_blank" rel="noopener">${noticia.title}</a></h3>
+        <div class="update-body">${t.bodyText}</div>
+        <div class="update-footer">
+          <a href="${noticia.link}" target="_blank" rel="noopener" class="download-link">
+            ${t.download}
+          </a>
+        </div>
+      </div>
+    `;
+  });
+
+  updatesGrid.innerHTML = htmlResult;
+}
+
+/* ================= CARGA DE DATOS DEL ROBOT ================= */
+async function cargarDatosRobot() {
+  const t = translations[idiomaActual];
+  try {
+    const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime());
+    if(!response.ok) throw new Error();
+
+    todasLasNoticias = await response.json();
+
+    todasLasNoticias.forEach(n => {
+      if (n.tag) {
+        const catPrincipal = n.tag.split('/')[0].trim().toUpperCase();
+        categoriasUnicas.add(catPrincipal);
+      }
+    });
+
+    const loader = document.getElementById('mainLoader');
+    if(loader) loader.style.display = 'none';
+
+    renderFilterButtons();
+    renderNoticias();
+
+  } catch (error) {
+    document.getElementById('mainLoader').style.display = 'none';
+    updatesGrid.innerHTML = `
+      <p style="text-align:center; grid-column:1/-1; color:var(--red); font-size:1.1rem; padding: 20px;">
+        ${t.waiting}
+      </p>
+    `;
+    renderFilterButtons();
+  }
+}
+
+/* ================= LISTENERS ================= */
+fileSearch.addEventListener('input', renderNoticias);
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+};
+
+window.onload = () => {
+  initThemeDots();
+  createLanguageSelector();
+  updateLanguage();
+  cargarDatosRobot();
+};
+</script>
+
+</body>
+</html>

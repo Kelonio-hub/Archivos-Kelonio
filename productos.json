@@ -1977,28 +1977,272 @@
   },
   {
     "id": "76",
-    "console": "Switch",
+    "console": "PS5",
     "label": {
-      "en": "Switch: Nintendo Switch Lite Azul...",
-      "es": "Switch: Nintendo Switch Lite Azul...",
-      "fr": "Switch: Nintendo Switch Lite Azul...",
-      "it": "Switch: Nintendo Switch Lite Azul...",
-      "pt": "Switch: Nintendo Switch Lite Azul...",
-      "de": "Switch: Nintendo Switch Lite Azul...",
-      "ja": "Switch: Nintendo Switch Lite Azul...",
-      "ko": "Switch: Nintendo Switch Lite Azul..."
+      "en": "PlayStation 5 - Consola Standard",
+      "es": "PlayStation 5 - Consola Standard",
+      "fr": "PlayStation 5 - Consola Standard",
+      "it": "PlayStation 5 - Consola Standard",
+      "pt": "PlayStation 5 - Consola Standard",
+      "de": "PlayStation 5 - Consola Standard",
+      "ja": "PlayStation 5 - Consola Standard",
+      "ko": "PlayStation 5 - Consola Standard"
     },
     "desc": {
-      "es": "Consigue Nintendo Switch Lite Azul en Amazon al mejor precio con nuestro enlace de afiliado.",
-      "en": "Get Nintendo Switch Lite Azul on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Nintendo Switch Lite Azul sur Amazon au meilleur prix avec notre lien d'affiliation.",
-      "it": "Ottieni Nintendo Switch Lite Azul su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Nintendo Switch Lite Azul na Amazon ao melhor preço com o nosso link de afiliado.",
-      "de": "Holen Sie sich Nintendo Switch Lite Azul bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでNintendo Switch Lite Azulを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Nintendo Switch Lite Azul을(를) 구매하세요."
+      "en": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue PlayStation 5 - Consola Standard en Amazon al mejor precio con enlace de afiliado."
     },
-    "img": "https://m.media-amazon.com/images/I/7148gs3mRnL._AC_SX342_.jpg",
-    "url": "https://www.amazon.es/dp/B092JL5NS2?tag=kelonio-21"
+    "img": "https://m.media-amazon.com/images/I/619BkvKW35L._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B08KJF2D25?tag=kelonio-21",
+    "asin": "B08KJF2D25"
+  },
+  {
+    "id": "77",
+    "console": "PS5",
+    "label": {
+      "en": "Mando DualSense Wireless - Blanco",
+      "es": "Mando DualSense Wireless - Blanco",
+      "fr": "Mando DualSense Wireless - Blanco",
+      "it": "Mando DualSense Wireless - Blanco",
+      "pt": "Mando DualSense Wireless - Blanco",
+      "de": "Mando DualSense Wireless - Blanco",
+      "ja": "Mando DualSense Wireless - Blanco",
+      "ko": "Mando DualSense Wireless - Blanco"
+    },
+    "desc": {
+      "en": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Mando DualSense Wireless - Blanco en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/612bjwBuobS._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B08H93ZRK9?tag=kelonio-21",
+    "asin": "B08H93ZRK9"
+  },
+  {
+    "id": "78",
+    "console": "PS5",
+    "label": {
+      "en": "Hogwarts Legacy - Edición Estándar",
+      "es": "Hogwarts Legacy - Edición Estándar",
+      "fr": "Hogwarts Legacy - Edición Estándar",
+      "it": "Hogwarts Legacy - Edición Estándar",
+      "pt": "Hogwarts Legacy - Edición Estándar",
+      "de": "Hogwarts Legacy - Edición Estándar",
+      "ja": "Hogwarts Legacy - Edición Estándar",
+      "ko": "Hogwarts Legacy - Edición Estándar"
+    },
+    "desc": {
+      "en": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Hogwarts Legacy - Edición Estándar en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/81R6-1yCj2L._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B0BS1SXZT7?tag=kelonio-21",
+    "asin": "B0BS1SXZT7"
+  },
+  {
+    "id": "79",
+    "console": "PS5",
+    "label": {
+      "en": "Marvel's Spider-Man 2",
+      "es": "Marvel's Spider-Man 2",
+      "fr": "Marvel's Spider-Man 2",
+      "it": "Marvel's Spider-Man 2",
+      "pt": "Marvel's Spider-Man 2",
+      "de": "Marvel's Spider-Man 2",
+      "ja": "Marvel's Spider-Man 2",
+      "ko": "Marvel's Spider-Man 2"
+    },
+    "desc": {
+      "en": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Marvel's Spider-Man 2 en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/81Vp2bHh-sL._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B0CHWYSGLF?tag=kelonio-21",
+    "asin": "B0CHWYSGLF"
+  },
+  {
+    "id": "80",
+    "console": "Xbox",
+    "label": {
+      "en": "Xbox Series X - 1TB",
+      "es": "Xbox Series X - 1TB",
+      "fr": "Xbox Series X - 1TB",
+      "it": "Xbox Series X - 1TB",
+      "pt": "Xbox Series X - 1TB",
+      "de": "Xbox Series X - 1TB",
+      "ja": "Xbox Series X - 1TB",
+      "ko": "Xbox Series X - 1TB"
+    },
+    "desc": {
+      "en": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Xbox Series X - 1TB en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/61-lxPJUcbS._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B08H93YR25?tag=kelonio-21",
+    "asin": "B08H93YR25"
+  },
+  {
+    "id": "81",
+    "console": "Xbox",
+    "label": {
+      "en": "Mando Inalámbrico Xbox - Carbon Black",
+      "es": "Mando Inalámbrico Xbox - Carbon Black",
+      "fr": "Mando Inalámbrico Xbox - Carbon Black",
+      "it": "Mando Inalámbrico Xbox - Carbon Black",
+      "pt": "Mando Inalámbrico Xbox - Carbon Black",
+      "de": "Mando Inalámbrico Xbox - Carbon Black",
+      "ja": "Mando Inalámbrico Xbox - Carbon Black",
+      "ko": "Mando Inalámbrico Xbox - Carbon Black"
+    },
+    "desc": {
+      "en": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Mando Inalámbrico Xbox - Carbon Black en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/61z3GQgEPwL._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B07WKNQ8JT?tag=kelonio-21",
+    "asin": "B07WKNQ8JT"
+  },
+  {
+    "id": "82",
+    "console": "Xbox",
+    "label": {
+      "en": "Halo Infinite - Edición Estándar",
+      "es": "Halo Infinite - Edición Estándar",
+      "fr": "Halo Infinite - Edición Estándar",
+      "it": "Halo Infinite - Edición Estándar",
+      "pt": "Halo Infinite - Edición Estándar",
+      "de": "Halo Infinite - Edición Estándar",
+      "ja": "Halo Infinite - Edición Estándar",
+      "ko": "Halo Infinite - Edición Estándar"
+    },
+    "desc": {
+      "en": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Halo Infinite - Edición Estándar en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/81vR11U2x3L._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B08K3BJBFL?tag=kelonio-21",
+    "asin": "B08K3BJBFL"
+  },
+  {
+    "id": "83",
+    "console": "Xbox",
+    "label": {
+      "en": "Call of Duty: Modern Warfare III",
+      "es": "Call of Duty: Modern Warfare III",
+      "fr": "Call of Duty: Modern Warfare III",
+      "it": "Call of Duty: Modern Warfare III",
+      "pt": "Call of Duty: Modern Warfare III",
+      "de": "Call of Duty: Modern Warfare III",
+      "ja": "Call of Duty: Modern Warfare III",
+      "ko": "Call of Duty: Modern Warfare III"
+    },
+    "desc": {
+      "en": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Call of Duty: Modern Warfare III en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/81wLXYY6v6L._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B0CMJLZQ1D?tag=kelonio-21",
+    "asin": "B0CMJLZQ1D"
+  },
+  {
+    "id": "84",
+    "console": "Switch",
+    "label": {
+      "en": "The Legend of Zelda: Tears of the Kingdom",
+      "es": "The Legend of Zelda: Tears of the Kingdom",
+      "fr": "The Legend of Zelda: Tears of the Kingdom",
+      "it": "The Legend of Zelda: Tears of the Kingdom",
+      "pt": "The Legend of Zelda: Tears of the Kingdom",
+      "de": "The Legend of Zelda: Tears of the Kingdom",
+      "ja": "The Legend of Zelda: Tears of the Kingdom",
+      "ko": "The Legend of Zelda: Tears of the Kingdom"
+    },
+    "desc": {
+      "en": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue The Legend of Zelda: Tears of the Kingdom en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/81K9nIsqRGL._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B09ZYQRCZJ?tag=kelonio-21",
+    "asin": "B09ZYQRCZJ"
+  },
+  {
+    "id": "85",
+    "console": "Switch",
+    "label": {
+      "en": "Nintendo Switch OLED - Edición Zelda",
+      "es": "Nintendo Switch OLED - Edición Zelda",
+      "fr": "Nintendo Switch OLED - Edición Zelda",
+      "it": "Nintendo Switch OLED - Edición Zelda",
+      "pt": "Nintendo Switch OLED - Edición Zelda",
+      "de": "Nintendo Switch OLED - Edición Zelda",
+      "ja": "Nintendo Switch OLED - Edición Zelda",
+      "ko": "Nintendo Switch OLED - Edición Zelda"
+    },
+    "desc": {
+      "en": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "es": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "fr": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "it": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "pt": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "de": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "ja": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado.",
+      "ko": "Consigue Nintendo Switch OLED - Edición Zelda en Amazon al mejor precio con enlace de afiliado."
+    },
+    "img": "https://m.media-amazon.com/images/I/718yGjZl1TL._SL1500_.jpg",
+    "url": "https://www.amazon.es/dp/B0BXZ4Z1T8?tag=kelonio-21",
+    "asin": "B0BXZ4Z1T8"
   }
 ]
