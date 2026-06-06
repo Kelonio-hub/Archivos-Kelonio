@@ -175,11 +175,77 @@ body{
 /* ================= APP ================= */
 #mainApp{
   display:block;
-  padding-top:70px; 
+  padding-top:75px; 
 }
+
+/* ================= BANNER ALARGADO (AMAZON PRIME) ================= */
+.prime-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(0, 170, 255, 0.12), rgba(20, 20, 20, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 15px auto 5px auto;
+  width: 90%;
+  max-width: 1300px;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.prime-banner:hover {
+  transform: translateY(-2px);
+  border-color: var(--red);
+  box-shadow: 0 4px 15px rgba(var(--glow-rgb), 0.25);
+}
+.prime-banner-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.prime-banner-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.prime-banner-info strong {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.prime-banner-info p {
+  font-size: 12.5px;
+  color: #bbb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.prime-banner-btn {
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: filter 0.2s;
+}
+.prime-banner-btn:hover {
+  filter: brightness(1.2);
+}
+
 /* ================= ROWS & CAROUSELS ================= */
-.row{
-  padding:25px 5%;
+.row {
+  padding: 20px 5%;
 }
 .row h2{
   margin-bottom:20px;
@@ -199,83 +265,6 @@ body{
 }
 .carousel::-webkit-scrollbar{
   display:none;
-}
-
-/* ================= BANNER AMAZON PRIME ================= */
-#primeBannerContainer {
-  display: none;
-  width: 90%;
-  max-width: 1200px;
-  margin: 20px auto 10px auto;
-  background: linear-gradient(135deg, rgba(0, 170, 255, 0.08), rgba(0, 170, 255, 0.02));
-  border: 1px solid rgba(0, 170, 255, 0.3);
-  border-radius: 12px;
-  padding: 15px 25px;
-  align-items: center;
-  gap: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-#primeBannerContainer:hover {
-  transform: scale(1.015);
-  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15);
-  border-color: rgba(0, 170, 255, 0.6);
-}
-#primeBannerContainer img {
-  width: 140px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.prime-banner-info {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.prime-banner-info strong {
-  font-size: 19px;
-  color: var(--accent);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.prime-banner-info p {
-  font-size: 14.5px;
-  color: #ddd;
-  line-height: 1.5;
-}
-.prime-banner-btn {
-  background: var(--accent);
-  color: #fff;
-  font-weight: bold;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-size: 14px;
-}
-.prime-banner-btn:hover {
-  background: #0088cc;
-  transform: translateY(-2px);
-}
-@media (max-width: 768px) {
-  #primeBannerContainer {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-  #primeBannerContainer img {
-    width: 100%;
-    height: auto;
-    max-width: 250px;
-  }
-  .prime-banner-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
 }
 
 /* ================= CARDS SIMÉTRICAS ================= */
@@ -514,6 +503,20 @@ body{
   .card{ min-width:240px; width: 240px; }
   .card.card-recent{ min-width:180px; width: 180px; }
 }
+
+@media(max-width:768px){
+  .prime-banner {
+    padding: 10px;
+    width: 95%;
+  }
+  .prime-banner-info p {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 </style>
 </head>
 <body>
@@ -538,10 +541,9 @@ body{
 </div>
 
 <div id="mainApp">
+  <div id="primeBanner" class="prime-banner" style="display:none;"></div>
+
   <div id="featuredContainer" style="display:none">
-    
-    <div id="primeBannerContainer"></div>
-    
     <div class="row featured" id="bestsellersRow" style="display:none;">
       <h2 id="titleBestsellers">TOP VENTAS</h2>
       <div class="carousel" id="bestsellersCarousel"></div>
@@ -570,14 +572,41 @@ body{
 <script>
 /* ================= TRANSLACIONES ================= */
 const translations = {
-  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results", primeTitle: "AMAZON PRIME" },
-  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", primeTitle: "AMAZON PRIME" },
-  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", primeTitle: "AMAZON PRIME" },
-  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", primeTitle: "AMAZON PRIME" },
-  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", primeTitle: "AMAZON PRIME" },
-  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", primeTitle: "AMAZON PRIME" },
-  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果", primeTitle: "AMAZON PRIME" },
-  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과", primeTitle: "AMAZON PRIME" }
+  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results" },
+  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda" },
+  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche" },
+  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca" },
+  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa" },
+  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse" },
+  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果" },
+  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과" }
+};
+
+/* ================= PRODUCTO PRIME HARDCODEADO ================= */
+const PRODUCTO_PRIME = {
+  "id": "prime-promo",
+  "label": {
+    "en": "Amazon Prime",
+    "es": "Amazon Prime",
+    "fr": "Amazon Prime",
+    "it": "Amazon Prime",
+    "pt": "Amazon Prime",
+    "de": "Amazon Prime",
+    "ja": "Amazon Prime",
+    "ko": "Amazon Prime"
+  },
+  "desc": {
+    "en": "Deals and free shipping on millions of products. Includes: Prime Video, Prime Music, Prime Photos and Prime Reading.\nSubscribe for €4.99/month or €49.90/year.",
+    "es": "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.\nSuscríbete por 4,99€/mes o 49,90 €/año.",
+    "fr": "Offres et livraison gratuite sur des millions de produits. Comprend : Prime Video, Prime Music, Prime Photos et Prime Reading.\nAbonnez-vous pour 4,99 €/mois ou 49,90 €/an.",
+    "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Prime Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
+    "pt": "Ofertas e envios grátis em milhões de produtos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês ou 49,90 €/ano.",
+    "de": "Angebote und kostenloser Versand bei Millionen von Produkten. Enthält: Prime Video, Prime Music, Prime Photos und Prime Reading.\nAbonniere für 4,99 €/Monat oder 49,90 €/Jahr.",
+    "ja": "数百万の商品でお得な特典と無料配送。Prime Video、Prime Music、Prime Photos、Prime Readingが含まれます。\n月額4.99€または年額49.90€で購読。",
+    "ko": "수백만 개의 제품에 대한 혜택과 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
+  },
+  "img": "https://gazetadasemana.com.br/images/colunas/10044/06072023165518_Amazon_Pri.jpg",
+  "url": "https://amzn.to/4pq5Pp6"
 };
 
 /* ================= GLOBAL ================= */
@@ -595,8 +624,6 @@ const categories = [
   { id: 'Wii/WiiU',  icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII / WII U', en: 'WII / WII U' } },
   { id: 'SD/USB',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
 ];
-
-const featuredIds = [1, 2, 3, 11, 13, 16, 62, 64, 8, 18, 4];
 
 /* ================= TEMAS ================= */
 const paletaTemas = {
@@ -661,6 +688,7 @@ function createLanguageSelector(){
     updateLanguage();
     if (allProducts.length > 0) {
       renderConsoleButtons();
+      renderPrimeProduct();
       renderProducts(categoriaActual, document.getElementById('productSearch').value);
     }
   });
@@ -671,8 +699,6 @@ function updateLanguage(){
   document.title = t.title;
   document.getElementById('productSearch').placeholder = t.search;
   document.getElementById('titleBestsellers').textContent = t.topVentas;
-  // Actualizar banner si los productos ya están cargados
-  if (allProducts.length > 0) renderPrimeBanner(); 
 }
 
 /* ================= TOPBAR BOTONES DE CONSOLA ================= */
@@ -699,7 +725,7 @@ function renderConsoleButtons(){
       categoriaActual = cat.id;
       paginaActual = 1; 
       document.getElementById('productSearch').value = ''; 
-      document.getElementById('featuredContainer').style.display = 'block'; 
+      document.getElementById('primeBanner').style.display = 'flex'; 
       document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
       renderProducts(cat.id, '');
     };
@@ -707,7 +733,7 @@ function renderConsoleButtons(){
   });
 }
 
-/* ================= CARGA DE DATOS MULTI-ARCHIVOS NUEVOS ================= */
+/* ================= CARGA DE DATOS ================= */
 async function cargarProductos() {
   try {
     const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/';
@@ -725,7 +751,7 @@ async function cargarProductos() {
     const resultadosArrays = await Promise.all(promesas);
     allProducts = resultadosArrays.flat();
     
-    renderPrimeBanner(); // <-- Renderizar el banner al cargar los productos
+    renderPrimeProduct();
     renderProducts(categoriaActual);
 
   } catch (error) {
@@ -735,40 +761,32 @@ async function cargarProductos() {
   }
 }
 
-/* ================= RENDER BANNER PRIME ================= */
-function renderPrimeBanner() {
-  const primeProduct = allProducts.find(item => item.label?.es === "Amazon Prime");
-  const bannerContainer = document.getElementById('primeBannerContainer');
-  
-  if (!primeProduct) {
-     bannerContainer.style.display = 'none';
-     return;
-  }
+/* ================= RENDERIZAR PRODUCTO DESTACADO (BANNER ALARGADO) ================= */
+function renderPrimeProduct() {
+  const banner = document.getElementById('primeBanner');
+  if (!banner) return;
   
   const t = translations[idiomaActual] || translations.es;
-  const label = primeProduct.label?.[idiomaActual] || primeProduct.label?.es || 'Amazon Prime';
-  const desc = primeProduct.desc?.[idiomaActual] || primeProduct.desc?.es || '';
+  const label = PRODUCTO_PRIME.label[idiomaActual] || PRODUCTO_PRIME.label.es;
+  const desc = PRODUCTO_PRIME.desc[idiomaActual] || PRODUCTO_PRIME.desc.es;
   
-  bannerContainer.innerHTML = `
-    <img src="${primeProduct.img}" alt="Amazon Prime">
+  // Limpiamos los saltos de línea para que todo fluya en una sola tira horizontal
+  let cleanDesc = desc.replace(/\n/g, ' — ');
+
+  banner.innerHTML = `
+    <img src="${PRODUCTO_PRIME.img}" class="prime-banner-img" alt="${label}">
     <div class="prime-banner-info">
       <strong>${label}</strong>
-      <p>${desc.replace(/\n/g, '<br>')}</p>
+      <p>${cleanDesc}</p>
     </div>
     <button class="prime-banner-btn">${t.buy}</button>
   `;
   
-  bannerContainer.style.display = 'flex';
-  
-  // Hacer que el click en el botón o todo el banner abra el link
-  bannerContainer.onclick = () => window.open(primeProduct.url, '_blank');
-  bannerContainer.querySelector('.prime-banner-btn').onclick = (e) => {
-    e.stopPropagation();
-    window.open(primeProduct.url, '_blank');
-  };
+  banner.onclick = () => window.open(PRODUCTO_PRIME.url, '_blank');
+  banner.style.display = 'flex';
 }
 
-/* ================= CREADOR DE TARJETAS INTELIGENTE ================= */
+/* ================= CREADOR DE TARJETAS ================= */
 function createProductCard(item, container, isMini = false) {
   const card = document.createElement('div');
   card.className = isMini ? 'card card-recent' : 'card';
@@ -818,16 +836,18 @@ function createProductCard(item, container, isMini = false) {
   container.appendChild(card);
 }
 
-/* ================= RENDERIZADO PRINCIPAL CON FILTRADO UNIFICADO ================= */
+/* ================= RENDERIZADO PRINCIPAL DE CATÁLOGO ================= */
 function renderProducts(catId, searchTerm = '') {
   const grid = document.getElementById('productsGrid');
   grid.innerHTML = '';
   const t = translations[idiomaActual] || translations.es;
 
-  // 1. Filtrar los productos de "Amazon Prime"
-  let filtered = allProducts.filter(item => item.label?.es !== "Amazon Prime");
+  let filtered = allProducts.filter(item => 
+    item.label?.es !== "Amazon Prime" && 
+    !(item.label?.es && item.label.es.toLowerCase().includes("amazon prime"))
+  );
 
-  // 2. Filtrar por Búsqueda o Categoría
+  // Filtrar por Búsqueda o Categoría
   if (searchTerm.trim() !== '') {
     const term = searchTerm.toLowerCase().trim();
     filtered = filtered.filter(item => {
@@ -837,7 +857,6 @@ function renderProducts(catId, searchTerm = '') {
     });
     document.getElementById('currentCategoryTitle').textContent = t.results.toUpperCase();
   } else {
-    // UNIFICACIÓN DE FILTRO: Si se elige 3DS_NDS, junta los productos guardados como "3DS" y como "NDS"
     if (catId === '3DS_NDS') {
       filtered = filtered.filter(item => item.console === '3DS' || item.console === 'NDS');
     } else {
@@ -845,7 +864,7 @@ function renderProducts(catId, searchTerm = '') {
     }
   }
 
-  // 3. Manejar estado vacío
+  // Manejar estado vacío
   if (filtered.length === 0) {
     grid.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">No se encontraron productos.</p>`;
     document.getElementById('paginationContainerTop').innerHTML = '';
@@ -853,7 +872,7 @@ function renderProducts(catId, searchTerm = '') {
     return;
   }
 
-  // 4. Aplicar Paginación
+  // Aplicar Paginación
   const totalPages = Math.ceil(filtered.length / itemsPorPagina);
   if (paginaActual > totalPages) paginaActual = 1; 
 
@@ -861,10 +880,7 @@ function renderProducts(catId, searchTerm = '') {
   const endIndex = startIndex + itemsPorPagina;
   const pagedItems = filtered.slice(startIndex, endIndex);
 
-  // 5. Renderizar tarjetas
   pagedItems.forEach(item => createProductCard(item, grid, false));
-
-  // 6. Renderizar paginación
   renderPagination(totalPages);
 }
 
@@ -933,10 +949,10 @@ searchInput.addEventListener('input', () => {
     paginaActual = 1; 
     const val = searchInput.value;
     if(val.trim() !== '') {
-      document.getElementById('featuredContainer').style.display = 'none';
+      document.getElementById('primeBanner').style.display = 'none';
       document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); 
     } else {
-      document.getElementById('featuredContainer').style.display = 'block';
+      document.getElementById('primeBanner').style.display = 'flex';
       document.getElementById('currentCategoryTitle').textContent = (categories.find(c => c.id === categoriaActual).label[idiomaActual] || categories.find(c => c.id === categoriaActual).label.es).toUpperCase();
       
       const btns = document.querySelectorAll('.console-btn');
