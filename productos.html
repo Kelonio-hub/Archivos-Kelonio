@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es')">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,7 +172,7 @@ body{
   justify-content: center;
 }
 
-/* ================= CONTENEDOR DE SUBFILTROS DINDÁMICOS ================= */
+/* ================= CONTENEDOR DE SUBFILTROS DINÁMICOS ================= */
 .subcategories-filter-wrapper {
   width: 90%;
   max-width: 1300px;
@@ -439,6 +439,93 @@ body{
   border: 1px solid rgba(255,255,255,0.2);
 }
 
+/* Elementos del Admin Panel en Tarjetas */
+.admin-card-tools {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 15px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.admin-select-group label {
+  font-size: 10px;
+  color: #aaa;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.admin-select-multiple {
+  background: #222;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 11px;
+  outline: none;
+}
+.admin-select-multiple option {
+  padding: 2px 4px;
+}
+.delete-btn {
+  background: #cc0000 !important;
+  color: white;
+  width: 100%;
+}
+
+/* ================= CANDADO INVISIBLE (ESQUINA INFERIOR IZQUIERDA) ================= */
+.admin-lock-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10005; /* Por encima de todo */
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Totalmente invisible para el usuario casual */
+  transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+/* Solo es detectable/visible al pasar el ratón exactamente por encima de su zona */
+.admin-lock-btn:hover {
+  opacity: 1;
+  background: #141414;
+  border-color: var(--red);
+}
+.admin-lock-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Botón de guardar en la barra superior */
+.save-json-btn {
+  background: var(--gold) !important;
+  color: black !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  display: none; /* Se activa dinámicamente desde JS */
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s;
+}
+.save-json-btn:hover {
+  transform: scale(1.05);
+}
+
 /* ================= TARJETAS MÁS PEQUEÑAS (TOP VENTAS) ================= */
 .card.card-recent{
   min-width:210px;
@@ -609,10 +696,22 @@ body{
     >
     <div class="config-group">
       <div class="theme-dots-container" id="themeDots"></div>
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <button id="saveJsonBtn" class="save-json-btn" title="Descargar JSON de la categoría actual">
+          💾 Guardar JSON
+        </button>
+      </div>
       <select id="languageSelector"></select>
     </div>
   </div>
 </div>
+
+<button id="adminLockBtn" class="admin-lock-btn" title="Modo Administrador">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="lockIcon">
+    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+  </svg>
+</button>
 
 <div id="mainApp">
   <div id="primeBanner" class="prime-banner" style="display:none;"></div>
@@ -666,14 +765,13 @@ const subcatTranslations = {
   "Consolas": { es: "Consolas", en: "Consoles", fr: "Consoles", it: "Console", pt: "Consoles", de: "Konsolen", ja: "コンソール", ko: "콘솔" },
   "Videojuegos": { es: "Videojuegos", en: "Video Games", fr: "Jeux Vidéo", it: "Videogiochi", pt: "Videojogos", de: "Videospiele", ja: "ビデオゲーム", ko: "비디오 게임" },
   "Tarjeta de Regalo": { es: "Tarjetas de Regalo", en: "Gift Cards", fr: "Cartes Cadeaux", it: "Carte Regalo", pt: "Cartões de Presente", de: "Geschenkkarten", ja: "ギフトカード", ko: "기프트 카드" },
-  "Mandos-Perifericos": { es: "Mandos y Accesorios", en: "Controllers & Accessories", fr: "Manettes & Accessoires", it: "Controller e Accessori", pt: "Controles e Acessórios", de: "Controller & Zubehör", ja: "コントローラーとアクセサリー", ko: "컨트롤러 및 액세서리" },
+  "Mandos-Perifericos": { es: "Mandos y Accesorios", en: "Controllers & Accessories", fr: "Manettes & Accessoires", it: "Controller e Accessori", pt: "Controles e Acessórios", de: "Controller & Zubehör", ja: "コントローラーとアクセサリー", ko: "컨트롤러 및 accesorios" },
   "Fundas-Proteccion": { es: "Fundas y Protección", en: "Cases & Protection", fr: "Housses & Protection", it: "Custodie e Protezione", pt: "Capas e Proteção", de: "Hüllen & Schutz", ja: "ケースと保護", ko: "케이스 및 보호" },
   "Tarjeta SD": { es: "Tarjeta SD", en: "SD Card", fr: "Carte SD", it: "Scheda SD", pt: "Cartão SD", de: "SD-Karte", ja: "SDカード", ko: "SD카드" },
   "USB": { es: "USB", en: "USB", fr: "USB", it: "USB", pt: "USB", de: "USB", ja: "USB", ko: "USB" },
   "Disco duro externo": { es: "Disco Duro Externo", en: "External Hard Drive", fr: "Disque Dur Externe", it: "Hard Disk Esterno", pt: "Disco Rígido Externo", de: "Externe Festplatte", ja: "外付けハードドライブ", ko: "외장 하드 드라이브" }
 };
 
-/* Orden estricto para mostrar en la barra */
 const subcatOrder = ['Consolas', 'Videojuegos', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo'];
 
 /* ================= PRODUCTO PRIME HARDCODEADO ================= */
@@ -687,7 +785,7 @@ const PRODUCTO_PRIME = {
     "es": "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.\nSuscríbete por 4,99€/mes o 49,90 €/año.",
     "fr": "Offres et livraison gratuite sur des millions de produits. Comprend : Prime Video, Prime Music, Prime Photos et Prime Reading.\nAbonnez-vous pour 4,99 €/mois ou 49,90 €/an.",
     "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
-    "pt": "Ofertas e envios grátis em milhões de produtos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês ou 49,90 €/ano.",
+    "pt": "Ofertas e envios grátis em milhões de productos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês o 49,90 €/ano.",
     "de": "Angebote und kostenloser Versand bei Millionen von Produkten. Enthält: Prime Video, Prime Music, Prime Photos und Prime Reading.\nAbonniere für 4,99 €/Monat oder 49,90 €/Jahr.",
     "ja": "数百万の商品でお得な特典と無料配送。Prime Video、Prime Music、Prime Photos、Prime Readingが含まれます。\n月額4.99€または年額49.90€で購読。",
     "ko": "수백만 개의 제품에 대한 혜택 outdoor 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
@@ -697,6 +795,7 @@ const PRODUCTO_PRIME = {
 };
 
 /* ================= GLOBAL ================= */
+let isAdmin = false;
 let idiomaActual = 'es';
 let allProducts = [];
 let categoriaActual = 'Switch';
@@ -713,6 +812,15 @@ const categories = [
   { id: 'Wii/WiiU',  icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII / WII U', en: 'WII / WII U' } },
   { id: 'SD/USB',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
 ];
+
+const categoryJsonMap = {
+  'Switch': 'switch.json',
+  'PS5': 'playstation.json',
+  'Xbox': 'xbox.json',
+  'Wii/WiiU': 'wii_wii_u.json',
+  'SD/USB': 'sd_usb.json',
+  '3DS_NDS': '3ds.json'
+};
 
 /* ================= TEMAS ================= */
 const paletaTemas = {
@@ -779,7 +887,7 @@ function createLanguageSelector(){
     if (allProducts.length > 0) {
       renderConsoleButtons();
       renderPrimeProduct();
-      generarBarraSubcategoriasYCapacidades(); // Actualizar textos de los filtros
+      generarBarraSubcategoriasYCapacidades(); 
       renderProducts(categoriaActual, document.getElementById('productSearch').value);
     }
   });
@@ -841,6 +949,7 @@ function generarBarraSubcategoriasYCapacidades() {
 
   let productosCategoria = allProducts.filter(item => {
     if (categoriaActual === '3DS_NDS') return item.console === '3DS' || item.console === 'NDS';
+    if (Array.isArray(item.console)) return item.console.includes(categoriaActual);
     return item.console === categoriaActual;
   });
 
@@ -848,13 +957,18 @@ function generarBarraSubcategoriasYCapacidades() {
 
   let subcatsUnicas = new Set();
   productosCategoria.forEach(p => {
-    if (p.subcategory && p.subcategory !== 'Ninguno') subcatsUnicas.add(p.subcategory);
+    if (p.subcategory) {
+      if (Array.isArray(p.subcategory)) {
+        p.subcategory.forEach(sub => { if(sub !== 'Ninguno') subcatsUnicas.add(sub); });
+      } else if (p.subcategory !== 'Ninguno') {
+        subcatsUnicas.add(p.subcategory);
+      }
+    }
   });
 
   if (subcatsUnicas.size > 0) {
     subcatRow.style.display = 'flex';
     
-    // Botón para "Todos"
     const btnAll = document.createElement('button');
     btnAll.className = `subcat-filter-btn ${subcategoriaSeleccionada === 'ALL' ? 'active' : ''}`;
     btnAll.textContent = t.all;
@@ -866,7 +980,6 @@ function generarBarraSubcategoriasYCapacidades() {
     };
     subcatRow.appendChild(btnAll);
 
-    // Ordenar basándonos en subcatOrder
     let listaSubcats = Array.from(subcatsUnicas).sort((a, b) => {
       let indexA = subcatOrder.indexOf(a);
       let indexB = subcatOrder.indexOf(b);
@@ -879,7 +992,6 @@ function generarBarraSubcategoriasYCapacidades() {
       const btn = document.createElement('button');
       btn.className = `subcat-filter-btn ${subcategoriaSeleccionada === sub ? 'active' : ''}`;
       
-      // Aplicar Traducción si existe
       const translatedText = subcatTranslations[sub] ? (subcatTranslations[sub][idiomaActual] || subcatTranslations[sub]['es']) : sub;
       btn.textContent = translatedText;
       
@@ -893,7 +1005,6 @@ function generarBarraSubcategoriasYCapacidades() {
     });
   }
 
-  // LÓGICA TAMAÑOS SD/USB
   if (categoriaActual === 'SD/USB') {
     sizesRow.style.display = 'flex';
 
@@ -953,7 +1064,14 @@ async function cargarProductos() {
     );
 
     const resultadosArrays = await Promise.all(promesas);
-    allProducts = resultadosArrays.flat();
+    
+    allProducts = resultadosArrays.flatMap((array, index) => {
+      return array.map((item, subIndex) => {
+        if (!item.id) item.id = `prod-${index}-${subIndex}-${Date.now()}`;
+        if (!item._originFile) item._originFile = archivos[index];
+        return item;
+      });
+    });
     
     renderPrimeProduct();
     generarBarraSubcategoriasYCapacidades(); 
@@ -994,6 +1112,7 @@ function renderPrimeProduct() {
 function createProductCard(item, container, isMini = false) {
   const card = document.createElement('div');
   card.className = isMini ? 'card card-recent' : 'card';
+  card.dataset.id = item.id;
   
   const t = translations[idiomaActual] || translations.es;
   const label = item.label?.[idiomaActual] || item.label?.es || 'Producto';
@@ -1011,9 +1130,12 @@ function createProductCard(item, container, isMini = false) {
   const iconCart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
   const iconZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
 
-  // TRADUCCIÓN DEL BADGE
-  const translatedBadge = (item.subcategory && subcatTranslations[item.subcategory]) ? (subcatTranslations[item.subcategory][idiomaActual] || subcatTranslations[item.subcategory]['es']) : item.subcategory;
-  const badgeHtml = (item.subcategory && item.subcategory !== 'Ninguno') ? `<div class="card-badge">${translatedBadge.toUpperCase()}</div>` : '';
+  let badgeHtml = '';
+  if (item.subcategory && item.subcategory !== 'Ninguno') {
+    const subcats = Array.isArray(item.subcategory) ? item.subcategory : [item.subcategory];
+    const translatedBadges = subcats.map(sub => subcatTranslations[sub] ? (subcatTranslations[sub][idiomaActual] || subcatTranslations[sub]['es']) : sub);
+    badgeHtml = `<div class="card-badge">${translatedBadges.join(', ').toUpperCase()}</div>`;
+  }
   
   const sizeBadgeHtml = (item.size && item.size !== 'Ninguno') ? `<div class="card-size-badge">${item.size}</div>` : '';
 
@@ -1032,7 +1154,66 @@ function createProductCard(item, container, isMini = false) {
     </div>
   `;
 
-  card.onclick = () => window.open(item.url, '_blank');
+  if (isAdmin) {
+    const adminTools = document.createElement('div');
+    adminTools.className = 'admin-card-tools';
+    adminTools.onclick = (e) => e.stopPropagation();
+
+    const currentConsoles = Array.isArray(item.console) ? item.console : [item.console];
+    let consoleOptions = categories.map(c => 
+      `<option value="${c.id}" ${currentConsoles.includes(c.id) ? 'selected' : ''}>${c.id}</option>`
+    ).join('');
+    if (!currentConsoles.includes('NDS') && (currentConsoles.includes('3DS') || currentConsoles.includes('3DS_NDS'))) {
+      consoleOptions += `<option value="NDS">NDS</option>`;
+    } else if (currentConsoles.includes('NDS')) {
+      consoleOptions += `<option value="NDS" selected>NDS</option>`;
+    }
+
+    const currentSubcats = Array.isArray(item.subcategory) ? item.subcategory : [item.subcategory];
+    const subcatOptions = subcatOrder.map(sub => 
+      `<option value="${sub}" ${currentSubcats.includes(sub) ? 'selected' : ''}>${sub}</option>`
+    ).join('');
+
+    adminTools.innerHTML = `
+      <div class="admin-select-group">
+        <label>Categorías (Ctrl+Click)</label>
+        <select class="admin-select-multiple console-select" multiple size="3">
+          ${consoleOptions}
+        </select>
+      </div>
+      <div class="admin-select-group">
+        <label>Subcategorías (Ctrl+Click)</label>
+        <select class="admin-select-multiple subcat-select" multiple size="3">
+          ${subcatOptions}
+        </select>
+      </div>
+      <button class="action-btn delete-btn">❌ Eliminar Producto</button>
+    `;
+
+    adminTools.querySelector('.console-select').addEventListener('change', (e) => {
+      const selectedConsoles = Array.from(e.target.selectedOptions).map(opt => opt.value);
+      item.console = selectedConsoles.length === 1 ? selectedConsoles[0] : selectedConsoles;
+    });
+
+    adminTools.querySelector('.subcat-select').addEventListener('change', (e) => {
+      const selectedSubcats = Array.from(e.target.selectedOptions).map(opt => opt.value);
+      item.subcategory = selectedSubcats.length === 0 ? 'Ninguno' : (selectedSubcats.length === 1 ? selectedSubcats[0] : selectedSubcats);
+    });
+
+    adminTools.querySelector('.delete-btn').addEventListener('click', () => {
+      if(confirm(`¿Estás seguro de que deseas eliminar "${label}"?`)) {
+        allProducts = allProducts.filter(p => p.id !== item.id);
+        renderProducts(categoriaActual, document.getElementById('productSearch').value);
+        generarBarraSubcategoriasYCapacidades();
+      }
+    });
+
+    card.appendChild(adminTools);
+  }
+
+  card.onclick = () => {
+    if(!isAdmin) window.open(item.url, '_blank');
+  };
   
   card.querySelector('.buy-btn').onclick = (e) => {
     e.stopPropagation();
@@ -1073,13 +1254,22 @@ function renderProducts(catId, searchTerm = '') {
   } 
   else {
     if (catId === '3DS_NDS') {
-      filtered = filtered.filter(item => item.console === '3DS' || item.console === 'NDS');
+      filtered = filtered.filter(item => {
+        if (Array.isArray(item.console)) return item.console.includes('3DS') || item.console.includes('NDS');
+        return item.console === '3DS' || item.console === 'NDS';
+      });
     } else {
-      filtered = filtered.filter(item => item.console === catId);
+      filtered = filtered.filter(item => {
+        if (Array.isArray(item.console)) return item.console.includes(catId);
+        return item.console === catId;
+      });
     }
 
     if (subcategoriaSeleccionada !== 'ALL') {
-      filtered = filtered.filter(item => item.subcategory === subcategoriaSeleccionada);
+      filtered = filtered.filter(item => {
+        if (Array.isArray(item.subcategory)) return item.subcategory.includes(subcategoriaSeleccionada);
+        return item.subcategory === subcategoriaSeleccionada;
+      });
     }
 
     if (catId === 'SD/USB' && tamanoSeleccionado !== 'ALL') {
@@ -1186,6 +1376,80 @@ searchInput.addEventListener('input', () => {
     }
     renderProducts(categoriaActual, val);
   }, 300); 
+});
+
+/* ================= GESTIÓN GHOST-LOCK Y MODO ADMIN ================= */
+const adminLockBtn = document.getElementById('adminLockBtn');
+const saveJsonBtn = document.getElementById('saveJsonBtn');
+const lockIcon = document.getElementById('lockIcon');
+
+adminLockBtn.addEventListener('click', () => {
+  if (!isAdmin) {
+    const pass = prompt("Proxys:");
+    if (pass && pass.trim() !== "") {
+      isAdmin = true;
+      // Icono de candado abierto
+      lockIcon.innerHTML = `
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+      `; 
+      adminLockBtn.style.borderColor = "var(--gold)";
+      adminLockBtn.style.opacity = "1"; // Se queda visible permanentemente si eres admin
+      saveJsonBtn.style.display = "flex"; // Revela el botón de guardar arriba
+      alert("OK!");
+    } else {
+      alert("https://amzn.to/4dUrbsh");
+    }
+  } else {
+    isAdmin = false;
+    // Icono candado cerrado
+    lockIcon.innerHTML = `
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    `; 
+    adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
+    adminLockBtn.style.opacity = "0"; // Vuelve a ser un fantasma invisible
+    saveJsonBtn.style.display = "none";
+    alert("Modo Administrador Desactivado.");
+  }
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+});
+
+// Lógica de descarga JSON
+saveJsonBtn.addEventListener('click', () => {
+  let targetJsonFile = categoryJsonMap[categoriaActual] || 'productos.json';
+  
+  let exportProducts = allProducts.filter(item => {
+    if (categoriaActual === '3DS_NDS') {
+      if (Array.isArray(item.console)) return item.console.includes('3DS') || item.console.includes('NDS');
+      return item.console === '3DS' || item.console === 'NDS';
+    }
+    if (Array.isArray(item.console)) return item.console.includes(categoriaActual);
+    return item.console === categoriaActual;
+  });
+
+  let cleanedProducts = exportProducts.map(p => {
+    let copy = { ...p };
+    delete copy.id;
+    delete copy._originFile;
+    return copy;
+  });
+
+  if (categoriaActual === '3DS_NDS') {
+    const confirmSplit = confirm("Estás en 3DS/NDS. ¿Quieres descargar el archivo específico de 3DS? (Cancelar para descargar el de NDS)");
+    targetJsonFile = confirmSplit ? '3ds.json' : 'nds.json';
+    cleanedProducts = exportProducts.filter(p => p._originFile === targetJsonFile).map(p => {
+      let copy = { ...p }; delete copy.id; delete copy._originFile; return copy;
+    });
+  }
+
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(cleanedProducts, null, 2));
+  const downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", targetJsonFile);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
 });
 
 /* ================= MODAL IMAGEN ================= */
