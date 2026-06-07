@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "console": "Switch",
     "label": {
       "en": "Switch: GameCube Adapter",
@@ -29,7 +28,6 @@
     "price": "16,11 €"
   },
   {
-    "id": "2",
     "console": "Switch",
     "label": {
       "en": "Switch: USB-C Cable",
@@ -58,7 +56,6 @@
     "price": "5,99 €"
   },
   {
-    "id": "3",
     "console": "Switch",
     "label": {
       "en": "Switch: Joy-Con Charger",
@@ -87,7 +84,6 @@
     "price": "17,99 €"
   },
   {
-    "id": "4",
     "console": "Switch",
     "label": {
       "en": "Switch: Switch Charger",
@@ -116,7 +112,6 @@
     "price": "27,99 €"
   },
   {
-    "id": "5",
     "console": "Switch",
     "label": {
       "en": "Switch: Erista Shell",
@@ -145,7 +140,6 @@
     "price": "23,01 €"
   },
   {
-    "id": "6",
     "console": "Switch",
     "label": {
       "en": "Switch: Lite Shell",
@@ -174,7 +168,6 @@
     "price": "18,99 €"
   },
   {
-    "id": "7",
     "console": "Switch",
     "label": {
       "en": "Switch: Oled Shell",
@@ -203,7 +196,6 @@
     "price": "12,99 €"
   },
   {
-    "id": "8",
     "console": "Switch",
     "label": {
       "en": "Switch: Erista Screen Protector",
@@ -232,7 +224,6 @@
     "price": "5,89 €"
   },
   {
-    "id": "9",
     "console": "Switch",
     "label": {
       "en": "Switch: Lite Screen Protector",
@@ -261,7 +252,6 @@
     "price": "6,89 €"
   },
   {
-    "id": "10",
     "console": "Switch",
     "label": {
       "en": "Switch: Oled Screen Protector",
@@ -285,12 +275,11 @@
     },
     "img": "https://m.media-amazon.com/images/I/71DNqEMcUuL._AC_SX679_.jpg",
     "url": "https://amzn.to/3t4Xnon",
-    "subcategory": "Videojuegos",
+    "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
     "price": "6,89 €"
   },
   {
-    "id": "11",
     "console": "Switch",
     "label": {
       "en": "Switch: Game Case",
@@ -319,7 +308,6 @@
     "price": "37,19 €"
   },
   {
-    "id": "12",
     "console": "Switch",
     "label": {
       "en": "Switch: Console Case",
@@ -348,7 +336,6 @@
     "price": "29,99 €"
   },
   {
-    "id": "13",
     "console": "Switch",
     "label": {
       "en": "Switch: Joy-Con Controller",
@@ -377,7 +364,6 @@
     "price": "1510,99 €"
   },
   {
-    "id": "14",
     "console": "Switch",
     "label": {
       "en": "Switch: Joy-Con Kit Pack",
@@ -406,7 +392,6 @@
     "price": "34,99 €"
   },
   {
-    "id": "15",
     "console": "Switch",
     "label": {
       "en": "Switch: GameCube Controller",
@@ -435,7 +420,6 @@
     "price": "32,06 €"
   },
   {
-    "id": "16",
     "console": "Switch",
     "label": {
       "en": "Switch: Pro Controller",
@@ -464,7 +448,6 @@
     "price": "24,46 €"
   },
   {
-    "id": "17",
     "console": "Switch",
     "label": {
       "en": "Switch: RCM Jig",
@@ -488,12 +471,11 @@
     },
     "img": "https://m.media-amazon.com/images/I/61SrbqyZJQL._AC_SX569_.jpg",
     "url": "https://amzn.to/4sg75Of",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price": "6,99 €"
   },
   {
-    "id": "18",
     "console": "Switch",
     "label": {
       "en": "Switch: Joy-Con Steering Wheel",
@@ -517,12 +499,11 @@
     },
     "img": "https://m.media-amazon.com/images/I/511hhE7PdaL._AC_SX679_.jpg",
     "url": "https://amzn.to/3Tqf4cN",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price": "13,99 €"
   },
   {
-    "id": "76",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite Azul...",
@@ -547,11 +528,10 @@
     "img": "https://m.media-amazon.com/images/I/7148gs3mRnL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B092JL5NS2?tag=kelonio-21",
     "price": "214,00 €",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1250",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch - Consola Estándar, Colo...",
@@ -580,7 +560,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1251",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Consola 32Gb Azul/Rojo N...",
@@ -609,7 +588,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1252",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2017 con Joy-Con - Azul ...",
@@ -638,7 +616,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1253",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 + Mario Kart World...",
@@ -663,11 +640,10 @@
     "price": "399,49 €",
     "img": "https://m.media-amazon.com/images/I/71bp5WcmSsL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0F2JCL3NZ?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1254",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2019 con Joy-Con - Azul ...",
@@ -696,7 +672,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1255",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2019 con Joy-Con - Gris ...",
@@ -725,7 +700,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1256",
     "console": "Switch",
     "label": {
       "en": "Switch: 8Bitdo Controlador de Juego Bluetooth SN...",
@@ -754,7 +728,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1257",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 + Mario Kart World Bun...",
@@ -783,7 +756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1258",
     "console": "Switch",
     "label": {
       "en": "Switch: 30-In-1 Game Collection Vol. 2...",
@@ -812,7 +784,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1259",
     "console": "Switch",
     "label": {
       "en": "Switch: Teenage Mutant Ninja Turtles: Mutantes d...",
@@ -837,11 +808,10 @@
     "price": "16,89 €",
     "img": "https://m.media-amazon.com/images/I/91bh-u+yxGL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0CXDYCKVS?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1260",
     "console": "Switch",
     "label": {
       "en": "Switch: Teenage Mutant Ninja Turtles: Mutantes d...",
@@ -870,7 +840,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1261",
     "console": "Switch",
     "label": {
       "en": "Switch: Teenage Mutant Ninja Turtles: Mutantes d...",
@@ -899,7 +868,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1262",
     "console": "Switch",
     "label": {
       "en": "Switch: Teenage Mutant Ninja Turtles: Mutants Un...",
@@ -928,7 +896,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1263",
     "console": "Switch",
     "label": {
       "en": "Switch: JUEGO NINTENDO SWITCH MARIO KART 8 DELUX...",
@@ -957,7 +924,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1264",
     "console": "Switch",
     "label": {
       "en": "Switch: Mario + Rabbids Kingdom Battle Mario + R...",
@@ -986,7 +952,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1265",
     "console": "Switch",
     "label": {
       "en": "Switch: EA SPORTS FC 25 Standard Edition Switch ...",
@@ -1015,7 +980,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1266",
     "console": "Switch",
     "label": {
       "en": "Switch: EA SPORTS FC 25 Standard Edition PS4 | V...",
@@ -1044,7 +1008,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1267",
     "console": "Switch",
     "label": {
       "en": "Switch: EA SPORTS FC 25 Standard Edition PS5 | V...",
@@ -1073,7 +1036,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1268",
     "console": "Switch",
     "label": {
       "en": "Switch: EA SPORTS FC 25 Standard Edition XBOX Se...",
@@ -1102,7 +1064,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1269",
     "console": "Switch",
     "label": {
       "en": "Switch: Minecraft: Nintendo Switch Edition, El e...",
@@ -1131,7 +1092,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1270",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch - Consola color Azul Neó...",
@@ -1160,7 +1120,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1271",
     "console": "Switch",
     "label": {
       "en": "Switch: Hollow Knight...",
@@ -1189,7 +1148,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1272",
     "console": "Switch",
     "label": {
       "en": "Switch: Hollow Knight...",
@@ -1218,7 +1176,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1273",
     "console": "Switch",
     "label": {
       "en": "Switch: Adaptador USB C a HDMI para NS Switch/OL...",
@@ -1247,7 +1204,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1274",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Consola Switch - Color Azul Neó...",
@@ -1276,7 +1232,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1275",
     "console": "Switch",
     "label": {
       "en": "Switch: POPPY PLAYTIME TRIPLE PACK - NINTENDO SW...",
@@ -1301,11 +1256,10 @@
     "price": "38,15 €",
     "img": "https://m.media-amazon.com/images/I/71R010yUWaL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0DN6G6FJP?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1276",
     "console": "Switch",
     "label": {
       "en": "Switch: MYSTILUCK Mandos Inalámbrico Pro para Sw...",
@@ -1334,7 +1288,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1277",
     "console": "Switch",
     "label": {
       "en": "Switch: MYSTILUCK Mandos Inalámbrico Pro para Sw...",
@@ -1363,7 +1316,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1278",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch rojo/azul neón 32 GB Pac...",
@@ -1392,7 +1344,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1279",
     "console": "Switch",
     "label": {
       "en": "Switch: Just Dance 2026 (Código de descarga) (Sw...",
@@ -1417,11 +1368,10 @@
     "price": "29,90 €",
     "img": "https://m.media-amazon.com/images/I/81su0WucEcL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0FKNQX141?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1280",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -1446,11 +1396,10 @@
     "price": "323,99 €",
     "img": "https://m.media-amazon.com/images/I/71O4rtiSpqL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B098BYN3X3?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1281",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Consola Switch - Color Azul Neó...",
@@ -1479,7 +1428,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1282",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2...",
@@ -1504,11 +1452,10 @@
     "price": "457,00 €",
     "img": "https://m.media-amazon.com/images/I/717JrHodikL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0F2J4SYJ2?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1283",
     "console": "Switch",
     "label": {
       "en": "Switch: Tomodachi Life - Switch...",
@@ -1533,11 +1480,10 @@
     "price": "54,99 €",
     "img": "https://m.media-amazon.com/images/I/81qadafBqCL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GLHNN1NK?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1284",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Party Jamboree - Nintendo Sw...",
@@ -1566,7 +1512,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1285",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Party Jamboree - Nintendo Sw...",
@@ -1591,11 +1536,10 @@
     "price": "69,90 €",
     "img": "https://m.media-amazon.com/images/I/81OZ6E7IAqL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0F2N6F62D?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1286",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Odyssey...",
@@ -1624,7 +1568,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1287",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Odyssey | Switch Download Co...",
@@ -1653,7 +1596,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1288",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokémon Pokopia - Switch 2...",
@@ -1678,11 +1620,10 @@
     "price": "66,99 €",
     "img": "https://m.media-amazon.com/images/I/81ms9g5nWYL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0G71JQD6H?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1289",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Galaxy + Super Mario Galaxy ...",
@@ -1711,7 +1652,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1290",
     "console": "Switch",
     "label": {
       "en": "Switch: Leyendas Pokémon Z‑A - Switch 1...",
@@ -1740,7 +1680,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1291",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokemon Legends: Z-A: Nintendo Switch 2 ...",
@@ -1769,7 +1708,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1292",
     "console": "Switch",
     "label": {
       "en": "Switch: Donkey Kong Country Returns HD - Switch...",
@@ -1798,7 +1736,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1293",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Consola Rojo Neón/Azul n...",
@@ -1827,7 +1764,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1294",
     "console": "Switch",
     "label": {
       "en": "Switch: NK Mando Switch Inalámbrico - Switch/OLE...",
@@ -1856,7 +1792,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1295",
     "console": "Switch",
     "label": {
       "en": "Switch: NK Controlador de interruptor inalámbric...",
@@ -1885,7 +1820,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1296",
     "console": "Switch",
     "label": {
       "en": "Switch: NK Mando Switch Inalámbrico - Switch/OLE...",
@@ -1914,7 +1848,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1297",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite - Consola Azul Turq...",
@@ -1943,7 +1876,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1298",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Edición L...",
@@ -1972,7 +1904,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1299",
     "console": "Switch",
     "label": {
       "en": "Switch: Stray - NINTENDO SWITCH...",
@@ -1997,11 +1928,10 @@
     "price": "31,90 €",
     "img": "https://m.media-amazon.com/images/I/61n135XcEcL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0DHH7X49B?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1300",
     "console": "Switch",
     "label": {
       "en": "Switch: OIVO - Funda para Nintendo Switch & Swit...",
@@ -2030,7 +1960,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1301",
     "console": "Switch",
     "label": {
       "en": "Switch: Talking Flower...",
@@ -2059,36 +1988,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1302",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "es": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "fr": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "it": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "pt": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "de": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "ja": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "ko": "Switch: SANDISK Tarjeta microSD con licencia ofi..."
-    },
-    "desc": {
-      "es": "SANDISK Tarjeta microSD con licencia oficial para ...\n44,90 €",
-      "en": "Get SANDISK Tarjeta microSD con licencia oficial para  on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez SANDISK Tarjeta microSD con licencia oficial para  sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni SANDISK Tarjeta microSD con licencia oficial para  su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha SANDISK Tarjeta microSD con licencia oficial para  na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich SANDISK Tarjeta microSD con licencia oficial para  bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでSANDISK Tarjeta microSD con licencia oficial para を最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 SANDISK Tarjeta microSD con licencia oficial para 을(를) 구매하세요."
-    },
-    "price": "44,90 €",
-    "img": "https://m.media-amazon.com/images/I/61KakjMq2ZL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07QD6R5L7?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1303",
     "console": "Switch",
     "label": {
       "en": "Switch: Animal Crossing: New Horizons (Nintendo ...",
@@ -2113,11 +2012,10 @@
     "price": "45,99 €",
     "img": "https://m.media-amazon.com/images/I/71sT6IkxThL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07HCVN3D1?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1304",
     "console": "Switch",
     "label": {
       "en": "Switch: Animal Crossing: New Horizons Estándar |...",
@@ -2142,11 +2040,10 @@
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/81ceJTwaeCL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B084571B4P?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1305",
     "console": "Switch",
     "label": {
       "en": "Switch: Donkey Kong Bananza- Switch 2...",
@@ -2175,7 +2072,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1306",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 Console...",
@@ -2200,11 +2096,10 @@
     "price": "490,00 €",
     "img": "https://m.media-amazon.com/images/I/714-Fh3ngmL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0F3GWXLTS?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1307",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Joy-Con-Controller, link...",
@@ -2233,7 +2128,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1308",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (OLED model) with White ...",
@@ -2258,11 +2152,10 @@
     "price": "334,08 €",
     "img": "https://m.media-amazon.com/images/I/61nqNujSF2L._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B098RKWHHZ?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1309",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Smash Bros. Ultimate (Variación)(E...",
@@ -2287,11 +2180,10 @@
     "price": "58,99 €",
     "img": "https://m.media-amazon.com/images/I/61usfGu+5JL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B07BDYT58L?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1310",
     "console": "Switch",
     "label": {
       "en": "Switch: Sonic X Shadow Generations...",
@@ -2320,7 +2212,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1311",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (OLED) console de jeux p...",
@@ -2345,11 +2236,10 @@
     "price": "399,90 €",
     "img": "https://m.media-amazon.com/images/I/71m0aFDqciL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B098TVDYZ3?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1312",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo - Adaptador De Corriente Switch...",
@@ -2374,11 +2264,10 @@
     "price": "27,99 €",
     "img": "https://m.media-amazon.com/images/I/61gn0qKDOBL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B01N10NX3M?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1313",
     "console": "Switch",
     "label": {
       "en": "Switch: Luigi's Mansion 3, Edición: Estándar - N...",
@@ -2407,7 +2296,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1314",
     "console": "Switch",
     "label": {
       "en": "Switch: Luigi's Mansion 3, Edición: Estándar - N...",
@@ -2436,7 +2324,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1315",
     "console": "Switch",
     "label": {
       "en": "Switch: Pack multijuegos de Luigi's Mansion 3 | ...",
@@ -2465,65 +2352,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1316",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "es": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "fr": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "it": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "pt": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "de": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "ja": "Switch: medicube AGE-R Booster Pro Pink | Dispos...",
-      "ko": "Switch: medicube AGE-R Booster Pro Pink | Dispos..."
-    },
-    "desc": {
-      "es": "medicube AGE-R Booster Pro Pink | Dispositivo de B...\n164,90 €",
-      "en": "Get medicube AGE-R Booster Pro Pink | Dispositivo de B on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez medicube AGE-R Booster Pro Pink | Dispositivo de B sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni medicube AGE-R Booster Pro Pink | Dispositivo de B su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha medicube AGE-R Booster Pro Pink | Dispositivo de B na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich medicube AGE-R Booster Pro Pink | Dispositivo de B bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、Amazonでmedicube AGE-R Booster Pro Pink | Dispositivo de Bを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 medicube AGE-R Booster Pro Pink | Dispositivo de B을(를) 구매하세요."
-    },
-    "price": "164,90 €",
-    "img": "https://m.media-amazon.com/images/I/61kpEoE3+bL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DHGP8TZ2?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1317",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "es": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "fr": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "it": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "pt": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "de": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "ja": "Switch: medicube AGE-R Booster Pro | Dispositivo...",
-      "ko": "Switch: medicube AGE-R Booster Pro | Dispositivo..."
-    },
-    "desc": {
-      "es": "medicube AGE-R Booster Pro | Dispositivo de Bellez...\n157,99 €",
-      "en": "Get medicube AGE-R Booster Pro | Dispositivo de Bellez on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez medicube AGE-R Booster Pro | Dispositivo de Bellez sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni medicube AGE-R Booster Pro | Dispositivo de Bellez su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha medicube AGE-R Booster Pro | Dispositivo de Bellez na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich medicube AGE-R Booster Pro | Dispositivo de Bellez bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、Amazonでmedicube AGE-R Booster Pro | Dispositivo de Bellezを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 medicube AGE-R Booster Pro | Dispositivo de Bellez을(를) 구매하세요."
-    },
-    "price": "157,99 €",
-    "img": "https://m.media-amazon.com/images/I/71cKBPGmeWL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0CWK6YQ7V?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1318",
     "console": "Switch",
     "label": {
       "en": "Switch: Hot Wheels Monster Trucks: Stunt Mayhem™...",
@@ -2552,7 +2380,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1319",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite Hyrule Edition + 12...",
@@ -2577,11 +2404,10 @@
     "price": "299,90 €",
     "img": "https://m.media-amazon.com/images/I/51uSBSWgaYL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0D7J3767P?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1320",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite, coral...",
@@ -2610,7 +2436,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1321",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite...",
@@ -2635,11 +2460,10 @@
     "price": "241,41 €",
     "img": "https://m.media-amazon.com/images/I/71SAila1MXL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B092JPSVCS?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1322",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite...",
@@ -2668,7 +2492,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1323",
     "console": "Switch",
     "label": {
       "en": "Switch: BYE SWEET CAROLE - NINTENDO SWITCH...",
@@ -2697,7 +2520,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1324",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite Turquesa + Animal C...",
@@ -2726,7 +2548,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1325",
     "console": "Switch",
     "label": {
       "en": "Switch: ETPARK 2 PCS Mando Switch Inalámbrico, M...",
@@ -2755,7 +2576,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1326",
     "console": "Switch",
     "label": {
       "en": "Switch: Splatoon Raiders...",
@@ -2780,11 +2600,10 @@
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/81ZSbL+5UiL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GY5GY45X?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1327",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch - Assassin's Creed The E...",
@@ -2813,7 +2632,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1328",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Bros. Wonder...",
@@ -2838,11 +2656,10 @@
     "price": "47,90 €",
     "img": "https://m.media-amazon.com/images/I/712Kcf7kHVL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0C8YWGST8?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1329",
     "console": "Switch",
     "label": {
       "en": "Switch: Yoshi and the mysterious book...",
@@ -2871,7 +2688,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1330",
     "console": "Switch",
     "label": {
       "en": "Switch: Base de Carga para Switch,[4 en 1] Diyif...",
@@ -2900,7 +2716,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1331",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Lite...",
@@ -2929,7 +2744,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1332",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -2958,7 +2772,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1333",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -2987,7 +2800,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1334",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -3016,7 +2828,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1335",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -3045,7 +2856,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1336",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -3074,7 +2884,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1337",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola N...",
@@ -3103,7 +2912,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1338",
     "console": "Switch",
     "label": {
       "en": "Switch: OFFCUP Agarre para Juegos, Soporte de Ma...",
@@ -3132,7 +2940,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1339",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch - Mando Pro Controller, ...",
@@ -3161,7 +2968,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1340",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 Pro Controller...",
@@ -3190,7 +2996,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1341",
     "console": "Switch",
     "label": {
       "en": "Switch: Rhythm Paradise Groove...",
@@ -3215,11 +3020,10 @@
     "price": "39,90 €",
     "img": "https://m.media-amazon.com/images/I/81ll2ZcI4lL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GYSDMY8H?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1342",
     "console": "Switch",
     "label": {
       "en": "Switch: The Disney Afternoon Collection - Switch...",
@@ -3248,7 +3052,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1343",
     "console": "Switch",
     "label": {
       "en": "Switch: The Disney Afternoon Collection - Switch...",
@@ -3277,7 +3080,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1344",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Sports...",
@@ -3302,11 +3104,10 @@
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/71r+uY1RRKL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B09S5S9L94?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1345",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Sports - Standard | Nint...",
@@ -3331,11 +3132,10 @@
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/71YVxGjW1rL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B09YYNZJYW?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1346",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -3364,7 +3164,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1347",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Blanca + ...",
@@ -3389,11 +3188,10 @@
     "price": "408,89 €",
     "img": "https://m.media-amazon.com/images/I/61TNcFMJ+9L._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0B1DTCC1M?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1348",
     "console": "Switch",
     "label": {
       "en": "Switch: Mario Kart World- Nintendo Switch 2...",
@@ -3422,7 +3220,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1349",
     "console": "Switch",
     "label": {
       "en": "Switch: ivoler 3 Piezas Protector Pantalla para ...",
@@ -3451,7 +3248,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1350",
     "console": "Switch",
     "label": {
       "en": "Switch: DRAGON QUEST XI S: Ecos de un pasado per...",
@@ -3480,7 +3276,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1351",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Joy-Con Wheel (Volante)...",
@@ -3505,11 +3300,10 @@
     "price": "13,99 €",
     "img": "https://m.media-amazon.com/images/I/61hSpg-bYRL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B01N7RIIR2?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1352",
     "console": "Switch",
     "label": {
       "en": "Switch: Animal Crossing New Horizons - Nintendo ...",
@@ -3534,11 +3328,10 @@
     "price": "56,90 €",
     "img": "https://m.media-amazon.com/images/I/81-mOHTHOxL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0G1BDSJ52?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1353",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Mario Kart 8 Deluxe Nintendo Sw...",
@@ -3567,7 +3360,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1354",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Sports Standard Néerland...",
@@ -3592,11 +3384,10 @@
     "price": "42,99 €",
     "img": "https://m.media-amazon.com/images/I/61QgCL-wURL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09SBYHZJB?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1355",
     "console": "Switch",
     "label": {
       "en": "Switch: Captain Toad: Treasure Tracker...",
@@ -3621,11 +3412,10 @@
     "price": "36,99 €",
     "img": "https://m.media-amazon.com/images/I/815zIDdpGML._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07BF1SNJR?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1356",
     "console": "Switch",
     "label": {
       "en": "Switch: The Legend of Zelda: Tears of the Kingdo...",
@@ -3654,7 +3444,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1357",
     "console": "Switch",
     "label": {
       "en": "Switch: Zelda Tears of the Kingdom - Nintendo Sw...",
@@ -3683,7 +3472,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1358",
     "console": "Switch",
     "label": {
       "en": "Switch: Orzly PACK ESENCIAL de Accesorios para N...",
@@ -3712,7 +3500,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1359",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Bros. Wonder Nintendo Switch...",
@@ -3741,7 +3528,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1360",
     "console": "Switch",
     "label": {
       "en": "Switch: New Super Mario Bros. U Deluxe...",
@@ -3770,7 +3556,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1361",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 - Pro Controller Resid...",
@@ -3799,7 +3584,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1362",
     "console": "Switch",
     "label": {
       "en": "Switch: Kirby y la Tierra Olvidada...",
@@ -3828,7 +3612,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1363",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Kirby and the Forgotten Land Sw...",
@@ -3857,7 +3640,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1364",
     "console": "Switch",
     "label": {
       "en": "Switch: Culdcept The First Saturn Tribute NS...",
@@ -3886,7 +3668,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1365",
     "console": "Switch",
     "label": {
       "en": "Switch: NEW'C 2 Piezas, Protector Pantalla para ...",
@@ -3915,7 +3696,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1366",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Neon + Ring Fit...",
@@ -3944,7 +3724,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1367",
     "console": "Switch",
     "label": {
       "en": "Switch: Hollow Knight: Silksong - Switch 2...",
@@ -3969,11 +3748,10 @@
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71VIZBr9DjL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0H33PMSB2?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1368",
     "console": "Switch",
     "label": {
       "en": "Switch: Tomodachi Life: Una vida de ensueño Stan...",
@@ -3998,11 +3776,10 @@
     "price": "59,99 €",
     "img": "https://m.media-amazon.com/images/I/7198VrnH7rL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GWKDHTG8?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1369",
     "console": "Switch",
     "label": {
       "en": "Switch: Princess Peach Showtime!...",
@@ -4031,7 +3808,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1370",
     "console": "Switch",
     "label": {
       "en": "Switch: Princess Peach: Showtime! Standard | Nin...",
@@ -4060,7 +3836,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1371",
     "console": "Switch",
     "label": {
       "en": "Switch: Cargador para Nintendo Switch, 45W Adapt...",
@@ -4089,7 +3864,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1372",
     "console": "Switch",
     "label": {
       "en": "Switch: Kirby Air Riders - Switch 2...",
@@ -4118,7 +3892,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1373",
     "console": "Switch",
     "label": {
       "en": "Switch: Videojuego para Switch Ubisoft Mario+Rab...",
@@ -4147,7 +3920,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1374",
     "console": "Switch",
     "label": {
       "en": "Switch: Tomodachi Life: Viviendo el sueño...",
@@ -4172,11 +3944,10 @@
     "price": "26,60 €",
     "img": "https://m.media-amazon.com/images/I/81r3vvmS0IL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GKPV34CK?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1375",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -4205,7 +3976,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1376",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Leyendas Pokemon: Arceus...",
@@ -4230,11 +4000,10 @@
     "price": "49,90 €",
     "img": "https://m.media-amazon.com/images/I/51IY5qMo-vL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B091VTT67M?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1377",
     "console": "Switch",
     "label": {
       "en": "Switch: Leyendas Pokémon: Arceus Standard | Nint...",
@@ -4263,7 +4032,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1378",
     "console": "Switch",
     "label": {
       "en": "Switch: JETech Protector Pantalla Auto Alineació...",
@@ -4292,7 +4060,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1379",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Online - 3 meses | Switc...",
@@ -4317,11 +4084,10 @@
     "price": "7,99 €",
     "img": "https://m.media-amazon.com/images/I/71PtvS43J7L._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07JKRDLD2?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1380",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo eShop Tarjeta de regalo 25€ | C...",
@@ -4350,7 +4116,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1381",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Party (Nintendo Switch)...",
@@ -4379,7 +4144,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1382",
     "console": "Switch",
     "label": {
       "en": "Switch: Protector de pantalla para Nintendo Swit...",
@@ -4408,7 +4172,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1383",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch OLED Mario Red Edition c...",
@@ -4433,11 +4196,10 @@
     "price": "288,13 €",
     "img": "https://m.media-amazon.com/images/I/71rmzSDQOlL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0CH1NNNG5?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno"
   },
   {
-    "id": "1384",
     "console": "Switch",
     "label": {
       "en": "Switch: Sandisk Micro SD Express Card for Ninten...",
@@ -4466,7 +4228,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1385",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo - Dock Set Con Base Switch, Ada...",
@@ -4495,7 +4256,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1386",
     "console": "Switch",
     "label": {
       "en": "Switch: Joy-Con Rosa Amarillo...",
@@ -4520,11 +4280,10 @@
     "price": "72,99 €",
     "img": "https://m.media-amazon.com/images/I/61dCCKDN4dL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0C6YD9S1P?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1387",
     "console": "Switch",
     "label": {
       "en": "Switch: The Rogue Prince of Persia - Switch...",
@@ -4553,7 +4312,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1388",
     "console": "Switch",
     "label": {
       "en": "Switch: The Rogue Prince of Persia - Immortal Ed...",
@@ -4582,7 +4340,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1389",
     "console": "Switch",
     "label": {
       "en": "Switch: The Rogue Prince of Persia - PS5...",
@@ -4611,7 +4368,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1390",
     "console": "Switch",
     "label": {
       "en": "Switch: Dragon is Dead Guernian Edition - Ninten...",
@@ -4640,7 +4396,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1391",
     "console": "Switch",
     "label": {
       "en": "Switch: Indiana Jones y el Gran Círculo – Ninten...",
@@ -4669,7 +4424,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1392",
     "console": "Switch",
     "label": {
       "en": "Switch: Meridiem Games - Ori - The Collection...",
@@ -4698,7 +4452,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1393",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Iberica SL Joy-Con 2 (morado cl...",
@@ -4727,7 +4480,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1394",
     "console": "Switch",
     "label": {
       "en": "Switch: Endless Ocean Luminous, Nintendo Switch-...",
@@ -4756,7 +4508,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1395",
     "console": "Switch",
     "label": {
       "en": "Switch: Elden Ring Tarnished Edition...",
@@ -4785,7 +4536,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1396",
     "console": "Switch",
     "label": {
       "en": "Switch: Rayman Legends Retold - [Nintendo Switch...",
@@ -4810,11 +4560,10 @@
     "price": "41,99 €",
     "img": "https://m.media-amazon.com/images/I/81Kg6S7eXfL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0H3P88ZNY?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1397",
     "console": "Switch",
     "label": {
       "en": "Switch: Kit de Accesorios 18 en 1para Nintendo S...",
@@ -4839,40 +4588,10 @@
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81PtwuehEEL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07TWC17Q8?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1398",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "es": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "fr": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "it": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "pt": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "de": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "ja": "Switch: SANDISK Tarjeta microSD con licencia ofi...",
-      "ko": "Switch: SANDISK Tarjeta microSD con licencia ofi..."
-    },
-    "desc": {
-      "es": "SANDISK Tarjeta microSD con licencia oficial para ...\n85,95 €",
-      "en": "Get SANDISK Tarjeta microSD con licencia oficial para  on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez SANDISK Tarjeta microSD con licencia oficial para  sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni SANDISK Tarjeta microSD con licencia oficial para  su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha SANDISK Tarjeta microSD con licencia oficial para  na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich SANDISK Tarjeta microSD con licencia oficial para  bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでSANDISK Tarjeta microSD con licencia oficial para を最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 SANDISK Tarjeta microSD con licencia oficial para 을(를) 구매하세요."
-    },
-    "price": "85,95 €",
-    "img": "https://m.media-amazon.com/images/I/714hwkJBliL._AC_SX355_.jpg",
-    "url": "https://www.amazon.es/dp/B08DG7FB61?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1399",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -4901,7 +4620,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1400",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -4930,7 +4648,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1401",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch rojo/azul neón 32 GB Pac...",
@@ -4959,7 +4676,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1402",
     "console": "Switch",
     "label": {
       "en": "Switch: Samsung Micro SD Express Card for Ninten...",
@@ -4988,7 +4704,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1403",
     "console": "Switch",
     "label": {
       "en": "Switch: Marvel MaXimum Collection NS...",
@@ -5013,11 +4728,10 @@
     "price": "37,99 €",
     "img": "https://m.media-amazon.com/images/I/61LiNImDQPL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GTVZQVJH?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1404",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Protectora para Nintendo...",
@@ -5046,7 +4760,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1405",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Protectora para Nintendo...",
@@ -5075,7 +4788,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1406",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Dockable para Nintendo S...",
@@ -5104,7 +4816,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1407",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Protectora para Nintendo...",
@@ -5133,7 +4844,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1408",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Protectora para Nintendo...",
@@ -5162,7 +4872,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1409",
     "console": "Switch",
     "label": {
       "en": "Switch: PlayVital Funda Protectora para Nintendo...",
@@ -5191,7 +4900,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1410",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Azul Neón...",
@@ -5220,7 +4928,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1411",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Bros. Wonder /Switch...",
@@ -5249,7 +4956,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1412",
     "console": "Switch",
     "label": {
       "en": "Switch: Hollow Knight - Switch 2...",
@@ -5278,7 +4984,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1413",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Tomodachi Life: Wo Tr?um...",
@@ -5303,11 +5008,10 @@
     "price": "74,90 €",
     "img": "https://m.media-amazon.com/images/I/61PBTDDGMjL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GKHLX13B?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1414",
     "console": "Switch",
     "label": {
       "en": "Switch: ivoler 4 Piezas Protector Pantalla para ...",
@@ -5336,7 +5040,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1415",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Joy-Con (Pair) **Neon Pu...",
@@ -5361,11 +5064,10 @@
     "price": "109,99 €",
     "img": "https://m.media-amazon.com/images/I/61yr68ftwqL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0B8MW46BZ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1416",
     "console": "Switch",
     "label": {
       "en": "Switch: daydayup Funda Compatible con Nintendo S...",
@@ -5394,7 +5096,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1417",
     "console": "Switch",
     "label": {
       "en": "Switch: Luigi's Mansion 2 HD � Juego para Ninten...",
@@ -5423,7 +5124,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1418",
     "console": "Switch",
     "label": {
       "en": "Switch: Looney Tunes: Wacky World of Sports - NI...",
@@ -5448,98 +5148,10 @@
     "price": "19,98 €",
     "img": "https://m.media-amazon.com/images/I/81h5C1uXmdL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0D7HZPLFW?tag=kelonio-21",
-    "subcategory": "Consolas",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1419",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "es": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "fr": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "it": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "pt": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "de": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ja": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ko": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys..."
-    },
-    "desc": {
-      "es": "Wigearss 2 Piezas de Repuesto de 3D Joystick Analó...\n9,99 €",
-      "en": "Get Wigearss 2 Piezas de Repuesto de 3D Joystick Analó on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Wigearss 2 Piezas de Repuesto de 3D Joystick Analó sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Wigearss 2 Piezas de Repuesto de 3D Joystick Analó su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Wigearss 2 Piezas de Repuesto de 3D Joystick Analó na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Wigearss 2 Piezas de Repuesto de 3D Joystick Analó bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでWigearss 2 Piezas de Repuesto de 3D Joystick Analóを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Wigearss 2 Piezas de Repuesto de 3D Joystick Analó을(를) 구매하세요."
-    },
-    "price": "9,99 €",
-    "img": "https://m.media-amazon.com/images/I/51DY9B79IWL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0B1V4MK8T?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1420",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "es": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "fr": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "it": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "pt": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "de": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ja": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ko": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys..."
-    },
-    "desc": {
-      "es": "Wigearss 2 Piezas de Repuesto de 3D Joystick Analó...\n12,00 €",
-      "en": "Get Wigearss 2 Piezas de Repuesto de 3D Joystick Analó on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Wigearss 2 Piezas de Repuesto de 3D Joystick Analó sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Wigearss 2 Piezas de Repuesto de 3D Joystick Analó su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Wigearss 2 Piezas de Repuesto de 3D Joystick Analó na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Wigearss 2 Piezas de Repuesto de 3D Joystick Analó bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでWigearss 2 Piezas de Repuesto de 3D Joystick Analóを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Wigearss 2 Piezas de Repuesto de 3D Joystick Analó을(를) 구매하세요."
-    },
-    "price": "12,00 €",
-    "img": "https://m.media-amazon.com/images/I/611YJ620wnL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BSL6PKLC?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1421",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "es": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "fr": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "it": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "pt": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "de": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ja": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys...",
-      "ko": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joys..."
-    },
-    "desc": {
-      "es": "Wigearss 2 Piezas de Repuesto de 3D Joystick Analó...\n11,90 €",
-      "en": "Get Wigearss 2 Piezas de Repuesto de 3D Joystick Analó on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Wigearss 2 Piezas de Repuesto de 3D Joystick Analó sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Wigearss 2 Piezas de Repuesto de 3D Joystick Analó su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Wigearss 2 Piezas de Repuesto de 3D Joystick Analó na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Wigearss 2 Piezas de Repuesto de 3D Joystick Analó bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでWigearss 2 Piezas de Repuesto de 3D Joystick Analóを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Wigearss 2 Piezas de Repuesto de 3D Joystick Analó을(를) 구매하세요."
-    },
-    "price": "11,90 €",
-    "img": "https://m.media-amazon.com/images/I/61-OcDUfVRL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0BRQ7RFW9?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1422",
     "console": "Switch",
     "label": {
       "en": "Switch: Belkin Gaming Funda para Nintendo Switch...",
@@ -5568,7 +5180,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1423",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Joy-Con Controller Set V...",
@@ -5597,7 +5208,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1424",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Joy-Con (set de dos) Rosa...",
@@ -5622,40 +5232,10 @@
     "price": "74,99 €",
     "img": "https://m.media-amazon.com/images/I/61GzzRApUQL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0CT3WCTCH?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1425",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "es": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "fr": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "it": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "pt": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "de": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "ja": "Switch: Nintendo Switch Game-New Super Mario Bro...",
-      "ko": "Switch: Nintendo Switch Game-New Super Mario Bro..."
-    },
-    "desc": {
-      "es": "Nintendo Switch Game-New Super Mario Bros. U Delux...\n64,06 €",
-      "en": "Get Nintendo Switch Game-New Super Mario Bros. U Delux on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Nintendo Switch Game-New Super Mario Bros. U Delux sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Nintendo Switch Game-New Super Mario Bros. U Delux su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Nintendo Switch Game-New Super Mario Bros. U Delux na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Nintendo Switch Game-New Super Mario Bros. U Delux bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでNintendo Switch Game-New Super Mario Bros. U Deluxを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Nintendo Switch Game-New Super Mario Bros. U Delux을(를) 구매하세요."
-    },
-    "price": "64,06 €",
-    "img": "https://m.media-amazon.com/images/I/813JPZr+pCL._AC_SY445_.jpg",
-    "url": "https://www.amazon.es/dp/B07HCZ7LPW?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1426",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo eShop Tarjeta de regalo 15€ | C...",
@@ -5680,11 +5260,10 @@
     "price": "15,00 €",
     "img": "https://m.media-amazon.com/images/I/61Ds2tygNiL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07VJRG5VW?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1427",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Mario Kart 8 Deluxe Nintendo Sw...",
@@ -5713,7 +5292,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1428",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Online + Paquete de expa...",
@@ -5738,11 +5316,10 @@
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/713LohKsbVL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0CFQ8ZB43?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1429",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo eShop Tarjeta de regalo 50€ | C...",
@@ -5767,11 +5344,10 @@
     "price": "50,00 €",
     "img": "https://m.media-amazon.com/images/I/61Wm9CindBL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07VHXPS9Q?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1430",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Super Mario Galaxy + Super Mari...",
@@ -5800,7 +5376,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1431",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Online - 12 meses | Swit...",
@@ -5825,11 +5400,10 @@
     "price": "19,99 €",
     "img": "https://m.media-amazon.com/images/I/41yNzz0UKDL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07JKZKV32?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1432",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokémon: Let's Go, Pikachu!...",
@@ -5858,7 +5432,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1433",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Hollow Knight...",
@@ -5887,7 +5460,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1434",
     "console": "Switch",
     "label": {
       "en": "Switch: The Legend of Zelda Links Awakening Rema...",
@@ -5916,7 +5488,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1435",
     "console": "Switch",
     "label": {
       "en": "Switch: The Legend of Zelda: Link’s Awakening | ...",
@@ -5941,11 +5512,10 @@
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71WaIh4GtYL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07V4S2W94?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1436",
     "console": "Switch",
     "label": {
       "en": "Switch: Zelda Link's Awakening Remake - Edición ...",
@@ -5974,7 +5544,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1437",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokémon: Escudo...",
@@ -6003,7 +5572,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1438",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokémon Escudo [Switch - Download Code]...",
@@ -6032,7 +5600,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1439",
     "console": "Switch",
     "label": {
       "en": "Switch: Adaptador de Corriente USB de Nintendo...",
@@ -6057,11 +5624,10 @@
     "price": "13,99 €",
     "img": "https://m.media-amazon.com/images/I/51vuDZhNfHL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B073DKR74T?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1440",
     "console": "Switch",
     "label": {
       "en": "Switch: MySims: Colección Sofá y Mantita Switch ...",
@@ -6086,11 +5652,10 @@
     "price": "23,99 €",
     "img": "https://m.media-amazon.com/images/I/71c8OaXidfL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0DFD3S5LM?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1441",
     "console": "Switch",
     "label": {
       "en": "Switch: MySims: Colección Sofá y Mantita | Xbox ...",
@@ -6119,7 +5684,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1442",
     "console": "Switch",
     "label": {
       "en": "Switch: MySims: Colección Sofá y Mantita PS5 | V...",
@@ -6148,7 +5712,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1443",
     "console": "Switch",
     "label": {
       "en": "Switch: MySims Colección Sofá y Mantita PCWin | ...",
@@ -6177,7 +5740,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1444",
     "console": "Switch",
     "label": {
       "en": "Switch: MySims: Colección Sofá y Mantita Xbox Se...",
@@ -6206,7 +5768,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1445",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Galaxy + Super Mario Galaxy ...",
@@ -6231,11 +5792,10 @@
     "price": "69,99 €",
     "img": "https://m.media-amazon.com/images/I/81c8j42z1vL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0FTJXTGWD?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1446",
     "console": "Switch",
     "label": {
       "en": "Switch: Mando para Switch, Mando Switch Inalámbr...",
@@ -6264,7 +5824,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1447",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Touch Pen, Lápiz Táctil,...",
@@ -6289,11 +5848,10 @@
     "price": "45,91 €",
     "img": "https://m.media-amazon.com/images/I/41+zoydVIfL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07YL4KGWZ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1448",
     "console": "Switch",
     "label": {
       "en": "Switch: Dragon Quest: Treasures (Switch)...",
@@ -6322,7 +5880,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1449",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Splatoon 3 Standard Anglais Nin...",
@@ -6347,11 +5904,10 @@
     "price": "56,99 €",
     "img": "https://m.media-amazon.com/images/I/81dRB41yHrL._SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09SMJG53B?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1450",
     "console": "Switch",
     "label": {
       "en": "Switch: Dementium The Ward NS...",
@@ -6380,7 +5936,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1451",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Mario Strikers: Battle League S...",
@@ -6405,11 +5960,10 @@
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/81In49B6heL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B09S77J9TX?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1452",
     "console": "Switch",
     "label": {
       "en": "Switch: Captain Tsubasa 2: World Fighters...",
@@ -6438,7 +5992,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1453",
     "console": "Switch",
     "label": {
       "en": "Switch: Five Nights at Freddy'S. Core Collection...",
@@ -6467,7 +6020,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1454",
     "console": "Switch",
     "label": {
       "en": "Switch: Five Nights at Freddy'S. Core Collection...",
@@ -6496,7 +6048,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1455",
     "console": "Switch",
     "label": {
       "en": "Switch: Five Nights at Freddy's: Core Collection...",
@@ -6525,7 +6076,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1456",
     "console": "Switch",
     "label": {
       "en": "Switch: Tokluck 15 en 1 Accesorios Switch Sports...",
@@ -6550,40 +6100,10 @@
     "price": "28,89 €",
     "img": "https://m.media-amazon.com/images/I/81oPfXbtB-L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0C6F6RYH4?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1457",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "es": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "fr": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "it": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "pt": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "de": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "ja": "Switch: SanDisk Tarjeta microSD Express de 512 G...",
-      "ko": "Switch: SanDisk Tarjeta microSD Express de 512 G..."
-    },
-    "desc": {
-      "es": "SanDisk Tarjeta microSD Express de 512 GB, hasta 8...\n141,99 €",
-      "en": "Get SanDisk Tarjeta microSD Express de 512 GB, hasta 8 on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez SanDisk Tarjeta microSD Express de 512 GB, hasta 8 sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni SanDisk Tarjeta microSD Express de 512 GB, hasta 8 su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha SanDisk Tarjeta microSD Express de 512 GB, hasta 8 na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich SanDisk Tarjeta microSD Express de 512 GB, hasta 8 bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでSanDisk Tarjeta microSD Express de 512 GB, hasta 8を最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 SanDisk Tarjeta microSD Express de 512 GB, hasta 8을(를) 구매하세요."
-    },
-    "price": "141,99 €",
-    "img": "https://m.media-amazon.com/images/I/715+gEiTloL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0DTQ35NH6?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1458",
     "console": "Switch",
     "label": {
       "en": "Switch: Wobbly Life Switch IES...",
@@ -6612,7 +6132,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1459",
     "console": "Switch",
     "label": {
       "en": "Switch: Pokémon Legends Z-A Nintendo Switch...",
@@ -6641,7 +6160,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1460",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Super Mario Bros. Wonder Básico...",
@@ -6670,7 +6188,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1461",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario 3D All Stars Nintendo Switch...",
@@ -6699,7 +6216,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1462",
     "console": "Switch",
     "label": {
       "en": "Switch: HEYSTOP Funda para Nintendo Switch 2, Ki...",
@@ -6728,36 +6244,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1463",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "es": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "fr": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "it": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "pt": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "de": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "ja": "Switch: Logitech G Astro A50 X Lightspeed Auricu...",
-      "ko": "Switch: Logitech G Astro A50 X Lightspeed Auricu..."
-    },
-    "desc": {
-      "es": "Logitech G Astro A50 X Lightspeed Auriculares inal...\n329,00 €",
-      "en": "Get Logitech G Astro A50 X Lightspeed Auriculares inal on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Logitech G Astro A50 X Lightspeed Auriculares inal sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Logitech G Astro A50 X Lightspeed Auriculares inal su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Logitech G Astro A50 X Lightspeed Auriculares inal na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Logitech G Astro A50 X Lightspeed Auriculares inal bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでLogitech G Astro A50 X Lightspeed Auriculares inalを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Logitech G Astro A50 X Lightspeed Auriculares inal을(를) 구매하세요."
-    },
-    "price": "329,00 €",
-    "img": "https://m.media-amazon.com/images/I/61Va5FKGr4L._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B07W8QKWZ1?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1464",
     "console": "Switch",
     "label": {
       "en": "Switch: Juego EA Sports FC 25 para Nintendo Swit...",
@@ -6786,7 +6272,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1465",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Minecraft : Switch Edition...",
@@ -6815,7 +6300,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1466",
     "console": "Switch",
     "label": {
       "en": "Switch: HORI - Mando Split Pad Pro (Negro) para ...",
@@ -6844,7 +6328,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1467",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Online + Paquete de expa...",
@@ -6869,11 +6352,10 @@
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/711fLo+anAL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0CFQ99JVQ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Tarjeta de Regalo",
     "size": "Ninguno"
   },
   {
-    "id": "1468",
     "console": "Switch",
     "label": {
       "en": "Switch: Leyendas Pokémon: Z-A - [Nintendo Switch...",
@@ -6902,7 +6384,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1469",
     "console": "Switch",
     "label": {
       "en": "Switch: Super Mario Bros. Wonder - Carpeta Switc...",
@@ -6927,11 +6408,10 @@
     "price": "68,57 €",
     "img": "https://m.media-amazon.com/images/I/81g86vuNp1L._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GJZYSQ2C?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1470",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Official Switch - Joy-Con Contr...",
@@ -6960,7 +6440,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1471",
     "console": "Switch",
     "label": {
       "en": "Switch: Switch Dock para Switch/Switch OLED,3 en...",
@@ -6989,7 +6468,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1472",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Super Mario Odyssey [Importació...",
@@ -7014,11 +6492,10 @@
     "price": "59,05 €",
     "img": "https://m.media-amazon.com/images/I/81nHzMe0lrL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B01MUA0D2A?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1473",
     "console": "Switch",
     "label": {
       "en": "Switch: The Legend of Heroes: Trails through Day...",
@@ -7047,7 +6524,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1474",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch Ring Fit Adventure - Bla...",
@@ -7072,11 +6548,10 @@
     "price": "84,89 €",
     "img": "https://m.media-amazon.com/images/I/71u4Heq+EvL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B07XW8BGFQ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1475",
     "console": "Switch",
     "label": {
       "en": "Switch: LEGO Jurassic World - Nintendo Switch [I...",
@@ -7105,7 +6580,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1476",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo New Super Mario Bros. U Deluxe ...",
@@ -7134,7 +6608,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1477",
     "console": "Switch",
     "label": {
       "en": "Switch: Power A Mando inalámbrico Advantage para...",
@@ -7163,7 +6636,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1478",
     "console": "Switch",
     "label": {
       "en": "Switch: Funda transparente, compatible con Ninte...",
@@ -7192,7 +6664,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1479",
     "console": "Switch",
     "label": {
       "en": "Switch: Paper Mario: La Puerta Milenaria...",
@@ -7221,7 +6692,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1480",
     "console": "Switch",
     "label": {
       "en": "Switch: Paper Mario: La puerta milenaria Standar...",
@@ -7250,7 +6720,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1481",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Super Mario 3D World + Bowser’s...",
@@ -7279,7 +6748,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1482",
     "console": "Switch",
     "label": {
       "en": "Switch: Lunar Remastered Collection NS...",
@@ -7308,7 +6776,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1483",
     "console": "Switch",
     "label": {
       "en": "Switch: Ion Fury: Double Shot Edition -Nintendo ...",
@@ -7337,7 +6804,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1484",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo The Legend of Zelda: Breath of ...",
@@ -7362,11 +6828,10 @@
     "price": "61,37 €",
     "img": "https://m.media-amazon.com/images/I/81HORio5LmL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B01N1083WZ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1485",
     "console": "Switch",
     "label": {
       "en": "Switch: The Legend of Zelda: Breath of the Wild ...",
@@ -7395,7 +6860,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1486",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Joy con – Accesorios de Juegos ...",
@@ -7420,11 +6884,10 @@
     "price": "73,00 €",
     "img": "https://m.media-amazon.com/images/I/61dPRWf8OTL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B01N6QJ58Y?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "1487",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Mario Tennis Aces Standard Nint...",
@@ -7449,11 +6912,10 @@
     "price": "55,40 €",
     "img": "https://m.media-amazon.com/images/I/91RqWq40TdL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B07BHGDR4L?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1488",
     "console": "Switch",
     "label": {
       "en": "Switch: Winx Club: The Magic is Back - Nintendo ...",
@@ -7482,7 +6944,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1489",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Mario Party Superstars...",
@@ -7507,11 +6968,10 @@
     "price": "56,95 €",
     "img": "https://m.media-amazon.com/images/I/71Sfo2EGuNL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B097F5D8Y1?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1490",
     "console": "Switch",
     "label": {
       "en": "Switch: Five Nights at Freddy's Security Breach...",
@@ -7536,11 +6996,10 @@
     "price": "34,00 €",
     "img": "https://m.media-amazon.com/images/I/71euwyH0FWL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0C2Z3HKG4?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1491",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Bayonetta Origins: Cereza and t...",
@@ -7569,7 +7028,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1492",
     "console": "Switch",
     "label": {
       "en": "Switch: Hosanwell Funda 13 en 1 para Nintendo Sw...",
@@ -7598,7 +7056,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1493",
     "console": "Switch",
     "label": {
       "en": "Switch: The House in Fata Morgana: Dreams of the...",
@@ -7623,11 +7080,10 @@
     "price": "34,90 €",
     "img": "https://m.media-amazon.com/images/I/614AQmjvm7L._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GWMGDJ24?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1494",
     "console": "Switch",
     "label": {
       "en": "Switch: Pro Controller for Nintendo Switch...",
@@ -7656,7 +7112,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1495",
     "console": "Switch",
     "label": {
       "en": "Switch: HEYSTOP Funda para El Kit de Accesorios ...",
@@ -7685,7 +7140,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1496",
     "console": "Switch",
     "label": {
       "en": "Switch: Mario Strikers Battle League Football...",
@@ -7714,7 +7168,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1497",
     "console": "Switch",
     "label": {
       "en": "Switch: Terminator 2D: NO FATE (Nintendo Switch)...",
@@ -7743,7 +7196,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1498",
     "console": "Switch",
     "label": {
       "en": "Switch: Terminator 2D: NO FATE (PS4)...",
@@ -7768,11 +7220,10 @@
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81u9l4upInL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GSBXLXD3?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1499",
     "console": "Switch",
     "label": {
       "en": "Switch: Terminator 2D: NO FATE (PS5)...",
@@ -7797,11 +7248,10 @@
     "price": "39,99 €",
     "img": "https://m.media-amazon.com/images/I/81mAtzHfpoL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GSBT67ZW?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1500",
     "console": "Switch",
     "label": {
       "en": "Switch: Terminator 2D: NO FATE (Xbox Series X| X...",
@@ -7826,11 +7276,10 @@
     "price": "41,99 €",
     "img": "https://m.media-amazon.com/images/I/71eeLudodfL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0GSBVYS7B?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1501",
     "console": "Switch",
     "label": {
       "en": "Switch: Nintendo Switch 2 Yoshi and the Mysterio...",
@@ -7855,11 +7304,10 @@
     "price": "79,90 €",
     "img": "https://m.media-amazon.com/images/I/818eTCERvoL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GS3J5D3Y?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1502",
     "console": "Switch",
     "label": {
       "en": "Switch: Funda de transporte grande para Nintendo...",
@@ -7888,7 +7336,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1503",
     "console": "Switch",
     "label": {
       "en": "Switch: Grips de Orzly compatibles con los Joy-C...",
@@ -7917,7 +7364,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1504",
     "console": "Switch",
     "label": {
       "en": "Switch: Mango deslizante de plástico con cable p...",
@@ -7946,7 +7392,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1505",
     "console": "Switch",
     "label": {
       "en": "Switch: 45W Switch Cargador PD - Compatible con ...",
@@ -7975,7 +7420,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1506",
     "console": "Switch",
     "label": {
       "en": "Switch: OVER REQUIEMZ (Nintendo Switch)...",
@@ -8000,11 +7444,10 @@
     "price": "54,99 €",
     "img": "https://m.media-amazon.com/images/I/91IddVouOxL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GZ3QTPLJ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1507",
     "console": "Switch",
     "label": {
       "en": "Switch: PDP Cable Carga y Juega con Licencia Ofi...",
@@ -8033,7 +7476,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1508",
     "console": "Switch",
     "label": {
       "en": "Switch: Mago: Hyperdelicious Edition - Gourmet B...",
@@ -8062,36 +7504,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1509",
-    "console": "Switch",
-    "label": {
-      "en": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "es": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "fr": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "it": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "pt": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "de": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "ja": "Switch: Switch Arcade Stick para Nintendo Switch...",
-      "ko": "Switch: Switch Arcade Stick para Nintendo Switch..."
-    },
-    "desc": {
-      "es": "Switch Arcade Stick para Nintendo Switch/OLED/Swit...\n69,77 €",
-      "en": "Get Switch Arcade Stick para Nintendo Switch/OLED/Swit on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Switch Arcade Stick para Nintendo Switch/OLED/Swit sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Switch Arcade Stick para Nintendo Switch/OLED/Swit su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Switch Arcade Stick para Nintendo Switch/OLED/Swit na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Switch Arcade Stick para Nintendo Switch/OLED/Swit bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでSwitch Arcade Stick para Nintendo Switch/OLED/Switを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Switch Arcade Stick para Nintendo Switch/OLED/Swit을(를) 구매하세요."
-    },
-    "price": "69,77 €",
-    "img": "https://m.media-amazon.com/images/I/71ur1WOLXNL._AC_SY355_.jpg",
-    "url": "https://www.amazon.es/dp/B0GGXF7G4G?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno"
-  },
-  {
-    "id": "1510",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Azul Mando de jue...",
@@ -8120,7 +7532,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1511",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Blanco Mando de j...",
@@ -8149,7 +7560,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1512",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Wave Gris Mando d...",
@@ -8178,7 +7588,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1513",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Wave Negro Mando ...",
@@ -8207,7 +7616,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1514",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Morado Mando de j...",
@@ -8236,7 +7644,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1515",
     "console": "Switch",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Clear Mando de ju...",
@@ -8265,7 +7672,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1516",
     "console": "Switch",
     "label": {
       "en": "Switch: JSAUX 3-Pack Protector Pantalla para Nin...",
@@ -8294,7 +7700,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1517",
     "console": "Switch",
     "label": {
       "en": "Switch: Switch TV Dock, SiWiQU Dock Switch Compa...",
@@ -8323,7 +7728,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1518",
     "console": "Switch",
     "label": {
       "en": "Switch: Soporte ajustable para interruptor compa...",
@@ -8352,7 +7756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1519",
     "console": "Switch",
     "label": {
       "en": "Switch: Harvest Moon: Echoes of Teradea (NSW)...",
@@ -8377,11 +7780,10 @@
     "price": "49,99 €",
     "img": "https://m.media-amazon.com/images/I/71h1qbohC9L._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GZQ6HDTZ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "1520",
     "console": "Switch",
     "label": {
       "en": "Switch: PDP - Rock Candy Mando con Cable para Ni...",
@@ -8410,7 +7812,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1521",
     "console": "Switch",
     "label": {
       "en": "Switch: PDP Rock Candy Wired Gaming Switch Pro m...",
@@ -8439,7 +7840,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1522",
     "console": "Switch",
     "label": {
       "en": "Switch: PDP Rock Candy Wired Gaming Switch Pro m...",
@@ -8468,7 +7868,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "1523",
     "console": "Switch",
     "label": {
       "en": "Switch: PDP Rock Candy Wired Gaming Switch Pro m...",
