@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -1386,32 +1386,51 @@ const adminLockBtn = document.getElementById('adminLockBtn');
 const saveJsonBtn = document.getElementById('saveJsonBtn');
 const lockIcon = document.getElementById('lockIcon');
 
-adminLockBtn.addEventListener('click', () => {
+// Función nativa para convertir texto a un Hash SHA-256
+async function hashearTexto(texto) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(texto);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+// Evento del botón de Administrador
+adminLockBtn.addEventListener('click', async () => {
   if (!isAdmin) {
     const pass = prompt("Proxys:");
-    if (pass && pass.trim() !== "") {
-      isAdmin = true;
-      // Icono de candado abierto
-      lockIcon.innerHTML = `
-        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-        <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-      `; 
-      adminLockBtn.style.borderColor = "var(--gold)";
-      adminLockBtn.style.opacity = "1"; // Se queda visible permanentemente si eres admin
-      saveJsonBtn.style.display = "flex"; // Revela el botón de guardar arriba
-      alert("OK!");
+    
+    // Si el usuario escribe algo
+    if (pass) {
+      const hashIngresado = await hashearTexto(pass);
+      const hashCorrecto = "65d21f24c2164508323ab774fdf0e95e23313bd71a505fb1b4a87839032b1531"; 
+      
+      if (hashIngresado === hashCorrecto) {
+        isAdmin = true;
+        lockIcon.innerHTML = `
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+        `; 
+        adminLockBtn.style.borderColor = "var(--gold)";
+        adminLockBtn.style.opacity = "1"; 
+        saveJsonBtn.style.display = "flex"; 
+        alert("OK!");
+      } else {
+        alert("https://amzn.to/4dUrbsh");
+      }
     } else {
+      // Si el usuario cancela o deja en blanco
       alert("https://amzn.to/4dUrbsh");
     }
   } else {
+    // Apagar modo admin
     isAdmin = false;
-    // Icono candado cerrado
     lockIcon.innerHTML = `
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
       <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
     `; 
     adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
-    adminLockBtn.style.opacity = "0"; // Vuelve a ser un fantasma invisible
+    adminLockBtn.style.opacity = "0"; 
     saveJsonBtn.style.display = "none";
     alert("Modo Administrador Desactivado.");
   }
