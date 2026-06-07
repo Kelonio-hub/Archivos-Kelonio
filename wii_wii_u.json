@@ -651,14 +651,14 @@
       "ko": "Wii: 비디오 캡처 장치"
     },
     "desc": {
-      "en": "USB capture card for recording Wii/Wii U gameplay.\n8,99 €",
-      "es": "Capturadora USB para grabar gameplay de Wii/Wii U.\n8,99 €",
-      "fr": "Carte de capture USB pour enregistrer le gameplay Wii/Wii U.\n8,99 €",
-      "it": "Scheda di acquisizione USB per registrare il gameplay di Wii/Wii U.\n8,99 €",
-      "pt": "Placa de captura USB para gravar gameplay de Wii/Wii U.\n8,99 €",
-      "de": "USB Capture Card zum Aufnehmen von Wii/Wii U Gameplay.\n8,99 €",
-      "ja": "Wii/Wii U gameplay録画用USBキャプチャカード。\n8,99 €",
-      "ko": "Wii/Wii U 게임플레이 녹화용 USB 캡처 카드.\n8,99 €"
+      "en": "USB capture card for recording Wii/WiiU gameplay.\n8,99 €",
+      "es": "Capturadora USB para grabar gameplay de Wii/WiiU.\n8,99 €",
+      "fr": "Carte de capture USB pour enregistrer le gameplay Wii/WiiU.\n8,99 €",
+      "it": "Scheda di acquisizione USB per registrare il gameplay di Wii/WiiU.\n8,99 €",
+      "pt": "Placa de captura USB para gravar gameplay de Wii/WiiU.\n8,99 €",
+      "de": "USB Capture Card zum Aufnehmen von Wii/WiiU Gameplay.\n8,99 €",
+      "ja": "Wii/WiiU gameplay録画用USBキャプチャカード。\n8,99 €",
+      "ko": "Wii/WiiU 게임플레이 녹화용 USB 캡처 카드.\n8,99 €"
     },
     "img": "https://m.media-amazon.com/images/I/61MP0DG3NPL._AC_SX300_SY300_QL70_ML2_.jpg",
     "url": "https://amzn.to/4pgS7oz",
@@ -815,8 +815,8 @@
     "id": "445",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: AUTOUTLET Adaptador Wii a HDMI, Converti...",
-      "es": "Wii/Wii U: AUTOUTLET Adaptador Wii a HDMI, Converti...",
+      "en": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
+      "es": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
       "fr": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
       "it": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
       "pt": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
@@ -910,8 +910,8 @@
     "id": "448",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Neuftech barra de sensores de infrarrojo...",
-      "es": "Wii/Wii U: Neuftech barra de sensores de infrarrojo...",
+      "en": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
+      "es": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
       "fr": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
       "it": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
       "pt": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
@@ -1266,8 +1266,8 @@
     "id": "460",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: QUMOX Mando a distancia control remoto +...",
-      "es": "Wii/Wii U: QUMOX Mando a distancia control remoto +...",
+      "en": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
+      "es": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
       "fr": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
       "it": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
       "pt": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
@@ -1477,8 +1477,8 @@
     "id": "467",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: SATKIT Mando Remote con MotionPlus Incor...",
-      "es": "Wii/Wii U: SATKIT Mando Remote con MotionPlus Incor...",
+      "en": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
+      "es": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
       "fr": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
       "it": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
       "pt": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
@@ -1514,8 +1514,8 @@
     "id": "468",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
-      "es": "Wii/Wii U: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
+      "en": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
+      "es": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
       "fr": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
       "it": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
       "pt": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
@@ -1725,8 +1725,8 @@
     "id": "475",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: QUMOX Mando a Distancia Wii Nunchuck con...",
-      "es": "Wii/Wii U: QUMOX Mando a Distancia Wii Nunchuck con...",
+      "en": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
+      "es": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
       "fr": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
       "it": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
       "pt": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
@@ -1849,8 +1849,8 @@
     "id": "479",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Premium Pack: Consola +...",
-      "es": "Wii/Wii U: Nintendo Wii U - Premium Pack: Consola +...",
+      "en": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
+      "es": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
       "fr": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
       "it": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
       "pt": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
@@ -2147,8 +2147,8 @@
     "id": "489",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CABLEPELADO Barra Sensor Infrarrojos | S...",
-      "es": "Wii/Wii U: CABLEPELADO Barra Sensor Infrarrojos | S...",
+      "en": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
+      "es": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
       "fr": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
       "it": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
       "pt": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
@@ -2271,8 +2271,8 @@
     "id": "493",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: 2 en 1 Motion Plus Mando y Nunchunk para...",
-      "es": "Wii/Wii U: 2 en 1 Motion Plus Mando y Nunchunk para...",
+      "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
+      "es": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "fr": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "it": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "pt": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -2424,8 +2424,8 @@
     "id": "498",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mcbazel Cable de audio y vídeo compuesto...",
-      "es": "Wii/Wii U: Mcbazel Cable de audio y vídeo compuesto...",
+      "en": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
+      "es": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
       "fr": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
       "it": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
       "pt": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
@@ -2519,8 +2519,8 @@
     "id": "501",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: TechKen Wii Controller Charger, Estación...",
-      "es": "Wii/Wii U: TechKen Wii Controller Charger, Estación...",
+      "en": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
+      "es": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
       "fr": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
       "it": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
       "pt": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
@@ -2643,8 +2643,8 @@
     "id": "505",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra de Sensores para Wii Consola Barra...",
-      "es": "Wii/Wii U: Barra de Sensores para Wii Consola Barra...",
+      "en": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
+      "es": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
       "fr": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
       "it": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
       "pt": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
@@ -2709,8 +2709,8 @@
     "id": "507",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CHILDMORY Barra de sensores USB consola ...",
-      "es": "Wii/Wii U: CHILDMORY Barra de sensores USB consola ...",
+      "en": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
+      "es": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
       "fr": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
       "it": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
       "pt": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
@@ -2775,8 +2775,8 @@
     "id": "509",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mando para Nintendo Wii,2 en 1 Controlle...",
-      "es": "Wii/Wii U: Mando para Nintendo Wii,2 en 1 Controlle...",
+      "en": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
+      "es": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "fr": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "it": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "pt": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
@@ -2928,8 +2928,8 @@
     "id": "514",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii / Wii U - Mando Plus, Color...",
-      "es": "Wii/Wii U: Nintendo Wii / Wii U - Mando Plus, Color...",
+      "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
+      "es": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
       "fr": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
       "it": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
       "pt": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
@@ -3168,8 +3168,8 @@
     "id": "522",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Funmo mando wii, Mando a distancia contr...",
-      "es": "Wii/Wii U: Funmo mando wii, Mando a distancia contr...",
+      "en": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
+      "es": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
       "fr": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
       "it": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
       "pt": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
@@ -3408,8 +3408,8 @@
     "id": "530",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Consola Premium + Lego ...",
-      "es": "Wii/Wii U: Nintendo Wii U - Consola Premium + Lego ...",
+      "en": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
+      "es": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
       "fr": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
       "it": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
       "pt": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
@@ -3503,8 +3503,8 @@
     "id": "533",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: New Super Mario Bros. U...",
-      "es": "Wii/Wii U: New Super Mario Bros. U...",
+      "en": "Wii/WiiU: New Super Mario Bros. U...",
+      "es": "Wii/WiiU: New Super Mario Bros. U...",
       "fr": "Wii/WiiU: New Super Mario Bros. U...",
       "it": "Wii/WiiU: New Super Mario Bros. U...",
       "pt": "Wii/WiiU: New Super Mario Bros. U...",
@@ -3627,8 +3627,8 @@
     "id": "537",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Arvoni Sensores para Wii, Compatible con...",
-      "es": "Wii/Wii U: Arvoni Sensores para Wii, Compatible con...",
+      "en": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
+      "es": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
       "fr": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
       "it": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
       "pt": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
@@ -3637,14 +3637,14 @@
       "ko": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con..."
     },
     "desc": {
-      "es": "Arvoni Sensores para Wii, Compatible con Wii/Wii U...\n6,99€",
-      "en": "Get Arvoni Sensores para Wii, Compatible con Wii/Wii U on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Arvoni Sensores para Wii, Compatible con Wii/Wii U sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Arvoni Sensores para Wii, Compatible con Wii/Wii U su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Arvoni Sensores para Wii, Compatible con Wii/Wii U na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Arvoni Sensores para Wii, Compatible con Wii/Wii U bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでArvoni Sensores para Wii, Compatible con Wii/Wii Uを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Arvoni Sensores para Wii, Compatible con Wii/Wii U을(를) 구매하세요."
+      "es": "Arvoni Sensores para Wii, Compatible con Wii/WiiU...\n6,99€",
+      "en": "Get Arvoni Sensores para Wii, Compatible con Wii/WiiU on Amazon at the best price with our affiliate link.",
+      "fr": "Obtenez Arvoni Sensores para Wii, Compatible con Wii/WiiU sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
+      "it": "Ottieni Arvoni Sensores para Wii, Compatible con Wii/WiiU su Amazon al miglior prezzo con il nostro link di affiliazione.",
+      "pt": "Obtenha Arvoni Sensores para Wii, Compatible con Wii/WiiU na Amazon ao melhor preço con o nosso link de afiliado.",
+      "de": "Holen Sie sich Arvoni Sensores para Wii, Compatible con Wii/WiiU bei Amazon zum besten Preis mit unserem Affiliate-Link.",
+      "ja": "アフィリエイトリンクを使用して、AmazonでArvoni Sensores para Wii, Compatible con Wii/WiiUを最安値で入手してください。",
+      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Arvoni Sensores para Wii, Compatible con Wii/WiiU을(를) 구매하세요."
     },
     "price": "6,99€",
     "img": "https://m.media-amazon.com/images/I/616zp6s9aRL._AC_SX679_.jpg",
@@ -3780,8 +3780,8 @@
     "id": "542",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Star Fox Zero...",
-      "es": "Wii/Wii U: Star Fox Zero...",
+      "en": "Wii/WiiU: Star Fox Zero...",
+      "es": "Wii/WiiU: Star Fox Zero...",
       "fr": "Wii/WiiU: Star Fox Zero...",
       "it": "Wii/WiiU: Star Fox Zero...",
       "pt": "Wii/WiiU: Star Fox Zero...",
@@ -3875,8 +3875,8 @@
     "id": "545",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mando a Distancia de Repuesto Desnudo pa...",
-      "es": "Wii/Wii U: Mando a Distancia de Repuesto Desnudo pa...",
+      "en": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
+      "es": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
       "fr": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
       "it": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
       "pt": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
@@ -3912,8 +3912,8 @@
     "id": "546",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Estación de Carga para Mando Wii: WIYETY...",
-      "es": "Wii/Wii U: Estación de Carga para Mando Wii: WIYETY...",
+      "en": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
+      "es": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
       "fr": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
       "it": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
       "pt": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
@@ -3978,8 +3978,8 @@
     "id": "548",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: AFUNTA Nunchuck Controlador Gamepad para...",
-      "es": "Wii/Wii U: AFUNTA Nunchuck Controlador Gamepad para...",
+      "en": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
+      "es": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
       "fr": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
       "it": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
       "pt": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
@@ -4073,8 +4073,8 @@
     "id": "551",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
-      "es": "Wii/Wii U: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
+      "en": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
+      "es": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
       "fr": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
       "it": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
       "pt": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
@@ -4110,8 +4110,8 @@
     "id": "552",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: AMATHINGS Fuente de alimentación compati...",
-      "es": "Wii/Wii U: AMATHINGS Fuente de alimentación compati...",
+      "en": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
+      "es": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
       "fr": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
       "it": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
       "pt": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
@@ -4147,8 +4147,8 @@
     "id": "553",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Cargador compatible con Wii U Gamepad, a...",
-      "es": "Wii/Wii U: Cargador compatible con Wii U Gamepad, a...",
+      "en": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
+      "es": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
       "fr": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
       "it": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
       "pt": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
@@ -4213,8 +4213,8 @@
     "id": "555",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Wii REMOTE PLUS BLANCO...",
-      "es": "Wii/Wii U: Wii REMOTE PLUS BLANCO...",
+      "en": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
+      "es": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
       "fr": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
       "it": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
       "pt": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
@@ -4250,8 +4250,8 @@
     "id": "556",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
-      "es": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "es": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "fr": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "it": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "pt": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -4577,8 +4577,8 @@
     "id": "567",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mando para Nintendo Wii,2 en 1 Controlle...",
-      "es": "Wii/Wii U: Mando para Nintendo Wii,2 en 1 Controlle...",
+      "en": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
+      "es": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "fr": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "it": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
       "pt": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
@@ -4875,8 +4875,8 @@
     "id": "577",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra de Sensores para Sistema Wii, Rece...",
-      "es": "Wii/Wii U: Barra de Sensores para Sistema Wii, Rece...",
+      "en": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
+      "es": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
       "fr": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
       "it": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
       "pt": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
@@ -5086,8 +5086,8 @@
     "id": "584",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Wii Super Mario Galaxy 2...",
-      "es": "Wii/Wii U: Wii Super Mario Galaxy 2...",
+      "en": "Wii/WiiU: Wii Super Mario Galaxy 2...",
+      "es": "Wii/WiiU: Wii Super Mario Galaxy 2...",
       "fr": "Wii/WiiU: Wii Super Mario Galaxy 2...",
       "it": "Wii/WiiU: Wii Super Mario Galaxy 2...",
       "pt": "Wii/WiiU: Wii Super Mario Galaxy 2...",
@@ -5297,8 +5297,8 @@
     "id": "591",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Nintendo - Ac wii mando remoto plus rojo...",
-      "es": "Wii/Wii U: Nintendo - Ac wii mando remoto plus rojo...",
+      "en": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
+      "es": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
       "fr": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
       "it": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
       "pt": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
@@ -5392,8 +5392,8 @@
     "id": "594",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
-      "es": "Wii/Wii U: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
+      "en": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
+      "es": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
       "fr": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
       "it": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
       "pt": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
@@ -5429,8 +5429,8 @@
     "id": "595",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: UNDER CONTROL Manette expert filaire Wii...",
-      "es": "Wii/Wii U: UNDER CONTROL Manette expert filaire Wii...",
+      "en": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
+      "es": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
       "fr": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
       "it": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
       "pt": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
@@ -5466,8 +5466,8 @@
     "id": "596",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra Infrarrojos Sensor Wii, Barra Sens...",
-      "es": "Wii/Wii U: Barra Infrarrojos Sensor Wii, Barra Sens...",
+      "en": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
+      "es": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
       "fr": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
       "it": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
       "pt": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
@@ -5503,24 +5503,24 @@
     "id": "597",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "es": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "fr": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "it": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "pt": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "de": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "ja": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c...",
-      "ko": "Wii/WiiU: Fosmon Nintendo Wii/Wii U Reemplazo de c..."
+      "en": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "es": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "fr": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "it": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "pt": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "de": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "ja": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
+      "ko": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c..."
     },
     "desc": {
-      "es": "Fosmon Nintendo Wii/Wii U Reemplazo de componentes...\n11,99 €",
-      "en": "Get Fosmon Nintendo Wii/Wii U Reemplazo de componentes on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Fosmon Nintendo Wii/Wii U Reemplazo de componentes sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Fosmon Nintendo Wii/Wii U Reemplazo de componentes su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Fosmon Nintendo Wii/Wii U Reemplazo de componentes na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Fosmon Nintendo Wii/Wii U Reemplazo de componentes bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでFosmon Nintendo Wii/Wii U Reemplazo de componentesを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Fosmon Nintendo Wii/Wii U Reemplazo de componentes을(를) 구매하세요."
+      "es": "Fosmon Nintendo Wii/WiiU Reemplazo de componentes...\n11,99 €",
+      "en": "Get Fosmon Nintendo Wii/WiiU Reemplazo de componentes on Amazon at the best price with our affiliate link.",
+      "fr": "Obtenez Fosmon Nintendo Wii/WiiU Reemplazo de componentes sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
+      "it": "Ottieni Fosmon Nintendo Wii/WiiU Reemplazo de componentes su Amazon al miglior prezzo con il nostro link di affiliazione.",
+      "pt": "Obtenha Fosmon Nintendo Wii/WiiU Reemplazo de componentes na Amazon ao melhor preço con o nosso link de afiliado.",
+      "de": "Holen Sie sich Fosmon Nintendo Wii/WiiU Reemplazo de componentes bei Amazon zum besten Preis mit unserem Affiliate-Link.",
+      "ja": "アフィリエイトリンクを使用して、AmazonでFosmon Nintendo Wii/WiiU Reemplazo de componentesを最安値で入手してください。",
+      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Fosmon Nintendo Wii/WiiU Reemplazo de componentes을(를) 구매하세요."
     },
     "price": "11,99 €",
     "img": "https://m.media-amazon.com/images/I/51GK8sMyjhL._AC_SY355_.jpg",
@@ -5648,8 +5648,8 @@
     "id": "602",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: obqo Barra de sensor infrarrojo inalámbr...",
-      "es": "Wii/Wii U: obqo Barra de sensor infrarrojo inalámbr...",
+      "en": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
+      "es": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
       "fr": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
       "it": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
       "pt": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
@@ -5772,8 +5772,8 @@
     "id": "606",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Wii Fit U (Game Only, No Fit Meter or Ba...",
-      "es": "Wii/Wii U: Wii Fit U (Game Only, No Fit Meter or Ba...",
+      "en": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
+      "es": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
       "fr": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
       "it": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
       "pt": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
@@ -5809,8 +5809,8 @@
     "id": "607",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
-      "es": "Wii/Wii U: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
+      "en": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
+      "es": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
       "fr": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
       "it": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
       "pt": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
@@ -5846,8 +5846,8 @@
     "id": "608",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Cargador para Nintendo Wii U Gamepad, Fu...",
-      "es": "Wii/Wii U: Cargador para Nintendo Wii U Gamepad, Fu...",
+      "en": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
+      "es": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
       "fr": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
       "it": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
       "pt": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
@@ -5883,8 +5883,8 @@
     "id": "609",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Sporgo Juego de 2 Controladores Nunchuk ...",
-      "es": "Wii/Wii U: Sporgo Juego de 2 Controladores Nunchuk ...",
+      "en": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
+      "es": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
       "fr": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
       "it": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
       "pt": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
@@ -5949,8 +5949,8 @@
     "id": "611",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
-      "es": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "es": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "fr": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "it": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "pt": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -6044,8 +6044,8 @@
     "id": "615",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: TechKen Volantes para Nintendo Wii, Mari...",
-      "es": "Wii/Wii U: TechKen Volantes para Nintendo Wii, Mari...",
+      "en": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
+      "es": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
       "fr": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
       "it": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
       "pt": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
@@ -6139,24 +6139,24 @@
     "id": "618",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra sensora para consolas Wii/Wii U, b...",
-      "es": "Wii/Wii U: Barra sensora para consolas Wii/Wii U, b...",
-      "fr": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b...",
-      "it": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b...",
-      "pt": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b...",
-      "de": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b...",
-      "ja": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b...",
-      "ko": "Wii/WiiU: Barra sensora para consolas Wii/Wii U, b..."
+      "en": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "es": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "fr": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "it": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "pt": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "de": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "ja": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
+      "ko": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b..."
     },
     "desc": {
-      "es": "Barra sensora para consolas Wii/Wii U, barra senso...\n8,99€",
-      "en": "Get Barra sensora para consolas Wii/Wii U, barra senso on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez Barra sensora para consolas Wii/Wii U, barra senso sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
-      "it": "Ottieni Barra sensora para consolas Wii/Wii U, barra senso su Amazon al miglior prezzo con il nostro link di affiliazione.",
-      "pt": "Obtenha Barra sensora para consolas Wii/Wii U, barra senso na Amazon ao melhor preço con o nosso link de afiliado.",
-      "de": "Holen Sie sich Barra sensora para consolas Wii/Wii U, barra senso bei Amazon zum besten Preis mit unserem Affiliate-Link.",
-      "ja": "アフィリエイトリンクを使用して、AmazonでBarra sensora para consolas Wii/Wii U, barra sensoを最安値で入手してください。",
-      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Barra sensora para consolas Wii/Wii U, barra senso을(를) 구매하세요."
+      "es": "Barra sensora para consolas Wii/WiiU, barra senso...\n8,99€",
+      "en": "Get Barra sensora para consolas Wii/WiiU, barra senso on Amazon at the best price with our affiliate link.",
+      "fr": "Obtenez Barra sensora para consolas Wii/WiiU, barra senso sur Amazon au meilleur prix avec nuestro lien d'affiliation.",
+      "it": "Ottieni Barra sensora para consolas Wii/WiiU, barra senso su Amazon al miglior prezzo con il nostro link di affiliazione.",
+      "pt": "Obtenha Barra sensora para consolas Wii/WiiU, barra senso na Amazon ao melhor preço con o nosso link de afiliado.",
+      "de": "Holen Sie sich Barra sensora para consolas Wii/WiiU, barra senso bei Amazon zum besten Preis mit unserem Affiliate-Link.",
+      "ja": "アフィリエイトリンクを使用して、AmazonでBarra sensora para consolas Wii/WiiU, barra sensoを最安値で入手してください。",
+      "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Barra sensora para consolas Wii/WiiU, barra senso을(를) 구매하세요."
     },
     "price": "8,99€",
     "img": "https://m.media-amazon.com/images/I/61Nwgar8fhL._AC_SX679_.jpg",
@@ -6176,8 +6176,8 @@
     "id": "619",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: DollaTek Cable de alimentación USB Extra...",
-      "es": "Wii/Wii U: DollaTek Cable de alimentación USB Extra...",
+      "en": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
+      "es": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
       "fr": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
       "it": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
       "pt": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
@@ -6242,8 +6242,8 @@
     "id": "621",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CABLEPELADO Adaptador De Corriente para ...",
-      "es": "Wii/Wii U: CABLEPELADO Adaptador De Corriente para ...",
+      "en": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
+      "es": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
       "fr": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
       "it": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
       "pt": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
@@ -6482,8 +6482,8 @@
     "id": "632",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: OSTENT Accesorio de Pistola de Luz para ...",
-      "es": "Wii/Wii U: OSTENT Accesorio de Pistola de Luz para ...",
+      "en": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
+      "es": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
       "fr": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
       "it": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
       "pt": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
@@ -6664,8 +6664,8 @@
     "id": "638",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra de sensor USB infrarroja IR Ray de...",
-      "es": "Wii/Wii U: Barra de sensor USB infrarroja IR Ray de...",
+      "en": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
+      "es": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
       "fr": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
       "it": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
       "pt": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
@@ -6730,8 +6730,8 @@
     "id": "640",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Mando a distancia Wii, mando a ...",
-      "es": "Wii/Wii U: Leikurvo Mando a distancia Wii, mando a ...",
+      "en": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
+      "es": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
       "fr": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
       "it": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
       "pt": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
@@ -6796,8 +6796,8 @@
     "id": "642",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Soporte Vertical y Horizontal para Conso...",
-      "es": "Wii/Wii U: Soporte Vertical y Horizontal para Conso...",
+      "en": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
+      "es": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
       "fr": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
       "it": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
       "pt": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
@@ -6891,8 +6891,8 @@
     "id": "645",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Barra de sensores para Wii, barra de sen...",
-      "es": "Wii/Wii U: Barra de sensores para Wii, barra de sen...",
+      "en": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
+      "es": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
       "fr": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
       "it": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
       "pt": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
@@ -7073,8 +7073,8 @@
     "id": "651",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CABLEPELADO Nunchaku | Controlador Nunch...",
-      "es": "Wii/Wii U: CABLEPELADO Nunchaku | Controlador Nunch...",
+      "en": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
+      "es": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "fr": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "it": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "pt": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
@@ -7197,8 +7197,8 @@
     "id": "655",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: 2 en 1 Motion Plus Mando y Nunchunk para...",
-      "es": "Wii/Wii U: 2 en 1 Motion Plus Mando y Nunchunk para...",
+      "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
+      "es": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "fr": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "it": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
       "pt": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -7263,8 +7263,8 @@
     "id": "657",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Adaptador de alimentación de CA Adaptado...",
-      "es": "Wii/Wii U: Adaptador de alimentación de CA Adaptado...",
+      "en": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
+      "es": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
       "fr": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
       "it": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
       "pt": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
@@ -7300,8 +7300,8 @@
     "id": "658",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: eSynic Adaptador Wii a HDMI 1080P/720P C...",
-      "es": "Wii/Wii U: eSynic Adaptador Wii a HDMI 1080P/720P C...",
+      "en": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
+      "es": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
       "fr": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
       "it": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
       "pt": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
@@ -7337,8 +7337,8 @@
     "id": "659",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mribo Mando a Distancia Wii, Mando a Dis...",
-      "es": "Wii/Wii U: Mribo Mando a Distancia Wii, Mando a Dis...",
+      "en": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
+      "es": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
       "fr": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
       "it": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
       "pt": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
@@ -7374,8 +7374,8 @@
     "id": "660",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: booEy 2x Volante para Nintendo Wii y Wii...",
-      "es": "Wii/Wii U: booEy 2x Volante para Nintendo Wii y Wii...",
+      "en": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
+      "es": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
       "fr": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
       "it": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
       "pt": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
@@ -7585,8 +7585,8 @@
     "id": "667",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Mando y Nunchuck para Wii, mando a dista...",
-      "es": "Wii/Wii U: Mando y Nunchuck para Wii, mando a dista...",
+      "en": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
+      "es": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
       "fr": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
       "it": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
       "pt": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
@@ -7796,8 +7796,8 @@
     "id": "674",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
-      "es": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "es": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "fr": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "it": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
       "pt": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -7921,8 +7921,8 @@
     "id": "678",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: DARLINGTON & Sohns - Kit de cables para ...",
-      "es": "Wii/Wii U: DARLINGTON & Sohns - Kit de cables para ...",
+      "en": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
+      "es": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
       "fr": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
       "it": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
       "pt": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
@@ -7958,8 +7958,8 @@
     "id": "679",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: WKOLF Juego de 4 mandos a distancia de r...",
-      "es": "Wii/Wii U: WKOLF Juego de 4 mandos a distancia de r...",
+      "en": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
+      "es": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
       "fr": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
       "it": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
       "pt": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
@@ -7995,8 +7995,8 @@
     "id": "680",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Batería para Nintendo Wii U Gamepad, 360...",
-      "es": "Wii/Wii U: Batería para Nintendo Wii U Gamepad, 360...",
+      "en": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
+      "es": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
       "fr": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
       "it": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
       "pt": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
@@ -8148,8 +8148,8 @@
     "id": "685",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Good - TransFormers Revenge of the Falle...",
-      "es": "Wii/Wii U: Good - TransFormers Revenge of the Falle...",
+      "en": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
+      "es": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
       "fr": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
       "it": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
       "pt": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
@@ -8185,8 +8185,8 @@
     "id": "686",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto WUP-001 para Wii U G...",
-      "es": "Wii/Wii U: Batería de repuesto WUP-001 para Wii U G...",
+      "en": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
+      "es": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
       "fr": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
       "it": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
       "pt": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
@@ -8222,8 +8222,8 @@
     "id": "687",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: AUTOUTLET Cable Scart RGB Scart Video HD...",
-      "es": "Wii/Wii U: AUTOUTLET Cable Scart RGB Scart Video HD...",
+      "en": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
+      "es": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
       "fr": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
       "it": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
       "pt": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
@@ -8259,8 +8259,8 @@
     "id": "688",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Link-e - Cargador de Fuente de Alimentac...",
-      "es": "Wii/Wii U: Link-e - Cargador de Fuente de Alimentac...",
+      "en": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
+      "es": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
       "fr": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
       "it": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
       "pt": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
@@ -8325,8 +8325,8 @@
     "id": "690",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CHILDMORY Adaptador de alimentación de C...",
-      "es": "Wii/Wii U: CHILDMORY Adaptador de alimentación de C...",
+      "en": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
+      "es": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
       "fr": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
       "it": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
       "pt": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
@@ -8362,8 +8362,8 @@
     "id": "691",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto compatible con Ninte...",
-      "es": "Wii/Wii U: Batería de repuesto compatible con Ninte...",
+      "en": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
+      "es": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
       "fr": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
       "it": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
       "pt": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
@@ -8399,8 +8399,8 @@
     "id": "692",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: CABLEPELADO Nunchaku | Controlador Nunch...",
-      "es": "Wii/Wii U: CABLEPELADO Nunchaku | Controlador Nunch...",
+      "en": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
+      "es": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "fr": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "it": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
       "pt": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
@@ -8552,8 +8552,8 @@
     "id": "697",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: OSTENT Sensor de Movimiento Bluetooth Ma...",
-      "es": "Wii/Wii U: OSTENT Sensor de Movimiento Bluetooth Ma...",
+      "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
+      "es": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
       "fr": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
       "it": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
       "pt": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8676,8 +8676,8 @@
     "id": "701",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: 2-Tech Fuente de alimentación de repuest...",
-      "es": "Wii/Wii U: 2-Tech Fuente de alimentación de repuest...",
+      "en": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
+      "es": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
       "fr": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
       "it": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
       "pt": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
@@ -8713,8 +8713,8 @@
     "id": "702",
     "console": "Wii/WiiU",
     "label": {
-      "en": "Wii/Wii U: Fuente de alimentación, cable de aliment...",
-      "es": "Wii/Wii U: Fuente de alimentación, cable de aliment...",
+      "en": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
+      "es": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
       "fr": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
       "it": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
       "pt": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
@@ -9009,13 +9009,13 @@
   },
   {
     "id": "712",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: La LEGO Película: El Videojuego...",
-      "es": "Wii/Wii U: La LEGO Película: El Videojuego..."
+      "en": "Wii/WiiU: La LEGO Película: El Videojuego...",
+      "es": "Wii/WiiU: La LEGO Película: El Videojuego..."
     },
     "desc": {
       "es": "La LEGO Película: El Videojuego...\n9,90€"
@@ -9029,13 +9029,13 @@
   },
   {
     "id": "713",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Land Wii U...",
-      "es": "Wii/Wii U: Nintendo Land Wii U..."
+      "en": "Wii/WiiU: Nintendo Land Wii U...",
+      "es": "Wii/WiiU: Nintendo Land Wii U..."
     },
     "desc": {
       "es": "Nintendo Land Wii U...\n19,72€"
@@ -9049,13 +9049,13 @@
   },
   {
     "id": "714",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Hyrule Warriors [Wii U] [Importación Ale...",
-      "es": "Wii/Wii U: Hyrule Warriors [Wii U] [Importación Ale..."
+      "en": "Wii/WiiU: Hyrule Warriors [Wii U] [Importación Ale...",
+      "es": "Wii/WiiU: Hyrule Warriors [Wii U] [Importación Ale..."
     },
     "desc": {
       "es": "Hyrule Warriors [Wii U] [Importación Alemana]...\n13,38€"
@@ -9069,13 +9069,13 @@
   },
   {
     "id": "715",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batman: Arkham City - Armoured Edition [...",
-      "es": "Wii/Wii U: Batman: Arkham City - Armoured Edition [..."
+      "en": "Wii/WiiU: Batman: Arkham City - Armoured Edition [...",
+      "es": "Wii/WiiU: Batman: Arkham City - Armoured Edition [..."
     },
     "desc": {
       "es": "Batman: Arkham City - Armoured Edition [Importació...\n13,90€"
@@ -9089,13 +9089,13 @@
   },
   {
     "id": "716",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Activision Call of Duty - Juego (Wii U, ...",
-      "es": "Wii/Wii U: Activision Call of Duty - Juego (Wii U, ..."
+      "en": "Wii/WiiU: Activision Call of Duty - Juego (Wii U, ...",
+      "es": "Wii/WiiU: Activision Call of Duty - Juego (Wii U, ..."
     },
     "desc": {
       "es": "Activision Call of Duty - Juego (Wii U, Wii U, FPS...\n19,50€"
@@ -9109,13 +9109,13 @@
   },
   {
     "id": "717",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Scribblenauts Unmasked: DC Comics...",
-      "es": "Wii/Wii U: Scribblenauts Unmasked: DC Comics..."
+      "en": "Wii/WiiU: Scribblenauts Unmasked: DC Comics...",
+      "es": "Wii/WiiU: Scribblenauts Unmasked: DC Comics..."
     },
     "desc": {
       "es": "Scribblenauts Unmasked: DC Comics...\nVer precio"
@@ -9129,13 +9129,13 @@
   },
   {
     "id": "718",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Super Smash Bros. - [Nintendo WII U] [Im...",
-      "es": "Wii/Wii U: Super Smash Bros. - [Nintendo WII U] [Im..."
+      "en": "Wii/WiiU: Super Smash Bros. - [Nintendo WII U] [Im...",
+      "es": "Wii/WiiU: Super Smash Bros. - [Nintendo WII U] [Im..."
     },
     "desc": {
       "es": "Super Smash Bros. - [Nintendo WII U] [Importación ...\nVer precio"
@@ -9149,13 +9149,13 @@
   },
   {
     "id": "719",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Yoshi's Woolly World (Nintendo Wii U) [i...",
-      "es": "Wii/Wii U: Yoshi's Woolly World (Nintendo Wii U) [i..."
+      "en": "Wii/WiiU: Yoshi's Woolly World (Nintendo Wii U) [i...",
+      "es": "Wii/WiiU: Yoshi's Woolly World (Nintendo Wii U) [i..."
     },
     "desc": {
       "es": "Yoshi's Woolly World (Nintendo Wii U) [importación...\n38,53€"
@@ -9169,13 +9169,13 @@
   },
   {
     "id": "720",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Orzly Switch Sports Pack Paquete de acce...",
-      "es": "Wii/Wii U: Orzly Switch Sports Pack Paquete de acce..."
+      "en": "Wii/WiiU: Orzly Switch Sports Pack Paquete de acce...",
+      "es": "Wii/WiiU: Orzly Switch Sports Pack Paquete de acce..."
     },
     "desc": {
       "es": "Orzly Switch Sports Pack Paquete de accesorios Nin...\n34,99€"
@@ -9189,13 +9189,13 @@
   },
   {
     "id": "721",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Orzly Kit Accesorios para Nintendo Switc...",
-      "es": "Wii/Wii U: Orzly Kit Accesorios para Nintendo Switc..."
+      "en": "Wii/WiiU: Orzly Kit Accesorios para Nintendo Switc...",
+      "es": "Wii/WiiU: Orzly Kit Accesorios para Nintendo Switc..."
     },
     "desc": {
       "es": "Orzly Kit Accesorios para Nintendo Switch Geek Pac...\n39,99€"
@@ -9209,13 +9209,13 @@
   },
   {
     "id": "722",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Paquete de accesorios de fiesta Orzly pa...",
-      "es": "Wii/Wii U: Paquete de accesorios de fiesta Orzly pa..."
+      "en": "Wii/WiiU: Paquete de accesorios de fiesta Orzly pa...",
+      "es": "Wii/WiiU: Paquete de accesorios de fiesta Orzly pa..."
     },
     "desc": {
       "es": "Paquete de accesorios de fiesta Orzly para Nintend...\n43,91€"
@@ -9229,13 +9229,13 @@
   },
   {
     "id": "723",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mario Tennis: Ultra Smash [Importación A...",
-      "es": "Wii/Wii U: Mario Tennis: Ultra Smash [Importación A..."
+      "en": "Wii/WiiU: Mario Tennis: Ultra Smash [Importación A...",
+      "es": "Wii/WiiU: Mario Tennis: Ultra Smash [Importación A..."
     },
     "desc": {
       "es": "Mario Tennis: Ultra Smash [Importación Alemana]...\n18,99€"
@@ -9249,13 +9249,13 @@
   },
   {
     "id": "724",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batman: Arkham City - Armoured Edition [...",
-      "es": "Wii/Wii U: Batman: Arkham City - Armoured Edition [..."
+      "en": "Wii/WiiU: Batman: Arkham City - Armoured Edition [...",
+      "es": "Wii/WiiU: Batman: Arkham City - Armoured Edition [..."
     },
     "desc": {
       "es": "Batman: Arkham City - Armoured Edition [Importació...\n19,95€"
@@ -9269,13 +9269,13 @@
   },
   {
     "id": "725",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Kirby and the Rainbow Paintbrush (Ninten...",
-      "es": "Wii/Wii U: Kirby and the Rainbow Paintbrush (Ninten..."
+      "en": "Wii/WiiU: Kirby and the Rainbow Paintbrush (Ninten...",
+      "es": "Wii/WiiU: Kirby and the Rainbow Paintbrush (Ninten..."
     },
     "desc": {
       "es": "Kirby and the Rainbow Paintbrush (Nintendo Wii U) ...\n38,84€"
@@ -9289,13 +9289,13 @@
   },
   {
     "id": "726",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Zombi U AT-PEGI [Importación alemana]...",
-      "es": "Wii/Wii U: Zombi U AT-PEGI [Importación alemana]..."
+      "en": "Wii/WiiU: Zombi U AT-PEGI [Importación alemana]...",
+      "es": "Wii/WiiU: Zombi U AT-PEGI [Importación alemana]..."
     },
     "desc": {
       "es": "Zombi U AT-PEGI [Importación alemana]...\nVer precio"
@@ -9309,13 +9309,13 @@
   },
   {
     "id": "727",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: LEGO: Batman 3. Más Allá De Gotham...",
-      "es": "Wii/Wii U: LEGO: Batman 3. Más Allá De Gotham..."
+      "en": "Wii/WiiU: LEGO: Batman 3. Más Allá De Gotham...",
+      "es": "Wii/WiiU: LEGO: Batman 3. Más Allá De Gotham..."
     },
     "desc": {
       "es": "LEGO: Batman 3. Más Allá De Gotham...\n9,50€"
@@ -9329,13 +9329,13 @@
   },
   {
     "id": "728",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: The Legend of Zelda: Breath of the Wild ...",
-      "es": "Wii/Wii U: The Legend of Zelda: Breath of the Wild ..."
+      "en": "Wii/WiiU: The Legend of Zelda: Breath of the Wild ...",
+      "es": "Wii/WiiU: The Legend of Zelda: Breath of the Wild ..."
     },
     "desc": {
       "es": "The Legend of Zelda: Breath of the Wild - [Wii U] ...\nVer precio"
@@ -9349,13 +9349,13 @@
   },
   {
     "id": "729",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Super Mario 3D World...",
-      "es": "Wii/Wii U: Super Mario 3D World..."
+      "en": "Wii/WiiU: Super Mario 3D World...",
+      "es": "Wii/WiiU: Super Mario 3D World..."
     },
     "desc": {
       "es": "Super Mario 3D World...\n29,90€"
@@ -9369,13 +9369,13 @@
   },
   {
     "id": "730",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Legend of Zelda. Breath of the Wild [Usa...",
-      "es": "Wii/Wii U: Legend of Zelda. Breath of the Wild [Usa..."
+      "en": "Wii/WiiU: Legend of Zelda. Breath of the Wild [Usa...",
+      "es": "Wii/WiiU: Legend of Zelda. Breath of the Wild [Usa..."
     },
     "desc": {
       "es": "Legend of Zelda. Breath of the Wild [Usa]...\nVer precio"
@@ -9389,13 +9389,13 @@
   },
   {
     "id": "731",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: WiiU Splatoon. Für Nintendo Wii...",
-      "es": "Wii/Wii U: WiiU Splatoon. Für Nintendo Wii..."
+      "en": "Wii/WiiU: WiiU Splatoon. Für Nintendo Wii...",
+      "es": "Wii/WiiU: WiiU Splatoon. Für Nintendo Wii..."
     },
     "desc": {
       "es": "WiiU Splatoon. Für Nintendo Wii...\nVer precio"
@@ -9409,13 +9409,13 @@
   },
   {
     "id": "732",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: LEGO Star Wars: El Despertar De La Fuerz...",
-      "es": "Wii/Wii U: LEGO Star Wars: El Despertar De La Fuerz..."
+      "en": "Wii/WiiU: LEGO Star Wars: El Despertar De La Fuerz...",
+      "es": "Wii/WiiU: LEGO Star Wars: El Despertar De La Fuerz..."
     },
     "desc": {
       "es": "LEGO Star Wars: El Despertar De La Fuerza (Episodi...\n13,19€"
@@ -9429,13 +9429,13 @@
   },
   {
     "id": "733",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Minecraft Wii U Edition Inkl. Super Mari...",
-      "es": "Wii/Wii U: Minecraft Wii U Edition Inkl. Super Mari..."
+      "en": "Wii/WiiU: Minecraft Wii U Edition Inkl. Super Mari...",
+      "es": "Wii/WiiU: Minecraft Wii U Edition Inkl. Super Mari..."
     },
     "desc": {
       "es": "Minecraft Wii U Edition Inkl. Super Mario Mash-Up ...\nVer precio"
@@ -9449,13 +9449,13 @@
   },
   {
     "id": "734",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Super Mario Maker [Importación Inglesa]...",
-      "es": "Wii/Wii U: Super Mario Maker [Importación Inglesa]..."
+      "en": "Wii/WiiU: Super Mario Maker [Importación Inglesa]...",
+      "es": "Wii/WiiU: Super Mario Maker [Importación Inglesa]..."
     },
     "desc": {
       "es": "Super Mario Maker [Importación Inglesa]...\n33,05€"
@@ -9469,13 +9469,13 @@
   },
   {
     "id": "735",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Super Mario 3D World [Importación Aleman...",
-      "es": "Wii/Wii U: Super Mario 3D World [Importación Aleman..."
+      "en": "Wii/WiiU: Super Mario 3D World [Importación Aleman...",
+      "es": "Wii/WiiU: Super Mario 3D World [Importación Aleman..."
     },
     "desc": {
       "es": "Super Mario 3D World [Importación Alemana]...\n89,26€"
@@ -9489,13 +9489,13 @@
   },
   {
     "id": "736",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Assassin's Creed 3 (Nintendo Wii U) [Imp...",
-      "es": "Wii/Wii U: Assassin's Creed 3 (Nintendo Wii U) [Imp..."
+      "en": "Wii/WiiU: Assassin's Creed 3 (Nintendo Wii U) [Imp...",
+      "es": "Wii/WiiU: Assassin's Creed 3 (Nintendo Wii U) [Imp..."
     },
     "desc": {
       "es": "Assassin's Creed 3 (Nintendo Wii U) [Importación i...\n24,75€"
@@ -9509,13 +9509,13 @@
   },
   {
     "id": "737",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Selects - Juego de accesorios p...",
-      "es": "Wii/Wii U: Nintendo Selects - Juego de accesorios p..."
+      "en": "Wii/WiiU: Nintendo Selects - Juego de accesorios p...",
+      "es": "Wii/WiiU: Nintendo Selects - Juego de accesorios p..."
     },
     "desc": {
       "es": "Nintendo Selects - Juego de accesorios para Wii U...\n17,52€"
@@ -9529,13 +9529,13 @@
   },
   {
     "id": "738",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: New Super Luigi U [Importación Alemana]...",
-      "es": "Wii/Wii U: New Super Luigi U [Importación Alemana]..."
+      "en": "Wii/WiiU: New Super Luigi U [Importación Alemana]...",
+      "es": "Wii/WiiU: New Super Luigi U [Importación Alemana]..."
     },
     "desc": {
       "es": "New Super Luigi U [Importación Alemana]...\n23,54€"
@@ -9549,13 +9549,13 @@
   },
   {
     "id": "739",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Bayonetta 2. Für Nintendo Wii...",
-      "es": "Wii/Wii U: Wii U Bayonetta 2. Für Nintendo Wii..."
+      "en": "Wii/WiiU: Wii U Bayonetta 2. Für Nintendo Wii...",
+      "es": "Wii/WiiU: Wii U Bayonetta 2. Für Nintendo Wii..."
     },
     "desc": {
       "es": "Wii U Bayonetta 2. Für Nintendo Wii...\nVer precio"
@@ -9569,13 +9569,13 @@
   },
   {
     "id": "740",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Pokken Tournament [Importación Inglesa]...",
-      "es": "Wii/Wii U: Pokken Tournament [Importación Inglesa]..."
+      "en": "Wii/WiiU: Pokken Tournament [Importación Inglesa]...",
+      "es": "Wii/WiiU: Pokken Tournament [Importación Inglesa]..."
     },
     "desc": {
       "es": "Pokken Tournament [Importación Inglesa]...\n28,97€"
@@ -9589,13 +9589,13 @@
   },
   {
     "id": "741",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Minecraft - Edición Estándar, Nintendo W...",
-      "es": "Wii/Wii U: Minecraft - Edición Estándar, Nintendo W..."
+      "en": "Wii/WiiU: Minecraft - Edición Estándar, Nintendo W...",
+      "es": "Wii/WiiU: Minecraft - Edición Estándar, Nintendo W..."
     },
     "desc": {
       "es": "Minecraft - Edición Estándar, Nintendo Wii U, Disc...\n34,90€"
@@ -9609,13 +9609,13 @@
   },
   {
     "id": "742",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Minecraft: Wii U Edition - Wii U Standar...",
-      "es": "Wii/Wii U: Minecraft: Wii U Edition - Wii U Standar..."
+      "en": "Wii/WiiU: Minecraft: Wii U Edition - Wii U Standar...",
+      "es": "Wii/WiiU: Minecraft: Wii U Edition - Wii U Standar..."
     },
     "desc": {
       "es": "Minecraft: Wii U Edition - Wii U Standard Edition ...\nVer precio"
@@ -9629,13 +9629,13 @@
   },
   {
     "id": "743",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: The Legend Of Zelda: The Wind Waker HD -...",
-      "es": "Wii/Wii U: The Legend Of Zelda: The Wind Waker HD -..."
+      "en": "Wii/WiiU: The Legend Of Zelda: The Wind Waker HD -...",
+      "es": "Wii/WiiU: The Legend Of Zelda: The Wind Waker HD -..."
     },
     "desc": {
       "es": "The Legend Of Zelda: The Wind Waker HD - Nintendo ...\n47,99€"
@@ -9649,13 +9649,13 @@
   },
   {
     "id": "744",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo New Super Mario Bros. U + New S...",
-      "es": "Wii/Wii U: Nintendo New Super Mario Bros. U + New S..."
+      "en": "Wii/WiiU: Nintendo New Super Mario Bros. U + New S...",
+      "es": "Wii/WiiU: Nintendo New Super Mario Bros. U + New S..."
     },
     "desc": {
       "es": "Nintendo New Super Mario Bros. U + New Super Luigi...\n22,18€"
@@ -9669,13 +9669,13 @@
   },
   {
     "id": "745",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: One Piece Unlimited World Red - Standard...",
-      "es": "Wii/Wii U: One Piece Unlimited World Red - Standard..."
+      "en": "Wii/WiiU: One Piece Unlimited World Red - Standard...",
+      "es": "Wii/WiiU: One Piece Unlimited World Red - Standard..."
     },
     "desc": {
       "es": "One Piece Unlimited World Red - Standard Edition [...\n29,95€"
@@ -9689,13 +9689,13 @@
   },
   {
     "id": "746",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: LEGO: Marvel Super Heroes...",
-      "es": "Wii/Wii U: LEGO: Marvel Super Heroes..."
+      "en": "Wii/WiiU: LEGO: Marvel Super Heroes...",
+      "es": "Wii/WiiU: LEGO: Marvel Super Heroes..."
     },
     "desc": {
       "es": "LEGO: Marvel Super Heroes...\n21,50€"
@@ -9709,13 +9709,13 @@
   },
   {
     "id": "747",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Star Fox Zero...",
-      "es": "Wii/Wii U: Wii U Star Fox Zero..."
+      "en": "Wii/WiiU: Wii U Star Fox Zero...",
+      "es": "Wii/WiiU: Wii U Star Fox Zero..."
     },
     "desc": {
       "es": "Wii U Star Fox Zero...\n20,81€"
@@ -9729,13 +9729,13 @@
   },
   {
     "id": "748",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: WiiU Yoshi's Woolly World...",
-      "es": "Wii/Wii U: WiiU Yoshi's Woolly World..."
+      "en": "Wii/WiiU: WiiU Yoshi's Woolly World...",
+      "es": "Wii/WiiU: WiiU Yoshi's Woolly World..."
     },
     "desc": {
       "es": "WiiU Yoshi's Woolly World...\nVer precio"
@@ -9749,13 +9749,13 @@
   },
   {
     "id": "749",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mario Party 10 [Importación Francesa]...",
-      "es": "Wii/Wii U: Mario Party 10 [Importación Francesa]..."
+      "en": "Wii/WiiU: Mario Party 10 [Importación Francesa]...",
+      "es": "Wii/WiiU: Mario Party 10 [Importación Francesa]..."
     },
     "desc": {
       "es": "Mario Party 10 [Importación Francesa]...\n29,90€"
@@ -9769,13 +9769,13 @@
   },
   {
     "id": "750",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Just Dance 2017...",
-      "es": "Wii/Wii U: Just Dance 2017..."
+      "en": "Wii/WiiU: Just Dance 2017...",
+      "es": "Wii/WiiU: Just Dance 2017..."
     },
     "desc": {
       "es": "Just Dance 2017...\n34,95€"
@@ -9789,13 +9789,13 @@
   },
   {
     "id": "751",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Bayonetta 2 (Nintendo Wii U) [Importació...",
-      "es": "Wii/Wii U: Bayonetta 2 (Nintendo Wii U) [Importació..."
+      "en": "Wii/WiiU: Bayonetta 2 (Nintendo Wii U) [Importació...",
+      "es": "Wii/WiiU: Bayonetta 2 (Nintendo Wii U) [Importació..."
     },
     "desc": {
       "es": "Bayonetta 2 (Nintendo Wii U) [Importación Inglesa]...\n32,05€"
@@ -9809,13 +9809,13 @@
   },
   {
     "id": "752",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Consola Premium HW + Ma...",
-      "es": "Wii/Wii U: Nintendo Wii U - Consola Premium HW + Ma..."
+      "en": "Wii/WiiU: Nintendo Wii U - Consola Premium HW + Ma...",
+      "es": "Wii/WiiU: Nintendo Wii U - Consola Premium HW + Ma..."
     },
     "desc": {
       "es": "Nintendo Wii U - Consola Premium HW + Mario Kart 8...\n230,00€"
@@ -9829,13 +9829,13 @@
   },
   {
     "id": "753",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Mario Kart 8, Wii U...",
-      "es": "Wii/Wii U: Nintendo Mario Kart 8, Wii U..."
+      "en": "Wii/WiiU: Nintendo Mario Kart 8, Wii U...",
+      "es": "Wii/WiiU: Nintendo Mario Kart 8, Wii U..."
     },
     "desc": {
       "es": "Nintendo Mario Kart 8, Wii U...\n79,99€"
@@ -9849,13 +9849,13 @@
   },
   {
     "id": "754",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Assassin's Creed IV: Black Flag [Importa...",
-      "es": "Wii/Wii U: Assassin's Creed IV: Black Flag [Importa..."
+      "en": "Wii/WiiU: Assassin's Creed IV: Black Flag [Importa...",
+      "es": "Wii/WiiU: Assassin's Creed IV: Black Flag [Importa..."
     },
     "desc": {
       "es": "Assassin's Creed IV: Black Flag [Importación Ingle...\n30,48€"
@@ -9869,13 +9869,13 @@
   },
   {
     "id": "755",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mario Kart 8...",
-      "es": "Wii/Wii U: Mario Kart 8..."
+      "en": "Wii/WiiU: Mario Kart 8...",
+      "es": "Wii/WiiU: Mario Kart 8..."
     },
     "desc": {
       "es": "Mario Kart 8...\nVer precio"
@@ -9889,13 +9889,13 @@
   },
   {
     "id": "756",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Minecraft: Story Mode - The Complete Adv...",
-      "es": "Wii/Wii U: Minecraft: Story Mode - The Complete Adv..."
+      "en": "Wii/WiiU: Minecraft: Story Mode - The Complete Adv...",
+      "es": "Wii/WiiU: Minecraft: Story Mode - The Complete Adv..."
     },
     "desc": {
       "es": "Minecraft: Story Mode - The Complete Adventure...\n48,81€"
@@ -9909,13 +9909,13 @@
   },
   {
     "id": "757",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Bateria compatible para Nintendo Wii U W...",
-      "es": "Wii/Wii U: Bateria compatible para Nintendo Wii U W..."
+      "en": "Wii/WiiU: Bateria compatible para Nintendo Wii U W...",
+      "es": "Wii/WiiU: Bateria compatible para Nintendo Wii U W..."
     },
     "desc": {
       "es": "Bateria compatible para Nintendo Wii U WUP-012 alt...\n20,99€"
@@ -9929,13 +9929,13 @@
   },
   {
     "id": "758",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii Party U [Importación Alemana]...",
-      "es": "Wii/Wii U: Wii Party U [Importación Alemana]..."
+      "en": "Wii/WiiU: Wii Party U [Importación Alemana]...",
+      "es": "Wii/WiiU: Wii Party U [Importación Alemana]..."
     },
     "desc": {
       "es": "Wii Party U [Importación Alemana]...\n77,71€"
@@ -9949,13 +9949,13 @@
   },
   {
     "id": "759",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Xenoblade Crónicas X...",
-      "es": "Wii/Wii U: Xenoblade Crónicas X..."
+      "en": "Wii/WiiU: Xenoblade Crónicas X...",
+      "es": "Wii/WiiU: Xenoblade Crónicas X..."
     },
     "desc": {
       "es": "Xenoblade Crónicas X...\n80,62€"
@@ -9969,13 +9969,13 @@
   },
   {
     "id": "760",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii Sports Club [Importación Francesa]...",
-      "es": "Wii/Wii U: Wii Sports Club [Importación Francesa]..."
+      "en": "Wii/WiiU: Wii Sports Club [Importación Francesa]...",
+      "es": "Wii/WiiU: Wii Sports Club [Importación Francesa]..."
     },
     "desc": {
       "es": "Wii Sports Club [Importación Francesa]...\n74,99€"
@@ -9989,13 +9989,13 @@
   },
   {
     "id": "761",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Xenoblade Chronicles X...",
-      "es": "Wii/Wii U: Wii U Xenoblade Chronicles X..."
+      "en": "Wii/WiiU: Wii U Xenoblade Chronicles X...",
+      "es": "Wii/WiiU: Wii U Xenoblade Chronicles X..."
     },
     "desc": {
       "es": "Wii U Xenoblade Chronicles X...\n8,26 €"
@@ -10009,13 +10009,13 @@
   },
   {
     "id": "762",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Paquete Consola, 32 Gb,...",
-      "es": "Wii/Wii U: Nintendo Wii U - Paquete Consola, 32 Gb,..."
+      "en": "Wii/WiiU: Nintendo Wii U - Paquete Consola, 32 Gb,...",
+      "es": "Wii/WiiU: Nintendo Wii U - Paquete Consola, 32 Gb,..."
     },
     "desc": {
       "es": "Nintendo Wii U - Paquete Consola, 32 Gb, Color Neg...\n229,95€"
@@ -10029,13 +10029,13 @@
   },
   {
     "id": "763",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Captain Toad: T.Tracker Selects...",
-      "es": "Wii/Wii U: Wii U Captain Toad: T.Tracker Selects..."
+      "en": "Wii/WiiU: Wii U Captain Toad: T.Tracker Selects...",
+      "es": "Wii/WiiU: Wii U Captain Toad: T.Tracker Selects..."
     },
     "desc": {
       "es": "Wii U Captain Toad: T.Tracker Selects...\n10,39 €"
@@ -10049,13 +10049,13 @@
   },
   {
     "id": "764",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Just Dance 2019 - Wii U NV Prix...",
-      "es": "Wii/Wii U: Just Dance 2019 - Wii U NV Prix..."
+      "en": "Wii/WiiU: Just Dance 2019 - Wii U NV Prix...",
+      "es": "Wii/WiiU: Just Dance 2019 - Wii U NV Prix..."
     },
     "desc": {
       "es": "Just Dance 2019 - Wii U NV Prix...\n26,72€"
@@ -10069,13 +10069,13 @@
   },
   {
     "id": "765",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Star Fox Guard Standard Alleman...",
-      "es": "Wii/Wii U: Nintendo Star Fox Guard Standard Alleman..."
+      "en": "Wii/WiiU: Nintendo Star Fox Guard Standard Alleman...",
+      "es": "Wii/WiiU: Nintendo Star Fox Guard Standard Alleman..."
     },
     "desc": {
       "es": "Nintendo Star Fox Guard Standard Allemand, Anglais...\n14,83€"
@@ -10089,13 +10089,13 @@
   },
   {
     "id": "766",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Injustice: Gods Among Us - Nintendo Wii ...",
-      "es": "Wii/Wii U: Injustice: Gods Among Us - Nintendo Wii ..."
+      "en": "Wii/WiiU: Injustice: Gods Among Us - Nintendo Wii ...",
+      "es": "Wii/WiiU: Injustice: Gods Among Us - Nintendo Wii ..."
     },
     "desc": {
       "es": "Injustice: Gods Among Us - Nintendo Wii U...\nVer precio"
@@ -10109,13 +10109,13 @@
   },
   {
     "id": "767",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo WIIU U WII REMOTE PLUS BLANCO (...",
-      "es": "Wii/Wii U: Nintendo WIIU U WII REMOTE PLUS BLANCO (..."
+      "en": "Wii/WiiU: Nintendo WIIU U WII REMOTE PLUS BLANCO (...",
+      "es": "Wii/WiiU: Nintendo WIIU U WII REMOTE PLUS BLANCO (..."
     },
     "desc": {
       "es": "Nintendo WIIU U WII REMOTE PLUS BLANCO (LOS E.E.U....\n72,69€"
@@ -10129,13 +10129,13 @@
   },
   {
     "id": "768",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Super Smash Bros., Wii U Standa...",
-      "es": "Wii/Wii U: Nintendo Super Smash Bros., Wii U Standa..."
+      "en": "Wii/WiiU: Nintendo Super Smash Bros., Wii U Standa...",
+      "es": "Wii/WiiU: Nintendo Super Smash Bros., Wii U Standa..."
     },
     "desc": {
       "es": "Nintendo Super Smash Bros., Wii U Standard Anglais...\n88,26€"
@@ -10149,13 +10149,13 @@
   },
   {
     "id": "769",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Ubisoft Assassin's Creed IV - Juego (Wii...",
-      "es": "Wii/Wii U: Ubisoft Assassin's Creed IV - Juego (Wii..."
+      "en": "Wii/WiiU: Ubisoft Assassin's Creed IV - Juego (Wii...",
+      "es": "Wii/WiiU: Ubisoft Assassin's Creed IV - Juego (Wii..."
     },
     "desc": {
       "es": "Ubisoft Assassin's Creed IV - Juego (Wii U, Acción...\nVer precio"
@@ -10169,13 +10169,13 @@
   },
   {
     "id": "770",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Paper Mario Color Splash [Importación Al...",
-      "es": "Wii/Wii U: Paper Mario Color Splash [Importación Al..."
+      "en": "Wii/WiiU: Paper Mario Color Splash [Importación Al...",
+      "es": "Wii/WiiU: Paper Mario Color Splash [Importación Al..."
     },
     "desc": {
       "es": "Paper Mario Color Splash [Importación Alemana]...\n63,23€"
@@ -10189,13 +10189,13 @@
   },
   {
     "id": "771",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Desconocido Just Dance 2018...",
-      "es": "Wii/Wii U: Desconocido Just Dance 2018..."
+      "en": "Wii/WiiU: Desconocido Just Dance 2018...",
+      "es": "Wii/WiiU: Desconocido Just Dance 2018..."
     },
     "desc": {
       "es": "Desconocido Just Dance 2018...\nVer precio"
@@ -10209,13 +10209,13 @@
   },
   {
     "id": "772",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Call of Duty: Black Ops 2...",
-      "es": "Wii/Wii U: Call of Duty: Black Ops 2..."
+      "en": "Wii/WiiU: Call of Duty: Black Ops 2...",
+      "es": "Wii/WiiU: Call of Duty: Black Ops 2..."
     },
     "desc": {
       "es": "Call of Duty: Black Ops 2...\nVer precio"
@@ -10229,13 +10229,13 @@
   },
   {
     "id": "773",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Tokyo Mirage Sessions #FE (Nintendo Wii ...",
-      "es": "Wii/Wii U: Tokyo Mirage Sessions #FE (Nintendo Wii ..."
+      "en": "Wii/WiiU: Tokyo Mirage Sessions #FE (Nintendo Wii ...",
+      "es": "Wii/WiiU: Tokyo Mirage Sessions #FE (Nintendo Wii ..."
     },
     "desc": {
       "es": "Tokyo Mirage Sessions #FE (Nintendo Wii U)...\n69,24€"
@@ -10249,13 +10249,13 @@
   },
   {
     "id": "774",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo 2320049 jeu vidéo Anglais, Ital...",
-      "es": "Wii/Wii U: Nintendo 2320049 jeu vidéo Anglais, Ital..."
+      "en": "Wii/WiiU: Nintendo 2320049 jeu vidéo Anglais, Ital...",
+      "es": "Wii/WiiU: Nintendo 2320049 jeu vidéo Anglais, Ital..."
     },
     "desc": {
       "es": "Nintendo 2320049 jeu vidéo Anglais, Italien Wii U...\n32,97€"
@@ -10269,13 +10269,13 @@
   },
   {
     "id": "775",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Activision Snoopys Grand Adventure - Jue...",
-      "es": "Wii/Wii U: Activision Snoopys Grand Adventure - Jue..."
+      "en": "Wii/WiiU: Activision Snoopys Grand Adventure - Jue...",
+      "es": "Wii/WiiU: Activision Snoopys Grand Adventure - Jue..."
     },
     "desc": {
       "es": "Activision Snoopys Grand Adventure - Juego (Wii U,...\nVer precio"
@@ -10289,13 +10289,13 @@
   },
   {
     "id": "776",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Legend of Kay. Nintendo WiiU...",
-      "es": "Wii/Wii U: Legend of Kay. Nintendo WiiU..."
+      "en": "Wii/WiiU: Legend of Kay. Nintendo WiiU...",
+      "es": "Wii/WiiU: Legend of Kay. Nintendo WiiU..."
     },
     "desc": {
       "es": "Legend of Kay. Nintendo WiiU...\nVer precio"
@@ -10309,13 +10309,13 @@
   },
   {
     "id": "777",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mario & Sonic en Juegos Olímpicos de Inv...",
-      "es": "Wii/Wii U: Mario & Sonic en Juegos Olímpicos de Inv..."
+      "en": "Wii/WiiU: Mario & Sonic en Juegos Olímpicos de Inv...",
+      "es": "Wii/WiiU: Mario & Sonic en Juegos Olímpicos de Inv..."
     },
     "desc": {
       "es": "Mario & Sonic en Juegos Olímpicos de Invierno Soch...\n59,95€"
@@ -10329,13 +10329,13 @@
   },
   {
     "id": "778",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Good - Who Wants to be a Millionaire for...",
-      "es": "Wii/Wii U: Good - Who Wants to be a Millionaire for..."
+      "en": "Wii/WiiU: Good - Who Wants to be a Millionaire for...",
+      "es": "Wii/WiiU: Good - Who Wants to be a Millionaire for..."
     },
     "desc": {
       "es": "Good - Who Wants to be a Millionaire for Nintendo ...\n29,86€"
@@ -10349,13 +10349,13 @@
   },
   {
     "id": "779",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Resident Evil: Revelations - Nintendo Wi...",
-      "es": "Wii/Wii U: Resident Evil: Revelations - Nintendo Wi..."
+      "en": "Wii/WiiU: Resident Evil: Revelations - Nintendo Wi...",
+      "es": "Wii/WiiU: Resident Evil: Revelations - Nintendo Wi..."
     },
     "desc": {
       "es": "Resident Evil: Revelations - Nintendo Wii U...\nVer precio"
@@ -10369,13 +10369,13 @@
   },
   {
     "id": "780",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: The Legend of Zelda: Breath of the Wild ...",
-      "es": "Wii/Wii U: The Legend of Zelda: Breath of the Wild ..."
+      "en": "Wii/WiiU: The Legend of Zelda: Breath of the Wild ...",
+      "es": "Wii/WiiU: The Legend of Zelda: Breath of the Wild ..."
     },
     "desc": {
       "es": "The Legend of Zelda: Breath of the Wild - Nintendo...\nVer precio"
@@ -10389,13 +10389,13 @@
   },
   {
     "id": "781",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mass Effect - 3rd - Nintendo Wii U...",
-      "es": "Wii/Wii U: Mass Effect - 3rd - Nintendo Wii U..."
+      "en": "Wii/WiiU: Mass Effect - 3rd - Nintendo Wii U...",
+      "es": "Wii/WiiU: Mass Effect - 3rd - Nintendo Wii U..."
     },
     "desc": {
       "es": "Mass Effect - 3rd - Nintendo Wii U...\nVer precio"
@@ -10409,13 +10409,13 @@
   },
   {
     "id": "782",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U - LEGO City Undercover U...",
-      "es": "Wii/Wii U: Wii U - LEGO City Undercover U..."
+      "en": "Wii/WiiU: Wii U - LEGO City Undercover U...",
+      "es": "Wii/WiiU: Wii U - LEGO City Undercover U..."
     },
     "desc": {
       "es": "Wii U - LEGO City Undercover U...\n39,70€"
@@ -10429,13 +10429,13 @@
   },
   {
     "id": "783",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Just Dance - Nintendo Wii U...",
-      "es": "Wii/Wii U: Just Dance - Nintendo Wii U..."
+      "en": "Wii/WiiU: Just Dance - Nintendo Wii U...",
+      "es": "Wii/WiiU: Just Dance - Nintendo Wii U..."
     },
     "desc": {
       "es": "Just Dance - Nintendo Wii U...\nVer precio"
@@ -10449,13 +10449,13 @@
   },
   {
     "id": "784",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Penguins of Madagascar...",
-      "es": "Wii/Wii U: Penguins of Madagascar..."
+      "en": "Wii/WiiU: Penguins of Madagascar...",
+      "es": "Wii/WiiU: Penguins of Madagascar..."
     },
     "desc": {
       "es": "Penguins of Madagascar...\nVer precio"
@@ -10469,13 +10469,13 @@
   },
   {
     "id": "785",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Hunter´s Trofeo 2 Wii U...",
-      "es": "Wii/Wii U: Hunter´s Trofeo 2 Wii U..."
+      "en": "Wii/WiiU: Hunter´s Trofeo 2 Wii U...",
+      "es": "Wii/WiiU: Hunter´s Trofeo 2 Wii U..."
     },
     "desc": {
       "es": "Hunter´s Trofeo 2 Wii U...\n39,95€"
@@ -10489,13 +10489,13 @@
   },
   {
     "id": "786",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Sing Party with Wii-U Microphone...",
-      "es": "Wii/Wii U: Wii U Sing Party with Wii-U Microphone..."
+      "en": "Wii/WiiU: Wii U Sing Party with Wii-U Microphone...",
+      "es": "Wii/WiiU: Wii U Sing Party with Wii-U Microphone..."
     },
     "desc": {
       "es": "Wii U Sing Party with Wii-U Microphone...\nVer precio"
@@ -10509,13 +10509,13 @@
   },
   {
     "id": "787",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Donkey Kong Country: Tropical Freeze...",
-      "es": "Wii/Wii U: Donkey Kong Country: Tropical Freeze..."
+      "en": "Wii/WiiU: Donkey Kong Country: Tropical Freeze...",
+      "es": "Wii/WiiU: Donkey Kong Country: Tropical Freeze..."
     },
     "desc": {
       "es": "Donkey Kong Country: Tropical Freeze...\nVer precio"
@@ -10529,13 +10529,13 @@
   },
   {
     "id": "788",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Rayman Legends...",
-      "es": "Wii/Wii U: Rayman Legends..."
+      "en": "Wii/WiiU: Rayman Legends...",
+      "es": "Wii/WiiU: Rayman Legends..."
     },
     "desc": {
       "es": "Rayman Legends...\nVer precio"
@@ -10549,13 +10549,13 @@
   },
   {
     "id": "789",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Pokken Tournament...",
-      "es": "Wii/Wii U: Pokken Tournament..."
+      "en": "Wii/WiiU: Pokken Tournament...",
+      "es": "Wii/WiiU: Pokken Tournament..."
     },
     "desc": {
       "es": "Pokken Tournament...\n37,54 €"
@@ -10569,13 +10569,13 @@
   },
   {
     "id": "790",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cabelas Dangerous Hunts 2013 Nla...",
-      "es": "Wii/Wii U: Cabelas Dangerous Hunts 2013 Nla..."
+      "en": "Wii/WiiU: Cabelas Dangerous Hunts 2013 Nla...",
+      "es": "Wii/WiiU: Cabelas Dangerous Hunts 2013 Nla..."
     },
     "desc": {
       "es": "Cabelas Dangerous Hunts 2013 Nla...\nVer precio"
@@ -10589,13 +10589,13 @@
   },
   {
     "id": "791",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Just Dance 2016 Gold Edition-Nla...",
-      "es": "Wii/Wii U: Just Dance 2016 Gold Edition-Nla..."
+      "en": "Wii/WiiU: Just Dance 2016 Gold Edition-Nla...",
+      "es": "Wii/WiiU: Just Dance 2016 Gold Edition-Nla..."
     },
     "desc": {
       "es": "Just Dance 2016 Gold Edition-Nla...\nVer precio"
@@ -10609,13 +10609,13 @@
   },
   {
     "id": "792",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Activision Wipeout 3, Wii U - Juego (Wii...",
-      "es": "Wii/Wii U: Activision Wipeout 3, Wii U - Juego (Wii..."
+      "en": "Wii/WiiU: Activision Wipeout 3, Wii U - Juego (Wii...",
+      "es": "Wii/WiiU: Activision Wipeout 3, Wii U - Juego (Wii..."
     },
     "desc": {
       "es": "Activision Wipeout 3, Wii U - Juego (Wii U)...\nVer precio"
@@ -10629,13 +10629,13 @@
   },
   {
     "id": "793",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cabela's Adventure Camp. Nintendo Wii...",
-      "es": "Wii/Wii U: Cabela's Adventure Camp. Nintendo Wii..."
+      "en": "Wii/WiiU: Cabela's Adventure Camp. Nintendo Wii...",
+      "es": "Wii/WiiU: Cabela's Adventure Camp. Nintendo Wii..."
     },
     "desc": {
       "es": "Cabela's Adventure Camp. Nintendo Wii...\nVer precio"
@@ -10649,13 +10649,13 @@
   },
   {
     "id": "794",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Pac-Man & the Ghostly Adventures 2...",
-      "es": "Wii/Wii U: Pac-Man & the Ghostly Adventures 2..."
+      "en": "Wii/WiiU: Pac-Man & the Ghostly Adventures 2...",
+      "es": "Wii/WiiU: Pac-Man & the Ghostly Adventures 2..."
     },
     "desc": {
       "es": "Pac-Man & the Ghostly Adventures 2...\nVer precio"
@@ -10669,13 +10669,13 @@
   },
   {
     "id": "795",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 3DS Mario & Luigi: Super Star Saga + Bow...",
-      "es": "Wii/Wii U: 3DS Mario & Luigi: Super Star Saga + Bow..."
+      "en": "Wii/WiiU: 3DS Mario & Luigi: Super Star Saga + Bow...",
+      "es": "Wii/WiiU: 3DS Mario & Luigi: Super Star Saga + Bow..."
     },
     "desc": {
       "es": "3DS Mario & Luigi: Super Star Saga + Bowsers Scher...\n59,90€"
@@ -10689,13 +10689,13 @@
   },
   {
     "id": "796",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Zumba Fitness World Party...",
-      "es": "Wii/Wii U: Zumba Fitness World Party..."
+      "en": "Wii/WiiU: Zumba Fitness World Party...",
+      "es": "Wii/WiiU: Zumba Fitness World Party..."
     },
     "desc": {
       "es": "Zumba Fitness World Party...\nVer precio"
@@ -10709,13 +10709,13 @@
   },
   {
     "id": "797",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: My Nintendo Wii U...",
-      "es": "Wii/Wii U: My Nintendo Wii U..."
+      "en": "Wii/WiiU: My Nintendo Wii U...",
+      "es": "Wii/WiiU: My Nintendo Wii U..."
     },
     "desc": {
       "es": "My Nintendo Wii U...\nVer precio"
@@ -10729,13 +10729,13 @@
   },
   {
     "id": "798",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: TechKen Joystick de control remoto con c...",
-      "es": "Wii/Wii U: TechKen Joystick de control remoto con c..."
+      "en": "Wii/WiiU: TechKen Joystick de control remoto con c...",
+      "es": "Wii/WiiU: TechKen Joystick de control remoto con c..."
     },
     "desc": {
       "es": "TechKen Joystick de control remoto con correa de m...\n44,99€"
@@ -10749,13 +10749,13 @@
   },
   {
     "id": "799",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Ubisoft ESPN Sports Connection, Wii U - ...",
-      "es": "Wii/Wii U: Ubisoft ESPN Sports Connection, Wii U - ..."
+      "en": "Wii/WiiU: Ubisoft ESPN Sports Connection, Wii U - ...",
+      "es": "Wii/WiiU: Ubisoft ESPN Sports Connection, Wii U - ..."
     },
     "desc": {
       "es": "Ubisoft ESPN Sports Connection, Wii U - Juego (Wii...\nVer precio"
@@ -10769,13 +10769,13 @@
   },
   {
     "id": "800",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Let's Sing 2018 mit deutschen Hits + 2 M...",
-      "es": "Wii/Wii U: Let's Sing 2018 mit deutschen Hits + 2 M..."
+      "en": "Wii/WiiU: Let's Sing 2018 mit deutschen Hits + 2 M...",
+      "es": "Wii/WiiU: Let's Sing 2018 mit deutschen Hits + 2 M..."
     },
     "desc": {
       "es": "Let's Sing 2018 mit deutschen Hits + 2 Mikrofone (...\nVer precio"
@@ -10789,13 +10789,13 @@
   },
   {
     "id": "801",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: REY Mando Classic Controller para Ninten...",
-      "es": "Wii/Wii U: REY Mando Classic Controller para Ninten..."
+      "en": "Wii/WiiU: REY Mando Classic Controller para Ninten...",
+      "es": "Wii/WiiU: REY Mando Classic Controller para Ninten..."
     },
     "desc": {
       "es": "REY Mando Classic Controller para Nintendo Wii/Wii...\n19,99€"
@@ -10809,13 +10809,13 @@
   },
   {
     "id": "802",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Amiibo Shulk (Super Smash Bros. Series) ...",
-      "es": "Wii/Wii U: Amiibo Shulk (Super Smash Bros. Series) ..."
+      "en": "Wii/WiiU: Amiibo Shulk (Super Smash Bros. Series) ...",
+      "es": "Wii/WiiU: Amiibo Shulk (Super Smash Bros. Series) ..."
     },
     "desc": {
       "es": "Amiibo Shulk (Super Smash Bros. Series) for Ninten...\n52,19€"
@@ -10829,13 +10829,13 @@
   },
   {
     "id": "803",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co..."
+      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
+      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
     },
     "desc": {
       "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n10,95€"
@@ -10849,13 +10849,13 @@
   },
   {
     "id": "804",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co..."
+      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
+      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
     },
     "desc": {
       "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
@@ -10869,13 +10869,13 @@
   },
   {
     "id": "805",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co..."
+      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
+      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
     },
     "desc": {
       "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
@@ -10889,13 +10889,13 @@
   },
   {
     "id": "806",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co..."
+      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
+      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
     },
     "desc": {
       "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
@@ -10909,13 +10909,13 @@
   },
   {
     "id": "807",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/Wii U: ivoler Funda Magnética para iPhone 14 co..."
+      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
+      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
     },
     "desc": {
       "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
@@ -10929,13 +10929,13 @@
   },
   {
     "id": "808",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U GamePad スタンドセット (WUP-A-DTKA)...",
-      "es": "Wii/Wii U: Wii U GamePad スタンドセット (WUP-A-DTKA)..."
+      "en": "Wii/WiiU: Wii U GamePad スタンドセット (WUP-A-DTKA)...",
+      "es": "Wii/WiiU: Wii U GamePad スタンドセット (WUP-A-DTKA)..."
     },
     "desc": {
       "es": "Wii U GamePad スタンドセット (WUP-A-DTKA)...\n44,74€"
@@ -10949,13 +10949,13 @@
   },
   {
     "id": "809",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Super Smash Bros Wii U Cheat Code Ebook ...",
-      "es": "Wii/Wii U: Super Smash Bros Wii U Cheat Code Ebook ..."
+      "en": "Wii/WiiU: Super Smash Bros Wii U Cheat Code Ebook ...",
+      "es": "Wii/WiiU: Super Smash Bros Wii U Cheat Code Ebook ..."
     },
     "desc": {
       "es": "Super Smash Bros Wii U Cheat Code Ebook (English E...\nVer precio"
@@ -10969,13 +10969,13 @@
   },
   {
     "id": "810",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: UCOGU Konsolenguide Wii U 2023: Ready to...",
-      "es": "Wii/Wii U: UCOGU Konsolenguide Wii U 2023: Ready to..."
+      "en": "Wii/WiiU: UCOGU Konsolenguide Wii U 2023: Ready to...",
+      "es": "Wii/WiiU: UCOGU Konsolenguide Wii U 2023: Ready to..."
     },
     "desc": {
       "es": "UCOGU Konsolenguide Wii U 2023: Ready to collect -...\nVer precio"
@@ -10989,13 +10989,13 @@
   },
   {
     "id": "811",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Amiibo Murabito - Super Smash Bros. Seri...",
-      "es": "Wii/Wii U: Amiibo Murabito - Super Smash Bros. Seri..."
+      "en": "Wii/WiiU: Amiibo Murabito - Super Smash Bros. Seri...",
+      "es": "Wii/WiiU: Amiibo Murabito - Super Smash Bros. Seri..."
     },
     "desc": {
       "es": "Amiibo Murabito - Super Smash Bros. Series Ver. [W...\n29,90€"
@@ -11009,13 +11009,13 @@
   },
   {
     "id": "812",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Guide: The Unwritten Wii U Manual ...",
-      "es": "Wii/Wii U: Wii U Guide: The Unwritten Wii U Manual ..."
+      "en": "Wii/WiiU: Wii U Guide: The Unwritten Wii U Manual ...",
+      "es": "Wii/WiiU: Wii U Guide: The Unwritten Wii U Manual ..."
     },
     "desc": {
       "es": "Wii U Guide: The Unwritten Wii U Manual (English E...\nVer precio"
@@ -11029,13 +11029,13 @@
   },
   {
     "id": "813",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Monster Hunter 4 Ultimate Wii U, 3DS, Qu...",
-      "es": "Wii/Wii U: Monster Hunter 4 Ultimate Wii U, 3DS, Qu..."
+      "en": "Wii/WiiU: Monster Hunter 4 Ultimate Wii U, 3DS, Qu...",
+      "es": "Wii/WiiU: Monster Hunter 4 Ultimate Wii U, 3DS, Qu..."
     },
     "desc": {
       "es": "Monster Hunter 4 Ultimate Wii U, 3DS, Quests, Wiki...\nVer precio"
@@ -11049,13 +11049,13 @@
   },
   {
     "id": "814",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Amiibo Little Mac - Super Smash Bros. Se...",
-      "es": "Wii/Wii U: Amiibo Little Mac - Super Smash Bros. Se..."
+      "en": "Wii/WiiU: Amiibo Little Mac - Super Smash Bros. Se...",
+      "es": "Wii/WiiU: Amiibo Little Mac - Super Smash Bros. Se..."
     },
     "desc": {
       "es": "Amiibo Little Mac - Super Smash Bros. Series Ver. ...\n25,62€"
@@ -11069,13 +11069,13 @@
   },
   {
     "id": "815",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii Pocket Guide, The...",
-      "es": "Wii/Wii U: Nintendo Wii Pocket Guide, The..."
+      "en": "Wii/WiiU: Nintendo Wii Pocket Guide, The...",
+      "es": "Wii/WiiU: Nintendo Wii Pocket Guide, The..."
     },
     "desc": {
       "es": "Nintendo Wii Pocket Guide, The...\nVer precio"
@@ -11089,13 +11089,13 @@
   },
   {
     "id": "816",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Amiibo Duck Shoot (Super Smash ...",
-      "es": "Wii/Wii U: Nintendo Amiibo Duck Shoot (Super Smash ..."
+      "en": "Wii/WiiU: Nintendo Amiibo Duck Shoot (Super Smash ...",
+      "es": "Wii/WiiU: Nintendo Amiibo Duck Shoot (Super Smash ..."
     },
     "desc": {
       "es": "Nintendo Amiibo Duck Shoot (Super Smash Bros Serie...\n24,90€"
@@ -11109,13 +11109,13 @@
   },
   {
     "id": "817",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Detonado Não-Oficial De Super Smash Bros...",
-      "es": "Wii/Wii U: Detonado Não-Oficial De Super Smash Bros..."
+      "en": "Wii/WiiU: Detonado Não-Oficial De Super Smash Bros...",
+      "es": "Wii/WiiU: Detonado Não-Oficial De Super Smash Bros..."
     },
     "desc": {
       "es": "Detonado Não-Oficial De Super Smash Bros Wii U, Di...\nVer precio"
@@ -11129,13 +11129,13 @@
   },
   {
     "id": "818",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: OSTENT Stylus Pen táctil de Color de plá...",
-      "es": "Wii/Wii U: OSTENT Stylus Pen táctil de Color de plá..."
+      "en": "Wii/WiiU: OSTENT Stylus Pen táctil de Color de plá...",
+      "es": "Wii/WiiU: OSTENT Stylus Pen táctil de Color de plá..."
     },
     "desc": {
       "es": "OSTENT Stylus Pen táctil de Color de plástico Comp...\n8,69€"
@@ -11149,13 +11149,13 @@
   },
   {
     "id": "819",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Amiibo Captain Falcon - Super Smash Bros...",
-      "es": "Wii/Wii U: Amiibo Captain Falcon - Super Smash Bros..."
+      "en": "Wii/WiiU: Amiibo Captain Falcon - Super Smash Bros...",
+      "es": "Wii/WiiU: Amiibo Captain Falcon - Super Smash Bros..."
     },
     "desc": {
       "es": "Amiibo Captain Falcon - Super Smash Bros. Series V...\n29,90€"
@@ -11169,13 +11169,13 @@
   },
   {
     "id": "820",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: SATKIT Mando Pro Inalámbrico Compatible ...",
-      "es": "Wii/Wii U: SATKIT Mando Pro Inalámbrico Compatible ..."
+      "en": "Wii/WiiU: SATKIT Mando Pro Inalámbrico Compatible ...",
+      "es": "Wii/WiiU: SATKIT Mando Pro Inalámbrico Compatible ..."
     },
     "desc": {
       "es": "SATKIT Mando Pro Inalámbrico Compatible con Consol...\n18,20€"
@@ -11189,13 +11189,13 @@
   },
   {
     "id": "821",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable de carga USB, compatible con Wii U...",
-      "es": "Wii/Wii U: Cable de carga USB, compatible con Wii U..."
+      "en": "Wii/WiiU: Cable de carga USB, compatible con Wii U...",
+      "es": "Wii/WiiU: Cable de carga USB, compatible con Wii U..."
     },
     "desc": {
       "es": "Cable de carga USB, compatible con Wii U Gamepad...\n6,16€"
@@ -11209,13 +11209,13 @@
   },
   {
     "id": "822",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii Uゲームパッド用「TPUケース」...",
-      "es": "Wii/Wii U: Wii Uゲームパッド用「TPUケース」..."
+      "en": "Wii/WiiU: Wii Uゲームパッド用「TPUケース」...",
+      "es": "Wii/WiiU: Wii Uゲームパッド用「TPUケース」..."
     },
     "desc": {
       "es": "Wii Uゲームパッド用「TPUケース」...\n11,99€"
@@ -11229,13 +11229,13 @@
   },
   {
     "id": "823",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Super Smash Bros amiibo Lucina ...",
-      "es": "Wii/Wii U: Nintendo Super Smash Bros amiibo Lucina ..."
+      "en": "Wii/WiiU: Nintendo Super Smash Bros amiibo Lucina ...",
+      "es": "Wii/WiiU: Nintendo Super Smash Bros amiibo Lucina ..."
     },
     "desc": {
       "es": "Nintendo Super Smash Bros amiibo Lucina No. 31 (Ni...\n29,90€"
@@ -11249,13 +11249,13 @@
   },
   {
     "id": "824",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería para Nintendo Wii U Gamepad WUP-...",
-      "es": "Wii/Wii U: Batería para Nintendo Wii U Gamepad WUP-..."
+      "en": "Wii/WiiU: Batería para Nintendo Wii U Gamepad WUP-...",
+      "es": "Wii/WiiU: Batería para Nintendo Wii U Gamepad WUP-..."
     },
     "desc": {
       "es": "Batería para Nintendo Wii U Gamepad WUP-010 WUP-01...\n19,99€"
@@ -11269,13 +11269,13 @@
   },
   {
     "id": "825",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CYBER・プロテクトケース (Wii U用) クリアブラック...",
-      "es": "Wii/Wii U: CYBER・プロテクトケース (Wii U用) クリアブラック..."
+      "en": "Wii/WiiU: CYBER・プロテクトケース (Wii U用) クリアブラック...",
+      "es": "Wii/WiiU: CYBER・プロテクトケース (Wii U用) クリアブラック..."
     },
     "desc": {
       "es": "CYBER・プロテクトケース (Wii U用) クリアブラック...\n58,15€"
@@ -11289,13 +11289,13 @@
   },
   {
     "id": "826",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: RuiJOTWAT - Joystick de repuesto para ma...",
-      "es": "Wii/Wii U: RuiJOTWAT - Joystick de repuesto para ma..."
+      "en": "Wii/WiiU: RuiJOTWAT - Joystick de repuesto para ma...",
+      "es": "Wii/WiiU: RuiJOTWAT - Joystick de repuesto para ma..."
     },
     "desc": {
       "es": "RuiJOTWAT - Joystick de repuesto para mando de jue...\n10,99€"
@@ -11309,13 +11309,13 @@
   },
   {
     "id": "827",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Villager amiibo (Super Smash Bros Series...",
-      "es": "Wii/Wii U: Villager amiibo (Super Smash Bros Series..."
+      "en": "Wii/WiiU: Villager amiibo (Super Smash Bros Series...",
+      "es": "Wii/WiiU: Villager amiibo (Super Smash Bros Series..."
     },
     "desc": {
       "es": "Villager amiibo (Super Smash Bros Series) by Ninte...\n29,90€"
@@ -11329,13 +11329,13 @@
   },
   {
     "id": "828",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 【Wii U】充電スタンド対応 シリコン もち肌カバー for Wii U Ga...",
-      "es": "Wii/Wii U: 【Wii U】充電スタンド対応 シリコン もち肌カバー for Wii U Ga..."
+      "en": "Wii/WiiU: 【Wii U】充電スタンド対応 シリコン もち肌カバー for Wii U Ga...",
+      "es": "Wii/WiiU: 【Wii U】充電スタンド対応 シリコン もち肌カバー for Wii U Ga..."
     },
     "desc": {
       "es": "【Wii U】充電スタンド対応 シリコン もち肌カバー for Wii U GamePad ホワイト...\n51,15€"
@@ -11349,13 +11349,13 @@
   },
   {
     "id": "829",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto para Wii U Gamepad C...",
-      "es": "Wii/Wii U: Batería de repuesto para Wii U Gamepad C..."
+      "en": "Wii/WiiU: Batería de repuesto para Wii U Gamepad C...",
+      "es": "Wii/WiiU: Batería de repuesto para Wii U Gamepad C..."
     },
     "desc": {
       "es": "Batería de repuesto para Wii U Gamepad Controller ...\n16,99€"
@@ -11369,16 +11369,16 @@
   },
   {
     "id": "830",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Naked Mando a Distancia de Repuesto para...",
-      "es": "Wii/Wii U: Naked Mando a Distancia de Repuesto para..."
+      "en": "Wii/WiiU: Naked Mando a Distancia de Repuesto para...",
+      "es": "Wii/WiiU: Naked Mando a Distancia de Repuesto para..."
     },
     "desc": {
-      "es": "Naked Mando a Distancia de Repuesto para Wii/Wii U...\n41,99€"
+      "es": "Naked Mando a Distancia de Repuesto para Wii/WiiU...\n41,99€"
     },
     "price": "41,99€",
     "img": "https://m.media-amazon.com/images/I/715Dg6Z9sLL._AC_SX679_.jpg",
@@ -11389,13 +11389,13 @@
   },
   {
     "id": "831",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Gamepad Batería, 2200mAh Batería R...",
-      "es": "Wii/Wii U: Wii U Gamepad Batería, 2200mAh Batería R..."
+      "en": "Wii/WiiU: Wii U Gamepad Batería, 2200mAh Batería R...",
+      "es": "Wii/WiiU: Wii U Gamepad Batería, 2200mAh Batería R..."
     },
     "desc": {
       "es": "Wii U Gamepad Batería, 2200mAh Batería Recargable ...\n17,49€"
@@ -11409,13 +11409,13 @@
   },
   {
     "id": "832",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Paquete de 2 controladores Wii, control ...",
-      "es": "Wii/Wii U: Paquete de 2 controladores Wii, control ..."
+      "en": "Wii/WiiU: Paquete de 2 controladores Wii, control ...",
+      "es": "Wii/WiiU: Paquete de 2 controladores Wii, control ..."
     },
     "desc": {
       "es": "Paquete de 2 controladores Wii, control remoto Wii...\n30,99€"
@@ -11429,13 +11429,13 @@
   },
   {
     "id": "833",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CHILDMORY Cable Cargador USB Compatible ...",
-      "es": "Wii/Wii U: CHILDMORY Cable Cargador USB Compatible ..."
+      "en": "Wii/WiiU: CHILDMORY Cable Cargador USB Compatible ...",
+      "es": "Wii/WiiU: CHILDMORY Cable Cargador USB Compatible ..."
     },
     "desc": {
       "es": "CHILDMORY Cable Cargador USB Compatible para Wii U...\n5,09€"
@@ -11449,13 +11449,13 @@
   },
   {
     "id": "834",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: savvies Protector Pantalla para Nintendo...",
-      "es": "Wii/Wii U: savvies Protector Pantalla para Nintendo..."
+      "en": "Wii/WiiU: savvies Protector Pantalla para Nintendo...",
+      "es": "Wii/WiiU: savvies Protector Pantalla para Nintendo..."
     },
     "desc": {
       "es": "savvies Protector Pantalla para Nintendo Wii U Gam...\n5,59€"
@@ -11469,13 +11469,13 @@
   },
   {
     "id": "835",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: BROTECT Protector Pantalla Anti-Reflejos...",
-      "es": "Wii/Wii U: BROTECT Protector Pantalla Anti-Reflejos..."
+      "en": "Wii/WiiU: BROTECT Protector Pantalla Anti-Reflejos...",
+      "es": "Wii/WiiU: BROTECT Protector Pantalla Anti-Reflejos..."
     },
     "desc": {
       "es": "BROTECT Protector Pantalla Anti-Reflejos para Nint...\n9,29€"
@@ -11489,13 +11489,13 @@
   },
   {
     "id": "836",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mando Nunchuck Rojo para Nintendo Wii y ...",
-      "es": "Wii/Wii U: Mando Nunchuck Rojo para Nintendo Wii y ..."
+      "en": "Wii/WiiU: Mando Nunchuck Rojo para Nintendo Wii y ...",
+      "es": "Wii/WiiU: Mando Nunchuck Rojo para Nintendo Wii y ..."
     },
     "desc": {
       "es": "Mando Nunchuck Rojo para Nintendo Wii y Nintendo W...\n14,99€"
@@ -11509,13 +11509,13 @@
   },
   {
     "id": "837",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Xahpower Cargador para Wii U Gamepad, Ca...",
-      "es": "Wii/Wii U: Xahpower Cargador para Wii U Gamepad, Ca..."
+      "en": "Wii/WiiU: Xahpower Cargador para Wii U Gamepad, Ca...",
+      "es": "Wii/WiiU: Xahpower Cargador para Wii U Gamepad, Ca..."
     },
     "desc": {
       "es": "Xahpower Cargador para Wii U Gamepad, Cargador de ...\n11,99€"
@@ -11529,13 +11529,13 @@
   },
   {
     "id": "838",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: upscreen Protector Pantalla para Nintend...",
-      "es": "Wii/Wii U: upscreen Protector Pantalla para Nintend..."
+      "en": "Wii/WiiU: upscreen Protector Pantalla para Nintend...",
+      "es": "Wii/WiiU: upscreen Protector Pantalla para Nintend..."
     },
     "desc": {
       "es": "upscreen Protector Pantalla para Nintendo Wii U Ga...\n13,49€"
@@ -11549,13 +11549,13 @@
   },
   {
     "id": "839",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mcbazel Stick Analógico con Junta de PCB...",
-      "es": "Wii/Wii U: Mcbazel Stick Analógico con Junta de PCB..."
+      "en": "Wii/WiiU: Mcbazel Stick Analógico con Junta de PCB...",
+      "es": "Wii/WiiU: Mcbazel Stick Analógico con Junta de PCB..."
     },
     "desc": {
       "es": "Mcbazel Stick Analógico con Junta de PCB para Nint...\n11,99€"
@@ -11569,13 +11569,13 @@
   },
   {
     "id": "840",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: OSTENT Reemplazo de Fuente de alimentaci...",
-      "es": "Wii/Wii U: OSTENT Reemplazo de Fuente de alimentaci..."
+      "en": "Wii/WiiU: OSTENT Reemplazo de Fuente de alimentaci...",
+      "es": "Wii/WiiU: OSTENT Reemplazo de Fuente de alimentaci..."
     },
     "desc": {
       "es": "OSTENT Reemplazo de Fuente de alimentación del Ada...\n15,79€"
@@ -11589,13 +11589,13 @@
   },
   {
     "id": "841",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto para Wii U Gamepad 3...",
-      "es": "Wii/Wii U: Batería de repuesto para Wii U Gamepad 3..."
+      "en": "Wii/WiiU: Batería de repuesto para Wii U Gamepad 3...",
+      "es": "Wii/WiiU: Batería de repuesto para Wii U Gamepad 3..."
     },
     "desc": {
       "es": "Batería de repuesto para Wii U Gamepad 3.7V 3600mA...\n21,30€"
@@ -11609,13 +11609,13 @@
   },
   {
     "id": "842",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CHILDMORY Cable de cargador USB Cable de...",
-      "es": "Wii/Wii U: CHILDMORY Cable de cargador USB Cable de..."
+      "en": "Wii/WiiU: CHILDMORY Cable de cargador USB Cable de...",
+      "es": "Wii/WiiU: CHILDMORY Cable de cargador USB Cable de..."
     },
     "desc": {
       "es": "CHILDMORY Cable de cargador USB Cable de alimentac...\n3,89€"
@@ -11629,13 +11629,13 @@
   },
   {
     "id": "843",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CHILDMORY - Adaptador de corriente para ...",
-      "es": "Wii/Wii U: CHILDMORY - Adaptador de corriente para ..."
+      "en": "Wii/WiiU: CHILDMORY - Adaptador de corriente para ...",
+      "es": "Wii/WiiU: CHILDMORY - Adaptador de corriente para ..."
     },
     "desc": {
       "es": "CHILDMORY - Adaptador de corriente para Wii U Game...\n27,99€"
@@ -11649,13 +11649,13 @@
   },
   {
     "id": "844",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Mando a distancia Wii con Nunch...",
-      "es": "Wii/Wii U: Leikurvo Mando a distancia Wii con Nunch..."
+      "en": "Wii/WiiU: Leikurvo Mando a distancia Wii con Nunch...",
+      "es": "Wii/WiiU: Leikurvo Mando a distancia Wii con Nunch..."
     },
     "desc": {
       "es": "Leikurvo Mando a distancia Wii con Nunchuck, mando...\n21,84€"
@@ -11669,13 +11669,13 @@
   },
   {
     "id": "845",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: DTianSir Juego de 4 volantes y pistola z...",
-      "es": "Wii/Wii U: DTianSir Juego de 4 volantes y pistola z..."
+      "en": "Wii/WiiU: DTianSir Juego de 4 volantes y pistola z...",
+      "es": "Wii/WiiU: DTianSir Juego de 4 volantes y pistola z..."
     },
     "desc": {
       "es": "DTianSir Juego de 4 volantes y pistola zapper Wii,...\n34,76€"
@@ -11689,13 +11689,13 @@
   },
   {
     "id": "846",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Controlador para Game Cube, SONVIEE con ...",
-      "es": "Wii/Wii U: Controlador para Game Cube, SONVIEE con ..."
+      "en": "Wii/WiiU: Controlador para Game Cube, SONVIEE con ...",
+      "es": "Wii/WiiU: Controlador para Game Cube, SONVIEE con ..."
     },
     "desc": {
       "es": "Controlador para Game Cube, SONVIEE con cable NGC ...\n28,56€"
@@ -11709,13 +11709,13 @@
   },
   {
     "id": "847",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto WUP-001 compatible c...",
-      "es": "Wii/Wii U: Batería de repuesto WUP-001 compatible c..."
+      "en": "Wii/WiiU: Batería de repuesto WUP-001 compatible c...",
+      "es": "Wii/WiiU: Batería de repuesto WUP-001 compatible c..."
     },
     "desc": {
       "es": "Batería de repuesto WUP-001 compatible con Nintend...\n21,05€"
@@ -11729,13 +11729,13 @@
   },
   {
     "id": "848",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Barra de sensor USB para Wii y Wii U, ba...",
-      "es": "Wii/Wii U: Barra de sensor USB para Wii y Wii U, ba..."
+      "en": "Wii/WiiU: Barra de sensor USB para Wii y Wii U, ba...",
+      "es": "Wii/WiiU: Barra de sensor USB para Wii y Wii U, ba..."
     },
     "desc": {
       "es": "Barra de sensor USB para Wii y Wii U, barra platea...\n12,99€"
@@ -11749,13 +11749,13 @@
   },
   {
     "id": "849",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: PORTHOLIC - Convertidor de Wii a HDMI 10...",
-      "es": "Wii/Wii U: PORTHOLIC - Convertidor de Wii a HDMI 10..."
+      "en": "Wii/WiiU: PORTHOLIC - Convertidor de Wii a HDMI 10...",
+      "es": "Wii/WiiU: PORTHOLIC - Convertidor de Wii a HDMI 10..."
     },
     "desc": {
       "es": "PORTHOLIC - Convertidor de Wii a HDMI 1080P para d...\n10,49€"
@@ -11769,13 +11769,13 @@
   },
   {
     "id": "850",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Lioncast 10586 - Micrófono para Wii (Com...",
-      "es": "Wii/Wii U: Lioncast 10586 - Micrófono para Wii (Com..."
+      "en": "Wii/WiiU: Lioncast 10586 - Micrófono para Wii (Com...",
+      "es": "Wii/WiiU: Lioncast 10586 - Micrófono para Wii (Com..."
     },
     "desc": {
       "es": "Lioncast 10586 - Micrófono para Wii (Compatible co...\n24,99€"
@@ -11789,13 +11789,13 @@
   },
   {
     "id": "851",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mcbazel Stick Analógico con Junta de PCB...",
-      "es": "Wii/Wii U: Mcbazel Stick Analógico con Junta de PCB..."
+      "en": "Wii/WiiU: Mcbazel Stick Analógico con Junta de PCB...",
+      "es": "Wii/WiiU: Mcbazel Stick Analógico con Junta de PCB..."
     },
     "desc": {
       "es": "Mcbazel Stick Analógico con Junta de PCB, Destorni...\n12,49€"
@@ -11809,13 +11809,13 @@
   },
   {
     "id": "852",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: subtel, 5V Cargador Compatible con Ninte...",
-      "es": "Wii/Wii U: subtel, 5V Cargador Compatible con Ninte..."
+      "en": "Wii/WiiU: subtel, 5V Cargador Compatible con Ninte...",
+      "es": "Wii/WiiU: subtel, 5V Cargador Compatible con Ninte..."
     },
     "desc": {
       "es": "subtel, 5V Cargador Compatible con Nintendo Wii U ...\n14,89€"
@@ -11829,13 +11829,13 @@
   },
   {
     "id": "853",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: AFUNTA Nunchuck Controllers para Nintend...",
-      "es": "Wii/Wii U: AFUNTA Nunchuck Controllers para Nintend..."
+      "en": "Wii/WiiU: AFUNTA Nunchuck Controllers para Nintend...",
+      "es": "Wii/WiiU: AFUNTA Nunchuck Controllers para Nintend..."
     },
     "desc": {
       "es": "AFUNTA Nunchuck Controllers para Nintendo Wii U, 2...\n12,96€"
@@ -11849,13 +11849,13 @@
   },
   {
     "id": "854",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: vhbw Funda, Cubierta Compatible con Nint...",
-      "es": "Wii/Wii U: vhbw Funda, Cubierta Compatible con Nint..."
+      "en": "Wii/WiiU: vhbw Funda, Cubierta Compatible con Nint...",
+      "es": "Wii/WiiU: vhbw Funda, Cubierta Compatible con Nint..."
     },
     "desc": {
       "es": "vhbw Funda, Cubierta Compatible con Nintendo Wii U...\n10,49€"
@@ -11869,13 +11869,13 @@
   },
   {
     "id": "855",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,...",
-      "es": "Wii/Wii U: Leikurvo Paquete de 2 mandos Wii Remote,..."
+      "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
+      "es": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,..."
     },
     "desc": {
       "es": "Leikurvo Paquete de 2 mandos Wii Remote, con Nunch...\n34,76€"
@@ -11889,13 +11889,13 @@
   },
   {
     "id": "856",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Duotipa Batería de repuesto WUP-001 comp...",
-      "es": "Wii/Wii U: Duotipa Batería de repuesto WUP-001 comp..."
+      "en": "Wii/WiiU: Duotipa Batería de repuesto WUP-001 comp...",
+      "es": "Wii/WiiU: Duotipa Batería de repuesto WUP-001 comp..."
     },
     "desc": {
       "es": "Duotipa Batería de repuesto WUP-001 compatible con...\n19,99€"
@@ -11909,13 +11909,13 @@
   },
   {
     "id": "857",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: zstg Barra Sensor Infrarrojos Wii y Wii ...",
-      "es": "Wii/Wii U: zstg Barra Sensor Infrarrojos Wii y Wii ..."
+      "en": "Wii/WiiU: zstg Barra Sensor Infrarrojos Wii y Wii ...",
+      "es": "Wii/WiiU: zstg Barra Sensor Infrarrojos Wii y Wii ..."
     },
     "desc": {
       "es": "zstg Barra Sensor Infrarrojos Wii y Wii U, Barra S...\n7,99€"
@@ -11929,13 +11929,13 @@
   },
   {
     "id": "858",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: NC Paquete de 2 mandos Wii, repuesto par...",
-      "es": "Wii/Wii U: NC Paquete de 2 mandos Wii, repuesto par..."
+      "en": "Wii/WiiU: NC Paquete de 2 mandos Wii, repuesto par...",
+      "es": "Wii/WiiU: NC Paquete de 2 mandos Wii, repuesto par..."
     },
     "desc": {
       "es": "NC Paquete de 2 mandos Wii, repuesto para mando a ...\n37,62€"
@@ -11949,13 +11949,13 @@
   },
   {
     "id": "859",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Link-e : cargador de la fuente de alimen...",
-      "es": "Wii/Wii U: Link-e : cargador de la fuente de alimen..."
+      "en": "Wii/WiiU: Link-e : cargador de la fuente de alimen...",
+      "es": "Wii/WiiU: Link-e : cargador de la fuente de alimen..."
     },
     "desc": {
       "es": "Link-e : cargador de la fuente de alimentación par...\n12,90€"
@@ -11969,13 +11969,13 @@
   },
   {
     "id": "860",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: OSTENT Reemplazo de Fuente de alimentaci...",
-      "es": "Wii/Wii U: OSTENT Reemplazo de Fuente de alimentaci..."
+      "en": "Wii/WiiU: OSTENT Reemplazo de Fuente de alimentaci...",
+      "es": "Wii/WiiU: OSTENT Reemplazo de Fuente de alimentaci..."
     },
     "desc": {
       "es": "OSTENT Reemplazo de Fuente de alimentación del Ada...\n14,00€"
@@ -11989,13 +11989,13 @@
   },
   {
     "id": "861",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable de carga USB, compatible con contr...",
-      "es": "Wii/Wii U: Cable de carga USB, compatible con contr..."
+      "en": "Wii/WiiU: Cable de carga USB, compatible con contr...",
+      "es": "Wii/WiiU: Cable de carga USB, compatible con contr..."
     },
     "desc": {
       "es": "Cable de carga USB, compatible con controlador Wii...\n11,50€"
@@ -12009,13 +12009,13 @@
   },
   {
     "id": "862",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: TNP Products Pistola Zapper para Nintend...",
-      "es": "Wii/Wii U: TNP Products Pistola Zapper para Nintend..."
+      "en": "Wii/WiiU: TNP Products Pistola Zapper para Nintend...",
+      "es": "Wii/WiiU: TNP Products Pistola Zapper para Nintend..."
     },
     "desc": {
       "es": "TNP Products Pistola Zapper para Nintendo Wii - Bl...\n28,45€"
@@ -12029,13 +12029,13 @@
   },
   {
     "id": "863",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: AFUNTA Nunchuck Controlador Gamepad para...",
-      "es": "Wii/Wii U: AFUNTA Nunchuck Controlador Gamepad para..."
+      "en": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
+      "es": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para..."
     },
     "desc": {
       "es": "AFUNTA Nunchuck Controlador Gamepad para Nintendo ...\n18,99€"
@@ -12049,13 +12049,13 @@
   },
   {
     "id": "864",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: REY Barra Sensor Infrarrojos para Ninten...",
-      "es": "Wii/Wii U: REY Barra Sensor Infrarrojos para Ninten..."
+      "en": "Wii/WiiU: REY Barra Sensor Infrarrojos para Ninten...",
+      "es": "Wii/WiiU: REY Barra Sensor Infrarrojos para Ninten..."
     },
     "desc": {
       "es": "REY Barra Sensor Infrarrojos para Nintendo Wii/Wii...\n10,99€"
@@ -12069,16 +12069,16 @@
   },
   {
     "id": "865",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: TNP Wii/Wii U Component Cable – 5 RCA Vi...",
-      "es": "Wii/Wii U: TNP Wii/Wii U Component Cable – 5 RCA Vi..."
+      "en": "Wii/WiiU: TNP Wii/WiiU Component Cable – 5 RCA Vi...",
+      "es": "Wii/WiiU: TNP Wii/WiiU Component Cable – 5 RCA Vi..."
     },
     "desc": {
-      "es": "TNP Wii/Wii U Component Cable – 5 RCA Video & RCA ...\n15,99€"
+      "es": "TNP Wii/WiiU Component Cable – 5 RCA Video & RCA ...\n15,99€"
     },
     "price": "15,99€",
     "img": "https://m.media-amazon.com/images/I/61BZhVGoPgL._SX425_.jpg",
@@ -12089,13 +12089,13 @@
   },
   {
     "id": "866",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 2 x Volante / Racing Wheel De Dirección ...",
-      "es": "Wii/Wii U: 2 x Volante / Racing Wheel De Dirección ..."
+      "en": "Wii/WiiU: 2 x Volante / Racing Wheel De Dirección ...",
+      "es": "Wii/WiiU: 2 x Volante / Racing Wheel De Dirección ..."
     },
     "desc": {
       "es": "2 x Volante / Racing Wheel De Dirección Para Ninte...\n14,90€"
@@ -12109,13 +12109,13 @@
   },
   {
     "id": "867",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Base de carga 3 en 1 para Wii U Gamepad,...",
-      "es": "Wii/Wii U: Base de carga 3 en 1 para Wii U Gamepad,..."
+      "en": "Wii/WiiU: Base de carga 3 en 1 para Wii U Gamepad,...",
+      "es": "Wii/WiiU: Base de carga 3 en 1 para Wii U Gamepad,..."
     },
     "desc": {
       "es": "Base de carga 3 en 1 para Wii U Gamepad, cargador ...\n52,96€"
@@ -12129,16 +12129,16 @@
   },
   {
     "id": "868",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mando Controller para Nintendo Wii/Wii U...",
-      "es": "Wii/Wii U: Mando Controller para Nintendo Wii/Wii U..."
+      "en": "Wii/WiiU: Mando Controller para Nintendo Wii/WiiU...",
+      "es": "Wii/WiiU: Mando Controller para Nintendo Wii/WiiU..."
     },
     "desc": {
-      "es": "Mando Controller para Nintendo Wii/Wii U, Controla...\n30,01€"
+      "es": "Mando Controller para Nintendo Wii/WiiU, Controla...\n30,01€"
     },
     "price": "30,01€",
     "img": "https://m.media-amazon.com/images/I/51JUCgPntNL._AC_SX679_.jpg",
@@ -12149,13 +12149,13 @@
   },
   {
     "id": "869",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 5 metros de cable de extensión de la bar...",
-      "es": "Wii/Wii U: 5 metros de cable de extensión de la bar..."
+      "en": "Wii/WiiU: 5 metros de cable de extensión de la bar...",
+      "es": "Wii/WiiU: 5 metros de cable de extensión de la bar..."
     },
     "desc": {
       "es": "5 metros de cable de extensión de la barra del sen...\n11,18€"
@@ -12169,13 +12169,13 @@
   },
   {
     "id": "870",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CAMWAY Adaptador Wii HDMI 1080P/720P, Co...",
-      "es": "Wii/Wii U: CAMWAY Adaptador Wii HDMI 1080P/720P, Co..."
+      "en": "Wii/WiiU: CAMWAY Adaptador Wii HDMI 1080P/720P, Co...",
+      "es": "Wii/WiiU: CAMWAY Adaptador Wii HDMI 1080P/720P, Co..."
     },
     "desc": {
       "es": "CAMWAY Adaptador Wii HDMI 1080P/720P, Convertidor ...\n10,99€"
@@ -12189,13 +12189,13 @@
   },
   {
     "id": "871",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 2 paquetes de mando a distancia Nunchuck...",
-      "es": "Wii/Wii U: 2 paquetes de mando a distancia Nunchuck..."
+      "en": "Wii/WiiU: 2 paquetes de mando a distancia Nunchuck...",
+      "es": "Wii/WiiU: 2 paquetes de mando a distancia Nunchuck..."
     },
     "desc": {
       "es": "2 paquetes de mando a distancia Nunchuck de repues...\n19,99€"
@@ -12209,13 +12209,13 @@
   },
   {
     "id": "872",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable de Audio Video AV RCA Compuesto 1....",
-      "es": "Wii/Wii U: Cable de Audio Video AV RCA Compuesto 1...."
+      "en": "Wii/WiiU: Cable de Audio Video AV RCA Compuesto 1....",
+      "es": "Wii/WiiU: Cable de Audio Video AV RCA Compuesto 1...."
     },
     "desc": {
       "es": "Cable de Audio Video AV RCA Compuesto 1.8M con Ada...\n8,48€"
@@ -12229,13 +12229,13 @@
   },
   {
     "id": "873",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Adaptador de Fuente de Alimentación de C...",
-      "es": "Wii/Wii U: Adaptador de Fuente de Alimentación de C..."
+      "en": "Wii/WiiU: Adaptador de Fuente de Alimentación de C...",
+      "es": "Wii/WiiU: Adaptador de Fuente de Alimentación de C..."
     },
     "desc": {
       "es": "Adaptador de Fuente de Alimentación de CA Compatib...\n13,36€"
@@ -12249,13 +12249,13 @@
   },
   {
     "id": "874",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Barra de Sensores Infrarrojos con Cable ...",
-      "es": "Wii/Wii U: Barra de Sensores Infrarrojos con Cable ..."
+      "en": "Wii/WiiU: Barra de Sensores Infrarrojos con Cable ...",
+      "es": "Wii/WiiU: Barra de Sensores Infrarrojos con Cable ..."
     },
     "desc": {
       "es": "Barra de Sensores Infrarrojos con Cable para Conso...\n9,99€"
@@ -12269,13 +12269,13 @@
   },
   {
     "id": "875",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: WICAREYO Barra de Sensores Infrarrojos R...",
-      "es": "Wii/Wii U: WICAREYO Barra de Sensores Infrarrojos R..."
+      "en": "Wii/WiiU: WICAREYO Barra de Sensores Infrarrojos R...",
+      "es": "Wii/WiiU: WICAREYO Barra de Sensores Infrarrojos R..."
     },
     "desc": {
       "es": "WICAREYO Barra de Sensores Infrarrojos Receptor de...\n7,08€"
@@ -12289,13 +12289,13 @@
   },
   {
     "id": "876",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Demeras Barra Sensora Wii e Wii u ,Barra...",
-      "es": "Wii/Wii U: Demeras Barra Sensora Wii e Wii u ,Barra..."
+      "en": "Wii/WiiU: Demeras Barra Sensora Wii e Wii u ,Barra...",
+      "es": "Wii/WiiU: Demeras Barra Sensora Wii e Wii u ,Barra..."
     },
     "desc": {
       "es": "Demeras Barra Sensora Wii e Wii u ,Barra Sensora I...\n9,39€"
@@ -12309,13 +12309,13 @@
   },
   {
     "id": "877",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: PROZOR Adaptador Wii a HDMI 1080P con Ca...",
-      "es": "Wii/Wii U: PROZOR Adaptador Wii a HDMI 1080P con Ca..."
+      "en": "Wii/WiiU: PROZOR Adaptador Wii a HDMI 1080P con Ca...",
+      "es": "Wii/WiiU: PROZOR Adaptador Wii a HDMI 1080P con Ca..."
     },
     "desc": {
       "es": "PROZOR Adaptador Wii a HDMI 1080P con Cable Integr...\n12,31€"
@@ -12329,13 +12329,13 @@
   },
   {
     "id": "878",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: WINGONEER WII U gamepad ue adaptador de ...",
-      "es": "Wii/Wii U: WINGONEER WII U gamepad ue adaptador de ..."
+      "en": "Wii/WiiU: WINGONEER WII U gamepad ue adaptador de ...",
+      "es": "Wii/WiiU: WINGONEER WII U gamepad ue adaptador de ..."
     },
     "desc": {
       "es": "WINGONEER WII U gamepad ue adaptador de ca fuente ...\n15,99€"
@@ -12349,13 +12349,13 @@
   },
   {
     "id": "879",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable AV componente de 5.5 pies para Nin...",
-      "es": "Wii/Wii U: Cable AV componente de 5.5 pies para Nin..."
+      "en": "Wii/WiiU: Cable AV componente de 5.5 pies para Nin...",
+      "es": "Wii/WiiU: Cable AV componente de 5.5 pies para Nin..."
     },
     "desc": {
       "es": "Cable AV componente de 5.5 pies para Nintendo Wii ...\n16,20€"
@@ -12369,13 +12369,13 @@
   },
   {
     "id": "880",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: SATKIT Adaptador de Mandos Gamecube 4 Pu...",
-      "es": "Wii/Wii U: SATKIT Adaptador de Mandos Gamecube 4 Pu..."
+      "en": "Wii/WiiU: SATKIT Adaptador de Mandos Gamecube 4 Pu...",
+      "es": "Wii/WiiU: SATKIT Adaptador de Mandos Gamecube 4 Pu..."
     },
     "desc": {
       "es": "SATKIT Adaptador de Mandos Gamecube 4 Puertos USB ...\n12,60€"
@@ -12389,13 +12389,13 @@
   },
   {
     "id": "881",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: leruiyezs Barra Sensor Infrarrojos Cabla...",
-      "es": "Wii/Wii U: leruiyezs Barra Sensor Infrarrojos Cabla..."
+      "en": "Wii/WiiU: leruiyezs Barra Sensor Infrarrojos Cabla...",
+      "es": "Wii/WiiU: leruiyezs Barra Sensor Infrarrojos Cabla..."
     },
     "desc": {
       "es": "leruiyezs Barra Sensor Infrarrojos Cablada Para Co...\n8,01€"
@@ -12409,13 +12409,13 @@
   },
   {
     "id": "882",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo LEGO BATMAN 2: DC Super Heroes ...",
-      "es": "Wii/Wii U: Nintendo LEGO BATMAN 2: DC Super Heroes ..."
+      "en": "Wii/WiiU: Nintendo LEGO BATMAN 2: DC Super Heroes ...",
+      "es": "Wii/WiiU: Nintendo LEGO BATMAN 2: DC Super Heroes ..."
     },
     "desc": {
       "es": "Nintendo LEGO BATMAN 2: DC Super Heroes Básico Wii...\n35,59€"
@@ -12429,13 +12429,13 @@
   },
   {
     "id": "883",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Console Nintendo WII U 32 Go noire + Mar...",
-      "es": "Wii/Wii U: Console Nintendo WII U 32 Go noire + Mar..."
+      "en": "Wii/WiiU: Console Nintendo WII U 32 Go noire + Mar...",
+      "es": "Wii/WiiU: Console Nintendo WII U 32 Go noire + Mar..."
     },
     "desc": {
       "es": "Console Nintendo WII U 32 Go noire + Mario Kart 8 ...\n189,95€"
@@ -12449,13 +12449,13 @@
   },
   {
     "id": "884",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: REY Correa de Mando Remote para Nintendo...",
-      "es": "Wii/Wii U: REY Correa de Mando Remote para Nintendo..."
+      "en": "Wii/WiiU: REY Correa de Mando Remote para Nintendo...",
+      "es": "Wii/WiiU: REY Correa de Mando Remote para Nintendo..."
     },
     "desc": {
       "es": "REY Correa de Mando Remote para Nintendo Wii y Wii...\n2,99€"
@@ -12469,13 +12469,13 @@
   },
   {
     "id": "885",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Hyrule Warriors: Zelda - [Importación UK...",
-      "es": "Wii/Wii U: Hyrule Warriors: Zelda - [Importación UK..."
+      "en": "Wii/WiiU: Hyrule Warriors: Zelda - [Importación UK...",
+      "es": "Wii/WiiU: Hyrule Warriors: Zelda - [Importación UK..."
     },
     "desc": {
       "es": "Hyrule Warriors: Zelda - [Importación UK]...\nVer precio"
@@ -12489,13 +12489,13 @@
   },
   {
     "id": "886",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto para Wii U Gamepad d...",
-      "es": "Wii/Wii U: Batería de repuesto para Wii U Gamepad d..."
+      "en": "Wii/WiiU: Batería de repuesto para Wii U Gamepad d...",
+      "es": "Wii/WiiU: Batería de repuesto para Wii U Gamepad d..."
     },
     "desc": {
       "es": "Batería de repuesto para Wii U Gamepad de alta cap...\n20,69€"
@@ -12509,13 +12509,13 @@
   },
   {
     "id": "887",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Pack Básico - 8 GB...",
-      "es": "Wii/Wii U: Nintendo Wii U - Pack Básico - 8 GB..."
+      "en": "Wii/WiiU: Nintendo Wii U - Pack Básico - 8 GB...",
+      "es": "Wii/WiiU: Nintendo Wii U - Pack Básico - 8 GB..."
     },
     "desc": {
       "es": "Nintendo Wii U - Pack Básico - 8 GB...\nVer precio"
@@ -12529,13 +12529,13 @@
   },
   {
     "id": "888",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Sonic Lost World - Edizione Sei Ne...",
-      "es": "Wii/Wii U: Wii U Sonic Lost World - Edizione Sei Ne..."
+      "en": "Wii/WiiU: Wii U Sonic Lost World - Edizione Sei Ne...",
+      "es": "Wii/WiiU: Wii U Sonic Lost World - Edizione Sei Ne..."
     },
     "desc": {
       "es": "Wii U Sonic Lost World - Edizione Sei Nefasti [Imp...\nVer precio"
@@ -12549,13 +12549,13 @@
   },
   {
     "id": "889",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Joy4 WII Sports PACK luxury Sport/tiempo...",
-      "es": "Wii/Wii U: Joy4 WII Sports PACK luxury Sport/tiempo..."
+      "en": "Wii/WiiU: Joy4 WII Sports PACK luxury Sport/tiempo...",
+      "es": "Wii/WiiU: Joy4 WII Sports PACK luxury Sport/tiempo..."
     },
     "desc": {
       "es": "Joy4 WII Sports PACK luxury Sport/tiempo libre com...\n39,99€"
@@ -12569,13 +12569,13 @@
   },
   {
     "id": "890",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Activision Skylanders Giants Starter Pac...",
-      "es": "Wii/Wii U: Activision Skylanders Giants Starter Pac..."
+      "en": "Wii/WiiU: Activision Skylanders Giants Starter Pac...",
+      "es": "Wii/WiiU: Activision Skylanders Giants Starter Pac..."
     },
     "desc": {
       "es": "Activision Skylanders Giants Starter Pack, Nintend...\n90,41€"
@@ -12589,13 +12589,13 @@
   },
   {
     "id": "891",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable de carga USB para Wii U Gamepad, 1...",
-      "es": "Wii/Wii U: Cable de carga USB para Wii U Gamepad, 1..."
+      "en": "Wii/WiiU: Cable de carga USB para Wii U Gamepad, 1...",
+      "es": "Wii/WiiU: Cable de carga USB para Wii U Gamepad, 1..."
     },
     "desc": {
       "es": "Cable de carga USB para Wii U Gamepad, 1,2 m / 3,9...\n10,68€"
@@ -12609,13 +12609,13 @@
   },
   {
     "id": "892",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Pikmin 3 (Nintendo Wii U) [Importación i...",
-      "es": "Wii/Wii U: Pikmin 3 (Nintendo Wii U) [Importación i..."
+      "en": "Wii/WiiU: Pikmin 3 (Nintendo Wii U) [Importación i...",
+      "es": "Wii/WiiU: Pikmin 3 (Nintendo Wii U) [Importación i..."
     },
     "desc": {
       "es": "Pikmin 3 (Nintendo Wii U) [Importación inglesa]...\n49,00€"
@@ -12629,13 +12629,13 @@
   },
   {
     "id": "893",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: The Legend of Zelda : Breath of the Wild...",
-      "es": "Wii/Wii U: The Legend of Zelda : Breath of the Wild..."
+      "en": "Wii/WiiU: The Legend of Zelda : Breath of the Wild...",
+      "es": "Wii/WiiU: The Legend of Zelda : Breath of the Wild..."
     },
     "desc": {
       "es": "The Legend of Zelda : Breath of the Wild Nintendo ...\n49,90€"
@@ -12649,13 +12649,13 @@
   },
   {
     "id": "894",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Amiibo Toon Link - Super Smash Bros. ser...",
-      "es": "Wii/Wii U: Amiibo Toon Link - Super Smash Bros. ser..."
+      "en": "Wii/WiiU: Amiibo Toon Link - Super Smash Bros. ser...",
+      "es": "Wii/WiiU: Amiibo Toon Link - Super Smash Bros. ser..."
     },
     "desc": {
       "es": "Amiibo Toon Link - Super Smash Bros. series Ver. [...\n27,90€"
@@ -12669,13 +12669,13 @@
   },
   {
     "id": "895",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cargador pared compatible para mando Nin...",
-      "es": "Wii/Wii U: Cargador pared compatible para mando Nin..."
+      "en": "Wii/WiiU: Cargador pared compatible para mando Nin...",
+      "es": "Wii/WiiU: Cargador pared compatible para mando Nin..."
     },
     "desc": {
       "es": "Cargador pared compatible para mando Nintendo Wii ...\n9,49€"
@@ -12689,13 +12689,13 @@
   },
   {
     "id": "896",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Skylanders Paquete de propietarios del p...",
-      "es": "Wii/Wii U: Skylanders Paquete de propietarios del p..."
+      "en": "Wii/WiiU: Skylanders Paquete de propietarios del p...",
+      "es": "Wii/WiiU: Skylanders Paquete de propietarios del p..."
     },
     "desc": {
       "es": "Skylanders Paquete de propietarios del portal Imag...\n81,99€"
@@ -12709,13 +12709,13 @@
   },
   {
     "id": "897",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Land...",
-      "es": "Wii/Wii U: Nintendo Land..."
+      "en": "Wii/WiiU: Nintendo Land...",
+      "es": "Wii/WiiU: Nintendo Land..."
     },
     "desc": {
       "es": "Nintendo Land...\n19,99€"
@@ -12729,13 +12729,13 @@
   },
   {
     "id": "898",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: 2 cables de alimentación USB extralargos...",
-      "es": "Wii/Wii U: 2 cables de alimentación USB extralargos..."
+      "en": "Wii/WiiU: 2 cables de alimentación USB extralargos...",
+      "es": "Wii/WiiU: 2 cables de alimentación USB extralargos..."
     },
     "desc": {
       "es": "2 cables de alimentación USB extralargos de 3 metr...\n8,99€"
@@ -12749,13 +12749,13 @@
   },
   {
     "id": "899",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: BROTECT Protector Pantalla Cristal para ...",
-      "es": "Wii/Wii U: BROTECT Protector Pantalla Cristal para ..."
+      "en": "Wii/WiiU: BROTECT Protector Pantalla Cristal para ...",
+      "es": "Wii/WiiU: BROTECT Protector Pantalla Cristal para ..."
     },
     "desc": {
       "es": "BROTECT Protector Pantalla Cristal para Nintendo W...\n9,29€"
@@ -12769,13 +12769,13 @@
   },
   {
     "id": "900",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Mario Tennis: Ultra Smash [Importación I...",
-      "es": "Wii/Wii U: Mario Tennis: Ultra Smash [Importación I..."
+      "en": "Wii/WiiU: Mario Tennis: Ultra Smash [Importación I...",
+      "es": "Wii/WiiU: Mario Tennis: Ultra Smash [Importación I..."
     },
     "desc": {
       "es": "Mario Tennis: Ultra Smash [Importación Inglesa]...\n18,39€"
@@ -12789,13 +12789,13 @@
   },
   {
     "id": "901",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Rayman Legends [Software Pyramide] [Impo...",
-      "es": "Wii/Wii U: Rayman Legends [Software Pyramide] [Impo..."
+      "en": "Wii/WiiU: Rayman Legends [Software Pyramide] [Impo...",
+      "es": "Wii/WiiU: Rayman Legends [Software Pyramide] [Impo..."
     },
     "desc": {
       "es": "Rayman Legends [Software Pyramide] [Importación Al...\n11,98€"
@@ -12809,13 +12809,13 @@
   },
   {
     "id": "902",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii / Wii U - Nunchuk, Blanco...",
-      "es": "Wii/Wii U: Nintendo Wii / Wii U - Nunchuk, Blanco..."
+      "en": "Wii/WiiU: Nintendo Wii / Wii U - Nunchuk, Blanco...",
+      "es": "Wii/WiiU: Nintendo Wii / Wii U - Nunchuk, Blanco..."
     },
     "desc": {
       "es": "Nintendo Wii / Wii U - Nunchuk, Blanco...\n16,99 €"
@@ -12829,13 +12829,13 @@
   },
   {
     "id": "903",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Scribblenauts Unlimited - [Nintendo Wii ...",
-      "es": "Wii/Wii U: Scribblenauts Unlimited - [Nintendo Wii ..."
+      "en": "Wii/WiiU: Scribblenauts Unlimited - [Nintendo Wii ...",
+      "es": "Wii/WiiU: Scribblenauts Unlimited - [Nintendo Wii ..."
     },
     "desc": {
       "es": "Scribblenauts Unlimited - [Nintendo Wii U] [Import...\nVer precio"
@@ -12849,13 +12849,13 @@
   },
   {
     "id": "904",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Captain Toad: Treasure Tracker (Nintendo...",
-      "es": "Wii/Wii U: Captain Toad: Treasure Tracker (Nintendo..."
+      "en": "Wii/WiiU: Captain Toad: Treasure Tracker (Nintendo...",
+      "es": "Wii/WiiU: Captain Toad: Treasure Tracker (Nintendo..."
     },
     "desc": {
       "es": "Captain Toad: Treasure Tracker (Nintendo Wii U) [I...\n42,58€"
@@ -12869,13 +12869,13 @@
   },
   {
     "id": "905",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Pikmin 3 [Importación Alemana]...",
-      "es": "Wii/Wii U: Pikmin 3 [Importación Alemana]..."
+      "en": "Wii/WiiU: Pikmin 3 [Importación Alemana]...",
+      "es": "Wii/WiiU: Pikmin 3 [Importación Alemana]..."
     },
     "desc": {
       "es": "Pikmin 3 [Importación Alemana]...\nVer precio"
@@ -12889,13 +12889,13 @@
   },
   {
     "id": "906",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Consola Premium Pack Ma...",
-      "es": "Wii/Wii U: Nintendo Wii U - Consola Premium Pack Ma..."
+      "en": "Wii/WiiU: Nintendo Wii U - Consola Premium Pack Ma...",
+      "es": "Wii/WiiU: Nintendo Wii U - Consola Premium Pack Ma..."
     },
     "desc": {
       "es": "Nintendo Wii U - Consola Premium Pack Mario Kart 8...\nVer precio"
@@ -12909,13 +12909,13 @@
   },
   {
     "id": "907",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: TECHTEK batería sustituye WUP-013 Compat...",
-      "es": "Wii/Wii U: TECHTEK batería sustituye WUP-013 Compat..."
+      "en": "Wii/WiiU: TECHTEK batería sustituye WUP-013 Compat...",
+      "es": "Wii/WiiU: TECHTEK batería sustituye WUP-013 Compat..."
     },
     "desc": {
       "es": "TECHTEK batería sustituye WUP-013 Compatible con [...\n23,90€"
@@ -12929,13 +12929,13 @@
   },
   {
     "id": "908",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cable AV de 10 ft/3 metros para TV, cabl...",
-      "es": "Wii/Wii U: Cable AV de 10 ft/3 metros para TV, cabl..."
+      "en": "Wii/WiiU: Cable AV de 10 ft/3 metros para TV, cabl...",
+      "es": "Wii/WiiU: Cable AV de 10 ft/3 metros para TV, cabl..."
     },
     "desc": {
       "es": "Cable AV de 10 ft/3 metros para TV, cable de exten...\n9,18€"
@@ -12949,13 +12949,13 @@
   },
   {
     "id": "909",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Sensor Wii, Barra Sensor Consola Wii, Ba...",
-      "es": "Wii/Wii U: Sensor Wii, Barra Sensor Consola Wii, Ba..."
+      "en": "Wii/WiiU: Sensor Wii, Barra Sensor Consola Wii, Ba...",
+      "es": "Wii/WiiU: Sensor Wii, Barra Sensor Consola Wii, Ba..."
     },
     "desc": {
       "es": "Sensor Wii, Barra Sensor Consola Wii, Barra de Sen...\n7,59€"
@@ -12969,13 +12969,13 @@
   },
   {
     "id": "910",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Gamrombo Paquete de 4 controladores Moti...",
-      "es": "Wii/Wii U: Gamrombo Paquete de 4 controladores Moti..."
+      "en": "Wii/WiiU: Gamrombo Paquete de 4 controladores Moti...",
+      "es": "Wii/WiiU: Gamrombo Paquete de 4 controladores Moti..."
     },
     "desc": {
       "es": "Gamrombo Paquete de 4 controladores Motion Plus Wi...\n68,99€"
@@ -12989,13 +12989,13 @@
   },
   {
     "id": "911",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Skylanders Swap Force (solo juego)...",
-      "es": "Wii/Wii U: Wii U Skylanders Swap Force (solo juego)..."
+      "en": "Wii/WiiU: Wii U Skylanders Swap Force (solo juego)...",
+      "es": "Wii/WiiU: Wii U Skylanders Swap Force (solo juego)..."
     },
     "desc": {
       "es": "Wii U Skylanders Swap Force (solo juego)...\n69,45€"
@@ -13009,13 +13009,13 @@
   },
   {
     "id": "912",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Cars 3: Driven To Win - [Wii U] [Importa...",
-      "es": "Wii/Wii U: Cars 3: Driven To Win - [Wii U] [Importa..."
+      "en": "Wii/WiiU: Cars 3: Driven To Win - [Wii U] [Importa...",
+      "es": "Wii/WiiU: Cars 3: Driven To Win - [Wii U] [Importa..."
     },
     "desc": {
       "es": "Cars 3: Driven To Win - [Wii U] [Importación alema...\n27,99€"
@@ -13029,13 +13029,13 @@
   },
   {
     "id": "913",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Adaptador de alimentación de CA Cable En...",
-      "es": "Wii/Wii U: Adaptador de alimentación de CA Cable En..."
+      "en": "Wii/WiiU: Adaptador de alimentación de CA Cable En...",
+      "es": "Wii/WiiU: Adaptador de alimentación de CA Cable En..."
     },
     "desc": {
       "es": "Adaptador de alimentación de CA Cable Enchufe de l...\n18,49€"
@@ -13049,13 +13049,13 @@
   },
   {
     "id": "914",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: WKOLF Juego de 4 mandos a distancia de r...",
-      "es": "Wii/Wii U: WKOLF Juego de 4 mandos a distancia de r..."
+      "en": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
+      "es": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r..."
     },
     "desc": {
       "es": "WKOLF Juego de 4 mandos a distancia de repuesto pa...\n19,99€"
@@ -13069,13 +13069,13 @@
   },
   {
     "id": "915",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: May Flash - Adaptador Compatible con Con...",
-      "es": "Wii/Wii U: May Flash - Adaptador Compatible con Con..."
+      "en": "Wii/WiiU: May Flash - Adaptador Compatible con Con...",
+      "es": "Wii/WiiU: May Flash - Adaptador Compatible con Con..."
     },
     "desc": {
       "es": "May Flash - Adaptador Compatible con Controlador G...\n39,69€"
@@ -13089,13 +13089,13 @@
   },
   {
     "id": "916",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: NC Nunchuck - Mando de repuesto para man...",
-      "es": "Wii/Wii U: NC Nunchuck - Mando de repuesto para man..."
+      "en": "Wii/WiiU: NC Nunchuck - Mando de repuesto para man...",
+      "es": "Wii/WiiU: NC Nunchuck - Mando de repuesto para man..."
     },
     "desc": {
       "es": "NC Nunchuck - Mando de repuesto para mando Wii Nun...\n25,45€"
@@ -13109,13 +13109,13 @@
   },
   {
     "id": "917",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: NC Nunchuck - Mando de repuesto para man...",
-      "es": "Wii/Wii U: NC Nunchuck - Mando de repuesto para man..."
+      "en": "Wii/WiiU: NC Nunchuck - Mando de repuesto para man...",
+      "es": "Wii/WiiU: NC Nunchuck - Mando de repuesto para man..."
     },
     "desc": {
       "es": "NC Nunchuck - Mando de repuesto para mando Wii Nun...\n25,49€"
@@ -13129,13 +13129,13 @@
   },
   {
     "id": "918",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Splatoon (Nintendo Wii U) [Importación i...",
-      "es": "Wii/Wii U: Splatoon (Nintendo Wii U) [Importación i..."
+      "en": "Wii/WiiU: Splatoon (Nintendo Wii U) [Importación i...",
+      "es": "Wii/WiiU: Splatoon (Nintendo Wii U) [Importación i..."
     },
     "desc": {
       "es": "Splatoon (Nintendo Wii U) [Importación inglesa]...\n75,88€"
@@ -13149,13 +13149,13 @@
   },
   {
     "id": "919",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Skylanders Superchargers: Starter Pack (...",
-      "es": "Wii/Wii U: Skylanders Superchargers: Starter Pack (..."
+      "en": "Wii/WiiU: Skylanders Superchargers: Starter Pack (...",
+      "es": "Wii/WiiU: Skylanders Superchargers: Starter Pack (..."
     },
     "desc": {
       "es": "Skylanders Superchargers: Starter Pack (Nintendo W...\n59,90€"
@@ -13169,13 +13169,13 @@
   },
   {
     "id": "920",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Skylanders Imaginators...",
-      "es": "Wii/Wii U: Skylanders Imaginators..."
+      "en": "Wii/WiiU: Skylanders Imaginators...",
+      "es": "Wii/WiiU: Skylanders Imaginators..."
     },
     "desc": {
       "es": "Skylanders Imaginators...\nVer precio"
@@ -13189,13 +13189,13 @@
   },
   {
     "id": "921",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Wii U - Pack Premium - 32 GB - ...",
-      "es": "Wii/Wii U: Nintendo Wii U - Pack Premium - 32 GB - ..."
+      "en": "Wii/WiiU: Nintendo Wii U - Pack Premium - 32 GB - ...",
+      "es": "Wii/WiiU: Nintendo Wii U - Pack Premium - 32 GB - ..."
     },
     "desc": {
       "es": "Nintendo Wii U - Pack Premium - 32 GB - Incluye Zo...\nVer precio"
@@ -13209,13 +13209,13 @@
   },
   {
     "id": "922",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Adaptador de Alimentación de CA Compatib...",
-      "es": "Wii/Wii U: Adaptador de Alimentación de CA Compatib..."
+      "en": "Wii/WiiU: Adaptador de Alimentación de CA Compatib...",
+      "es": "Wii/WiiU: Adaptador de Alimentación de CA Compatib..."
     },
     "desc": {
       "es": "Adaptador de Alimentación de CA Compatible para Wi...\n11,38€"
@@ -13229,13 +13229,13 @@
   },
   {
     "id": "923",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Batería de repuesto WUP-012 WUP-002 comp...",
-      "es": "Wii/Wii U: Batería de repuesto WUP-012 WUP-002 comp..."
+      "en": "Wii/WiiU: Batería de repuesto WUP-012 WUP-002 comp...",
+      "es": "Wii/WiiU: Batería de repuesto WUP-012 WUP-002 comp..."
     },
     "desc": {
       "es": "Batería de repuesto WUP-012 WUP-002 compatible con...\n16,95€"
@@ -13249,13 +13249,13 @@
   },
   {
     "id": "924",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: RUITROLIKER 10Pcs Funda CIB Protector Bo...",
-      "es": "Wii/Wii U: RUITROLIKER 10Pcs Funda CIB Protector Bo..."
+      "en": "Wii/WiiU: RUITROLIKER 10Pcs Funda CIB Protector Bo...",
+      "es": "Wii/WiiU: RUITROLIKER 10Pcs Funda CIB Protector Bo..."
     },
     "desc": {
       "es": "RUITROLIKER 10Pcs Funda CIB Protector Box Compatib...\n13,98€"
@@ -13269,13 +13269,13 @@
   },
   {
     "id": "925",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: The Legend of Zelda: Twilight Princess H...",
-      "es": "Wii/Wii U: The Legend of Zelda: Twilight Princess H..."
+      "en": "Wii/WiiU: The Legend of Zelda: Twilight Princess H...",
+      "es": "Wii/WiiU: The Legend of Zelda: Twilight Princess H..."
     },
     "desc": {
       "es": "The Legend of Zelda: Twilight Princess HD - Wii U ...\n199,95€"
@@ -13289,13 +13289,13 @@
   },
   {
     "id": "926",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Darksiders Warmastered Edition - [Wii U]...",
-      "es": "Wii/Wii U: Darksiders Warmastered Edition - [Wii U]..."
+      "en": "Wii/WiiU: Darksiders Warmastered Edition - [Wii U]...",
+      "es": "Wii/WiiU: Darksiders Warmastered Edition - [Wii U]..."
     },
     "desc": {
       "es": "Darksiders Warmastered Edition - [Wii U] [Importac...\nVer precio"
@@ -13309,13 +13309,13 @@
   },
   {
     "id": "927",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Darksiders II [Importación alemana]...",
-      "es": "Wii/Wii U: Darksiders II [Importación alemana]..."
+      "en": "Wii/WiiU: Darksiders II [Importación alemana]...",
+      "es": "Wii/WiiU: Darksiders II [Importación alemana]..."
     },
     "desc": {
       "es": "Darksiders II [Importación alemana]...\n10,73€"
@@ -13329,13 +13329,13 @@
   },
   {
     "id": "928",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Wii U Super Smash Bros. - Edición Mundia...",
-      "es": "Wii/Wii U: Wii U Super Smash Bros. - Edición Mundia..."
+      "en": "Wii/WiiU: Wii U Super Smash Bros. - Edición Mundia...",
+      "es": "Wii/WiiU: Wii U Super Smash Bros. - Edición Mundia..."
     },
     "desc": {
       "es": "Wii U Super Smash Bros. - Edición Mundial...\n60,17€"
@@ -13349,13 +13349,13 @@
   },
   {
     "id": "929",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: TAPON JOYSTICK PARA MANDO NINTENDO WII U...",
-      "es": "Wii/Wii U: TAPON JOYSTICK PARA MANDO NINTENDO WII U..."
+      "en": "Wii/WiiU: TAPON JOYSTICK PARA MANDO NINTENDO WII U...",
+      "es": "Wii/WiiU: TAPON JOYSTICK PARA MANDO NINTENDO WII U..."
     },
     "desc": {
       "es": "TAPON JOYSTICK PARA MANDO NINTENDO WII U, BOTONES ...\n9,49€"
@@ -13369,13 +13369,13 @@
   },
   {
     "id": "930",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Nintendo Enlace: Ocarina of Time Amiibo ...",
-      "es": "Wii/Wii U: Nintendo Enlace: Ocarina of Time Amiibo ..."
+      "en": "Wii/WiiU: Nintendo Enlace: Ocarina of Time Amiibo ...",
+      "es": "Wii/WiiU: Nintendo Enlace: Ocarina of Time Amiibo ..."
     },
     "desc": {
       "es": "Nintendo Enlace: Ocarina of Time Amiibo Wii U...\n38,73€"
@@ -13389,13 +13389,13 @@
   },
   {
     "id": "931",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Izquierdo & Derecho Reemplazo de 3D Joys...",
-      "es": "Wii/Wii U: Izquierdo & Derecho Reemplazo de 3D Joys..."
+      "en": "Wii/WiiU: Izquierdo & Derecho Reemplazo de 3D Joys...",
+      "es": "Wii/WiiU: Izquierdo & Derecho Reemplazo de 3D Joys..."
     },
     "desc": {
       "es": "Izquierdo & Derecho Reemplazo de 3D Joystick Analó...\n14,07€"
@@ -13409,13 +13409,13 @@
   },
   {
     "id": "932",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Sonic and All Stars Racing Transformed: ...",
-      "es": "Wii/Wii U: Sonic and All Stars Racing Transformed: ..."
+      "en": "Wii/WiiU: Sonic and All Stars Racing Transformed: ...",
+      "es": "Wii/WiiU: Sonic and All Stars Racing Transformed: ..."
     },
     "desc": {
       "es": "Sonic and All Stars Racing Transformed: Limited Ed...\n29,90€"
@@ -13429,13 +13429,13 @@
   },
   {
     "id": "933",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: CLOUDREAM Adaptador para controlador Gam...",
-      "es": "Wii/Wii U: CLOUDREAM Adaptador para controlador Gam..."
+      "en": "Wii/WiiU: CLOUDREAM Adaptador para controlador Gam...",
+      "es": "Wii/WiiU: CLOUDREAM Adaptador para controlador Gam..."
     },
     "desc": {
       "es": "CLOUDREAM Adaptador para controlador Gamecube, ada...\n23,29€"
@@ -13449,13 +13449,13 @@
   },
   {
     "id": "934",
-    "console": "Wii/Wii U",
+    "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
     "last_seen": "2026-06-07 12:49",
     "label": {
-      "en": "Wii/Wii U: Monster High: Una Nuova Mostramica A Scu...",
-      "es": "Wii/Wii U: Monster High: Una Nuova Mostramica A Scu..."
+      "en": "Wii/WiiU: Monster High: Una Nuova Mostramica A Scu...",
+      "es": "Wii/WiiU: Monster High: Una Nuova Mostramica A Scu..."
     },
     "desc": {
       "es": "Monster High: Una Nuova Mostramica A Scuola - Stan...\n35,59€"
