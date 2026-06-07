@@ -1,6 +1,5 @@
 [
   {
-    "id": "37",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: GameCube Adapter",
@@ -29,7 +28,6 @@
     "price": "14,99 €"
   },
   {
-    "id": "38",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: GameCube Adapter (Alt)",
@@ -58,7 +56,6 @@
     "price": "16,49 €"
   },
   {
-    "id": "39",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: GameCube to USB Adapter",
@@ -87,7 +84,6 @@
     "price": "41,66 €"
   },
   {
-    "id": "40",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Speaker",
@@ -116,7 +112,6 @@
     "price": "10,95 €"
   },
   {
-    "id": "41",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Controller Battery",
@@ -145,7 +140,6 @@
     "price": "9,00 €"
   },
   {
-    "id": "42",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Sensor Bar",
@@ -174,7 +168,6 @@
     "price": "10,00 €"
   },
   {
-    "id": "43",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: HDMI Adapter Cable",
@@ -203,7 +196,6 @@
     "price": "13,99 €"
   },
   {
-    "id": "44",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Y-Cable for Wii U",
@@ -232,7 +224,6 @@
     "price": "10,40 €"
   },
   {
-    "id": "45",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii U Pro Shell",
@@ -261,7 +252,6 @@
     "price": "9,49 €"
   },
   {
-    "id": "46",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: PAD Charger",
@@ -290,7 +280,6 @@
     "price": "18,97 €"
   },
   {
-    "id": "47",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii Charger",
@@ -319,7 +308,6 @@
     "price": "17,33 €"
   },
   {
-    "id": "48",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii U Charger",
@@ -348,7 +336,6 @@
     "price": "15,99 €"
   },
   {
-    "id": "49",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii U Pro Case",
@@ -377,7 +364,6 @@
     "price": "6,30 €"
   },
   {
-    "id": "50",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Guitar Controller",
@@ -406,7 +392,6 @@
     "price": "69,99 €"
   },
   {
-    "id": "51",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii Remote Controller",
@@ -435,7 +420,6 @@
     "price": "19,99 €"
   },
   {
-    "id": "52",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: GameCube Memory Card",
@@ -464,7 +448,6 @@
     "price": "13,19 €"
   },
   {
-    "id": "53",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Microphone",
@@ -493,7 +476,6 @@
     "price": "24,99 €"
   },
   {
-    "id": "54",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii U Pro Screen",
@@ -522,7 +504,6 @@
     "price": "5,59 €"
   },
   {
-    "id": "55",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Dance Pad",
@@ -551,7 +532,6 @@
     "price": "24,49 €"
   },
   {
-    "id": "56",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Battery Stand",
@@ -580,7 +560,6 @@
     "price": "25,99 €"
   },
   {
-    "id": "57",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii Stand",
@@ -609,7 +588,6 @@
     "price": "8,99 €"
   },
   {
-    "id": "58",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii U Stand",
@@ -638,7 +616,6 @@
     "price": "27,27 €"
   },
   {
-    "id": "59",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Video Capture Device",
@@ -667,7 +644,6 @@
     "price": "8,99 €"
   },
   {
-    "id": "60",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Steering Wheel",
@@ -696,7 +672,6 @@
     "price": "7,99 €"
   },
   {
-    "id": "61",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii: Wii Fit Board",
@@ -725,7 +700,6 @@
     "price": "54,90 €"
   },
   {
-    "id": "442",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Console + Wii Sports Resorts...",
@@ -754,7 +728,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "443",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii Sports Pack [importación]...",
@@ -783,7 +756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "444",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Console Wii blanche + Jeux Wii Sports + ...",
@@ -812,7 +784,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "445",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
@@ -849,7 +820,6 @@
     "status": "active"
   },
   {
-    "id": "446",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii Console (White) with Wii Sp...",
@@ -878,7 +848,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "447",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mcbazel Adaptador Wii a HDMI, Convertido...",
@@ -907,7 +876,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "448",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Neuftech barra de sensores de infrarrojo...",
@@ -944,7 +912,6 @@
     "status": "active"
   },
   {
-    "id": "449",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AUTOUTLET Wii Adaptador HDMI, 1080P/720P...",
@@ -973,7 +940,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "450",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: PORTHOLIC 4 en 1 Wii - Juego de Cables d...",
@@ -1002,7 +968,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "451",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Pack de 2 Mandos para Wii con Mu...",
@@ -1031,7 +996,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "452",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Joystick de control remoto con c...",
@@ -1060,7 +1024,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "453",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen - Mando de Wii con Nunchuck, con...",
@@ -1089,7 +1052,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "454",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen 2 Piezas Controller para Wii con...",
@@ -1118,7 +1080,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "455",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Joystick de control remoto con c...",
@@ -1147,7 +1108,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "456",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Pack de 2 Mandos para Wii,Wii Ma...",
@@ -1176,7 +1136,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "457",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Hw Negra + Wii Mario Kart + Wii Vola...",
@@ -1205,7 +1164,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "458",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii - Console Mario Kart Pack, ...",
@@ -1234,7 +1192,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "459",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
@@ -1263,7 +1220,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "460",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a distancia control remoto +...",
@@ -1300,7 +1256,6 @@
     "status": "active"
   },
   {
-    "id": "461",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a Distancia y Joystick Azul ...",
@@ -1329,7 +1284,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "462",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a Distancia Wii, Mando a Dis...",
@@ -1358,7 +1312,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "463",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a distancia Wii y Nunchuck a...",
@@ -1387,7 +1340,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "464",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Wii RN Set (Cyan-logo)...",
@@ -1416,7 +1368,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "465",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: PORTHOLIC Adaptador Wii HDMI con Cable H...",
@@ -1445,7 +1396,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "466",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
@@ -1474,7 +1424,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "467",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: SATKIT Mando Remote con MotionPlus Incor...",
@@ -1511,7 +1460,6 @@
     "status": "active"
   },
   {
-    "id": "468",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TECHZOCO Barra Infrarrojos Sensor Wii, S...",
@@ -1548,7 +1496,6 @@
     "status": "active"
   },
   {
-    "id": "469",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Convertidor de Wii a HDTV Real 720P 1080...",
@@ -1577,7 +1524,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "470",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX 2en1 Remote MotionPlus Controller ...",
@@ -1606,7 +1552,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "471",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Qumox - Mando para Wii, Mando Nunchuck, ...",
@@ -1635,7 +1580,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "472",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
@@ -1664,7 +1608,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "473",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a Distancia MotionPlus + Nun...",
@@ -1693,7 +1636,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "474",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX 2en1 Remote MotionPlus Controller ...",
@@ -1722,7 +1664,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "475",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX Mando a Distancia Wii Nunchuck con...",
@@ -1759,7 +1700,6 @@
     "status": "active"
   },
   {
-    "id": "476",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Sing Party (Incluye Micrófono)...",
@@ -1788,7 +1728,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "477",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
@@ -1817,7 +1756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "478",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Console Blanca (incluido Wii Sports)...",
@@ -1846,7 +1784,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "479",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii U - Premium Pack: Consola +...",
@@ -1883,7 +1820,6 @@
     "status": "active"
   },
   {
-    "id": "480",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii (White) with Mario Kart: In...",
@@ -1912,7 +1848,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "481",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Sports Resort Black...",
@@ -1941,7 +1876,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "482",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Volante para Wii Presentado en Caja, Col...",
@@ -1970,7 +1904,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "483",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Console Blanca (incluido Wii Sports ...",
@@ -1999,7 +1932,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "484",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Console de juegos (including Wii Spo...",
@@ -2028,7 +1960,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "485",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Wii Remote Mando sin Motion Plus...",
@@ -2057,7 +1988,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "486",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Wii Remote Mando sin Motion Plus...",
@@ -2086,7 +2016,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "487",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: wii hdmi adaptador wii consola a hdmi Ad...",
@@ -2115,7 +2044,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "488",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: LiNKFOR Adaptador Wii a HDMI 480P,Conver...",
@@ -2144,7 +2072,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "489",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CABLEPELADO Barra Sensor Infrarrojos | S...",
@@ -2181,7 +2108,6 @@
     "status": "active"
   },
   {
-    "id": "490",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii + 1 Manette + Wii Sport...",
@@ -2210,7 +2136,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "491",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Retoo Wii to HDMI Full HD Converter With...",
@@ -2239,7 +2164,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "492",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2x Mando a distancia Wii, Mando Wii Mand...",
@@ -2268,7 +2192,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "493",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -2305,7 +2228,6 @@
     "status": "active"
   },
   {
-    "id": "494",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -2334,7 +2256,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "495",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -2363,7 +2284,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "496",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii Sports Resort Pack - juegos...",
@@ -2392,7 +2312,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "497",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii U Premium Pack Schwarz Inkl...",
@@ -2421,7 +2340,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "498",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mcbazel Cable de audio y vídeo compuesto...",
@@ -2458,7 +2376,6 @@
     "status": "active"
   },
   {
-    "id": "499",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii - Consola Mini, Color Rojo...",
@@ -2487,7 +2404,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "500",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Convertidor Wii a HDMI 1,5 Metros, Adapt...",
@@ -2516,7 +2432,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "501",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Wii Controller Charger, Estación...",
@@ -2553,7 +2468,6 @@
     "status": "active"
   },
   {
-    "id": "502",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2PCS Motion Plus Adaptador Acelerador Ma...",
@@ -2582,7 +2496,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "503",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mcbazel Adaptador Wii a HDMI con Cable H...",
@@ -2611,7 +2524,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "504",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: INF Adaptador Wii a HDMI – 720/1080P HD ...",
@@ -2640,7 +2552,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "505",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra de Sensores para Wii Consola Barra...",
@@ -2677,7 +2588,6 @@
     "status": "active"
   },
   {
-    "id": "506",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: SATKIT Mando Nunchuck Compatible con Con...",
@@ -2706,7 +2616,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "507",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CHILDMORY Barra de sensores USB consola ...",
@@ -2743,7 +2652,6 @@
     "status": "active"
   },
   {
-    "id": "508",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TOSY Flying Disc - 16 Millones de Colore...",
@@ -2772,7 +2680,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "509",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
@@ -2809,7 +2716,6 @@
     "status": "active"
   },
   {
-    "id": "510",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de Carga 4 en 1 para Mandos de ...",
@@ -2838,7 +2744,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "511",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Pack de 2 Mandos para Wii,Wii Ma...",
@@ -2867,7 +2772,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "512",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, color...",
@@ -2896,7 +2800,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "513",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
@@ -2925,7 +2828,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "514",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
@@ -2962,7 +2864,6 @@
     "status": "active"
   },
   {
-    "id": "515",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
@@ -2991,7 +2892,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "516",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo - Mando Plus: Luigi (Nintendo W...",
@@ -3020,7 +2920,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "517",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii / Wii U - Mando Plus, Color...",
@@ -3049,7 +2948,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "518",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Party...",
@@ -3078,7 +2976,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "519",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo - Wii Sports...",
@@ -3107,7 +3004,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "520",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Mario Kart + Volante...",
@@ -3136,7 +3032,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "521",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
@@ -3165,7 +3060,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "522",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
@@ -3202,7 +3096,6 @@
     "status": "active"
   },
   {
-    "id": "523",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Funmo mando wii, Mando a distancia contr...",
@@ -3231,7 +3124,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "524",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Play - Juego (Wii, gamepad)...",
@@ -3260,7 +3152,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "525",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Clásico con Cable Gamepad J...",
@@ -3289,7 +3180,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "526",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii - Wii Sports Resort...",
@@ -3318,7 +3208,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "527",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CHILDMORY Barra infrarroja del sensor de...",
@@ -3347,7 +3236,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "528",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CAMWAY Adaptador Wii HDMI 1080P/720P, Co...",
@@ -3376,7 +3264,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "529",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Lets Sing 7 - Versión Española...",
@@ -3405,7 +3292,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "530",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii U - Consola Premium + Lego ...",
@@ -3442,7 +3328,6 @@
     "status": "active"
   },
   {
-    "id": "531",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii New Super Mario Bros....",
@@ -3471,7 +3356,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "532",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: NDS New Super Mario Bros....",
@@ -3500,7 +3384,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "533",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: New Super Mario Bros. U...",
@@ -3537,7 +3420,6 @@
     "status": "active"
   },
   {
-    "id": "534",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii - Mario Kart...",
@@ -3566,7 +3448,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "535",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen 2 en 1 Controller para Wii con N...",
@@ -3595,7 +3476,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "536",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen 2 en 1 Controller para Wii con N...",
@@ -3624,7 +3504,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "537",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Arvoni Sensores para Wii, Compatible con...",
@@ -3661,7 +3540,6 @@
     "status": "active"
   },
   {
-    "id": "538",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen - Cargador para Mando de Wii con...",
@@ -3690,7 +3568,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "539",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit Plus + Balance Board...",
@@ -3715,11 +3592,10 @@
     "price": "58,99 €",
     "img": "https://m.media-amazon.com/images/I/71je817tdtL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B003OBTU6W?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "540",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX 2 x Controlador Mando de Juego con...",
@@ -3748,7 +3624,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "541",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii U 32Gb Lego City: Undercove...",
@@ -3777,7 +3652,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "542",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Star Fox Zero...",
@@ -3814,7 +3688,6 @@
     "status": "active"
   },
   {
-    "id": "543",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii HDMI Adapter mit 1m HDMI Kabel & 1m ...",
@@ -3843,7 +3716,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "544",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit Plus...",
@@ -3868,11 +3740,10 @@
     "price": "14,95 €",
     "img": "https://m.media-amazon.com/images/I/71DbEyqblqL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0056C7KKK?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "545",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando a Distancia de Repuesto Desnudo pa...",
@@ -3909,7 +3780,6 @@
     "status": "active"
   },
   {
-    "id": "546",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de Carga para Mando Wii: WIYETY...",
@@ -3946,7 +3816,6 @@
     "status": "active"
   },
   {
-    "id": "547",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 Pack Nunchuck Controlador para Wii, Re...",
@@ -3975,7 +3844,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "548",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AFUNTA Nunchuck Controlador Gamepad para...",
@@ -4012,7 +3880,6 @@
     "status": "active"
   },
   {
-    "id": "549",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Charger Dock Station + 2 Paquetes...",
@@ -4041,7 +3908,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "550",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de Carga para Controlador de Wi...",
@@ -4070,7 +3936,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "551",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Vexnaro 2 Pack Controlador Nunchuk, Comp...",
@@ -4107,7 +3972,6 @@
     "status": "active"
   },
   {
-    "id": "552",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AMATHINGS Fuente de alimentación compati...",
@@ -4144,7 +4008,6 @@
     "status": "active"
   },
   {
-    "id": "553",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Cargador compatible con Wii U Gamepad, a...",
@@ -4181,7 +4044,6 @@
     "status": "active"
   },
   {
-    "id": "554",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: LIONCAST® Set de 2 Micrófonos USB para P...",
@@ -4210,7 +4072,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "555",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii REMOTE PLUS BLANCO...",
@@ -4247,7 +4108,6 @@
     "status": "active"
   },
   {
-    "id": "556",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -4284,7 +4144,6 @@
     "status": "active"
   },
   {
-    "id": "557",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: QUMOX 2in1 Remote MotionPlus Controller ...",
@@ -4313,7 +4172,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "558",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Nunchuck con Cable Basado e...",
@@ -4342,7 +4200,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "559",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Nunchuck con Cable Basado e...",
@@ -4371,7 +4228,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "560",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Nunchuck con Cable Basado e...",
@@ -4400,7 +4256,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "561",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Nunchuck con Cable Basado e...",
@@ -4429,7 +4284,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "562",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Nunchuck con Cable Basado e...",
@@ -4458,7 +4312,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "563",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Adjunto de Pistola Ligera para Ni...",
@@ -4487,7 +4340,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "564",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit Plus+Wii Balance Board...",
@@ -4512,11 +4364,10 @@
     "price": "71,09 €",
     "img": "https://m.media-amazon.com/images/I/61KBR8ewoiL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B002BSA3EM?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "565",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: SATKIT Pack Mando Compatible con Consola...",
@@ -4545,7 +4396,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "566",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen 2 Piezas Controller para Wii con...",
@@ -4574,7 +4424,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "567",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando para Nintendo Wii,2 en 1 Controlle...",
@@ -4611,7 +4460,6 @@
     "status": "active"
   },
   {
-    "id": "568",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Pistola ligera Gun Shooting Sport...",
@@ -4640,7 +4488,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "569",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit...",
@@ -4665,11 +4512,10 @@
     "price": "18,60 €",
     "img": "https://m.media-amazon.com/images/I/51abIRlrQXL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B002MYN5YU?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "570",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: THQ Cars Race-O-Rama, WII, FR - Juego (W...",
@@ -4698,7 +4544,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "571",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Volante, STOGA controlador de Wii ge...",
@@ -4727,7 +4572,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "572",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: REY Pistola Zapper para Nintendo Wii par...",
@@ -4756,7 +4600,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "573",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii Classic Controller Gamepad ...",
@@ -4785,7 +4628,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "574",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Michael Jackson: The Experience Wii...",
@@ -4814,7 +4656,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "575",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mcbazel Tarjeta de Memoria de Almacenami...",
@@ -4843,7 +4684,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "576",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra Sensora USB, Barra de Sensores Led...",
@@ -4872,7 +4712,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "577",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra de Sensores para Sistema Wii, Rece...",
@@ -4909,7 +4748,6 @@
     "status": "active"
   },
   {
-    "id": "578",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra Infrarrojos Sensor Wii - Sensora p...",
@@ -4938,7 +4776,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "579",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: MAYFLASH Adaptador de Mando de Gamecube ...",
@@ -4967,7 +4804,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "580",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Udraw Studio: Artista Al Instante...",
@@ -4996,7 +4832,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "581",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Udraw Studio: Artista Al Instante...",
@@ -5025,7 +4860,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "582",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Udraw Studio: Artista Al Instante...",
@@ -5050,11 +4884,10 @@
     "price": "25,00 €",
     "img": "https://m.media-amazon.com/images/I/519xWdr7kYL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B006B5080U?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "583",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Sports Pack...",
@@ -5083,7 +4916,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "584",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Super Mario Galaxy 2...",
@@ -5120,7 +4952,6 @@
     "status": "active"
   },
   {
-    "id": "585",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 juegos de mando a distancia para Wii, ...",
@@ -5149,7 +4980,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "586",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit Plus + Balance Board Negra (tabl...",
@@ -5174,11 +5004,10 @@
     "price": "69,95 €",
     "img": "https://m.media-amazon.com/images/I/81-ugXaaJ7L._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B005I7K8UW?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "587",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Mando Clásico con Cable Pro Gamep...",
@@ -5207,7 +5036,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "588",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: GANA Convertidor de Wii a HDMI, Adaptado...",
@@ -5236,7 +5064,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "589",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Super Mario Galaxy...",
@@ -5265,7 +5092,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "590",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Bateria Recargable 3600mAh NiMH Compatib...",
@@ -5294,7 +5120,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "591",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo - Ac wii mando remoto plus rojo...",
@@ -5331,7 +5156,6 @@
     "status": "active"
   },
   {
-    "id": "592",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Mario Party 8...",
@@ -5360,7 +5184,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "593",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT 3600mAh Batería Recargable Cable ...",
@@ -5389,7 +5212,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "594",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii a Hdmi Adaptador Wii 2 HDMI Converte...",
@@ -5426,7 +5248,6 @@
     "status": "active"
   },
   {
-    "id": "595",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: UNDER CONTROL Manette expert filaire Wii...",
@@ -5463,7 +5284,6 @@
     "status": "active"
   },
   {
-    "id": "596",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra Infrarrojos Sensor Wii, Barra Sens...",
@@ -5500,7 +5320,6 @@
     "status": "active"
   },
   {
-    "id": "597",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Fosmon Nintendo Wii/WiiU Reemplazo de c...",
@@ -5529,7 +5348,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "598",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Adaptador HDMI Wii, convertidor Wii a HD...",
@@ -5558,7 +5376,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "599",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando clásico NES compatible para Ninten...",
@@ -5587,7 +5404,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "600",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Cargador de Reemplazo para Nintendo Wii ...",
@@ -5616,7 +5432,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "601",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Balance Board de Nintendo...",
@@ -5645,7 +5460,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "602",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: obqo Barra de sensor infrarrojo inalámbr...",
@@ -5682,7 +5496,6 @@
     "status": "active"
   },
   {
-    "id": "603",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 mandos a distancia para Wii, mandos de...",
@@ -5711,7 +5524,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "604",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Paquete de 2 mandos a distancia ...",
@@ -5740,7 +5552,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "605",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 mandos a distancia para Wii, mandos de...",
@@ -5769,7 +5580,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "606",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit U (Game Only, No Fit Meter or Ba...",
@@ -5794,7 +5604,7 @@
     "price": "19,07€",
     "img": "https://m.media-amazon.com/images/I/81W1aPRuplL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B00P5DOOTU?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno",
     "last_seen": "2026-06-07 12:49",
     "price_history": [
@@ -5806,7 +5616,6 @@
     "status": "active"
   },
   {
-    "id": "607",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: MAYFLASH - Convertidor Wii a HDMI 1080P ...",
@@ -5843,7 +5652,6 @@
     "status": "active"
   },
   {
-    "id": "608",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Cargador para Nintendo Wii U Gamepad, Fu...",
@@ -5880,7 +5688,6 @@
     "status": "active"
   },
   {
-    "id": "609",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Sporgo Juego de 2 Controladores Nunchuk ...",
@@ -5917,7 +5724,6 @@
     "status": "active"
   },
   {
-    "id": "610",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Pistola Zapper para Wii...",
@@ -5946,7 +5752,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "611",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -5983,7 +5788,6 @@
     "status": "active"
   },
   {
-    "id": "613",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Adaptador de conversión de Wii a HDMI Wi...",
@@ -6012,7 +5816,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "614",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AUTOUTLET Adaptador Wii a HDMI, Converti...",
@@ -6041,7 +5844,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "615",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
@@ -6078,7 +5880,6 @@
     "status": "active"
   },
   {
-    "id": "616",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Volantes para Nintendo Wii, Mari...",
@@ -6107,7 +5908,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "617",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii Remote Plus - Mando inalámb...",
@@ -6136,7 +5936,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "618",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra sensora para consolas Wii/WiiU, b...",
@@ -6173,7 +5972,6 @@
     "status": "active"
   },
   {
-    "id": "619",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: DollaTek Cable de alimentación USB Extra...",
@@ -6210,7 +6008,6 @@
     "status": "active"
   },
   {
-    "id": "620",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Los Simpson: El Videojuego (Platinum)...",
@@ -6239,7 +6036,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "621",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CABLEPELADO Adaptador De Corriente para ...",
@@ -6276,7 +6072,6 @@
     "status": "active"
   },
   {
-    "id": "623",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Music...",
@@ -6305,7 +6100,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "625",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: WWE Smackdown vs Raw 2011...",
@@ -6334,7 +6128,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "626",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Tabla de equilibrio Fit Plus (solo t...",
@@ -6363,7 +6156,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "627",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando Clasico Pro Wii Negro Comp....",
@@ -6392,7 +6184,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "628",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Funda de silicona Motionplus Moti...",
@@ -6421,7 +6212,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "630",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Machine-Ya Wii Zapper Gun y volante comp...",
@@ -6450,7 +6240,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "631",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Machine-Ya Wii Zapper Gun y volante comp...",
@@ -6479,7 +6268,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "632",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Accesorio de Pistola de Luz para ...",
@@ -6516,7 +6304,6 @@
     "status": "active"
   },
   {
-    "id": "633",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Pokémon Battle Revolution...",
@@ -6545,7 +6332,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "634",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo Wii - Tiger Woods PGA Tour 10 [...",
@@ -6574,7 +6360,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "635",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: LucasArts Star Wars The Clone Wars: Repu...",
@@ -6603,7 +6388,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "636",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Funda de silicona Motionplus Moti...",
@@ -6632,7 +6416,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "637",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: SATKIT Adaptador de Corriente Universal ...",
@@ -6661,7 +6444,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "638",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra de sensor USB infrarroja IR Ray de...",
@@ -6698,7 +6480,6 @@
     "status": "active"
   },
   {
-    "id": "639",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de carga 2 en 1 para mando a di...",
@@ -6727,7 +6508,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "640",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Leikurvo Mando a distancia Wii, mando a ...",
@@ -6764,7 +6544,6 @@
     "status": "active"
   },
   {
-    "id": "641",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Hyperkin Hyper Strummer Wii - Controlado...",
@@ -6793,7 +6572,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "642",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Soporte Vertical y Horizontal para Conso...",
@@ -6830,7 +6608,6 @@
     "status": "active"
   },
   {
-    "id": "643",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Adaptador Wii a HDMI, Convertidor de Señ...",
@@ -6859,7 +6636,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "644",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii - Guitar Hero 3: Legends of Rock + L...",
@@ -6888,7 +6664,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "645",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Barra de sensores para Wii, barra de sen...",
@@ -6925,7 +6700,6 @@
     "status": "active"
   },
   {
-    "id": "646",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT El sensor de movimiento del mando...",
@@ -6954,7 +6728,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "647",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT El sensor de movimiento del mando...",
@@ -6983,7 +6756,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "648",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT El sensor de movimiento del mando...",
@@ -7012,7 +6784,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "649",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Control remoto con sensor de movi...",
@@ -7041,7 +6812,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "650",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Control remoto con sensor de movi...",
@@ -7070,7 +6840,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "651",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
@@ -7107,7 +6876,6 @@
     "status": "active"
   },
   {
-    "id": "652",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Alfombrilla antideslizante Dancin...",
@@ -7136,7 +6904,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "653",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: SOONHUA Estación de Carga Wii 4 en 1 - B...",
@@ -7165,7 +6932,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "654",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mario Kart Wii KNEX Building Set #38028 ...",
@@ -7194,7 +6960,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "655",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 en 1 Motion Plus Mando y Nunchunk para...",
@@ -7231,7 +6996,6 @@
     "status": "active"
   },
   {
-    "id": "656",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Animal Crossing: Let's Go to the City [N...",
@@ -7260,7 +7024,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "657",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Adaptador de alimentación de CA Adaptado...",
@@ -7297,7 +7060,6 @@
     "status": "active"
   },
   {
-    "id": "658",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: eSynic Adaptador Wii a HDMI 1080P/720P C...",
@@ -7334,7 +7096,6 @@
     "status": "active"
   },
   {
-    "id": "659",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mribo Mando a Distancia Wii, Mando a Dis...",
@@ -7371,7 +7132,6 @@
     "status": "active"
   },
   {
-    "id": "660",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: booEy 2x Volante para Nintendo Wii y Wii...",
@@ -7408,7 +7168,6 @@
     "status": "active"
   },
   {
-    "id": "661",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 fundas de silicona blancas con correa ...",
@@ -7437,7 +7196,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "662",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: para Wii Cable de Alimentación Fuente de...",
@@ -7466,7 +7224,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "663",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de carga para Wii, 4 en 1 mando...",
@@ -7495,7 +7252,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "664",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Control inalámbrico Wii integrad...",
@@ -7524,7 +7280,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "665",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Mando a distancia para Wii, Moti...",
@@ -7553,7 +7308,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "666",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: TechKen Mando a distancia para Wii, Moti...",
@@ -7582,7 +7336,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "667",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando y Nunchuck para Wii, mando a dista...",
@@ -7619,7 +7372,6 @@
     "status": "active"
   },
   {
-    "id": "668",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii to HDMI Converter,Wii HDMI Adapter 1...",
@@ -7648,7 +7400,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "669",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2 Fundas de Silicona con Correa para la ...",
@@ -7677,7 +7428,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "670",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Pingüinos De Madagascar...",
@@ -7706,7 +7456,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "671",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Pingüinos De Madagascar...",
@@ -7735,7 +7484,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "672",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Super Mario Galaxy 2 Wii AT [Importación...",
@@ -7764,7 +7512,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "673",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: DOYO Volante para Wii Mario Kart, 2 Pack...",
@@ -7793,7 +7540,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "674",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Leikurvo Paquete de 2 mandos Wii Remote,...",
@@ -7830,7 +7576,6 @@
     "status": "active"
   },
   {
-    "id": "675",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: PROZOR Wii to HDMI Converter Adaptador W...",
@@ -7859,7 +7604,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "676",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: The Legend Of Zelda: Breath Of The Wild...",
@@ -7888,7 +7632,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "677",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Mando a distancia de movimiento inalámbr...",
@@ -7918,7 +7661,6 @@
     "last_seen": "2026-06-07 12:49"
   },
   {
-    "id": "678",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: DARLINGTON & Sohns - Kit de cables para ...",
@@ -7955,7 +7697,6 @@
     "status": "active"
   },
   {
-    "id": "679",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: WKOLF Juego de 4 mandos a distancia de r...",
@@ -7992,7 +7733,6 @@
     "status": "active"
   },
   {
-    "id": "680",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Batería para Nintendo Wii U Gamepad, 360...",
@@ -8029,7 +7769,6 @@
     "status": "active"
   },
   {
-    "id": "681",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Super Smash Bros. Brawl - Edición Mu...",
@@ -8058,7 +7797,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "682",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Fuente de alimentación Adaptador de alim...",
@@ -8087,7 +7825,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "683",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Fit (Inlcuye Wii Balance Board)...",
@@ -8112,11 +7849,10 @@
     "price": "54,90 €",
     "img": "https://m.media-amazon.com/images/I/21oOb45hPnL._AC_.jpg",
     "url": "https://www.amazon.es/dp/B001OTW6M6?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Videojuegos",
     "size": "Ninguno"
   },
   {
-    "id": "684",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Call of Duty: Black Ops...",
@@ -8145,7 +7881,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "685",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Good - TransFormers Revenge of the Falle...",
@@ -8182,7 +7917,6 @@
     "status": "active"
   },
   {
-    "id": "686",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Batería de repuesto WUP-001 para Wii U G...",
@@ -8219,7 +7953,6 @@
     "status": "active"
   },
   {
-    "id": "687",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: AUTOUTLET Cable Scart RGB Scart Video HD...",
@@ -8256,7 +7989,6 @@
     "status": "active"
   },
   {
-    "id": "688",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Link-e - Cargador de Fuente de Alimentac...",
@@ -8293,7 +8025,6 @@
     "status": "active"
   },
   {
-    "id": "689",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Colección Puzzler - Nintendo Wii...",
@@ -8322,7 +8053,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "690",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CHILDMORY Adaptador de alimentación de C...",
@@ -8359,7 +8089,6 @@
     "status": "active"
   },
   {
-    "id": "691",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Batería de repuesto compatible con Ninte...",
@@ -8396,7 +8125,6 @@
     "status": "active"
   },
   {
-    "id": "692",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: CABLEPELADO Nunchaku | Controlador Nunch...",
@@ -8433,7 +8161,6 @@
     "status": "active"
   },
   {
-    "id": "693",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de Carga para Controlador de Wi...",
@@ -8462,7 +8189,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "694",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8491,7 +8217,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "695",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8520,7 +8245,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "696",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8549,7 +8273,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "697",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8586,7 +8309,6 @@
     "status": "active"
   },
   {
-    "id": "698",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: OSTENT Sensor de Movimiento Bluetooth Ma...",
@@ -8615,7 +8337,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "699",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Create idea Cubierta de la Puerta Traser...",
@@ -8644,7 +8365,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "700",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Cable Adaptador de Fuente de Alimentació...",
@@ -8673,7 +8393,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "701",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 2-Tech Fuente de alimentación de repuest...",
@@ -8710,7 +8429,6 @@
     "status": "active"
   },
   {
-    "id": "702",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Fuente de alimentación, cable de aliment...",
@@ -8747,7 +8465,6 @@
     "status": "active"
   },
   {
-    "id": "703",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Estación de Carga para Controlador de Wi...",
@@ -8776,7 +8493,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "704",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Eaxus® Fuente de alimentación adecuada p...",
@@ -8805,7 +8521,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "705",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Nintendo The Legend of Zelda - Juego...",
@@ -8834,7 +8549,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "706",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Para Wii Cd Dvd Drive modelo D4 con chip...",
@@ -8863,7 +8577,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "707",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Para consola de juegos Wii D4, CD, DVD, ...",
@@ -8892,7 +8605,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "708",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Módulo de unidad óptica para consola de ...",
@@ -8921,7 +8633,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "709",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: 10 empuñaduras negras para pulgar para X...",
@@ -8950,7 +8661,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "710",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Wii Party [Importación inglesa]...",
@@ -8979,7 +8689,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "711",
     "console": "Wii/WiiU",
     "label": {
       "en": "Wii/WiiU: Correa de mano gris compatible con mando...",
@@ -9008,7 +8717,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "712",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9028,7 +8736,6 @@
     "price_history": []
   },
   {
-    "id": "713",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9048,7 +8755,6 @@
     "price_history": []
   },
   {
-    "id": "714",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9068,7 +8774,6 @@
     "price_history": []
   },
   {
-    "id": "715",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9088,7 +8793,6 @@
     "price_history": []
   },
   {
-    "id": "716",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9108,7 +8812,6 @@
     "price_history": []
   },
   {
-    "id": "717",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9128,7 +8831,6 @@
     "price_history": []
   },
   {
-    "id": "718",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9148,7 +8850,6 @@
     "price_history": []
   },
   {
-    "id": "719",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9168,7 +8869,6 @@
     "price_history": []
   },
   {
-    "id": "720",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9183,12 +8883,11 @@
     "price": "34,99€",
     "img": "https://m.media-amazon.com/images/I/81HBuXMa3bL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BCH4DT1V?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "721",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9208,7 +8907,6 @@
     "price_history": []
   },
   {
-    "id": "722",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9223,12 +8921,11 @@
     "price": "43,91€",
     "img": "https://m.media-amazon.com/images/I/81cBG52m8hL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08HNCRYPR?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "723",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9248,7 +8945,6 @@
     "price_history": []
   },
   {
-    "id": "724",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9268,7 +8964,6 @@
     "price_history": []
   },
   {
-    "id": "725",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9288,7 +8983,6 @@
     "price_history": []
   },
   {
-    "id": "726",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9308,7 +9002,6 @@
     "price_history": []
   },
   {
-    "id": "727",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9328,7 +9021,6 @@
     "price_history": []
   },
   {
-    "id": "728",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9348,7 +9040,6 @@
     "price_history": []
   },
   {
-    "id": "729",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9368,7 +9059,6 @@
     "price_history": []
   },
   {
-    "id": "730",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9388,7 +9078,6 @@
     "price_history": []
   },
   {
-    "id": "731",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9408,7 +9097,6 @@
     "price_history": []
   },
   {
-    "id": "732",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9428,7 +9116,6 @@
     "price_history": []
   },
   {
-    "id": "733",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9448,7 +9135,6 @@
     "price_history": []
   },
   {
-    "id": "734",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9468,7 +9154,6 @@
     "price_history": []
   },
   {
-    "id": "735",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9488,7 +9173,6 @@
     "price_history": []
   },
   {
-    "id": "736",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9508,7 +9192,6 @@
     "price_history": []
   },
   {
-    "id": "737",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9528,7 +9211,6 @@
     "price_history": []
   },
   {
-    "id": "738",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9548,7 +9230,6 @@
     "price_history": []
   },
   {
-    "id": "739",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9568,7 +9249,6 @@
     "price_history": []
   },
   {
-    "id": "740",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9588,7 +9268,6 @@
     "price_history": []
   },
   {
-    "id": "741",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9608,7 +9287,6 @@
     "price_history": []
   },
   {
-    "id": "742",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9628,7 +9306,6 @@
     "price_history": []
   },
   {
-    "id": "743",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9648,7 +9325,6 @@
     "price_history": []
   },
   {
-    "id": "744",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9668,7 +9344,6 @@
     "price_history": []
   },
   {
-    "id": "745",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9688,7 +9363,6 @@
     "price_history": []
   },
   {
-    "id": "746",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9708,7 +9382,6 @@
     "price_history": []
   },
   {
-    "id": "747",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9728,7 +9401,6 @@
     "price_history": []
   },
   {
-    "id": "748",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9748,7 +9420,6 @@
     "price_history": []
   },
   {
-    "id": "749",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9768,7 +9439,6 @@
     "price_history": []
   },
   {
-    "id": "750",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9788,7 +9458,6 @@
     "price_history": []
   },
   {
-    "id": "751",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9808,7 +9477,6 @@
     "price_history": []
   },
   {
-    "id": "752",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9828,7 +9496,6 @@
     "price_history": []
   },
   {
-    "id": "753",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9848,7 +9515,6 @@
     "price_history": []
   },
   {
-    "id": "754",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9868,7 +9534,6 @@
     "price_history": []
   },
   {
-    "id": "755",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9888,7 +9553,6 @@
     "price_history": []
   },
   {
-    "id": "756",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9908,7 +9572,6 @@
     "price_history": []
   },
   {
-    "id": "757",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9923,12 +9586,11 @@
     "price": "20,99€",
     "img": "https://m.media-amazon.com/images/I/51IrdT5bP5L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09J52ZWDQ?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "758",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9948,7 +9610,6 @@
     "price_history": []
   },
   {
-    "id": "759",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9968,7 +9629,6 @@
     "price_history": []
   },
   {
-    "id": "760",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -9988,7 +9648,6 @@
     "price_history": []
   },
   {
-    "id": "761",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10008,7 +9667,6 @@
     "price_history": []
   },
   {
-    "id": "762",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10028,7 +9686,6 @@
     "price_history": []
   },
   {
-    "id": "763",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10048,7 +9705,6 @@
     "price_history": []
   },
   {
-    "id": "764",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10068,7 +9724,6 @@
     "price_history": []
   },
   {
-    "id": "765",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10088,7 +9743,6 @@
     "price_history": []
   },
   {
-    "id": "766",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10108,27 +9762,6 @@
     "price_history": []
   },
   {
-    "id": "767",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: Nintendo WIIU U WII REMOTE PLUS BLANCO (...",
-      "es": "Wii/WiiU: Nintendo WIIU U WII REMOTE PLUS BLANCO (..."
-    },
-    "desc": {
-      "es": "Nintendo WIIU U WII REMOTE PLUS BLANCO (LOS E.E.U....\n72,69€"
-    },
-    "price": "72,69€",
-    "img": "https://m.media-amazon.com/images/I/91Hcwm7dgUL._AC_SY679_.jpg",
-    "url": "https://www.amazon.es/dp/B096LZHVB5?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "768",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10148,7 +9781,6 @@
     "price_history": []
   },
   {
-    "id": "769",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10168,7 +9800,6 @@
     "price_history": []
   },
   {
-    "id": "770",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10188,7 +9819,6 @@
     "price_history": []
   },
   {
-    "id": "771",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10208,7 +9838,6 @@
     "price_history": []
   },
   {
-    "id": "772",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10228,7 +9857,6 @@
     "price_history": []
   },
   {
-    "id": "773",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10248,7 +9876,6 @@
     "price_history": []
   },
   {
-    "id": "774",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10268,7 +9895,6 @@
     "price_history": []
   },
   {
-    "id": "775",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10288,7 +9914,6 @@
     "price_history": []
   },
   {
-    "id": "776",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10308,7 +9933,6 @@
     "price_history": []
   },
   {
-    "id": "777",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10328,7 +9952,6 @@
     "price_history": []
   },
   {
-    "id": "778",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10348,7 +9971,6 @@
     "price_history": []
   },
   {
-    "id": "779",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10368,7 +9990,6 @@
     "price_history": []
   },
   {
-    "id": "780",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10388,7 +10009,6 @@
     "price_history": []
   },
   {
-    "id": "781",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10408,7 +10028,6 @@
     "price_history": []
   },
   {
-    "id": "782",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10423,12 +10042,11 @@
     "price": "39,70€",
     "img": "https://m.media-amazon.com/images/I/91t5NsX8-cL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00KOU3DGY?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
+    "subcategory": "Videojuegos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "783",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10448,7 +10066,6 @@
     "price_history": []
   },
   {
-    "id": "784",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10468,7 +10085,6 @@
     "price_history": []
   },
   {
-    "id": "785",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10488,7 +10104,6 @@
     "price_history": []
   },
   {
-    "id": "786",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10508,7 +10123,6 @@
     "price_history": []
   },
   {
-    "id": "787",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10528,7 +10142,6 @@
     "price_history": []
   },
   {
-    "id": "788",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10548,7 +10161,6 @@
     "price_history": []
   },
   {
-    "id": "789",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10568,7 +10180,6 @@
     "price_history": []
   },
   {
-    "id": "790",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10588,7 +10199,6 @@
     "price_history": []
   },
   {
-    "id": "791",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10608,7 +10218,6 @@
     "price_history": []
   },
   {
-    "id": "792",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10628,7 +10237,6 @@
     "price_history": []
   },
   {
-    "id": "793",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10648,7 +10256,6 @@
     "price_history": []
   },
   {
-    "id": "794",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10668,7 +10275,6 @@
     "price_history": []
   },
   {
-    "id": "795",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10688,7 +10294,6 @@
     "price_history": []
   },
   {
-    "id": "796",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10708,27 +10313,6 @@
     "price_history": []
   },
   {
-    "id": "797",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: My Nintendo Wii U...",
-      "es": "Wii/WiiU: My Nintendo Wii U..."
-    },
-    "desc": {
-      "es": "My Nintendo Wii U...\nVer precio"
-    },
-    "price": "Ver precio",
-    "img": "https://m.media-amazon.com/images/I/41PPqEuciUL._SY385_.jpg",
-    "url": "https://www.amazon.es/dp/0789751216?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "798",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10743,12 +10327,11 @@
     "price": "44,99€",
     "img": "https://m.media-amazon.com/images/I/619S9KQ9-cL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07ZH8ZQYD?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "799",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10768,7 +10351,6 @@
     "price_history": []
   },
   {
-    "id": "800",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10788,7 +10370,6 @@
     "price_history": []
   },
   {
-    "id": "801",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10808,7 +10389,6 @@
     "price_history": []
   },
   {
-    "id": "802",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10823,112 +10403,11 @@
     "price": "52,19€",
     "img": "https://m.media-amazon.com/images/I/71L-jpoihhL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00S66TYNY?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "803",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
-    },
-    "desc": {
-      "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n10,95€"
-    },
-    "price": "10,95€",
-    "img": "https://m.media-amazon.com/images/I/71vfWWL2uPL._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ3WS4BQ?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "804",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
-    },
-    "desc": {
-      "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
-    },
-    "price": "11,99€",
-    "img": "https://m.media-amazon.com/images/I/61TLoO+3a5L._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ338G5T?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "805",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
-    },
-    "desc": {
-      "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
-    },
-    "price": "11,99€",
-    "img": "https://m.media-amazon.com/images/I/61K1e8UrTpL._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ3JDHZQ?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "806",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
-    },
-    "desc": {
-      "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
-    },
-    "price": "11,99€",
-    "img": "https://m.media-amazon.com/images/I/71nHn4Hs2gL._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ3L2X7W?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "807",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co...",
-      "es": "Wii/WiiU: ivoler Funda Magnética para iPhone 14 co..."
-    },
-    "desc": {
-      "es": "ivoler Funda Magnética para iPhone 14 con 2 Piezas...\n11,99€"
-    },
-    "price": "11,99€",
-    "img": "https://m.media-amazon.com/images/I/71aY2BAwf6L._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GJ3LVCMV?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "808",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10943,12 +10422,11 @@
     "price": "44,74€",
     "img": "https://m.media-amazon.com/images/I/61q8OM9Sv6L._AC_SY679_.jpg",
     "url": "https://www.amazon.es/dp/B009AP26JY?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "809",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10968,7 +10446,6 @@
     "price_history": []
   },
   {
-    "id": "810",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -10988,7 +10465,6 @@
     "price_history": []
   },
   {
-    "id": "811",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11003,32 +10479,11 @@
     "price": "29,90€",
     "img": "https://m.media-amazon.com/images/I/61inD4WpJyL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00O9GP98Y?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "812",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: Wii U Guide: The Unwritten Wii U Manual ...",
-      "es": "Wii/WiiU: Wii U Guide: The Unwritten Wii U Manual ..."
-    },
-    "desc": {
-      "es": "Wii U Guide: The Unwritten Wii U Manual (English E...\n3,15 €"
-    },
-    "price": "3,15 €",
-    "img": "https://m.media-amazon.com/images/I/41bz5gDaggL._SY342_.jpg",
-    "url": "https://www.amazon.es/dp/B00AAKCBXO?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "813",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11048,7 +10503,6 @@
     "price_history": []
   },
   {
-    "id": "814",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11063,32 +10517,11 @@
     "price": "25,62€",
     "img": "https://m.media-amazon.com/images/I/61P7lIrP8iL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00O9GP9AM?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "815",
-    "console": "Wii/WiiU",
-    "status": "active",
-    "created_at": "2026-06-07 12:49",
-    "last_seen": "2026-06-07 12:49",
-    "label": {
-      "en": "Wii/WiiU: Nintendo Wii Pocket Guide, The...",
-      "es": "Wii/WiiU: Nintendo Wii Pocket Guide, The..."
-    },
-    "desc": {
-      "es": "Nintendo Wii Pocket Guide, The...\n10,38 €"
-    },
-    "price": "10,38 €",
-    "img": "https://m.media-amazon.com/images/I/31vDQnmcoPL.jpg",
-    "url": "https://www.amazon.es/dp/0321545265?tag=kelonio-21",
-    "subcategory": "Videojuegos",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "816",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11103,12 +10536,11 @@
     "price": "24,90€",
     "img": "https://m.media-amazon.com/images/I/51RjJGtEJUL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B016OAL27O?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "817",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11123,12 +10555,11 @@
     "price": "4,49 €",
     "img": "https://m.media-amazon.com/images/I/81DXga1ayRL._SY342_.jpg",
     "url": "https://www.amazon.es/dp/B079Z7R4XY?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "818",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11143,12 +10574,11 @@
     "price": "8,69€",
     "img": "https://m.media-amazon.com/images/I/519sBPszoYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2HW3W?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "819",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11163,12 +10593,11 @@
     "price": "29,90€",
     "img": "https://m.media-amazon.com/images/I/71aFoPb1ufL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00O9GPEBQ?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "820",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11188,7 +10617,6 @@
     "price_history": []
   },
   {
-    "id": "821",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11208,7 +10636,6 @@
     "price_history": []
   },
   {
-    "id": "822",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11223,12 +10650,11 @@
     "price": "11,99€",
     "img": "https://m.media-amazon.com/images/I/61fr2nCWy8L._AC_SY741_.jpg",
     "url": "https://www.amazon.es/dp/B009AMI2YA?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "823",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11243,12 +10669,11 @@
     "price": "29,90€",
     "img": "https://m.media-amazon.com/images/I/616SLb0GI3L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00V86BJV4?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "824",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11268,7 +10693,6 @@
     "price_history": []
   },
   {
-    "id": "825",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11283,12 +10707,11 @@
     "price": "58,15€",
     "img": "https://m.media-amazon.com/images/I/61v8X2E-1wL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B009AMICSG?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "826",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11308,7 +10731,6 @@
     "price_history": []
   },
   {
-    "id": "827",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11323,12 +10745,11 @@
     "price": "29,90€",
     "img": "https://m.media-amazon.com/images/I/514PryJ5oBL._AC_SX522_.jpg",
     "url": "https://www.amazon.es/dp/B00N4ABMUA?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "828",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11343,12 +10764,11 @@
     "price": "51,15€",
     "img": "https://m.media-amazon.com/images/I/61H7GMeWKuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00ENT4V6I?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "829",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11368,7 +10788,6 @@
     "price_history": []
   },
   {
-    "id": "830",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11388,7 +10807,6 @@
     "price_history": []
   },
   {
-    "id": "831",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11403,12 +10821,11 @@
     "price": "17,49€",
     "img": "https://m.media-amazon.com/images/I/616OkFosWeL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BNXGFWYB?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "832",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11428,7 +10845,6 @@
     "price_history": []
   },
   {
-    "id": "833",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11448,7 +10864,6 @@
     "price_history": []
   },
   {
-    "id": "834",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11468,7 +10883,6 @@
     "price_history": []
   },
   {
-    "id": "835",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11488,7 +10902,6 @@
     "price_history": []
   },
   {
-    "id": "836",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11503,12 +10916,11 @@
     "price": "14,99€",
     "img": "https://m.media-amazon.com/images/I/51HsuqZB7IL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07SJ8M2ZC?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "837",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11528,7 +10940,6 @@
     "price_history": []
   },
   {
-    "id": "838",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11548,7 +10959,6 @@
     "price_history": []
   },
   {
-    "id": "839",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11568,7 +10978,6 @@
     "price_history": []
   },
   {
-    "id": "840",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11583,12 +10992,11 @@
     "price": "15,79€",
     "img": "https://m.media-amazon.com/images/I/51AP56xz+8L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2HISQ?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "841",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11603,12 +11011,11 @@
     "price": "21,30€",
     "img": "https://m.media-amazon.com/images/I/61NalcMylAL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GX91Z73S?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "842",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11628,7 +11035,6 @@
     "price_history": []
   },
   {
-    "id": "843",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11643,12 +11049,11 @@
     "price": "27,99€",
     "img": "https://m.media-amazon.com/images/I/51ob5EjpVKL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07Q1C9R16?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "844",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11663,12 +11068,11 @@
     "price": "21,84€",
     "img": "https://m.media-amazon.com/images/I/61RxWLuEVVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DDXF3DZL?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "845",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11688,7 +11092,6 @@
     "price_history": []
   },
   {
-    "id": "846",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11708,7 +11111,6 @@
     "price_history": []
   },
   {
-    "id": "847",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11723,12 +11125,11 @@
     "price": "21,05€",
     "img": "https://m.media-amazon.com/images/I/71CcAzPpOtL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B42D1WPQ?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "848",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11748,7 +11149,6 @@
     "price_history": []
   },
   {
-    "id": "849",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11763,12 +11163,11 @@
     "price": "10,49€",
     "img": "https://m.media-amazon.com/images/I/51P12C0faCL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BXK9NM9V?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "850",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11783,12 +11182,11 @@
     "price": "24,99€",
     "img": "https://m.media-amazon.com/images/I/71aCTbqF7HL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00BCXZA9U?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "851",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11808,7 +11206,6 @@
     "price_history": []
   },
   {
-    "id": "852",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11828,7 +11225,6 @@
     "price_history": []
   },
   {
-    "id": "853",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11848,7 +11244,6 @@
     "price_history": []
   },
   {
-    "id": "854",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11868,7 +11263,6 @@
     "price_history": []
   },
   {
-    "id": "855",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11888,7 +11282,6 @@
     "price_history": []
   },
   {
-    "id": "856",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11908,7 +11301,6 @@
     "price_history": []
   },
   {
-    "id": "857",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11928,7 +11320,6 @@
     "price_history": []
   },
   {
-    "id": "858",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11948,7 +11339,6 @@
     "price_history": []
   },
   {
-    "id": "859",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11968,7 +11358,6 @@
     "price_history": []
   },
   {
-    "id": "860",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -11983,12 +11372,11 @@
     "price": "14,00€",
     "img": "https://m.media-amazon.com/images/I/51lBrLWPj+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00FJ2HKPW?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "861",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12008,7 +11396,6 @@
     "price_history": []
   },
   {
-    "id": "862",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12023,12 +11410,11 @@
     "price": "28,45€",
     "img": "https://m.media-amazon.com/images/I/41TzTwSFZLL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08BRLHNC9?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "863",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12048,7 +11434,6 @@
     "price_history": []
   },
   {
-    "id": "864",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12068,7 +11453,6 @@
     "price_history": []
   },
   {
-    "id": "865",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12088,7 +11472,6 @@
     "price_history": []
   },
   {
-    "id": "866",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12108,7 +11491,6 @@
     "price_history": []
   },
   {
-    "id": "867",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12128,7 +11510,6 @@
     "price_history": []
   },
   {
-    "id": "868",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12148,7 +11529,6 @@
     "price_history": []
   },
   {
-    "id": "869",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12168,7 +11548,6 @@
     "price_history": []
   },
   {
-    "id": "870",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12188,7 +11567,6 @@
     "price_history": []
   },
   {
-    "id": "871",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12208,7 +11586,6 @@
     "price_history": []
   },
   {
-    "id": "872",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12228,7 +11605,6 @@
     "price_history": []
   },
   {
-    "id": "873",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12243,12 +11619,11 @@
     "price": "13,36€",
     "img": "https://m.media-amazon.com/images/I/51nBenwuSrL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0732Y21WT?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "874",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12268,7 +11643,6 @@
     "price_history": []
   },
   {
-    "id": "875",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12283,12 +11657,11 @@
     "price": "7,08€",
     "img": "https://m.media-amazon.com/images/I/51v2u3pwdVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D541GLXL?tag=kelonio-21",
-    "subcategory": "Consolas",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "876",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12308,7 +11681,6 @@
     "price_history": []
   },
   {
-    "id": "877",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12328,7 +11700,6 @@
     "price_history": []
   },
   {
-    "id": "878",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12348,7 +11719,6 @@
     "price_history": []
   },
   {
-    "id": "879",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12368,7 +11738,6 @@
     "price_history": []
   },
   {
-    "id": "880",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12388,7 +11757,6 @@
     "price_history": []
   },
   {
-    "id": "881",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12408,7 +11776,6 @@
     "price_history": []
   },
   {
-    "id": "882",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12428,7 +11795,6 @@
     "price_history": []
   },
   {
-    "id": "883",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12448,7 +11814,6 @@
     "price_history": []
   },
   {
-    "id": "884",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12468,7 +11833,6 @@
     "price_history": []
   },
   {
-    "id": "885",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12488,7 +11852,6 @@
     "price_history": []
   },
   {
-    "id": "886",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12503,12 +11866,11 @@
     "price": "20,69€",
     "img": "https://m.media-amazon.com/images/I/61-mdL0j9SL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DYN6MT47?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "887",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12523,12 +11885,11 @@
     "price": "269,95 €",
     "img": "https://m.media-amazon.com/images/I/714PsmP32NL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0088NQ76W?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Consolas",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "888",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12548,7 +11909,6 @@
     "price_history": []
   },
   {
-    "id": "889",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12563,12 +11923,11 @@
     "price": "39,99€",
     "img": "https://m.media-amazon.com/images/I/417M3vAQuYL._AC_.jpg",
     "url": "https://www.amazon.es/dp/B0088BTJTQ?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "890",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12588,7 +11947,6 @@
     "price_history": []
   },
   {
-    "id": "891",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12608,7 +11966,6 @@
     "price_history": []
   },
   {
-    "id": "892",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12628,7 +11985,6 @@
     "price_history": []
   },
   {
-    "id": "893",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12648,7 +12004,6 @@
     "price_history": []
   },
   {
-    "id": "894",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12668,7 +12023,6 @@
     "price_history": []
   },
   {
-    "id": "895",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12688,7 +12042,6 @@
     "price_history": []
   },
   {
-    "id": "896",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12708,7 +12061,6 @@
     "price_history": []
   },
   {
-    "id": "897",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12728,7 +12080,6 @@
     "price_history": []
   },
   {
-    "id": "898",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12748,7 +12099,6 @@
     "price_history": []
   },
   {
-    "id": "899",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12768,7 +12118,6 @@
     "price_history": []
   },
   {
-    "id": "900",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12788,7 +12137,6 @@
     "price_history": []
   },
   {
-    "id": "901",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12808,7 +12156,6 @@
     "price_history": []
   },
   {
-    "id": "902",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12823,12 +12170,11 @@
     "price": "16,99 €",
     "img": "https://m.media-amazon.com/images/I/51+6nnaMR8L._AC_SY679_.jpg",
     "url": "https://www.amazon.es/dp/B009ACAEAA?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "903",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12848,7 +12194,6 @@
     "price_history": []
   },
   {
-    "id": "904",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12868,7 +12213,6 @@
     "price_history": []
   },
   {
-    "id": "905",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12888,7 +12232,6 @@
     "price_history": []
   },
   {
-    "id": "906",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12908,7 +12251,6 @@
     "price_history": []
   },
   {
-    "id": "907",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12923,12 +12265,11 @@
     "price": "23,90€",
     "img": "https://m.media-amazon.com/images/I/81AgF4E5U2L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B094VRYBZ6?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "908",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12948,7 +12289,6 @@
     "price_history": []
   },
   {
-    "id": "909",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12968,7 +12308,6 @@
     "price_history": []
   },
   {
-    "id": "910",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -12983,12 +12322,11 @@
     "price": "68,99€",
     "img": "https://m.media-amazon.com/images/I/61NXuwp1DML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F378NW57?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "911",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13008,7 +12346,6 @@
     "price_history": []
   },
   {
-    "id": "912",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13028,7 +12365,6 @@
     "price_history": []
   },
   {
-    "id": "913",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13048,7 +12384,6 @@
     "price_history": []
   },
   {
-    "id": "914",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13063,12 +12398,11 @@
     "price": "19,99€",
     "img": "https://m.media-amazon.com/images/I/61pUXjiWKdL._AC_SY679_.jpg",
     "url": "https://www.amazon.es/dp/B0GWT8G1XZ?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "915",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13083,12 +12417,11 @@
     "price": "39,69€",
     "img": "https://m.media-amazon.com/images/I/51CSsf3k0oL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00YH3NWTW?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "916",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13108,7 +12441,6 @@
     "price_history": []
   },
   {
-    "id": "917",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13128,7 +12460,6 @@
     "price_history": []
   },
   {
-    "id": "918",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13148,7 +12479,6 @@
     "price_history": []
   },
   {
-    "id": "919",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13163,12 +12493,11 @@
     "price": "59,90€",
     "img": "https://m.media-amazon.com/images/I/91lywr6qK3L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00YRZ6WTW?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "920",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13183,12 +12512,11 @@
     "price": "Ver precio",
     "img": "https://m.media-amazon.com/images/I/81vzZS3k2kL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01GG1T9MQ?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "921",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13203,12 +12531,11 @@
     "price": "500,00 €",
     "img": "https://m.media-amazon.com/images/I/81i-6SIuvTL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B009SVR0X2?tag=kelonio-21",
-    "subcategory": "Mandos-Perifericos",
+    "subcategory": "Consolas",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "922",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13223,12 +12550,11 @@
     "price": "11,38€",
     "img": "https://m.media-amazon.com/images/I/51eU0zzsvzL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08C2F9QSL?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "923",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13243,12 +12569,11 @@
     "price": "16,95€",
     "img": "https://m.media-amazon.com/images/I/71g0D5tQ56S._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09J8GS2HL?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "924",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13268,7 +12593,6 @@
     "price_history": []
   },
   {
-    "id": "925",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13288,7 +12612,6 @@
     "price_history": []
   },
   {
-    "id": "926",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13308,7 +12631,6 @@
     "price_history": []
   },
   {
-    "id": "927",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13328,7 +12650,6 @@
     "price_history": []
   },
   {
-    "id": "928",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13348,7 +12669,6 @@
     "price_history": []
   },
   {
-    "id": "929",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13368,7 +12688,6 @@
     "price_history": []
   },
   {
-    "id": "930",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13383,12 +12702,11 @@
     "price": "38,73€",
     "img": "https://m.media-amazon.com/images/I/71W6B5n5b2L._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B01LDWMGNC?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "931",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13403,12 +12721,11 @@
     "price": "14,07€",
     "img": "https://m.media-amazon.com/images/I/61hqPPRcZuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07FMM6XVS?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "932",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13428,7 +12745,6 @@
     "price_history": []
   },
   {
-    "id": "933",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
@@ -13443,12 +12759,11 @@
     "price": "23,29€",
     "img": "https://m.media-amazon.com/images/I/51FBFGx8tlL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08Q381716?tag=kelonio-21",
-    "subcategory": "Videojuegos",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "934",
     "console": "Wii/WiiU",
     "status": "active",
     "created_at": "2026-06-07 12:49",
