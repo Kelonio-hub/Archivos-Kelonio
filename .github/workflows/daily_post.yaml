@@ -1,0 +1,17 @@
+name: Publicar en Discord
+on:
+  schedule:
+    - cron: '0 10 * * *' # Se ejecuta cada día a las 10:00 AM UTC
+  workflow_dispatch: # Permite probarlo manualmente
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependencias
+        run: pip install requests
+      - name: Ejecutar bot
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK }}
+        run: python discord_bot.py
