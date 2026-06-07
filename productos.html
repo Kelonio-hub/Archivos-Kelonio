@@ -184,12 +184,8 @@ body{
 .subcat-row {
   display: flex;
   gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-wrap: wrap; /* Permitir que los elementos bajen a la siguiente línea */
   padding: 4px 0;
-}
-.subcat-row::-webkit-scrollbar {
-  display: none;
 }
 .subcat-filter-btn {
   background: rgba(255, 255, 255, 0.04);
@@ -202,6 +198,7 @@ body{
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  margin-bottom: 5px; /* Separación al saltar de línea */
 }
 .subcat-filter-btn:hover {
   border-color: var(--red);
@@ -337,7 +334,6 @@ body{
   background: #000;
 }
 
-/* Nueva insignia de Subcategoría */
 .card-badge {
   position: absolute;
   top: 12px;
@@ -353,7 +349,6 @@ body{
   border: 1px solid rgba(255,255,255,0.15);
   pointer-events: none;
 }
-/* Nueva insignia de Tamaño */
 .card-size-badge {
   position: absolute;
   top: 12px;
@@ -482,7 +477,7 @@ body{
   position: fixed;
   bottom: 20px;
   left: 20px;
-  z-index: 10005; /* Por encima de todo */
+  z-index: 10005; 
   background: rgba(20, 20, 20, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
@@ -493,10 +488,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Totalmente invisible para el usuario casual */
+  opacity: 0; 
   transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
-/* Solo es detectable/visible al pasar el ratón exactamente por encima de su zona */
 .admin-lock-btn:hover {
   opacity: 1;
   background: #141414;
@@ -517,7 +511,7 @@ body{
   padding: 6px 12px;
   cursor: pointer;
   font-size: 11px;
-  display: none; /* Se activa dinámicamente desde JS */
+  display: none; 
   align-items: center;
   gap: 4px;
   transition: transform 0.2s;
@@ -718,7 +712,8 @@ body{
 
   <div class="subcategories-filter-wrapper">
     <div id="subcategoriesFilterRow" class="subcat-row" style="display:none;"></div>
-    <div id="sizesFilterRow" class="subcat-row" style="display:none;"></div>
+    <div id="sizesGBRow" class="subcat-row" style="display:none;"></div>
+    <div id="sizesTBRow" class="subcat-row" style="display:none;"></div>
   </div>
 
   <div id="featuredContainer" style="display:none">
@@ -942,13 +937,17 @@ function renderConsoleButtons(){
 /* ================= GENERADOR DE SUBFILTROS DINÁMICOS ================= */
 function generarBarraSubcategoriasYCapacidades() {
   const subcatRow = document.getElementById('subcategoriesFilterRow');
-  const sizesRow = document.getElementById('sizesFilterRow');
+  const rowGB = document.getElementById('sizesGBRow');
+  const rowTB = document.getElementById('sizesTBRow');
   const t = translations[idiomaActual] || translations.es;
   
   subcatRow.innerHTML = '';
-  sizesRow.innerHTML = '';
+  rowGB.innerHTML = '';
+  rowTB.innerHTML = '';
+  
   subcatRow.style.display = 'none';
-  sizesRow.style.display = 'none';
+  rowGB.style.display = 'none';
+  rowTB.style.display = 'none';
 
   let productosCategoria = allProducts.filter(item => {
     if (categoriaActual === '3DS_NDS') return item.console === '3DS' || item.console === 'NDS';
@@ -958,6 +957,7 @@ function generarBarraSubcategoriasYCapacidades() {
 
   if (productosCategoria.length === 0) return;
 
+  // -- Subcategorías --
   let subcatsUnicas = new Set();
   productosCategoria.forEach(p => {
     if (p.subcategory) {
@@ -971,7 +971,6 @@ function generarBarraSubcategoriasYCapacidades() {
 
   if (subcatsUnicas.size > 0) {
     subcatRow.style.display = 'flex';
-    
     const btnAll = document.createElement('button');
     btnAll.className = `subcat-filter-btn ${subcategoriaSeleccionada === 'ALL' ? 'active' : ''}`;
     btnAll.textContent = t.all;
@@ -994,10 +993,8 @@ function generarBarraSubcategoriasYCapacidades() {
     listaSubcats.forEach(sub => {
       const btn = document.createElement('button');
       btn.className = `subcat-filter-btn ${subcategoriaSeleccionada === sub ? 'active' : ''}`;
-      
       const translatedText = subcatTranslations[sub] ? (subcatTranslations[sub][idiomaActual] || subcatTranslations[sub]['es']) : sub;
       btn.textContent = translatedText;
-      
       btn.onclick = () => {
         subcategoriaSeleccionada = sub;
         paginaActual = 1;
@@ -1008,8 +1005,10 @@ function generarBarraSubcategoriasYCapacidades() {
     });
   }
 
+  // -- Capacidades (SD/USB) --
   if (categoriaActual === 'SD/USB') {
-    sizesRow.style.display = 'flex';
+    rowGB.style.display = 'flex';
+    rowTB.style.display = 'flex';
 
     let tamanosUnicos = new Set();
     productosCategoria.forEach(p => {
@@ -1024,6 +1023,7 @@ function generarBarraSubcategoriasYCapacidades() {
     });
 
     if (listaTamanos.length > 0) {
+      // Botón "Todos"
       const btnAllSize = document.createElement('button');
       btnAllSize.className = `subcat-filter-btn ${tamanoSeleccionado === 'ALL' ? 'active' : ''}`;
       btnAllSize.textContent = t.all + " (Capacidad)";
@@ -1033,8 +1033,9 @@ function generarBarraSubcategoriasYCapacidades() {
         generarBarraSubcategoriasYCapacidades();
         renderProducts(categoriaActual);
       };
-      sizesRow.appendChild(btnAllSize);
+      rowGB.appendChild(btnAllSize);
 
+      // Distribuir en filas
       listaTamanos.forEach(tam => {
         const btnSize = document.createElement('button');
         btnSize.className = `subcat-filter-btn ${tamanoSeleccionado === tam ? 'active' : ''}`;
@@ -1045,7 +1046,13 @@ function generarBarraSubcategoriasYCapacidades() {
           generarBarraSubcategoriasYCapacidades();
           renderProducts(categoriaActual);
         };
-        sizesRow.appendChild(btnSize);
+
+        // Lógica de separación: si tiene TB, a la fila 2 (TB), sino, fila 1 (GB)
+        if (tam.includes('TB')) {
+          rowTB.appendChild(btnSize);
+        } else {
+          rowGB.appendChild(btnSize);
+        }
       });
     }
   }
@@ -1253,7 +1260,8 @@ function renderProducts(catId, searchTerm = '') {
     document.getElementById('currentCategoryTitle').textContent = t.results.toUpperCase();
     
     document.getElementById('subcategoriesFilterRow').style.display = 'none';
-    document.getElementById('sizesFilterRow').style.display = 'none';
+    document.getElementById('sizesGBRow').style.display = 'none';
+    document.getElementById('sizesTBRow').style.display = 'none';
   } 
   else {
     if (catId === '3DS_NDS') {
@@ -1386,7 +1394,6 @@ const adminLockBtn = document.getElementById('adminLockBtn');
 const saveJsonBtn = document.getElementById('saveJsonBtn');
 const lockIcon = document.getElementById('lockIcon');
 
-// Función nativa para convertir texto a un Hash SHA-256
 async function hashearTexto(texto) {
   const encoder = new TextEncoder();
   const data = encoder.encode(texto);
@@ -1395,22 +1402,15 @@ async function hashearTexto(texto) {
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-// Evento del botón de Administrador
 adminLockBtn.addEventListener('click', async () => {
   if (!isAdmin) {
     const pass = prompt("Proxys:");
-    
-    // Si el usuario escribe algo
     if (pass) {
       const hashIngresado = await hashearTexto(pass);
       const hashCorrecto = "65d21f24c2164508323ab774fdf0e95e23313bd71a505fb1b4a87839032b1531"; 
-      
       if (hashIngresado === hashCorrecto) {
         isAdmin = true;
-        lockIcon.innerHTML = `
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-          <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-        `; 
+        lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>`; 
         adminLockBtn.style.borderColor = "var(--gold)";
         adminLockBtn.style.opacity = "1"; 
         saveJsonBtn.style.display = "flex"; 
@@ -1418,17 +1418,10 @@ adminLockBtn.addEventListener('click', async () => {
       } else {
         alert("https://amzn.to/4dUrbsh");
       }
-    } else {
-      // Si el usuario cancela o deja en blanco
-      alert("https://amzn.to/4dUrbsh");
     }
   } else {
-    // Apagar modo admin
     isAdmin = false;
-    lockIcon.innerHTML = `
-      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-    `; 
+    lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>`; 
     adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
     adminLockBtn.style.opacity = "0"; 
     saveJsonBtn.style.display = "none";
@@ -1437,10 +1430,8 @@ adminLockBtn.addEventListener('click', async () => {
   renderProducts(categoriaActual, document.getElementById('productSearch').value);
 });
 
-// Lógica de descarga JSON
 saveJsonBtn.addEventListener('click', () => {
   let targetJsonFile = categoryJsonMap[categoriaActual] || 'productos.json';
-  
   let exportProducts = allProducts.filter(item => {
     if (categoriaActual === '3DS_NDS') {
       if (Array.isArray(item.console)) return item.console.includes('3DS') || item.console.includes('NDS');
