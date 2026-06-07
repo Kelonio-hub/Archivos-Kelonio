@@ -1,0 +1,19 @@
+name: Publicar en Discord (Servidor B)
+
+on:
+  schedule:
+    - cron: '30 10 * * *' # Ejecución a las 10:30 AM UTC (ligeramente distinta al anterior)
+  workflow_dispatch: 
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Instalar dependencias
+        run: pip install requests
+      - name: Ejecutar bot para Servidor B
+        env:
+          # Aquí apuntamos al nuevo secreto que crearemos
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_SERVIDOR_B }}
+        run: python discord_bot.py
