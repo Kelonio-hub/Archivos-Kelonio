@@ -1,6 +1,5 @@
 [
   {
-    "id": "0",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 128GB Ultra, Tarjeta de memoria ...",
@@ -29,7 +28,6 @@
     "size": "128 GB"
   },
   {
-    "id": "1",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra Tarjeta Micro SDXC 256 GB ...",
@@ -58,7 +56,6 @@
     "size": "256 GB"
   },
   {
-    "id": "2",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Select Plus Tarjeta micr...",
@@ -84,10 +81,9 @@
     "img": "https://m.media-amazon.com/images/I/513+dqG2bnL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07YGZ7FY7?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "32 GB"
   },
   {
-    "id": "3",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 64GB Ultra, Tarjeta de memoria m...",
@@ -116,7 +112,6 @@
     "size": "64 GB"
   },
   {
-    "id": "4",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme Tarjeta Micro SDXC 128GB...",
@@ -145,7 +140,6 @@
     "size": "128 GB"
   },
   {
-    "id": "5",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de Memoria Micro SD TF Gran Capa...",
@@ -174,7 +168,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "6",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Amazon Basics Tarjeta de memoria microSD...",
@@ -200,10 +193,9 @@
     "img": "https://m.media-amazon.com/images/I/61DwejyTGkL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08TJRVWV1?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "7",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk High Endurance 128 GB Tarjeta mi...",
@@ -232,7 +224,6 @@
     "size": "128 GB"
   },
   {
-    "id": "8",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 2 Pack Tarjeta De Memoria 16GB con Adapt...",
@@ -261,7 +252,6 @@
     "size": "16 GB"
   },
   {
-    "id": "9",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar SILVER PRO Tarjeta SD de 128GB, ta...",
@@ -290,7 +280,6 @@
     "size": "128 GB"
   },
   {
-    "id": "10",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme Tarjeta Micro SDXC 256GB...",
@@ -319,7 +308,6 @@
     "size": "256 GB"
   },
   {
-    "id": "11",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de Memoria Micro SD Gran Capacid...",
@@ -348,7 +336,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "12",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de Memoria Micro SD TF Gran Capa...",
@@ -377,7 +364,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "13",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Tarjeta Micro SD 32 GB, hasta 100 ...",
@@ -406,7 +392,6 @@
     "size": "32 GB"
   },
   {
-    "id": "14",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 2 Pack Tarjeta De Memoria 128GB con Adap...",
@@ -435,7 +420,6 @@
     "size": "128 GB"
   },
   {
-    "id": "15",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Micro SD Express Card for Ninten...",
@@ -464,7 +448,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "16",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Amazon Basics Tarjeta de memoria microSD...",
@@ -490,10 +473,9 @@
     "img": "https://m.media-amazon.com/images/I/71AkjCbY8mL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08TJTB8XS?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "17",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Patriot Memory Tarjeta de Memoria Flash ...",
@@ -519,10 +501,9 @@
     "img": "https://m.media-amazon.com/images/I/91MHVFBRCCL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08KSSXKYR?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "32 GB"
   },
   {
-    "id": "18",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Netac 3 Paquetes de 64G Micro SDXC Tarje...",
@@ -548,10 +529,9 @@
     "img": "https://m.media-amazon.com/images/I/61oAewb9I-L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0833XLJR6?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "19",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Imou 32GB Tarjeta MicroSDXC, Tarjeta de ...",
@@ -580,7 +560,6 @@
     "size": "32 GB"
   },
   {
-    "id": "20",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra 32 GB microSDHC Memory Car...",
@@ -609,7 +588,6 @@
     "size": "32 GB"
   },
   {
-    "id": "21",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra de 64 GB microSDXC UHS-I T...",
@@ -638,7 +616,6 @@
     "size": "64 GB"
   },
   {
-    "id": "22",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston SDCS/16GB - MicroSD Canvas Sele...",
@@ -667,7 +644,6 @@
     "size": "16 GB"
   },
   {
-    "id": "23",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 64GB Extreme Go Tarjeta Micro SD...",
@@ -696,7 +672,6 @@
     "size": "64 GB"
   },
   {
-    "id": "24",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme PRO 128GB tarjeta microS...",
@@ -725,7 +700,6 @@
     "size": "128 GB"
   },
   {
-    "id": "25",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Tarjeta microSD Express de 512 G...",
@@ -754,7 +728,6 @@
     "size": "512 GB"
   },
   {
-    "id": "26",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: GIGASTONE 32GB Tarjeta de Memoria Micro ...",
@@ -783,7 +756,6 @@
     "size": "32 GB"
   },
   {
-    "id": "27",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SANDISK Tarjeta microSD con licencia ofi...",
@@ -809,10 +781,9 @@
     "img": "https://m.media-amazon.com/images/I/61KakjMq2ZL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07QD6R5L7?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "28",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: KEXIN Micro SD Tarjeta Memoria de 32GB, ...",
@@ -841,7 +812,6 @@
     "size": "32 GB"
   },
   {
-    "id": "29",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta Extreme MicroSDXC de 512 GB + Ad...",
@@ -870,7 +840,6 @@
     "size": "512 GB"
   },
   {
-    "id": "30",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Intenso 3413490 - Adaptador para tarjeta...",
@@ -896,10 +865,9 @@
     "img": "https://m.media-amazon.com/images/I/61SdPDYIaYL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B00FMB9A30?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "31",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: KEXIN Tarjeta Micro SD de 16 GB, 2 Unida...",
@@ -928,7 +896,6 @@
     "size": "16 GB"
   },
   {
-    "id": "32",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung EVO Select (2024) Tarjeta microS...",
@@ -954,10 +921,9 @@
     "img": "https://m.media-amazon.com/images/I/61Ae9UrpHyL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0CVBBPZ28?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "33",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme microSDXC - Adaptador SD...",
@@ -986,7 +952,6 @@
     "size": "128 GB"
   },
   {
-    "id": "34",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar 633x Tarjeta Micro SD 64GB, Tarjet...",
@@ -1015,7 +980,6 @@
     "size": "64 GB"
   },
   {
-    "id": "35",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Netac 128 GB Tarjeta Micro SD MicroSDXC,...",
@@ -1044,7 +1008,6 @@
     "size": "128 GB"
   },
   {
-    "id": "36",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: GIGASTONE Tarjeta Micro SD 32GB Pack de ...",
@@ -1073,7 +1036,6 @@
     "size": "32 GB"
   },
   {
-    "id": "37",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Vansuny Tarjeta Micro SD 64GB 2 Pack con...",
@@ -1102,7 +1064,6 @@
     "size": "64 GB"
   },
   {
-    "id": "38",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Verbatim Premium microSDHC Tarjeta de Me...",
@@ -1128,10 +1089,9 @@
     "img": "https://m.media-amazon.com/images/I/51XW5qUv4pL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0054KHY8C?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "16 GB"
   },
   {
-    "id": "39",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Blue Tarjeta Micro SD 256GB, hasta...",
@@ -1160,7 +1120,6 @@
     "size": "256 GB"
   },
   {
-    "id": "40",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: KEXIN 32GB TF Tarjeta de Memoria Micro S...",
@@ -1189,7 +1148,6 @@
     "size": "32 GB"
   },
   {
-    "id": "41",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Hama microSDHC 16GB - Tarjeta de memoria...",
@@ -1218,7 +1176,6 @@
     "size": "16 GB"
   },
   {
-    "id": "42",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston SDCG2/64GB Tarjeta MicroSD, Neg...",
@@ -1247,7 +1204,6 @@
     "size": "64 GB"
   },
   {
-    "id": "43",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Play Pro Tarjeta Micro SD Express ...",
@@ -1276,7 +1232,6 @@
     "size": "512 GB"
   },
   {
-    "id": "44",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: [5 años Recuperación de Datos Gratis] GI...",
@@ -1301,11 +1256,10 @@
     "price": "52,99 €",
     "img": "https://m.media-amazon.com/images/I/71+nKH03X0S._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07LBSBX5L?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "128 GB"
   },
   {
-    "id": "45",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone - Tarjeta de Memoria (128 GB, ...",
@@ -1334,7 +1288,6 @@
     "size": "128 GB"
   },
   {
-    "id": "46",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk HIGH ENDURANCE Video Monitoring ...",
@@ -1359,11 +1312,10 @@
     "price": "20,29 €",
     "img": "https://m.media-amazon.com/images/I/513jgap1-IL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07P14QHB7?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "32 GB"
   },
   {
-    "id": "47",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SANDISK Extreme Tarjeta microSDXC UHS-I ...",
@@ -1389,10 +1341,9 @@
     "img": "https://m.media-amazon.com/images/I/61Eo50aAKpL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0G8LLXFJH?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "48",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme PRO - Tarjeta de memoria...",
@@ -1421,7 +1372,6 @@
     "size": "32 GB"
   },
   {
-    "id": "49",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: EZVIZ Tarjeta de Memoria Micro SD 32GB M...",
@@ -1450,7 +1400,6 @@
     "size": "32 GB"
   },
   {
-    "id": "50",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: KEXIN Tarjeta Micro SD de 16 GB, microSD...",
@@ -1479,7 +1428,6 @@
     "size": "16 GB"
   },
   {
-    "id": "51",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Sandisk Micro SD Express Card for Ninten...",
@@ -1508,7 +1456,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "55",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Intenso Premium microSDXC - Tarjeta de M...",
@@ -1534,10 +1481,9 @@
     "img": "https://m.media-amazon.com/images/I/81iZdUXEVuL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0DBJ1FWZT?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "56",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Silver Plus - Tarjeta Micro SD de ...",
@@ -1566,7 +1512,6 @@
     "size": "256 GB"
   },
   {
-    "id": "57",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Integral Momentum I Tarjeta Micro SDXC d...",
@@ -1595,7 +1540,6 @@
     "size": "128 GB"
   },
   {
-    "id": "58",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【5 años de recuperación de Datos Gratuit...",
@@ -1620,11 +1564,10 @@
     "price": "29,99 €",
     "img": "https://m.media-amazon.com/images/I/71ayiuyV8gL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0GPW2MYH3?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "64 GB"
   },
   {
-    "id": "59",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung PRO Plus Tarjeta de memoria Micr...",
@@ -1650,10 +1593,9 @@
     "img": "https://m.media-amazon.com/images/I/51da6m2GjKL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0BYPCY6JT?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "60",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria microSD de 2 GB clase...",
@@ -1679,10 +1621,9 @@
     "img": "https://m.media-amazon.com/images/I/51+pJkdLLNL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08L8T86TS?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "2 GB"
   },
   {
-    "id": "61",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Emtec microSDHC 32GB UHS1 U1 EliteGold...",
@@ -1711,7 +1652,6 @@
     "size": "32 GB"
   },
   {
-    "id": "62",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria microSD de 1 GB clase...",
@@ -1737,10 +1677,9 @@
     "img": "https://m.media-amazon.com/images/I/51nr34Wnr5L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08L8RRV8K?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "1 GB"
   },
   {
-    "id": "63",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Paquete de 10 Tarjetas Micro SD de 128 M...",
@@ -1769,7 +1708,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "64",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 64GB Extreme PRO, Tarjeta de mem...",
@@ -1798,7 +1736,6 @@
     "size": "64 GB"
   },
   {
-    "id": "65",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: PNY P-SDU16GU185GW-GE Memoria Flash 16 G...",
@@ -1827,7 +1764,6 @@
     "size": "16 GB"
   },
   {
-    "id": "66",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk MAX Endurance Video Monitoring f...",
@@ -1852,11 +1788,10 @@
     "price": "53,99 €",
     "img": "https://m.media-amazon.com/images/I/713UL4vZuaL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B084CJ9T2R?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "128 GB"
   },
   {
-    "id": "67",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【5 Años Recuperación de Datos Gratis】 GI...",
@@ -1881,11 +1816,10 @@
     "price": "79,99 €",
     "img": "https://m.media-amazon.com/images/I/71APoIufuQL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07LBJC2D9?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "256 GB"
   },
   {
-    "id": "68",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Silicon Power - Tarjeta de Memoria micro...",
@@ -1911,10 +1845,9 @@
     "img": "https://m.media-amazon.com/images/I/71PIaielTdL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07RMXNLF4?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "32 GB"
   },
   {
-    "id": "69",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung EVO Select 512 GB microSD 100 MB...",
@@ -1943,7 +1876,6 @@
     "size": "512 GB"
   },
   {
-    "id": "70",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Insta360 Tarjeta MicroSD 256 GB...",
@@ -1972,7 +1904,6 @@
     "size": "256 GB"
   },
   {
-    "id": "71",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria microSD de 4 GB clase...",
@@ -1998,10 +1929,9 @@
     "img": "https://m.media-amazon.com/images/I/51y-YSPlgDL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08L8RC2Y2?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "4 GB"
   },
   {
-    "id": "72",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung P9 Express microSD 512GB, Veloci...",
@@ -2030,7 +1960,6 @@
     "size": "512 GB"
   },
   {
-    "id": "73",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung - Tarjeta de Memoria microSD EVO...",
@@ -2056,10 +1985,9 @@
     "img": "https://m.media-amazon.com/images/I/715MiHm1N4L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09R4HNX4J?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "74",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone - Tarjeta de Memoria de 64 GB,...",
@@ -2088,7 +2016,6 @@
     "size": "64 GB"
   },
   {
-    "id": "75",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 128GB Extreme, Tarjeta de memori...",
@@ -2117,7 +2044,6 @@
     "size": "128 GB"
   },
   {
-    "id": "76",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra microSDHC 32GB + SD Adapte...",
@@ -2146,7 +2072,6 @@
     "size": "32 GB"
   },
   {
-    "id": "77",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 64 GB Extreme tarjeta de memoria...",
@@ -2175,7 +2100,6 @@
     "size": "64 GB"
   },
   {
-    "id": "78",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone - Tarjeta de Memoria (64 GB, 4...",
@@ -2204,7 +2128,6 @@
     "size": "64 GB"
   },
   {
-    "id": "79",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Patriot Memory Tarjeta de Memoria Flash ...",
@@ -2230,10 +2153,9 @@
     "img": "https://m.media-amazon.com/images/I/81yX8oHrmjL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08L4TQJXB?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "80",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung MicroSDXC 256GB EVO Plus CL10 UH...",
@@ -2262,7 +2184,6 @@
     "size": "256 GB"
   },
   {
-    "id": "81",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Micro SD Clase 10 XCII A2 V60 4K Alto Re...",
@@ -2291,7 +2212,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "82",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kioxia 32GB Exceria U1 Class 10 microSD...",
@@ -2320,7 +2240,6 @@
     "size": "32 GB"
   },
   {
-    "id": "83",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Carte mémoire micro SD Samsung EVO Plus ...",
@@ -2349,7 +2268,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "84",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: fanxiang Tarjeta SD Card Tarjeta SD 128G...",
@@ -2378,7 +2296,6 @@
     "size": "128 GB"
   },
   {
-    "id": "85",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria micro SD para cámara ...",
@@ -2404,10 +2321,9 @@
     "img": "https://m.media-amazon.com/images/I/713VNXsDJxL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0F1Z3GLNN?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "86",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: KEXIN 64GB Memoria Micro SD Tarjeta U3 C...",
@@ -2436,7 +2352,6 @@
     "size": "64 GB"
   },
   {
-    "id": "87",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Industrial microSD - 32GB micro...",
@@ -2465,7 +2380,6 @@
     "size": "32 GB"
   },
   {
-    "id": "88",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【Solo para Switch 1】Gigastone Tarjeta de...",
@@ -2491,10 +2405,9 @@
     "img": "https://m.media-amazon.com/images/I/61Hs2fDmefL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07N7D2WBF?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "89",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: GIGASTONE 16GB Tarjeta de Memoria Micro ...",
@@ -2523,7 +2436,6 @@
     "size": "16 GB"
   },
   {
-    "id": "90",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Intenso Premium microSDXC - Tarjeta de M...",
@@ -2549,10 +2461,9 @@
     "img": "https://m.media-amazon.com/images/I/81BjuKDbXsL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0DBJ2KD8X?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "91",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung PRO Ultimate Tarjeta de Memoria ...",
@@ -2578,10 +2489,9 @@
     "img": "https://m.media-amazon.com/images/I/61+OYXmk06L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0CBMFJF7V?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "512 GB"
   },
   {
-    "id": "92",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Select Plus Tarjeta de M...",
@@ -2607,10 +2517,9 @@
     "img": "https://m.media-amazon.com/images/I/81dC19zBJ3L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0FCZZVYMN?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "93",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Emtec microSDXC 64GB UHS1 U1 EliteGold...",
@@ -2639,7 +2548,6 @@
     "size": "64 GB"
   },
   {
-    "id": "94",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta microSD V60 (128 GB), Probada pa...",
@@ -2668,7 +2576,6 @@
     "size": "128 GB"
   },
   {
-    "id": "95",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: AKASO - Tarjeta de Memoria MicroSDXC, U3...",
@@ -2697,7 +2604,6 @@
     "size": "64 GB"
   },
   {
-    "id": "96",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: PNY MicroSD Express - Tarjeta de Memoria...",
@@ -2723,10 +2629,9 @@
     "img": "https://m.media-amazon.com/images/I/51Ga9GQU5EL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0GFPHS9M9?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "1 TB"
   },
   {
-    "id": "97",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: TECHZOCO Adaptador de Tarjeta Micro SD a...",
@@ -2752,10 +2657,9 @@
     "img": "https://m.media-amazon.com/images/I/51rOm+BIfBL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0DLPG8VHJ?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "99",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Vantrue - Tarjeta de Memoria microSDXC U...",
@@ -2781,10 +2685,9 @@
     "img": "https://m.media-amazon.com/images/I/61DJ+mN+WyL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09SP5YYZF?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "512 GB"
   },
   {
-    "id": "100",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: EASTBULL Tarjeta Micro SD de 128 MB (Pas...",
@@ -2810,10 +2713,9 @@
     "img": "https://m.media-amazon.com/images/I/71Rz+TXf3jL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0C39YQC87?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "101",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 70 Mai - Tarjeta microSD de 128 GB para ...",
@@ -2842,7 +2744,6 @@
     "size": "128 GB"
   },
   {
-    "id": "102",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Select Plus Tarjeta de M...",
@@ -2868,10 +2769,9 @@
     "img": "https://m.media-amazon.com/images/I/71AcPSYXNFL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0FCZSWV4D?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "1 TB"
   },
   {
-    "id": "103",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone - Tarjeta de Memoria de 64 GB,...",
@@ -2900,7 +2800,6 @@
     "size": "64 GB"
   },
   {
-    "id": "104",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kodak Class 10 - Tarjeta de Memoria micr...",
@@ -2929,7 +2828,6 @@
     "size": "64 GB"
   },
   {
-    "id": "105",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【Solo para Switch 1】 Gigastone Tarjeta d...",
@@ -2955,10 +2853,9 @@
     "img": "https://m.media-amazon.com/images/I/61VMvpSQ-dL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07P45BKN9?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "106",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk MAX Endurance Video Monitoring f...",
@@ -2983,11 +2880,10 @@
     "price": "30,49 €",
     "img": "https://m.media-amazon.com/images/I/61BWWGgcbXL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B084CJLNM4?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "32 GB"
   },
   {
-    "id": "107",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 10Pack Tarjeta Micro SD de 4 GB con Adap...",
@@ -3013,10 +2909,9 @@
     "img": "https://m.media-amazon.com/images/I/61CDbE867XL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07S23TGGQ?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "4 GB"
   },
   {
-    "id": "108",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 10 tarjetas Micro SD de 2 GB con adaptad...",
@@ -3042,10 +2937,9 @@
     "img": "https://m.media-amazon.com/images/I/61pyF9Sn-YL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07BFW7947?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "2 GB"
   },
   {
-    "id": "109",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: CABLEPELADO Adaptador de Tarjeta Micro S...",
@@ -3071,10 +2965,9 @@
     "img": "https://m.media-amazon.com/images/I/71ddvHmNU6L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B075QPYRPW?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "110",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Paquete de 5 Tarjetas Micro SD de 8 GB, ...",
@@ -3100,10 +2993,9 @@
     "img": "https://m.media-amazon.com/images/I/61m4K0DrPBL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07R3QRGGF?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "111",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: ARCANITE - Tarjeta de memoria microSDXC ...",
@@ -3132,7 +3024,6 @@
     "size": "256 GB"
   },
   {
-    "id": "112",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Vantrue - Tarjeta de Memoria microSDXC U...",
@@ -3158,10 +3049,9 @@
     "img": "https://m.media-amazon.com/images/I/512wBIZ7JhL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09GK7M53C?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "113",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Imou Tarjeta de Memoria Micro 128 GB SDX...",
@@ -3190,7 +3080,6 @@
     "size": "128 GB"
   },
   {
-    "id": "114",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【5 Años Recuperación de Datos Gratis】 GI...",
@@ -3215,11 +3104,10 @@
     "price": "89,99 €",
     "img": "https://m.media-amazon.com/images/I/51o5mfoIUNL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0CFVFBGY5?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "256 GB"
   },
   {
-    "id": "115",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra 32GB SDHC Memory Card, Up ...",
@@ -3248,7 +3136,6 @@
     "size": "32 GB"
   },
   {
-    "id": "116",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: VANTRUE - Tarjeta de Memoria microSD UHS...",
@@ -3274,10 +3161,9 @@
     "img": "https://m.media-amazon.com/images/I/51F6UYqIDSL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09GKBGTGC?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "117",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 5 Piezas Tarjeta Micro SD de 4 GB Tarjet...",
@@ -3303,10 +3189,9 @@
     "img": "https://m.media-amazon.com/images/I/61jh+LN85xL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07QYTP4VN?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "4 GB"
   },
   {
-    "id": "118",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk128GB Gameplay Tarjeta Micro SD p...",
@@ -3335,7 +3220,6 @@
     "size": "128 GB"
   },
   {
-    "id": "119",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Reolink Tarjeta de Memoria 128GB microSD...",
@@ -3364,7 +3248,6 @@
     "size": "128 GB"
   },
   {
-    "id": "120",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: [10 x Alta Resistencia] Gigastone 32GB M...",
@@ -3393,7 +3276,6 @@
     "size": "32 GB"
   },
   {
-    "id": "121",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SAMSUNG EVO Plus - Tarjeta de Memoria mi...",
@@ -3419,10 +3301,9 @@
     "img": "https://m.media-amazon.com/images/I/81SKaN7FsKL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B06XFSZGCC?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "32 GB"
   },
   {
-    "id": "122",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston SDC10/32GB - Tarjeta microSDHC ...",
@@ -3451,7 +3332,6 @@
     "size": "32 GB"
   },
   {
-    "id": "123",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Tarjeta microSD Express de 256 G...",
@@ -3480,7 +3360,6 @@
     "size": "256 GB"
   },
   {
-    "id": "124",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kodak Premiun microSDHC 64GB Class10 w/A...",
@@ -3509,7 +3388,6 @@
     "size": "64 GB"
   },
   {
-    "id": "125",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Patriot Memory Tarjeta de Memoria MicroS...",
@@ -3535,10 +3413,9 @@
     "img": "https://m.media-amazon.com/images/I/61YrFt9IFFL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07FKN4T4H?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "126",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kaico Tarjeta de memoria PSX Gen 2 compa...",
@@ -3564,10 +3441,9 @@
     "img": "https://m.media-amazon.com/images/I/71XS5rTNwIL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0F1V55SRM?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "127",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: última versión SD2Vita 5,0 Adaptador de ...",
@@ -3596,7 +3472,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "128",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Silver Tarjeta Micro SD de 128 GB,...",
@@ -3625,7 +3500,6 @@
     "size": "128 GB"
   },
   {
-    "id": "129",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Emtec microSDXC 128GB UHS1 U1 EliteGold...",
@@ -3654,7 +3528,6 @@
     "size": "128 GB"
   },
   {
-    "id": "130",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 5pcsTarjeta Micro SD de 1 GB Tarjeta de ...",
@@ -3680,10 +3553,9 @@
     "img": "https://m.media-amazon.com/images/I/51vVe1bsm5L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07QV7YZCG?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "1 GB"
   },
   {
-    "id": "131",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra microSDHC 32GB, up to 100M...",
@@ -3712,7 +3584,6 @@
     "size": "32 GB"
   },
   {
-    "id": "132",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Philips Tarjeta SDHC Clase 10-16 GB...",
@@ -3741,7 +3612,6 @@
     "size": "16 GB"
   },
   {
-    "id": "133",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de Memoria Micro 256 GB SDXC imo...",
@@ -3770,7 +3640,6 @@
     "size": "256 GB"
   },
   {
-    "id": "134",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Go Plus microSDXC Tarjet...",
@@ -3796,10 +3665,9 @@
     "img": "https://m.media-amazon.com/images/I/71PA2wAOOYL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0F29YZWSM?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "135",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Aretop Tarjeta Micro SD de 8 GB, paquete...",
@@ -3825,10 +3693,9 @@
     "img": "https://m.media-amazon.com/images/I/71hoPcztn-L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0C4GYP6S4?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "136",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone Adaptador de tarjeta de memori...",
@@ -3857,7 +3724,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "137",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Go Plus microSDXC Tarjet...",
@@ -3883,10 +3749,9 @@
     "img": "https://m.media-amazon.com/images/I/71nnC4QtE4L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0F2B123P2?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "138",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: AreTop - Tarjeta Micro SD de 32 GB, 3 ta...",
@@ -3915,7 +3780,6 @@
     "size": "32 GB"
   },
   {
-    "id": "139",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra 32GB microSDHC Memory Card...",
@@ -3944,7 +3808,6 @@
     "size": "32 GB"
   },
   {
-    "id": "140",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Pro Plus MB-MD512KB/WW - Tarjeta...",
@@ -3970,10 +3833,9 @@
     "img": "https://m.media-amazon.com/images/I/514omOrD-tL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09D3PSRQ4?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "512 GB"
   },
   {
-    "id": "141",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Carte mémoire micro SD Sandisk Nintendo ...",
@@ -4002,7 +3864,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "142",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: GIGASTONE 8GB Tarjeta de Memoria Micro S...",
@@ -4028,10 +3889,9 @@
     "img": "https://m.media-amazon.com/images/I/61XByimkFFL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0858FBL8V?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "143",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung - Tarjeta de Memoria microSD EVO...",
@@ -4057,10 +3917,9 @@
     "img": "https://m.media-amazon.com/images/I/71OBf9z1F7L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09R4HCKQ1?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "144",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Lexar Tarjeta microSDXC UHS-I de 1 TB, C...",
@@ -4089,7 +3948,6 @@
     "size": "1 TB"
   },
   {
-    "id": "145",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: VANTRUE Tarjeta de memoria microSD de 64...",
@@ -4118,7 +3976,6 @@
     "size": "64 GB"
   },
   {
-    "id": "146",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Tarjeta de Memoria MicroSDXC UHS...",
@@ -4144,10 +4001,9 @@
     "img": "https://m.media-amazon.com/images/I/81Dzua5tXLL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09KWBGBJW?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "147",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria Memory Stick MS Pro D...",
@@ -4176,7 +4032,6 @@
     "size": "32 GB"
   },
   {
-    "id": "148",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: ORICO Tarjeta SD 64GB UHS-I C10 U3 V30, ...",
@@ -4205,7 +4060,6 @@
     "size": "64 GB"
   },
   {
-    "id": "149",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone - Tarjeta de Memoria de 64 GB,...",
@@ -4234,7 +4088,6 @@
     "size": "64 GB"
   },
   {
-    "id": "150",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Go! Plus microSD Tarjeta...",
@@ -4260,10 +4113,9 @@
     "img": "https://m.media-amazon.com/images/I/71rVF+7gnEL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0858MY6RT?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "151",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Hama SDHC | 32 GB UHS-I Class1 | Super F...",
@@ -4292,7 +4144,6 @@
     "size": "32 GB"
   },
   {
-    "id": "152",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 2 Pack Tarjetas SD de 256 GB con Adaptad...",
@@ -4321,7 +4172,6 @@
     "size": "256 GB"
   },
   {
-    "id": "153",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Pro Endurance - Tarjeta de Memor...",
@@ -4350,7 +4200,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "154",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SANDISK Ultra MICROSDXC 64GB + SD Adapte...",
@@ -4379,7 +4228,6 @@
     "size": "64 GB"
   },
   {
-    "id": "155",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: microSDXC Gold Series UHS-II 256GB V60...",
@@ -4408,7 +4256,6 @@
     "size": "256 GB"
   },
   {
-    "id": "156",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Carte mémoire micro SD Samsung Carte mem...",
@@ -4437,7 +4284,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "157",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung MicroSDXC EVO - Tarjeta de Memor...",
@@ -4463,10 +4309,9 @@
     "img": "https://m.media-amazon.com/images/I/71YDLd4s1mL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B06XW97Z9M?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "158",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Micro SD Clase 10 XCII A2 V60 4K Alto Re...",
@@ -4495,7 +4340,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "159",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme 128 GB microSDXC Memory ...",
@@ -4524,7 +4368,6 @@
     "size": "128 GB"
   },
   {
-    "id": "160",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta Micro SD Samsung MB-MC1T0SA/EU 1...",
@@ -4553,7 +4396,6 @@
     "size": "1 TB"
   },
   {
-    "id": "161",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Ultra 32GB SDHC Memory Card, up ...",
@@ -4582,7 +4424,6 @@
     "size": "32 GB"
   },
   {
-    "id": "162",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 64 GB Extreme tarjeta de memoria...",
@@ -4611,7 +4452,6 @@
     "size": "64 GB"
   },
   {
-    "id": "163",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: WD Purple QD101 MICROSD 256GB EXT...",
@@ -4640,7 +4480,6 @@
     "size": "256 GB"
   },
   {
-    "id": "164",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk - Tarjeta de memoria MicroSD de ...",
@@ -4669,7 +4508,6 @@
     "size": "256 GB"
   },
   {
-    "id": "166",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Chenyang - Cámara SD SDHC SDXC de Alta V...",
@@ -4698,7 +4536,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "167",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SAMSUNG - MEMORIES EVO PLUS (2021) 64GB...",
@@ -4723,11 +4560,10 @@
     "price": "26,98 €",
     "img": "https://m.media-amazon.com/images/I/51BWNujltIL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B09DVRYZ3N?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "64 GB"
   },
   {
-    "id": "169",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kodak Premiun microSDHC 16GB Class10 w/A...",
@@ -4756,7 +4592,6 @@
     "size": "16 GB"
   },
   {
-    "id": "170",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Tarjeta de Memoria microSDHC de...",
@@ -4785,7 +4620,6 @@
     "size": "128 GB"
   },
   {
-    "id": "171",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: LinkMore XV23 Pro 128GB Micro SDXC Tarje...",
@@ -4814,7 +4648,6 @@
     "size": "128 GB"
   },
   {
-    "id": "172",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Paquete de 2 tarjetas Micro SD de 16 GB ...",
@@ -4843,7 +4676,6 @@
     "size": "16 GB"
   },
   {
-    "id": "173",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de Memoria MicroSDXC 256 GB Alta...",
@@ -4872,7 +4704,6 @@
     "size": "256 GB"
   },
   {
-    "id": "174",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: EZ Flash 100% de microSD para Juegos clá...",
@@ -4901,7 +4732,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "175",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Integral tarjeta de seguridad Micro SD 2...",
@@ -4930,7 +4760,6 @@
     "size": "256 GB"
   },
   {
-    "id": "176",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Select Plus SD - SDS2/12...",
@@ -4955,11 +4784,10 @@
     "price": "50,00 €",
     "img": "https://m.media-amazon.com/images/I/710Y+mA3yAL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07YGZQ4DM?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "128 GB"
   },
   {
-    "id": "177",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston 128 GB micSDXC Canvas Select Pl...",
@@ -4988,7 +4816,6 @@
     "size": "128 GB"
   },
   {
-    "id": "178",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 8GB Industrial MLC MicroSDHC UHS...",
@@ -5014,10 +4841,9 @@
     "img": "https://m.media-amazon.com/images/I/71MsDeD0+oL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07BZ5SY18?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "179",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Integral UltimaPro - Memory Card 64 GB m...",
@@ -5046,7 +4872,6 @@
     "size": "64 GB"
   },
   {
-    "id": "180",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: WD Purple QD101 MICROSD 64GB EXT...",
@@ -5075,7 +4900,6 @@
     "size": "64 GB"
   },
   {
-    "id": "182",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Transcend SDC300S - Tarjeta de Memoria S...",
@@ -5101,10 +4925,9 @@
     "img": "https://m.media-amazon.com/images/I/51YdJanwq8L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B07JHGX99K?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "183",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Pro Plus Tarjeta de Memoria Micr...",
@@ -5133,7 +4956,6 @@
     "size": "1 TB"
   },
   {
-    "id": "184",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Verbatim Pro+ U3 Micro SDXC Tarjeta de M...",
@@ -5159,10 +4981,9 @@
     "img": "https://m.media-amazon.com/images/I/51729LXlU1L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B00ZSG1LAY?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "185",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: VIOFO MLC V30 U3 - Tarjeta de memoria SD...",
@@ -5191,7 +5012,6 @@
     "size": "64 GB"
   },
   {
-    "id": "186",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Paquete de 6 Tarjetas Micro SD de 4 GB C...",
@@ -5217,10 +5037,9 @@
     "img": "https://m.media-amazon.com/images/I/61PdU-FmKOL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09T5XPY26?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "4 GB"
   },
   {
-    "id": "187",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Micro SD PSP con tarjeta de memoria 32 g...",
@@ -5246,10 +5065,9 @@
     "img": "https://m.media-amazon.com/images/I/41SW2jbUPPL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0GYG7ND7C?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "32 GB"
   },
   {
-    "id": "188",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: DDPAI Tarjeta SD de 256 G, tarjeta TF U3...",
@@ -5275,10 +5093,9 @@
     "img": "https://m.media-amazon.com/images/I/51nxES1IcLL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0GFMZR9HP?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "189",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: PS Vita - Tarjeta de memoria SD2Vita 6.0...",
@@ -5304,10 +5121,9 @@
     "img": "https://m.media-amazon.com/images/I/71YS4eJ6TXL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0FYGLQKK9?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "190",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: 【5 Años Recuperación de Datos Gratis】 GI...",
@@ -5332,11 +5148,10 @@
     "price": "24,99 €",
     "img": "https://m.media-amazon.com/images/I/51+1Pgi2zqL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09PTRF3Y5?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "32 GB"
   },
   {
-    "id": "191",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: GIGASTONE - Tarjeta Micro SD de 128 GB, ...",
@@ -5365,7 +5180,6 @@
     "size": "128 GB"
   },
   {
-    "id": "192",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: ChenYang Adaptador de Lector de Tarjetas...",
@@ -5391,10 +5205,9 @@
     "img": "https://m.media-amazon.com/images/I/51g+b4OJ94L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B08JYXNW22?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "256 GB"
   },
   {
-    "id": "193",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Memory Card 8GB...",
@@ -5419,11 +5232,10 @@
     "price": "56,41 €",
     "img": "https://m.media-amazon.com/images/I/512u+ESRnDL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B005N4HZRO?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "subcategory": "USB",
+    "size": "8 GB"
   },
   {
-    "id": "194",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung EVO - Tarjeta de Memoria microSD...",
@@ -5452,7 +5264,6 @@
     "size": "128 GB"
   },
   {
-    "id": "195",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta de memoria microSD de 8 GB ultra...",
@@ -5478,10 +5289,9 @@
     "img": "https://m.media-amazon.com/images/I/51jIceWOR2L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B073T7YT99?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "8 GB"
   },
   {
-    "id": "196",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SODIAL Versión 6.0 Sd2Vita para PS Vita ...",
@@ -5510,7 +5320,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "197",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Silicon Power 1TB Switch 2 Compatible PC...",
@@ -5535,11 +5344,10 @@
     "price": "249,99 €",
     "img": "https://m.media-amazon.com/images/I/511XB40jO-L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0FQTZVYQD?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "1 TB"
   },
   {
-    "id": "198",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk Extreme PRO 64GB SDXC Memory Car...",
@@ -5568,7 +5376,6 @@
     "size": "64 GB"
   },
   {
-    "id": "199",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: microSD Premier 64GB UHS1/CL10/A1+adapte...",
@@ -5597,7 +5404,6 @@
     "size": "64 GB"
   },
   {
-    "id": "201",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Canvas Go Plus microSDXC Tarjet...",
@@ -5623,10 +5429,9 @@
     "img": "https://m.media-amazon.com/images/I/71VkfOShuoL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B0F29ZKKRC?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "202",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: LEAGY PSP 1000, PSP 2000, PSP3000 Adapta...",
@@ -5651,11 +5456,10 @@
     "price": "14,42 €",
     "img": "https://m.media-amazon.com/images/I/71nF7B6mtTL._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B07VYWVQ8S?tag=kelonio-21",
-    "subcategory": "Adaptador",
+    "subcategory": "Mandos-Perifericos",
     "size": "Ninguno"
   },
   {
-    "id": "203",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Transcend Usd300S Tarjeta Microsd de 16G...",
@@ -5684,7 +5488,6 @@
     "size": "16 GB"
   },
   {
-    "id": "204",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Samsung Tarjeta de Memoria EVO Plus 256G...",
@@ -5713,7 +5516,6 @@
     "size": "256 GB"
   },
   {
-    "id": "205",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Tarjeta Micro SD de Alta Velocidad Clase...",
@@ -5739,10 +5541,9 @@
     "img": "https://m.media-amazon.com/images/I/612vzosudsS._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B083177RKM?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "128 GB"
   },
   {
-    "id": "208",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Gigastone Adaptador de Tarjeta de Memori...",
@@ -5771,7 +5572,6 @@
     "size": "Ninguno"
   },
   {
-    "id": "209",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: SanDisk 32GB Class 4 MicroSD with microS...",
@@ -5800,7 +5600,6 @@
     "size": "32 GB"
   },
   {
-    "id": "210",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Transcend Tarjeta de Memoria microSDXC 3...",
@@ -5829,7 +5628,6 @@
     "size": "32 GB"
   },
   {
-    "id": "211",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: ANGELBIRD AV Pro microSD (128 GB) V60...",
@@ -5858,7 +5656,6 @@
     "size": "128 GB"
   },
   {
-    "id": "215",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Verbatim Premium U1 SDHC Tarjeta de memo...",
@@ -5887,7 +5684,6 @@
     "size": "16 GB"
   },
   {
-    "id": "218",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Toshiba EXCERIA M302-EA - Tarjeta de mem...",
@@ -5913,10 +5709,9 @@
     "img": "https://m.media-amazon.com/images/I/61SUIMib86L._AC_SX355_.jpg",
     "url": "https://www.amazon.es/dp/B01EAKAW44?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno"
+    "size": "64 GB"
   },
   {
-    "id": "219",
     "console": "SD/USB",
     "label": {
       "en": "SD/USB: Kingston Sds/64Gb - Tarjeta de Memoria S...",
@@ -5945,7 +5740,6 @@
     "size": "64 GB"
   },
   {
-    "id": "220",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -5974,7 +5768,6 @@
     "price_history": []
   },
   {
-    "id": "221",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6003,7 +5796,6 @@
     "price_history": []
   },
   {
-    "id": "222",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6032,7 +5824,6 @@
     "price_history": []
   },
   {
-    "id": "223",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6057,11 +5848,10 @@
     "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B015CH1PJU?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "224",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6086,11 +5876,10 @@
     "img": "https://m.media-amazon.com/images/I/71+O-0F9zML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00YMZBPKI?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "225",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6114,12 +5903,11 @@
     "price": "10,58€",
     "img": "https://m.media-amazon.com/images/I/81bssiCW7TL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B1JNDZ5J?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "226",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6144,11 +5932,10 @@
     "img": "https://m.media-amazon.com/images/I/51TCKbvpg-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00DCNOEJK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "227",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6172,12 +5959,11 @@
     "price": "16,95€",
     "img": "https://m.media-amazon.com/images/I/61T85CGI4ZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00P8XQPY4?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "228",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6202,11 +5988,10 @@
     "img": "https://m.media-amazon.com/images/I/51O0LYxEaHL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09NS699ZD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "229",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6230,12 +6015,11 @@
     "price": "13,95€",
     "img": "https://m.media-amazon.com/images/I/61T85CGI4ZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00DQGBYDC?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "230",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6260,11 +6044,10 @@
     "img": "https://m.media-amazon.com/images/I/51C4M0H5U6L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08CVRFJ7Z?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "231",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6288,12 +6071,11 @@
     "price": "10,95€",
     "img": "https://m.media-amazon.com/images/I/51AsGiXV6WL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08JD4TBM3?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "232",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6322,7 +6104,6 @@
     "price_history": []
   },
   {
-    "id": "233",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6351,7 +6132,6 @@
     "price_history": []
   },
   {
-    "id": "234",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6380,7 +6160,6 @@
     "price_history": []
   },
   {
-    "id": "235",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6404,12 +6183,11 @@
     "price": "16,99€",
     "img": "https://m.media-amazon.com/images/I/51ohr+jN+BL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DH1CQ5RL?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "236",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6434,11 +6212,10 @@
     "img": "https://m.media-amazon.com/images/I/61PUsY6E8UL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F6NX7KJ5?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "237",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6463,11 +6240,10 @@
     "img": "https://m.media-amazon.com/images/I/71azbH0ywWL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08H1FPF6X?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "238",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6492,11 +6268,10 @@
     "img": "https://m.media-amazon.com/images/I/51q1BJpgGkL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B015CH1NAQ?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "239",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6520,12 +6295,11 @@
     "price": "9,99€",
     "img": "https://m.media-amazon.com/images/I/71YJ2CzGkBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D1451T68?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "240",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6550,11 +6324,10 @@
     "img": "https://m.media-amazon.com/images/I/71qOWNxv4jL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07YYJRXQR?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "241",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6578,12 +6351,11 @@
     "price": "17,94€",
     "img": "https://m.media-amazon.com/images/I/71RhxfozxvL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B6148YKN?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "242",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6608,11 +6380,10 @@
     "img": "https://m.media-amazon.com/images/I/71T-gxHQU+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08D9NGMMG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "243",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6637,11 +6408,10 @@
     "img": "https://m.media-amazon.com/images/I/71BeJjT8ihL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0011UD7BW?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "244",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6666,11 +6436,10 @@
     "img": "https://m.media-amazon.com/images/I/81WJgkjTGML._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B07855LJ99?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "245",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6695,11 +6464,10 @@
     "img": "https://m.media-amazon.com/images/I/61C0F7QCGAL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01GLS0WNE?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "246",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6724,11 +6492,10 @@
     "img": "https://m.media-amazon.com/images/I/81sXFq6m93L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B077VYCV37?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "247",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6753,11 +6520,10 @@
     "img": "https://m.media-amazon.com/images/I/51jPauko63L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07SYB38Q8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "248",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6782,11 +6548,10 @@
     "img": "https://m.media-amazon.com/images/I/81T6M83K5sL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0043VNKOA?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "249",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6811,11 +6576,10 @@
     "img": "https://m.media-amazon.com/images/I/61vxI+5FxsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00KIOWRCM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "250",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6840,11 +6604,10 @@
     "img": "https://m.media-amazon.com/images/I/51dT2uvZb2L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B007PFF28I?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "251",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6868,12 +6631,11 @@
     "price": "13,41€",
     "img": "https://m.media-amazon.com/images/I/61ERDR3tATL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00BX5FOCK?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "252",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6898,11 +6660,10 @@
     "img": "https://m.media-amazon.com/images/I/61GDt3ys+UL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CR1GT82G?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "253",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6926,12 +6687,11 @@
     "price": "37,99€",
     "img": "https://m.media-amazon.com/images/I/61nhW-Moj8L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F98ZP299?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "254",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6956,11 +6716,10 @@
     "img": "https://m.media-amazon.com/images/I/61WxZRxUdWL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CWRTM31T?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "255",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -6984,12 +6743,11 @@
     "price": "16,99€",
     "img": "https://m.media-amazon.com/images/I/51oHbtsbdzL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FMF3PRSW?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "256",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7013,12 +6771,11 @@
     "price": "25,64€",
     "img": "https://m.media-amazon.com/images/I/5170woTzckL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DH1MKVQV?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "257",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7043,11 +6800,10 @@
     "img": "https://m.media-amazon.com/images/I/71OPt1LpAZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B009TGPCEU?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "258",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7072,11 +6828,10 @@
     "img": "https://m.media-amazon.com/images/I/61bBZOAC-nL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BKS7TVCD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "259",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7101,11 +6856,10 @@
     "img": "https://m.media-amazon.com/images/I/61OhJU-v1RL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F2YTGVRG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "260",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7130,11 +6884,10 @@
     "img": "https://m.media-amazon.com/images/I/51XUShOsEXL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GF86TBS2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "261",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7159,11 +6912,10 @@
     "img": "https://m.media-amazon.com/images/I/6187qz96xZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CKX6D6F7?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "262",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7188,11 +6940,10 @@
     "img": "https://m.media-amazon.com/images/I/61cKx7bF44L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08HJ5RZ83?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "263",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7217,11 +6968,10 @@
     "img": "https://m.media-amazon.com/images/I/61WxCdih5ZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0091MIE4C?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "264",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7246,11 +6996,10 @@
     "img": "https://m.media-amazon.com/images/I/61EVCRsfLFL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09WZCZ5VN?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "265",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7275,11 +7024,10 @@
     "img": "https://m.media-amazon.com/images/I/61jZ-2V77jL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F84C4MGD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "266",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7304,11 +7052,10 @@
     "img": "https://m.media-amazon.com/images/I/71N2Yyt-UyL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07KFH8Q7M?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "267",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7332,12 +7079,11 @@
     "price": "13,99€",
     "img": "https://m.media-amazon.com/images/I/71DxqWBjF1L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D1126WJG?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "268",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7362,11 +7108,10 @@
     "img": "https://m.media-amazon.com/images/I/41NPk5Vz0lL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B089N78JGR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "269",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7391,11 +7136,10 @@
     "img": "https://m.media-amazon.com/images/I/512ED2xSlJL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07FKRWG6D?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "270",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7420,11 +7164,10 @@
     "img": "https://m.media-amazon.com/images/I/71o+Aio1SbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C7BFJMLF?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "271",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7449,11 +7192,10 @@
     "img": "https://m.media-amazon.com/images/I/71rESs7ewtL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07Q9QGJHS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "272",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7477,12 +7219,11 @@
     "price": "14,10€",
     "img": "https://m.media-amazon.com/images/I/817b1uqpZ+L._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B08R67PPFX?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "273",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7507,11 +7248,10 @@
     "img": "https://m.media-amazon.com/images/I/81yMvA4UFZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CC1M4CM3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "274",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7536,11 +7276,10 @@
     "img": "https://m.media-amazon.com/images/I/51qM99wvINL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B004HC98C8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "275",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7565,11 +7304,10 @@
     "img": "https://m.media-amazon.com/images/I/515FNk9nQFL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D2RH5SQG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "276",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7594,11 +7332,10 @@
     "img": "https://m.media-amazon.com/images/I/51B4BlHQbBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01D8Q0SE0?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "277",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7623,11 +7360,10 @@
     "img": "https://m.media-amazon.com/images/I/81hkR0E+c0L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00Q8UQ9GA?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "278",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7652,11 +7388,10 @@
     "img": "https://m.media-amazon.com/images/I/71fUZJd3TcL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09DR34Y21?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "279",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7681,11 +7416,10 @@
     "img": "https://m.media-amazon.com/images/I/51Phv6gobEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01HPB98DG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "280",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7710,11 +7444,10 @@
     "img": "https://m.media-amazon.com/images/I/61DHkIB1o0S._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BNZWPPCS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "281",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7743,7 +7476,6 @@
     "price_history": []
   },
   {
-    "id": "282",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7768,11 +7500,10 @@
     "img": "https://m.media-amazon.com/images/I/61ESu0QuljL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4GVTK1D?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "1 GB",
     "price_history": []
   },
   {
-    "id": "283",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7797,11 +7528,10 @@
     "img": "https://m.media-amazon.com/images/I/51JUwp5hIbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F1MLL3NN?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "284",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7826,11 +7556,10 @@
     "img": "https://m.media-amazon.com/images/I/619PnpGfDqL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G23PBVBX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "285",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7855,11 +7584,10 @@
     "img": "https://m.media-amazon.com/images/I/61DHrov7YmL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B4WBN9W9?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "4 GB",
     "price_history": []
   },
   {
-    "id": "286",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7884,11 +7612,10 @@
     "img": "https://m.media-amazon.com/images/I/71p78HH6PLL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CXM86NZR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "287",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7912,12 +7639,11 @@
     "price": "22,56€",
     "img": "https://m.media-amazon.com/images/I/51pe0ND7gGL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B0978ZCNSJ?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "288",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7942,11 +7668,10 @@
     "img": "https://m.media-amazon.com/images/I/71NKKEKkkyL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B002W5O3PY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "289",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -7971,11 +7696,10 @@
     "img": "https://m.media-amazon.com/images/I/51NyJlPBbDL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00U7HQ8PW?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "290",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8000,11 +7724,10 @@
     "img": "https://m.media-amazon.com/images/I/71CvKD+xCuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08KHY5NTR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "291",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8029,11 +7752,10 @@
     "img": "https://m.media-amazon.com/images/I/61USWSFcBbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FN881MSS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "292",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8058,11 +7780,10 @@
     "img": "https://m.media-amazon.com/images/I/41c77AGt5ZL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B08XZ47Q8K?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "293",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8087,11 +7808,10 @@
     "img": "https://m.media-amazon.com/images/I/61gBp8+s+yL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09WZDSH1J?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "294",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8116,11 +7836,10 @@
     "img": "https://m.media-amazon.com/images/I/61XTfihtGxL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D5D7P48N?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "295",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8145,11 +7864,10 @@
     "img": "https://m.media-amazon.com/images/I/51f1hIpDryL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07XTW7SY8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "296",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8174,11 +7892,10 @@
     "img": "https://m.media-amazon.com/images/I/61NyBmGG-XL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DFQFB1XX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "4 GB",
     "price_history": []
   },
   {
-    "id": "297",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8203,11 +7920,10 @@
     "img": "https://m.media-amazon.com/images/I/51d6MgC7AdL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B075KP7D1R?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "298",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8232,11 +7948,10 @@
     "img": "https://m.media-amazon.com/images/I/51gnKMQyoaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B1W3TW59?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "299",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8261,11 +7976,10 @@
     "img": "https://m.media-amazon.com/images/I/61uj6axpUJL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FPVT827W?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "300",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8290,11 +8004,10 @@
     "img": "https://m.media-amazon.com/images/I/61DkI5TpNxL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GT9V1PZG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "301",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8319,11 +8032,10 @@
     "img": "https://m.media-amazon.com/images/I/614S3zykc+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00M2X5KFI?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "302",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8348,11 +8060,10 @@
     "img": "https://m.media-amazon.com/images/I/71E69zTV69L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B004M8N9TU?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "303",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8377,11 +8088,10 @@
     "img": "https://m.media-amazon.com/images/I/710kzjGtU+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CRRH47NX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "304",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8406,11 +8116,10 @@
     "img": "https://m.media-amazon.com/images/I/510TG31HO9L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FM89L58R?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "305",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8434,12 +8143,11 @@
     "price": "42,99€",
     "img": "https://m.media-amazon.com/images/I/71WUpGFr9XL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B013T6R50E?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "306",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8464,11 +8172,10 @@
     "img": "https://m.media-amazon.com/images/I/61lkujItS0L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0084DFLLS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "307",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8493,11 +8200,10 @@
     "img": "https://m.media-amazon.com/images/I/51pGrWn8+UL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00805CG4K?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "308",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8522,11 +8228,10 @@
     "img": "https://m.media-amazon.com/images/I/71LJhqA5nZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B008IEC2GA?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "309",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8551,11 +8256,10 @@
     "img": "https://m.media-amazon.com/images/I/61pYZ-CzMSL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00RORBNWG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "310",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8580,11 +8284,10 @@
     "img": "https://m.media-amazon.com/images/I/612yWECv61L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FDX6RPPZ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "311",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8609,11 +8312,10 @@
     "img": "https://m.media-amazon.com/images/I/812A2dFZq3L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07F59YY4H?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "312",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8638,11 +8340,10 @@
     "img": "https://m.media-amazon.com/images/I/5126lmtZKUL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FBW8RC2R?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "313",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8667,11 +8368,10 @@
     "img": "https://m.media-amazon.com/images/I/51niXfZbd7L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BWDT4HBV?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "314",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8700,7 +8400,6 @@
     "price_history": []
   },
   {
-    "id": "315",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8729,7 +8428,6 @@
     "price_history": []
   },
   {
-    "id": "316",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8754,11 +8452,10 @@
     "img": "https://m.media-amazon.com/images/I/31QnZFqHALL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C1H3PGSC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "317",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8782,12 +8479,11 @@
     "price": "25,00€",
     "img": "https://m.media-amazon.com/images/I/71eKXcpG0vL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01MU8TZRV?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "318",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8812,11 +8508,10 @@
     "img": "https://m.media-amazon.com/images/I/71uKoLHaxwL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GGR56F2M?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "319",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8845,7 +8540,6 @@
     "price_history": []
   },
   {
-    "id": "320",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8870,11 +8564,10 @@
     "img": "https://m.media-amazon.com/images/I/51x4mBOiBVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B091DXCWF8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "321",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8898,12 +8591,11 @@
     "price": "42,98€",
     "img": "https://m.media-amazon.com/images/I/51Kbs+Y2hcL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DH1RGJY9?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "322",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8928,11 +8620,10 @@
     "img": "https://m.media-amazon.com/images/I/51WRWKj+nBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B06XC1WGQR?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "323",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8957,11 +8648,10 @@
     "img": "https://m.media-amazon.com/images/I/61xYn11qQZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GXF47V18?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "324",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -8986,11 +8676,10 @@
     "img": "https://m.media-amazon.com/images/I/71o+Aio1SbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BP119LYT?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "325",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9015,11 +8704,10 @@
     "img": "https://m.media-amazon.com/images/I/61d1+tFbnTL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D2LGQ7KX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "326",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9044,11 +8732,10 @@
     "img": "https://m.media-amazon.com/images/I/61OvW76dJVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GYW1ZXP2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "327",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9073,11 +8760,10 @@
     "img": "https://m.media-amazon.com/images/I/61z6lSJkC8L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GLGX1HPY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "328",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9102,11 +8788,10 @@
     "img": "https://m.media-amazon.com/images/I/51Pg4EKChsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01LXAKSRR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "329",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9131,11 +8816,10 @@
     "img": "https://m.media-amazon.com/images/I/51RoqjCJ-6L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D3PQN8R7?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "330",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9160,11 +8844,10 @@
     "img": "https://m.media-amazon.com/images/I/712hJdR8Z-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FFP4RFMM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "331",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9189,11 +8872,10 @@
     "img": "https://m.media-amazon.com/images/I/61v5zeoItuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09Y26L3SB?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "332",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9218,11 +8900,10 @@
     "img": "https://m.media-amazon.com/images/I/71qyC7c27BL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B07TJB41BY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "333",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9247,11 +8928,10 @@
     "img": "https://m.media-amazon.com/images/I/61kDIyFuMpL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B092QQ47YX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "334",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9275,12 +8955,11 @@
     "price": "16,95€",
     "img": "https://m.media-amazon.com/images/I/81sXFq6m93L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B077VXV323?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "335",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9304,12 +8983,11 @@
     "price": "9,99€",
     "img": "https://m.media-amazon.com/images/I/61AZvkftK7L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07S4GGHNR?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "336",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9334,11 +9012,10 @@
     "img": "https://m.media-amazon.com/images/I/61NLNjGdeaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DRXPLZFK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "337",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9363,11 +9040,10 @@
     "img": "https://m.media-amazon.com/images/I/81qtbJOePUL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DT47LDGW?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "338",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9392,11 +9068,10 @@
     "img": "https://m.media-amazon.com/images/I/51CBBAinFcL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09XWL96DL?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "339",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9420,12 +9095,11 @@
     "price": "13,99€",
     "img": "https://m.media-amazon.com/images/I/41MRfvFOyFL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07SYBDQ59?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "340",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9450,11 +9124,10 @@
     "img": "https://m.media-amazon.com/images/I/61QbT3-ZJaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GYFVMS5S?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "341",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9479,11 +9152,10 @@
     "img": "https://m.media-amazon.com/images/I/71z7NjQa7nL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09HXKJK6S?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "342",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9508,11 +9180,10 @@
     "img": "https://m.media-amazon.com/images/I/71XqaLfkc2L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G57NN5VD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "343",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9537,11 +9208,10 @@
     "img": "https://m.media-amazon.com/images/I/417KKxluFGL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B08XZ6RWTL?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "344",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9565,12 +9235,11 @@
     "price": "49,90€",
     "img": "https://m.media-amazon.com/images/I/81Fqh9hd73L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07VNGVKGF?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "345",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9595,11 +9264,10 @@
     "img": "https://m.media-amazon.com/images/I/61lJdUCpl3L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GXBDG3JY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "346",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9624,11 +9292,10 @@
     "img": "https://m.media-amazon.com/images/I/61ZofYIjsYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F2YQK4B2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "347",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9653,11 +9320,10 @@
     "img": "https://m.media-amazon.com/images/I/618kD5FvQML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G5Z48VW4?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "348",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9686,7 +9352,6 @@
     "price_history": []
   },
   {
-    "id": "349",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9711,11 +9376,10 @@
     "img": "https://m.media-amazon.com/images/I/61VaDJVeQkL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GHY9WTT1?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "350",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9740,11 +9404,10 @@
     "img": "https://m.media-amazon.com/images/I/61iZsp-gKsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GWGQGXWR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "351",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9769,11 +9432,10 @@
     "img": "https://m.media-amazon.com/images/I/41xpYuyt6rL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09SB237DM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "352",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9798,11 +9460,10 @@
     "img": "https://m.media-amazon.com/images/I/61Z4kmA7lDL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F3JX4K5N?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "353",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9827,11 +9488,10 @@
     "img": "https://m.media-amazon.com/images/I/71TaaHG2BpL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08CGRHRCL?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "354",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9855,12 +9515,11 @@
     "price": "25,95€",
     "img": "https://m.media-amazon.com/images/I/91GSqxfA5SL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07HPZ9ZDF?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "355",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9885,11 +9544,10 @@
     "img": "https://m.media-amazon.com/images/I/61TI9oHMmpL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09DVPJF5B?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "356",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9914,11 +9572,10 @@
     "img": "https://m.media-amazon.com/images/I/81xhQPBQv-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F48WWWH4?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "357",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9943,11 +9600,10 @@
     "img": "https://m.media-amazon.com/images/I/61EoAgGxC2L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01LZ6L3GS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "358",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -9972,11 +9628,10 @@
     "img": "https://m.media-amazon.com/images/I/51yFlqI8o0L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CMZNDFTZ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "359",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10000,12 +9655,11 @@
     "price": "34,49€",
     "img": "https://m.media-amazon.com/images/I/71s9LKsMBwL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0977GJR62?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "360",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10030,11 +9684,10 @@
     "img": "https://m.media-amazon.com/images/I/61PrLVuIGPL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CP43532G?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "361",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10059,11 +9712,10 @@
     "img": "https://m.media-amazon.com/images/I/71vYwq8noBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DT1JHZB9?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "362",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10088,11 +9740,10 @@
     "img": "https://m.media-amazon.com/images/I/71knu3iXc4L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00CXN3UZO?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "363",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10117,11 +9768,10 @@
     "img": "https://m.media-amazon.com/images/I/61NTqP0MI2L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DBH6W387?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "364",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10146,11 +9796,10 @@
     "img": "https://m.media-amazon.com/images/I/51xoOiMXEmL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GX96XLGP?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "365",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10175,11 +9824,10 @@
     "img": "https://m.media-amazon.com/images/I/71xGy6SiMEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4NVZ9LR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "366",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10204,11 +9852,10 @@
     "img": "https://m.media-amazon.com/images/I/61uOPRk-GbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G5ZGT4KD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "367",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10233,11 +9880,10 @@
     "img": "https://m.media-amazon.com/images/I/61y8IdbywHL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B1W3VLQK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "368",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10262,11 +9908,10 @@
     "img": "https://m.media-amazon.com/images/I/51lZRbEOFaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00BJAUS84?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "369",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10290,12 +9935,11 @@
     "price": "15,75€",
     "img": "https://m.media-amazon.com/images/I/71lL8sdIr1L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0170VBA0A?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "370",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10320,11 +9964,10 @@
     "img": "https://m.media-amazon.com/images/I/61+XJMd-JnL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D7C59PLY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "371",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10349,11 +9992,10 @@
     "img": "https://m.media-amazon.com/images/I/61L0PU3FpbL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B093L2PZ99?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "372",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10378,11 +10020,10 @@
     "img": "https://m.media-amazon.com/images/I/51GwgWygc9L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GF84H8VM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "373",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10407,11 +10048,10 @@
     "img": "https://m.media-amazon.com/images/I/41cSOAk8DuL._AC_SX522_.jpg",
     "url": "https://www.amazon.es/dp/B0GX7CD6Q8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "374",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10436,11 +10076,10 @@
     "img": "https://m.media-amazon.com/images/I/51FK7Ege5-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0170VAXZ8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "016 GB",
     "price_history": []
   },
   {
-    "id": "375",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10465,11 +10104,10 @@
     "img": "https://m.media-amazon.com/images/I/51qxryom0pL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CPLJX4RX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "376",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10494,11 +10132,10 @@
     "img": "https://m.media-amazon.com/images/I/61zSoKVmFuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B1W4TYTX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "377",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10523,11 +10160,10 @@
     "img": "https://m.media-amazon.com/images/I/71+NKf1UTVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01M3PWHA4?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "378",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10552,11 +10188,10 @@
     "img": "https://m.media-amazon.com/images/I/61zfRE6DGtL._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B06XCSFYP9?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "379",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10580,12 +10215,11 @@
     "price": "12,99€",
     "img": "https://m.media-amazon.com/images/I/71a48sSdYqL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08K7PBBDC?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "380",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10610,11 +10244,10 @@
     "img": "https://m.media-amazon.com/images/I/71U1Ce5hQlL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DXLC9L1H?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "381",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10639,11 +10272,10 @@
     "img": "https://m.media-amazon.com/images/I/61iHn5gvEYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01NBGTQWS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "382",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10668,11 +10300,10 @@
     "img": "https://m.media-amazon.com/images/I/71ai8dDlNxL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/9802181749?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "383",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10697,11 +10328,10 @@
     "img": "https://m.media-amazon.com/images/I/41+87dB-07L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B004BLIQE6?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "384",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10725,12 +10355,11 @@
     "price": "13,99€",
     "img": "https://m.media-amazon.com/images/I/31moI6KEvaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B24Q3CRB?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "385",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10759,7 +10388,6 @@
     "price_history": []
   },
   {
-    "id": "386",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10784,11 +10412,10 @@
     "img": "https://m.media-amazon.com/images/I/61VXkmuzKrL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BS9ZR8ZG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "387",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10812,12 +10439,11 @@
     "price": "56,62€",
     "img": "https://m.media-amazon.com/images/I/61GPcevF2yL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B089T98NT8?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "388",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10842,11 +10468,10 @@
     "img": "https://m.media-amazon.com/images/I/710I4Bx4EiL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00T78GG4K?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "389",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10871,11 +10496,10 @@
     "img": "https://m.media-amazon.com/images/I/51ts0Zl6dhL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07TV1T4TR?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "390",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10900,11 +10524,10 @@
     "img": "https://m.media-amazon.com/images/I/71aFEzJeoDL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DXL7J4WB?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "391",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10929,11 +10552,10 @@
     "img": "https://m.media-amazon.com/images/I/51m6YSRWuML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GT2NDRGT?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "392",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10957,12 +10579,11 @@
     "price": "22,93€",
     "img": "https://m.media-amazon.com/images/I/71qOWNxv4jL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07YYJ63VF?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "393",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -10987,11 +10608,10 @@
     "img": "https://m.media-amazon.com/images/I/71E52tF1EuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07VC3Z4KT?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "394",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11016,11 +10636,10 @@
     "img": "https://m.media-amazon.com/images/I/61L54K4wnBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08DLJWDRK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "395",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11045,11 +10664,10 @@
     "img": "https://m.media-amazon.com/images/I/41MtUzNTv0L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DBLXQV5Q?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "396",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11074,11 +10692,10 @@
     "img": "https://m.media-amazon.com/images/I/61ETgsvCHRL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GJZTHBX3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "397",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11103,11 +10720,10 @@
     "img": "https://m.media-amazon.com/images/I/71H3vIctNUL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FMFB35W8?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "398",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11131,12 +10747,11 @@
     "price": "175,99€",
     "img": "https://m.media-amazon.com/images/I/61eQmycRsiL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FCFQMWW4?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "1 TB",
     "price_history": []
   },
   {
-    "id": "399",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11161,11 +10776,10 @@
     "img": "https://m.media-amazon.com/images/I/61zoYVW35PL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0842XRH3C?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "400",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11190,11 +10804,10 @@
     "img": "https://m.media-amazon.com/images/I/61D4cXAv-PL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CMM61WDB?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "401",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11219,11 +10832,10 @@
     "img": "https://m.media-amazon.com/images/I/71RI+FpCp-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CN2XBN2R?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "402",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11248,11 +10860,10 @@
     "img": "https://m.media-amazon.com/images/I/51UIW-SgiuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07RBNSBF9?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "403",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11276,12 +10887,11 @@
     "price": "20,78€",
     "img": "https://m.media-amazon.com/images/I/51atI3LKVPL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B088H8CRC9?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "404",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11305,12 +10915,11 @@
     "price": "33,00€",
     "img": "https://m.media-amazon.com/images/I/61ETpT6K8YL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DFK8CC31?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "405",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11335,11 +10944,10 @@
     "img": "https://m.media-amazon.com/images/I/71DWZpucVWL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F18DWXQF?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "406",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11364,11 +10972,10 @@
     "img": "https://m.media-amazon.com/images/I/71A4KHLOOxL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CPHW816X?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "407",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11393,11 +11000,10 @@
     "img": "https://m.media-amazon.com/images/I/51kx4AuloEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08FRHV5D1?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "408",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11421,12 +11027,11 @@
     "price": "33,74€",
     "img": "https://m.media-amazon.com/images/I/51W1YZEp0ML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07FB4H6Z4?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "409",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11451,11 +11056,10 @@
     "img": "https://m.media-amazon.com/images/I/61yi723orzL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GBXSHCC6?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "410",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11479,12 +11083,11 @@
     "price": "13,99€",
     "img": "https://m.media-amazon.com/images/I/71RERgSEmJL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D11GJWY7?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "411",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11508,12 +11111,11 @@
     "price": "21,39€",
     "img": "https://m.media-amazon.com/images/I/51QJkYH6qcL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01EZ0X23W?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "412",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11538,11 +11140,10 @@
     "img": "https://m.media-amazon.com/images/I/51Us1TVxfgL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B5S35ZMF?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "413",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11567,11 +11168,10 @@
     "img": "https://m.media-amazon.com/images/I/51fzi9pVfeL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08BRW8MWQ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "414",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11595,12 +11195,11 @@
     "price": "23,67€",
     "img": "https://m.media-amazon.com/images/I/515GZUVFoqL._AC_SX466_.jpg",
     "url": "https://www.amazon.es/dp/B09J3WH448?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "415",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11625,11 +11224,10 @@
     "img": "https://m.media-amazon.com/images/I/91+mqk+8L1L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B015DBZPS2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "416",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11654,11 +11252,10 @@
     "img": "https://m.media-amazon.com/images/I/51OxzRHH7ZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07D1K4TCL?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "417",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11687,7 +11284,6 @@
     "price_history": []
   },
   {
-    "id": "418",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11712,11 +11308,10 @@
     "img": "https://m.media-amazon.com/images/I/51BvQ7OGbzL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07QT6GZ6W?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "419",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11740,12 +11335,11 @@
     "price": "31,58€",
     "img": "https://m.media-amazon.com/images/I/71aCe7Bg+lL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0842NQJ9H?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "420",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11770,11 +11364,10 @@
     "img": "https://m.media-amazon.com/images/I/618BPf5fjqL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07SDCN7R8?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "421",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11799,11 +11392,10 @@
     "img": "https://m.media-amazon.com/images/I/71fqMd8z-QL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FM8BP933?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "422",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11828,11 +11420,10 @@
     "img": "https://m.media-amazon.com/images/I/71xGy6SiMEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4NV9RG4?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "2 GB",
     "price_history": []
   },
   {
-    "id": "423",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11856,12 +11447,11 @@
     "price": "13,99€",
     "img": "https://m.media-amazon.com/images/I/714S3yJa+sL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08CX89MK2?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "424",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11886,11 +11476,10 @@
     "img": "https://m.media-amazon.com/images/I/41slUEwyiIL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09TVPJ58N?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "425",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11914,12 +11503,11 @@
     "price": "64,32€",
     "img": "https://m.media-amazon.com/images/I/61p5qIb0CAL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B08Z7H8W8Z?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "426",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11944,11 +11532,10 @@
     "img": "https://m.media-amazon.com/images/I/61rZi21aqXL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FQ5J8RJH?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "1 TB",
     "price_history": []
   },
   {
-    "id": "427",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -11972,12 +11559,11 @@
     "price": "33,99€",
     "img": "https://m.media-amazon.com/images/I/71gz1Ln4LYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CB5YW4SY?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "10 GB",
     "price_history": []
   },
   {
-    "id": "428",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12001,12 +11587,11 @@
     "price": "35,99€",
     "img": "https://m.media-amazon.com/images/I/71lRu0GrOEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4L6KX8Y?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "429",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12030,12 +11615,11 @@
     "price": "27,99€",
     "img": "https://m.media-amazon.com/images/I/71ULAf7+lxL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C5ZY5WMV?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "430",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12059,12 +11643,11 @@
     "price": "29,99€",
     "img": "https://m.media-amazon.com/images/I/71TX5oZmNNL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4L6W9KW?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "431",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12088,12 +11671,11 @@
     "price": "75,99€",
     "img": "https://m.media-amazon.com/images/I/91qlz+zpjcL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GCMFB58P?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "1 GB",
     "price_history": []
   },
   {
-    "id": "432",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12122,7 +11704,6 @@
     "price_history": []
   },
   {
-    "id": "433",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12146,12 +11727,11 @@
     "price": "79,99€",
     "img": "https://m.media-amazon.com/images/I/71gcHEjKnrL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FY2H6D13?tag=kelonio-21",
-    "subcategory": "Disco Duro",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "10 GB",
     "price_history": []
   },
   {
-    "id": "434",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12175,12 +11755,11 @@
     "price": "32,99€",
     "img": "https://m.media-amazon.com/images/I/71yUyQIusaL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G1R5KQKW?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "435",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12209,7 +11788,6 @@
     "price_history": []
   },
   {
-    "id": "436",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12233,12 +11811,11 @@
     "price": "35,99€",
     "img": "https://m.media-amazon.com/images/I/61lI7Ow6-CL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BPSF9NGY?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "437",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12263,11 +11840,10 @@
     "img": "https://m.media-amazon.com/images/I/51RNt2wjWqL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C73W6SGH?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "438",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12292,11 +11868,10 @@
     "img": "https://m.media-amazon.com/images/I/61bsJfkaUUL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09WZCG9SF?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "439",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12321,11 +11896,10 @@
     "img": "https://m.media-amazon.com/images/I/61OxytIEd7L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DZNTNPK3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "440",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12354,7 +11928,6 @@
     "price_history": []
   },
   {
-    "id": "441",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12379,11 +11952,10 @@
     "img": "https://m.media-amazon.com/images/I/61Or0Q5ultL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00X3NTCIC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "442",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12408,11 +11980,10 @@
     "img": "https://m.media-amazon.com/images/I/51Dq13LF45S._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07VR21X8N?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "443",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12437,11 +12008,10 @@
     "img": "https://m.media-amazon.com/images/I/51-8YuFnD7L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0170VASLM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "016 GB",
     "price_history": []
   },
   {
-    "id": "444",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12465,12 +12035,11 @@
     "price": "53,99€",
     "img": "https://m.media-amazon.com/images/I/61KpbpLo4JL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DP36TP4P?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "445",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12495,11 +12064,10 @@
     "img": "https://m.media-amazon.com/images/I/51M+csQFUuL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00CIAVR5M?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "446",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12524,11 +12092,10 @@
     "img": "https://m.media-amazon.com/images/I/519iXVAbsmL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CP64F9Y1?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "447",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12553,11 +12120,10 @@
     "img": "https://m.media-amazon.com/images/I/61pO7hkT30L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DW8TWPWD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "448",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12582,11 +12148,10 @@
     "img": "https://m.media-amazon.com/images/I/81JJHlQjIiL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07BPK3XWW?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "449",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12611,11 +12176,10 @@
     "img": "https://m.media-amazon.com/images/I/61bcu+5znsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GTNXXVT7?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "450",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12640,11 +12204,10 @@
     "img": "https://m.media-amazon.com/images/I/41eeaWfA0yL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B017JJSLD2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "451",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12669,11 +12232,10 @@
     "img": "https://m.media-amazon.com/images/I/61t8g5bQ7rL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D1MBCM3Y?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "452",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12697,12 +12259,11 @@
     "price": "25,28€",
     "img": "https://m.media-amazon.com/images/I/710AjaRYtFL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BW9R7P3J?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "453",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12727,11 +12288,10 @@
     "img": "https://m.media-amazon.com/images/I/61RXAguJEiL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GD7DJHW3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "454",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12756,11 +12316,10 @@
     "img": "https://m.media-amazon.com/images/I/61iw3c7jOEL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DP3ZTGNC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "455",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12785,11 +12344,10 @@
     "img": "https://m.media-amazon.com/images/I/61FjRwaQyYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GXFGHQ44?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "456",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12814,11 +12372,10 @@
     "img": "https://m.media-amazon.com/images/I/71u8q+3y2FL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0063I1M1E?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "457",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12843,11 +12400,10 @@
     "img": "https://m.media-amazon.com/images/I/51L+VMPURhL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08R5R756H?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "458",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12871,12 +12427,11 @@
     "price": "17,29€",
     "img": "https://m.media-amazon.com/images/I/712hJdR8Z-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B97M73RS?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
+    "subcategory": "USB",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "459",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12900,12 +12455,11 @@
     "price": "23,38€",
     "img": "https://m.media-amazon.com/images/I/614mQDluvsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01H1VG338?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "460",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12930,11 +12484,10 @@
     "img": "https://m.media-amazon.com/images/I/61suKxo+smL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00YHL1OKI?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "461",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12959,11 +12512,10 @@
     "img": "https://m.media-amazon.com/images/I/61KNs+dgoWL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01FZPDJKC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "462",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -12988,11 +12540,10 @@
     "img": "https://m.media-amazon.com/images/I/61kyK4Pp1eL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07V8MKLM3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "463",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13017,11 +12568,10 @@
     "img": "https://m.media-amazon.com/images/I/71ZYSHXY2WL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B074384XC3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "464",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13046,11 +12596,10 @@
     "img": "https://m.media-amazon.com/images/I/51XSbaqI8FL._AC_.jpg",
     "url": "https://www.amazon.es/dp/B01LB9R8Q2?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "465",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13075,11 +12624,10 @@
     "img": "https://m.media-amazon.com/images/I/71LNL59b8AL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01I5H7BV0?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "2 GB",
     "price_history": []
   },
   {
-    "id": "466",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13103,12 +12651,11 @@
     "price": "16,12€",
     "img": "https://m.media-amazon.com/images/I/61pYZ-CzMSL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00RORBNSK?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "467",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13133,11 +12680,10 @@
     "img": "https://m.media-amazon.com/images/I/71qNsdu58EL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00TUBZ7RQ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "468",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13161,12 +12707,11 @@
     "price": "55,20€",
     "img": "https://m.media-amazon.com/images/I/41CXTzK5jhL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09FFJ7BXF?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "469",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13191,11 +12736,10 @@
     "img": "https://m.media-amazon.com/images/I/61gF6u71j3L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07PYFYWFF?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "470",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13220,11 +12764,10 @@
     "img": "https://m.media-amazon.com/images/I/71OhWcr01pL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B004HXHIOM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "471",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13249,11 +12792,10 @@
     "img": "https://m.media-amazon.com/images/I/519i+sxV4+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07Q1N6YVS?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "472",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13278,11 +12820,10 @@
     "img": "https://m.media-amazon.com/images/I/61vLoQ3PC6L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0D7W7W7DX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "473",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13306,12 +12847,11 @@
     "price": "35,99€",
     "img": "https://m.media-amazon.com/images/I/61keGpp0ddL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0BS6QNYYG?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "Disco duro externo",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "474",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13340,7 +12880,6 @@
     "price_history": []
   },
   {
-    "id": "475",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13369,7 +12908,6 @@
     "price_history": []
   },
   {
-    "id": "476",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13394,11 +12932,10 @@
     "img": "https://m.media-amazon.com/images/I/61h8wAsbG1L._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B0FR2YGCFH?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "477",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13423,11 +12960,10 @@
     "img": "https://m.media-amazon.com/images/I/41BK3HcxQHL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C4HTG8H3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "478",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13456,7 +12992,6 @@
     "price_history": []
   },
   {
-    "id": "479",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13481,11 +13016,10 @@
     "img": "https://m.media-amazon.com/images/I/61m3m6+QGpL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GVSC9T47?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "480",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13510,11 +13044,10 @@
     "img": "https://m.media-amazon.com/images/I/51H9JOuCz9L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DFMVNX8T?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "481",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13539,11 +13072,10 @@
     "img": "https://m.media-amazon.com/images/I/71A9AASFs9L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CST9GVBP?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "482",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13572,7 +13104,6 @@
     "price_history": []
   },
   {
-    "id": "483",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13601,7 +13132,6 @@
     "price_history": []
   },
   {
-    "id": "484",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13626,11 +13156,10 @@
     "img": "https://m.media-amazon.com/images/I/61M2elQqWdL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09MJD5XYV?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "485",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13654,12 +13183,11 @@
     "price": "16,99€",
     "img": "https://m.media-amazon.com/images/I/81-md49iGDS._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08RNF9NZ3?tag=kelonio-21",
-    "subcategory": "USB",
+    "subcategory": "Tarjeta SD",
     "size": "Ninguno",
     "price_history": []
   },
   {
-    "id": "486",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13684,11 +13212,10 @@
     "img": "https://m.media-amazon.com/images/I/81ztXb+L0GL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F48XX3FW?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "487",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13713,11 +13240,10 @@
     "img": "https://m.media-amazon.com/images/I/51E3lbSU57S._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0931Y1T6G?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "488",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13742,11 +13268,10 @@
     "img": "https://m.media-amazon.com/images/I/61tbtevqfjL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FH67J7QC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "489",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13771,11 +13296,10 @@
     "img": "https://m.media-amazon.com/images/I/61CNVcKcKfL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FKMT6KW9?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "490",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13800,11 +13324,10 @@
     "img": "https://m.media-amazon.com/images/I/61CedYPgWAL._AC_SY879_.jpg",
     "url": "https://www.amazon.es/dp/B0FLJ5K3SQ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "491",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13829,11 +13352,10 @@
     "img": "https://m.media-amazon.com/images/I/71vVaeh-ZLL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GXB9R283?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "492",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13858,11 +13380,10 @@
     "img": "https://m.media-amazon.com/images/I/51lNdKjiPBL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B826NL11?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "493",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13887,11 +13408,10 @@
     "img": "https://m.media-amazon.com/images/I/61DZxeCK9lL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B086D3Y7CP?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "494",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13916,11 +13436,10 @@
     "img": "https://m.media-amazon.com/images/I/61g8ljADdIL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DN6G3RDJ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "495",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13944,12 +13463,11 @@
     "price": "17,44€",
     "img": "https://m.media-amazon.com/images/I/61Tr4KDTn-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00LA3P77C?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "496",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -13974,11 +13492,10 @@
     "img": "https://m.media-amazon.com/images/I/41F9cimloyL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0C5Y69JWB?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "497",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14002,12 +13519,11 @@
     "price": "16,16€",
     "img": "https://m.media-amazon.com/images/I/61Z91C-xFVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B004O6IAK8?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "498",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14036,7 +13552,6 @@
     "price_history": []
   },
   {
-    "id": "499",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14061,11 +13576,10 @@
     "img": "https://m.media-amazon.com/images/I/81tDYhGu4LL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07XY32M6C?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "500",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14090,11 +13604,10 @@
     "img": "https://m.media-amazon.com/images/I/61dncpfv0FL._AC_SX522_.jpg",
     "url": "https://www.amazon.es/dp/B0G1TPQLLG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "501",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14119,11 +13632,10 @@
     "img": "https://m.media-amazon.com/images/I/51fPvCZHvnL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DFMWHPTQ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "1 TB",
     "price_history": []
   },
   {
-    "id": "502",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14148,11 +13660,10 @@
     "img": "https://m.media-amazon.com/images/I/511BW9qeqgL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B013UJ40SK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "503",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14177,11 +13688,10 @@
     "img": "https://m.media-amazon.com/images/I/51cnt8L+3JL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CTCFNGT1?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "504",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14205,12 +13715,11 @@
     "price": "47,25€",
     "img": "https://m.media-amazon.com/images/I/6110IjISwsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0G4C984ZD?tag=kelonio-21",
-    "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "subcategory": "Disco duro externo",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "505",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14235,11 +13744,10 @@
     "img": "https://m.media-amazon.com/images/I/51EZNlOErvL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0F8HDXC5S?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "506",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14264,11 +13772,10 @@
     "img": "https://m.media-amazon.com/images/I/61D8IVUuX-L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B013PH9GO0?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "1 GB",
     "price_history": []
   },
   {
-    "id": "507",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14293,11 +13800,10 @@
     "img": "https://m.media-amazon.com/images/I/51D2nDOEG9L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07SXGF45Y?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "508",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14322,11 +13828,10 @@
     "img": "https://m.media-amazon.com/images/I/61jFTnoNhSS._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01DWNMWQQ?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "509",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14355,7 +13860,6 @@
     "price_history": []
   },
   {
-    "id": "510",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14380,40 +13884,10 @@
     "img": "https://m.media-amazon.com/images/I/71xJ8+I42+L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GFNDTYVD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "511",
-    "console": "SD/USB",
-    "status": "active",
-    "created_at": "2026-06-07 13:10",
-    "last_seen": "2026-06-07 13:10",
-    "label": {
-      "en": "SD/USB: GXGM 4 Piezas de fundas protectoras para...",
-      "es": "SD/USB: GXGM 4 Piezas de fundas protectoras para...",
-      "fr": "SD/USB: GXGM 4 Piezas de fundas protectoras para...",
-      "it": "SD/USB: GXGM 4 Piezas de fundas protectoras para...",
-      "pt": "SD/USB: GXGM 4 Piezas de fundas protectoras para...",
-      "de": "SD/USB: GXGM 4 Piezas de fundas protectoras para..."
-    },
-    "desc": {
-      "es": "GXGM 4 Piezas de fundas protectoras para llaveros ...\nVer precio",
-      "en": "Get GXGM 4 Piezas de fundas protectoras para llaveros  on Amazon at the best price with our affiliate link.",
-      "fr": "Obtenez GXGM 4 Piezas de fundas protectoras para llaveros  sur Amazon au meilleur prix.",
-      "it": "Ottieni GXGM 4 Piezas de fundas protectoras para llaveros  su Amazon al miglior prezzo.",
-      "pt": "Obtenha GXGM 4 Piezas de fundas protectoras para llaveros  na Amazon ao melhor preço.",
-      "de": "Holen Sie sich GXGM 4 Piezas de fundas protectoras para llaveros  bei Amazon zum besten Preis."
-    },
-    "price": "Ver precio",
-    "img": "https://m.media-amazon.com/images/I/61wgcTeExrL._AC_SX679_.jpg",
-    "url": "https://www.amazon.es/dp/B0GVF4CCMR?tag=kelonio-21",
-    "subcategory": "Fundas-Proteccion",
-    "size": "Ninguno",
-    "price_history": []
-  },
-  {
-    "id": "512",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14437,12 +13911,11 @@
     "price": "35,99€",
     "img": "https://m.media-amazon.com/images/I/71B7HH8867L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B09KYD56QH?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "513",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14467,11 +13940,10 @@
     "img": "https://m.media-amazon.com/images/I/417ZAFtSguL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00OVX3H52?tag=kelonio-21",
     "subcategory": "Tarjeta SD",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "514",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14496,11 +13968,10 @@
     "img": "https://m.media-amazon.com/images/I/51SaVlEsfSL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B4TC9KQG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "515",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14524,12 +13995,11 @@
     "price": "18,94€",
     "img": "https://m.media-amazon.com/images/I/71a48sSdYqL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08K7HMWHF?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "516",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14554,11 +14024,10 @@
     "img": "https://m.media-amazon.com/images/I/61rZi21aqXL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0FQ5KH4JC?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "517",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14587,7 +14056,6 @@
     "price_history": []
   },
   {
-    "id": "518",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14612,11 +14080,10 @@
     "img": "https://m.media-amazon.com/images/I/51BhGeJ38uL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07RWPF43G?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "519",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14641,11 +14108,10 @@
     "img": "https://m.media-amazon.com/images/I/61Ivn-X-plL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01FZPDWNG?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "520",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14670,11 +14136,10 @@
     "img": "https://m.media-amazon.com/images/I/718XsG+KmoL._AC_SX569_.jpg",
     "url": "https://www.amazon.es/dp/B00UGMMO7O?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "521",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14699,11 +14164,10 @@
     "img": "https://m.media-amazon.com/images/I/516AbD697OL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07T3F66VB?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "522",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14727,12 +14191,11 @@
     "price": "54,03€",
     "img": "https://m.media-amazon.com/images/I/51W1YZEp0ML._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07F9ZM1VL?tag=kelonio-21",
-    "subcategory": "Tarjeta de Regalo",
-    "size": "Ninguno",
+    "subcategory": "USB",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "523",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14757,11 +14220,10 @@
     "img": "https://m.media-amazon.com/images/I/51-xnL-coVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08WJLRB3D?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "524",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14786,11 +14248,10 @@
     "img": "https://m.media-amazon.com/images/I/817y3Ubkv5L._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0B5B2WL5R?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "525",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14814,12 +14275,11 @@
     "price": "36,99€",
     "img": "https://m.media-amazon.com/images/I/51ZtOVtg7NL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01HSB37BW?tag=kelonio-21",
-    "subcategory": "USB",
-    "size": "Ninguno",
+    "subcategory": "Tarjeta SD",
+    "size": "4 GB",
     "price_history": []
   },
   {
-    "id": "526",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14844,11 +14304,10 @@
     "img": "https://m.media-amazon.com/images/I/61m5-DfnByL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CY5BV3JP?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "512 GB",
     "price_history": []
   },
   {
-    "id": "527",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14873,11 +14332,10 @@
     "img": "https://m.media-amazon.com/images/I/51DsTIMAOYL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0CHVV1PQD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   },
   {
-    "id": "528",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14902,11 +14360,10 @@
     "img": "https://m.media-amazon.com/images/I/41XeIvxIPfL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B016E7EBPM?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "529",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14931,11 +14388,10 @@
     "img": "https://m.media-amazon.com/images/I/617oQWA0HAL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01KTNMY9C?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "0 GB",
     "price_history": []
   },
   {
-    "id": "530",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14960,11 +14416,10 @@
     "img": "https://m.media-amazon.com/images/I/61aY9FempLL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DJ8LXPVV?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "256 GB",
     "price_history": []
   },
   {
-    "id": "531",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -14989,11 +14444,10 @@
     "img": "https://m.media-amazon.com/images/I/713UbZJbAVL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0GSCPM8PD?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "532",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15018,11 +14472,10 @@
     "img": "https://m.media-amazon.com/images/I/419nwJtASWL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B01N7XV300?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "128 GB",
     "price_history": []
   },
   {
-    "id": "533",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15051,7 +14504,6 @@
     "price_history": []
   },
   {
-    "id": "534",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15076,11 +14528,10 @@
     "img": "https://m.media-amazon.com/images/I/71jzPFeHzdL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00R10LKK6?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "535",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15105,11 +14556,10 @@
     "img": "https://m.media-amazon.com/images/I/41XitNhJrsL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B07P6XTNCX?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "536",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15134,11 +14584,10 @@
     "img": "https://m.media-amazon.com/images/I/51-GfJxtFjL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B00H3A2N5A?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "537",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15163,11 +14612,10 @@
     "img": "https://m.media-amazon.com/images/I/416uRTI6WzL._AC_.jpg",
     "url": "https://www.amazon.es/dp/B07XLP2TKY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "64 GB",
     "price_history": []
   },
   {
-    "id": "538",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15192,11 +14640,10 @@
     "img": "https://m.media-amazon.com/images/I/512cAwBy4CL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B003OCYP5C?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "8 GB",
     "price_history": []
   },
   {
-    "id": "539",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15221,11 +14668,10 @@
     "img": "https://m.media-amazon.com/images/I/61cyF21QFCL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B0DN6JZSPK?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "540",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15250,11 +14696,10 @@
     "img": "https://m.media-amazon.com/images/I/61a00f75iZL._AC_SX679_.jpg",
     "url": "https://www.amazon.es/dp/B08R3GBWN3?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "32 GB",
     "price_history": []
   },
   {
-    "id": "541",
     "console": "SD/USB",
     "status": "active",
     "created_at": "2026-06-07 13:10",
@@ -15279,7 +14724,7 @@
     "img": "https://m.media-amazon.com/images/I/41rMtC1wWLL._AC_.jpg",
     "url": "https://www.amazon.es/dp/B00TOE9DRY?tag=kelonio-21",
     "subcategory": "USB",
-    "size": "Ninguno",
+    "size": "16 GB",
     "price_history": []
   }
 ]
