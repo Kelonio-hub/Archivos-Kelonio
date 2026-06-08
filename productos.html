@@ -184,7 +184,7 @@ body{
 .subcat-row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap; /* Permitir que los elementos bajen a la siguiente línea */
+  flex-wrap: wrap; 
   padding: 4px 0;
 }
 .subcat-filter-btn {
@@ -198,7 +198,7 @@ body{
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  margin-bottom: 5px; /* Separación al saltar de línea */
+  margin-bottom: 5px; 
 }
 .subcat-filter-btn:hover {
   border-color: var(--red);
@@ -700,7 +700,7 @@ body{
   </div>
 </div>
 
-<button id="adminLockBtn" class="admin-lock-btn" title="Modo Administrador">
+<button id="adminLockBtn" class="admin-lock-btn" title="Modo Administrator">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="lockIcon">
     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
@@ -757,6 +757,7 @@ const translations = {
 
 /* ================= TRADUCCIONES DE SUBCATEGORÍAS ================= */
 const subcatTranslations = {
+  "Novedades": { es: "Novedades", en: "New Arrivals", fr: "Nouveautés", it: "Novità", pt: "Novidades", de: "Neuheiten", ja: "新着", ko: "신상품" },
   "Consolas": { es: "Consolas", en: "Consoles", fr: "Consoles", it: "Console", pt: "Consoles", de: "Konsolen", ja: "コンソール", ko: "콘솔" },
   "Videojuegos": { es: "Videojuegos", en: "Video Games", fr: "Jeux Vidéo", it: "Videogiochi", pt: "Videojogos", de: "Videospiele", ja: "ビデオゲーム", ko: "비디오 게임" },
   "Tarjeta de Regalo": { es: "Tarjetas de Regalo", en: "Gift Cards", fr: "Cartes Cadeaux", it: "Carte Regalo", pt: "Cartões de Presente", de: "Geschenkkarten", ja: "ギフトカード", ko: "기프트 카드" },
@@ -767,10 +768,10 @@ const subcatTranslations = {
   "Disco duro externo": { es: "Disco Duro Externo", en: "External Hard Drive", fr: "Disque Dur Externe", it: "Hard Disk Esterno", pt: "Disco Rígido Externo", de: "Externe Festplatte", ja: "外付けハードドライブ", ko: "외장 하드 드라이브" },
   "Adaptadores": { es: "Adaptadores", en: "Adapters", fr: "Adaptateurs", it: "Adattatori", pt: "Adaptadores", de: "Adapter", ja: "アダプター", ko: "어댑터" },
   "Baterías": { es: "Baterías", en: "Batteries", fr: "Batteries", it: "Batterie", pt: "Baterias", de: "Batterien", ja: "バッテリー", ko: "배터리" },
-  "Ordenadores": { es: "Ordenadores", en: "Computers", fr: "Ordinateurs", it: "Computer", pt: "Computadores", de: "Computer", ja: "コンピューター", ko: "컴퓨터" }
+  "Ordenadores": { es: "Ordenadores", en: "Computers", fr: "Ordinateurs", it: "Computer", pt: "Computadores", de: "Computer", ja: "コンピューター", ko: "コンピュー터" }
 };
 
-const subcatOrder = ['Consolas', 'Videojuegos', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo', 'Adaptadores', 'Baterías', 'Ordenadores'];
+const subcatOrder = ['Novedades', 'Consolas', 'Videojuegos', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo', 'Adaptadores', 'Baterías', 'Ordenadores'];
 
 /* ================= PRODUCTO PRIME HARDCODEADO ================= */
 const PRODUCTO_PRIME = {
@@ -803,19 +804,19 @@ let paginaActual = 1;
 const itemsPorPagina = 24; 
 
 const categories = [
-  { id: 'Switch',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
-  { id: 'PS5',       icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
-  { id: 'Xbox',      icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
-  { id: '3DS_NDS',   icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS / NDS', en: '3DS / NDS' } },
-  { id: 'Wii/WiiU',  icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII / WII U', en: 'WII / WII U' } },
-  { id: 'SD/USB',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
+  { id: 'Switch',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
+  { id: 'PLAYSTATION', icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
+  { id: 'XBOX',        icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
+  { id: '3DS_NDS',     icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS / NDS', en: '3DS / NDS' } },
+  { id: 'WII',         icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII', en: 'WII' } },
+  { id: 'SD/USB',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
 ];
 
 const categoryJsonMap = {
   'Switch': 'switch.json',
-  'PS5': 'playstation.json',
-  'Xbox': 'xbox.json',
-  'Wii/WiiU': 'wii_wii_u.json',
+  'PLAYSTATION': 'playstation.json',
+  'XBOX': 'xbox.json',
+  'WII': 'wii.json',
   'SD/USB': 'sd_usb.json',
   '3DS_NDS': '3ds.json'
 };
@@ -950,9 +951,17 @@ function generarBarraSubcategoriasYCapacidades() {
   rowTB.style.display = 'none';
 
   let productosCategoria = allProducts.filter(item => {
-    if (categoriaActual === '3DS_NDS') return item.console === '3DS' || item.console === 'NDS';
-    if (Array.isArray(item.console)) return item.console.includes(categoriaActual);
-    return item.console === categoriaActual;
+    if (!item.console) return false;
+    if (categoriaActual.toLowerCase() === '3ds_nds') {
+      if (Array.isArray(item.console)) {
+        return item.console.some(c => c.toLowerCase() === '3ds' || c.toLowerCase() === 'nds');
+      }
+      return item.console.toLowerCase() === '3ds' || item.console.toLowerCase() === 'nds';
+    }
+    if (Array.isArray(item.console)) {
+      return item.console.some(c => c.toLowerCase() === categoriaActual.toLowerCase());
+    }
+    return item.console.toLowerCase() === categoriaActual.toLowerCase();
   });
 
   if (productosCategoria.length === 0) return;
@@ -1064,7 +1073,7 @@ async function cargarProductos() {
     const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/';
     const archivos = [
       'switch.json', 'playstation.json', 'xbox.json', '3ds.json', 
-      'nds.json', 'wii_wii_u.json', 'sd_usb.json'
+      'nds.json', 'wii.json', 'sd_usb.json'
     ];
 
     const promesas = archivos.map(archivo => 
@@ -1169,13 +1178,13 @@ function createProductCard(item, container, isMini = false) {
     adminTools.className = 'admin-card-tools';
     adminTools.onclick = (e) => e.stopPropagation();
 
-    const currentConsoles = Array.isArray(item.console) ? item.console : [item.console];
+    const currentConsoles = (Array.isArray(item.console) ? item.console : [item.console]).map(c => c.toLowerCase());
     let consoleOptions = categories.map(c => 
-      `<option value="${c.id}" ${currentConsoles.includes(c.id) ? 'selected' : ''}>${c.id}</option>`
+      `<option value="${c.id}" ${currentConsoles.includes(c.id.toLowerCase()) ? 'selected' : ''}>${c.id}</option>`
     ).join('');
-    if (!currentConsoles.includes('NDS') && (currentConsoles.includes('3DS') || currentConsoles.includes('3DS_NDS'))) {
+    if (!currentConsoles.includes('nds') && (currentConsoles.includes('3ds') || currentConsoles.includes('3ds_nds'))) {
       consoleOptions += `<option value="NDS">NDS</option>`;
-    } else if (currentConsoles.includes('NDS')) {
+    } else if (currentConsoles.includes('nds')) {
       consoleOptions += `<option value="NDS" selected>NDS</option>`;
     }
 
@@ -1264,22 +1273,28 @@ function renderProducts(catId, searchTerm = '') {
     document.getElementById('sizesTBRow').style.display = 'none';
   } 
   else {
-    if (catId === '3DS_NDS') {
-      filtered = filtered.filter(item => {
-        if (Array.isArray(item.console)) return item.console.includes('3DS') || item.console.includes('NDS');
-        return item.console === '3DS' || item.console === 'NDS';
-      });
-    } else {
-      filtered = filtered.filter(item => {
-        if (Array.isArray(item.console)) return item.console.includes(catId);
-        return item.console === catId;
-      });
-    }
+    filtered = filtered.filter(item => {
+      if (!item.console) return false;
+      
+      const itemConsole = Array.isArray(item.console) 
+        ? item.console.map(c => c.toLowerCase()) 
+        : [item.console.toLowerCase()];
+      
+      const targetCat = catId.toLowerCase();
+
+      if (targetCat === '3ds_nds') {
+        return itemConsole.includes('3ds') || itemConsole.includes('nds');
+      } else {
+        return itemConsole.includes(targetCat);
+      }
+    });
 
     if (subcategoriaSeleccionada !== 'ALL') {
       filtered = filtered.filter(item => {
-        if (Array.isArray(item.subcategory)) return item.subcategory.includes(subcategoriaSeleccionada);
-        return item.subcategory === subcategoriaSeleccionada;
+        if (Array.isArray(item.subcategory)) {
+          return item.subcategory.some(s => s.toLowerCase() === subcategoriaSeleccionada.toLowerCase());
+        }
+        return item.subcategory?.toLowerCase() === subcategoriaSeleccionada.toLowerCase();
       });
     }
 
@@ -1433,12 +1448,13 @@ adminLockBtn.addEventListener('click', async () => {
 saveJsonBtn.addEventListener('click', () => {
   let targetJsonFile = categoryJsonMap[categoriaActual] || 'productos.json';
   let exportProducts = allProducts.filter(item => {
-    if (categoriaActual === '3DS_NDS') {
-      if (Array.isArray(item.console)) return item.console.includes('3DS') || item.console.includes('NDS');
-      return item.console === '3DS' || item.console === 'NDS';
+    if (!item.console) return false;
+    if (categoriaActual.toLowerCase() === '3ds_nds') {
+      if (Array.isArray(item.console)) return item.console.some(c => c.toLowerCase() === '3ds' || c.toLowerCase() === 'nds');
+      return item.console.toLowerCase() === '3ds' || item.console.toLowerCase() === 'nds';
     }
-    if (Array.isArray(item.console)) return item.console.includes(categoriaActual);
-    return item.console === categoriaActual;
+    if (Array.isArray(item.console)) return item.console.some(c => c.toLowerCase() === categoriaActual.toLowerCase());
+    return item.console.toLowerCase() === categoriaActual.toLowerCase();
   });
 
   let cleanedProducts = exportProducts.map(p => {
