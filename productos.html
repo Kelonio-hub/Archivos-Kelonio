@@ -756,6 +756,12 @@ body{
           <span>Mover a Subcategoría:</span>
           <select id="batchSubcatSelect" style="background:#222; color:white; border:1px solid rgba(255,255,255,.2); padding:6px; border-radius:6px; outline:none; font-size:12px;"></select>
         </div>
+        <button id="newSubcategoryBtn" style="background:var(--gold); color:black; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer;">
+          ➕ Nueva Subcategoría
+        </button>
+        <button id="deleteBatchBtn" style="background:#cc0000; color:white; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer;">
+          🗑️ Eliminar Seleccionados
+        </button>
         <button id="applyBatchBtn" style="background:var(--red); color:white; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer; transition:transform 0.2s;">
           ⚡ Aplicar Cambios por Lote
         </button>
@@ -1451,6 +1457,10 @@ function initBatchTools() {
   });
 
   document.getElementById('applyBatchBtn').addEventListener('click', applyBatchChanges);
+  const ns=document.getElementById('newSubcategoryBtn');
+  if(ns) ns.addEventListener('click', createNewSubcategory);
+  const db=document.getElementById('deleteBatchBtn');
+  if(db) db.addEventListener('click', deleteBatchProducts);
   
   batchToolsInitialized = true;
 }
@@ -1617,8 +1627,59 @@ window.onscroll = function() {
   }
 };
 
+
+function loadCustomSubcategories(){
+  try{
+    const custom = JSON.parse(localStorage.getItem('customSubcategories') || '[]');
+    custom.forEach(sub=>{
+      if(!subcatOrder.includes(sub)){
+        subcatOrder.push(sub);
+      }
+      if(!subcatTranslations[sub]){
+        subcatTranslations[sub]={es:sub,en:sub,fr:sub,it:sub,pt:sub,de:sub,ja:sub,ko:sub};
+      }
+    });
+  }catch(e){}
+}
+
+function saveCustomSubcategories(){
+  const base=['Novedades','Consolas','Videojuegos','Tarjeta de Regalo','Mandos-Perifericos','Fundas-Proteccion','Tarjeta SD','USB','Disco duro externo','Adaptadores','Baterías','Ordenadores'];
+  localStorage.setItem('customSubcategories',JSON.stringify(subcatOrder.filter(x=>!base.includes(x))));
+}
+
+function createNewSubcategory(){
+  const nombre=(prompt('Nombre de la nueva subcategoría:')||'').trim();
+  if(!nombre) return;
+  if(subcatOrder.includes(nombre)){ alert('La subcategoría ya existe.'); return; }
+
+  subcatOrder.push(nombre);
+  subcatTranslations[nombre]={es:nombre,en:nombre,fr:nombre,it:nombre,pt:nombre,de:nombre,ja:nombre,ko:nombre};
+  saveCustomSubcategories();
+
+  generarBarraSubcategoriasYCapacidades();
+  initBatchTools();
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+}
+
+function deleteBatchProducts(){
+  const selected=document.querySelectorAll('.product-batch-checkbox:checked');
+  if(selected.length===0){
+    alert('No has seleccionado ningún producto.');
+    return;
+  }
+
+  if(!confirm(`¿Eliminar ${selected.length} productos seleccionados?`)) return;
+
+  const ids=[...selected].map(x=>x.dataset.id);
+  allProducts=allProducts.filter(p=>!ids.includes(p.id));
+
+  generarBarraSubcategoriasYCapacidades();
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+}
+
 /* ================= INICIO ================= */
 window.onload = () => {
+  loadCustomSubcategories();
   initThemeDots();
   createLanguageSelector();
   updateLanguage();
