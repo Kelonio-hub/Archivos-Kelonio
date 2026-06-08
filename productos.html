@@ -306,6 +306,22 @@ body{
   display:none;
 }
 
+/* ================= BARRA POR LOTE STICKY (ADMIN) ================= */
+#batchAdminTools {
+  position: sticky;
+  top: 65px; /* Se queda justo debajo de la topbar desktop */
+  z-index: 9990; /* Por encima de las tarjetas, por debajo del menú principal */
+  background: rgba(20, 20, 20, 0.96); /* Fondo opaco para evitar mezcla visual */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255,255,255,0.2);
+  transition: top 0.2s ease;
+}
+@media(max-width:1100px){
+  #batchAdminTools {
+    top: 112px; /* Se ajusta si la barra superior se expande en pantallas medianas/móviles */
+  }
+}
+
 /* ================= CARDS SIMÉTRICAS ================= */
 .card{
   min-width:300px;
@@ -728,6 +744,23 @@ body{
       <h2 id="currentCategoryTitle" style="font-size:2.5rem;">SWITCH</h2>
       <div id="paginationContainerTop" class="pagination"></div>
       
+      <div id="batchAdminTools" style="display:none; margin-bottom: 20px; padding: 15px; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; gap: 15px; align-items: center; flex-wrap: wrap;">
+        <label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:bold; color:var(--gold); cursor:pointer; user-select:none;">
+          <input type="checkbox" id="selectAllBatchChk" style="width:16px; height:16px; cursor:pointer;"> Seleccionar página actual
+        </label>
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          <span>Mover a Consola:</span>
+          <select id="batchConsoleSelect" style="background:#222; color:white; border:1px solid rgba(255,255,255,.2); padding:6px; border-radius:6px; outline:none; font-size:12px;"></select>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; font-size:13px;">
+          <span>Mover a Subcategoría:</span>
+          <select id="batchSubcatSelect" style="background:#222; color:white; border:1px solid rgba(255,255,255,.2); padding:6px; border-radius:6px; outline:none; font-size:12px;"></select>
+        </div>
+        <button id="applyBatchBtn" style="background:var(--red); color:white; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer; transition:transform 0.2s;">
+          ⚡ Aplicar Cambios por Lote
+        </button>
+      </div>
+
       <div class="carousel" id="productsGrid" style="flex-wrap: wrap; overflow: visible;"></div>
       
       <div id="paginationContainerBottom" class="pagination"></div>
@@ -802,6 +835,7 @@ let subcategoriaSeleccionada = 'ALL';
 let tamanoSeleccionado = 'ALL';         
 let paginaActual = 1;
 const itemsPorPagina = 24; 
+let batchToolsInitialized = false;
 
 const categories = [
   { id: 'Switch',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
@@ -1086,7 +1120,9 @@ async function cargarProductos() {
     
     allProducts = resultadosArrays.flatMap((array, index) => {
       return array.map((item, subIndex) => {
-        if (!item.id) item.id = `prod-${index}-${subIndex}-${Date.now()}`;
+        // CORRECCIÓN PRINCIPAL: Forzamos un id único runtime por combinación de archivo y posición.
+        // Esto evita colisiones si tus archivos JSON tienen campos "id" repetidos entre sí (ej: id=1 en Switch y id=1 en Xbox).
+        item.id = `prod-${index}-${subIndex}`;
         if (!item._originFile) item._originFile = archivos[index];
         return item;
       });
@@ -1189,13 +1225,15 @@ function createProductCard(item, container, isMini = false) {
     }
 
     const currentSubcats = Array.isArray(item.subcategory) ? item.subcategory : [item.subcategory];
-    
-    // MEJORA PUNTO 3: Se inyecta la opción interactiva al final del string map()
     const subcatOptions = subcatOrder.map(sub => 
       `<option value="${sub}" ${currentSubcats.includes(sub) ? 'selected' : ''}>${sub}</option>`
-    ).join('') + `<option value="__NEW_SUBCAT__" style="color:var(--gold); font-weight:bold;">➕ Nueva subcategoría...</option>`;
+    ).join('');
 
     adminTools.innerHTML = `
+      <div class="admin-select-group" style="flex-direction: row; gap: 8px; align-items: center; margin-bottom: 4px; background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">
+        <input type="checkbox" class="product-batch-checkbox" data-id="${item.id}" style="width: 16px; height: 16px; cursor: pointer;">
+        <label style="font-size: 11px; color: var(--gold); font-weight: bold; cursor: pointer; text-transform: none;">Seleccionar lote</label>
+      </div>
       <div class="admin-select-group">
         <label>Categorías (Ctrl+Click)</label>
         <select class="admin-select-multiple console-select" multiple size="3">
@@ -1214,65 +1252,22 @@ function createProductCard(item, container, isMini = false) {
     adminTools.querySelector('.console-select').addEventListener('change', (e) => {
       const selectedConsoles = Array.from(e.target.selectedOptions).map(opt => opt.value);
       item.console = selectedConsoles.length === 1 ? selectedConsoles[0] : selectedConsoles;
+      generarBarraSubcategoriasYCapacidades();
+      renderProducts(categoriaActual, document.getElementById('productSearch').value);
     });
 
-    // MEJORA PUNTO 3: Lógica para procesar la creación reactiva de la nueva subcategoría
-    const subcatSelect = adminTools.querySelector('.subcat-select');
-    subcatSelect.addEventListener('change', (e) => {
-      const selectedOptions = Array.from(e.target.selectedOptions);
-      const hasNewOption = selectedOptions.some(opt => opt.value === '__NEW_SUBCAT__');
-
-      if (hasNewOption) {
-        const nuevaSub = prompt("Introduce el nombre de la nueva subcategoría:");
-        if (nuevaSub && nuevaSub.trim() !== "") {
-          const subLimpia = nuevaSub.trim();
-
-          // Registrar en el orden general si no existe
-          if (!subcatOrder.includes(subLimpia)) {
-            subcatOrder.push(subLimpia);
-          }
-
-          // Inicializar traducciones por defecto
-          if (!subcatTranslations[subLimpia]) {
-            subcatTranslations[subLimpia] = {
-              es: subLimpia, en: subLimpia, fr: subLimpia, it: subLimpia,
-              pt: subLimpia, de: subLimpia, ja: subLimpia, ko: subLimpia
-            };
-          }
-
-          // Asignar al estado local de subcategorías del producto
-          if (Array.isArray(item.subcategory)) {
-            if (!item.subcategory.includes(subLimpia)) item.subcategory.push(subLimpia);
-          } else if (item.subcategory && item.subcategory !== 'Ninguno') {
-            if (item.subcategory !== subLimpia) item.subcategory = [item.subcategory, subLimpia];
-          } else {
-            item.subcategory = subLimpia;
-          }
-
-          // Sincronizar todos los componentes gráficos de inmediato
-          generarBarraSubcategoriasYCapacidades();
-          renderProducts(categoriaActual, document.getElementById('productSearch').value);
-          return; 
-        } else {
-          // Desmarcar opción especial si el usuario cancela o deja vacío el input
-          const optEspecial = Array.from(subcatSelect.options).find(o => o.value === '__NEW_SUBCAT__');
-          if (optEspecial) optEspecial.selected = false;
-        }
-      }
-
-      // Guardado convencional filtrando el token temporal '__NEW_SUBCAT__'
-      const selectedSubcats = Array.from(e.target.selectedOptions)
-        .map(opt => opt.value)
-        .filter(val => val !== '__NEW_SUBCAT__');
-      
+    adminTools.querySelector('.subcat-select').addEventListener('change', (e) => {
+      const selectedSubcats = Array.from(e.target.selectedOptions).map(opt => opt.value);
       item.subcategory = selectedSubcats.length === 0 ? 'Ninguno' : (selectedSubcats.length === 1 ? selectedSubcats[0] : selectedSubcats);
+      generarBarraSubcategoriasYCapacidades();
+      renderProducts(categoriaActual, document.getElementById('productSearch').value);
     });
 
     adminTools.querySelector('.delete-btn').addEventListener('click', () => {
       if(confirm(`¿Estás seguro de que deseas eliminar "${label}"?`)) {
         allProducts = allProducts.filter(p => p.id !== item.id);
-        renderProducts(categoriaActual, document.getElementById('productSearch').value);
         generarBarraSubcategoriasYCapacidades();
+        renderProducts(categoriaActual, document.getElementById('productSearch').value);
       }
     });
 
@@ -1302,6 +1297,9 @@ function renderProducts(catId, searchTerm = '') {
   const grid = document.getElementById('productsGrid');
   grid.innerHTML = '';
   const t = translations[idiomaActual] || translations.es;
+
+  const selectAllChk = document.getElementById('selectAllBatchChk');
+  if(selectAllChk) selectAllChk.checked = false;
 
   let filtered = allProducts.filter(item => 
     item.label?.es !== "Amazon Prime" && 
@@ -1360,7 +1358,8 @@ function renderProducts(catId, searchTerm = '') {
   }
 
   const totalPages = Math.ceil(filtered.length / itemsPorPagina);
-  if (paginaActual > totalPages) paginaActual = 1; 
+  
+  if (paginaActual > totalPages) paginaActual = totalPages || 1; 
 
   const startIndex = (paginaActual - 1) * itemsPorPagina;
   const endIndex = startIndex + itemsPorPagina;
@@ -1426,6 +1425,75 @@ function renderPagination(totalPages) {
   buildPaginationButtons(containerBottom);
 }
 
+/* ================= INICIALIZADOR Y LOGICA POR LOTE (ADMIN) ================= */
+function initBatchTools() {
+  if (batchToolsInitialized) return;
+  
+  const consoleSel = document.getElementById('batchConsoleSelect');
+  const subcatSel = document.getElementById('batchSubcatSelect');
+  
+  if(!consoleSel || !subcatSel) return;
+
+  consoleSel.innerHTML = '<option value="KEEP">— No cambiar —</option>';
+  categories.forEach(c => {
+    consoleSel.innerHTML += `<option value="${c.id}">${c.id}</option>`;
+  });
+  consoleSel.innerHTML += `<option value="NDS">NDS</option>`;
+  
+  subcatSel.innerHTML = '<option value="KEEP">— No cambiar —</option><option value="Ninguno">Ninguno</option>';
+  subcatOrder.forEach(sub => {
+    subcatSel.innerHTML += `<option value="${sub}">${sub}</option>`;
+  });
+
+  document.getElementById('selectAllBatchChk').addEventListener('change', (e) => {
+    const checkboxes = document.querySelectorAll('.product-batch-checkbox');
+    checkboxes.forEach(chk => chk.checked = e.target.checked);
+  });
+
+  document.getElementById('applyBatchBtn').addEventListener('click', applyBatchChanges);
+  
+  batchToolsInitialized = true;
+}
+
+function applyBatchChanges() {
+  const checkboxes = document.querySelectorAll('.product-batch-checkbox:checked');
+  if (checkboxes.length === 0) {
+    alert("No has seleccionado ningún producto en la página actual para modificar.");
+    return;
+  }
+
+  const targetConsole = document.getElementById('batchConsoleSelect').value;
+  const targetSubcat = document.getElementById('batchSubcatSelect').value;
+
+  if (targetConsole === 'KEEP' && targetSubcat === 'KEEP') {
+    alert("Por favor, selecciona al menos un cambio válido en los desplegables (Consola o Subcategoría).");
+    return;
+  }
+
+  if (!confirm(`¿Estás seguro de mover y actualizar estos ${checkboxes.length} productos seleccionados?`)) {
+    return;
+  }
+
+  checkboxes.forEach(chk => {
+    const prodId = chk.dataset.id;
+    const item = allProducts.find(p => p.id === prodId);
+    if (item) {
+      if (targetConsole !== 'KEEP') {
+        item.console = targetConsole;
+      }
+      if (targetSubcat !== 'KEEP') {
+        item.subcategory = targetSubcat;
+      }
+    }
+  });
+
+  alert("¡Productos actualizados con éxito por lote!");
+
+  document.getElementById('selectAllBatchChk').checked = false;
+  generarBarraSubcategoriasYCapacidades();
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+}
+
 /* ================= EVENTOS Y SEARCH ================= */
 let debounceTimer;
 const searchInput = document.getElementById('productSearch');
@@ -1478,6 +1546,8 @@ adminLockBtn.addEventListener('click', async () => {
         adminLockBtn.style.borderColor = "var(--gold)";
         adminLockBtn.style.opacity = "1"; 
         saveJsonBtn.style.display = "flex"; 
+        document.getElementById('batchAdminTools').style.display = "flex"; 
+        initBatchTools(); 
         alert("OK!");
       } else {
         alert("https://amzn.to/4dUrbsh");
@@ -1489,7 +1559,8 @@ adminLockBtn.addEventListener('click', async () => {
     adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
     adminLockBtn.style.opacity = "0"; 
     saveJsonBtn.style.display = "none";
-    alert("Modo Administrador Desactivado.");
+    document.getElementById('batchAdminTools').style.display = "none"; 
+    alert("Modo Administrator Desactivado.");
   }
   renderProducts(categoriaActual, document.getElementById('productSearch').value);
 });
