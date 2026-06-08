@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -672,6 +672,64 @@ body{
     overflow: hidden;
   }
 }
+
+/* ================= BATCH ADMIN PANEL (EDICIÓN POR LOTE) ================= */
+.admin-batch-panel {
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid var(--red);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 1300px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.admin-batch-panel select {
+  background: #222;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+.admin-batch-btn {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: 0.2s;
+}
+.admin-batch-btn:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.admin-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.admin-checkbox-container:hover {
+  background: rgba(255,255,255,0.2);
+}
+.admin-checkbox-container input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -710,6 +768,40 @@ body{
 <div id="mainApp">
   <div id="primeBanner" class="prime-banner" style="display:none;"></div>
 
+  <div id="adminBatchPanel" class="admin-batch-panel" style="display:none;">
+    <strong style="color:var(--red); font-size:14px;">🛠️ Edición por Lote (Página Actual):</strong>
+    <button class="admin-batch-btn" onclick="toggleSelectAll()">✅ Seleccionar Todos / Ninguno</button>
+    
+    <select id="batchConsoleSelect">
+      <option value="">-- Consola (Dejar intacto) --</option>
+      <option value="Switch">Switch</option>
+      <option value="PLAYSTATION">PLAYSTATION</option>
+      <option value="XBOX">XBOX</option>
+      <option value="WII">WII</option>
+      <option value="3DS">3DS</option>
+      <option value="NDS">NDS</option>
+      <option value="SD/USB">SD/USB</option>
+    </select>
+
+    <select id="batchSubcatSelect">
+      <option value="">-- Subcategoría (Dejar intacto) --</option>
+      <option value="Novedades">Novedades</option>
+      <option value="Consolas">Consolas</option>
+      <option value="Videojuegos">Videojuegos</option>
+      <option value="Tarjeta de Regalo">Tarjeta de Regalo</option>
+      <option value="Mandos-Perifericos">Mandos-Perifericos</option>
+      <option value="Fundas-Proteccion">Fundas-Proteccion</option>
+      <option value="Tarjeta SD">Tarjeta SD</option>
+      <option value="USB">USB</option>
+      <option value="Disco duro externo">Disco duro externo</option>
+      <option value="Adaptadores">Adaptadores</option>
+      <option value="Baterías">Baterías</option>
+      <option value="Ordenadores">Ordenadores</option>
+      <option value="Ninguno">Ninguno (Quitar Subcat)</option>
+    </select>
+
+    <button class="admin-batch-btn" style="background:var(--gold); color:black;" onclick="applyBatchEdit()">💾 Aplicar Cambios</button>
+  </div>
   <div class="subcategories-filter-wrapper">
     <div id="subcategoriesFilterRow" class="subcat-row" style="display:none;"></div>
     <div id="sizesGBRow" class="subcat-row" style="display:none;"></div>
@@ -803,6 +895,8 @@ let tamanoSeleccionado = 'ALL';
 let paginaActual = 1;
 const itemsPorPagina = 24; 
 
+let batchSelectAllToggle = false;
+
 const categories = [
   { id: 'Switch',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
   { id: 'PLAYSTATION', icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
@@ -820,6 +914,50 @@ const categoryJsonMap = {
   'SD/USB': 'sd_usb.json',
   '3DS_NDS': '3ds.json'
 };
+
+/* ================= LÓGICA DE EDICIÓN POR LOTE ================= */
+function toggleSelectAll() {
+  const checkboxes = document.querySelectorAll('.admin-batch-checkbox');
+  batchSelectAllToggle = !batchSelectAllToggle;
+  checkboxes.forEach(cb => {
+    cb.checked = batchSelectAllToggle;
+  });
+}
+
+function applyBatchEdit() {
+  const selectedConsole = document.getElementById('batchConsoleSelect').value;
+  const selectedSubcat = document.getElementById('batchSubcatSelect').value;
+  const checkedBoxes = document.querySelectorAll('.admin-batch-checkbox:checked');
+
+  if (checkedBoxes.length === 0) {
+    alert("❌ Error: Marca la casilla de al menos un producto para modificar.");
+    return;
+  }
+  
+  if (!selectedConsole && !selectedSubcat) {
+    alert("❌ Error: Debes elegir al menos una nueva Consola o Subcategoría en los desplegables.");
+    return;
+  }
+
+  if (confirm(`Estás a punto de modificar ${checkedBoxes.length} productos.\n¿Estás seguro?`)) {
+    checkedBoxes.forEach(cb => {
+      const product = allProducts.find(p => p.id === cb.dataset.id);
+      if (product) {
+        if (selectedConsole) product.console = [selectedConsole]; 
+        if (selectedSubcat) product.subcategory = selectedSubcat;
+      }
+    });
+
+    alert("✅ Cambios aplicados con éxito.");
+    
+    document.getElementById('batchConsoleSelect').value = "";
+    document.getElementById('batchSubcatSelect').value = "";
+    batchSelectAllToggle = false;
+
+    renderProducts(categoriaActual, document.getElementById('productSearch').value);
+    generarBarraSubcategoriasYCapacidades();
+  }
+}
 
 /* ================= TEMAS ================= */
 const paletaTemas = {
@@ -1032,7 +1170,6 @@ function generarBarraSubcategoriasYCapacidades() {
     });
 
     if (listaTamanos.length > 0) {
-      // Botón "Todos"
       const btnAllSize = document.createElement('button');
       btnAllSize.className = `subcat-filter-btn ${tamanoSeleccionado === 'ALL' ? 'active' : ''}`;
       btnAllSize.textContent = t.all + " (Capacidad)";
@@ -1044,7 +1181,6 @@ function generarBarraSubcategoriasYCapacidades() {
       };
       rowGB.appendChild(btnAllSize);
 
-      // Distribuir en filas
       listaTamanos.forEach(tam => {
         const btnSize = document.createElement('button');
         btnSize.className = `subcat-filter-btn ${tamanoSeleccionado === tam ? 'active' : ''}`;
@@ -1056,7 +1192,6 @@ function generarBarraSubcategoriasYCapacidades() {
           renderProducts(categoriaActual);
         };
 
-        // Lógica de separación: si tiene TB, a la fila 2 (TB), sino, fila 1 (GB)
         if (tam.includes('TB')) {
           rowTB.appendChild(btnSize);
         } else {
@@ -1194,6 +1329,10 @@ function createProductCard(item, container, isMini = false) {
     ).join('');
 
     adminTools.innerHTML = `
+      <label class="admin-checkbox-container" onclick="event.stopPropagation()">
+        <input type="checkbox" class="admin-batch-checkbox" data-id="${item.id}">
+        <span style="font-size:11px; font-weight:bold; color:var(--gold);">Seleccionar para edición en lote</span>
+      </label>
       <div class="admin-select-group">
         <label>Categorías (Ctrl+Click)</label>
         <select class="admin-select-multiple console-select" multiple size="3">
@@ -1428,7 +1567,10 @@ adminLockBtn.addEventListener('click', async () => {
         lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>`; 
         adminLockBtn.style.borderColor = "var(--gold)";
         adminLockBtn.style.opacity = "1"; 
-        saveJsonBtn.style.display = "flex"; 
+        saveJsonBtn.style.display = "flex";
+        
+        document.getElementById('adminBatchPanel').style.display = 'flex'; 
+        
         alert("OK!");
       } else {
         alert("https://amzn.to/4dUrbsh");
@@ -1440,6 +1582,9 @@ adminLockBtn.addEventListener('click', async () => {
     adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
     adminLockBtn.style.opacity = "0"; 
     saveJsonBtn.style.display = "none";
+    
+    document.getElementById('adminBatchPanel').style.display = 'none';
+    
     alert("Modo Administrador Desactivado.");
   }
   renderProducts(categoriaActual, document.getElementById('productSearch').value);
