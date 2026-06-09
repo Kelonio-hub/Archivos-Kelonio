@@ -7,6 +7,7 @@
 <link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
 
 <meta name="google-adsense-account" content="ca-pub-1331209775183503">
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1331209775183503" crossorigin="anonymous"></script>
 
 <style>
@@ -66,19 +67,45 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #subNowBtn{ background:var(--red); color:white; animation: pulseSub 1.5s infinite; }
 #subNowBtn:hover { filter: brightness(1.2); transform: scale(1.05); }
 
-/* ================= BANNER SORTEO (CARRUSEL) ================= */
-.sorteo-banner-container { width: 90%; max-width: 1400px; margin: 30px auto 10px auto; padding: 15px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; display: flex; flex-direction: column; gap: 10px; display: none; }
-.sorteo-banner-title { font-size: 1.1rem; font-weight: bold; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; padding-left: 8px; border-left: 3px solid var(--red); }
-.sorteo-carousel { width: 100%; overflow: hidden; position: relative; }
-.sorteo-carousel-track { display: flex; gap: 15px; transition: transform 0.5s ease-in-out; }
-.sorteo-item { min-width: calc(33.333% - 10px); background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; display: flex; align-items: center; gap: 15px; text-decoration: none; color: #fff; transition: transform 0.2s, border-color 0.2s; }
-.sorteo-item:hover { transform: translateY(-3px); border-color: var(--gold); background: rgba(255,204,0,0.1); }
-.sorteo-item img { width: 60px; height: 60px; object-fit: contain; border-radius: 6px; background: rgba(255,255,255,0.1); }
-.sorteo-item-info { display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
-.sorteo-item-title { font-size: 0.9rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.sorteo-item-button { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
-@media(max-width:900px){ .sorteo-item { min-width: calc(50% - 7.5px); } }
-@media(max-width:600px){ .sorteo-item { min-width: 100%; } }
+/* ================= MODAL SORTEO BIENVENIDA ================= */
+#welcome-modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.92); backdrop-filter: blur(10px);
+  z-index: 9999999; display: none; justify-content: center; align-items: center;
+}
+.welcome-modal-box {
+  background: var(--bg); border: 2px solid var(--accent); padding: 40px 30px;
+  border-radius: 20px; text-align: center; max-width: 900px; width: 95%;
+  box-shadow: 0 0 40px rgba(0, 170, 255, 0.4);
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.welcome-products {
+  display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 25px;
+}
+.welcome-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 15px; width: 240px; cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+.welcome-card:hover {
+  transform: translateY(-10px) scale(1.05); border-color: var(--gold);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.3);
+}
+.welcome-card img {
+  width: 100%; height: 160px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: rgba(0,0,0,0.2);
+}
+.welcome-card p {
+  color: white; font-size: 15px; font-weight: bold; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.welcome-footer-link {
+  display: block; margin-top: 30px; font-size: 15px; color: #ccc; text-decoration: none; transition: color 0.2s; cursor: pointer;
+}
+.welcome-footer-link:hover { color: var(--gold); text-decoration: underline; }
 
 /* ================= BOTÓN SUBIR ARRIBA ================= */
 #backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9999; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
@@ -196,45 +223,55 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     </div>
   </div>
 
-  <div class="sorteo-banner-container" id="sorteoBannerWrapper">
-    <div class="sorteo-banner-title" id="sorteoBannerTitle">Participa en el sorteo</div>
-    <div class="sorteo-carousel">
-      <div class="sorteo-carousel-track" id="sorteoCarouselTrack"></div>
-    </div>
-  </div>
-
   <div id="recentContainer"></div>
   <div id="rowsContainer"></div>
 </div>
 
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
+<div id="welcome-modal">
+  <div class="welcome-modal-box">
+    <h2 id="welcome-title" style="color: var(--gold); margin-bottom: 5px; font-size: 2rem;"></h2>
+    <div id="welcome-products-container" class="welcome-products">
+      </div>
+    <a href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html" target="_blank" id="welcome-footer-text" class="welcome-footer-link"></a>
+  </div>
+</div>
+
 <script>
 /* ================= TRANSLACIONES ================= */
 const translations = {
 en:{
-title:"Nintendo Files | La Presa", button:"Subscribe", download:"Download", watch:"Watch", search:"Search files...", products:"Products", favorites:"Favorites", noFavorites:"No favorites added yet.", recent: "Recently Viewed", unlockTitle: "Unlock Download", unlockDesc: "Support the channel to keep maintaining<br>all files and updates ❤️", joinBtn: "Join (Membership)", waitingTitle: "Opening YouTube...", waitingDesc: "Please wait a moment while verifying in the background ❤️", readyTitle: "Download Ready!", readyDesc: "Thank you for your support. Your file is unlocked.", readyBtn: "Download File", sorteoTitle: "Enter the giveaway!"
+title:"Nintendo Files | La Presa", button:"Subscribe", download:"Download", watch:"Watch", search:"Search files...", products:"Products", favorites:"Favorites", noFavorites:"No favorites added yet.", recent: "Recently Viewed", unlockTitle: "Unlock Download", unlockDesc: "Support the channel to keep maintaining<br>all files and updates ❤️", subBtn: "Subscribe", joinBtn: "Join (Membership)", waitingTitle: "Opening YouTube...", waitingDesc: "Please wait a moment while verifying in the background ❤️", readyTitle: "Download Ready!", readyDesc: "Thank you for your support. Your file is unlocked.", readyBtn: "Download File",
+welcomeTitle: "Choose a product to enter the giveaway!", welcomeFooter: "Visit these and other items in our Products section!"
 },
 es:{
-title:"Archivos Nintendo | La Presa", button:"Suscribirse", download:"Descargar", watch:"Ver", search:"Buscar archivos...", products:"Productos", favorites:"Favoritos", noFavorites:"Aún no has añadido favoritos.", recent: "Vistos Recientemente", unlockTitle: "Desbloquea la descarga", unlockDesc: "Apoya el canal para seguir manteniendo<br>todos los archivos y actualizaciones ❤️", joinBtn: "Unirme (Membresía)", waitingTitle: "Abriendo YouTube...", waitingDesc: "Por favor, espera un momento mientras se verifica en segundo plano ❤️", readyTitle: "¡Descarga lista!", readyDesc: "Gracias por tu apoyo. Tu archivo está desbloqueado.", readyBtn: "Descargar Archivo", sorteoTitle: "¡Participa en el sorteo!"
+title:"Archivos Nintendo | La Presa", button:"Suscribirse", download:"Descargar", watch:"Ver", search:"Buscar archivos...", products:"Productos", favorites:"Favoritos", noFavorites:"Aún no has añadido favoritos.", recent: "Vistos Recientemente", unlockTitle: "Desbloquea la descarga", unlockDesc: "Apoya el canal para seguir manteniendo<br>todos los archivos y actualizaciones ❤️", subBtn: "Suscribirme", joinBtn: "Unirme (Membresía)", waitingTitle: "Abriendo YouTube...", waitingDesc: "Por favor, espera un momento mientras se verifica en segundo plano ❤️", readyTitle: "¡Descarga lista!", readyDesc: "Gracias por tu apoyo. Tu archivo está desbloqueado.", readyBtn: "Descargar Archivo",
+welcomeTitle: "¡Elige un producto para entrar en el sorteo!", welcomeFooter: "¡Visita estos y otros artículos en nuestra sección de Productos!"
 },
 fr:{
-title:"Fichiers Nintendo | La Presa", button:"S'abonner", download:"Télécharger", watch:"Voir", search:"Rechercher des fichiers...", products:"Produits", favorites:"Favoris", noFavorites:"Aucun favori ajouté pour le moment.", recent: "Vus Récemment", unlockTitle: "Débloquer le téléchargement", unlockDesc: "Soutenez la chaîne pour continuer à maintenir<br>tous les fichiers et mises à jour ❤️", joinBtn: "Rejoindre (Membre)", waitingTitle: "Ouverture de YouTube...", waitingDesc: "Veuillez patienter un moment pendant la vérification en arrière-plan ❤️", readyTitle: "Téléchargement prêt !", readyDesc: "Merci pour votre soutien. Votre fichier es débloqué.", readyBtn: "Télécharger le fichier", sorteoTitle: "Participez au tirage au sort !"
+title:"Fichiers Nintendo | La Presa", button:"S'abonner", download:"Télécharger", watch:"Voir", search:"Rechercher des fichiers...", products:"Produits", favorites:"Favoris", noFavorites:"Aucun favori ajouté pour le moment.", recent: "Vus Récemment", unlockTitle: "Débloquer le téléchargement", unlockDesc: "Soutenez la chaîne pour continuer à maintenir<br>tous les fichiers et mises à jour ❤️", subBtn: "S'abonner", joinBtn: "Rejoindre (Membre)", waitingTitle: "Ouverture de YouTube...", waitingDesc: "Veuillez patienter un moment pendant la vérification en arrière-plan ❤️", readyTitle: "Téléchargement prêt !", readyDesc: "Merci pour votre soutien. Votre fichier es débloqué.", readyBtn: "Télécharger le fichier",
+welcomeTitle: "Choisissez un produit pour participer au tirage au sort !", welcomeFooter: "Visitez ces articles et bien d'autres dans notre section Produits !"
 },
 it:{
-title:"File Nintendo | La Presa", button:"Iscriviti", download:"Scarica", watch:"Guarda", search:"Cerca file...", products:"Prodotti", favorites:"Preferiti", noFavorites:"Ancora nessun preferito aggiunto.", recent: "Visti di Recente", unlockTitle: "Sblocca il download", unlockDesc: "Supporta il canale per continuare a mantenere<br>tutti i file e gli aggiornamenti ❤️", joinBtn: "Unisciti (Abbonati)", waitingTitle: "Apertura di YouTube...", waitingDesc: "Si prega di attendere un momento durante la verifica in background ❤️", readyTitle: "Download pronto!", readyDesc: "Grazie per il tuo supporto. Il tuo file è sbloccato.", readyBtn: "Scarica il file", sorteoTitle: "Partecipa al sorteggio!"
+title:"File Nintendo | La Presa", button:"Iscriviti", download:"Scarica", watch:"Guarda", search:"Cerca file...", products:"Prodotti", favorites:"Preferiti", noFavorites:"Ancora nessun preferito aggiunto.", recent: "Visti di Recente", unlockTitle: "Sblocca il download", unlockDesc: "Supporta il canale per continuare a mantenere<br>tutti i file e gli aggiornamenti ❤️", subBtn: "Iscriviti", joinBtn: "Unisciti (Abbonati)", waitingTitle: "Apertura di YouTube...", waitingDesc: "Si prega di attendere un momento durante la verifica in background ❤️", readyTitle: "Download pronto!", readyDesc: "Grazie per il tuo supporto. Il tuo file è sbloccato.", readyBtn: "Scarica il file",
+welcomeTitle: "Scegli un prodotto per partecipare all'estrazione!", welcomeFooter: "Visita questi e altri articoli nella nostra sezione Prodotti!"
 },
 pt:{
-title:"Arquivos Nintendo | La Presa", button:"Inscrever-se", download:"Baixar", watch:"Assistir", search:"Buscar arquivos...", products:"Produtos", favorites:"Favoritos", noFavorites:"Nenhum favorito adicionado ainda.", recent: "Vistos Recentemente", unlockTitle: "Desbloquear o download", unlockDesc: "Apoie o canal para continuar mantendo<br>todos os arquivos e atualizações ❤️", joinBtn: "Seja Membro", waitingTitle: "Abrindo o YouTube...", waitingDesc: "Por favor, aguarde um momento enquanto verifica em segundo plano ❤️", readyTitle: "Download pronto!", readyDesc: "Obrigado pelo seu apoio. Seu arquivo está desbloqueado.", readyBtn: "Baixar Arquivo", sorteoTitle: "Participe do sorteio!"
+title:"Arquivos Nintendo | La Presa", button:"Inscrever-se", download:"Baixar", watch:"Assistir", search:"Buscar arquivos...", products:"Produtos", favorites:"Favoritos", noFavorites:"Nenhum favorito adicionado ainda.", recent: "Vistos Recentemente", unlockTitle: "Desbloquear o download", unlockDesc: "Apoie o canal para continuar mantendo<br>todos os arquivos e atualizações ❤️", subBtn: "Inscrever-se", joinBtn: "Seja Membro", waitingTitle: "Abrindo o YouTube...", waitingDesc: "Por favor, aguarde um momento enquanto verifica em segundo plano ❤️", readyTitle: "Download pronto!", readyDesc: "Obrigado pelo seu apoyo. Seu arquivo está desbloqueado.", readyBtn: "Baixar Arquivo",
+welcomeTitle: "Escolha um produto para entrar no sorteio!", welcomeFooter: "Visite estes e outros itens em nossa seção de Produtos!"
 },
 de:{
-title:"Nintendo-Dateien | La Presa", button:"Abonnieren", download:"Download", watch:"Ansehen", search:"Dateien suchen...", products:"Produkte", favorites:"Favoriten", noFavorites:"Noch keine Favoriten hinzugefügt.", recent: "Zuletzt Angesehen", unlockTitle: "Download entsperren", unlockDesc: "Unterstütze den Kanal, um alle Dateien<br>und Updates aufrechtzuerhalten ❤️", joinBtn: "Mitglied werden", waitingTitle: "Öffne YouTube...", waitingDesc: "Bitte warten Sie einen Moment, während im Hintergrund überprüft wird ❤️", readyTitle: "Download bereit!", readyDesc: "Danke für deine Unterstützung. Deine Datei ist entsperrt.", readyBtn: "Datei herunterladen", sorteoTitle: "Nimm am Gewinnspiel teil!"
+title:"Nintendo-Dateien | La Presa", button:"Abonnieren", download:"Download", watch:"Ansehen", search:"Dateien suchen...", products:"Produkte", favorites:"Favoriten", noFavorites:"Noch keine Favoriten hinzugefügt.", recent: "Zuletzt Angesehen", unlockTitle: "Download entsperren", unlockDesc: "Unterstütze den Kanal, um alle Dateien<br>und Updates aufrechtzuerhalten ❤️", subBtn: "Abonnieren", joinBtn: "Mitglied werden", waitingTitle: "Öffne YouTube...", waitingDesc: "Bitte warten Sie einen Moment, während im Hintergrund überprüft wird ❤️", readyTitle: "Download bereit!", readyDesc: "Danke für deine Unterstützung. Deine Datei ist entsperrt.", readyBtn: "Datei herunterladen",
+welcomeTitle: "Wähle ein Produkt, um am Gewinnspiel teilzunehmen!", welcomeFooter: "Besuchen Sie diese und andere Artikel in unserer Produkte-Sektion!"
 },
 ja:{
-title:"Nintendo ファイル | La Presa", button:"登録する", download:"ダウンロード", watch:"見る", search:"ファイルを検索...", products:"製品", favorites:"お気に入り", noFavorites:"お気に入りはまだ追加されていません。", recent: "最近見た file", unlockTitle: "ダウンロードのロックを解除", unlockDesc: "すべてのファイルと更新を維持するために<br>チャンネルをサポートしてください ❤️", joinBtn: "メンバーになる", waitingTitle: "YouTubeを開いています...", waitingDesc: "バックグラウンドで確認するまでしばらくお待ちください ❤️", readyTitle: "ダウンロード準備完了！", readyDesc: "サポートありがとうございます。ファイルのロックが解除されました。", readyBtn: "ファイルをダウンロード", sorteoTitle: "プレゼント抽選に参加する！"
+title:"Nintendo ファイル | La Presa", button:"登録する", download:"ダウンロード", watch:"見る", search:"ファイルを検索...", products:"製品", favorites:"お気に入り", noFavorites:"お気に入りはまだ追加されていません。", recent: "最近見た file", unlockTitle: "ダウンロードのロックを解除", unlockDesc: "すべてのファイルと更新を維持するために<br>チャンネルをサポートしてください ❤️", subBtn: "登録する", joinBtn: "メンバーになる", waitingTitle: "YouTubeを開いています...", waitingDesc: "バックグラウンドで確認するまでしばらくお待ちください ❤️", readyTitle: "ダウンロード準備完了！", readyDesc: "サポートありがとうございます。ファイルのロックが解除されました。", readyBtn: "ファイルをダウンロード",
+welcomeTitle: "プレゼント企画に参加する製品を選んでください！", welcomeFooter: "製品セクションでこれらや他のアイテムをご覧ください！"
 },
 ko:{
-title:"Nintendo 파일 | La Presa", button:"구독하기", download:"다운로드", watch:"시청하기", search:"파일 검색...", products:"제품", favorites:"즐겨찾기", noFavorites:"추가된 즐겨찾기가 없습니다.", recent: "최근 본 파일", unlockTitle: "다운로드 잠금 해제", unlockDesc: "모든 파일과 업데이트를 유지할 수 있도록<br>채널을 지원해 주세요 ❤️", joinBtn: "가입하기 (멤버십)", waitingTitle: "YouTube 여는 중...", waitingDesc: "백그라운드에서 확인하는 동안 잠시 기다려 주십시오 ❤️", readyTitle: "다운로드 준비 완료!", readyDesc: "지원해 주셔서 감사합니다. 파일 잠금이 해제되었습니다.", readyBtn: "파일 다운로드", sorteoTitle: "경품 추첨 참여하기!"
+title:"Nintendo 파일 | La Presa", button:"구독하기", download:"다운로드", watch:"시청하기", search:"파일 검색...", products:"제품", favorites:"즐겨찾기", noFavorites:"추가된 즐겨찾기가 없습니다.", recent: "최근 본 파일", unlockTitle: "다운로드 잠금 해제", unlockDesc: "모든 파일과 업데이트를 유지할 수 있도록<br>채널을 지원해 주세요 ❤️", subBtn: "구독하기", joinBtn: "가입하기 (멤버십)", waitingTitle: "YouTube 여는 중...", waitingDesc: "백그라운드에서 확인하는 동안 잠시 기다려 주십시오 ❤️", readyTitle: "다운로드 준비 완료!", readyDesc: "지원해 주셔서 감사합니다. 파일 잠금이 해제되었습니다.", readyBtn: "파일 다운로드",
+welcomeTitle: "경품 행사에 참여할 제품을 선택하세요!", welcomeFooter: "제품 섹션에서 이 항목과 다른 항목을 방문하십시오!"
 }
 };
 
@@ -320,9 +357,6 @@ function updateLanguage(){
   document.title = t.title;
   fileSearch.placeholder = t.search;
   document.getElementById('heroBtn').textContent = t.download;
-  
-  // Update banner title
-  document.getElementById('sorteoBannerTitle').textContent = t.sorteoTitle || "Participa en el sorteo";
 }
 
 function updateSuggestions(){
@@ -560,21 +594,34 @@ fileSearch.addEventListener('input',()=>{
   Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item=>{ if((item.label?.[idiomaActual] || item.label?.es || '').toLowerCase().includes(query)){ createCard(item, catId, results, false); } }); });
 });
 
-/* ================= LÓGICA DE CONTROL DE TIEMPO (ESTADO ÚNICO) ================= */
+/* ================= LÓGICA DE CONTROL DE TIEMPO Y CICLOS ================= */
 function checkAccessValidity() {
-  const accessExpiry = localStorage.getItem('downloadAccessExpiry_Single');
-  if (accessExpiry && Date.now() < parseInt(accessExpiry)) {
-    return true; 
+  const cycleState = localStorage.getItem('downloadCycleState') || '0';
+  
+  if (cycleState === '2') {
+    const accessGrantedTime = localStorage.getItem('accessGrantedTime');
+    
+    if (accessGrantedTime && (Date.now() - parseInt(accessGrantedTime) < (3 * 60 * 60 * 1000))) {
+      return true; 
+    }
+    
+    localStorage.setItem('downloadCycleState', '0');
+    localStorage.removeItem('accessGrantedTime');
   }
   return false; 
 }
 
 function showDownloadPopup(item, catName){
   const t = translations[idiomaActual];
+  const cycleState = localStorage.getItem('downloadCycleState') || '0';
   
-  // Enlace fijo a la membresía del canal
-  let targetUrl = 'https://www.youtube.com/@Kelonio3DS/join'; 
-  let btnText = t.joinBtn;
+  let targetUrl = 'https://www.youtube.com/@Kelonio3DS?sub_confirmation=1';
+  let btnText = t.subBtn;
+
+  if (cycleState === '1') {
+    targetUrl = 'https://www.youtube.com/@Kelonio3DS/join';
+    btnText = t.joinBtn || "Unirme (Membresía)";
+  }
 
   const popup = document.createElement('div');
   popup.innerHTML = `<div id="downloadGate"><div class="download-box"><h2>${t.unlockTitle}</h2><p>${t.unlockDesc}</p><button id="subNowBtn">${btnText}</button></div></div>`;
@@ -587,9 +634,10 @@ function showDownloadPopup(item, catName){
     window.open(targetUrl, '_blank');
 
     const box = popup.querySelector('.download-box');
+    // Ahora solo muestra el título y la descripción, quitando el temporizador de texto visible.
     box.innerHTML = `<h2>${t.waitingTitle}</h2><p>${t.waitingDesc}</p>`;
 
-    // Espera interna en segundo plano (60 segundos)
+    // El retraso de 60 segundos sigue funcionando de fondo silenciosamente sin alertar al usuario
     setTimeout(() => {
       registerRecentClick(item, catName);
       
@@ -598,22 +646,44 @@ function showDownloadPopup(item, catName){
       document.getElementById('finalDownloadBtn').onclick = () => { 
         window.open(item.url, '_blank', 'noopener,noreferrer'); 
         
-        // Otorga 3 horas de descargas libres
-        const expiryTime = Date.now() + (3 * 60 * 60 * 1000);
-        localStorage.setItem('downloadAccessExpiry_Single', expiryTime.toString());
+        if (cycleState === '0') {
+          localStorage.setItem('downloadCycleState', '1');
+        } else if (cycleState === '1') {
+          localStorage.setItem('downloadCycleState', '2');
+          localStorage.setItem('accessGrantedTime', Date.now().toString());
+        }
         
         popup.remove(); 
       };
-    }, 60000); 
+    }, 60000); // 1 minuto de espera interna en segundo plano
   };
 }
 
-/* ================= NUEVO MOTOR DEL BANNER DE SORTEO AUTOMÁTICO ================= */
-async function inicializarBannerSorteo() {
+/* ================= LÓGICA SORTEO / BIENVENIDA AUTOMÁTICA ================= */
+async function iniciarSorteoBienvenida() {
+  const COOLDOWN_HOURS = 24;
+  const lastTime = localStorage.getItem('lastGiveawayClick');
+  
+  if (lastTime) {
+    const diffHours = (Date.now() - parseInt(lastTime)) / (1000 * 60 * 60);
+    if (diffHours < COOLDOWN_HOURS) return; 
+  }
+
+  const titleEl = document.getElementById('welcome-title');
+  const footerEl = document.getElementById('welcome-footer-text');
+  
+  if(titleEl && translations[idiomaActual] && translations[idiomaActual].welcomeTitle) {
+      titleEl.textContent = translations[idiomaActual].welcomeTitle;
+  }
+  if(footerEl && translations[idiomaActual] && translations[idiomaActual].welcomeFooter) {
+      footerEl.textContent = translations[idiomaActual].welcomeFooter;
+  }
+
+  // ENLACES ABSOLUTOS: Forzamos la descarga desde la raíz en bruto de GitHub
   const baseURL = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
   const catFiles = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
   
-  let todosLosProductos = [];
+  let allProducts = [];
 
   for (let file of catFiles) {
     try {
@@ -621,81 +691,64 @@ async function inicializarBannerSorteo() {
       if (res.ok) {
         let data = await res.json();
         let items = Array.isArray(data) ? data : Object.values(data);
-        todosLosProductos = todosLosProductos.concat(items);
+        allProducts = allProducts.concat(items);
+      } else {
+        console.error("No se pudo leer el archivo: " + baseURL + file);
       }
-    } catch (e) { console.error("Error cargando productos para sorteo: " + file, e); }
+    } catch (e) { console.error("Error de conexión al cargar " + file, e); }
   }
 
-  if (todosLosProductos.length === 0) return;
+  if (allProducts.length < 3) return;
 
-  // Mezclar aleatoriamente (Shuffle)
-  todosLosProductos.sort(() => Math.random() - 0.5);
+  allProducts.sort(() => 0.5 - Math.random());
+  const selectedProducts = allProducts.slice(0, 3);
 
-  const track = document.getElementById('sorteoCarouselTrack');
-  const bannerContainer = document.getElementById('sorteoBannerWrapper');
-  
-  if (!track || !bannerContainer) return;
-  track.innerHTML = '';
-  bannerContainer.style.display = 'flex'; // Mostrar el banner ahora que hay datos
+  const container = document.getElementById('welcome-products-container');
+  if (!container) return;
+  container.innerHTML = ''; 
 
-  todosLosProductos.forEach(prod => {
-    // Manejo de títulos
+  selectedProducts.forEach(p => {
+    // 1. Manejo seguro del Título
     let title = 'Producto';
-    if (prod.label) {
-        if (typeof prod.label === 'string') title = prod.label;
-        else title = prod.label[idiomaActual] || prod.label['es'] || prod.label['en'] || 'Producto';
+    if (p.label) {
+        if (typeof p.label === 'string') title = p.label;
+        else title = p.label[idiomaActual] || p.label['es'] || p.label['en'] || 'Producto';
     }
 
-    // Manejo y filtrado de la URL
+    // 2. Manejo seguro de la URL
     let url = '#';
-    if (prod.url) {
-        if (typeof prod.url === 'string') url = prod.url;
-        else url = prod.url[idiomaActual] || prod.url['es'] || prod.url['en'] || '#';
+    if (p.url) {
+        if (typeof p.url === 'string') url = p.url;
+        else url = p.url[idiomaActual] || p.url['es'] || p.url['en'] || '#';
     }
+    
     if(url === '#') return; 
 
-    // Inyectar etiqueta de afiliado automáticamente
+    // 3. Respetar la etiqueta del JSON (kelonio-21) o añadirla si falta
     if(!url.includes('tag=')) {
       url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21';
     }
 
-    let imgSrc = prod.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+    // 4. Imagen segura
+    let imgSrc = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
 
-    // Inyección en el HTML
-    const itemHTML = `
-      <a class="sorteo-item" href="${url}" target="_blank" rel="noopener noreferrer">
-        <img src="${imgSrc}" alt="${title}">
-        <div class="sorteo-item-info">
-          <div class="sorteo-item-title">${title}</div>
-          <div class="sorteo-item-button">Amazon →</div>
-        </div>
-      </a>
+    // 5. Inyección
+    container.innerHTML += `
+      <div class="welcome-card" onclick="claimGiveaway('${url}')">
+        <img src="${imgSrc}" alt="Sorteo">
+        <p>${title}</p>
+      </div>
     `;
-    track.innerHTML += itemHTML;
   });
 
-  // Lógica de rotación automática
-  let currentIndex = 0;
-  
-  setInterval(() => {
-    const items = track.querySelectorAll('.sorteo-item');
-    const itemsVisibles = window.innerWidth <= 600 ? 1 : (window.innerWidth <= 900 ? 2 : 3);
-    
-    if (items.length <= itemsVisibles) return;
-    
-    currentIndex++;
-    if (currentIndex > items.length - itemsVisibles) {
-      currentIndex = 0; // Reinicia al inicio
-      track.style.transition = 'none';
-      track.style.transform = `translateX(0px)`;
-      // Forzar reflujo rápido para aplicar transición en la siguiente rotación
-      setTimeout(() => { track.style.transition = 'transform 0.5s ease-in-out'; }, 50);
-      return;
-    }
+  document.getElementById('welcome-modal').style.display = 'flex';
+}
 
-    const itemWidth = items[0].offsetWidth + 15; // ancho real + gap (15px)
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-  }, 4000); // Rotación cada 4 segundos
+function claimGiveaway(url) {
+  // Solo cuando haga click aquí se cerrará el modal y registrará el tiempo
+  localStorage.setItem('lastGiveawayClick', Date.now().toString());
+  document.getElementById('welcome-modal').style.display = 'none';
+  window.open(url, '_blank');
 }
 
 /* ================= NUEVO SISTEMA DE NOTIFICACIONES BADGE ================= */
@@ -739,12 +792,11 @@ window.onload = async()=>{
 
   document.getElementById('mainApp').style.display = 'block';
   
-  // Carga inicial de contenido principal
   await loadContent();
   verificarNotificacionesRadar();
   
-  // Inicialización del nuevo banner de sorteos
-  inicializarBannerSorteo();
+  // Ejecuta el sorteo un momento después de cargar
+  setTimeout(iniciarSorteoBienvenida, 500);
 };
 </script>
 </body>
