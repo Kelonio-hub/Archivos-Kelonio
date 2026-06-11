@@ -558,7 +558,7 @@
     "url": "https://www.amazon.es/dp/B07WKNQ8JT?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -602,7 +602,7 @@
     "url": "https://www.amazon.es/dp/B01IU4B6I2?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -666,7 +666,7 @@
     "url": "https://www.amazon.es/dp/B0F2JCL3NZ?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -710,7 +710,7 @@
     "url": "https://www.amazon.es/dp/B08231JQN1?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-10 02:00",
@@ -746,7 +746,7 @@
     "url": "https://www.amazon.es/dp/B0BLCX83YK?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -810,7 +810,7 @@
     "url": "https://www.amazon.es/dp/B0F3HFQ5SY?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -867,7 +867,7 @@
     "url": "https://www.amazon.es/dp/B0CXDYCKVS?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -999,7 +999,7 @@
     "url": "https://www.amazon.es/dp/B01N7RLGIJ?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-07 21:34",
@@ -1062,16 +1062,20 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでEA SPORTS FC 25 Standard Edition Switch / Switch 2を最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 EA SPORTS FC 25 Standard Edition Switch / Switch 2을(를) 구매하세요."
     },
-    "price": "17,59 €",
+    "price": "15,83 €",
     "img": "https://m.media-amazon.com/images/I/71e2MSe9EqL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0D98BJ7SH?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
         "price": "19,54 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "17,59 €"
       }
     ],
     "status": "active"
@@ -1187,7 +1191,7 @@
     "url": "https://www.amazon.es/dp/B07D1L22SD?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -1218,11 +1222,19 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでNintendo Switch - Consola color Azul Neón/Rojo Neóを最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Nintendo Switch - Consola color Azul Neón/Rojo Neó을(를) 구매하세요."
     },
-    "price": "249,95 €",
+    "price": "Ver precio",
     "img": "https://m.media-amazon.com/images/I/61kA9ep9taL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B01N5OPMJW?tag=kelonio-21",
     "subcategory": "Consolas",
-    "size": "Ninguno"
+    "size": "Ninguno",
+    "last_seen": "2026-06-11 02:00",
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "249,95 €"
+      }
+    ],
+    "status": "active"
   },
   {
     "console": "SWITCH",
@@ -1251,7 +1263,7 @@
     "url": "https://www.amazon.es/dp/B07P6QCPS8?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -1343,7 +1355,7 @@
     "url": "https://www.amazon.es/dp/B0DGGVX1GR?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-10 02:00",
@@ -1407,7 +1419,7 @@
     "url": "https://www.amazon.es/dp/B0DJ2PLH9G?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1464,7 +1476,7 @@
     "url": "https://www.amazon.es/dp/B07CJWS83Y?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1579,7 +1591,7 @@
     "url": "https://www.amazon.es/dp/B0F2J4SYJ2?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1608,7 +1620,7 @@
     "url": "https://www.amazon.es/dp/B0GLHNN1NK?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1693,7 +1705,7 @@
     "url": "https://www.amazon.es/dp/B01MZ973SY?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -1785,7 +1797,7 @@
     "url": "https://www.amazon.es/dp/B0FQWBD5MT?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1809,12 +1821,12 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでLeyendas Pokémon Z‑A - Switch 1を最安値で入手してください。\n66,99€",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Leyendas Pokémon Z‑A - Switch 1을(를) 구매하세요.\n66,99€"
     },
-    "price": "29,90 €",
+    "price": "36,95 €",
     "img": "https://m.media-amazon.com/images/I/81ijYM3H+OL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0D42BGBV3?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -1827,6 +1839,10 @@
       {
         "date": "2026-06-10 02:00",
         "price": "66,99€"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "29,90 €"
       }
     ],
     "status": "active"
@@ -1894,7 +1910,7 @@
     "url": "https://www.amazon.es/dp/B0D7D9BN9J?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1923,7 +1939,7 @@
     "url": "https://www.amazon.es/dp/B071H4KD7W?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -1952,7 +1968,7 @@
     "url": "https://www.amazon.es/dp/B0DB2LQQMS?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2062,16 +2078,20 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでNintendo Switch (versión OLED) Edición Limitada Thを最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Nintendo Switch (versión OLED) Edición Limitada Th을(를) 구매하세요."
     },
-    "price": "399,98 €",
+    "price": "399,99 €",
     "img": "https://m.media-amazon.com/images/I/61hs1+3IURL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0BZT51WWW?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
         "price": "434,00 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "399,98 €"
       }
     ],
     "status": "active"
@@ -2103,7 +2123,7 @@
     "url": "https://www.amazon.es/dp/B0DHH7X49B?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -2196,7 +2216,7 @@
     "url": "https://www.amazon.es/dp/B07HCVN3D1?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-08 02:34"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2253,7 +2273,7 @@
     "url": "https://www.amazon.es/dp/B0F2N91DQ8?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -2293,7 +2313,7 @@
     "url": "https://www.amazon.es/dp/B0F3GWXLTS?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -2365,7 +2385,7 @@
     "url": "https://www.amazon.es/dp/B098RKWHHZ?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-10 02:00",
@@ -2401,7 +2421,7 @@
     "url": "https://www.amazon.es/dp/B07BDYT58L?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2430,7 +2450,7 @@
     "url": "https://www.amazon.es/dp/B0D6RDDPQ3?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2459,7 +2479,7 @@
     "url": "https://www.amazon.es/dp/B098TVDYZ3?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2516,7 +2536,7 @@
     "url": "https://www.amazon.es/dp/B07HCRY5L9?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -2636,7 +2656,7 @@
     "url": "https://www.amazon.es/dp/B0D7J3767P?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -2665,7 +2685,7 @@
     "url": "https://www.amazon.es/dp/B085SKC29S?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -2761,7 +2781,7 @@
     "url": "https://www.amazon.es/dp/B0DKK3W82F?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -2821,16 +2841,20 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでETPARK 2 PCS Mando Switch Inalámbrico, Mandos Switを最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 ETPARK 2 PCS Mando Switch Inalámbrico, Mandos Swit을(를) 구매하세요."
     },
-    "price": "33,98 €",
+    "price": "33,49 €",
     "img": "https://m.media-amazon.com/images/I/71og8FhOFEL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B0F3WV4WT8?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-10 02:00",
         "price": "33,99 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "33,98 €"
       }
     ],
     "status": "active"
@@ -2919,7 +2943,7 @@
     "url": "https://www.amazon.es/dp/B0C8YWGST8?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -3007,12 +3031,12 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでNintendo Switch Liteを最安値で入手してください。\n24,99 €",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Nintendo Switch Lite을(를) 구매하세요.\n24,99 €"
     },
-    "price": "24,99 €",
+    "price": "Ver precio",
     "img": "https://m.media-amazon.com/images/I/61A+2LMQJ8L._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B09BC974S5?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -3021,6 +3045,10 @@
       {
         "price": 24.99,
         "timestamp": 1780923282
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "24,99 €"
       }
     ],
     "status": "active"
@@ -3228,7 +3256,7 @@
     "url": "https://www.amazon.es/dp/B0D31L7CN2?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -3264,7 +3292,7 @@
     "url": "https://www.amazon.es/dp/B01N4ND1T2?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3293,7 +3321,7 @@
     "url": "https://www.amazon.es/dp/B0F3JR79YY?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -3396,12 +3424,19 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでThe Disney Afternoon Collection - Switch 2を最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 The Disney Afternoon Collection - Switch 2을(를) 구매하세요."
     },
-    "price": "39,90 €",
+    "price": "40,16 €",
     "img": "https://m.media-amazon.com/images/I/81sXPbc5w6L._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0GKHD3X6Z?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00",
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "39,90 €"
+      }
+    ],
+    "status": "active"
   },
   {
     "console": "SWITCH",
@@ -3562,7 +3597,7 @@
     "url": "https://www.amazon.es/dp/B0F2N6V24N?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -3602,7 +3637,7 @@
     "url": "https://www.amazon.es/dp/B0DS1SBCRH?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3659,7 +3694,7 @@
     "url": "https://www.amazon.es/dp/B01N7RIIR2?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3752,7 +3787,7 @@
     "url": "https://www.amazon.es/dp/B09SBYHZJB?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3781,7 +3816,7 @@
     "url": "https://www.amazon.es/dp/B07BF1SNJR?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3810,7 +3845,7 @@
     "url": "https://www.amazon.es/dp/B09S4R3WT1?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -3874,7 +3909,7 @@
     "url": "https://www.amazon.es/dp/B076HT7KL3?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -3903,7 +3938,7 @@
     "url": "https://www.amazon.es/dp/B0GJTJQ8V9?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -3979,7 +4014,7 @@
     "url": "https://www.amazon.es/dp/B0FYHR3MYZ?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4008,7 +4043,7 @@
     "url": "https://www.amazon.es/dp/B09GWPYXVH?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -4100,7 +4135,7 @@
     "url": "https://www.amazon.es/dp/B08WR7WH4R?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4330,16 +4365,20 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでVideojuego para Switch Ubisoft Mario+Rabbids Sparkを最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Videojuego para Switch Ubisoft Mario+Rabbids Spark을(를) 구매하세요."
     },
-    "price": "29,55 €",
+    "price": "29,68 €",
     "img": "https://m.media-amazon.com/images/I/81zgWwSnVfL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0977RRHJG?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
         "price": "29,42 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "29,55 €"
       }
     ],
     "status": "active"
@@ -4499,7 +4538,7 @@
     "url": "https://www.amazon.es/dp/B0FNCH477M?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4592,7 +4631,7 @@
     "url": "https://www.amazon.es/dp/B07DPR5PFX?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -4636,7 +4675,7 @@
     "url": "https://www.amazon.es/dp/B07YRNFG5Q?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4665,7 +4704,7 @@
     "url": "https://www.amazon.es/dp/B0CH1NNNG5?tag=kelonio-21",
     "subcategory": "Consolas",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -4766,7 +4805,7 @@
     "url": "https://www.amazon.es/dp/B0C6YD9S1P?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4935,7 +4974,7 @@
     "url": "https://www.amazon.es/dp/B09BBWTPP2?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -4964,7 +5003,7 @@
     "url": "https://www.amazon.es/dp/B0GFPN1YZP?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 12:34",
@@ -5065,7 +5104,7 @@
     "url": "https://www.amazon.es/dp/B0H3P88ZNY?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -5273,7 +5312,7 @@
     "url": "https://www.amazon.es/dp/B0F7RNNYZY?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -5564,7 +5603,7 @@
     "url": "https://www.amazon.es/dp/B0DS1S2Z7L?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -5649,7 +5688,7 @@
     "url": "https://www.amazon.es/dp/B0CXTMC41C?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -5714,7 +5753,7 @@
     "url": "https://www.amazon.es/dp/B0F8WRHMGT?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -6246,12 +6285,12 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでMySims: Colección Sofá y Mantita Switch / Switch 2を最安値で入手してください。\n26,69€",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 MySims: Colección Sofá y Mantita Switch / Switch 2을(를) 구매하세요.\n26,69€"
     },
-    "price": "26,69€",
+    "price": "23,99 €",
     "img": "https://m.media-amazon.com/images/I/71c8OaXidfL._AC_SY445_.jpg",
     "url": "https://www.amazon.es/dp/B0DFD3S5LM?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -6260,6 +6299,10 @@
       {
         "price": 26.69,
         "timestamp": 1780923306
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "26,69€"
       }
     ],
     "status": "active"
@@ -6431,7 +6474,7 @@
     "url": "https://www.amazon.es/dp/B09ZY7PX53?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -6483,12 +6526,19 @@
       "ja": "アフィリエイトリンクを使用して、AmazonでDragon Quest: Treasures (Switch)を最安値で入手してください。",
       "ko": "제휴 링크를 통해 Amazon에서 가장 좋은 가격에 Dragon Quest: Treasures (Switch)을(를) 구매하세요."
     },
-    "price": "16,49 €",
+    "price": "15,75 €",
     "img": "https://m.media-amazon.com/images/I/81qwetw2UML._AC_SY355_.jpg",
     "url": "https://www.amazon.es/dp/B0B916X8RH?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00",
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "16,49 €"
+      }
+    ],
+    "status": "active"
   },
   {
     "console": "SWITCH",
@@ -6639,7 +6689,7 @@
     "url": "https://www.amazon.es/dp/B08LLN1B47?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -6735,7 +6785,7 @@
     "url": "https://www.amazon.es/dp/B0C6F6RYH4?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-07 21:34",
@@ -6775,7 +6825,7 @@
     "url": "https://www.amazon.es/dp/B0FGDWTGCS?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-08 02:34",
@@ -6911,7 +6961,7 @@
     "url": "https://www.amazon.es/dp/B0F2FG3X9D?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -7113,7 +7163,7 @@
     "url": "https://www.amazon.es/dp/B07VCHKRVC?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -7314,7 +7364,7 @@
     "url": "https://www.amazon.es/dp/B0FS147SDG?tag=kelonio-21",
     "subcategory": "Mandos-Perifericos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -7717,7 +7767,7 @@
     "url": "https://www.amazon.es/dp/B0C2Z3HKG4?tag=kelonio-21",
     "subcategory": "Videojuegos",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -7860,7 +7910,7 @@
     "url": "https://www.amazon.es/dp/B0FDKMJRT5?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -8425,7 +8475,7 @@
     "url": "https://www.amazon.es/dp/B0DW8WQ8L2?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00"
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "console": "SWITCH",
@@ -8639,7 +8689,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 15:44",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Xbox: Orzly Funda de Transporte para Consola N...",
       "es": "Xbox: Orzly Funda de Transporte para Consola N...",
@@ -9000,7 +9050,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Retear Kit Accesorios Switch 2 (17 en 1)...",
       "es": "Switch: Retear Kit Accesorios Switch 2 (17 en 1)...",
@@ -9033,7 +9083,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Lrocotanc Funda rígida Negra para Ninten...",
       "es": "Switch: Lrocotanc Funda rígida Negra para Ninten...",
@@ -10303,7 +10353,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: TRANSNOVO Funda para Nintendo Switch 2 c...",
       "es": "Switch: TRANSNOVO Funda para Nintendo Switch 2 c...",
@@ -10673,7 +10723,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Teyomi Funda para Nintendo Switch, Silic...",
       "es": "Switch: Teyomi Funda para Nintendo Switch, Silic...",
@@ -11295,7 +11345,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Jissta Funda para Nintendo Switch y Swit...",
       "es": "Switch: Jissta Funda para Nintendo Switch y Swit...",
@@ -11895,7 +11945,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Orzly ULTIMATE PACK Accesorios para Nint...",
       "es": "Switch: Orzly ULTIMATE PACK Accesorios para Nint...",
@@ -12083,7 +12133,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: MoKo Funda para Nintendo Switch y Switch...",
       "es": "Switch: MoKo Funda para Nintendo Switch y Switch...",
@@ -12210,7 +12260,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: SOBEAU Funda para Nintendo Switch y Swit...",
       "es": "Switch: SOBEAU Funda para Nintendo Switch y Swit...",
@@ -12731,7 +12781,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch - NNS40 Bolsa De Transpo...",
       "es": "Switch: Nintendo Switch - NNS40 Bolsa De Transpo...",
@@ -13011,7 +13061,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Tokluck Funda Transporte para Switch 2 J...",
       "es": "Switch: Tokluck Funda Transporte para Switch 2 J...",
@@ -13138,7 +13188,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: FINTIE Funda Portátil Compatible con Nin...",
       "es": "Switch: FINTIE Funda Portátil Compatible con Nin...",
@@ -13728,7 +13778,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Ardistel Game Traveler® Zelda HS12GRN De...",
       "es": "Switch: Ardistel Game Traveler® Zelda HS12GRN De...",
@@ -14453,7 +14503,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ivoler Funda Compatible con Nintendo Swi...",
       "es": "Switch: ivoler Funda Compatible con Nintendo Swi...",
@@ -14542,7 +14592,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: PDP Nintendo Switch Travel Case – Minecr...",
       "es": "Switch: PDP Nintendo Switch Travel Case – Minecr...",
@@ -14888,7 +14938,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-07 21:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch OLED Rojo (edición Mario...",
       "es": "Switch: Nintendo Switch OLED Rojo (edición Mario...",
@@ -15300,7 +15350,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Lite - Consola Coral + Ninten...",
       "es": "Switch: Nintendo Switch Lite - Consola Coral + Ninten...",
@@ -15332,7 +15382,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: daydayup Funda para Nintendo Switch y Switch ...",
       "es": "Switch: daydayup Funda para Nintendo Switch y Switch ...",
@@ -15364,7 +15414,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch 2 con Pokémon Legends Z-A...",
       "es": "Switch: Nintendo Switch 2 con Pokémon Legends Z-A...",
@@ -15396,7 +15446,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Console - OLED Model - Neon B...",
       "es": "Switch: Nintendo Switch Console - OLED Model - Neon B...",
@@ -15428,7 +15478,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch consola Rojo Neón/Azul Néon 3...",
       "es": "Switch: Nintendo Switch consola Rojo Neón/Azul Néon 3...",
@@ -15460,7 +15510,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Consola Nintendo Switch - Color Azul Neón/Roj...",
       "es": "Switch: Consola Nintendo Switch - Color Azul Neón/Roj...",
@@ -15492,7 +15542,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch OLED Edición Limitada Pokémon...",
       "es": "Switch: Nintendo Switch OLED Edición Limitada Pokémon...",
@@ -15524,7 +15574,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch 32gb Azul/Rojo Neón + Super M...",
       "es": "Switch: Nintendo Switch 32gb Azul/Rojo Neón + Super M...",
@@ -15556,7 +15606,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Console Switch 2+Pokémon Pokopia - S...",
       "es": "Switch: Nintendo Console Switch 2+Pokémon Pokopia - S...",
@@ -15593,7 +15643,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Lite - Consola Amarillo + Nin...",
       "es": "Switch: Nintendo Switch Lite - Consola Amarillo + Nin...",
@@ -15634,7 +15684,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Consola Nintendo Switch - Color Azul Neón/Roj...",
       "es": "Switch: Consola Nintendo Switch - Color Azul Neón/Roj...",
@@ -15666,7 +15716,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch (versión OLED) Blanca...",
       "es": "Switch: Nintendo Switch (versión OLED) Blanca...",
@@ -15698,7 +15748,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Lite - Consola Edición Zacian...",
       "es": "Switch: Nintendo Switch Lite - Consola Edición Zacian...",
@@ -15719,7 +15769,7 @@
       "ja": "AmazonでNintendo Switch Lite - Consola Edición Zacian y Zavを最高の価格でお求めください。\n221,99€",
       "ko": "아마존에서 Nintendo Switch Lite - Consola Edición Zacian y Za을(를) 최적의 가격으로 만나보세요.\n221,99€"
     },
-    "price": "221,99€",
+    "price": "Ver precio",
     "img": "https://m.media-amazon.com/images/I/51-c3YTe14L._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B07V29SJ7C?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -15728,6 +15778,10 @@
       {
         "price": 221.99,
         "timestamp": 1780923391
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "221,99€"
       }
     ]
   },
@@ -15735,7 +15789,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Consola Switch - Color Azul Neón/Roj...",
       "es": "Switch: Nintendo Consola Switch - Color Azul Neón/Roj...",
@@ -15772,7 +15826,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch edición Monster Hunter Rise (...",
       "es": "Switch: Nintendo Switch edición Monster Hunter Rise (...",
@@ -15804,7 +15858,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch - OLED Model - The Legend of ...",
       "es": "Switch: Nintendo Switch - OLED Model - The Legend of ...",
@@ -15836,7 +15890,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Consola Nintendo Switch Lite Amarilla + Anima...",
       "es": "Switch: Consola Nintendo Switch Lite Amarilla + Anima...",
@@ -15868,7 +15922,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Lite - Consola Coral + Animal...",
       "es": "Switch: Nintendo Switch Lite - Consola Coral + Animal...",
@@ -15889,7 +15943,7 @@
       "ja": "AmazonでNintendo Switch Lite - Consola Coral + Animal Crosvを最高の価格でお求めください。\n16,99€",
       "ko": "아마존에서 Nintendo Switch Lite - Consola Coral + Animal Cros을(를) 최적의 가격으로 만나보세요.\n16,99€"
     },
-    "price": "16,99€",
+    "price": "339,00 €",
     "img": "https://m.media-amazon.com/images/I/71+naFm-00L._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0DGGSZTCX?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -15898,6 +15952,10 @@
       {
         "price": 16.99,
         "timestamp": 1780923395
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "16,99€"
       }
     ]
   },
@@ -15905,7 +15963,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Orzly Kit Accesorios para Nintendo Switch Gee...",
       "es": "Switch: Orzly Kit Accesorios para Nintendo Switch Gee...",
@@ -16015,7 +16073,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Lite: Hyrule Edition + 12 Mon...",
       "es": "Switch: Nintendo Switch Lite: Hyrule Edition + 12 Mon...",
@@ -16036,12 +16094,17 @@
       "ja": "AmazonでNintendo Switch Lite: Hyrule Edition + 12 Months Nvを最高の価格でお求めください。",
       "ko": "아마존에서 Nintendo Switch Lite: Hyrule Edition + 12 Months N을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "280,03 €",
+    "price": "275,68 €",
     "img": "https://m.media-amazon.com/images/I/51uSBSWgaYL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0D7J4KKK5?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "280,03 €"
+      }
+    ]
   },
   {
     "console": "SWITCH",
@@ -16079,7 +16142,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: LIONCAST® Set de 2 Micrófonos USB para PS5 / ...",
       "es": "Switch: LIONCAST® Set de 2 Micrófonos USB para PS5 / ...",
@@ -16111,7 +16174,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: JETech Transparente Funda Acoplable para Nint...",
       "es": "Switch: JETech Transparente Funda Acoplable para Nint...",
@@ -16143,7 +16206,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Pickle Power HAC-003 Batería, Batería de Ione...",
       "es": "Switch: Pickle Power HAC-003 Batería, Batería de Ione...",
@@ -16239,7 +16302,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: UPGRADE Mando para Switch, Mandos Switch Inal...",
       "es": "Switch: UPGRADE Mando para Switch, Mandos Switch Inal...",
@@ -16574,7 +16637,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NINTENDO Switch Sports...",
       "es": "Switch: NINTENDO Switch Sports...",
@@ -16595,7 +16658,7 @@
       "ja": "AmazonでNINTENDO Switch Sportsvを最高の価格でお求めください。\n28,89 €",
       "ko": "아마존에서 NINTENDO Switch Sports을(를) 최적의 가격으로 만나보세요.\n28,89 €"
     },
-    "price": "Ver precio",
+    "price": "48,94 €",
     "img": "https://m.media-amazon.com/images/I/71uaT93oWML._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B09S79RJN2?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -16608,6 +16671,10 @@
       {
         "date": "2026-06-10 02:00",
         "price": "28,89 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "Ver precio"
       }
     ]
   },
@@ -16647,7 +16714,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: SANDISK Tarjeta microSD con licencia oficial ...",
       "es": "Switch: SANDISK Tarjeta microSD con licencia oficial ...",
@@ -16711,7 +16778,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Joy-Con Controller Neon Blue/Neon Re...",
       "es": "Switch: Nintendo Joy-Con Controller Neon Blue/Neon Re...",
@@ -16871,7 +16938,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: PHONILLICO Protector Pantalla para Nintendo S...",
       "es": "Switch: PHONILLICO Protector Pantalla para Nintendo S...",
@@ -16903,7 +16970,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ivoler Funda para Nintendo Switch 2, Funda Pr...",
       "es": "Switch: ivoler Funda para Nintendo Switch 2, Funda Pr...",
@@ -17063,7 +17130,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HEYSTOP Funda de transporte para consola Nint...",
       "es": "Switch: HEYSTOP Funda de transporte para consola Nint...",
@@ -17191,7 +17258,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Lmcpa Funda para Consola Nintendo Switch 2 20...",
       "es": "Switch: Lmcpa Funda para Consola Nintendo Switch 2 20...",
@@ -17255,7 +17322,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Deruitu 15 en 1 Switch Sports Accesorios Bund...",
       "es": "Switch: Deruitu 15 en 1 Switch Sports Accesorios Bund...",
@@ -17319,7 +17386,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Konix Mythics Funda de Transporte y protecció...",
       "es": "Switch: Konix Mythics Funda de Transporte y protecció...",
@@ -17383,7 +17450,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HEYSTOP Funda de Transporte para Consola Nint...",
       "es": "Switch: HEYSTOP Funda de Transporte para Consola Nint...",
@@ -17447,7 +17514,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HidWee Protector Pantalla Compatible con Nint...",
       "es": "Switch: HidWee Protector Pantalla Compatible con Nint...",
@@ -17543,7 +17610,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Pickle Power 4310mAh Batería HAC-003 de Repue...",
       "es": "Switch: Pickle Power 4310mAh Batería HAC-003 de Repue...",
@@ -17607,7 +17674,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HEYSTOP Carcasa Protectora para Nintendo Swit...",
       "es": "Switch: HEYSTOP Carcasa Protectora para Nintendo Swit...",
@@ -17735,7 +17802,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Minecraft Dungeons Ultimate Edition ...",
       "es": "Switch: Nintendo Minecraft Dungeons Ultimate Edition ...",
@@ -17799,7 +17866,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ProCase Bolsa para Nintendo Switch 2 2025, Es...",
       "es": "Switch: ProCase Bolsa para Nintendo Switch 2 2025, Es...",
@@ -17831,7 +17898,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HEYSTOP Funda para Nintendo Switch 2 Accesori...",
       "es": "Switch: HEYSTOP Funda para Nintendo Switch 2 Accesori...",
@@ -17895,7 +17962,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Lmcpa Duro Funda para Consola Nintendo Switch...",
       "es": "Switch: Lmcpa Duro Funda para Consola Nintendo Switch...",
@@ -17927,7 +17994,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Sonic Origins Plus (Nintendo Switch)...",
       "es": "Switch: Sonic Origins Plus (Nintendo Switch)...",
@@ -18188,7 +18255,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: REDTRON Funda Protectora para Nintendo Switch...",
       "es": "Switch: REDTRON Funda Protectora para Nintendo Switch...",
@@ -18220,7 +18287,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Ph Pro Heat Funda para Nintendo Switch 2 Tran...",
       "es": "Switch: Ph Pro Heat Funda para Nintendo Switch 2 Tran...",
@@ -18284,7 +18351,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: eXtremeRate PlayVital Funda para Nintendo Swi...",
       "es": "Switch: eXtremeRate PlayVital Funda para Nintendo Swi...",
@@ -18476,7 +18543,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Mandragora: Whispers of the Witch Tree - Swit...",
       "es": "Switch: Mandragora: Whispers of the Witch Tree - Swit...",
@@ -18508,7 +18575,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Might & Magic Clash of Heroes Definitive Edit...",
       "es": "Switch: Might & Magic Clash of Heroes Definitive Edit...",
@@ -18577,7 +18644,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: UBI Soft Mario + Rabbids Kingdom Battle...",
       "es": "Switch: UBI Soft Mario + Rabbids Kingdom Battle...",
@@ -18609,7 +18676,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Prince of Persia: The Lost Crown (Switch)...",
       "es": "Switch: Prince of Persia: The Lost Crown (Switch)...",
@@ -18737,7 +18804,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Polican: Un dia de Perros - Switch...",
       "es": "Switch: Polican: Un dia de Perros - Switch...",
@@ -18769,7 +18836,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Halloween & Ash vs Evil Dead Retro Realms - S...",
       "es": "Switch: Halloween & Ash vs Evil Dead Retro Realms - S...",
@@ -18806,7 +18873,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Harry Potter: Campeones de Quidditch Deluxe E...",
       "es": "Switch: Harry Potter: Campeones de Quidditch Deluxe E...",
@@ -18838,7 +18905,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Meridiem Games Gang Beasts...",
       "es": "Switch: Meridiem Games Gang Beasts...",
@@ -18934,7 +19001,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: EA SPORTS FC 26 Standard Edition Switch | Vid...",
       "es": "Switch: EA SPORTS FC 26 Standard Edition Switch | Vid...",
@@ -18966,7 +19033,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: EA Sports - FC26 (Switch)...",
       "es": "Switch: EA Sports - FC26 (Switch)...",
@@ -18998,7 +19065,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch - Rayman Legends Definitive E...",
       "es": "Switch: Nintendo Switch - Rayman Legends Definitive E...",
@@ -19062,7 +19129,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: No Man's Sky...",
       "es": "Switch: No Man's Sky...",
@@ -19083,12 +19150,17 @@
       "ja": "AmazonでNo Man's Skyvを最高の価格でお求めください。",
       "ko": "아마존에서 No Man's Sky을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "29,94 €",
+    "price": "26,95 €",
     "img": "https://m.media-amazon.com/images/I/71k2YCRA8WL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0B51F8D3K?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "29,94 €"
+      }
+    ]
   },
   {
     "console": "SWITCH",
@@ -19254,7 +19326,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Little Nightmares III...",
       "es": "Switch: Little Nightmares III...",
@@ -20817,7 +20889,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: SEGA Mega Drive Classics - Nintendo Switch - ...",
       "es": "Switch: SEGA Mega Drive Classics - Nintendo Switch - ...",
@@ -21361,7 +21433,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Konix Par de mandos Joypads Nintendo Switch y...",
       "es": "Switch: Konix Par de mandos Joypads Nintendo Switch y...",
@@ -21393,7 +21465,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Genérico Mando Inalámbrico para Switch Pro/Li...",
       "es": "Switch: Genérico Mando Inalámbrico para Switch Pro/Li...",
@@ -21425,7 +21497,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: PDP Mando Afterglow Deluxe Wireless Nintendo ...",
       "es": "Switch: PDP Mando Afterglow Deluxe Wireless Nintendo ...",
@@ -21457,7 +21529,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: EasySMX D05 Mando PC Inalambrico con Base de ...",
       "es": "Switch: EasySMX D05 Mando PC Inalambrico con Base de ...",
@@ -21489,7 +21561,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: DSP Controller Grip Nintendo Switch (Jaune)...",
       "es": "Switch: DSP Controller Grip Nintendo Switch (Jaune)...",
@@ -21510,7 +21582,7 @@
       "ja": "AmazonでDSP Controller Grip Nintendo Switch (Jaune)vを最高の価格でお求めください。",
       "ko": "아마존에서 DSP Controller Grip Nintendo Switch (Jaune)을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "15,96 €",
+    "price": "15,69 €",
     "img": "https://m.media-amazon.com/images/I/61fVI44-8TL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B089LDNZ77?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -21523,6 +21595,10 @@
       {
         "date": "2026-06-10 02:00",
         "price": "15,02 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "15,96 €"
       }
     ]
   },
@@ -21530,7 +21606,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Agarre cómodo Joy-Con para Nintendo Switch: N...",
       "es": "Switch: Agarre cómodo Joy-Con para Nintendo Switch: N...",
@@ -21562,7 +21638,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: UPGRADE Mando para Switch/ Switch 2, Mando In...",
       "es": "Switch: UPGRADE Mando para Switch/ Switch 2, Mando In...",
@@ -21594,7 +21670,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: AceGamer 2pcs Mando inalámbrico para Switch 2...",
       "es": "Switch: AceGamer 2pcs Mando inalámbrico para Switch 2...",
@@ -21626,7 +21702,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Turtle Beach Afterglow Negro Mando de juego R...",
       "es": "Switch: Turtle Beach Afterglow Negro Mando de juego R...",
@@ -21663,7 +21739,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Power A Mando inalámbrico Advantage para Nint...",
       "es": "Switch: Power A Mando inalámbrico Advantage para Nint...",
@@ -21684,7 +21760,7 @@
       "ja": "AmazonでPower A Mando inalámbrico Advantage para Nintendo vを最高の価格でお求めください。",
       "ko": "아마존에서 Power A Mando inalámbrico Advantage para Nintendo 을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "53,40 €",
+    "price": "53,39 €",
     "img": "https://m.media-amazon.com/images/I/71pS43QcScL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0FS1CZGCW?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -21693,6 +21769,10 @@
       {
         "date": "2026-06-08 12:34",
         "price": "53,47 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "53,40 €"
       }
     ]
   },
@@ -21700,7 +21780,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo - Joy-Con Soporte Carga...",
       "es": "Switch: Nintendo - Joy-Con Soporte Carga...",
@@ -21745,7 +21825,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: RivalPlay Mando para Switch, Mandos Inalámbri...",
       "es": "Switch: RivalPlay Mando para Switch, Mandos Inalámbri...",
@@ -21777,7 +21857,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NK Mando PRO Switch Inalámbrico- Wireless Pro...",
       "es": "Switch: NK Mando PRO Switch Inalámbrico- Wireless Pro...",
@@ -21809,7 +21889,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Altaudia Mando Inalámbrico Bluetooth para PC ...",
       "es": "Switch: Altaudia Mando Inalámbrico Bluetooth para PC ...",
@@ -21841,7 +21921,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NITHO KARMA Mando Inalámbrico Compatible con ...",
       "es": "Switch: NITHO KARMA Mando Inalámbrico Compatible con ...",
@@ -21873,7 +21953,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NITHO NEXUS Mando Inalámbrico Compatible con ...",
       "es": "Switch: NITHO NEXUS Mando Inalámbrico Compatible con ...",
@@ -21937,7 +22017,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Vexnaro Mando Inalámbrico Compatible con Swit...",
       "es": "Switch: Vexnaro Mando Inalámbrico Compatible con Swit...",
@@ -21969,7 +22049,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: KROM KRYSTAL — Mando Inalámbrico Transparente...",
       "es": "Switch: KROM KRYSTAL — Mando Inalámbrico Transparente...",
@@ -22033,7 +22113,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Turtle Beach Rematch Mario y Luigi Mando de j...",
       "es": "Switch: Turtle Beach Rematch Mario y Luigi Mando de j...",
@@ -22102,7 +22182,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: DuLingKer Mando PC con Carga Base, Mando Inal...",
       "es": "Switch: DuLingKer Mando PC con Carga Base, Mando Inal...",
@@ -22134,7 +22214,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Controlador inalámbrico mejorado de PowerA pa...",
       "es": "Switch: Controlador inalámbrico mejorado de PowerA pa...",
@@ -22166,7 +22246,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: FRTEC - Mando Inalámbrico Dragon Ball Kame pa...",
       "es": "Switch: FRTEC - Mando Inalámbrico Dragon Ball Kame pa...",
@@ -22203,7 +22283,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: GXTrust Trust GXT 1246W Muta Mando Nintendo S...",
       "es": "Switch: GXTrust Trust GXT 1246W Muta Mando Nintendo S...",
@@ -22224,7 +22304,7 @@
       "ja": "AmazonでGXTrust Trust GXT 1246W Muta Mando Nintendo Switchvを最高の価格でお求めください。",
       "ko": "아마존에서 GXTrust Trust GXT 1246W Muta Mando Nintendo Switch을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "20,19 €",
+    "price": "20,33 €",
     "img": "https://m.media-amazon.com/images/I/71tTM9c7nPL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0DJDH9XGF?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -22233,6 +22313,10 @@
       {
         "date": "2026-06-10 02:00",
         "price": "19,99 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "20,19 €"
       }
     ]
   },
@@ -22272,7 +22356,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: DuLingKer Mando PC con Carga Base, Mando Inal...",
       "es": "Switch: DuLingKer Mando PC con Carga Base, Mando Inal...",
@@ -22336,7 +22420,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HELLCOOL Mando Pro para Nintendo Switch/Lite/...",
       "es": "Switch: HELLCOOL Mando Pro para Nintendo Switch/Lite/...",
@@ -22368,7 +22452,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Genérico Mando Pro Nintendo Switch 2...",
       "es": "Switch: Genérico Mando Pro Nintendo Switch 2...",
@@ -22389,12 +22473,17 @@
       "ja": "AmazonでGenérico Mando Pro Nintendo Switch 2vを最高の価格でお求めください。",
       "ko": "아마존에서 Genérico Mando Pro Nintendo Switch 2을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "79,90 €",
+    "price": "99,90 €",
     "img": "https://m.media-amazon.com/images/I/51Bww4EkE8L._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0H4161K59?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "79,90 €"
+      }
+    ]
   },
   {
     "console": "SWITCH",
@@ -22469,7 +22558,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ELUTENG Base de Carga para Switch 2 en 1 Carg...",
       "es": "Switch: ELUTENG Base de Carga para Switch 2 en 1 Carg...",
@@ -22597,7 +22686,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Agarres para el Pulgar, 3 Pares Thumb Grip Se...",
       "es": "Switch: Agarres para el Pulgar, 3 Pares Thumb Grip Se...",
@@ -22853,7 +22942,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Vicloon Correa de Muñeca para Switch Gamepad,...",
       "es": "Switch: Vicloon Correa de Muñeca para Switch Gamepad,...",
@@ -22885,7 +22974,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: EasySMX X15 Mando PC Inalámbrico con Luz RGB ...",
       "es": "Switch: EasySMX X15 Mando PC Inalámbrico con Luz RGB ...",
@@ -22986,7 +23075,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 8BitDo Micro Bluetooth Gamepad Blue...",
       "es": "Switch: 8BitDo Micro Bluetooth Gamepad Blue...",
@@ -24276,7 +24365,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: JINGDU Joy-con Soporte de manija de Carga par...",
       "es": "Switch: JINGDU Joy-con Soporte de manija de Carga par...",
@@ -24665,7 +24754,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joystick ...",
       "es": "Switch: Wigearss 2 Piezas de Repuesto de 3D Joystick ...",
@@ -24697,7 +24786,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 8Bitdo USB Arcade Stick For Nintendo Switch &...",
       "es": "Switch: 8Bitdo USB Arcade Stick For Nintendo Switch &...",
@@ -24825,7 +24914,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 4 Piezas Cubierta para Joystick Switch, Silic...",
       "es": "Switch: 4 Piezas Cubierta para Joystick Switch, Silic...",
@@ -25150,7 +25239,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Adaptador de conmutador de aluminio portátil,...",
       "es": "Switch: Adaptador de conmutador de aluminio portátil,...",
@@ -25182,7 +25271,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Hori Controller Taiko No Tatsujin For Nintend...",
       "es": "Switch: Hori Controller Taiko No Tatsujin For Nintend...",
@@ -25214,7 +25303,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: MAYFLASH Adaptador de Mando de Gamecube para ...",
       "es": "Switch: MAYFLASH Adaptador de Mando de Gamecube para ...",
@@ -25246,7 +25335,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 8Bitdo 64 Bluetooth Controller for Analogue 3...",
       "es": "Switch: 8Bitdo 64 Bluetooth Controller for Analogue 3...",
@@ -25310,7 +25399,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HORI - Dual USB PlayStand para Nintendo Switc...",
       "es": "Switch: HORI - Dual USB PlayStand para Nintendo Switc...",
@@ -25438,7 +25527,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Retro-Bit Origin8 2.4 GHz Wireless Controller...",
       "es": "Switch: Retro-Bit Origin8 2.4 GHz Wireless Controller...",
@@ -25470,7 +25559,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Controlador de caña de pescar, compatible con...",
       "es": "Switch: Controlador de caña de pescar, compatible con...",
@@ -25575,7 +25664,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Torre de almacenamiento de videojuegos para P...",
       "es": "Switch: Torre de almacenamiento de videojuegos para P...",
@@ -25596,12 +25685,17 @@
       "ja": "AmazonでTorre de almacenamiento de videojuegos para PS5 PSvを最高の価格でお求めください。",
       "ko": "아마존에서 Torre de almacenamiento de videojuegos para PS5 PS을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "24,99 €",
+    "price": "21,99 €",
     "img": "https://m.media-amazon.com/images/I/61zG3GJMBqL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0D7SGYZBD?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "24,99 €"
+      }
+    ]
   },
   {
     "console": "SWITCH",
@@ -25910,7 +26004,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HORI - PlayStand USB (Nintendo Switch / Switc...",
       "es": "Switch: HORI - PlayStand USB (Nintendo Switch / Switc...",
@@ -29044,7 +29138,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Orzly Funda de Transporte para Consola Ninten...",
       "es": "Switch: Orzly Funda de Transporte para Consola Ninten...",
@@ -29076,7 +29170,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Funda Switch Compatible con Nintendo Switch y...",
       "es": "Switch: Funda Switch Compatible con Nintendo Switch y...",
@@ -29108,7 +29202,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ivoler Funda Compatible con Nintendo Switch y...",
       "es": "Switch: ivoler Funda Compatible con Nintendo Switch y...",
@@ -29140,7 +29234,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: FINTIE Funda Nintendo Switch 2(Modelo 2025) -...",
       "es": "Switch: FINTIE Funda Nintendo Switch 2(Modelo 2025) -...",
@@ -29236,7 +29330,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Younik Paquete de Accesorios para Switch, 17 ...",
       "es": "Switch: Younik Paquete de Accesorios para Switch, 17 ...",
@@ -29268,7 +29362,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Funda Switch 2 Modelo 2025 incluye REGALO 2 F...",
       "es": "Switch: Funda Switch 2 Modelo 2025 incluye REGALO 2 F...",
@@ -29332,7 +29426,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: KITDAHOM Funda Nintendo Switch - Compatible c...",
       "es": "Switch: KITDAHOM Funda Nintendo Switch - Compatible c...",
@@ -29369,7 +29463,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: eXtremeRate PlayVital Funda para Nintendo Swi...",
       "es": "Switch: eXtremeRate PlayVital Funda para Nintendo Swi...",
@@ -29401,7 +29495,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: TANOOKI – Bolsa de Transporte para Switch 2, ...",
       "es": "Switch: TANOOKI – Bolsa de Transporte para Switch 2, ...",
@@ -29433,7 +29527,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Kit de acesorios Orzly para Nintendo Switch A...",
       "es": "Switch: Kit de acesorios Orzly para Nintendo Switch A...",
@@ -29497,7 +29591,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Funda Nintendo Switch OLED + 2 Protectores de...",
       "es": "Switch: Funda Nintendo Switch OLED + 2 Protectores de...",
@@ -29529,7 +29623,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Game Traveler RDS Industries - Funda de Lujo ...",
       "es": "Switch: Game Traveler RDS Industries - Funda de Lujo ...",
@@ -29593,7 +29687,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: TiMOVO Funda de Switch 2, EVA Duro Estuche Pr...",
       "es": "Switch: TiMOVO Funda de Switch 2, EVA Duro Estuche Pr...",
@@ -29625,7 +29719,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Amazon Basics Funda para almacenamiento de ju...",
       "es": "Switch: Amazon Basics Funda para almacenamiento de ju...",
@@ -29646,18 +29740,23 @@
       "ja": "AmazonでAmazon Basics Funda para almacenamiento de juegos,vを最高の価格でお求めください。",
       "ko": "아마존에서 Amazon Basics Funda para almacenamiento de juegos,을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "9,49 €",
+    "price": "10,11 €",
     "img": "https://m.media-amazon.com/images/I/81pQEhv3EaL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0714MH9TR?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "9,49 €"
+      }
+    ]
   },
   {
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Estuche Delgado PowerA para Nintendo Switch o...",
       "es": "Switch: Estuche Delgado PowerA para Nintendo Switch o...",
@@ -29694,7 +29793,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch 2 Carrying Case + protector p...",
       "es": "Switch: Nintendo Switch 2 Carrying Case + protector p...",
@@ -29735,7 +29834,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: playvital Funda Protectora con Agarre Interca...",
       "es": "Switch: playvital Funda Protectora con Agarre Interca...",
@@ -29767,7 +29866,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 02:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: tomtoc Funda para Nintendo Switch 2 (2025), E...",
       "es": "Switch: tomtoc Funda para Nintendo Switch 2 (2025), E...",
@@ -29959,7 +30058,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Teyomi® - Carcasa Compatible con Nintendo Swi...",
       "es": "Switch: Teyomi® - Carcasa Compatible con Nintendo Swi...",
@@ -30023,7 +30122,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: SOBEAU Funda para Nintendo Switch y Switch OL...",
       "es": "Switch: SOBEAU Funda para Nintendo Switch y Switch OL...",
@@ -30124,7 +30223,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Teyomi® Funda compatible con Nintendo Switch ...",
       "es": "Switch: Teyomi® Funda compatible con Nintendo Switch ...",
@@ -30188,7 +30287,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: CUZKC Funda Compatible para Nintendo Switch,M...",
       "es": "Switch: CUZKC Funda Compatible para Nintendo Switch,M...",
@@ -30412,7 +30511,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ivoler 4 Piezas Protector de Pantalla Compati...",
       "es": "Switch: ivoler 4 Piezas Protector de Pantalla Compati...",
@@ -30444,7 +30543,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: DLseego Funda Protectora para Switch,Delgado ...",
       "es": "Switch: DLseego Funda Protectora para Switch,Delgado ...",
@@ -30636,7 +30735,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: HEYSTOP - Carcasa Compatible con Nintendo Swi...",
       "es": "Switch: HEYSTOP - Carcasa Compatible con Nintendo Swi...",
@@ -30865,7 +30964,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: FANPL - Funda Transparente acoplable para Nin...",
       "es": "Switch: FANPL - Funda Transparente acoplable para Nin...",
@@ -30897,7 +30996,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: PlayVital Funda para Nintendo Switch OLED con...",
       "es": "Switch: PlayVital Funda para Nintendo Switch OLED con...",
@@ -31094,7 +31193,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: REY Funda para Nintendo Switch, Carcasa Ultra...",
       "es": "Switch: REY Funda para Nintendo Switch, Carcasa Ultra...",
@@ -31158,7 +31257,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Funda para Nintendo Switch Estuche de TPU par...",
       "es": "Switch: Funda para Nintendo Switch Estuche de TPU par...",
@@ -31862,7 +31961,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NEW'C 3 Piezas, Protector Pantalla para Ninte...",
       "es": "Switch: NEW'C 3 Piezas, Protector Pantalla para Ninte...",
@@ -31894,7 +31993,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: REY Protector de Pantalla para Nintendo Switc...",
       "es": "Switch: REY Protector de Pantalla para Nintendo Switc...",
@@ -31926,7 +32025,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: REY Protector de Pantalla para Nintendo Switc...",
       "es": "Switch: REY Protector de Pantalla para Nintendo Switc...",
@@ -31958,7 +32057,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: NEW'C 2 Piezas, Protector Pantalla para Ninte...",
       "es": "Switch: NEW'C 2 Piezas, Protector Pantalla para Ninte...",
@@ -31990,7 +32089,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Protectores de pantalla de vidrio compatibles...",
       "es": "Switch: Protectores de pantalla de vidrio compatibles...",
@@ -32022,7 +32121,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: daydayup 4 piezas Protector de Pantalla Compa...",
       "es": "Switch: daydayup 4 piezas Protector de Pantalla Compa...",
@@ -32118,7 +32217,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: amFilm OneTouch Protector de Pantalla de Vidr...",
       "es": "Switch: amFilm OneTouch Protector de Pantalla de Vidr...",
@@ -32150,7 +32249,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Nintendo Switch Protector Pantalla (2 Piezas)...",
       "es": "Switch: Nintendo Switch Protector Pantalla (2 Piezas)...",
@@ -32182,7 +32281,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 3 Pack Protectores de Pantalla Compatible par...",
       "es": "Switch: 3 Pack Protectores de Pantalla Compatible par...",
@@ -32214,7 +32313,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: REY Protector de Pantalla para Nintendo Switc...",
       "es": "Switch: REY Protector de Pantalla para Nintendo Switc...",
@@ -32246,7 +32345,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: amFilm Protector Pantalla (3 Piezas) para Nin...",
       "es": "Switch: amFilm Protector Pantalla (3 Piezas) para Nin...",
@@ -32278,7 +32377,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: ivoler [2 Piezas] Protector de Pantalla para ...",
       "es": "Switch: ivoler [2 Piezas] Protector de Pantalla para ...",
@@ -32310,7 +32409,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: JETech Protector de Pantalla para Nintendo Sw...",
       "es": "Switch: JETech Protector de Pantalla para Nintendo Sw...",
@@ -34121,7 +34220,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: Cargador para Nintendo Switch/NS Switch, Adap...",
       "es": "Switch: Cargador para Nintendo Switch/NS Switch, Adap...",
@@ -35310,7 +35409,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 12:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "Switch: 2 Piezas Rcm Jig Para Nintendo Switch Herrami...",
       "es": "Switch: 2 Piezas Rcm Jig Para Nintendo Switch Herrami...",
@@ -41721,7 +41820,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-08 12:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Teyomi® Silicona Funda compatible con Nintend...",
       "es": "switch: Teyomi® Silicona Funda compatible con Nintend...",
@@ -43202,7 +43301,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Base de Carga para Switch,[4 en 1] Diyife Car...",
       "es": "3ds: Base de Carga para Switch,[4 en 1] Diyife Car...",
@@ -43266,7 +43365,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: PDP - Rock Candy Mando con Cable para Nintend...",
       "es": "3ds: PDP - Rock Candy Mando con Cable para Nintend...",
@@ -43287,7 +43386,7 @@
       "ja": "AmazonでPDP - Rock Candy Mando con Cable para Nintendo Swivを最高の価格でお求めください。",
       "ko": "아마존에서 PDP - Rock Candy Mando con Cable para Nintendo Swi을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "22,17 €",
+    "price": "22,27 €",
     "img": "https://m.media-amazon.com/images/I/61gyqMGjQtL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0968VWGLY?tag=kelonio-21",
     "subcategory": "Novedades",
@@ -43300,6 +43399,10 @@
       {
         "date": "2026-06-10 02:00",
         "price": "22,07 €"
+      },
+      {
+        "date": "2026-06-11 02:00",
+        "price": "22,17 €"
       }
     ]
   },
@@ -44497,7 +44600,7 @@
     "url": "https://www.amazon.es/dp/B01NAUKS62?tag=kelonio-21",
     "subcategory": "Fundas-Proteccion",
     "size": "Ninguno",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "price_history": [
       {
         "date": "2026-06-10 02:00",
@@ -44739,7 +44842,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: OIVO - Funda para Nintendo Switch & Switch OL...",
       "es": "3ds: OIVO - Funda para Nintendo Switch & Switch OL...",
@@ -44899,7 +45002,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Nintendo Consola Switch - Color Azul Neón/Roj...",
       "es": "3ds: Nintendo Consola Switch - Color Azul Neón/Roj...",
@@ -44931,7 +45034,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Nintendo Switch Lite Turquesa + Animal Crossi...",
       "es": "3ds: Nintendo Switch Lite Turquesa + Animal Crossi...",
@@ -45027,7 +45130,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Pro Controller for Nintendo Switch...",
       "es": "3ds: Pro Controller for Nintendo Switch...",
@@ -45091,7 +45194,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: HORI - Mando Split Pad Pro (Negro) para modo ...",
       "es": "3ds: HORI - Mando Split Pad Pro (Negro) para modo ...",
@@ -45123,7 +45226,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Nintendo Joy-Con (set de dos) Rosa...",
       "es": "3ds: Nintendo Joy-Con (set de dos) Rosa...",
@@ -45155,7 +45258,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: HORIPAD Turbo (Zelda)...",
       "es": "3ds: HORIPAD Turbo (Zelda)...",
@@ -45176,18 +45279,23 @@
       "ja": "AmazonでHORIPAD Turbo (Zelda)vを最高の価格でお求めください。",
       "ko": "아마존에서 HORIPAD Turbo (Zelda)을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "23,50 €",
+    "price": "23,60 €",
     "img": "https://m.media-amazon.com/images/I/61mmWZrPw6L._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0CBNB6CKS?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "23,50 €"
+      }
+    ]
   },
   {
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-08 12:34",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Orzly Volantes 4 en 1 Para Mario Kart Nintend...",
       "es": "3ds: Orzly Volantes 4 en 1 Para Mario Kart Nintend...",
@@ -45293,7 +45401,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Mando Gaming HORI SONIC NSW 465U...",
       "es": "3ds: Mando Gaming HORI SONIC NSW 465U...",
@@ -45325,7 +45433,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: HORIPAD Mini para Nintendo Switch (Pikachu & ...",
       "es": "3ds: HORIPAD Mini para Nintendo Switch (Pikachu & ...",
@@ -45467,7 +45575,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: 8BitDo USB Wireless Adapter 2, Adaptador Blue...",
       "es": "3ds: 8BitDo USB Wireless Adapter 2, Adaptador Blue...",
@@ -45595,7 +45703,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: HORI - Horipad inalámbrico azul (Nintendo Swi...",
       "es": "3ds: HORI - Horipad inalámbrico azul (Nintendo Swi...",
@@ -45632,7 +45740,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: OLDZHU Funda Protectora Compatible con NS Swi...",
       "es": "3ds: OLDZHU Funda Protectora Compatible con NS Swi...",
@@ -46122,7 +46230,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: Kytok Soporte Almacenamiento para Nintendo Sw...",
       "es": "3ds: Kytok Soporte Almacenamiento para Nintendo Sw...",
@@ -46474,7 +46582,7 @@
     "console": "Switch",
     "status": "active",
     "created_at": "2026-06-08 02:34",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "3DS: GeekShare Linda Funda Protectora de Felpa Com...",
       "es": "3ds: GeekShare Linda Funda Protectora de Felpa Com...",
@@ -46784,14 +46892,15 @@
     "img": "https://m.media-amazon.com/images/I/61WaREAeyVL._AC_SX342_.jpg",
     "url": "https://www.amazon.es/dp/B085SPRQSQ?tag=kelonio-21",
     "subcategory": "Consolas",
-    "size": "Ninguno"
+    "size": "Ninguno",
+    "last_seen": "2026-06-11 02:00"
   },
   {
     "id": "0",
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Nintendo Switch - Consola Color Gris...",
       "es": "switch: Nintendo Switch - Consola Color Gris...",
@@ -46824,7 +46933,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Nintendo Consola Switch Lite Animal Crossing:...",
       "es": "switch: Nintendo Consola Switch Lite Animal Crossing:...",
@@ -46857,7 +46966,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Genzo Consola Portatil Retro R36 Ultra 2026 c...",
       "es": "switch: Genzo Consola Portatil Retro R36 Ultra 2026 c...",
@@ -49398,7 +49507,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: PALPOW Mando Pro Switch 2，Ergonomía Mando ina...",
       "es": "switch: PALPOW Mando Pro Switch 2，Ergonomía Mando ina...",
@@ -49464,7 +49573,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: FUNLAB Mando Pro Luminex con Base de Carga pa...",
       "es": "switch: FUNLAB Mando Pro Luminex con Base de Carga pa...",
@@ -49497,7 +49606,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Mando con cable PowerA para Nintendo Switch -...",
       "es": "switch: Mando con cable PowerA para Nintendo Switch -...",
@@ -51081,7 +51190,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: GKEAPZA Switch TV Dock para Nintendo Switch/O...",
       "es": "switch: GKEAPZA Switch TV Dock para Nintendo Switch/O...",
@@ -51114,7 +51223,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Thlevel Joystick Analógico Derecho para NS e ...",
       "es": "switch: Thlevel Joystick Analógico Derecho para NS e ...",
@@ -51147,7 +51256,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Konix Mando con cable Nintendo Switch, Switch...",
       "es": "switch: Konix Mando con cable Nintendo Switch, Switch...",
@@ -51180,7 +51289,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Mcbazel KX Convertidor de Consola con Adaptad...",
       "es": "switch: Mcbazel KX Convertidor de Consola con Adaptad...",
@@ -51213,7 +51322,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Thlevel Joystick Analógico Derecho para NS e ...",
       "es": "switch: Thlevel Joystick Analógico Derecho para NS e ...",
@@ -51246,7 +51355,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: Mars Gaming MGPX, Gamepad Bluetooth 5.0 2en1,...",
       "es": "switch: Mars Gaming MGPX, Gamepad Bluetooth 5.0 2en1,...",
@@ -51267,19 +51376,24 @@
       "ja": "AmazonでMars Gaming MGPX, Gamepad Bluetooth 5.0 2en1, RGB vを最高の価格でお求めください。",
       "ko": "아마존에서 Mars Gaming MGPX, Gamepad Bluetooth 5.0 2en1, RGB 을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "33,23 €",
+    "price": "33,50 €",
     "img": "https://m.media-amazon.com/images/I/61YY8sb3-DL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B0D9HGJ1ZB?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "33,23 €"
+      }
+    ]
   },
   {
     "id": "136",
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: FRTEC - Grips Pro XL, Mejora la Precisión, Co...",
       "es": "switch: FRTEC - Grips Pro XL, Mejora la Precisión, Co...",
@@ -51345,7 +51459,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: MatoSan® Set de Pegatinas para Botones y Cubi...",
       "es": "switch: MatoSan® Set de Pegatinas para Botones y Cubi...",
@@ -51411,7 +51525,7 @@
     "console": "SWITCH",
     "status": "active",
     "created_at": "2026-06-10 02:00",
-    "last_seen": "2026-06-10 02:00",
+    "last_seen": "2026-06-11 02:00",
     "label": {
       "en": "SWITCH: SANDISK Tarjeta microSD con licencia oficial ...",
       "es": "switch: SANDISK Tarjeta microSD con licencia oficial ...",
@@ -51432,12 +51546,17 @@
       "ja": "AmazonでSANDISK Tarjeta microSD con licencia oficial para vを最高の価格でお求めください。",
       "ko": "아마존에서 SANDISK Tarjeta microSD con licencia oficial para 을(를) 최적의 가격으로 만나보세요."
     },
-    "price": "34,90 €",
+    "price": "34,94 €",
     "img": "https://m.media-amazon.com/images/I/810o-i5jpiL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B07KXQX3S3?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
-    "price_history": []
+    "price_history": [
+      {
+        "date": "2026-06-11 02:00",
+        "price": "34,90 €"
+      }
+    ]
   },
   {
     "id": "141",
@@ -53514,6 +53633,138 @@
     "price": "21,76 €",
     "img": "https://m.media-amazon.com/images/I/71laPC1AhWL._AC_UL320_.jpg",
     "url": "https://www.amazon.es/dp/B07PLLZD78?tag=kelonio-21",
+    "subcategory": "Novedades",
+    "size": "Ninguno",
+    "price_history": []
+  },
+  {
+    "id": "204",
+    "console": "SWITCH",
+    "status": "active",
+    "created_at": "2026-06-11 02:00",
+    "last_seen": "2026-06-11 02:00",
+    "label": {
+      "en": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "es": "switch: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "fr": "SWITCH : Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "it": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "pt": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "de": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "ja": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M...",
+      "ko": "SWITCH: Nintendo Switch rojo/azul neón 32 GB Pack + M..."
+    },
+    "desc": {
+      "en": "Get Nintendo Switch rojo/azul neón 32 GB Pack + Mario  on Amazon at the best price with our affiliate link.",
+      "es": "Nintendo Switch rojo/azul neón 32 GB Pack + Mario ...\n416,65 €",
+      "fr": "Obtenez Nintendo Switch rojo/azul neón 32 GB Pack + Mario  sur Amazon au meilleur prix.",
+      "it": "Ottieni Nintendo Switch rojo/azul neón 32 GB Pack + Mario  su Amazon al miglior preço.",
+      "pt": "Obtenha Nintendo Switch rojo/azul neón 32 GB Pack + Mario  na Amazon ao melhor preço.",
+      "de": "Holen Sie sich Nintendo Switch rojo/azul neón 32 GB Pack + Mario  bei Amazon zum besten Preis.",
+      "ja": "AmazonでNintendo Switch rojo/azul neón 32 GB Pack + Mario vを最高の価格でお求めください。",
+      "ko": "아마존에서 Nintendo Switch rojo/azul neón 32 GB Pack + Mario 을(를) 최적의 가격으로 만나보세요."
+    },
+    "price": "416,65 €",
+    "img": "https://m.media-amazon.com/images/I/81zovmFKkxL._AC_UL320_.jpg",
+    "url": "https://www.amazon.es/dp/B07CLLRCTR?tag=kelonio-21",
+    "subcategory": "Novedades",
+    "size": "Ninguno",
+    "price_history": []
+  },
+  {
+    "id": "205",
+    "console": "SWITCH",
+    "status": "active",
+    "created_at": "2026-06-11 02:00",
+    "last_seen": "2026-06-11 02:00",
+    "label": {
+      "en": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S...",
+      "es": "switch: PlayVital Agarres para Pulgar para Nintendo S...",
+      "fr": "SWITCH : PlayVital Agarres para Pulgar para Nintendo S...",
+      "it": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S...",
+      "pt": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S...",
+      "de": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S...",
+      "ja": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S...",
+      "ko": "SWITCH: PlayVital Agarres para Pulgar para Nintendo S..."
+    },
+    "desc": {
+      "en": "Get PlayVital Agarres para Pulgar para Nintendo Switch on Amazon at the best price with our affiliate link.",
+      "es": "PlayVital Agarres para Pulgar para Nintendo Switch...\n10,19 €",
+      "fr": "Obtenez PlayVital Agarres para Pulgar para Nintendo Switch sur Amazon au meilleur prix.",
+      "it": "Ottieni PlayVital Agarres para Pulgar para Nintendo Switch su Amazon al miglior preço.",
+      "pt": "Obtenha PlayVital Agarres para Pulgar para Nintendo Switch na Amazon ao melhor preço.",
+      "de": "Holen Sie sich PlayVital Agarres para Pulgar para Nintendo Switch bei Amazon zum besten Preis.",
+      "ja": "AmazonでPlayVital Agarres para Pulgar para Nintendo Switchvを最高の価格でお求めください。",
+      "ko": "아마존에서 PlayVital Agarres para Pulgar para Nintendo Switch을(를) 최적의 가격으로 만나보세요."
+    },
+    "price": "10,19 €",
+    "img": "https://m.media-amazon.com/images/I/51Hu5p3LdpL._AC_UL320_.jpg",
+    "url": "https://www.amazon.es/dp/B0BFVGHW21?tag=kelonio-21",
+    "subcategory": "Novedades",
+    "size": "Ninguno",
+    "price_history": []
+  },
+  {
+    "id": "206",
+    "console": "SWITCH",
+    "status": "active",
+    "created_at": "2026-06-11 02:00",
+    "last_seen": "2026-06-11 02:00",
+    "label": {
+      "en": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi...",
+      "es": "switch: Konix Par de mandos Joypads para Nintendo Swi...",
+      "fr": "SWITCH : Konix Par de mandos Joypads para Nintendo Swi...",
+      "it": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi...",
+      "pt": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi...",
+      "de": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi...",
+      "ja": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi...",
+      "ko": "SWITCH: Konix Par de mandos Joypads para Nintendo Swi..."
+    },
+    "desc": {
+      "en": "Get Konix Par de mandos Joypads para Nintendo Switch y on Amazon at the best price with our affiliate link.",
+      "es": "Konix Par de mandos Joypads para Nintendo Switch y...\n39,99 €",
+      "fr": "Obtenez Konix Par de mandos Joypads para Nintendo Switch y sur Amazon au meilleur prix.",
+      "it": "Ottieni Konix Par de mandos Joypads para Nintendo Switch y su Amazon al miglior preço.",
+      "pt": "Obtenha Konix Par de mandos Joypads para Nintendo Switch y na Amazon ao melhor preço.",
+      "de": "Holen Sie sich Konix Par de mandos Joypads para Nintendo Switch y bei Amazon zum besten Preis.",
+      "ja": "AmazonでKonix Par de mandos Joypads para Nintendo Switch yvを最高の価格でお求めください。",
+      "ko": "아마존에서 Konix Par de mandos Joypads para Nintendo Switch y을(를) 최적의 가격으로 만나보세요."
+    },
+    "price": "39,99 €",
+    "img": "https://m.media-amazon.com/images/I/513a6+oUyoL._AC_UL320_.jpg",
+    "url": "https://www.amazon.es/dp/B0DHSCVFMT?tag=kelonio-21",
+    "subcategory": "Novedades",
+    "size": "Ninguno",
+    "price_history": []
+  },
+  {
+    "id": "207",
+    "console": "SWITCH",
+    "status": "active",
+    "created_at": "2026-06-11 02:00",
+    "last_seen": "2026-06-11 02:00",
+    "label": {
+      "en": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "es": "switch: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "fr": "SWITCH : HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "it": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "pt": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "de": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "ja": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma...",
+      "ko": "SWITCH: HORI - Controlador D-Pad (izquierdo) Super Ma..."
+    },
+    "desc": {
+      "en": "Get HORI - Controlador D-Pad (izquierdo) Super Mario ( on Amazon at the best price with our affiliate link.",
+      "es": "HORI - Controlador D-Pad (izquierdo) Super Mario (...\n40,34 €",
+      "fr": "Obtenez HORI - Controlador D-Pad (izquierdo) Super Mario ( sur Amazon au meilleur prix.",
+      "it": "Ottieni HORI - Controlador D-Pad (izquierdo) Super Mario ( su Amazon al miglior preço.",
+      "pt": "Obtenha HORI - Controlador D-Pad (izquierdo) Super Mario ( na Amazon ao melhor preço.",
+      "de": "Holen Sie sich HORI - Controlador D-Pad (izquierdo) Super Mario ( bei Amazon zum besten Preis.",
+      "ja": "AmazonでHORI - Controlador D-Pad (izquierdo) Super Mario (vを最高の価格でお求めください。",
+      "ko": "아마존에서 HORI - Controlador D-Pad (izquierdo) Super Mario (을(를) 최적의 가격으로 만나보세요."
+    },
+    "price": "40,34 €",
+    "img": "https://m.media-amazon.com/images/I/51aavuHtn0L._AC_UL320_.jpg",
+    "url": "https://www.amazon.es/dp/B08L4BVGDN?tag=kelonio-21",
     "subcategory": "Novedades",
     "size": "Ninguno",
     "price_history": []
