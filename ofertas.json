@@ -1,55 +1,5 @@
 [
   {
-    "asin": "B0C2KLX764",
-    "title": "DragonShock - Mando compacto inalámbrico Bluetooth PopTop Rising Sun para Nintendo Switch y Switch OLED",
-    "old_price": "63.67 €",
-    "new_price": "44,45 €",
-    "discount": "30%",
-    "savings": "19.22 €",
-    "timestamp": "2026-06-10 02:00",
-    "url": "https://www.amazon.es/dp/B0C2KLX764?tag=kelonio-21"
-  },
-  {
-    "asin": "B002MUC4SM",
-    "title": "The Princess and the Frog (Nintendo Wii) [importación inglesa]",
-    "old_price": "21.53 €",
-    "new_price": "16,36 €",
-    "discount": "24%",
-    "savings": "5.17 €",
-    "timestamp": "2026-06-10 02:00",
-    "url": "https://www.amazon.es/dp/B002MUC4SM?tag=kelonio-21"
-  },
-  {
-    "asin": "B00B8QDNV8",
-    "title": "Nintendo Super Smash Bros., Wii U Standard Anglais",
-    "old_price": "88.17 €",
-    "new_price": "40,60 €",
-    "discount": "53%",
-    "savings": "47.57 €",
-    "timestamp": "2026-06-10 02:00",
-    "url": "https://www.amazon.es/dp/B00B8QDNV8?tag=kelonio-21"
-  },
-  {
-    "asin": "B0050SVH18",
-    "title": "Ninja Gaiden 3: Razors Edge",
-    "old_price": "36.20 €",
-    "new_price": "28,31 €",
-    "discount": "21%",
-    "savings": "7.89 €",
-    "timestamp": "2026-06-10 02:00",
-    "url": "https://www.amazon.es/dp/B0050SVH18?tag=kelonio-21"
-  },
-  {
-    "asin": "B00KOU3DGY",
-    "title": "Wii U - LEGO City Undercover U",
-    "old_price": "39.70 €",
-    "new_price": "20,55 €",
-    "discount": "48%",
-    "savings": "19.15 €",
-    "timestamp": "2026-06-10 02:00",
-    "url": "https://www.amazon.es/dp/B00KOU3DGY?tag=kelonio-21"
-  },
-  {
     "asin": "B0D42BGBV3",
     "title": "Leyendas Pokémon Z‑A - Switch 1",
     "old_price": "66.99 €",
@@ -978,5 +928,75 @@
     "savings": "6.04 €",
     "timestamp": "2026-06-13 11:17",
     "url": "https://www.amazon.es/dp/B00T57U810?tag=kelonio-21"
+  },
+  {
+    "asin": "B0DGGY4JPP",
+    "title": "Estuche de Transporte Compatible con New 2DS XL 2DS LL para New 3DS 3DS, Resistente Al Agua, Bolsa de Viaje Rígida con 8 Ranuras para Juegos, Bolsa Protectora para Consola",
+    "old_price": "21.03 €",
+    "new_price": "12,59 €",
+    "discount": "40%",
+    "savings": "8.44 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B0DGGY4JPP?tag=kelonio-21"
+  },
+  {
+    "asin": "B0DZ38JZ6P",
+    "title": "Nintendo - Tony Hawk’s Pro Skater 3 + 4 - Nintendo Switch (Disco)",
+    "old_price": "47.99 €",
+    "new_price": "21,99 €",
+    "discount": "54%",
+    "savings": "26.00 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B0DZ38JZ6P?tag=kelonio-21"
+  },
+  {
+    "asin": "B0C4SL5R23",
+    "title": "Mooroer Cubierta para Nintendo Switch/Switch OLED de Dock Funda Protectora / Accesorios Acrílico Carcasa con 16 Colores de Luz LED Antipolvo y Antiarañazos",
+    "old_price": "41.94 €",
+    "new_price": "35,56 €",
+    "discount": "15%",
+    "savings": "6.38 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B0C4SL5R23?tag=kelonio-21"
+  },
+  {
+    "asin": "B0DZD7QZ51",
+    "title": "Tony Hawk's Pro Skater 3+4 (PlayStation 5)",
+    "old_price": "43.20 €",
+    "new_price": "19,84 €",
+    "discount": "54%",
+    "savings": "23.36 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B0DZD7QZ51?tag=kelonio-21"
+  },
+  {
+    "asin": "B006ZTHFPS",
+    "title": "Mortal Kombat - Komplete Edition (Importado)",
+    "old_price": "58.52 €",
+    "new_price": "46,19 €",
+    "discount": "21%",
+    "savings": "12.33 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B006ZTHFPS?tag=kelonio-21"
+  },
+  {
+    "asin": "B072K4GBPP",
+    "title": "The Crew 2 - Xbox One [Importación inglesa]",
+    "old_price": "27.30 €",
+    "new_price": "21,85 €",
+    "discount": "19%",
+    "savings": "5.45 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B072K4GBPP?tag=kelonio-21"
+  },
+  {
+    "asin": "B07W6H9L5G",
+    "title": "Logitech G G923 Volante y Pedales de Carrera para Xbox Series X|S, Xbox One y PC, UK Inglés Enchufe de alimentación, Tipo G - Negro",
+    "old_price": "402.23 €",
+    "new_price": "309,72 €",
+    "discount": "22%",
+    "savings": "92.51 €",
+    "timestamp": "2026-06-13 11:40",
+    "url": "https://www.amazon.es/dp/B07W6H9L5G?tag=kelonio-21"
   }
 ]
