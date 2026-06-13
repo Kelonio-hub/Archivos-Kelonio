@@ -336,6 +336,10 @@ let heroItems = [];
 let heroIndex = 0;
 let favoritos = JSON.parse(localStorage.getItem('favoriteFiles')) || [];
 let recientes = JSON.parse(localStorage.getItem('recentFiles')) || [];
+let accessProductsData = []; 
+
+// Almacenador de la Vista Actual (para no perderte al cambiar de idioma)
+let currentView = { type: 'home', id: null }; 
 
 /* DOM Elements Hub */
 const fileSearch = document.getElementById('fileSearch');
@@ -380,7 +384,17 @@ function applyTheme(colorKey) {
   document.getElementById('aw-ytBtn').style.backgroundColor = theme.hex;
 }
 
-function getItemUniqueId(item, catName) { return `${catName}-${item.label?.es || item.label?.en || 'archivo'}`.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+// HELPER: Extrae la traducción blindada contra errores del JSON
+function getTranslatedText(obj, lang) {
+    if (!obj) return '';
+    if (typeof obj === 'string') return obj; // Si el JSON no tiene idiomas estructurados, devuelve el String
+    return obj[lang] || obj['en'] || obj['es'] || Object.values(obj)[0] || '';
+}
+
+// Las IDs de favoritos SIEMPRE se basan en Inglés para que nunca se rompan al cambiar idioma.
+function getItemUniqueId(item, catName) { 
+    return `${catName}-${getTranslatedText(item.label, 'en') || 'archivo'}`.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+}
 
 /* ================= LÓGICA DEL MURO DE ACCESO Y CADUCIDAD (24H) ================= */
 let youtubeDone = false;
@@ -392,13 +406,8 @@ function comprobarAccesoTemporal() {
     if (accessTimestamp) {
         const tiempoTranscurrido = Date.now() - parseInt(accessTimestamp);
         const veinticuatroHoras = 24 * 60 * 60 * 1000; 
-
-        if (tiempoTranscurrido < veinticuatroHoras) {
-            accessGranted = true;
-        } else {
-            localStorage.removeItem("lapresa_access_time");
-            accessGranted = false;
-        }
+        if (tiempoTranscurrido < veinticuatroHoras) { accessGranted = true; } 
+        else { localStorage.removeItem("lapresa_access_time"); accessGranted = false; }
     } else {
         accessGranted = false;
     }
@@ -441,7 +450,6 @@ const giftBtn = document.getElementById('aw-giftBtn');
 const productsDiv = document.getElementById('aw-products');
 
 async function cargarSorteoDinamicoAcceso() {
-    const t = translations[idiomaActual] || translations['en'];
     const baseURL = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
     const catFiles = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
     let allProducts = [];
@@ -459,24 +467,30 @@ async function cargarSorteoDinamicoAcceso() {
 
     if (allProducts.length >= 3) {
         allProducts.sort(() => 0.5 - Math.random());
-        const selected = allProducts.slice(0, 3);
-        productsDiv.innerHTML = '';
-        
-        selected.forEach(p => {
-            let title = p.label?.[idiomaActual] || p.label?.es || p.label?.en || p.label || 'Surprise';
-            let url = p.url?.es || p.url?.en || p.url || '#';
-            if(!url.includes('tag=')) { url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21'; }
-            let imgSrc = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-
-            productsDiv.innerHTML += `
-                <div class="aw-product" onclick="selectAccessProduct('${url}')">
-                    <img src="${imgSrc}" alt="${title}">
-                    <span>${title}</span>
-                    <div class="aw-choose-badge">${t.awChoose}</div>
-                </div>
-            `;
-        });
+        accessProductsData = allProducts.slice(0, 3);
+        renderSorteoAcceso(); // Renderiza usando datos globales
     }
+}
+
+function renderSorteoAcceso() {
+    if (accessProductsData.length === 0) return;
+    const t = translations[idiomaActual] || translations['en'];
+    productsDiv.innerHTML = '';
+    
+    accessProductsData.forEach(p => {
+        let title = getTranslatedText(p.label, idiomaActual) || 'Surprise';
+        let url = getTranslatedText(p.url, idiomaActual) || '#';
+        if(url !== '#' && !url.includes('tag=')) { url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21'; }
+        let imgSrc = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+
+        productsDiv.innerHTML += `
+            <div class="aw-product" onclick="selectAccessProduct('${url}')">
+                <img src="${imgSrc}" alt="${title}">
+                <span>${title}</span>
+                <div class="aw-choose-badge">${t.awChoose}</div>
+            </div>
+        `;
+    });
 }
 
 function selectAccessProduct(url){
@@ -491,9 +505,7 @@ function selectAccessProduct(url){
 }
 
 giftBtn.onclick = () => { 
-    if(!giveawayDone) {
-        productsDiv.style.display = (productsDiv.style.display === "grid") ? "none" : "grid"; 
-    }
+    if(!giveawayDone) { productsDiv.style.display = (productsDiv.style.display === "grid") ? "none" : "grid"; }
 };
 
 document.getElementById('enterBtn').onclick = () => {
@@ -529,17 +541,26 @@ function createLanguageSelector(){
   selector.addEventListener('change', e=>{
     idiomaActual = e.target.value; 
     translateInterface();
-    if (Object.keys(mediaFiles).length > 0) { renderConsoleButtons(); renderAllRows(); updateHero(); updateSuggestions(); }
+    renderSorteoAcceso(); // Traduce los productos del muro en tiempo real
+    
+    if (Object.keys(mediaFiles).length > 0) { 
+        renderConsoleButtons(); 
+        updateHero(); 
+        updateSuggestions(); 
+        
+        // Re-Renderiza de forma exacta donde estábamos
+        if (currentView.type === 'home') renderAllRows();
+        else if (currentView.type === 'console') showConsoleContent(currentView.id);
+        else if (currentView.type === 'favorites') showFavoritesContent();
+        else if (currentView.type === 'search') triggerSearch(currentView.id);
+    }
   });
 }
 
 function detectBrowserLanguage() {
   const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
-  if (translations[browserLang]) { 
-      idiomaActual = browserLang; 
-  } else {
-      idiomaActual = 'en'; 
-  }
+  if (translations[browserLang]) { idiomaActual = browserLang; } 
+  else { idiomaActual = 'en'; }
 }
 
 function translateInterface(){
@@ -563,7 +584,12 @@ function translateInterface(){
 
 function updateSuggestions(){
   datalist.innerHTML = ''; const set = new Set();
-  Object.values(mediaFiles).forEach(cat=>{ cat.forEach(item=>{ if(item.label?.[idiomaActual] || item.label?.en){ set.add(item.label[idiomaActual] || item.label.en); } }); });
+  Object.values(mediaFiles).forEach(cat=>{ 
+      cat.forEach(item=>{ 
+          let lbl = getTranslatedText(item.label, idiomaActual);
+          if(lbl) set.add(lbl); 
+      }); 
+  });
   set.forEach(label=>{ const opt = document.createElement('option'); opt.value = label; datalist.appendChild(opt); });
 }
 
@@ -579,19 +605,16 @@ function renderConsoleButtons(){
 
   const container = document.getElementById('consoleButtons'); container.innerHTML = '';
   
-  // Botones de las consolas generados dinámicamente
   Object.keys(mediaFiles).forEach(key=>{
     const btn = document.createElement('button'); btn.className = 'console-btn';
     btn.innerHTML = `<img src="${iconMap[key.toLowerCase()] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'}"><span>${key.toUpperCase()}</span>`;
     btn.onclick = ()=>showConsoleContent(key); container.appendChild(btn);
   });
   
-  // Botón Favoritos
   const favBtn = document.createElement('button'); favBtn.className = 'console-btn'; favBtn.id = 'mainFavoritesBtn';
   favBtn.innerHTML = `<div class="fav-icon-btn">★</div><span>${(translations[idiomaActual]||translations['en']).favorites}</span>`;
   favBtn.onclick = ()=>showFavoritesContent(); container.appendChild(favBtn);
 
-  // Botón Productos (Ko-fi Shop)
   const prodBtn = document.createElement('button');
   prodBtn.className = 'console-btn products-btn';
   const iconCart = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>`;
@@ -609,14 +632,14 @@ function setupHeroRotation(){
 
 function updateHero(){
   const item = heroItems[heroIndex]; if(!item) return;
-  const title = item.label?.[idiomaActual] || item.label?.en || item.label?.es || 'Nintendo Archive';
-  const desc = item.desc?.[idiomaActual] || item.desc?.en || item.desc?.es || '';
+  const title = getTranslatedText(item.label, idiomaActual) || 'Nintendo Archive';
+  const desc = getTranslatedText(item.desc, idiomaActual);
   const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+  
   document.getElementById('heroTitle').textContent = title;
   document.getElementById('heroDesc').textContent = desc;
   document.getElementById('heroBanner').style.backgroundImage = `url('${thumb}')`;
   
-  // Ahora el Hero también descarga directamente de forma segura
   document.getElementById('heroBtn').onclick = () => {
     registerRecentClick(item, item._category);
     window.open(item.url, '_blank', 'noopener,noreferrer');
@@ -641,7 +664,7 @@ async function loadContent(){
     renderSkeletons('sk-switch', 5); renderSkeletons('sk-3ds', 5);
     const response = await fetch('https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/data/consolas.json');
     mediaFiles = await response.json();
-    setTimeout(() => { renderConsoleButtons(); renderRecentRow(); renderAllRows(); setupHeroRotation(); updateSuggestions(); }, 1000);
+    setTimeout(() => { renderConsoleButtons(); renderAllRows(); setupHeroRotation(); updateSuggestions(); }, 1000);
   }catch(err){ console.error(err); alert('Error loading content.'); }
 }
 
@@ -649,7 +672,7 @@ function registerRecentClick(item, catName) {
   const uniqueId = getItemUniqueId(item, catName);
   recientes = recientes.filter(id => id !== uniqueId); recientes.unshift(uniqueId);
   if(recientes.length > 5) recientes.pop(); localStorage.setItem('recentFiles', JSON.stringify(recientes));
-  if(!fileSearch.value.trim() && !document.getElementById('favConsole')) { renderRecentRow(); }
+  if(currentView.type === 'home') { renderRecentRow(); }
 }
 
 function renderRecentRow() {
@@ -667,6 +690,7 @@ function renderRecentRow() {
 }
 
 function renderAllRows(){
+  currentView = { type: 'home', id: null };
   rowsContainer.innerHTML = ''; renderRecentRow(); 
   Object.keys(mediaFiles).forEach(catId=>{
     const row = document.createElement('div'); row.className = 'row';
@@ -679,6 +703,7 @@ function renderAllRows(){
 }
 
 function showConsoleContent(consoleId){
+  currentView = { type: 'console', id: consoleId };
   recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
   const row = document.createElement('div'); row.className = 'row';
   row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px;">${consoleId.toUpperCase()}</h2><div class="carousel" id="singleConsole" style="flex-wrap:wrap; overflow:visible;"></div>`;
@@ -687,6 +712,7 @@ function showConsoleContent(consoleId){
 }
 
 function showFavoritesContent(){
+  currentView = { type: 'favorites', id: null };
   recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
   const row = document.createElement('div'); row.className = 'row';
   row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px; display:flex; align-items:center; gap:15px;"><span style="color:var(--gold);">★</span>${(translations[idiomaActual]||translations['en']).favorites.toUpperCase()}</h2><div class="carousel" id="favConsole" style="flex-wrap:wrap; overflow:visible;"></div>`;
@@ -696,13 +722,31 @@ function showFavoritesContent(){
   if(!foundAny){ carousel.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">${(translations[idiomaActual]||translations['en']).noFavorites}</p>`; }
 }
 
+function triggerSearch(query) {
+  currentView = { type: 'search', id: query };
+  if(!query){ renderAllRows(); return; }
+  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<h2>Resultados</h2><div class="carousel" id="results" style="flex-wrap:wrap; overflow:visible;"></div>`;
+  rowsContainer.appendChild(row); const results = document.getElementById('results');
+  Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item=>{ 
+      let labelActual = getTranslatedText(item.label, idiomaActual).toLowerCase();
+      if(labelActual.includes(query)){ createCard(item, catId, results, false); } 
+  }); });
+}
+
+fileSearch.addEventListener('input', () => { triggerSearch(fileSearch.value.toLowerCase().trim()); });
+
 function createCard(item, catName, container, isMini = false){
   const t = translations[idiomaActual] || translations['en'];
   const card = document.createElement('div'); card.className = isMini ? 'card card-recent' : 'card';
   const uniqueId = getItemUniqueId(item, catName);
+  
+  // Utiliza blindaje absoluto para los Textos Dinámicos
+  const title = getTranslatedText(item.label, idiomaActual);
+  const desc = getTranslatedText(item.desc, idiomaActual);
+  
   const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-  const title = item.label?.[idiomaActual] || item.label?.en || item.label?.es || ''; 
-  const desc = item.desc?.[idiomaActual] || item.desc?.en || item.desc?.es || '';
   const isFav = favoritos.includes(uniqueId) ? 'is-fav' : ''; const iconFav = favoritos.includes(uniqueId) ? '★' : '☆';
   
   const iconPlay = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
@@ -734,17 +778,12 @@ function createCard(item, catName, container, isMini = false){
     if(document.getElementById('favConsole')){ showFavoritesContent(); }
   };
   
-  // Alerta si no hay vídeo
   card.querySelector('.watch-btn').onclick = (e)=>{ 
       e.stopPropagation(); 
-      if (item.videoYoutubeIds) { 
-          window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank', 'noopener,noreferrer'); 
-      } else {
-          alert(t.noVideo || "No hay video disponible.");
-      }
+      if (item.videoYoutubeIds) { window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank', 'noopener,noreferrer'); } 
+      else { alert(t.noVideo || "No hay video disponible."); }
   };
   
-  // Descarga inmediata segura
   card.querySelector('.download-btn').onclick = (e)=>{
     e.stopPropagation();
     registerRecentClick(item, catName);
@@ -756,19 +795,6 @@ function createCard(item, catName, container, isMini = false){
 
   container.appendChild(card);
 }
-
-fileSearch.addEventListener('input',()=>{
-  const query = fileSearch.value.toLowerCase().trim();
-  if(!query){ renderAllRows(); return; }
-  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
-  const row = document.createElement('div'); row.className = 'row';
-  row.innerHTML = `<h2>Resultados</h2><div class="carousel" id="results" style="flex-wrap:wrap; overflow:visible;"></div>`;
-  rowsContainer.appendChild(row); const results = document.getElementById('results');
-  Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item=>{ 
-      let labelActual = (item.label?.[idiomaActual] || item.label?.en || item.label?.es || '').toLowerCase();
-      if(labelActual.includes(query)){ createCard(item, catId, results, false); } 
-  }); });
-});
 
 async function verificarNotificacionesRadar() {
   const badge = document.getElementById('radarBadge'); if (!badge) return;
@@ -790,7 +816,7 @@ window.onscroll = function() {
 
 /* ================= INICIALIZACIÓN GENERAL ================= */
 window.onload = async () => {
-    comprobarAccesoTemporal(); // Comprueba si el acceso previo de 24h sigue vigente
+    comprobarAccesoTemporal();
     detectBrowserLanguage();
     initThemeDots();
     createLanguageSelector();
