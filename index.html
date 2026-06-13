@@ -86,15 +86,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #enterBtn:hover { transform: scale(1.02); filter: brightness(1.1); }
 .aw-status { margin-top: 15px; color: #aaa; font-size: 14px; font-weight: 600; }
 
-/* ================= POPUP DE DESCARGA ================= */
-#downloadGate{ position:fixed; inset:0; background:rgba(0,0,0,.85); display:flex; justify-content:center; align-items:center; z-index:99999; }
-.download-box{ background:#1b1b1b; padding:40px; border-radius:20px; text-align:center; width:90%; max-width:420px; border:1px solid rgba(255,255,255,.1); }
-.download-box h2{ margin-bottom:15px; font-size:2rem; }
-.download-box p{ color:#bbb; margin-bottom:25px; line-height: 1.5; }
-.download-box button{ width:100%; margin-top:10px; padding:14px; border:none; border-radius:10px; font-size:1.1rem; font-weight:700; cursor:pointer; transition: background 0.3s, transform 0.2s; }
-#subNowBtn{ background:var(--red); color:white; animation: pulseSub 1.5s infinite; }
-#subNowBtn:hover { filter: brightness(1.2); transform: scale(1.05); }
-
 /* ================= TOPBAR Y MAIN HUB ================= */
 #mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
 .topbar{
@@ -669,10 +660,9 @@ function updateHero(){
   document.getElementById('heroBtn').textContent = (translations[idiomaActual] || translations['en']).download;
   
   document.getElementById('heroBtn').onclick = () => {
-    const isAccessValid = checkAccessValidity();
     const catName = item._category || 'switch';
-    if(isAccessValid){ registerRecentClick(item, catName); window.open(item.url,'_blank','noopener,noreferrer'); return; }
-    showDownloadPopup(item, catName);
+    registerRecentClick(item, catName); 
+    window.open(item.url,'_blank','noopener,noreferrer'); 
   };
 }
 
@@ -831,74 +821,14 @@ function createCard(item, catName, container, isMini = false){
   
   card.querySelector('.download-btn').onclick = (e)=>{
     e.stopPropagation();
-    if(checkAccessValidity()){ registerRecentClick(item, catName); window.open(item.url, '_blank', 'noopener,noreferrer'); return; }
-    showDownloadPopup(item, catName);
+    registerRecentClick(item, catName); 
+    window.open(item.url, '_blank', 'noopener,noreferrer');
   };
   
   card.querySelector('.discord-btn').onclick = (e)=>{ e.stopPropagation(); window.open(discordLink, '_blank', 'noopener,noreferrer'); };
   card.querySelector('.donate-btn').onclick = (e)=>{ e.stopPropagation(); window.open(kofiLink, '_blank', 'noopener,noreferrer'); };
 
   container.appendChild(card);
-}
-
-/* ================= LÓGICA POPUP DESCARGAS ================= */
-function checkAccessValidity() {
-  const cycleState = localStorage.getItem('downloadCycleState') || '0';
-  if (cycleState === '2') {
-    const accessGrantedTime = localStorage.getItem('accessGrantedTime');
-    if (accessGrantedTime && (Date.now() - parseInt(accessGrantedTime) < (3 * 60 * 60 * 1000))) {
-      return true; 
-    }
-    localStorage.setItem('downloadCycleState', '0');
-    localStorage.removeItem('accessGrantedTime');
-  }
-  return false; 
-}
-
-function showDownloadPopup(item, catName){
-  const t = translations[idiomaActual] || translations['en'];
-  const cycleState = localStorage.getItem('downloadCycleState') || '0';
-  
-  let targetUrl = 'https://www.youtube.com/@Kelonio3DS?sub_confirmation=1';
-  let btnText = t.subBtn;
-
-  if (cycleState === '1') {
-    targetUrl = 'https://www.youtube.com/@Kelonio3DS/join';
-    btnText = t.joinBtn || "Unirme (Membresía)";
-  }
-
-  const popup = document.createElement('div');
-  popup.innerHTML = `<div id="downloadGate"><div class="download-box"><h2>${t.unlockTitle}</h2><p>${t.unlockDesc}</p><button id="subNowBtn">${btnText}</button></div></div>`;
-  document.body.appendChild(popup);
-
-  const subBtn = document.getElementById('subNowBtn');
-  subBtn.onclick = () => {
-    subBtn.disabled = true;
-    window.open(targetUrl, '_blank');
-
-    const box = popup.querySelector('.download-box');
-    box.innerHTML = `<h2>${t.waitingTitle}</h2><p>${t.waitingDesc}</p>`;
-
-    // El retraso de 60 segundos (para la comprobación)
-    setTimeout(() => {
-      registerRecentClick(item, catName);
-      
-      box.innerHTML = `<h2 style="color:#2ecc71;">${t.readyTitle}</h2><p>${t.readyDesc}</p><button id="finalDownloadBtn" style="background:#2ecc71; color:white; margin-top:15px; animation: pulseSub 1.5s infinite;">${t.readyBtn}</button>`;
-      
-      document.getElementById('finalDownloadBtn').onclick = () => { 
-        window.open(item.url, '_blank', 'noopener,noreferrer'); 
-        
-        if (cycleState === '0') {
-          localStorage.setItem('downloadCycleState', '1');
-        } else if (cycleState === '1') {
-          localStorage.setItem('downloadCycleState', '2');
-          localStorage.setItem('accessGrantedTime', Date.now().toString());
-        }
-        
-        popup.remove(); 
-      };
-    }, 60000); 
-  };
 }
 
 /* ================= RADAR Y OTRAS UTILIDADES ================= */
