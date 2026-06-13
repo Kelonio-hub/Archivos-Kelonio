@@ -132,6 +132,9 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .console-btn span{ color:white; letter-spacing:.5px; }
 .console-btn img{ width:18px; height:18px; object-fit:contain; }
 .console-btn .fav-icon-btn { font-size: 14px; color: var(--gold); width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; text-shadow: 0 0 8px rgba(255,204,0,0.5); }
+.products-btn { background: rgba(var(--glow-rgb), 0.1); border-color: rgba(var(--glow-rgb), 0.5); }
+.products-btn:hover { background: rgba(var(--glow-rgb), 0.4); }
+.products-btn .fav-icon-btn { color: white; text-shadow: none; }
 
 /* BOTÓN SUBIR ARRIBA */
 #backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9999; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
@@ -165,13 +168,16 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .card-info strong{ display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; font-size:17px; white-space: normal; }
 .card-info p{ font-size:14px; color:#ccc; line-height:1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
+/* BOTONES DE LA TARJETA */
 .card-actions { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px 15px 15px; gap: 8px; margin-top: auto; }
 .action-btn { padding: 10px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.2s; color: white; display: flex; align-items: center; justify-content: center; }
 .action-btn:hover { transform: translateY(-3px); filter: brightness(1.3); }
 .action-btn > svg, .action-btn > img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
 
-.watch-btn { background: #e50914; grid-column: span 2; } 
-.download-btn { background: var(--accent); grid-column: span 2; }
+.watch-btn { background: #e50914; } 
+.download-btn { background: var(--accent); }
+.discord-btn { background: var(--discord); } 
+.donate-btn { background: var(--green); }
 
 .card.card-recent{ min-width:210px; width: 210px; }
 .card.card-recent img{ height: 120px; }
@@ -290,31 +296,31 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 /* ================= TRADUCCIONES ================= */
 const translations = {
 es: {
-    title: "Archivos Nintendo | La Presa", search: "Buscar archivos...", favorites: "Favoritos", noFavorites: "Aún no has añadido favoritos.", recent: "Vistos Recientemente", 
+    title: "Archivos Nintendo | La Presa", search: "Buscar archivos...", favorites: "Favoritos", noFavorites: "Aún no has añadido favoritos.", recent: "Vistos Recientemente", products: "Productos", discord: "Discord", donate: "Donar",
     awSubtitle: "Completa los pasos para acceder.", awYtBtn: "⬜ Suscribirse al canal", awYtBtnVerif: "⏳ Verificando en segundo plano...", awYtBtnDone: "✅ Canal visitado", awGiftBtn: "⬜ Participar en el sorteo", awGiftBtnDone: "✅ Sorteo registrado", awLoading: "Cargando productos...", awChoose: "Elegir", awCounter: "Acceso {x} / 2", awLocked: "🔒 Acceso bloqueado", awUnlocked: "✅ Acceso desbloqueado", awEnter: "🚀 ENTRAR A LA WEB", watch: "Ver", download: "Descargar"
 },
 en: {
-    title: "Nintendo Files | La Presa", search: "Search files...", favorites: "Favorites", noFavorites: "No favorites added yet.", recent: "Recently Viewed", 
+    title: "Nintendo Files | La Presa", search: "Search files...", favorites: "Favorites", noFavorites: "No favorites added yet.", recent: "Recently Viewed", products: "Products", discord: "Discord", donate: "Donate",
     awSubtitle: "Complete the steps to gain access.", awYtBtn: "⬜ Subscribe to the channel", awYtBtnVerif: "⏳ Verifying in the background...", awYtBtnDone: "✅ Channel visited", awGiftBtn: "⬜ Enter the giveaway", awGiftBtnDone: "✅ Giveaway registered", awLoading: "Loading products...", awChoose: "Choose", awCounter: "Access {x} / 2", awLocked: "🔒 Access locked", awUnlocked: "✅ Access unlocked", awEnter: "🚀 ENTER THE WEBSITE", watch: "Watch", download: "Download"
 },
 fr: {
-    title: "Fichiers Nintendo | La Presa", search: "Rechercher des fichiers...", favorites: "Favoris", noFavorites: "Aucun favori ajouté pour le moment.", recent: "Vus Récemment", 
+    title: "Fichiers Nintendo | La Presa", search: "Rechercher des fichiers...", favorites: "Favoris", noFavorites: "Aucun favori ajouté pour le moment.", recent: "Vus Récemment", products: "Produits", discord: "Discord", donate: "Faire un don",
     awSubtitle: "Complétez les étapes pour y accéder.", awYtBtn: "⬜ S'abonner à la chaîne", awYtBtnVerif: "⏳ Vérification en arrière-plan...", awYtBtnDone: "✅ Chaîne visitée", awGiftBtn: "⬜ Participer au tirage au sort", awGiftBtnDone: "✅ Participation enregistrée", awLoading: "Chargement des produits...", awChoose: "Choisir", awCounter: "Accès {x} / 2", awLocked: "🔒 Accès bloqué", awUnlocked: "✅ Accès débloqué", awEnter: "🚀 ENTRER SUR LE SITE", watch: "Voir", download: "Télécharger"
 },
 de: {
-    title: "Nintendo-Dateien | La Presa", search: "Dateien suchen...", favorites: "Favoriten", noFavorites: "Noch keine Favoriten hinzugefügt.", recent: "Zuletzt Angesehen", 
+    title: "Nintendo-Dateien | La Presa", search: "Dateien suchen...", favorites: "Favoriten", noFavorites: "Noch keine Favoriten hinzugefügt.", recent: "Zuletzt Angesehen", products: "Produkte", discord: "Discord", donate: "Spenden",
     awSubtitle: "Schließen Sie die Schritte ab, um Zugriff zu erhalten.", awYtBtn: "⬜ Kanal abonnieren", awYtBtnVerif: "⏳ Überprüfung im Hintergrund...", awYtBtnDone: "✅ Kanal besucht", awGiftBtn: "⬜ Am Gewinnspiel teilnehmen", awGiftBtnDone: "✅ Gewinnspiel registriert", awLoading: "Produkte werden geladen...", awChoose: "Wählen", awCounter: "Zugriff {x} / 2", awLocked: "🔒 Zugriff gesperrt", awUnlocked: "✅ Zugriff entsperrt", awEnter: "🚀 WEBSEITE BETRETEN", watch: "Ansehen", download: "Download"
 },
 it: {
-    title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito aggiunto finora.", recent: "Visti di Recente", 
+    title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito aggiunto finora.", recent: "Visti di Recente", products: "Prodotti", discord: "Discord", donate: "Dona",
     awSubtitle: "Completa i passaggi per accedere.", awYtBtn: "⬜ Iscriviti al canale", awYtBtnVerif: "⏳ Verifica in background...", awYtBtnDone: "✅ Canale visitato", awGiftBtn: "⬜ Partecipa al sorteggio", awGiftBtnDone: "✅ Sorteggio registrato", awLoading: "Caricamento prodotti...", awChoose: "Scegli", awCounter: "Accesso {x} / 2", awLocked: "🔒 Accesso bloccato", awUnlocked: "✅ Accesso sbloccato", awEnter: "🚀 ENTRA NEL SITO", watch: "Guarda", download: "Scarica"
 },
 ja: {
-    title: "任天堂アーカイブ | La Presa", search: "ファイルを検索...", favorites: "お気に入り", noFavorites: "お気に入りはまだ追加されていません。", recent: "最近見たファイル", 
+    title: "任天堂アーカイブ | La Presa", search: "ファイルを検索...", favorites: "お気に入り", noFavorites: "お気に入りはまだ追加されていません。", recent: "最近見たファイル", products: "製品", discord: "Discord", donate: "寄付",
     awSubtitle: "アクセスするには手順を完了してください。", awYtBtn: "⬜ チャンネルを登録する", awYtBtnVerif: "⏳ バックグラウンドで確認中...", awYtBtnDone: "✅ チャンネル訪問済み", awGiftBtn: "⬜ 抽選に参加する", awGiftBtnDone: "✅ 抽選登録完了", awLoading: "商品を読み込み中...", awChoose: "選択", awCounter: "アクセス {x} / 2", awLocked: "🔒 アクセス制限中", awUnlocked: "✅ アクセス解除", awEnter: "🚀 ウェブサイトに入る", watch: "見る", download: "ダウンロード"
 },
 ko: {
-    title: "닌텐도 아카이브 | La Presa", search: "파일 검색...", favorites: "즐겨찾기", noFavorites: "추가된 즐겨찾기가 없습니다.", recent: "최근에 본 파일", 
+    title: "닌텐도 아카이브 | La Presa", search: "파일 검색...", favorites: "즐겨찾기", noFavorites: "추가된 즐겨찾기가 없습니다.", recent: "최근에 본 파일", products: "제품", discord: "Discord", donate: "기부",
     awSubtitle: "액세스하려면 단계를 완료하세요.", awYtBtn: "⬜ 채널 구독하기", awYtBtnVerif: "⏳ 백그라운드에서 확인 중...", awYtBtnDone: "✅ 채널 방문 완료", awGiftBtn: "⬜ 경품 추첨 참여하기", awGiftBtnDone: "✅ 추첨 등록 완료", awLoading: "상품 로딩 중...", awChoose: "선택", awCounter: "액세스 {x} / 2", awLocked: "🔒 액세스 차단됨", awUnlocked: "✅ 액세스 잠금 해제됨", awEnter: "🚀 웹사이트 입장", watch: "보기", download: "다운로드"
 }
 };
@@ -377,17 +383,15 @@ let youtubeDone = false;
 let giveawayDone = false;
 let accessGranted = false;
 
-// Verificación estricta de 24 horas del acceso general
 function comprobarAccesoTemporal() {
     const accessTimestamp = localStorage.getItem("lapresa_access_time");
     if (accessTimestamp) {
         const tiempoTranscurrido = Date.now() - parseInt(accessTimestamp);
-        const veinticuatroHoras = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
+        const veinticuatroHoras = 24 * 60 * 60 * 1000; 
 
         if (tiempoTranscurrido < veinticuatroHoras) {
             accessGranted = true;
         } else {
-            // El acceso ha caducado (pasaron las 24 horas)
             localStorage.removeItem("lapresa_access_time");
             accessGranted = false;
         }
@@ -411,7 +415,6 @@ function updateAccessProgress(){
     }
 }
 
-// Tarea 1: Suscripción a YouTube con TEMPORIZADOR INVISIBLE
 const ytBtn = document.getElementById('aw-ytBtn');
 ytBtn.onclick = () => {
     const t = translations[idiomaActual] || translations['en'];
@@ -421,7 +424,6 @@ ytBtn.onclick = () => {
     ytBtn.disabled = true;
     ytBtn.classList.add('is-verifying');
 
-    // 40 segundos en segundo plano, sin mostrar números al usuario
     setTimeout(() => {
         youtubeDone = true;
         ytBtn.innerHTML = t.awYtBtnDone;
@@ -431,7 +433,6 @@ ytBtn.onclick = () => {
     }, 40000);
 };
 
-// Tarea 2: Sorteo Dinámico de 3 Tarjetas
 const giftBtn = document.getElementById('aw-giftBtn');
 const productsDiv = document.getElementById('aw-products');
 
@@ -492,7 +493,6 @@ giftBtn.onclick = () => {
 };
 
 document.getElementById('enterBtn').onclick = () => {
-    // Al pulsar Entrar se guarda el momento exacto en milisegundos para controlar las 24 Horas
     localStorage.setItem("lapresa_access_time", Date.now().toString());
     iniciarAppPrincipal();
 };
@@ -563,17 +563,37 @@ function updateSuggestions(){
   set.forEach(label=>{ const opt = document.createElement('option'); opt.value = label; datalist.appendChild(opt); });
 }
 
+/* ================= CATEGORIES Y BOTONES TOPBAR ================= */
 function renderConsoleButtons(){
-  const iconMap = { switch:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3ds':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png' };
+  const iconMap = {
+    switch:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
+    '3ds':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    nds:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    wii:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
+    SD:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png'
+  };
+
   const container = document.getElementById('consoleButtons'); container.innerHTML = '';
+  
+  // Botones de las consolas
   Object.keys(mediaFiles).forEach(key=>{
     const btn = document.createElement('button'); btn.className = 'console-btn';
     btn.innerHTML = `<img src="${iconMap[key] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'}"><span>${key.toUpperCase()}</span>`;
     btn.onclick = ()=>showConsoleContent(key); container.appendChild(btn);
   });
+  
+  // Botón Favoritos
   const favBtn = document.createElement('button'); favBtn.className = 'console-btn'; favBtn.id = 'mainFavoritesBtn';
   favBtn.innerHTML = `<div class="fav-icon-btn">★</div><span>${(translations[idiomaActual]||translations['en']).favorites}</span>`;
   favBtn.onclick = ()=>showFavoritesContent(); container.appendChild(favBtn);
+
+  // Botón Productos (Ko-fi Shop)
+  const prodBtn = document.createElement('button');
+  prodBtn.className = 'console-btn products-btn';
+  const iconCart = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>`;
+  prodBtn.innerHTML = `<div class="fav-icon-btn">${iconCart}</div><span>${(translations[idiomaActual]||translations['en']).products}</span>`;
+  prodBtn.onclick = () => window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_blank');
+  container.appendChild(prodBtn);
 }
 
 function setupHeroRotation(){
@@ -644,4 +664,133 @@ function renderRecentRow() {
 
 function renderAllRows(){
   rowsContainer.innerHTML = ''; renderRecentRow(); 
-  Object.keys(
+  Object.keys(mediaFiles).forEach(catId=>{
+    const row = document.createElement('div'); row.className = 'row';
+    row.innerHTML = `<h2>${catId.toUpperCase()}</h2><div class="carousel-wrapper"><button class="carousel-arrow left">‹</button><div class="carousel" id="car-${catId}"></div><button class="carousel-arrow right">›</button></div>`;
+    rowsContainer.appendChild(row); const carousel = document.getElementById(`car-${catId}`);
+    mediaFiles[catId].forEach(item=>{ createCard(item, catId, carousel, false); });
+    row.querySelector('.left').onclick = ()=>{ carousel.scrollBy({ left:-700, behavior:'smooth' }); };
+    row.querySelector('.right').onclick = ()=>{ carousel.scrollBy({ left:700, behavior:'smooth' }); };
+  });
+}
+
+function showConsoleContent(consoleId){
+  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px;">${consoleId.toUpperCase()}</h2><div class="carousel" id="singleConsole" style="flex-wrap:wrap; overflow:visible;"></div>`;
+  rowsContainer.appendChild(row); const carousel = document.getElementById('singleConsole');
+  mediaFiles[consoleId].forEach(item=>{ createCard(item, consoleId, carousel, false); });
+}
+
+function showFavoritesContent(){
+  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px; display:flex; align-items:center; gap:15px;"><span style="color:var(--gold);">★</span>${(translations[idiomaActual]||translations['en']).favorites.toUpperCase()}</h2><div class="carousel" id="favConsole" style="flex-wrap:wrap; overflow:visible;"></div>`;
+  rowsContainer.appendChild(row); const carousel = document.getElementById('favConsole');
+  let foundAny = false;
+  Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item => { if(favoritos.includes(getItemUniqueId(item, catId))){ createCard(item, catId, carousel, false); foundAny = true; } }); });
+  if(!foundAny){ carousel.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">${(translations[idiomaActual]||translations['en']).noFavorites}</p>`; }
+}
+
+function createCard(item, catName, container, isMini = false){
+  const t = translations[idiomaActual] || translations['en'];
+  const card = document.createElement('div'); card.className = isMini ? 'card card-recent' : 'card';
+  const uniqueId = getItemUniqueId(item, catName);
+  const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+  const title = item.label?.[idiomaActual] || item.label?.en || item.label?.es || ''; 
+  const desc = item.desc?.[idiomaActual] || item.desc?.en || item.desc?.es || '';
+  const isFav = favoritos.includes(uniqueId) ? 'is-fav' : ''; const iconFav = favoritos.includes(uniqueId) ? '★' : '☆';
+  
+  const iconPlay = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+  const iconZip = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+  const iconDiscord = `<svg viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-19.32-72.15ZM42.56,65.36c-5.36,0-9.82-5.06-9.82-11.27s4.35-11.27,9.82-11.27c5.5,0,9.9,5.14,9.82,11.27,0,6.21-4.32,11.27-9.82,11.27Zm42,0c-5.36,0-9.82-5.06-9.82-11.27s4.35-11.27,9.82-11.27c5.5,0,9.9,5.14,9.82,11.27,0,6.21-4.32,11.27-9.82,11.27Z"/></svg>`;
+  const iconDonate = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`;
+
+  let discordLink = ''; let kofiLink = '';
+  if (['wii', 'wiiu', 'wii mini'].includes(catName.toLowerCase())) { discordLink = 'https://discord.com/invite/xHg7XaYJvK'; kofiLink = 'https://ko-fi.com/wiide'; }
+  else { discordLink = 'https://discord.gg/8Fv8GDg'; kofiLink = 'https://ko-fi.com/lapresa'; }
+  
+  card.innerHTML = `
+    <button class="fav-toggle-btn ${isFav}">${iconFav}</button>
+    <img src="${thumb}" loading="lazy">
+    <div class="card-info"><strong>${title}</strong><p>${desc}</p></div>
+    <div class="card-actions">
+      <button class="action-btn watch-btn" title="${t.watch}">${iconPlay}</button>
+      <button class="action-btn download-btn" title="${t.download}">${iconZip}</button>
+      <button class="action-btn discord-btn" title="${t.discord}">${iconDiscord}</button>
+      <button class="action-btn donate-btn" title="${t.donate}">${iconDonate}</button>
+    </div>
+  `;
+
+  card.querySelector('.fav-toggle-btn').onclick = (e)=>{
+    e.stopPropagation();
+    if(favoritos.includes(uniqueId)){ favoritos = favoritos.filter(id => id !== uniqueId); e.target.classList.remove('is-fav'); e.target.textContent = '☆'; } 
+    else { favoritos.push(uniqueId); e.target.classList.add('is-fav'); e.target.textContent = '★'; }
+    localStorage.setItem('favoriteFiles', JSON.stringify(favoritos));
+    if(document.getElementById('favConsole')){ showFavoritesContent(); }
+  };
+  card.querySelector('.watch-btn').onclick = (e)=>{ e.stopPropagation(); if (item.videoYoutubeIds) { window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank'); }};
+  
+  // Descarga inmediata
+  card.querySelector('.download-btn').onclick = (e)=>{
+    e.stopPropagation();
+    registerRecentClick(item, catName);
+    window.open(item.url, '_blank'); 
+  };
+  
+  card.querySelector('.discord-btn').onclick = (e)=>{ e.stopPropagation(); window.open(discordLink, '_blank'); };
+  card.querySelector('.donate-btn').onclick = (e)=>{ e.stopPropagation(); window.open(kofiLink, '_blank'); };
+
+  container.appendChild(card);
+}
+
+fileSearch.addEventListener('input',()=>{
+  const query = fileSearch.value.toLowerCase().trim();
+  if(!query){ renderAllRows(); return; }
+  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
+  const row = document.createElement('div'); row.className = 'row';
+  row.innerHTML = `<h2>Resultados</h2><div class="carousel" id="results" style="flex-wrap:wrap; overflow:visible;"></div>`;
+  rowsContainer.appendChild(row); const results = document.getElementById('results');
+  Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item=>{ 
+      let labelActual = (item.label?.[idiomaActual] || item.label?.en || item.label?.es || '').toLowerCase();
+      if(labelActual.includes(query)){ createCard(item, catId, results, false); } 
+  }); });
+});
+
+async function verificarNotificacionesRadar() {
+  const badge = document.getElementById('radarBadge'); if (!badge) return;
+  try {
+    const response = await fetch('ultimas_noticias.json'); if(!response.ok) return;
+    const noticias = await response.json();
+    if(noticias.length > 0) {
+      const ultimaFechaNoticia = new Date(noticias[0].date).getTime();
+      const ultimaVisitaRadar = localStorage.getItem('ultimaVisitaRadar');
+      if(!ultimaVisitaRadar || ultimaFechaNoticia > parseInt(ultimaVisitaRadar)) { badge.style.display = 'block'; }
+    }
+  } catch (error) { console.log("Sin radar actual."); }
+}
+function abrirRadar() { localStorage.setItem('ultimaVisitaRadar', Date.now().toString()); window.open('actualizaciones.html', '_self'); }
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; }
+};
+
+/* ================= INICIALIZACIÓN GENERAL ================= */
+window.onload = async () => {
+    comprobarAccesoTemporal(); // Comprueba si el acceso previo de 24h sigue vigente
+    detectBrowserLanguage();
+    initThemeDots();
+    createLanguageSelector();
+    translateInterface();
+
+    cargarSorteoDinamicoAcceso();
+
+    if (accessGranted) {
+        iniciarAppPrincipal();
+    } else {
+        document.getElementById('accessWall').style.display = 'flex';
+    }
+};
+</script>
+</body>
+</html>
