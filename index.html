@@ -432,13 +432,19 @@ let giveawayDone = false;
 let accessGranted = false;
 
 function comprobarAccesoTemporal() {
-    const accessTimestamp = localStorage.getItem("lapresa_access_time");
-    if (accessTimestamp) {
-        const tiempoTranscurrido = Date.now() - parseInt(accessTimestamp);
-        const veinticuatroHoras = 24 * 60 * 60 * 1000; 
-        if (tiempoTranscurrido < veinticuatroHoras) { accessGranted = true; } 
-        else { localStorage.removeItem("lapresa_access_time"); accessGranted = false; }
-    } else { accessGranted = false; }
+    const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+    
+    // Calculamos el token válido para el día de hoy
+    const fechaActual = new Date().toDateString();
+    const tokenValidoHoy = btoa("lapresa_secreto_" + fechaActual);
+    
+    if (tokenGuardado === tokenValidoHoy) {
+        accessGranted = true; 
+    } else { 
+        // Si no hay token o es de un día anterior, denegamos el acceso
+        localStorage.removeItem("_lp_auth_tk");
+        accessGranted = false; 
+    }
 }
 
 function updateAccessProgress(){
@@ -542,12 +548,15 @@ function selectAccessProduct(url){
     updateAccessProgress();
 }
 
-giftBtn.onclick = () => { 
-    if(!giveawayDone) { productsDiv.style.display = (productsDiv.style.display === "grid") ? "none" : "grid"; }
-};
-
 document.getElementById('enterBtn').onclick = () => {
-    localStorage.setItem("lapresa_access_time", Date.now().toString());
+    // 1. Generamos un Token basado en la fecha actual (cambia cada día)
+    const fechaActual = new Date().toDateString(); 
+    
+    // btoa() codifica el texto a Base64
+    const tokenGenerado = btoa("lapresa_secreto_" + fechaActual); 
+    
+    // Guardamos el token ofuscado
+    localStorage.setItem("_lp_auth_tk", tokenGenerado);
     iniciarAppPrincipal();
 };
 
@@ -567,13 +576,27 @@ function iniciarAppPrincipal() {
 /* ================= CARGA DE CONTENIDO Y CATEGORÍAS ================= */
 async function loadContent(){
   try{
+    // Solo permitimos la carga si pasaron la barrera del token
+    const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+    const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
+    
+    if (tokenGuardado !== tokenValidoHoy) {
+        alert("Acceso denegado. Completa los pasos nuevamente.");
+        location.reload();
+        return;
+    }
+
     rowsContainer.innerHTML = `
       <div class="row"><h2>SWITCH</h2><div class="carousel" id="sk-switch"></div></div>
       <div class="row"><h2>3DS</h2><div class="carousel" id="sk-3ds"></div></div>
     `;
     renderSkeletons('sk-switch', 5); renderSkeletons('sk-3ds', 5);
     
-    const response = await fetch('https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/data/consolas.json');
+    /* URL de GitHub ofuscada en Base64 para que no sea visible a simple vista en el código */
+    const urlCodificada = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tlbG9uaW8taHViL0xpbmstM0RTL21haW4vZGF0YS9jb25zb2xhcy5qc29u"; 
+    const urlReal = atob(urlCodificada);
+
+    const response = await fetch(urlReal);
     mediaFiles = await response.json();
     setTimeout(() => { renderConsoleButtons(); renderRecentRow(); renderAllRows(); setupHeroRotation(); updateSuggestions(); }, 1000);
   }catch(err){ console.error(err); alert('Error loading content.'); }
