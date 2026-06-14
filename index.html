@@ -548,6 +548,10 @@ function selectAccessProduct(url){
     updateAccessProgress();
 }
 
+giftBtn.onclick = () => { 
+    if(!giveawayDone) { productsDiv.style.display = (productsDiv.style.display === "grid") ? "none" : "grid"; }
+};
+
 document.getElementById('enterBtn').onclick = () => {
     // 1. Generamos un Token basado en la fecha actual (cambia cada día)
     const fechaActual = new Date().toDateString(); 
