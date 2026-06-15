@@ -9,10 +9,11 @@
 <style>
 :root{
   --red:#e50914; 
-  --bg:#141414;
-  --glass:rgba(20,20,20,.78);
-  --glass-border:rgba(255,255,255,.08);
-  --accent:#00aaff;
+  --bg:#090b13; 
+  --card-bg:#1a1d29; 
+  --glass:rgba(26,29,41,.78);
+  --glass-border:rgba(255,255,255,.1);
+  --accent:#00e6e6;
   --gold:#ffcc00;
   --discord:#5865F2; 
   --kofi:#FF5E5B;    
@@ -20,12 +21,12 @@
   --glow-rgb: 229, 9, 20;
 }
 *{ margin:0; padding:0; box-sizing:border-box; }
-body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; min-height: 100vh; }
+body{ font-family:'Segoe UI',sans-serif; background:var(--bg); color:white; overflow-x:hidden; min-height: 100vh; }
 
 /* ================= MURO DE ACCESO ESTILO DISNEY ================= */
 #accessWallOverlay {
     position: fixed; inset: 0; z-index: 99999999;
-    background: #090b13; /* --navy */
+    background: #090b13; 
     display: flex; justify-content: center; align-items: center;
     font-family: 'Segoe UI', system-ui, sans-serif;
     color: #f9f9f9;
@@ -43,28 +44,11 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     box-shadow: 0 0 60px rgba(0, 230, 230, 0.25);
 }
 
-.disney-logo-title {
-    font-size: 5.4rem;
-    font-weight: 900;
-    color: #ffffff;
-    margin-bottom: 20px;
-    letter-spacing: -3px;
-}
+.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
+.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
 
-.disney-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 35px;
-    opacity: 0.9;
-}
-
-.disney-progress-bar { 
-    height: 14px; background: #222; border-radius: 10px; 
-    margin: 30px 0; overflow: hidden; 
-}
-.disney-progress-fill { 
-    height: 100%; width: 0%; background: #00e6e6; /* --cyan */
-    transition: width 0.7s ease; 
-}
+.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
+.disney-progress-fill { height: 100%; width: 0%; background: #00e6e6; transition: width 0.7s ease; }
 
 .disney-step-btn { 
     width: 100%; padding: 18px; margin: 12px 0; 
@@ -77,110 +61,117 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .disney-step-done { background: #00e6e6 !important; color: #000 !important; cursor: default; }
 
 #disneyProductsContainer {
-    display: none;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 14px;
-    margin: 25px 0;
-    max-height: 280px;
-    overflow-y: auto;
+    display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto;
 }
-/* Scrollbar para los productos (opcional) */
 #disneyProductsContainer::-webkit-scrollbar { width: 6px; }
 #disneyProductsContainer::-webkit-scrollbar-thumb { background: #00e6e6; border-radius: 10px; }
 
 .disney-aw-product {
-    background: rgba(255,255,255,0.08);
-    border: 2px solid rgba(255,255,255,0.12);
-    border-radius: 16px;
-    padding: 12px;
-    cursor: pointer;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12);
+    border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s;
     display: flex; flex-direction: column; align-items: center; justify-content: space-between;
 }
-.disney-aw-product:hover {
-    transform: translateY(-6px);
-    border-color: #00e6e6;
-}
+.disney-aw-product:hover { transform: translateY(-6px); border-color: #00e6e6; }
 .disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
 .disney-aw-product span { font-size: 13.5px; font-weight: 600; margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; }
-.disney-choose-badge {
-    margin-top: 8px;
-    font-size: 11px;
-    background: #00e6e6;
-    color: #000;
-    padding: 4px 12px;
-    border-radius: 30px;
-    font-weight: 800;
-}
+.disney-choose-badge { margin-top: 8px; font-size: 11px; background: #00e6e6; color: #000; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
 
 
 /* ================= TOPBAR Y MAIN HUB ================= */
 #mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
 .topbar{
-  position:fixed; top:0; left:0; right:0; z-index:9999; background:rgba(0,0,0,.88); backdrop-filter:blur(16px);
-  display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; 
+  position:fixed; top:0; left:0; right:0; z-index:9999; 
+  background: linear-gradient(to bottom, rgba(9,11,19,0.95) 0%, transparent 100%); 
+  display:flex; justify-content:space-between; align-items:center; padding:15px 5%; gap: 10px; pointer-events: none;
 }
+.topbar > * { pointer-events: auto; }
 .logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; flex-shrink: 0; text-decoration: none;}
 .right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
 .config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
 .theme-dots-container{ display:flex; gap:5px; }
-.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(255,255,255,0.2); transition:transform .2s, border-color .2s; }
 .color-dot:hover{ transform:scale(1.3); }
 .color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
 
-#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
-#fileSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; }
-#fileSearch::placeholder{ color:#ccc; }
+#languageSelector{ background:rgba(26,29,41,.9); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+#fileSearch{ background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.05); color:white; width:190px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: 0.3s; }
+#fileSearch:focus { background:rgba(255,255,255,.15); border-color:var(--red); }
+#fileSearch::placeholder{ color:#aaa; }
 
-.console-buttons{ display:flex; gap:6px; flex-grow: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 5px 0; }
+/* ================= LAYOUT & HERO ================= */
+#mainApp{ display:block; }
+.hero{ min-height:60vh; padding-bottom: 60px; position:relative; display:flex; align-items:center; padding-left: 6%; padding-right: 6%; background-size:cover; background-position:center; transition:all .7s ease; }
+/* Efecto de viñeta Disney (laterales oscuros y degradado por debajo) */
+.hero::before{ content:''; position:absolute; inset:0; background: linear-gradient(to right, #090b13 10%, rgba(9,11,19,0.3) 60%, #090b13); z-index: 1;}
+.hero::after{ content:''; position:absolute; inset:0; background: linear-gradient(to top, #090b13 0%, transparent 40%); z-index:2; pointer-events:none; }
+.hero-content{ position:relative; z-index:3; max-width:700px; margin-top: 50px; }
+.hero h1{ font-size:3.8rem; margin-bottom:15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+.hero p{ font-size:1.15rem; color:#eee; margin-bottom:25px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
+.hero button{ border:none; background:var(--red); color:white; padding:15px 35px; border-radius:10px; font-size:1.05rem; font-weight:800; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(var(--glow-rgb), 0.4); }
+.hero button:hover{ transform: scale(1.05); box-shadow: 0 6px 20px rgba(var(--glow-rgb), 0.6); }
+
+/* ================= CONSOLE BUTTONS (DEBAJO DEL HERO) ================= */
+.console-buttons-container {
+    padding: 0 5%;
+    margin-top: -30px; 
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.console-buttons { 
+    display: flex; 
+    gap: 12px; 
+    overflow-x: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    padding: 10px 0; 
+    flex-wrap: nowrap; /* Evita que el botón baje de línea */
+    max-width: 100%; /* Asegura que respete el contenedor */
+}
 .console-buttons::-webkit-scrollbar { display: none; }
-.console-btn{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:6px 10px; display:flex; align-items:center; gap:6px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 11px; white-space: nowrap; flex-shrink: 0; }
-.console-btn:hover{ transform:scale(1.05); border-color:var(--red); background:rgba(var(--glow-rgb),.15); }
-.console-btn.fav-active-btn{ border-color:var(--gold); background:rgba(255,204,0,.15); }
+.console-btn{ background:rgba(26,29,41,.85); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:10px 18px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 13px; white-space: nowrap; flex-shrink: 0; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.console-btn:hover{ transform:scale(1.05); border-color:var(--red); box-shadow: 0 0 15px rgba(var(--glow-rgb),.4); }
+.console-btn.fav-active-btn{ border-color:var(--gold); }
 .console-btn span{ color:white; letter-spacing:.5px; }
-.console-btn img{ width:18px; height:18px; object-fit:contain; }
-.console-btn .fav-icon-btn { font-size: 14px; color: var(--gold); width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; text-shadow: 0 0 8px rgba(255,204,0,0.5); }
-.products-btn { background: rgba(var(--glow-rgb), 0.1); border-color: rgba(var(--glow-rgb), 0.5); }
+.console-btn img{ width:22px; height:22px; object-fit:contain; }
+.console-btn .fav-icon-btn { font-size: 18px; color: var(--gold); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; text-shadow: 0 0 8px rgba(255,204,0,0.5); }
+.products-btn { background: rgba(var(--glow-rgb), 0.15); border-color: rgba(var(--glow-rgb), 0.5); }
 .products-btn:hover { background: rgba(var(--glow-rgb), 0.4); }
 .products-btn .fav-icon-btn { color: white; text-shadow: none; }
+
+/* Botón flotante Radar */
+.top-radar-btn { background:transparent; border:none; cursor: pointer; padding: 4px; position:relative; display: flex; align-items: center; transition: transform 0.2s; }
+.top-radar-btn:hover { transform: scale(1.1); }
+.top-radar-btn span { position:absolute; top:0; right:0; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
 
 #backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9999; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
 #backToTopBtn:hover { transform: scale(1.1); }
 
-/* ================= LAYOUT ================= */
-#mainApp{ display:block; padding-top:70px; }
-.hero{ height:55vh; position:relative; display:flex; align-items:center; padding:0 6%; background-size:cover; background-position:center; transition:all .7s ease; }
-.hero::before{ content:''; position:absolute; inset:0; background: linear-gradient(to right, rgba(20,20,20,.96) 15%, rgba(20,20,20,.4) 60%, rgba(20,20,20,.96)); }
-.hero-content{ position:relative; z-index:2; max-width:700px; }
-.hero h1{ font-size:3.5rem; margin-bottom:15px; }
-.hero p{ font-size:1.15rem; color:#ddd; margin-bottom:25px; }
-.hero button{ border:none; background:var(--accent); color:white; padding:15px 35px; border-radius:10px; font-size:1.05rem; font-weight:800; cursor:pointer; transition: background 0.3s, filter 0.3s; }
-.hero button:hover{ filter: brightness(1.2); }
-
-.row{ padding:25px 5%; }
-.row h2{ margin-bottom:20px; font-size:2rem; }
-.carousel{ display:flex; gap:16px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:10px; }
+/* ================= CAROUSEL & CARDS ================= */
+.row{ padding:25px 5%; position: relative; z-index: 5; }
+.row h2{ margin-bottom:20px; font-size:1.8rem; letter-spacing: 1px; color: #f9f9f9; }
+.carousel{ display:flex; gap:16px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:15px; }
 .carousel::-webkit-scrollbar{ display:none; }
 .carousel-wrapper{ position:relative; }
-.carousel-arrow{ position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border:none; border-radius:50%; background:rgba(0,0,0,.7); color:white; font-size:28px; cursor:pointer; z-index:50; backdrop-filter:blur(10px); transition:.25s; }
-.carousel-arrow:hover{ background:var(--red); transform:translateY(-50%) scale(1.1); }
-.carousel-arrow.left{ left:-18px; }
-.carousel-arrow.right{ right:-18px; }
+.carousel-arrow{ position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border:1px solid rgba(255,255,255,0.1); border-radius:50%; background:rgba(26,29,41,.8); color:white; font-size:28px; cursor:pointer; z-index:50; backdrop-filter:blur(10px); transition:.25s; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+.carousel-arrow:hover{ background:var(--red); border-color:var(--red); transform:translateY(-50%) scale(1.1); box-shadow: 0 0 15px rgba(var(--glow-rgb),0.5); }
+.carousel-arrow.left{ left:-20px; }
+.carousel-arrow.right{ right:-20px; }
 
-/* ================= CARDS ================= */
-.card{ min-width:300px; width: 300px; background:rgba(255,255,255,.05); border-radius:16px; overflow:hidden; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; display: flex; flex-direction: column; position: relative; border: 1px solid transparent; }
-.card:hover{ transform:scale(1.03); z-index:20; border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb, 229, 9, 20), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
+.card{ min-width:300px; width: 300px; background:var(--card-bg); border-radius:16px; overflow:hidden; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+.card:hover{ transform:scale(1.04) translateY(-5px); z-index:20; border-color: var(--red); box-shadow: 0 0 25px rgba(var(--glow-rgb, 229, 9, 20), 0.4), 0 15px 30px rgba(0,0,0,0.6); }
 .card img{ width:100%; height:180px; object-fit:cover; flex-shrink: 0; }
 .card-info{ padding:18px 18px 10px 18px; flex-grow: 1; display: flex; flex-direction: column; }
-.card-info strong{ display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; font-size:17px; white-space: normal; }
-.card-info p{ font-size:14px; color:#ccc; line-height:1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card-info strong{ display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; font-size:17px; white-space: normal; color: #f9f9f9; }
+.card-info p{ font-size:14px; color:#aaa; line-height:1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
 .card-actions { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px 15px 15px; gap: 8px; margin-top: auto; }
-.action-btn { padding: 10px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.2s; color: white; display: flex; align-items: center; justify-content: center; }
-.action-btn:hover { transform: translateY(-3px); filter: brightness(1.3); }
+.action-btn { padding: 10px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; color: white; display: flex; align-items: center; justify-content: center; background: #4a4d59; } 
+.action-btn:hover { background: var(--red) !important; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(var(--glow-rgb), 0.5); }
 .action-btn > svg, .action-btn > img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
-
-.watch-btn { background: #e50914; } .download-btn { background: var(--accent); } .discord-btn { background: var(--discord); } .donate-btn { background: var(--green); }
 
 .card.card-recent{ min-width:210px; width: 210px; }
 .card.card-recent img{ height: 120px; }
@@ -191,24 +182,18 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .card.card-recent .action-btn { padding: 8px; }
 .card.card-recent .action-btn > svg, .card.card-recent .action-btn > img { width: 16px; height: 16px; }
 
-.fav-toggle-btn{ position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,.75); border: 1px solid rgba(255,255,255,.2); color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 18px; cursor: pointer; z-index: 30; display: flex; align-items: center; justify-content: center; transition: .2s; backdrop-filter: blur(5px); }
-.fav-toggle-btn:hover{ transform: scale(1.15); background: rgba(0,0,0,.9); }
+.fav-toggle-btn{ position: absolute; top: 12px; right: 12px; background: rgba(9,11,19,.75); border: 1px solid rgba(255,255,255,.15); color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 18px; cursor: pointer; z-index: 30; display: flex; align-items: center; justify-content: center; transition: .3s; backdrop-filter: blur(5px); }
+.fav-toggle-btn:hover{ transform: scale(1.15); background: rgba(9,11,19,.9); border-color: var(--red); }
 .fav-toggle-btn.is-fav{ color: var(--gold); border-color: var(--gold); text-shadow: 0 0 8px var(--gold); }
 
 /* SKELETON SCREENS */
-.skeleton-card { min-width:300px; width: 300px; height: 300px; background: rgba(255,255,255,.03); border-radius: 16px; display: flex; flex-direction: column; padding: 0; overflow: hidden; position: relative; }
+.skeleton-card { min-width:300px; width: 300px; height: 300px; background: rgba(26,29,41,.6); border-radius: 16px; display: flex; flex-direction: column; padding: 0; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
 .skeleton-img { width: 100%; height: 180px; background: rgba(255,255,255,.05); }
 .skeleton-text1 { width: 60%; height: 16px; background: rgba(255,255,255,.06); margin: 18px 18px 10px; border-radius: 4px; }
 .skeleton-text2 { width: 85%; height: 12px; background: rgba(255,255,255,.04); margin: 0 18px; border-radius: 4px; }
 .skeleton-shimmer::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.08) 60%, rgba(255,255,255,0) 100%); animation: shimmer 1.6s infinite; }
 @keyframes shimmer { 100% { transform: translateX(100%); } }
 
-@media(max-width:1100px){
-  .topbar { flex-wrap: wrap; justify-content: space-between; padding: 10px 5%; }
-  .console-buttons { order: 3; width: 100%; margin: 8px 0 0 0; justify-content: flex-start; }
-  .logo { order: 1; }
-  .right-tools { order: 2; }
-}
 @media(max-width:900px){
   .hero h1{ font-size:2.5rem; }
   .hero p{ font-size:1rem; }
@@ -239,12 +224,10 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     <div class="topbar">
       <a href="#" class="logo">LA PRESA</a>
       
-      <div class="console-buttons" id="consoleButtons"></div>
-
       <div class="right-tools">
-        <button id="radarBtn" class="console-btn" style="background:transparent; border:none; padding: 4px 8px; position:relative;" title="Radar de Actualizaciones" onclick="abrirRadar()">
-          <div class="fav-icon-btn" style="font-size: 16px;">📡</div>
-          <span id="radarBadge" style="display:none; position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red);"></span>
+        <button id="radarBtn" class="top-radar-btn" title="Radar de Actualizaciones" onclick="abrirRadar()">
+          <div style="font-size: 20px;">📡</div>
+          <span id="radarBadge"></span>
         </button>
 
         <input type="text" id="fileSearch" placeholder="" list="file-suggestions">
@@ -264,6 +247,10 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
           <p id="heroDesc"></p>
           <button id="heroBtn"></button>
         </div>
+      </div>
+
+      <div class="console-buttons-container">
+          <div class="console-buttons" id="consoleButtons"></div>
       </div>
 
       <div id="recentContainer"></div>
@@ -315,6 +302,7 @@ let idiomaActual = 'es';
 let mediaFiles = {};
 let heroItems = [];
 let heroIndex = 0;
+let heroInterval; 
 let favoritos = JSON.parse(localStorage.getItem('favoriteFiles')) || [];
 let recientes = JSON.parse(localStorage.getItem('recentFiles')) || [];
 let currentView = { type: 'home', id: null }; 
@@ -338,8 +326,8 @@ document.getElementById('disney-btn1').onclick = function() {
     const btn = this;
     const esMembresia = Math.random() < 0.33;
     const url = esMembresia ? 
-        "https://www.youtube.com/@Kelonio3DS/join" : 
-        "https://www.youtube.com/@Kelonio3DS?sub_confirmation=1";
+        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : 
+        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1";
     
     window.open(url, "_blank", "noopener,noreferrer");
     btn.innerText = "⏳ Verificando en segundo plano...";
@@ -421,7 +409,6 @@ function checkProgressDisney() {
         const fechaActual = new Date().toDateString(); 
         localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + fechaActual));
         
-        // Desvanecer el muro e iniciar la app
         setTimeout(() => {
             const overlay = document.getElementById('accessWallOverlay');
             overlay.style.opacity = '0';
@@ -462,7 +449,6 @@ function createLanguageSelector(){
     translateInterface();
     if(accessProductsData.length > 0) renderProductosDisney(); 
     
-    // Recargar vista de manera dinámica al cambiar idioma sin refrescar la página
     if (Object.keys(mediaFiles).length > 0) { 
         renderConsoleButtons(); 
         updateHero(); 
@@ -480,10 +466,11 @@ function translateInterface(){
   const t = translations[idiomaActual] || translations['en'];
   document.title = t.title; 
   fileSearch.placeholder = t.search;
+  
+  // Ahora el Hero muestra 'VER' en lugar de Descargar
   const heroBtn = document.getElementById('heroBtn');
-  if(heroBtn) heroBtn.textContent = t.download;
+  if(heroBtn) heroBtn.textContent = t.watch; 
 
-  // Muro Disney Textos
   const subtitle = document.getElementById('aw-subtitle');
   if(subtitle) subtitle.innerHTML = t.awSubtitle;
 
@@ -506,7 +493,7 @@ const paletaTemas = {
 };
 
 function initThemeDots() {
-  const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul'; // Azul por defecto Disney
   Object.keys(paletaTemas).forEach(colorKey => {
     const dot = document.createElement('div'); dot.className = 'color-dot';
     dot.style.backgroundColor = paletaTemas[colorKey].hex; dot.dataset.color = colorKey;
@@ -523,7 +510,7 @@ function initThemeDots() {
 }
 
 function applyTheme(colorKey) {
-  const theme = paletaTemas[colorKey] || paletaTemas.rojo;
+  const theme = paletaTemas[colorKey] || paletaTemas.azul;
   document.documentElement.style.setProperty('--red', theme.hex);
   document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
 }
@@ -560,7 +547,6 @@ function iniciarAppPrincipal() {
 /* ================= CARGA DE CONTENIDO Y CATEGORÍAS ================= */
 async function loadContent(){
   try{
-    // Solo permitimos la carga si pasaron la barrera del token
     const tokenGuardado = localStorage.getItem("_lp_auth_tk");
     const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
     
@@ -576,7 +562,6 @@ async function loadContent(){
     `;
     renderSkeletons('sk-switch', 5); renderSkeletons('sk-3ds', 5);
     
-    /* URL de GitHub ofuscada en Base64 para que no sea visible a simple vista en el código */
     const urlCodificada = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tlbG9uaW8taHViL0xpbmstM0RTL21haW4vZGF0YS9jb25zb2xhcy5qc29u"; 
     const urlReal = atob(urlCodificada);
 
@@ -642,12 +627,35 @@ function renderConsoleButtons(){
 }
 
 /* ================= HERO & BUSCADOR ================= */
-function setupHeroRotation(){
+function setupHeroRotation(section = null){
+  if(heroInterval) clearInterval(heroInterval);
   heroItems = [];
-  Object.keys(mediaFiles).forEach(catId => { mediaFiles[catId].forEach(item => { heroItems.push({ ...item, _category: catId }); }); });
+  
+  const targetCategories = section ? [section.toLowerCase()] : ['3ds', 'wii'];
+
+  Object.keys(mediaFiles).forEach(catId => { 
+      if (targetCategories.includes(catId.toLowerCase())) {
+          mediaFiles[catId].forEach(item => { 
+              if (item.videoYoutubeIds) { heroItems.push({ ...item, _category: catId }); }
+          }); 
+      }
+  });
+
+  if(heroItems.length === 0) {
+      Object.keys(mediaFiles).forEach(catId => { 
+          if (targetCategories.includes(catId.toLowerCase())) {
+              mediaFiles[catId].forEach(item => { heroItems.push({ ...item, _category: catId }); }); 
+          }
+      });
+  }
+
+  heroItems.sort(() => 0.5 - Math.random());
+
   if(!heroItems.length) return;
+  
+  heroIndex = 0;
   updateHero();
-  setInterval(()=>{
+  heroInterval = setInterval(()=>{
     heroIndex++; if(heroIndex >= heroItems.length){ heroIndex = 0; } updateHero();
   },10000);
 }
@@ -661,12 +669,18 @@ function updateHero(){
   document.getElementById('heroTitle').textContent = title;
   document.getElementById('heroDesc').textContent = desc;
   document.getElementById('heroBanner').style.backgroundImage = `url('${thumb}')`;
-  document.getElementById('heroBtn').textContent = (translations[idiomaActual] || translations['en']).download;
+  
+  const t = translations[idiomaActual] || translations['en'];
+  document.getElementById('heroBtn').textContent = t.watch;
   
   document.getElementById('heroBtn').onclick = () => {
     const catName = item._category || 'switch';
     registerRecentClick(item, catName); 
-    window.open(item.url,'_blank','noopener,noreferrer'); 
+    if (item.videoYoutubeIds) {
+        window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank', 'noopener,noreferrer');
+    } else {
+        window.open(item.url, '_blank', 'noopener,noreferrer'); 
+    }
   };
 }
 
@@ -698,6 +712,7 @@ function triggerSearch(query) {
           if(title.includes(query)){ createCard(item, catId, results, false); } 
       }); 
   });
+  setupHeroRotation();
 }
 
 fileSearch.addEventListener('input',()=>{
@@ -745,6 +760,7 @@ function renderAllRows(){
     row.querySelector('.left').onclick = ()=>{ carousel.scrollBy({ left:-700, behavior:'smooth' }); };
     row.querySelector('.right').onclick = ()=>{ carousel.scrollBy({ left:700, behavior:'smooth' }); };
   });
+  setupHeroRotation();
 }
 
 function showConsoleContent(consoleId){
@@ -755,6 +771,7 @@ function showConsoleContent(consoleId){
   rowsContainer.appendChild(row);
   const carousel = document.getElementById('singleConsole'); carousel.style.flexWrap = 'wrap'; carousel.style.overflow = 'visible';
   mediaFiles[consoleId].forEach(item=>{ createCard(item, consoleId, carousel, false); });
+  setupHeroRotation(consoleId);
 }
 
 function showFavoritesContent(){
@@ -773,6 +790,7 @@ function showFavoritesContent(){
     });
   });
   if(!foundAny){ carousel.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">${t.noFavorites}</p>`; }
+  setupHeroRotation();
 }
 
 function createCard(item, catName, container, isMini = false){
@@ -782,7 +800,6 @@ function createCard(item, catName, container, isMini = false){
   
   const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
   
-  // OBTENER TEXTOS EN EL IDIOMA ACTUAL USANDO LA FUNCION ROBUSTA
   const title = getTranslatedText(item.label, idiomaActual) || '';
   const desc = getTranslatedText(item.desc, idiomaActual) || '';
   
