@@ -22,67 +22,97 @@
 *{ margin:0; padding:0; box-sizing:border-box; }
 body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; min-height: 100vh; }
 
-/* ================= MURO DE ACCESO ================= */
-#accessWall {
+/* ================= MURO DE ACCESO ESTILO DISNEY ================= */
+#accessWallOverlay {
     position: fixed; inset: 0; z-index: 99999999;
-    background: radial-gradient(circle at top,#252525,#111);
+    background: #090b13; /* --navy */
     display: flex; justify-content: center; align-items: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #f9f9f9;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.access-card {
-    width: min(95%, 650px); background: rgba(27,27,27,.95);
-    border-radius: 24px; padding: 35px; text-align: center;
-    box-shadow: 0 0 40px rgba(var(--glow-rgb), 0.3);
-    border: 1px solid rgba(255,255,255,.08);
-    transition: box-shadow 0.3s ease;
-}
-.lucario {
-    width: 140px; filter: drop-shadow(0 0 10px var(--accent)) drop-shadow(0 0 25px var(--accent));
-    animation: float 3s ease-in-out infinite;
-}
-@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-.access-logo {
-    font-size: 3.5rem; font-weight: 900; color: var(--red);
-    letter-spacing: 4px; text-transform: uppercase; margin-top: 10px;
-    text-shadow: 0 0 10px rgba(var(--glow-rgb),.8), 0 0 20px rgba(var(--glow-rgb),.5);
-}
-.subtitle { margin-top: 10px; color: #ccc; line-height: 1.6; font-size: 15px; }
-.task { margin-top: 18px; }
-.task button {
-    width: 100%; border: none; padding: 16px; border-radius: 12px;
-    color: white; font-weight: bold; cursor: pointer; transition: .3s; font-size: 15px;
-}
-.btn-youtube { background: var(--red); }
-.btn-giveaway { background: #ff9900; }
-.btn-done { background: var(--green) !important; cursor: default !important; }
-@keyframes pulseSub { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0.7); } 50% { transform: scale(1.02); box-shadow: 0 0 15px 0 rgba(var(--glow-rgb), 0.4); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0); } }
-.is-verifying { animation: pulseSub 1.5s infinite; filter: brightness(0.8); cursor: wait !important; }
 
-/* Productos Access Wall */
-.aw-products { display: none; margin-top: 20px; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.aw-product {
-    background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,.08);
-    border-radius: 16px; padding: 15px 10px; cursor: pointer;
-    transition: all .3s ease; display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-    min-height: 180px; text-align: center; overflow: hidden;
+.disney-access-card { 
+    width: 90%; max-width: 620px; 
+    background: rgba(26, 29, 41, 0.95); 
+    backdrop-filter: blur(14px); 
+    padding: 50px 40px; 
+    border-radius: 24px; 
+    border: 1px solid rgba(255,255,255,0.15); 
+    text-align: center; 
+    box-shadow: 0 0 60px rgba(0, 230, 230, 0.25);
 }
-.aw-product img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); transition: transform 0.3s; }
-.aw-product span { font-size: 12px; font-weight: bold; color: #fff; margin-top: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.3; }
-.aw-product .aw-choose-badge { background: var(--accent); color: white; font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px; margin-top: 8px; text-transform: uppercase; }
-.aw-product:hover { transform: translateY(-6px); border-color: #ff9900; box-shadow: 0 8px 20px rgba(255,153,0,0.2); }
-.aw-product:hover img { transform: scale(1.1); }
-.aw-product:hover .aw-choose-badge { background: #ff9900; }
 
-.progress { margin-top: 25px; }
-.bar { height: 10px; background: #333; border-radius: 20px; overflow: hidden; margin-top: 10px; }
-.fill { height: 100%; width: 0%; background: var(--green); transition: .4s; }
-#enterBtn {
-    width: 100%; border: none; padding: 16px; border-radius: 12px;
-    background: var(--green); color: white; font-size: 18px; font-weight: bold;
-    cursor: pointer; margin-top: 20px; display: none; box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+.disney-logo-title {
+    font-size: 5.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -3px;
 }
-#enterBtn:hover { transform: scale(1.02); filter: brightness(1.1); }
-.aw-status { margin-top: 15px; color: #aaa; font-size: 14px; font-weight: 600; }
+
+.disney-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.disney-progress-bar { 
+    height: 14px; background: #222; border-radius: 10px; 
+    margin: 30px 0; overflow: hidden; 
+}
+.disney-progress-fill { 
+    height: 100%; width: 0%; background: #00e6e6; /* --cyan */
+    transition: width 0.7s ease; 
+}
+
+.disney-step-btn { 
+    width: 100%; padding: 18px; margin: 12px 0; 
+    border-radius: 14px; border: none; 
+    background: rgba(255,255,255,0.1); 
+    color: white; font-size: 1.15rem; font-weight: 600;
+    cursor: pointer; transition: all 0.3s;
+}
+.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
+.disney-step-done { background: #00e6e6 !important; color: #000 !important; cursor: default; }
+
+#disneyProductsContainer {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin: 25px 0;
+    max-height: 280px;
+    overflow-y: auto;
+}
+/* Scrollbar para los productos (opcional) */
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: #00e6e6; border-radius: 10px; }
+
+.disney-aw-product {
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+}
+.disney-aw-product:hover {
+    transform: translateY(-6px);
+    border-color: #00e6e6;
+}
+.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
+.disney-aw-product span { font-size: 13.5px; font-weight: 600; margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; }
+.disney-choose-badge {
+    margin-top: 8px;
+    font-size: 11px;
+    background: #00e6e6;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-weight: 800;
+}
+
 
 /* ================= TOPBAR Y MAIN HUB ================= */
 #mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
@@ -186,40 +216,22 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   .card, .skeleton-card{ min-width:240px; width: 240px; }
   .card.card-recent{ min-width:180px; width: 180px; }
   .carousel-arrow{ display:none; }
-  .aw-products { grid-template-columns: 1fr; gap: 10px; }
-  .aw-product { min-height: auto; flex-direction: row; text-align: left; padding: 12px; }
-  .aw-product img { width: 50px; height: 50px; }
-  .aw-product span { margin-top: 0; margin-left: 10px; flex-grow: 1; }
-  .aw-product .aw-choose-badge { margin-top: 0; margin-left: 5px; }
 }
 </style>
 </head>
 <body>
 
-<div id="accessWall">
-    <div class="access-card">
-        <img class="lucario" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" alt="Lucario">
-        <div class="access-logo">LA PRESA</div>
-        <p class="subtitle" id="aw-subtitle"></p>
-
-        <div class="task">
-            <button id="aw-ytBtn" class="btn-youtube"></button>
-        </div>
-
-        <div class="task">
-            <button id="aw-giftBtn" class="btn-giveaway"></button>
-            <div id="aw-products" class="aw-products">
-                <p id="aw-loading-text" style="font-size:12px; color:#aaa; margin-top:5px; grid-column: span 3; text-align: center;"></p>
-            </div>
-        </div>
-
-        <div class="progress">
-            <div id="aw-counter"></div>
-            <div class="bar"><div id="aw-fill" class="fill"></div></div>
-        </div>
-
-        <div class="aw-status" id="aw-status">🔒 Acceso bloqueado</div>
-        <button id="enterBtn"></button>
+<div id="accessWallOverlay" style="display: none;">
+    <div class="disney-access-card">
+        <h1 class="disney-logo-title">LA PRESA</h1>
+        <p class="disney-subtitle" id="aw-subtitle">Completa los pasos para desbloquear el contenido.</p>
+        
+        <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
+        
+        <button id="disney-btn1" class="disney-step-btn">1. Suscribirse al canal</button>
+        <button id="disney-btn2" class="disney-step-btn">2. Participar en el sorteo</button>
+        
+        <div id="disneyProductsContainer"></div>
     </div>
 </div>
 
@@ -266,35 +278,35 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 const translations = {
 es: {
     title: "Archivos Nintendo | La Presa", search: "Buscar archivos...", favorites: "Favoritos", noFavorites: "Aún no has añadido favoritos.", recent: "Vistos Recientemente", products: "Productos", discord: "Discord", donate: "Donar", watch: "Ver", download: "Descargar",
-    awSubtitle: "Completa los pasos para acceder", awYtBtn: "🎮 Suscribirse al canal", awYtBtnVerif: "⏳ Verificando en segundo plano...", awYtBtnDone: "🗝️ Canal visitado", awGiftBtn: "🕹️ Participar en el sorteo", awGiftBtnDone: "🗝️ Sorteo registrado", awLoading: "Cargando productos...", awChoose: "Elegir", awCounter: "Acceso {x} / 2", awLocked: "🔒 Acceso bloqueado", awUnlocked: "🔓 Acceso desbloqueado", awEnter: "🌐 ENTRAR A LA WEB"
+    awSubtitle: "Completa los pasos para desbloquear el contenido.", awYtBtn: "Suscribirse al canal", awGiftBtn: "Participar en el sorteo"
 },
 en: {
     title: "Nintendo Files | La Presa", search: "Search files...", favorites: "Favorites", noFavorites: "No favorites added yet.", recent: "Recently Viewed", products: "Products", discord: "Discord", donate: "Donate", watch: "Watch", download: "Download",
-    awSubtitle: "Complete the steps to gain access", awYtBtn: "🎮 Subscribe to the channel", awYtBtnVerif: "⏳ Verifying in the background...", awYtBtnDone: "🗝️ Channel visited", awGiftBtn: "🕹️ Enter the giveaway", awGiftBtnDone: "🗝️ Giveaway registered", awLoading: "Loading products...", awChoose: "Choose", awCounter: "Access {x} / 2", awLocked: "🔒 Access locked", awUnlocked: "🔓 Access unlocked", awEnter: "🌐 ENTER THE WEBSITE"
+    awSubtitle: "Complete the steps to unlock content.", awYtBtn: "Subscribe to channel", awGiftBtn: "Enter the giveaway"
 },
 fr: {
     title: "Fichiers Nintendo | La Presa", search: "Rechercher...", favorites: "Favoris", noFavorites: "Aucun favori.", recent: "Vus Récemment", products: "Produits", discord: "Discord", donate: "Faire un don", watch: "Voir", download: "Télécharger",
-    awSubtitle: "Complétez les étapes pour y accéder", awYtBtn: "🎮 S'abonner à la chaîne", awYtBtnVerif: "⏳ Vérification...", awYtBtnDone: "🗝️ Chaîne visitée", awGiftBtn: "🕹️ Participer au tirage", awGiftBtnDone: "🗝️ Participation enregistrée", awLoading: "Chargement...", awChoose: "Choisir", awCounter: "Accès {x} / 2", awLocked: "🔒 Accès bloqué", awUnlocked: "🔓 Accès débloqué", awEnter: "🌐 ENTRER"
+    awSubtitle: "Complétez les étapes pour débloquer le contenu.", awYtBtn: "S'abonner à la chaîne", awGiftBtn: "Participer au tirage"
 },
 de: {
     title: "Nintendo-Dateien | La Presa", search: "Suchen...", favorites: "Favoriten", noFavorites: "Keine Favoriten.", recent: "Zuletzt Angesehen", products: "Produkte", discord: "Discord", donate: "Spenden", watch: "Ansehen", download: "Download",
-    awSubtitle: "Schließen Sie die Schritte ab", awYtBtn: "🎮 Kanal abonnieren", awYtBtnVerif: "⏳ Überprüfung...", awYtBtnDone: "🗝️ Kanal besucht", awGiftBtn: "🕹️ Am Gewinnspiel teilnehmen", awGiftBtnDone: "🗝️ Gewinnspiel registriert", awLoading: "Wird geladen...", awChoose: "Wählen", awCounter: "Zugriff {x} / 2", awLocked: "🔒 Gesperrt", awUnlocked: "🔓 Entsperrt", awEnter: "🌐 BETRETEN"
+    awSubtitle: "Schließen Sie die Schritte ab, um Inhalte freizuschalten.", awYtBtn: "Kanal abonnieren", awGiftBtn: "Am Gewinnspiel teilnehmen"
 },
 it: {
     title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito.", recent: "Visti di Recente", products: "Prodotti", discord: "Discord", donate: "Dona", watch: "Guarda", download: "Scarica",
-    awSubtitle: "Completa i passaggi per accedere", awYtBtn: "🎮 Iscriviti al canale", awYtBtnVerif: "⏳ Verifica...", awYtBtnDone: "🗝️ Canale visitato", awGiftBtn: "🕹️ Partecipa al sorteggio", awGiftBtnDone: "🗝️ Sorteggio registrato", awLoading: "Caricamento...", awChoose: "Scegli", awCounter: "Accesso {x} / 2", awLocked: "🔒 Bloccato", awUnlocked: "🔓 Sbloccato", awEnter: "🌐 ENTRA"
+    awSubtitle: "Completa i passaggi per sbloccare i contenuti.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio"
 },
 pt: {
     title: "Arquivos Nintendo | La Presa", search: "Procurar arquivos...", favorites: "Favoritos", noFavorites: "Nenhum favorito.", recent: "Vistos Recentemente", products: "Produtos", discord: "Discord", donate: "Doar", watch: "Ver", download: "Baixar",
-    awSubtitle: "Conclua as etapas para acessar", awYtBtn: "🎮 Inscrever-se no canal", awYtBtnVerif: "⏳ Verificando...", awYtBtnDone: "🗝️ Canal visitado", awGiftBtn: "🕹️ Participar do sorteio", awGiftBtnDone: "🗝️ Sorteio registrado", awLoading: "Carregando...", awChoose: "Escolher", awCounter: "Acesso {x} / 2", awLocked: "🔒 Bloqueado", awUnlocked: "🔓 Desbloqueado", awEnter: "🌐 ENTRAR"
+    awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", awYtBtn: "Inscrever-se no canal", awGiftBtn: "Participar do sorteio"
 },
 ja: {
     title: "任天堂アーカイブ | La Presa", search: "検索...", favorites: "お気に入り", noFavorites: "お気に入りはありません。", recent: "最近見たファイル", products: "製品", discord: "Discord", donate: "寄付", watch: "見る", download: "ダウンロード",
-    awSubtitle: "アクセスするには手順を完了してください", awYtBtn: "🎮 チャンネルを登録する", awYtBtnVerif: "⏳ 確認中...", awYtBtnDone: "🗝️ 訪問済み", awGiftBtn: "🕹️ 抽選に参加する", awGiftBtnDone: "🗝️ 登録完了", awLoading: "読み込み中...", awChoose: "選択", awCounter: "アクセス {x} / 2", awLocked: "🔒 制限中", awUnlocked: "🔓 解除", awEnter: "🌐 入る"
+    awSubtitle: "アクセスするには手順を完了してください。", awYtBtn: "チャンネル登録", awGiftBtn: "抽選に参加する"
 },
 ko: {
     title: "닌텐도 아카이브 | La Presa", search: "검색...", favorites: "즐겨찾기", noFavorites: "즐겨찾기가 없습니다.", recent: "최근에 본 파일", products: "제품", discord: "Discord", donate: "기부", watch: "보기", download: "다운로드",
-    awSubtitle: "액세스하려면 단계를 완료하세요", awYtBtn: "🎮 채널 구독하기", awYtBtnVerif: "⏳ 확인 중...", awYtBtnDone: "🗝️ 방문 완료", awGiftBtn: "🕹️ 경품 추첨 참여", awGiftBtnDone: "🗝️ 등록 완료", awLoading: "로딩 중...", awChoose: "선택", awCounter: "액세스 {x} / 2", awLocked: "🔒 차단됨", awUnlocked: "🔓 잠금 해제됨", awEnter: "🌐 입장"
+    awSubtitle: "액세스하려면 단계를 완료하세요.", awYtBtn: "채널 구독하기", awGiftBtn: "경품 추첨 참여"
 }
 };
 
@@ -305,8 +317,8 @@ let heroItems = [];
 let heroIndex = 0;
 let favoritos = JSON.parse(localStorage.getItem('favoriteFiles')) || [];
 let recientes = JSON.parse(localStorage.getItem('recentFiles')) || [];
-let accessProductsData = []; 
 let currentView = { type: 'home', id: null }; 
+let accessGranted = false;
 
 /* DOM Elements */
 const fileSearch = document.getElementById('fileSearch');
@@ -315,6 +327,111 @@ const recentContainer = document.getElementById('recentContainer');
 const datalist = document.getElementById('file-suggestions');
 const themeDotsContainer = document.getElementById('themeDots');
 const mybutton = document.getElementById("backToTopBtn");
+
+/* ================= LÓGICA DEL MURO DISNEY ================= */
+let s1 = false;
+let s2 = false;
+let accessProductsData = [];
+
+document.getElementById('disney-btn1').onclick = function() {
+    if(s1) return;
+    const btn = this;
+    const esMembresia = Math.random() < 0.33;
+    const url = esMembresia ? 
+        "https://www.youtube.com/@Kelonio3DS/join" : 
+        "https://www.youtube.com/@Kelonio3DS?sub_confirmation=1";
+    
+    window.open(url, "_blank", "noopener,noreferrer");
+    btn.innerText = "⏳ Verificando en segundo plano...";
+    btn.style.opacity = "0.7";
+    
+    setTimeout(() => {
+        s1 = true;
+        btn.classList.add('disney-step-done');
+        btn.innerText = "✅ Paso 1 completado";
+        btn.style.opacity = "1";
+        checkProgressDisney();
+    }, 40000);
+};
+
+document.getElementById('disney-btn2').onclick = function() {
+    if(s2) return;
+    const container = document.getElementById('disneyProductsContainer');
+    container.style.display = (container.style.display === "grid") ? "none" : "grid";
+};
+
+async function cargarProductosDisney() {
+    const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
+    const files = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
+    let all = [];
+
+    for (let f of files) {
+        try {
+            let res = await fetch(base + f + '?nocache=' + Date.now());
+            if (res.ok) {
+                let data = await res.json();
+                all = all.concat(Array.isArray(data) ? data : Object.values(data));
+            }
+        } catch(e){}
+    }
+
+    if (all.length >= 3) {
+        all.sort(() => 0.5 - Math.random());
+        accessProductsData = all.slice(0, 6);
+        renderProductosDisney();
+    }
+}
+
+function renderProductosDisney() {
+    const cont = document.getElementById('disneyProductsContainer');
+    cont.innerHTML = '';
+    
+    accessProductsData.forEach(p => {
+        const title = getTranslatedText(p.label, idiomaActual) || p.label || 'Producto';
+        const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+        let url = p.url || '#';
+        if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
+
+        const div = document.createElement('div');
+        div.className = 'disney-aw-product';
+        div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
+        div.onclick = () => {
+            window.open(url, "_blank", "noopener,noreferrer");
+            completarSorteoDisney();
+        };
+        cont.appendChild(div);
+    });
+}
+
+function completarSorteoDisney() {
+    if(s2) return;
+    s2 = true;
+    const btn2 = document.getElementById('disney-btn2');
+    btn2.classList.add('disney-step-done');
+    btn2.innerText = "✅ Paso 2 completado";
+    document.getElementById('disneyProductsContainer').style.display = "none";
+    checkProgressDisney();
+}
+
+function checkProgressDisney() {
+    let count = (s1 ? 1 : 0) + (s2 ? 1 : 0);
+    document.getElementById('disney-progress').style.width = (count * 50) + "%";
+    
+    if (count === 2) {
+        const fechaActual = new Date().toDateString(); 
+        localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + fechaActual));
+        
+        // Desvanecer el muro e iniciar la app
+        setTimeout(() => {
+            const overlay = document.getElementById('accessWallOverlay');
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                iniciarAppPrincipal();
+            }, 500);
+        }, 800);
+    }
+}
 
 /* ================= LÓGICA DE TRADUCCIÓN COMPLETA ================= */
 function getTranslatedText(obj, lang) {
@@ -343,7 +460,7 @@ function createLanguageSelector(){
   selector.addEventListener('change', e=>{
     idiomaActual = e.target.value; 
     translateInterface();
-    if(accessProductsData.length > 0) renderSorteoAcceso(); 
+    if(accessProductsData.length > 0) renderProductosDisney(); 
     
     // Recargar vista de manera dinámica al cambiar idioma sin refrescar la página
     if (Object.keys(mediaFiles).length > 0) { 
@@ -366,25 +483,15 @@ function translateInterface(){
   const heroBtn = document.getElementById('heroBtn');
   if(heroBtn) heroBtn.textContent = t.download;
 
-  // Muro de acceso Textos
+  // Muro Disney Textos
   const subtitle = document.getElementById('aw-subtitle');
   if(subtitle) subtitle.innerHTML = t.awSubtitle;
-  
-  const ytBtnEl = document.getElementById('aw-ytBtn');
-  if(ytBtnEl && !youtubeDone) ytBtnEl.innerHTML = t.awYtBtn;
-  else if(ytBtnEl && youtubeDone) ytBtnEl.innerHTML = t.awYtBtnDone;
 
-  const giftBtnEl = document.getElementById('aw-giftBtn');
-  if(giftBtnEl && !giveawayDone) giftBtnEl.innerHTML = t.awGiftBtn;
-  else if(giftBtnEl && giveawayDone) giftBtnEl.innerHTML = t.awGiftBtnDone;
+  const btn1 = document.getElementById('disney-btn1');
+  if(btn1 && !s1) btn1.innerHTML = "1. " + t.awYtBtn;
 
-  const loadingText = document.getElementById('aw-loading-text');
-  if(loadingText) loadingText.innerHTML = t.awLoading;
-
-  const enterBtnEl = document.getElementById('enterBtn');
-  if(enterBtnEl) enterBtnEl.innerHTML = t.awEnter;
-
-  updateAccessProgress();
+  const btn2 = document.getElementById('disney-btn2');
+  if(btn2 && !s2) btn2.innerHTML = "2. " + t.awGiftBtn;
 }
 
 /* ================= SISTEMA DE TEMAS ================= */
@@ -419,154 +526,27 @@ function applyTheme(colorKey) {
   const theme = paletaTemas[colorKey] || paletaTemas.rojo;
   document.documentElement.style.setProperty('--red', theme.hex);
   document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
-  document.getElementById('aw-ytBtn').style.backgroundColor = theme.hex;
 }
 
 function getItemUniqueId(item, catName) { 
     return `${catName}-${getTranslatedText(item.label, 'en') || 'archivo'}`.toLowerCase().replace(/[^a-z0-9]/g, ''); 
 }
 
-/* ================= LÓGICA DEL MURO DE ACCESO ================= */
-let youtubeDone = false;
-let giveawayDone = false;
-let accessGranted = false;
-
+/* ================= INICIO DE LA APP PRINCIPAL ================= */
 function comprobarAccesoTemporal() {
     const tokenGuardado = localStorage.getItem("_lp_auth_tk");
-    
-    // Calculamos el token válido para el día de hoy
     const fechaActual = new Date().toDateString();
     const tokenValidoHoy = btoa("lapresa_secreto_" + fechaActual);
     
     if (tokenGuardado === tokenValidoHoy) {
         accessGranted = true; 
     } else { 
-        // Si no hay token o es de un día anterior, denegamos el acceso
         localStorage.removeItem("_lp_auth_tk");
         accessGranted = false; 
     }
 }
 
-function updateAccessProgress(){
-    const t = translations[idiomaActual] || translations['en'];
-    let total = 0;
-    if(youtubeDone) total++;
-    if(giveawayDone) total++;
-
-    const counter = document.getElementById("aw-counter");
-    if(counter) counter.innerHTML = t.awCounter.replace("{x}", total);
-    
-    const fill = document.getElementById("aw-fill");
-    if(fill) fill.style.width = (total*50)+"%";
-
-    if(total === 2){
-        document.getElementById("aw-status").innerHTML = t.awUnlocked;
-        document.getElementById("enterBtn").style.display = "block";
-    }
-}
-
-const ytBtn = document.getElementById('aw-ytBtn');
-ytBtn.onclick = () => {
-    const t = translations[idiomaActual] || translations['en'];
-    
-    // LÓGICA DE DUALIDAD ALEATORIA (33% probabilidad de membresía)
-    const esMembresia = Math.random() < 0.33; 
-    const targetUrl = esMembresia 
-        ? "https://www.youtube.com/@Kelonio3DS/join" 
-        : "https://www.youtube.com/@Kelonio3DS?sub_confirmation=1";
-
-    window.open(targetUrl, "_blank", "noopener,noreferrer");
-    
-    ytBtn.innerHTML = t.awYtBtnVerif;
-    ytBtn.disabled = true;
-    ytBtn.classList.add('is-verifying');
-
-    setTimeout(() => {
-        youtubeDone = true;
-        ytBtn.innerHTML = t.awYtBtnDone;
-        ytBtn.classList.remove('is-verifying');
-        ytBtn.classList.add("btn-done");
-        updateAccessProgress();
-    }, 40000);
-};
-
-const giftBtn = document.getElementById('aw-giftBtn');
-const productsDiv = document.getElementById('aw-products');
-
-async function cargarSorteoDinamicoAcceso() {
-    const baseURL = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
-    const catFiles = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
-    let allProducts = [];
-
-    for (let file of catFiles) {
-        try {
-            let res = await fetch(baseURL + file + '?nocache=' + new Date().getTime());
-            if (res.ok) {
-                let data = await res.json();
-                let items = Array.isArray(data) ? data : Object.values(data);
-                allProducts = allProducts.concat(items);
-            }
-        } catch (e) { console.error("Error cargando sorteos", e); }
-    }
-
-    if (allProducts.length >= 3) {
-        allProducts.sort(() => 0.5 - Math.random());
-        accessProductsData = allProducts.slice(0, 3);
-        renderSorteoAcceso(); 
-    }
-}
-
-function renderSorteoAcceso() {
-    if (accessProductsData.length === 0) return;
-    const t = translations[idiomaActual] || translations['en'];
-    productsDiv.innerHTML = '';
-    
-    accessProductsData.forEach(p => {
-        let title = getTranslatedText(p.label, idiomaActual) || 'Producto';
-        let url = getTranslatedText(p.url, idiomaActual) || '#';
-        if(url !== '#' && !url.includes('tag=')) { url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21'; }
-        let imgSrc = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-
-        productsDiv.innerHTML += `
-            <div class="aw-product" onclick="selectAccessProduct('${url}')">
-                <img src="${imgSrc}" alt="${title}">
-                <span>${title}</span>
-                <div class="aw-choose-badge">${t.awChoose}</div>
-            </div>
-        `;
-    });
-}
-
-function selectAccessProduct(url){
-    const t = translations[idiomaActual] || translations['en'];
-    window.open(url, "_blank", "noopener,noreferrer");
-    giveawayDone = true;
-    giftBtn.innerHTML = t.awGiftBtnDone;
-    giftBtn.classList.add("btn-done");
-    giftBtn.disabled = true;
-    productsDiv.style.display = "none";
-    updateAccessProgress();
-}
-
-giftBtn.onclick = () => { 
-    if(!giveawayDone) { productsDiv.style.display = (productsDiv.style.display === "grid") ? "none" : "grid"; }
-};
-
-document.getElementById('enterBtn').onclick = () => {
-    // 1. Generamos un Token basado en la fecha actual (cambia cada día)
-    const fechaActual = new Date().toDateString(); 
-    
-    // btoa() codifica el texto a Base64
-    const tokenGenerado = btoa("lapresa_secreto_" + fechaActual); 
-    
-    // Guardamos el token ofuscado
-    localStorage.setItem("_lp_auth_tk", tokenGenerado);
-    iniciarAppPrincipal();
-};
-
-/* ================= INICIO DE LA APP PRINCIPAL ================= */
 function iniciarAppPrincipal() {
-    document.getElementById('accessWall').style.display = 'none';
     const mainHub = document.getElementById('mainHub');
     mainHub.style.display = 'block';
     setTimeout(() => mainHub.style.opacity = '1', 50);
@@ -887,12 +867,12 @@ document.addEventListener('DOMContentLoaded', () => {
   createLanguageSelector();
   translateInterface();
   comprobarAccesoTemporal();
-  cargarSorteoDinamicoAcceso();
-
+  
   if(accessGranted) {
       iniciarAppPrincipal();
   } else {
-      document.getElementById('accessWall').style.display = 'flex';
+      document.getElementById('accessWallOverlay').style.display = 'flex';
+      cargarProductosDisney();
   }
 });
 </script>
