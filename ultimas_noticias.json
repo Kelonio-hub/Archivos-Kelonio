@@ -1,5 +1,17 @@
 [
   {
+    "tag": "Switch / Hekate",
+    "title": "hekate v6.5.3 & Nyx v1.9.3",
+    "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
+    "date": "2026-06-16T22:14:44.000Z"
+  },
+  {
+    "tag": "Switch / CFW",
+    "title": "Atmosphère 1.11.2",
+    "link": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.11.2",
+    "date": "2026-06-16T22:01:02.000Z"
+  },
+  {
     "tag": "Wii U / Nimbus",
     "title": "v2.1.1",
     "link": "https://github.com/PretendoNetwork/nimbus/releases/tag/v2.1.1",
@@ -76,18 +88,6 @@
     "title": "MissionControl 0.15.1",
     "link": "https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1",
     "date": "2026-04-07T17:59:14.000Z"
-  },
-  {
-    "tag": "Switch / Hekate",
-    "title": "hekate v6.5.2 & Nyx v1.9.2",
-    "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.2",
-    "date": "2026-04-07T17:18:01.000Z"
-  },
-  {
-    "tag": "Switch / CFW",
-    "title": "Atmosphère 1.11.1",
-    "link": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.11.1",
-    "date": "2026-04-07T17:06:47.000Z"
   },
   {
     "tag": "3DS / LUMA",
