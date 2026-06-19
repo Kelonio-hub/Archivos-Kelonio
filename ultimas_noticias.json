@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / Mission Control",
+    "title": "0.15.2",
+    "link": "https://github.com/ndeadly/MissionControl/releases/tag/0.15.2",
+    "date": "2026-06-18T17:28:25.000Z"
+  },
+  {
     "tag": "Switch / Hekate",
     "title": "hekate v6.5.3 & Nyx v1.9.3",
     "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
@@ -82,12 +88,6 @@
     "title": "20260410",
     "link": "https://github.com/extremscorner/not64/releases/tag/20260410",
     "date": "2026-04-10T21:09:52.000Z"
-  },
-  {
-    "tag": "Switch / Mission Control",
-    "title": "MissionControl 0.15.1",
-    "link": "https://github.com/ndeadly/MissionControl/releases/tag/v0.15.1",
-    "date": "2026-04-07T17:59:14.000Z"
   },
   {
     "tag": "3DS / LUMA",
