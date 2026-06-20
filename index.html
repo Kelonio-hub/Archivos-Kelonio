@@ -324,12 +324,12 @@ let accessProductsData = [];
 document.getElementById('disney-btn1').onclick = function() {
     if(s1) return;
     const btn = this;
-    const esMembresia = Math.random() < 0.33;
-    const url = esMembresia ? 
-        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : 
-        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1";
+    
+    // Se asigna la URL directamente para que siempre vaya a join
+    const url = "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join";
     
     window.open(url, "_blank", "noopener,noreferrer");
+    
     btn.innerText = "⏳ Verificando en segundo plano...";
     btn.style.opacity = "0.7";
     
