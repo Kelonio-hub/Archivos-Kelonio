@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / Checkpoint",
+    "title": "Checkpoint 3.13.0",
+    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.13.0",
+    "date": "2026-06-21T08:55:21.000Z"
+  },
+  {
     "tag": "Switch / DBI",
     "title": "DBI 902 - Russian version only",
     "link": "https://github.com/rashevskyv/dbi/releases/tag/902ru",
@@ -70,12 +76,6 @@
     "title": "v1.1.0 - Target new libnx and console printing issues",
     "link": "https://github.com/meganukebmp/Switch_90DNS_tester/releases/tag/v1.1.0",
     "date": "2026-04-26T22:50:53.000Z"
-  },
-  {
-    "tag": "Switch / Checkpoint",
-    "title": "Checkpoint 3.12.0",
-    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.12.0",
-    "date": "2026-04-26T15:49:35.000Z"
   },
   {
     "tag": "Switch / EdiZon Overlay",
