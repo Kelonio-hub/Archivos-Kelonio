@@ -3,6 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo (Switch, 3DS, Wii, NDS). Accede a los archivos de La Presa de forma rápida y organizada.">
+<meta name="keywords" content="Nintendo, Switch, 3DS, Wii, NDS, La Presa, Archivos Nintendo, Emuladores, Actualizaciones">
+<meta name="author" content="La Presa">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kelonio-hub.github.io/Archivos-Kelonio/">
+<meta property="og:title" content="Archivos Nintendo | La Presa">
+<meta property="og:description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo. Accede a los archivos de La Presa.">
+<meta property="og:image" content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://kelonio-hub.github.io/Archivos-Kelonio/">
+<meta name="twitter:title" content="Archivos Nintendo | La Presa">
+<meta name="twitter:description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo. Accede a los archivos de La Presa.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">
 <title id="pageTitle">Archivos Nintendo | La Presa</title>
 <link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
 
@@ -128,8 +144,8 @@ body{ font-family:'Segoe UI',sans-serif; background:var(--bg); color:white; over
     scrollbar-width: none; 
     -ms-overflow-style: none; 
     padding: 10px 0; 
-    flex-wrap: nowrap; /* Evita que el botón baje de línea */
-    max-width: 100%; /* Asegura que respete el contenedor */
+    flex-wrap: nowrap; 
+    max-width: 100%; 
 }
 .console-buttons::-webkit-scrollbar { display: none; }
 .console-btn{ background:rgba(26,29,41,.85); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:10px 18px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 13px; white-space: nowrap; flex-shrink: 0; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
@@ -281,7 +297,7 @@ de: {
 },
 it: {
     title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito.", recent: "Visti di Recente", products: "Prodotti", discord: "Discord", donate: "Dona", watch: "Guarda", download: "Scarica",
-    awSubtitle: "Completa i passaggi per sbloccare i contenuti.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio"
+    awSubtitle: "Completa i passaggi per sbloccare i contenidos.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio"
 },
 pt: {
     title: "Arquivos Nintendo | La Presa", search: "Procurar arquivos...", favorites: "Favoritos", noFavorites: "Nenhum favorito.", recent: "Vistos Recentemente", products: "Produtos", discord: "Discord", donate: "Doar", watch: "Ver", download: "Baixar",
@@ -467,7 +483,6 @@ function translateInterface(){
   document.title = t.title; 
   fileSearch.placeholder = t.search;
   
-  // Ahora el Hero muestra 'VER' en lugar de Descargar
   const heroBtn = document.getElementById('heroBtn');
   if(heroBtn) heroBtn.textContent = t.watch; 
 
@@ -493,7 +508,7 @@ const paletaTemas = {
 };
 
 function initThemeDots() {
-  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul'; // Azul por defecto Disney
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul'; 
   Object.keys(paletaTemas).forEach(colorKey => {
     const dot = document.createElement('div'); dot.className = 'color-dot';
     dot.style.backgroundColor = paletaTemas[colorKey].hex; dot.dataset.color = colorKey;
