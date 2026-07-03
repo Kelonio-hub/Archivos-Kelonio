@@ -241,6 +241,11 @@ body{ font-family:'Segoe UI',sans-serif; background:var(--bg); color:white; over
       <a href="#" class="logo">LA PRESA</a>
       
       <div class="right-tools">
+        
+        <button id="guideBtn" class="top-radar-btn" title="Guías" onclick="window.open('guias.html', '_self')">
+          <div style="font-size: 20px;">📖</div>
+        </button>
+
         <button id="radarBtn" class="top-radar-btn" title="Radar de Actualizaciones" onclick="abrirRadar()">
           <div style="font-size: 20px;">📡</div>
           <span id="radarBadge"></span>
@@ -281,35 +286,35 @@ body{ font-family:'Segoe UI',sans-serif; background:var(--bg); color:white; over
 const translations = {
 es: {
     title: "Archivos Nintendo | La Presa", search: "Buscar archivos...", favorites: "Favoritos", noFavorites: "Aún no has añadido favoritos.", recent: "Vistos Recientemente", products: "Productos", discord: "Discord", donate: "Donar", watch: "Ver", download: "Descargar",
-    awSubtitle: "Completa los pasos para desbloquear el contenido.", awYtBtn: "Suscribirse al canal", awGiftBtn: "Participar en el sorteo"
+    awSubtitle: "Completa los pasos para desbloquear el contenido.", awYtBtn: "Suscribirse al canal", awGiftBtn: "Participar en el sorteo", guides: "Guías"
 },
 en: {
     title: "Nintendo Files | La Presa", search: "Search files...", favorites: "Favorites", noFavorites: "No favorites added yet.", recent: "Recently Viewed", products: "Products", discord: "Discord", donate: "Donate", watch: "Watch", download: "Download",
-    awSubtitle: "Complete the steps to unlock content.", awYtBtn: "Subscribe to channel", awGiftBtn: "Enter the giveaway"
+    awSubtitle: "Complete the steps to unlock content.", awYtBtn: "Subscribe to channel", awGiftBtn: "Enter the giveaway", guides: "Guides"
 },
 fr: {
     title: "Fichiers Nintendo | La Presa", search: "Rechercher...", favorites: "Favoris", noFavorites: "Aucun favori.", recent: "Vus Récemment", products: "Produits", discord: "Discord", donate: "Faire un don", watch: "Voir", download: "Télécharger",
-    awSubtitle: "Complétez les étapes pour débloquer le contenu.", awYtBtn: "S'abonner à la chaîne", awGiftBtn: "Participer au tirage"
+    awSubtitle: "Complétez les étapes pour débloquer le contenu.", awYtBtn: "S'abonner à la chaîne", awGiftBtn: "Participer au tirage", guides: "Guides"
 },
 de: {
     title: "Nintendo-Dateien | La Presa", search: "Suchen...", favorites: "Favoriten", noFavorites: "Keine Favoriten.", recent: "Zuletzt Angesehen", products: "Produkte", discord: "Discord", donate: "Spenden", watch: "Ansehen", download: "Download",
-    awSubtitle: "Schließen Sie die Schritte ab, um Inhalte freizuschalten.", awYtBtn: "Kanal abonnieren", awGiftBtn: "Am Gewinnspiel teilnehmen"
+    awSubtitle: "Schließen Sie die Schritte ab, um Inhalte freizuschalten.", awYtBtn: "Kanal abonnieren", awGiftBtn: "Am Gewinnspiel teilnehmen", guides: "Leitfäden"
 },
 it: {
     title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito.", recent: "Visti di Recente", products: "Prodotti", discord: "Discord", donate: "Dona", watch: "Guarda", download: "Scarica",
-    awSubtitle: "Completa i passaggi per sbloccare i contenidos.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio"
+    awSubtitle: "Completa i passaggi per sbloccare i contenidos.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio", guides: "Guide"
 },
 pt: {
     title: "Arquivos Nintendo | La Presa", search: "Procurar arquivos...", favorites: "Favoritos", noFavorites: "Nenhum favorito.", recent: "Vistos Recentemente", products: "Produtos", discord: "Discord", donate: "Doar", watch: "Ver", download: "Baixar",
-    awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", awYtBtn: "Inscrever-se no canal", awGiftBtn: "Participar do sorteio"
+    awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", awYtBtn: "Inscrever-se no canal", awGiftBtn: "Participar do sorteio", guides: "Guias"
 },
 ja: {
     title: "任天堂アーカイブ | La Presa", search: "検索...", favorites: "お気に入り", noFavorites: "お気に入りはありません。", recent: "最近見たファイル", products: "製品", discord: "Discord", donate: "寄付", watch: "見る", download: "ダウンロード",
-    awSubtitle: "アクセスするには手順を完了してください。", awYtBtn: "チャンネル登録", awGiftBtn: "抽選に参加する"
+    awSubtitle: "アクセスするには手順を完了してください。", awYtBtn: "チャンネル登録", awGiftBtn: "抽選に参加する", guides: "ガイド"
 },
 ko: {
     title: "닌텐도 아카이브 | La Presa", search: "검색...", favorites: "즐겨찾기", noFavorites: "즐겨찾기가 없습니다.", recent: "최근에 본 파일", products: "제품", discord: "Discord", donate: "기부", watch: "보기", download: "다운로드",
-    awSubtitle: "액세스하려면 단계를 완료하세요.", awYtBtn: "채널 구독하기", awGiftBtn: "경품 추첨 참여"
+    awSubtitle: "액세스하려면 단계를 완료하세요.", awYtBtn: "채널 구독하기", awGiftBtn: "경품 추첨 참여", guides: "가이드"
 }
 };
 
@@ -494,6 +499,10 @@ function translateInterface(){
 
   const btn2 = document.getElementById('disney-btn2');
   if(btn2 && !s2) btn2.innerHTML = "2. " + t.awGiftBtn;
+
+  // NUEVO BOTÓN: Traducción del botón de guías
+  const guideBtn = document.getElementById('guideBtn');
+  if(guideBtn) guideBtn.title = t.guides || "Guías";
 }
 
 /* ================= SISTEMA DE TEMAS ================= */
