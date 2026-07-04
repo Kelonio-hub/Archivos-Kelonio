@@ -447,13 +447,20 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       container.style.display = (container.style.display === "grid") ? "none" : "grid";
   };
 
-  async function cargarProductosDisney() {
+async function cargarProductosDisney() {
       const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
       let all = [];
-      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) {
-          try { let res = await fetch(base + f + '?nocache=' + Date.now()); if (res.ok) { let data = await res.json(); all = all.concat(Array.isArray(data) ? data : Object.values(data)); } } catch(e){}
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { //
+          try { 
+              // Añadido '?t=' y { cache: "no-store" }
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
       }
-      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); }
+      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } //[cite: 3]
   }
 
   function renderProductosDisney() {
@@ -534,77 +541,76 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   }
 
   async function cargarSidebar() {
-    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en'];
-    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`;
-    let guiasCache = localStorage.getItem('guiasCache'); let timestamp = localStorage.getItem('guiasCacheTime'); let todasLasGuias = [];
+    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en']; //[cite: 3]
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`; //[cite: 3]
+    let todasLasGuias = [];
 
-    if (guiasCache && timestamp && (Date.now() - timestamp < 7200000)) { 
-        let cacheParseada = JSON.parse(guiasCache);
-        if(cacheParseada.length > 0 && cacheParseada[0].titles) { todasLasGuias = cacheParseada; } 
-        else { guiasCache = null; }
-    } 
-    
-    if (!todasLasGuias.length) {
-        try {
-            const repo = 'Kelonio-hub/Archivos-Kelonio'; const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
-            const response = await fetch(apiURL); if (!response.ok) throw new Error();
-            const archivos = await response.json(); const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
-            for (let file of htmlFiles) {
-                const res = await fetch(file.download_url + '?t=' + new Date().getTime()); const htmlText = await res.text();
-                const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html');
-                const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO'; 
-                let titles = {};
-                ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => {
-                    titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', '');
-                });
-                todasLasGuias.push({ tag, titles, link: file.name });
-            }
-            localStorage.setItem('guiasCache', JSON.stringify(todasLasGuias)); localStorage.setItem('guiasCacheTime', Date.now());
-        } catch (error) { sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; return; }
+    // Eliminamos el bloque que leía de guiasCache y hacemos la petición siempre en tiempo real
+    try {
+        const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+        // Añadido '?t=' y no-store al API de GitHub
+        const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+        const response = await fetch(apiURL, { cache: "no-store" }); 
+        if (!response.ok) throw new Error();
+        
+        const archivos = await response.json(); 
+        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); //[cite: 3]
+        
+        for (let file of htmlFiles) {
+            // Añadido el control de caché a la lectura de cada archivo HTML
+            const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+            const htmlText = await res.text();
+            const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html'); //[cite: 3]
+            const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';  //[cite: 3]
+            let titles = {};
+            ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { //[cite: 3]
+                titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', ''); //[cite: 3]
+            });
+            todasLasGuias.push({ tag, titles, link: file.name }); //[cite: 3]
+        }
+    } catch (error) { 
+        sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; //[cite: 3]
+        return; 
     }
 
-const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII'];
-    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png' };
-    let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); });
-    let currentFile = window.location.pathname.split('/').pop() || '';
+    const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII']; //[cite: 3]
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png' }; //[cite: 3]
+    let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); }); //[cite: 3]
+    let currentFile = window.location.pathname.split('/').pop() || ''; //[cite: 3]
 
-    // Función para renderizar los grupos colapsables
-    const renderGroup = (cat, guias) => {
-        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-        
-        // Verifica si la categoría contiene la guía actualmente abierta
-        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile);
-        // Si no tiene la guía activa, añade la clase 'collapsed' para cerrarla por defecto
-        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed";
+    const renderGroup = (cat, guias) => { //[cite: 3]
+        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'; //[cite: 3]
+        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile); //[cite: 3]
+        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed"; //[cite: 3]
 
         htmlContent += `<div class="${groupClass}">
             <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
                 <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
                 <span class="toggle-icon">▼</span>
             </div>
-            <div class="sidebar-links-container">`;
+            <div class="sidebar-links-container">`; //[cite: 3]
 
-        guias.forEach(g => { 
-            let linkName = g.link.replace('guias/', ''); 
-            let isActive = (currentFile === linkName) ? 'active' : ''; 
-            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link);
-            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`; 
+        guias.forEach(g => {  //[cite: 3]
+            let linkName = g.link.replace('guias/', '');  //[cite: 3]
+            let isActive = (currentFile === linkName) ? 'active' : '';  //[cite: 3]
+            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); //[cite: 3]
+            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;  //[cite: 3]
         });
-        htmlContent += `</div></div>`;
+        htmlContent += `</div></div>`; //[cite: 3]
     };
 
-    ordenDeseado.forEach(cat => {
-        if(grupos[cat] && grupos[cat].length > 0) {
-            renderGroup(cat, grupos[cat]);
-            delete grupos[cat];
+    ordenDeseado.forEach(cat => { //[cite: 3]
+        if(grupos[cat] && grupos[cat].length > 0) { //[cite: 3]
+            renderGroup(cat, grupos[cat]); //[cite: 3]
+            delete grupos[cat]; //[cite: 3]
         }
     });
 
-    Object.keys(grupos).forEach(cat => {
-        renderGroup(cat, grupos[cat]);
+    Object.keys(grupos).forEach(cat => { //[cite: 3]
+        renderGroup(cat, grupos[cat]); //[cite: 3]
     });
 
-    sidebar.innerHTML = htmlContent;
+    sidebar.innerHTML = htmlContent; //[cite: 3]
   }
 
   const mybutton = document.getElementById("backToTopBtn");
