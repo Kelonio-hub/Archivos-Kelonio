@@ -23,7 +23,18 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   display:flex; justify-content:space-between; align-items:center;
   padding:8px 3%; gap: 10px; 
 }
-.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; flex-shrink: 0; text-decoration: none; cursor: pointer;}
+
+/* GRUPO IZQUIERDO: LOGO + REDES */
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+
+/* ICONOS ESTILO PREMIUM (Redes, Guías, Productos, Radar) */
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+/* GRUPO DERECHO: HERRAMIENTAS Y BUSCADOR */
 .right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
 .config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
 .theme-dots-container{ display:flex; gap:5px; }
@@ -75,19 +86,46 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #backToTopBtn:hover { transform: scale(1.1); }
 
 @media(max-width: 1150px) {
-  .topbar { flex-wrap: wrap; padding: 10px 4%; }
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
   .console-buttons { order: 3; width: 100%; margin: 6px 0 0 0; justify-content: flex-start; }
-  .logo { order: 1; }
-  .right-tools { order: 2; }
+  .topbar-left { order: 1; }
+  .right-tools { order: 2; margin-top: 5px;}
 }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
+  
+  <div class="topbar-left">
+    <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
+    <div class="social-group">
+      <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.gg/VebgGfK79t', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+      </button>
+      <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/lapresa', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+      </button>
+    </div>
+  </div>
+
   <div class="console-buttons" id="consoleButtons"></div>
+  
   <div class="right-tools">
+    
+    <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('guias.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    </button>
+
+    <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('productos.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+    </button>
+
+    <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="abrirRadar()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+      <span id="radarBadge" class="radar-badge"></span>
+    </button>
+
     <input type="text" id="fileSearch" placeholder="Buscar guías...">
     <div class="config-group">
       <div class="theme-dots-container" id="themeDots"></div>
@@ -113,18 +151,18 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "📖 Centro de Guías", heroDesc: "Manuales, tutoriales y guías paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", home: "Inicio", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías." },
-  en: { title: "Guides & Tutorials | La Presa", heroTitle: "📖 Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", home: "Home", all: "All", read: "📖 Read Guide", empty: "No guides found." },
-  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "📖 Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", home: "Accueil", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé." },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "📖 Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", home: "Startseite", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden." },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "📖 Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", search: "Cerca guide...", home: "Inizio", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata." },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "📖 Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", search: "Buscar guias...", home: "Início", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado." },
-  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "📖 ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", home: "ホーム", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "📖 가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", home: "홈", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다." }
+  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "📖 Centro de Guías", heroDesc: "Manuales, tutoriales y guías paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
+  en: { title: "Guides & Tutorials | La Presa", heroTitle: "📖 Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
+  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "📖 Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "📖 Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "📖 Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "📖 Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "📖 ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "📖 가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
-let idiomaActual = 'es';
+let idiomaActual = 'en'; 
 let categoriasUnicas = new Set();
 let filtroActual = 'ALL'; 
 let todasLasGuias = [];
@@ -137,28 +175,19 @@ const mybutton = document.getElementById("backToTopBtn");
 
 /* ================= PALETA DE COLORES ================= */
 const paletaTemas = {
-  rojo: { hex: '#e50914', rgb: '229, 9, 20' },
-  naranja: { hex: '#ff6600', rgb: '255, 102, 0' },
-  amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
-  verde: { hex: '#2ecc71', rgb: '46, 204, 113' },
-  azul: { hex: '#00aaff', rgb: '0, 170, 255' },
-  violeta: { hex: '#9b59b6', rgb: '155, 89, 182' },
-  rosa: { hex: '#ff80ab', rgb: '255, 128, 171' }
+  rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+  verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' }
 };
 
 function initThemeDots() {
   const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
   themeDotsContainer.innerHTML = '';
   Object.keys(paletaTemas).forEach(colorKey => {
-    const dot = document.createElement('div');
-    dot.className = 'color-dot';
-    dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
     if (colorKey === savedTheme) dot.classList.add('active-dot');
     dot.addEventListener('click', () => {
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
-      dot.classList.add('active-dot');
-      localStorage.setItem('selectedThemeColor', colorKey);
-      applyTheme(colorKey);
+      dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey);
     });
     themeDotsContainer.appendChild(dot);
   });
@@ -167,67 +196,59 @@ function initThemeDots() {
 
 function applyTheme(colorKey) {
   const theme = paletaTemas[colorKey] || paletaTemas.rojo;
-  document.documentElement.style.setProperty('--red', theme.hex);
-  document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+  document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
 }
 
 /* ================= SELECTOR DE IDIOMAS ================= */
 function createLanguageSelector(){
-  const selector = document.getElementById('languageSelector');
-  selector.innerHTML = '';
+  const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
   const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
   
   Object.keys(langs).forEach(code=>{
-    const opt = document.createElement('option');
-    opt.value = code; opt.textContent = langs[code];
-    selector.appendChild(opt);
+    const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt);
   });
   
   const savedLang = localStorage.getItem('preferredLanguage');
-  if(savedLang && translations[savedLang]) {
-      idiomaActual = savedLang;
-  } else {
-      const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
-      idiomaActual = translations[browserLang] ? browserLang : 'es';
-  }
+  const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+  
+  if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+  else if (translations[browserLang]) { idiomaActual = browserLang; } 
+  else { idiomaActual = 'en'; }
+  
   selector.value = idiomaActual;
   
   selector.addEventListener('change', e => {
-    idiomaActual = e.target.value;
-    localStorage.setItem('preferredLanguage', idiomaActual);
+    idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
     updateLanguage(); renderFilterButtons(); renderNoticias();
   });
 }
 
 function updateLanguage(){
-  const t = translations[idiomaActual] || translations['es'];
+  const t = translations[idiomaActual] || translations['en'];
   document.title = t.title;
   document.getElementById('heroTitle').textContent = t.heroTitle;
   document.getElementById('heroDesc').textContent = t.heroDesc;
   fileSearch.placeholder = t.search;
+
+  if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
+  if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.products;
+  if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.guides;
+  if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.discord;
+  if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
 /* ================= BOTONES DINÁMICOS ================= */
 function renderFilterButtons() {
   consoleButtons.innerHTML = '';
-  const t = translations[idiomaActual] || translations['es'];
+  const t = translations[idiomaActual] || translations['en'];
 
-  // 1. Botón Inicio con el estilo SVG de productos
-  const btnInicio = document.createElement('button');
-  btnInicio.className = 'console-btn';
-  const iconHome = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="home-icon-btn"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`;
-  btnInicio.innerHTML = `${iconHome}<span>${t.home.toUpperCase()}</span>`;
-  btnInicio.onclick = () => window.open('index.html', '_self');
-  consoleButtons.appendChild(btnInicio);
-
-  // Todas
+  // BOTÓN "TODAS"
   const btnAll = document.createElement('button');
   btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
   btnAll.innerHTML = `<span style="font-size:14px;">🌐</span><span>${t.all.toUpperCase()}</span>`;
   btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
   consoleButtons.appendChild(btnAll);
 
-  // Mapeo de logos
   const iconMap = {
     'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
     '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
@@ -245,18 +266,45 @@ function renderFilterButtons() {
   });
 }
 
+/* ================= LÓGICA RADAR DE ACTUALIZACIONES ================= */
+async function verificarNotificacionesRadar() {
+  const badge = document.getElementById('radarBadge');
+  if (!badge) return;
+  try {
+    const response = await fetch('ultimas_noticias.json');
+    if(!response.ok) return;
+    const noticias = await response.json();
+    if(noticias.length > 0) {
+      const ultimaFechaNoticia = new Date(noticias[0].date).getTime();
+      const ultimaVisitaRadar = localStorage.getItem('ultimaVisitaRadar');
+      if(!ultimaVisitaRadar || ultimaFechaNoticia > parseInt(ultimaVisitaRadar)) { badge.style.display = 'block'; }
+    }
+  } catch (error) { console.log("Aún no hay base de datos del radar."); }
+}
+
+function abrirRadar() {
+  localStorage.setItem('ultimaVisitaRadar', Date.now().toString());
+  window.open('actualizaciones.html', '_self');
+}
+
 /* ================= RENDERIZAR PARRILLA ================= */
 function renderNoticias() {
-  const t = translations[idiomaActual] || translations['es'];
+  const t = translations[idiomaActual] || translations['en'];
   const query = fileSearch.value.toLowerCase().trim();
   updatesGrid.innerHTML = '';
 
   let filtradas = todasLasGuias;
+  
   if (filtroActual !== 'ALL') {
     filtradas = filtradas.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
   }
+  
   if (query) {
-    filtradas = filtradas.filter(n => n.title.toLowerCase().includes(query) || n.desc.toLowerCase().includes(query));
+    filtradas = filtradas.filter(n => {
+      let tituloAct = n.titles[idiomaActual] || n.titles['en'] || '';
+      let descAct = n.descs[idiomaActual] || n.descs['en'] || '';
+      return tituloAct.toLowerCase().includes(query) || descAct.toLowerCase().includes(query) || (n.tag && n.tag.toLowerCase().includes(query));
+    });
   }
 
   if (filtradas.length === 0) {
@@ -267,14 +315,17 @@ function renderNoticias() {
   let htmlResult = '';
   filtradas.forEach(guia => {
     const dateStr = new Date(guia.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
+    const titulo = guia.titles[idiomaActual] || guia.titles['en'] || 'Guía';
+    const descripcion = guia.descs[idiomaActual] || guia.descs['en'] || '';
+
     htmlResult += `
       <div class="update-card">
         <div class="update-header">
           <span class="update-tag">${guia.tag}</span>
           <span class="update-date">📅 ${dateStr}</span>
         </div>
-        <h3><a href="${guia.link}" target="_self">${guia.title}</a></h3>
-        <div class="update-body">${guia.desc}</div>
+        <h3><a href="${guia.link}" target="_self">${titulo}</a></h3>
+        <div class="update-body">${descripcion}</div>
         <div class="update-footer">
           <a href="${guia.link}" target="_self" class="download-link">${t.read}</a>
         </div>
@@ -293,24 +344,41 @@ async function cargarDatosGuias() {
     const repo = 'Kelonio-hub/Archivos-Kelonio'; 
     const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
     
-    const response = await fetch(apiURL);
-    if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
-    
-    const archivos = await response.json();
-    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+    let guiasCache = localStorage.getItem('guiasCache_v2'); 
+    let timestamp = localStorage.getItem('guiasCacheTime_v2'); 
 
-    for (let file of htmlFiles) {
-      const res = await fetch(file.download_url + '?t=' + new Date().getTime());
-      const htmlText = await res.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlText, 'text/html');
-      
-      const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
-      const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
-      const title = doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
-      const desc = doc.querySelector('meta[name="guide-desc"]')?.content || 'Guía disponible para lectura.';
+    if (guiasCache && timestamp && (Date.now() - timestamp < 7200000)) { 
+        todasLasGuias = JSON.parse(guiasCache); 
+    } else {
+        const response = await fetch(apiURL);
+        if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
+        
+        const archivos = await response.json();
+        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+        const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
 
-      todasLasGuias.push({ tag, date, title, desc, link: `guias/${file.name}` });
+        for (let file of htmlFiles) {
+          const res = await fetch(file.download_url + '?t=' + new Date().getTime());
+          const htmlText = await res.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+          
+          const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
+          const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
+          
+          let titles = {};
+          let descs = {};
+
+          langs.forEach(l => {
+              titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
+              descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
+          });
+
+          todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` });
+        }
+        
+        localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias)); 
+        localStorage.setItem('guiasCacheTime_v2', Date.now());
     }
 
     todasLasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -340,6 +408,7 @@ window.onload = () => {
   createLanguageSelector();
   updateLanguage();
   cargarDatosGuias();
+  verificarNotificacionesRadar();
 };
 </script>
 </body>
