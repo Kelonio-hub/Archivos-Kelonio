@@ -54,7 +54,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .topbar{ position:fixed; top:0; left:0; right:0; z-index:9998; background:rgba(0,0,0,.88); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); }
 .logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
 
-/* Nuevas clases para los iconos en la topbar */
 .topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
 .social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
 .social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
@@ -96,7 +95,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .dl-btn { display: inline-block; background: var(--red); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
 .dl-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(var(--glow-rgb), 0.4); }
 
-/* Nuevo botón inline para texto de productos */
 .mini-btn { background: var(--red); color: white; padding: 3px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-style: normal; margin: 0 4px; display: inline-block; transition: 0.3s; font-size: 0.9em; }
 .mini-btn:hover { transform: scale(1.05); filter: brightness(1.2); color: white; }
 
@@ -181,7 +179,12 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       <div class="guide-content">
         
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/V_zQJq7mF9A" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe 
+            src="https://www.youtube.com/embed/V_zQJq7mF9A" 
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}</style><a href=https://www.youtube.com/embed/V_zQJq7mF9A?autoplay=1><img src=https://img.youtube.com/vi/V_zQJq7mF9A/maxresdefault.jpg alt='Video'><span>▶</span></a>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
         </div>
 
         <div class="alert-box" id="txt_alert1">
@@ -507,7 +510,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   }
   function applyTheme(colorKey) { const theme = paletaTemas[colorKey] || paletaTemas.rojo; document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb); }
 
-  /* ================= SELECTOR DE IDIOMAS (CON AUTO-DETECCIÓN Y FALLBACK) ================= */
+  /* ================= SELECTOR DE IDIOMAS ================= */
   function createLanguageSelector(){
     const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
     const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
@@ -516,13 +519,12 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     const savedLang = localStorage.getItem('preferredLanguage');
     const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
     
-    // Lógica 100% estricta para asegurar que nunca se rompa.
     if (savedLang && translations[savedLang]) {
         idiomaActual = savedLang;
     } else if (translations[browserLang]) {
         idiomaActual = browserLang;
     } else {
-        idiomaActual = 'en'; // Si el navegador está en ruso, árabe, etc., por defecto pondrá INGLÉS.
+        idiomaActual = 'en'; 
     }
     
     selector.value = idiomaActual;
@@ -530,7 +532,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     selector.addEventListener('change', e => {
       idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual); updateLanguage();
       if(accessProductsData.length > 0) renderProductosDisney();
-      if(accessGranted) cargarSidebar();
+      if(accessGranted) cargarSidebar(); // Recargar el sidebar al cambiar idioma
     });
   }
 
@@ -543,7 +545,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
         } 
     });
     
-    // Asignación de Títulos y tooltips de botones superiores adaptados al idioma
     if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
     if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
     if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
@@ -557,7 +558,17 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`;
     let guiasCache = localStorage.getItem('guiasCache'); let timestamp = localStorage.getItem('guiasCacheTime'); let todasLasGuias = [];
 
-    if (guiasCache && timestamp && (Date.now() - timestamp < 7200000)) { todasLasGuias = JSON.parse(guiasCache); } else {
+    // Validar si la caché es antigua (si no tiene el nuevo formato de diccionarios "titles")
+    if (guiasCache && timestamp && (Date.now() - timestamp < 7200000)) { 
+        let cacheParseada = JSON.parse(guiasCache);
+        if(cacheParseada.length > 0 && cacheParseada[0].titles) {
+            todasLasGuias = cacheParseada; 
+        } else {
+            guiasCache = null; // Anular si es la versión anterior
+        }
+    } 
+    
+    if (!todasLasGuias.length) {
         try {
             const repo = 'Kelonio-hub/Archivos-Kelonio'; const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
             const response = await fetch(apiURL); if (!response.ok) throw new Error();
@@ -565,8 +576,15 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
             for (let file of htmlFiles) {
                 const res = await fetch(file.download_url + '?t=' + new Date().getTime()); const htmlText = await res.text();
                 const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html');
-                const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO'; const title = doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
-                todasLasGuias.push({ tag, title, link: file.name });
+                const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO'; 
+                
+                // Guardar los títulos de todos los idiomas disponibles
+                let titles = {};
+                ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => {
+                    titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', '');
+                });
+
+                todasLasGuias.push({ tag, titles, link: file.name });
             }
             localStorage.setItem('guiasCache', JSON.stringify(todasLasGuias)); localStorage.setItem('guiasCacheTime', Date.now());
         } catch (error) { sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; return; }
@@ -581,7 +599,13 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
         if(grupos[cat] && grupos[cat].length > 0) {
             let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
             htmlContent += `<div class="sidebar-group"><div class="sidebar-category"><img src="${iconSrc}"> ${cat}</div>`;
-            grupos[cat].forEach(g => { let linkName = g.link.replace('guias/', ''); let isActive = (currentFile === linkName) ? 'active' : ''; htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${g.title}</a>`; });
+            grupos[cat].forEach(g => { 
+                let linkName = g.link.replace('guias/', ''); 
+                let isActive = (currentFile === linkName) ? 'active' : ''; 
+                // Seleccionar el título basándose en el idioma actual
+                let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link);
+                htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`; 
+            });
             htmlContent += `</div>`; delete grupos[cat];
         }
     });
@@ -589,7 +613,12 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     Object.keys(grupos).forEach(cat => {
         let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
         htmlContent += `<div class="sidebar-group"><div class="sidebar-category"><img src="${iconSrc}"> ${cat}</div>`;
-        grupos[cat].forEach(g => { let linkName = g.link.replace('guias/', ''); let isActive = (currentFile === linkName) ? 'active' : ''; htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${g.title}</a>`; });
+        grupos[cat].forEach(g => { 
+            let linkName = g.link.replace('guias/', ''); 
+            let isActive = (currentFile === linkName) ? 'active' : ''; 
+            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link);
+            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`; 
+        });
         htmlContent += `</div>`;
     });
     sidebar.innerHTML = htmlContent;
