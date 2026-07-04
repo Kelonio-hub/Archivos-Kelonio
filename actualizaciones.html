@@ -400,34 +400,35 @@ function renderNoticias() {
 
 /* ================= CARGA DE DATOS DEL ROBOT ================= */
 async function cargarDatosRobot() {
-  const t = translations[idiomaActual];
+  const t = translations[idiomaActual]; //[cite: 2]
   try {
-    const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime());
-    if(!response.ok) throw new Error();
+    // Mantenemos el parámetro '?t=' y añadimos { cache: "no-store" } para máxima seguridad contra la caché
+    const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime(), { cache: "no-store" }); 
+    if(!response.ok) throw new Error(); //[cite: 2]
 
-    todasLasNoticias = await response.json();
+    todasLasNoticias = await response.json(); //[cite: 2]
 
-    todasLasNoticias.forEach(n => {
-      if (n.tag) {
-        const catPrincipal = n.tag.split('/')[0].trim().toUpperCase();
-        categoriasUnicas.add(catPrincipal);
+    todasLasNoticias.forEach(n => { //[cite: 2]
+      if (n.tag) { //[cite: 2]
+        const catPrincipal = n.tag.split('/')[0].trim().toUpperCase(); //[cite: 2]
+        categoriasUnicas.add(catPrincipal); //[cite: 2]
       }
     });
 
-    const loader = document.getElementById('mainLoader');
-    if(loader) loader.style.display = 'none';
+    const loader = document.getElementById('mainLoader'); //[cite: 2]
+    if(loader) loader.style.display = 'none'; //[cite: 2]
 
-    renderFilterButtons();
-    renderNoticias();
+    renderFilterButtons(); //[cite: 2]
+    renderNoticias(); //[cite: 2]
 
   } catch (error) {
-    document.getElementById('mainLoader').style.display = 'none';
+    document.getElementById('mainLoader').style.display = 'none'; //[cite: 2]
     updatesGrid.innerHTML = `
       <p style="text-align:center; grid-column:1/-1; color:var(--red); font-size:1.1rem; padding: 20px;">
         ${t.waiting}
       </p>
-    `;
-    renderFilterButtons();
+    `; //[cite: 2]
+    renderFilterButtons(); //[cite: 2]
   }
 }
 
