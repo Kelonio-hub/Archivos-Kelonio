@@ -494,13 +494,20 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       container.style.display = (container.style.display === "grid") ? "none" : "grid";
   };
 
-  async function cargarProductosDisney() {
+async function cargarProductosDisney() {
       const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
       let all = [];
-      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) {
-          try { let res = await fetch(base + f + '?nocache=' + Date.now()); if (res.ok) { let data = await res.json(); all = all.concat(Array.isArray(data) ? data : Object.values(data)); } } catch(e){}
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { //
+          try { 
+              // Añadido '?t=' y { cache: "no-store" }
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
       }
-      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); }
+      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } //[cite: 3]
   }
 
   function renderProductosDisney() {
