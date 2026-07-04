@@ -52,14 +52,42 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #fileSearch:focus { width: 200px; border: 1px solid var(--red); }
 #fileSearch::placeholder{ color:#ccc; }
 
-/* ================= CONSOLE BUTTONS ================= */
-.console-buttons{ display:flex; gap:6px; flex-grow: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 5px 0; }
-.console-buttons::-webkit-scrollbar { display: none; }
-.console-btn{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:6px 10px; display:flex; align-items:center; gap:6px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 11px; white-space: nowrap; flex-shrink: 0; }
-.console-btn:hover{ transform:scale(1.05); border-color:var(--red); background:rgba(var(--glow-rgb),.15); }
-.console-btn.fav-active-btn{ border-color:var(--red); background:rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
-.console-btn span{ color:white; letter-spacing:.5px; }
-.console-btn img{ width:18px; height:18px; object-fit:contain; }
+/* ================= CONSOLE BUTTONS (Reubicado y Ajustado) ================= */
+.console-buttons { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 30px; 
+  padding: 5px 0;
+}
+.console-btn { 
+  background: rgba(255,255,255,.05); 
+  border: 1px solid rgba(255,255,255,.08); 
+  border-radius: 10px; 
+  padding: 8px 14px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  cursor: pointer; 
+  transition: .3s ease; 
+  color: white; 
+  font-weight: 700; 
+  font-size: 12px; 
+  white-space: nowrap; 
+}
+.console-btn:hover { 
+  transform: scale(1.05); 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.15); 
+}
+.console-btn.fav-active-btn { 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.25); 
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
+}
+.console-btn span { color: white; letter-spacing: .5px; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; }
 
 /* ================= HEADER HERO ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
@@ -93,7 +121,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 /* ================= RESPONSIVE ================= */
 @media(max-width: 1150px) {
   .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
-  .console-buttons { order: 3; width: 100%; margin: 6px 0 0 0; justify-content: flex-start; }
   .topbar-left { order: 1; }
   .right-tools { order: 2; margin-top: 5px;}
 }
@@ -118,8 +145,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       </button>
     </div>
   </div>
-
-  <div class="console-buttons" id="consoleButtons"></div>
   
   <div class="right-tools">
     
@@ -147,6 +172,8 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 <div class="header-section">
   <h1 id="heroTitle">📡 Radar de Actualizaciones</h1>
   <p id="heroDesc">Monitoreando en tiempo real las últimas versiones detectadas por el satélite.</p>
+  
+  <div class="console-buttons" id="consoleButtons"></div>
 </div>
 
 <div class="updates-container" id="updatesGrid">
@@ -400,35 +427,35 @@ function renderNoticias() {
 
 /* ================= CARGA DE DATOS DEL ROBOT ================= */
 async function cargarDatosRobot() {
-  const t = translations[idiomaActual]; //[cite: 2]
+  const t = translations[idiomaActual];
   try {
     // Mantenemos el parámetro '?t=' y añadimos { cache: "no-store" } para máxima seguridad contra la caché
     const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime(), { cache: "no-store" }); 
-    if(!response.ok) throw new Error(); //[cite: 2]
+    if(!response.ok) throw new Error();
 
-    todasLasNoticias = await response.json(); //[cite: 2]
+    todasLasNoticias = await response.json();
 
-    todasLasNoticias.forEach(n => { //[cite: 2]
-      if (n.tag) { //[cite: 2]
-        const catPrincipal = n.tag.split('/')[0].trim().toUpperCase(); //[cite: 2]
-        categoriasUnicas.add(catPrincipal); //[cite: 2]
+    todasLasNoticias.forEach(n => {
+      if (n.tag) {
+        const catPrincipal = n.tag.split('/')[0].trim().toUpperCase();
+        categoriasUnicas.add(catPrincipal);
       }
     });
 
-    const loader = document.getElementById('mainLoader'); //[cite: 2]
-    if(loader) loader.style.display = 'none'; //[cite: 2]
+    const loader = document.getElementById('mainLoader');
+    if(loader) loader.style.display = 'none';
 
-    renderFilterButtons(); //[cite: 2]
-    renderNoticias(); //[cite: 2]
+    renderFilterButtons();
+    renderNoticias();
 
   } catch (error) {
-    document.getElementById('mainLoader').style.display = 'none'; //[cite: 2]
+    document.getElementById('mainLoader').style.display = 'none';
     updatesGrid.innerHTML = `
       <p style="text-align:center; grid-column:1/-1; color:var(--red); font-size:1.1rem; padding: 20px;">
         ${t.waiting}
       </p>
-    `; //[cite: 2]
-    renderFilterButtons(); //[cite: 2]
+    `;
+    renderFilterButtons();
   }
 }
 
