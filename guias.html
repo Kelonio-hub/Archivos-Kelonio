@@ -47,14 +47,42 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #fileSearch:focus { width: 200px; border: 1px solid var(--red); }
 #fileSearch::placeholder{ color:#ccc; }
 
-/* ================= CONSOLE BUTTONS ================= */
-.console-buttons{ display:flex; gap:6px; flex-grow: 1; justify-content: center; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 5px 0; }
-.console-buttons::-webkit-scrollbar { display: none; }
-.console-btn{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:6px 10px; display:flex; align-items:center; gap:6px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 11px; white-space: nowrap; flex-shrink: 0; }
-.console-btn:hover{ transform:scale(1.05); border-color:var(--red); background:rgba(var(--glow-rgb),.15); }
-.console-btn.fav-active-btn{ border-color:var(--red); background:rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
-.console-btn span{ color:white; letter-spacing:.5px; }
-.console-btn img{ width:18px; height:18px; object-fit:contain; }
+/* ================= CONSOLE BUTTONS (Reubicado y Ajustado) ================= */
+.console-buttons { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 30px; 
+  padding: 5px 0;
+}
+.console-btn { 
+  background: rgba(255,255,255,.05); 
+  border: 1px solid rgba(255,255,255,.08); 
+  border-radius: 10px; 
+  padding: 8px 14px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  cursor: pointer; 
+  transition: .3s ease; 
+  color: white; 
+  font-weight: 700; 
+  font-size: 12px; 
+  white-space: nowrap; 
+}
+.console-btn:hover { 
+  transform: scale(1.05); 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.15); 
+}
+.console-btn.fav-active-btn { 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.25); 
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
+}
+.console-btn span { color: white; letter-spacing: .5px; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; }
 
 /* ================= HEADER HERO ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
@@ -87,7 +115,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 
 @media(max-width: 1150px) {
   .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
-  .console-buttons { order: 3; width: 100%; margin: 6px 0 0 0; justify-content: flex-start; }
   .topbar-left { order: 1; }
   .right-tools { order: 2; margin-top: 5px;}
 }
@@ -108,8 +135,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       </button>
     </div>
   </div>
-
-  <div class="console-buttons" id="consoleButtons"></div>
   
   <div class="right-tools">
     
@@ -137,6 +162,8 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 <div class="header-section">
   <h1 id="heroTitle">📖 Centro de Guías</h1>
   <p id="heroDesc">Manuales, tutoriales y guías paso a paso para sacar el máximo provecho a tus consolas.</p>
+  
+  <div class="console-buttons" id="consoleButtons"></div>
 </div>
 
 <div class="updates-container" id="updatesGrid">
@@ -158,7 +185,7 @@ const translations = {
   it: { title: "Guide e Tutorial | La Presa", heroTitle: "📖 Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
   pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "📖 Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
   ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "📖 ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "📖 가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "📖 가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", 가이즈: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
@@ -355,50 +382,50 @@ async function cargarDatosGuias() {
     if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
     
     const archivos = await response.json();
-    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); //
-    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko']; //
+    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
 
     // Vaciamos el array de guías en cada recarga para evitar duplicados
     todasLasGuias = [];
 
     for (let file of htmlFiles) {
-      // El parámetro '?t=' ya ayuda a evitar la caché del archivo individual[cite: 1]
+      // El parámetro '?t=' ya ayuda a evitar la caché del archivo individual
       const res = await fetch(file.download_url + '?t=' + new Date().getTime());
       const htmlText = await res.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(htmlText, 'text/html');
       
-      const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO'; //[cite: 1]
-      const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01'; //[cite: 1]
+      const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
+      const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
       
-      let titles = {}; //[cite: 1]
-      let descs = {}; //[cite: 1]
+      let titles = {};
+      let descs = {};
 
       langs.forEach(l => {
-          titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', ''); //[cite: 1]
-          descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || ''; //[cite: 1]
+          titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
+          descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
       });
 
-      todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` }); //[cite: 1]
+      todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` });
     }
     
     // Opcional: Puedes seguir guardándolo en localStorage por si en el futuro quieres revertirlo
-    localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias)); //[cite: 1]
-    localStorage.setItem('guiasCacheTime_v2', Date.now()); //[cite: 1]
+    localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
+    localStorage.setItem('guiasCacheTime_v2', Date.now());
 
-    todasLasGuias.sort((a, b) => new Date(b.date) - new Date(a.date)); //[cite: 1]
-    todasLasGuias.forEach(n => { //[cite: 1]
-      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase()); //[cite: 1]
+    todasLasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
+    todasLasGuias.forEach(n => {
+      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
     });
 
-    loader.style.display = 'none'; //[cite: 1]
-    renderFilterButtons(); //[cite: 1]
-    renderNoticias(); //[cite: 1]
+    loader.style.display = 'none';
+    renderFilterButtons();
+    renderNoticias();
 
   } catch (error) {
     console.error("Error al cargar guías:", error);
-    loader.style.display = 'none'; //[cite: 1]
-    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`; //[cite: 1]
+    loader.style.display = 'none';
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
   }
 }
 
