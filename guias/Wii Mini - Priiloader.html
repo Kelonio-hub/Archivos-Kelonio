@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalar Priiloader | La Presa</title>
+
+<meta name="guide-tag" content="WII MINI">
+<meta name="guide-date" content="2026-07-05">
+
+<meta name="guide-title-es" content="Instalar Priiloader en Wii, Wii Mini y vWii">
+<meta name="guide-title-en" content="Install Priiloader on Wii, Wii Mini and vWii">
+<meta name="guide-title-fr" content="Installer Priiloader sur Wii, Wii Mini et vWii">
+<meta name="guide-title-de" content="Priiloader auf Wii, Wii Mini und vWii installieren">
+<meta name="guide-title-it" content="Installare Priiloader su Wii, Wii Mini e vWii">
+<meta name="guide-title-pt" content="Instalar Priiloader no Wii, Wii Mini e vWii">
+<meta name="guide-title-ja" content="Wii、Wii Mini、vWiiにPriiloaderをインストールする">
+<meta name="guide-title-ko" content="Wii, Wii Mini 및 vWii에 Priiloader 설치하기">
+
+<meta name="guide-desc-es" content="Guía para instalar Priiloader v0.10.0 en Wii, Wii Mini y Virtual Wii para evitar bricks y bloquear actualizaciones.">
+<link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
+
+<style>
+:root{ --red:#e50914; --bg:#141414; --glass-border:rgba(255,255,255,.08); --glow-rgb: 229, 9, 20; }
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; line-height: 1.6; }
+
+#accessWallOverlay { position: fixed; inset: 0; z-index: 99999999; background: #141414; display: flex; justify-content: center; align-items: center; font-family: 'Segoe UI', system-ui, sans-serif; color: #f9f9f9; transition: opacity 0.5s ease, visibility 0.5s ease; }
+.disney-access-card { width: 90%; max-width: 620px; background: rgba(26, 29, 41, 0.95); backdrop-filter: blur(14px); padding: 50px 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); text-align: center; box-shadow: 0 0 60px rgba(var(--glow-rgb), 0.25); }
+.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
+.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
+.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
+.disney-progress-fill { height: 100%; width: 0%; background: var(--red); transition: width 0.7s ease; }
+.disney-step-btn { width: 100%; padding: 18px; margin: 12px 0; border-radius: 14px; border: none; background: rgba(255,255,255,0.1); color: white; font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
+.disney-step-done { background: var(--red) !important; color: #fff !important; cursor: default; }
+#disneyProductsContainer { display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto; }
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.disney-aw-product { background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.disney-aw-product:hover { transform: translateY(-6px); border-color: var(--red); }
+.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
+.disney-choose-badge { margin-top: 8px; font-size: 11px; background: var(--red); color: #fff; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
+
+#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+.topbar{ position:fixed; top:0; left:0; right:0; z-index:9998; background:rgba(0,0,0,.88); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
+
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+.right-tools{ display:flex; align-items:center; gap:12px;}
+.back-btn { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:8px 15px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:bold; font-size: 13px; text-decoration: none;}
+.back-btn:hover { background:var(--red); border-color:var(--red); transform:scale(1.05); }
+.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container{ display:flex; gap:5px; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover{ transform:scale(1.3); }
+.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+
+.main-layout { display: flex; max-width: 1250px; margin: 80px auto 0; padding: 20px; gap: 30px; align-items: flex-start; }
+.sidebar { width: 280px; flex-shrink: 0; position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; background: rgba(26, 29, 41, 0.4); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 12px; backdrop-filter: blur(10px); }
+.sidebar::-webkit-scrollbar { width: 5px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.sidebar-title { font-size: 1.05rem; color: white; margin-bottom: 20px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-group { margin-bottom: 20px; }
+.sidebar-category { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px; font-weight: bold; color: var(--red); margin-bottom: 8px; cursor: pointer; user-select: none; transition: background 0.2s; }
+.sidebar-category:hover { background: rgba(255,255,255,0.1); }
+.sidebar-category .cat-left { display: flex; align-items: center; gap: 10px; }
+.sidebar-category img { width: 22px; height: 22px; object-fit: contain; }
+.toggle-icon { font-size: 12px; color: #fff; transition: transform 0.3s ease; }
+.sidebar-group.collapsed .toggle-icon { transform: rotate(-90deg); }
+.sidebar-links-container { display: flex; flex-direction: column; overflow: hidden; }
+.sidebar-group.collapsed .sidebar-links-container { display: none; }.sidebar-link { display: block; color: #bbb; text-decoration: none; font-size: 0.9rem; padding: 8px 12px 8px 16px; border-left: 2px solid transparent; transition: 0.2s; margin-bottom: 2px; border-radius: 0 8px 8px 0; }
+.sidebar-link:hover { color: white; border-left-color: var(--red); background: rgba(255,255,255,0.03); transform: translateX(3px); }
+.sidebar-link.active { color: white; border-left-color: var(--red); background: rgba(var(--glow-rgb), 0.15); font-weight: bold; }
+
+.guide-container { flex-grow: 1; min-width: 0; background: rgba(20,20,20,0.5); border-radius: 16px; padding: 40px; border: 1px solid var(--glass-border); }
+.guide-header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--glass-border); }
+.guide-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+.guide-tag { display: inline-block; background: var(--red); color: white; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 12px; margin-bottom: 15px; }
+.guide-content h2 { color: var(--red); font-size: 1.8rem; margin: 35px 0 15px; }
+.guide-content p { color: #ccc; font-size: 1.1rem; margin-bottom: 15px; }
+.guide-content ul, .guide-content ol { margin: 15px 0 20px 25px; color: #ccc; font-size: 1.1rem; }
+.guide-content li { margin-bottom: 8px; }
+
+.alert-box { background: rgba(var(--glow-rgb), 0.1); border-left: 4px solid var(--red); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; color: #e0e0e0; }
+.dl-btn { display: inline-block; background: var(--red); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+.dl-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(var(--glow-rgb), 0.4); }
+
+.mini-btn { background: var(--red); color: white; padding: 3px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-style: normal; margin: 0 4px; display: inline-block; transition: 0.3s; font-size: 0.9em; }
+.mini-btn:hover { transform: scale(1.05); filter: brightness(1.2); color: white; }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
+
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+@media(max-width: 950px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center;}
+  .right-tools { margin-top: 10px; }
+  .main-layout { flex-direction: column; margin-top: 100px; padding: 10px; }
+  .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
+  .guide-container { width: 100%; order: 1; padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div id="accessWallOverlay" style="display: none;">
+  <div class="disney-access-card">
+      <h1 class="disney-logo-title">LA PRESA</h1>
+      <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
+      <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
+      <button id="disney-btn1" class="disney-step-btn"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+      <button id="disney-btn2" class="disney-step-btn"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
+      <div id="disneyProductsContainer"></div>
+  </div>
+</div>
+
+<div id="mainHub">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
+      <div class="social-group">
+        <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.com/invite/xHg7XaYJvK', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+        </button>
+        <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/wiide', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="right-tools">
+      <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('../guias.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+      </button>
+
+      <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('../productos.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      </button>
+
+      <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('../actualizaciones.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+        <span id="radarBadge" class="radar-badge"></span>
+      </button>
+
+      <a href="../guias.html" class="back-btn">
+        <span id="txt_backBtnText">← Volver a las Guías</span>
+      </a>
+      <div class="config-group">
+        <div class="theme-dots-container" id="themeDots"></div>
+        <select id="languageSelector"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    
+    <aside class="sidebar" id="guideSidebar">
+      <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
+    </aside>
+
+    <main class="guide-container">
+      <div class="guide-header">
+        <span class="guide-tag" id="txt_tag">WII MINI</span>
+        <h1 id="txt_title">Instalación de Priiloader v0.10.0</h1>
+      </div>
+
+      <div class="guide-content">
+        
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/bMnYoYa9flQ" 
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}</style><a href=https://www.youtube.com/embed/bMnYoYa9flQ?autoplay=1><img src=https://img.youtube.com/vi/bMnYoYa9flQ/maxresdefault.jpg alt='Video'><span>▶</span></a>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="alert-box" id="txt_alert1">
+          <strong>⚠️ Importante:</strong> Priiloader es un programa parásito de autoarranque. Existe compatibilidad con Wii, Wii Mini y Virtual Wii.
+        </div>
+
+        <h2 id="txt_h2_req">Requisitos</h2>
+        <ul>
+          <li id="txt_req1">Consola con Homebrew Channel instalado.</li>
+          <li id="txt_req2">Teclado USB (solo para Wii Mini) o mando de GameCube / Wiimote.</li>
+          <li><span id="txt_req3">Archivos v0.10.0 de Priiloader</span> <br><a href="https://www.mediafire.com/folder/qym3tf9fs2zum/Priiloader" target="_blank" class="dl-btn" id="txt_reqBtn">Descargar Archivos</a></li>
+        </ul>
+        <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros productos</em></p>
+
+        <h2 id="txt_h2_step1">PASO 1: Instalación y Desinstalación</h2>
+        <ol>
+          <li id="txt_s1_1">Coloca el archivo del programa en la carpeta <strong>apps</strong>, acude al Homebrew Channel y cárgalo.</li>
+          <li id="txt_s1_2"><strong>Para instalar:</strong> presiona [+] en tu Wiimote o [A] en un control de GameCube.<br><strong>Para desinstalar:</strong> presiona [-] en tu Wiimote o [Y] en el mando de GameCube.</li>
+        </ol>
+
+        <h2 id="txt_h2_step2">PASO 2: ¿Cómo acceder a Priiloader?</h2>
+        <ul>
+          <li id="txt_s2_1"><strong>Wii:</strong> presiona RESET mientras enciendes la consola.<br><strong>Wii Mini:</strong> conecta un teclado USB y presiona Escape al encender.<br><strong>vWii:</strong> el CFW de Aroma permite cargarlo desde el Home, o usa el arranque desde el HBC.</li>
+        </ul>
+
+        <h2 id="txt_h2_step3">PASO 3: Opciones y utilidades</h2>
+        <ul>
+          <li id="txt_s3_1">Permite desbrickear la consola, respaldo/restauración de Nand, inicio directo a HBC, ejecutar archivos de diferente región (Region Free EVERYTHING) y bloquear actualizaciones.</li>
+        </ul>
+
+        <div class="alert-box" style="border-left-color: var(--green); margin-top: 30px;" id="txt_alert2">
+          <strong>✅ ¡Enhorabuena!</strong> Tu consola ahora está protegida contra bricks y actualizaciones.
+        </div>
+
+        <p id="txt_footer">Disfruta de tu consola modificada con total seguridad.</p>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<script>
+  /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
+  const translations = {
+    es: {
+      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
+      txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
+      txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Instalación de Priiloader v0.10.0",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Priiloader es un programa parásito de autoarranque. Existe compatibilidad con Wii, Wii Mini y Virtual Wii.",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Consola con Homebrew Channel instalado.", 
+      txt_req2: "Teclado USB (solo para Wii Mini) o mando de GameCube / Wiimote.", 
+      txt_req3: "Archivos v0.10.0 de Priiloader", 
+      txt_reqBtn: "Descargar Archivos", 
+      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
+      
+      txt_h2_step1: "PASO 1: Instalación y Desinstalación",
+      txt_s1_1: "Coloca el archivo del programa en la carpeta <strong>apps</strong>, acude al Homebrew Channel y cárgalo.", 
+      txt_s1_2: "<strong>Para instalar:</strong> presiona [+] en tu Wiimote o [A] en un control de GameCube.<br><strong>Para desinstalar:</strong> presiona [-] en tu Wiimote o [Y] en el mando de GameCube.",
+      
+      txt_h2_step2: "PASO 2: ¿Cómo acceder a Priiloader?",
+      txt_s2_1: "<strong>Wii:</strong> presiona RESET mientras enciendes la consola.<br><strong>Wii Mini:</strong> conecta un teclado USB y presiona Escape al encender.<br><strong>vWii:</strong> el CFW de Aroma permite cargarlo desde el Home, o usa el arranque desde el HBC.",
+
+      txt_h2_step3: "PASO 3: Opciones y utilidades",
+      txt_s3_1: "Permite desbrickear la consola, respaldo/restauración de Nand, inicio directo a HBC, ejecutar archivos de diferente región (Region Free EVERYTHING) y bloquear actualizaciones.",
+
+      txt_alert2: "<strong>✅ ¡Enhorabuena!</strong> Tu consola ahora está protegida contra bricks y actualizaciones.", 
+      txt_footer: "Disfruta de tu consola modificada con total seguridad."
+    },
+    en: {
+      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
+      txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
+      txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Priiloader v0.10.0 Installation",
+      txt_alert1: "<strong>⚠️ Important:</strong> Priiloader is an auto-boot parasite program. It is compatible with Wii, Wii Mini, and Virtual Wii.",
+      txt_h2_req: "Requirements", 
+      txt_req1: "Console with Homebrew Channel installed.", 
+      txt_req2: "USB Keyboard (for Wii Mini only) or GameCube controller / Wiimote.", 
+      txt_req3: "Priiloader v0.10.0 files", 
+      txt_reqBtn: "Download Files", 
+      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
+      
+      txt_h2_step1: "STEP 1: Installation and Uninstallation",
+      txt_s1_1: "Place the program file in the <strong>apps</strong> folder, go to the Homebrew Channel, and load it.", 
+      txt_s1_2: "<strong>To install:</strong> press [+] on your Wiimote or [A] on a GameCube controller.<br><strong>To uninstall:</strong> press [-] on your Wiimote or [Y] on a GameCube controller.",
+      
+      txt_h2_step2: "STEP 2: How to access Priiloader?",
+      txt_s2_1: "<strong>Wii:</strong> press RESET while turning on the console.<br><strong>Wii Mini:</strong> connect a USB keyboard and press Escape when turning it on.<br><strong>vWii:</strong> Aroma CFW allows loading from Home, or use boot from HBC.",
+
+      txt_h2_step3: "STEP 3: Options and Utilities",
+      txt_s3_1: "Allows unbricking the console, Nand backup/restore, direct boot to HBC, Region Free EVERYTHING, and blocking updates.",
+
+      txt_alert2: "<strong>✅ Congratulations!</strong> Your console is now protected against bricks and updates.", 
+      txt_footer: "Enjoy your modded console with maximum safety."
+    },
+    fr: {
+      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
+      txt_awSubtitle: "Terminez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours",
+      txt_radar: "Radar des Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Installation de Priiloader v0.10.0",
+      txt_alert1: "<strong>⚠️ Important:</strong> Priiloader est un programme parasite de démarrage automatique. Il est compatible avec Wii, Wii Mini et Virtual Wii.",
+      txt_h2_req: "Prérequis", 
+      txt_req1: "Console avec la Chaîne Homebrew installée.", 
+      txt_req2: "Clavier USB (pour Wii Mini uniquement) ou manette GameCube / Wiimote.", 
+      txt_req3: "Fichiers Priiloader v0.10.0", 
+      txt_reqBtn: "Télécharger les Fichiers", 
+      txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      
+      txt_h2_step1: "ÉTAPE 1 : Installation et Désinstallation",
+      txt_s1_1: "Placez le fichier du programme dans le dossier <strong>apps</strong>, lancez la Chaîne Homebrew et chargez-le.", 
+      txt_s1_2: "<strong>Pour installer:</strong> appuyez sur [+] sur la Wiimote ou [A] sur la manette GameCube.<br><strong>Pour désinstaller:</strong> appuyez sur [-] sur la Wiimote ou [Y] sur la manette GameCube.",
+      
+      txt_h2_step2: "ÉTAPE 2 : Comment accéder à Priiloader ?",
+      txt_s2_1: "<strong>Wii:</strong> maintenez RESET en allumant la console.<br><strong>Wii Mini:</strong> connectez un clavier USB et appuyez sur Échap au démarrage.<br><strong>vWii:</strong> le CFW Aroma permet de le charger depuis le menu Home, ou lancez-le depuis la HBC.",
+
+      txt_h2_step3: "ÉTAPE 3 : Options et utilitaires",
+      txt_s3_1: "Permet de débriquer la console, de sauvegarder/restaurer la NAND, de démarrer directement sur la HBC, de lire toutes les régions (Region Free) et de bloquer les mises à jour.",
+
+      txt_alert2: "<strong>✅ Félicitations !</strong> Votre console est désormais protégée contre les bricks et les mises à jour.", 
+      txt_footer: "Profitez de votre console modifiée en toute sécurité."
+    },
+    de: {
+      txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
+      txt_awSubtitle: "Schließen Sie die Schritte ab, um Inhalte freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
+      txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Priiloader v0.10.0 Installation",
+      txt_alert1: "<strong>⚠️ Wichtig:</strong> Priiloader ist ein Auto-Boot-Parasitenprogramm. Es ist kompatibel mit Wii, Wii Mini und Virtual Wii.",
+      txt_h2_req: "Voraussetzungen", 
+      txt_req1: "Konsole mit installiertem Homebrew Channel.", 
+      txt_req2: "USB-Tastatur (nur für Wii Mini) oder GameCube-Controller / Wiimote.", 
+      txt_req3: "Priiloader v0.10.0 Dateien", 
+      txt_reqBtn: "Dateien Herunterladen", 
+      txt_reqNote: "* Sie können sich unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
+      
+      txt_h2_step1: "SCHRITT 1: Installation und Deinstallation",
+      txt_s1_1: "Legen Sie die Programmdatei in den Ordner <strong>apps</strong>, öffnen Sie den Homebrew Channel und laden Sie sie.", 
+      txt_s1_2: "<strong>Zur Installation:</strong> Drücke [+] auf der Wiimote oder [A] auf dem GameCube-Controller.<br><strong>Zur Deinstallation:</strong> Drücke [-] auf der Wiimote oder [Y] auf dem GameCube-Controller.",
+      
+      txt_h2_step2: "SCHRITT 2: Wie greife ich auf Priiloader zu?",
+      txt_s2_1: "<strong>Wii:</strong> Halte RESET beim Einschalten der Konsole gedrückt.<br><strong>Wii Mini:</strong> Schließe eine USB-Tastatur an und drücke Esc beim Start.<br><strong>vWii:</strong> Die Aroma CFW ermöglicht das Laden über das Home-Menü oder den Start über den HBC.",
+
+      txt_h2_step3: "SCHRITT 3: Optionen und Dienstprogramme",
+      txt_s3_1: "Ermöglicht das Entbricken der Konsole, NAND-Backup/Restore, direkten Start zum HBC, Region Free für alles und das Blockieren von Updates.",
+
+      txt_alert2: "<strong>✅ Herzlichen Glückwunsch!</strong> Deine Konsole ist jetzt vor Bricks und Updates geschützt.", 
+      txt_footer: "Viel Spaß mit deiner gemoddeten Konsole in maximaler Sicherheit."
+    },
+    it: {
+      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
+      txt_awSubtitle: "Completa i passaggi per sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
+      txt_radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Installazione di Priiloader v0.10.0",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Priiloader è un programma parassita ad avvio automatico. È compatibile con Wii, Wii Mini e Virtual Wii.",
+      txt_h2_req: "Requisiti", 
+      txt_req1: "Console con Homebrew Channel installato.", 
+      txt_req2: "Tastiera USB (solo per Wii Mini) o controller GameCube / Wiimote.", 
+      txt_req3: "File Priiloader v0.10.0", 
+      txt_reqBtn: "Scarica i File", 
+      txt_reqNote: "* Puoi controllare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      
+      txt_h2_step1: "PASSO 1: Installazione e Disinstallazione",
+      txt_s1_1: "Inserisci il file del programma nella cartella <strong>apps</strong>, vai all'Homebrew Channel e caricalo.", 
+      txt_s1_2: "<strong>Per installare:</strong> premi [+] sul Wiimote o [A] sul controller GameCube.<br><strong>Per disinstallare:</strong> premi [-] sul Wiimote o [Y] sul controller GameCube.",
+      
+      txt_h2_step2: "PASSO 2: Come accedere a Priiloader?",
+      txt_s2_1: "<strong>Wii:</strong> premi RESET mentre accendi la console.<br><strong>Wii Mini:</strong> collega una tastiera USB e premi Esc all'accensione.<br><strong>vWii:</strong> il CFW Aroma permette il caricamento dalla Home, oppure avvialo dall'HBC.",
+
+      txt_h2_step3: "PASSO 3: Opzioni e utilità",
+      txt_s3_1: "Permette di sbriccare la console, fare backup/ripristino della NAND, avvio diretto all'HBC, Region Free GLOBALE e blocco degli aggiornamenti.",
+
+      txt_alert2: "<strong>✅ Congratulazioni!</strong> La tua console ora è protetta contro brick e aggiornamenti.", 
+      txt_footer: "Goditi la tua console modificata in totale sicurezza."
+    },
+    pt: {
+      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
+      txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio",
+      txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entrar no Discord", txt_kofi: "Apoie-nos no Ko-fi",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Instalação do Priiloader v0.10.0",
+      txt_alert1: "<strong>⚠️ Importante:</strong> O Priiloader é um programa parasita de inicialização automática. Compatível com Wii, Wii Mini e Virtual Wii.",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Console com o Homebrew Channel instalado.", 
+      txt_req2: "Teclado USB (apenas para Wii Mini) ou controle de GameCube / Wiimote.", 
+      txt_req3: "Arquivos do Priiloader v0.10.0", 
+      txt_reqBtn: "Baixar Arquivos", 
+      txt_reqNote: "* Você pode visualizar nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      
+      txt_h2_step1: "PASSO 1: Instalação e Desinstalação",
+      txt_s1_1: "Coloque o arquivo do programa na pasta <strong>apps</strong>, abra o Homebrew Channel e carregue-o.", 
+      txt_s1_2: "<strong>Para instalar:</strong> pressione [+] no seu Wiimote ou [A] no controle de GameCube.<br><strong>Para desinstalar:</strong> pressione [-] no seu Wiimote ou [Y] no controle de GameCube.",
+      
+      txt_h2_step2: "PASSO 2: Como acessar o Priiloader?",
+      txt_s2_1: "<strong>Wii:</strong> pressione RESET ao ligar o console.<br><strong>Wii Mini:</strong> conecte um teclado USB e pressione Esc ao ligar.<br><strong>vWii:</strong> o CFW Aroma permite carregá-lo pelo menu Home ou a partir do HBC.",
+
+      txt_h2_step3: "PASSO 3: Opções e utilitários",
+      txt_s3_1: "Permite recuperar a placa de um brick, backup/restauração de NAND, inicialização direta no HBC, Region Free COMPLETO e bloqueio de atualizações.",
+
+      txt_alert2: "<strong>✅ Parabéns!</strong> Seu console agora está protegido contra bricks e atualizações.", 
+      txt_footer: "Aproveite seu console modificado com segurança máxima."
+    },
+    ja: {
+      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
+      txt_awSubtitle: "コンテンツのロックを解除するには、手順を完了してください。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. プレゼントに応募する",
+      txt_radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Priiloader v0.10.0 のインストール",
+      txt_alert1: "<strong>⚠️ 重要:</strong> Priiloaderは自動起動プログラムです。Wii、Wii Mini、Virtual Wiiと互換性があります。",
+      txt_h2_req: "要件", 
+      txt_req1: "Homebrew Channelがインストールされた本体。", 
+      txt_req2: "USBキーボード（Wii Miniのみ）、またはゲームキューブコントローラー/Wiimote。", 
+      txt_req3: "Priiloader v0.10.0 ファイル", 
+      txt_reqBtn: "ファイルをダウンロード", 
+      txt_reqNote: "* 私たちの<a href='../productos.html' class='mini-btn'>製品</a>を確認できます",
+      
+      txt_h2_step1: "ステップ 1: インストールとアンインストール",
+      txt_s1_1: "プログラムファイルを <strong>apps</strong> フォルダに置き、Homebrew Channelから起動します。", 
+      txt_s1_2: "<strong>インストールする場合:</strong> Wiimoteの [+] または ゲームキューブコントローラーの [A] を押します。<br><strong>アンインストールする場合:</strong> Wiimoteの [-] または ゲームキューブコントローラーの [Y] を押します。",
+      
+      txt_h2_step2: "ステップ 2: Priiloaderへのアクセス方法",
+      txt_s2_1: "<strong>Wii:</strong> 本体起動時に RESET を押します。<br><strong>Wii Mini:</strong> USBキーボードを接続し、起動時に Esc を押します。<br><strong>vWii:</strong> Aroma CFW を使用してホームメニューから起動するか、HBCから起動します。",
+
+      txt_h2_step3: "ステップ 3: オプションと機能",
+      txt_s3_1: "ブリックの復旧、NANDバックアップ/リストア、HBCへの直接起動、完全なリージョンフリー化、およびアップデートのブロックが可能です。",
+
+      txt_alert2: "<strong>✅ おめでとうございます！</strong> これで本体はブリックや不要なアップデートから保護されました。", 
+      txt_footer: "改造した本体を安全に楽しんでください。"
+    },
+    ko: {
+      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드",
+      txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 경품 행사에 참여하기",
+      txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi에서 후원하기",
+      
+      txt_tag: "WII / WII MINI / VWII",
+      txt_title: "Priiloader v0.10.0 설치",
+      txt_alert1: "<strong>⚠️ 중요:</strong> Priiloader는 자동 부팅 프로그램입니다. Wii, Wii Mini 및 Virtual Wii와 호환됩니다.",
+      txt_h2_req: "요구 사항", 
+      txt_req1: "Homebrew Channel이 설치된 콘솔.", 
+      txt_req2: "USB 키보드(Wii Mini 전용) 또는 게임큐브 컨트롤러 / Wiimote.", 
+      txt_req3: "Priiloader v0.10.0 파일", 
+      txt_reqBtn: "파일 다운로드", 
+      txt_reqNote: "* 당사의 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다",
+      
+      txt_h2_step1: "1단계: 설치 및 제거",
+      txt_s1_1: "프로그램 파일을 <strong>apps</strong> 폴더에 넣고 Homebrew Channel로 이동하여 로드합니다.", 
+      txt_s1_2: "<strong>설치하려면:</strong> Wiimote에서 [+]를 누르거나 게임큐브 컨트롤러에서 [A]를 누릅니다.<br><strong>제거하려면:</strong> Wiimote에서 [-]를 누르거나 게임큐브 컨트롤러에서 [Y]를 누릅니다.",
+      
+      txt_h2_step2: "2단계: Priiloader에 접속하는 방법?",
+      txt_s2_1: "<strong>Wii:</strong> 콘솔을 켤 때 RESET을 누릅니다.<br><strong>Wii Mini:</strong> USB 키보드를 연결하고 켤 때 Esc를 누릅니다.<br><strong>vWii:</strong> Aroma CFW를 사용하여 홈 메뉴에서 로드하거나 HBC에서 로드합니다.",
+
+      txt_h2_step3: "3단계: 옵션 및 기능",
+      txt_s3_1: "콘솔 벽돌 복구, NAND 백업/복원, HBC로 직접 부팅, 완전한 지역 제한 해제 및 업데이트 차단을 허용합니다.",
+
+      txt_alert2: "<strong>✅ 축하합니다!</strong> 이제 콘솔이 벽돌 및 업데이트로부터 보호됩니다.", 
+      txt_footer: "최고의 안전과 함께 개조된 콘솔을 즐기세요."
+    }
+  };
+
+  /* ================= LÓGICA CORE (NO TOCAR) ================= */
+  let idiomaActual = 'en'; 
+  let accessGranted = false;
+  let s1 = false; let s2 = false; let accessProductsData = [];
+
+  function comprobarAccesoTemporal() {
+      const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+      const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
+      if (tokenGuardado === tokenValidoHoy) { accessGranted = true; } else { localStorage.removeItem("_lp_auth_tk"); accessGranted = false; }
+  }
+
+  function iniciarAppPrincipal() {
+      document.getElementById('mainHub').style.display = 'block';
+      setTimeout(() => document.getElementById('mainHub').style.opacity = '1', 50);
+      cargarSidebar();
+  }
+
+  document.getElementById('disney-btn1').onclick = function() {
+      if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
+      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
+      btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
+      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 40000);
+  };
+
+  document.getElementById('disney-btn2').onclick = function() {
+      if(s2) return;
+      const container = document.getElementById('disneyProductsContainer');
+      container.style.display = (container.style.display === "grid") ? "none" : "grid";
+  };
+
+async function cargarProductosDisney() {
+      const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
+      let all = [];
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { 
+          try { 
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
+      }
+      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } 
+  }
+
+  function renderProductosDisney() {
+      const cont = document.getElementById('disneyProductsContainer'); cont.innerHTML = '';
+      accessProductsData.forEach(p => {
+          let title = (typeof p.label === 'string') ? p.label : (p.label ? (p.label[idiomaActual] || p.label['en'] || p.label['es'] || 'Producto') : 'Producto');
+          const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+          let url = p.url || '#'; if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
+          const div = document.createElement('div'); div.className = 'disney-aw-product';
+          div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
+          div.onclick = () => { window.open(url, "_blank"); completarSorteoDisney(); };
+          cont.appendChild(div);
+      });
+  }
+
+  function completarSorteoDisney() {
+      if(s2) return; s2 = true;
+      const btn2 = document.getElementById('disney-btn2'); btn2.classList.add('disney-step-done'); btn2.innerText = "✅";
+      document.getElementById('disneyProductsContainer').style.display = "none"; checkProgressDisney();
+  }
+
+  function checkProgressDisney() {
+      let count = (s1 ? 1 : 0) + (s2 ? 1 : 0); document.getElementById('disney-progress').style.width = (count * 50) + "%";
+      if (count === 2) {
+          localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + new Date().toDateString()));
+          setTimeout(() => { const overlay = document.getElementById('accessWallOverlay'); overlay.style.opacity = '0'; setTimeout(() => { overlay.style.display = 'none'; iniciarAppPrincipal(); }, 500); }, 800);
+      }
+  }
+
+  const themeDotsContainer = document.getElementById('themeDots');
+  const paletaTemas = { rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' }, verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' } };
+  function initThemeDots() {
+    const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo'; themeDotsContainer.innerHTML = '';
+    Object.keys(paletaTemas).forEach(colorKey => {
+      const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
+      if (colorKey === savedTheme) dot.classList.add('active-dot');
+      dot.addEventListener('click', () => { document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot')); dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey); });
+      themeDotsContainer.appendChild(dot);
+    }); applyTheme(savedTheme);
+  }
+  function applyTheme(colorKey) { const theme = paletaTemas[colorKey] || paletaTemas.rojo; document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb); }
+
+  function createLanguageSelector(){
+    const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+    const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+    Object.keys(langs).forEach(code=>{ const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt); });
+    
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+    
+    if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+    else if (translations[browserLang]) { idiomaActual = browserLang; } 
+    else { idiomaActual = 'en'; }
+    
+    selector.value = idiomaActual;
+    
+    selector.addEventListener('change', e => {
+      idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual); updateLanguage();
+      if(accessProductsData.length > 0) renderProductosDisney();
+      if(accessGranted) cargarSidebar(); 
+    });
+  }
+
+  function updateLanguage(){
+    const t = translations[idiomaActual] || translations['en'];
+    Object.keys(t).forEach(key => { 
+        const element = document.getElementById(key); 
+        if(element && !element.classList.contains('disney-step-done')) {
+            element.innerHTML = t[key]; 
+        } 
+    });
+    
+    if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
+    if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
+    if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
+    if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.txt_discord || "Discord";
+    if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.txt_kofi || "Ko-fi";
+  }
+
+  async function cargarSidebar() {
+    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en']; 
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`; 
+    let todasLasGuias = [];
+
+    try {
+        const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+        const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+        const response = await fetch(apiURL, { cache: "no-store" }); 
+        if (!response.ok) throw new Error();
+        
+        const archivos = await response.json(); 
+        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); 
+        
+        for (let file of htmlFiles) {
+            const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+            const htmlText = await res.text();
+            const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html'); 
+            const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';  
+            let titles = {};
+            ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { 
+                titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', ''); 
+            });
+            todasLasGuias.push({ tag, titles, link: file.name }); 
+        }
+    } catch (error) { 
+        sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; 
+        return; 
+    }
+
+    const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SONY','XBOX','SD'];
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); }); 
+    let currentFile = window.location.pathname.split('/').pop() || ''; 
+
+    const renderGroup = (cat, guias) => { 
+        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'; 
+        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile); 
+        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed"; 
+
+        htmlContent += `<div class="${groupClass}">
+            <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
+                <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="sidebar-links-container">`; 
+
+        guias.forEach(g => {  
+            let linkName = g.link.replace('guias/', '');  
+            let isActive = (currentFile === linkName) ? 'active' : '';  
+            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
+            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;  
+        });
+        htmlContent += `</div></div>`; 
+    };
+
+    ordenDeseado.forEach(cat => { 
+        if(grupos[cat] && grupos[cat].length > 0) { 
+            renderGroup(cat, grupos[cat]); 
+            delete grupos[cat]; 
+        }
+    });
+
+    Object.keys(grupos).forEach(cat => { 
+        renderGroup(cat, grupos[cat]); 
+    });
+
+    sidebar.innerHTML = htmlContent; 
+  }
+
+  const mybutton = document.getElementById("backToTopBtn");
+  window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
+  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); } };
+</script>
+</body>
+</html>
