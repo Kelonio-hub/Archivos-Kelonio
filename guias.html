@@ -47,7 +47,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #fileSearch:focus { width: 200px; border: 1px solid var(--red); }
 #fileSearch::placeholder{ color:#ccc; }
 
-/* ================= CONSOLE BUTTONS (Reubicado y Ajustado) ================= */
+/* ================= CONSOLE BUTTONS ================= */
 .console-buttons { 
   display: flex; 
   gap: 10px; 
@@ -86,8 +86,11 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 
 /* ================= HEADER HERO ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
-.header-section h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 800; }
+.header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; gap: 12px; margin: 0 auto; justify-content: center; }
+.header-section h1 svg { width: 2.8rem; height: 2.8rem; fill: currentColor; transform: translateY(-2px); }
 .header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
 /* ================= GRID DE GUÍAS ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
@@ -139,7 +142,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   <div class="right-tools">
     
     <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('guias.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
     </button>
 
     <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('productos.html', '_self')">
@@ -160,8 +163,13 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 </div>
 
 <div class="header-section">
-  <h1 id="heroTitle">📖 Centro de Guías</h1>
+  <h1 id="heroTitle">
+    <svg viewBox="0 0 24 24"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    Centro de Guías
+  </h1>
   <p id="heroDesc">Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
+  
+  <p id="heroWarning" class="hero-warning"></p>
   
   <div class="console-buttons" id="consoleButtons"></div>
 </div>
@@ -178,14 +186,14 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "📖 Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  en: { title: "Guides & Tutorials | La Presa", heroTitle: "📖 Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "📖 Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "📖 Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "📖 Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "📖 Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "📖 ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "📖 가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", 가이즈: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", heroWarning: "Si no se visualizan las guías [debido a que se ha usado más de 60 token de github], utiliza una VPN para seguir navegando o espera 1 hora hasta volver a tener acceso.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
+  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", heroWarning: "If the guides do not load [because more than 60 GitHub tokens have been used], use a VPN to continue browsing or wait 1 hour to regain access.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
+  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", heroWarning: "Si les guides ne s'affichent pas [en raison de l'utilisation de plus de 60 jetons GitHub], utilisez un VPN pour continuer à naviguer ou attendez 1 heure pour retrouver l'accès.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", heroWarning: "Wenn die Anleitungen nicht geladen werden [da mehr als 60 GitHub-Tokens verwendet wurden], nutzen Sie ein VPN zum Weitersurfen oder warten Sie 1 Stunde, um wieder Zugriff zu erhalten.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", heroWarning: "Se le guide non vengono visualizzate [poiché sono stati utilizzati più di 60 token GitHub], usa una VPN para continuare a navigare o attendi 1 ora per riavere accesso.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trouvata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", heroWarning: "Se os guias não carregarem [porque mais de 60 tokens do GitHub foram usados], use uma VPN para continuar navegando ou aguarde 1 hora para recuperar o acesso.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", heroWarning: "ガイドが表示されない場合 [GitHubのトークンが60以上使用されたため]、VPNを使用してブラウジングを続けるか、アクセスが回復するまで1時間お待ちください。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", heroWarning: "가이드가 표시되지 않는 경우 [60개 이상의 GitHub 토큰이 사용되었기 때문에], VPN을 사용하여 계속 탐색하거나 다시 액세스할 수 있을 때까지 1시간을 기다리십시오.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
@@ -253,8 +261,15 @@ function createLanguageSelector(){
 function updateLanguage(){
   const t = translations[idiomaActual] || translations['en'];
   document.title = t.title;
-  document.getElementById('heroTitle').textContent = t.heroTitle;
+  
+  // Modificado para no sobrescribir el nodo completo borrando el SVG recién añadido
+  const titleNode = document.getElementById('heroTitle');
+  const svgIcon = titleNode.querySelector('svg');
+  titleNode.textContent = ' ' + t.heroTitle;
+  if (svgIcon) titleNode.insertBefore(svgIcon, titleNode.firstChild);
+
   document.getElementById('heroDesc').textContent = t.heroDesc;
+  document.getElementById('heroWarning').textContent = t.heroWarning;
   fileSearch.placeholder = t.search;
 
   if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
@@ -377,19 +392,16 @@ async function cargarDatosGuias() {
     const repo = 'Kelonio-hub/Archivos-Kelonio'; 
     const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
     
-    // Eliminamos la comprobación de tiempo para forzar la recarga en cada acceso
-    const response = await fetch(apiURL, { cache: "no-store" }); // "no-store" evita la caché del navegador
+    const response = await fetch(apiURL, { cache: "no-store" });
     if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
     
     const archivos = await response.json();
     const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
     const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
 
-    // Vaciamos el array de guías en cada recarga para evitar duplicados
     todasLasGuias = [];
 
     for (let file of htmlFiles) {
-      // El parámetro '?t=' ya ayuda a evitar la caché del archivo individual
       const res = await fetch(file.download_url + '?t=' + new Date().getTime());
       const htmlText = await res.text();
       const parser = new DOMParser();
@@ -409,7 +421,6 @@ async function cargarDatosGuias() {
       todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` });
     }
     
-    // Opcional: Puedes seguir guardándolo en localStorage por si en el futuro quieres revertirlo
     localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
     localStorage.setItem('guiasCacheTime_v2', Date.now());
 
