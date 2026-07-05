@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RetroArch Wii | La Presa</title>
+
+<meta name="guide-tag" content="WII">
+<meta name="guide-date" content="2026-07-05">
+
+<meta name="guide-title-es" content="RetroArch: Emulador Universal">
+<meta name="guide-title-en" content="RetroArch: Universal Emulator">
+<meta name="guide-title-fr" content="RetroArch : Émulateur Universel">
+<meta name="guide-title-de" content="RetroArch: Universeller Emulator">
+<meta name="guide-title-it" content="RetroArch: Emulatore Universale">
+<meta name="guide-title-pt" content="RetroArch: Emulador Universal">
+<meta name="guide-title-ja" content="RetroArch：ユニバーサルエミュレータ">
+<meta name="guide-title-ko" content="RetroArch: 범용 에뮬레이터">
+
+<meta name="guide-desc-es" content="Guía paso a paso para instalar y configurar RetroArch en Nintendo Wii. Emula SNES, GBA, Atari y más desde una única interfaz.">
+<link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
+
+<style>
+:root{ --red:#e50914; --bg:#141414; --glass-border:rgba(255,255,255,.08); --glow-rgb: 229, 9, 20; }
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; line-height: 1.6; }
+
+#accessWallOverlay { position: fixed; inset: 0; z-index: 99999999; background: #141414; display: flex; justify-content: center; align-items: center; font-family: 'Segoe UI', system-ui, sans-serif; color: #f9f9f9; transition: opacity 0.5s ease, visibility 0.5s ease; }
+.disney-access-card { width: 90%; max-width: 620px; background: rgba(26, 29, 41, 0.95); backdrop-filter: blur(14px); padding: 50px 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); text-align: center; box-shadow: 0 0 60px rgba(var(--glow-rgb), 0.25); }
+.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
+.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
+.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
+.disney-progress-fill { height: 100%; width: 0%; background: var(--red); transition: width 0.7s ease; }
+.disney-step-btn { width: 100%; padding: 18px; margin: 12px 0; border-radius: 14px; border: none; background: rgba(255,255,255,0.1); color: white; font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
+.disney-step-done { background: var(--red) !important; color: #fff !important; cursor: default; }
+#disneyProductsContainer { display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto; }
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.disney-aw-product { background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.disney-aw-product:hover { transform: translateY(-6px); border-color: var(--red); }
+.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
+.disney-choose-badge { margin-top: 8px; font-size: 11px; background: var(--red); color: #fff; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
+
+#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+.topbar{ position:fixed; top:0; left:0; right:0; z-index:9998; background:rgba(0,0,0,.88); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
+
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+.right-tools{ display:flex; align-items:center; gap:12px;}
+.back-btn { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:8px 15px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:bold; font-size: 13px; text-decoration: none;}
+.back-btn:hover { background:var(--red); border-color:var(--red); transform:scale(1.05); }
+.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container{ display:flex; gap:5px; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover{ transform:scale(1.3); }
+.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+
+.main-layout { display: flex; max-width: 1250px; margin: 80px auto 0; padding: 20px; gap: 30px; align-items: flex-start; }
+.sidebar { width: 280px; flex-shrink: 0; position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; background: rgba(26, 29, 41, 0.4); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 12px; backdrop-filter: blur(10px); }
+.sidebar::-webkit-scrollbar { width: 5px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.sidebar-title { font-size: 1.05rem; color: white; margin-bottom: 20px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-group { margin-bottom: 20px; }
+.sidebar-category { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px; font-weight: bold; color: var(--red); margin-bottom: 8px; cursor: pointer; user-select: none; transition: background 0.2s; }
+.sidebar-category:hover { background: rgba(255,255,255,0.1); }
+.sidebar-category .cat-left { display: flex; align-items: center; gap: 10px; }
+.sidebar-category img { width: 22px; height: 22px; object-fit: contain; }
+.toggle-icon { font-size: 12px; color: #fff; transition: transform 0.3s ease; }
+.sidebar-group.collapsed .toggle-icon { transform: rotate(-90deg); }
+.sidebar-links-container { display: flex; flex-direction: column; overflow: hidden; }
+.sidebar-group.collapsed .sidebar-links-container { display: none; }
+.sidebar-link { display: block; color: #bbb; text-decoration: none; font-size: 0.9rem; padding: 8px 12px 8px 16px; border-left: 2px solid transparent; transition: 0.2s; margin-bottom: 2px; border-radius: 0 8px 8px 0; }
+.sidebar-link:hover { color: white; border-left-color: var(--red); background: rgba(255,255,255,0.03); transform: translateX(3px); }
+.sidebar-link.active { color: white; border-left-color: var(--red); background: rgba(var(--glow-rgb), 0.15); font-weight: bold; }
+
+.guide-container { flex-grow: 1; min-width: 0; background: rgba(20,20,20,0.5); border-radius: 16px; padding: 40px; border: 1px solid var(--glass-border); }
+.guide-header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--glass-border); }
+.guide-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+.guide-tag { display: inline-block; background: var(--red); color: white; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 12px; margin-bottom: 15px; }
+.guide-content h2 { color: var(--red); font-size: 1.8rem; margin: 35px 0 15px; }
+.guide-content p { color: #ccc; font-size: 1.1rem; margin-bottom: 15px; }
+.guide-content ul, .guide-content ol { margin: 15px 0 20px 25px; color: #ccc; font-size: 1.1rem; }
+.guide-content li { margin-bottom: 8px; }
+
+.alert-box { background: rgba(var(--glow-rgb), 0.1); border-left: 4px solid var(--red); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; color: #e0e0e0; }
+.dl-btn { display: inline-block; background: var(--red); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+.dl-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(var(--glow-rgb), 0.4); }
+
+.mini-btn { background: var(--red); color: white; padding: 3px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-style: normal; margin: 0 4px; display: inline-block; transition: 0.3s; font-size: 0.9em; }
+.mini-btn:hover { transform: scale(1.05); filter: brightness(1.2); color: white; }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
+
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+@media(max-width: 950px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center;}
+  .right-tools { margin-top: 10px; }
+  .main-layout { flex-direction: column; margin-top: 100px; padding: 10px; }
+  .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
+  .guide-container { width: 100%; order: 1; padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div id="accessWallOverlay" style="display: none;">
+  <div class="disney-access-card">
+      <h1 class="disney-logo-title">LA PRESA</h1>
+      <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
+      <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
+      <button id="disney-btn1" class="disney-step-btn"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+      <button id="disney-btn2" class="disney-step-btn"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
+      <div id="disneyProductsContainer"></div>
+  </div>
+</div>
+
+<div id="mainHub">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
+      <div class="social-group">
+        <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.com/invite/xHg7XaYJvK', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+        </button>
+        <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/wiide', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="right-tools">
+      <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('../guias.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+      </button>
+
+      <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('../productos.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      </button>
+
+      <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('../actualizaciones.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+        <span id="radarBadge" class="radar-badge"></span>
+      </button>
+
+      <a href="../guias.html" class="back-btn">
+        <span id="txt_backBtnText">← Volver a las Guías</span>
+      </a>
+      <div class="config-group">
+        <div class="theme-dots-container" id="themeDots"></div>
+        <select id="languageSelector"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    
+    <aside class="sidebar" id="guideSidebar">
+      <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
+    </aside>
+
+    <main class="guide-container">
+      <div class="guide-header">
+        <span class="guide-tag" id="txt_tag">WII</span>
+        <h1 id="txt_title">RetroArch: Emulador Universal</h1>
+      </div>
+
+      <div class="guide-content">
+        
+        <p id="txt_intro" style="margin-bottom: 25px; font-size: 1.15rem;">RetroArch no es solo un emulador, es un frontend increíblemente versátil que agrupa decenas de motores (llamados 'núcleos'). Con él, conviertes tu Wii en la estación retro definitiva, permitiéndote jugar clásicos de SNES, GBA, Atari, Sega Megadrive, NES y máquinas arcade, todo bajo una misma interfaz unificada con soporte para filtros gráficos y guardado rápido.</p>
+
+        <div class="alert-box" id="txt_alert1">
+          <strong>⚠️ Importante:</strong> Necesitas tener tu consola modificada y contar con The Homebrew Channel previamente instalado.
+        </div>
+
+        <h2 id="txt_h2_req">Requisitos</h2>
+        <ul>
+          <li id="txt_req1">Consola Nintendo Wii con The Homebrew Channel.</li>
+          <li id="txt_req2">Tarjeta SD o pendrive USB formateado en FAT32.</li>
+          <li><span id="txt_req3">Archivos de RetroArch v1.19.1</span> <br><a href="https://www.mediafire.com/folder/6z0ctrxwv4l7q/Retroarch" target="_blank" class="dl-btn" id="txt_reqBtn">Descargar Archivos</a></li>
+        </ul>
+        <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a></em></p>
+
+        <h2 id="txt_h2_step1">PASO 1: Instalación de Archivos</h2>
+        <ol>
+          <li id="txt_s1_1">Extrae el contenido del archivo descargado directamente en la raíz (la carpeta principal) de tu tarjeta SD o unidad USB.</li>
+          <li id="txt_s1_2">Introduce la tarjeta SD o USB en tu consola Wii y ejecuta The Homebrew Channel. Deberías ver la aplicación de RetroArch en tu menú.</li>
+        </ol>
+
+        <h2 id="txt_h2_step2">PASO 2: Configuración y Uso de Juegos</h2>
+        <ol>
+          <li id="txt_s2_1">Abre RetroArch. Ve a "Load Core" (Cargar Núcleo) para elegir la consola que quieres emular, y luego a "Load Content" (Cargar Contenido) para buscar y abrir tu juego (ROM).</li>
+        </ol>
+
+        <div class="alert-box" style="border-left-color: #2ecc71; margin-top: 30px;" id="txt_alert2">
+          <strong>✅ ¡Enhorabuena!</strong> Ya puedes disfrutar de todo el catálogo retro en tu consola Wii.
+        </div>
+
+        <p id="txt_footer">Nota recomendada: Crea una carpeta llamada "roms" en la raíz de tu SD o USB y organiza tus juegos en subcarpetas por consola para localizarlos más fácilmente desde el menú.</p>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<script>
+  /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
+  const translations = {
+    es: {
+      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
+      txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
+      txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: Emulador Universal",
+      txt_intro: "RetroArch no es solo un emulador, es un frontend increíblemente versátil que agrupa decenas de motores (llamados 'núcleos'). Con él, conviertes tu Wii en la estación retro definitiva, permitiéndote jugar clásicos de SNES, GBA, Atari, Sega Megadrive, NES y máquinas arcade, todo bajo una misma interfaz unificada con soporte para filtros gráficos y guardado rápido.",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Necesitas tener tu consola modificada y contar con The Homebrew Channel previamente instalado.",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Consola Nintendo Wii con The Homebrew Channel.", 
+      txt_req2: "Tarjeta SD o pendrive USB formateado en FAT32.", 
+      txt_req3: "Archivos de RetroArch v1.19.1", 
+      txt_reqBtn: "Descargar Archivos", 
+      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
+      
+      txt_h2_step1: "PASO 1: Instalación de Archivos",
+      txt_s1_1: "Extrae el contenido del archivo descargado directamente en la raíz (la carpeta principal) de tu tarjeta SD o unidad USB.", 
+      txt_s1_2: "Introduce la tarjeta SD o USB en tu consola Wii y ejecuta The Homebrew Channel. Deberías ver la aplicación de RetroArch en tu menú.",
+      
+      txt_h2_step2: "PASO 2: Configuración y Uso de Juegos",
+      txt_s2_1: "Abre RetroArch. Ve a 'Load Core' (Cargar Núcleo) para elegir la consola que quieres emular, y luego a 'Load Content' (Cargar Contenido) para buscar y abrir tu juego (ROM).",
+
+      txt_alert2: "<strong>✅ ¡Enhorabuena!</strong> Ya puedes disfrutar de todo el catálogo retro en tu consola Wii.", 
+      txt_footer: "Nota recomendada: Crea una carpeta llamada 'roms' en la raíz de tu SD o USB y organiza tus juegos en subcarpetas por consola para localizarlos más fácilmente desde el menú."
+    },
+    en: {
+      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
+      txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
+      txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: Universal Emulator",
+      txt_intro: "RetroArch is not just an emulator, it is an incredibly versatile frontend that groups dozens of engines (called 'cores'). With it, you turn your Wii into the ultimate retro station, allowing you to play classics from SNES, GBA, Atari, Sega Genesis, NES, and arcade machines, all under a single unified interface with support for graphic filters and quick save states.",
+      txt_alert1: "<strong>⚠️ Important:</strong> You need to have a modded console with The Homebrew Channel installed.",
+      txt_h2_req: "Requirements", 
+      txt_req1: "Nintendo Wii console with The Homebrew Channel.", 
+      txt_req2: "SD card or USB drive formatted in FAT32.", 
+      txt_req3: "RetroArch v1.19.1 files", 
+      txt_reqBtn: "Download Files", 
+      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
+      
+      txt_h2_step1: "STEP 1: File Installation",
+      txt_s1_1: "Extract the contents of the downloaded file directly to the root (main folder) of your SD card or USB drive.", 
+      txt_s1_2: "Insert the SD card or USB into your Wii console and launch The Homebrew Channel. You should see the RetroArch application in your menu.",
+      
+      txt_h2_step2: "STEP 2: Game Configuration and Usage",
+      txt_s2_1: "Open RetroArch. Go to 'Load Core' to choose the console you want to emulate, and then 'Load Content' to find and open your game (ROM).",
+
+      txt_alert2: "<strong>✅ Congratulations!</strong> You can now enjoy the entire retro catalog on your Wii console.", 
+      txt_footer: "Recommended note: Create a folder named 'roms' on the root of your SD or USB and organize your games in subfolders by console to locate them more easily from the menu."
+    },
+    fr: {
+      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
+      txt_awSubtitle: "Complétez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours",
+      txt_radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch : Émulateur Universel",
+      txt_intro: "RetroArch n'est pas seulement un émulateur, c'est une interface incroyablement polyvalente regroupant des dizaines de moteurs (appelés 'cœurs'). Grâce à lui, vous transformez votre Wii en la station rétro ultime, vous permettant de jouer aux classiques de la SNES, GBA, Atari, Sega Megadrive, NES et de l'arcade, le tout sous une interface unique avec sauvegarde rapide.",
+      txt_alert1: "<strong>⚠️ Important :</strong> Vous devez disposer d'une console modifiée avec The Homebrew Channel installé.",
+      txt_h2_req: "Exigences", 
+      txt_req1: "Console Nintendo Wii avec The Homebrew Channel.", 
+      txt_req2: "Carte SD ou clé USB formatée en FAT32.", 
+      txt_req3: "Fichiers RetroArch v1.19.1", 
+      txt_reqBtn: "Télécharger les Fichiers", 
+      txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      
+      txt_h2_step1: "ÉTAPE 1 : Installation des Fichiers",
+      txt_s1_1: "Extrayez le contenu du fichier téléchargé directement à la racine (dossier principal) de votre carte SD ou clé USB.", 
+      txt_s1_2: "Insérez la carte SD ou l'USB dans votre console Wii et lancez The Homebrew Channel. Vous devriez voir l'application RetroArch dans votre menu.",
+      
+      txt_h2_step2: "ÉTAPE 2 : Configuration et Utilisation des Jeux",
+      txt_s2_1: "Ouvrez RetroArch. Allez sur 'Load Core' (Charger le cœur) pour choisir la console, puis 'Load Content' (Charger le contenu) pour trouver et ouvrir votre jeu (ROM).",
+
+      txt_alert2: "<strong>✅ Félicitations !</strong> Vous pouvez désormais profiter de l'intégralité du catalogue rétro sur votre Wii.", 
+      txt_footer: "Note recommandée : Créez un dossier nommé 'roms' à la racine de votre SD ou USB et organisez vos jeux par sous-dossiers pour les trouver facilement."
+    },
+    de: {
+      txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
+      txt_awSubtitle: "Schließe die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
+      txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: Universeller Emulator",
+      txt_intro: "RetroArch ist nicht nur ein Emulator, sondern ein unglaublich vielseitiges Frontend, das Dutzende von Engines (sogenannte 'Cores') bündelt. Damit verwandeln Sie Ihre Wii in die ultimative Retro-Station für SNES, GBA, Atari, Sega Mega Drive, NES und Arcade-Klassiker.",
+      txt_alert1: "<strong>⚠️ Wichtig:</strong> Du benötigst eine modifizierte Konsole mit installiertem The Homebrew Channel.",
+      txt_h2_req: "Anforderungen", 
+      txt_req1: "Nintendo Wii Konsole mit The Homebrew Channel.", 
+      txt_req2: "SD-Karte oder USB-Stick in FAT32 formatiert.", 
+      txt_req3: "RetroArch v1.19.1 Dateien", 
+      txt_reqBtn: "Dateien Herunterladen", 
+      txt_reqNote: "* Sieh dir auch unsere <a href='../productos.html' class='mini-btn'>Produkte</a> an",
+      
+      txt_h2_step1: "SCHRITT 1: Datei-Installation",
+      txt_s1_1: "Entpacke den Inhalt der heruntergeladenen Datei direkt in das Stammverzeichnis deiner SD-Karte oder deines USB-Laufwerks.", 
+      txt_s1_2: "Stecke die SD-Karte oder den USB in deine Wii-Konsole und starte The Homebrew Channel. RetroArch sollte im Menü erscheinen.",
+      
+      txt_h2_step2: "SCHRITT 2: Konfiguration und Nutzung",
+      txt_s2_1: "Öffne RetroArch. Gehe zu 'Load Core', um die Konsole auszuwählen, und dann zu 'Load Content', um dein Spiel (ROM) zu öffnen.",
+
+      txt_alert2: "<strong>✅ Herzlichen Glückwunsch!</strong> Du kannst nun den gesamten Retro-Katalog auf deiner Wii-Konsole genießen.", 
+      txt_footer: "Empfohlener Hinweis: Erstelle einen Ordner namens 'roms' im Stammverzeichnis, um deine Spiele besser zu organisieren."
+    },
+    it: {
+      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
+      txt_awSubtitle: "Completa i passaggi per sbloccare i contenuti.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
+      txt_radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: Emulatore Universale",
+      txt_intro: "RetroArch non è solo un emulatore, è un frontend incredibilmente versatile che raggruppa dozzine di motori (chiamati 'core'). Con esso, trasformi la tua Wii nella stazione retro definitiva per giocare a SNES, GBA, Atari, Sega Megadrive, NES e giochi arcade in un'unica interfaccia.",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Devi avere una console modificata con The Homebrew Channel installato.",
+      txt_h2_req: "Requisiti", 
+      txt_req1: "Console Nintendo Wii con The Homebrew Channel.", 
+      txt_req2: "Scheda SD o unità USB formattata in FAT32.", 
+      txt_req3: "File di RetroArch v1.19.1", 
+      txt_reqBtn: "Scarica i File", 
+      txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      
+      txt_h2_step1: "PASSO 1: Installazione dei file",
+      txt_s1_1: "Estrai il contenuto del file scaricato direttamente nella directory principale della tua scheda SD o chiavetta USB.", 
+      txt_s1_2: "Inserisci la scheda SD o l'USB nella tua console Wii e avvia The Homebrew Channel. Dovresti vedere RetroArch nel menu.",
+      
+      txt_h2_step2: "PASSO 2: Configurazione e Utilizzo",
+      txt_s2_1: "Apri RetroArch. Vai su 'Load Core' per scegliere la console da emulare e poi su 'Load Content' per avviare il gioco (ROM).",
+
+      txt_alert2: "<strong>✅ Congratulazioni!</strong> Ora puoi goderti tutto il catalogo retro sulla tua console Wii.", 
+      txt_footer: "Nota consigliata: Crea una cartella 'roms' nella directory principale per mantenere i tuoi giochi ben organizzati."
+    },
+    pt: {
+      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
+      txt_awSubtitle: "Conclua os passos para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar no sorteio",
+      txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie-nos no Ko-fi",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: Emulador Universal",
+      txt_intro: "O RetroArch não é apenas um emulador, é um frontend incrivelmente versátil que agrupa dezenas de motores (chamados 'cores'). Com ele, transformas a tua Wii na estação retro definitiva, permitindo-te jogar clássicos da SNES, GBA, Atari, Sega Megadrive, NES e máquinas de fliperama.",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Precisas de ter a tua consola modificada com o The Homebrew Channel instalado.",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Consola Nintendo Wii com The Homebrew Channel.", 
+      txt_req2: "Cartão SD ou pen drive USB formatada em FAT32.", 
+      txt_req3: "Ficheiros do RetroArch v1.19.1", 
+      txt_reqBtn: "Baixar Ficheiros", 
+      txt_reqNote: "* Podes ver os nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      
+      txt_h2_step1: "PASSO 1: Instalação de Ficheiros",
+      txt_s1_1: "Extrai o conteúdo do ficheiro transferido diretamente na raiz do teu cartão SD ou unidade USB.", 
+      txt_s1_2: "Insere o cartão SD ou USB na consola Wii e inicia o The Homebrew Channel. Deverás ver a aplicação do RetroArch.",
+      
+      txt_h2_step2: "PASSO 2: Configuração e Uso",
+      txt_s2_1: "Abre o RetroArch. Vai a 'Load Core' (Carregar Núcleo) para escolher a consola, e depois a 'Load Content' (Carregar Conteúdo) para procurar a ROM do jogo.",
+
+      txt_alert2: "<strong>✅ Parabéns!</strong> Já podes desfrutar de todo o catálogo retro na tua consola Wii.", 
+      txt_footer: "Nota recomendada: Cria uma pasta 'roms' na raiz do teu SD/USB e organiza os teus jogos por consolas."
+    },
+    ja: {
+      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "他のガイド",
+      txt_awSubtitle: "コンテンツのロックを解除する手順を完了します。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. 抽選に参加する",
+      txt_radar: "更新レーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch：ユニバーサルエミュレータ",
+      txt_intro: "RetroArchは単なるエミュレーターではなく、数十のエンジン（コア）をグループ化する非常に用途の広いフロントエンドです。これにより、Wiiが究極のレトロステーションになり、SNES、GBA、Atari、Sega Genesis、NESなどをプレイできます。",
+      txt_alert1: "<strong>⚠️ 重要：</strong> The Homebrew Channelがインストールされた改造コンソールが必要です。",
+      txt_h2_req: "要件", 
+      txt_req1: "The Homebrew Channel搭載のWii本体。", 
+      txt_req2: "FAT32でフォーマットされたSDカードまたはUSBドライブ。", 
+      txt_req3: "RetroArch v1.19.1 ファイル", 
+      txt_reqBtn: "ファイルをダウンロード", 
+      txt_reqNote: "* 私たちの<a href='../productos.html' class='mini-btn'>製品</a>を確認できます",
+      
+      txt_h2_step1: "ステップ1：ファイルのインストール",
+      txt_s1_1: "ダウンロードしたファイルの内容を、SDカードまたはUSBドライブのルート（メインフォルダ）に直接解凍します。", 
+      txt_s1_2: "SDカードまたはUSBをWii本体に挿入し、The Homebrew Channelを起動します。メニューにRetroArchが表示されるはずです。",
+      
+      txt_h2_step2: "ステップ2：ゲームの構成と使用",
+      txt_s2_1: "RetroArchを開きます。「Load Core」に移動してコンソールを選択し、「Load Content」に移動してゲーム（ROM）を開きます。",
+
+      txt_alert2: "<strong>✅ おめでとうございます！</strong> これで、Wii本体でレトロカタログ全体を楽しむことができます。", 
+      txt_footer: "推奨事項：SDまたはUSBのルートに「roms」という名前のフォルダを作成し、ゲームを整理してください。"
+    },
+    ko: {
+      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드",
+      txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 이벤트 참여",
+      txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi 지원",
+      
+      txt_tag: "WII",
+      txt_title: "RetroArch: 범용 에뮬레이터",
+      txt_intro: "RetroArch는 단순한 에뮬레이터가 아니라 수십 개의 엔진('코어'라고 함)을 그룹화하는 매우 다재다능한 프런트엔드입니다. 이를 통해 Wii를 궁극의 레트로 스테이션으로 바꾸어 SNES, GBA, Atari, Sega Genesis, NES 등의 클래식 게임을 플레이할 수 있습니다.",
+      txt_alert1: "<strong>⚠️ 중요:</strong> The Homebrew Channel이 설치된 개조된 콘솔이 필요합니다.",
+      txt_h2_req: "요구 사항", 
+      txt_req1: "The Homebrew Channel이 있는 Nintendo Wii 콘솔.", 
+      txt_req2: "FAT32로 포맷된 SD 카드 또는 USB 드라이브.", 
+      txt_req3: "RetroArch v1.19.1 파일", 
+      txt_reqBtn: "파일 다운로드", 
+      txt_reqNote: "* 우리의 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다",
+      
+      txt_h2_step1: "1단계: 파일 설치",
+      txt_s1_1: "다운로드한 파일의 압축을 SD 카드나 USB 드라이브의 루트(주 폴더)에 직접 풉니다.", 
+      txt_s1_2: "SD 카드 또는 USB를 Wii 콘솔에 삽입하고 The Homebrew Channel을 실행합니다. 메뉴에 RetroArch가 표시되어야 합니다.",
+      
+      txt_h2_step2: "2단계: 게임 구성 및 사용",
+      txt_s2_1: "RetroArch를 엽니다. 'Load Core'로 이동하여 에뮬레이션할 콘솔을 선택한 다음 'Load Content'로 이동하여 게임(ROM)을 찾아 엽니다.",
+
+      txt_alert2: "<strong>✅ 축하합니다!</strong> 이제 Wii 콘솔에서 전체 레트로 카탈로그를 즐길 수 있습니다.", 
+      txt_footer: "권장 사항: SD 또는 USB 루트에 'roms'라는 폴더를 만들고 게임을 하위 폴더별로 구성하여 더 쉽게 찾을 수 있도록 합니다."
+    }
+  };
+
+  /* ================= LÓGICA CORE (NO TOCAR) ================= */
+  let idiomaActual = 'en'; 
+  let accessGranted = false;
+  let s1 = false; let s2 = false; let accessProductsData = [];
+
+  function comprobarAccesoTemporal() {
+      const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+      const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
+      if (tokenGuardado === tokenValidoHoy) { accessGranted = true; } else { localStorage.removeItem("_lp_auth_tk"); accessGranted = false; }
+  }
+
+  function iniciarAppPrincipal() {
+      document.getElementById('mainHub').style.display = 'block';
+      setTimeout(() => document.getElementById('mainHub').style.opacity = '1', 50);
+      cargarSidebar();
+  }
+
+  document.getElementById('disney-btn1').onclick = function() {
+      if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
+      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
+      btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
+      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 40000);
+  };
+
+  document.getElementById('disney-btn2').onclick = function() {
+      if(s2) return;
+      const container = document.getElementById('disneyProductsContainer');
+      container.style.display = (container.style.display === "grid") ? "none" : "grid";
+  };
+
+async function cargarProductosDisney() {
+      const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
+      let all = [];
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { 
+          try { 
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
+      }
+      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); }
+  }
+
+  function renderProductosDisney() {
+      const cont = document.getElementById('disneyProductsContainer'); cont.innerHTML = '';
+      accessProductsData.forEach(p => {
+          let title = (typeof p.label === 'string') ? p.label : (p.label ? (p.label[idiomaActual] || p.label['en'] || p.label['es'] || 'Producto') : 'Producto');
+          const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+          let url = p.url || '#'; if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
+          const div = document.createElement('div'); div.className = 'disney-aw-product';
+          div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
+          div.onclick = () => { window.open(url, "_blank"); completarSorteoDisney(); };
+          cont.appendChild(div);
+      });
+  }
+
+  function completarSorteoDisney() {
+      if(s2) return; s2 = true;
+      const btn2 = document.getElementById('disney-btn2'); btn2.classList.add('disney-step-done'); btn2.innerText = "✅";
+      document.getElementById('disneyProductsContainer').style.display = "none"; checkProgressDisney();
+  }
+
+  function checkProgressDisney() {
+      let count = (s1 ? 1 : 0) + (s2 ? 1 : 0); document.getElementById('disney-progress').style.width = (count * 50) + "%";
+      if (count === 2) {
+          localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + new Date().toDateString()));
+          setTimeout(() => { const overlay = document.getElementById('accessWallOverlay'); overlay.style.opacity = '0'; setTimeout(() => { overlay.style.display = 'none'; iniciarAppPrincipal(); }, 500); }, 800);
+      }
+  }
+
+  const themeDotsContainer = document.getElementById('themeDots');
+  const paletaTemas = { rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' }, verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' } };
+  function initThemeDots() {
+    const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo'; themeDotsContainer.innerHTML = '';
+    Object.keys(paletaTemas).forEach(colorKey => {
+      const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
+      if (colorKey === savedTheme) dot.classList.add('active-dot');
+      dot.addEventListener('click', () => { document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot')); dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey); });
+      themeDotsContainer.appendChild(dot);
+    }); applyTheme(savedTheme);
+  }
+  function applyTheme(colorKey) { const theme = paletaTemas[colorKey] || paletaTemas.rojo; document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb); }
+
+  function createLanguageSelector(){
+    const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+    const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+    Object.keys(langs).forEach(code=>{ const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt); });
+    
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+    
+    if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+    else if (translations[browserLang]) { idiomaActual = browserLang; } 
+    else { idiomaActual = 'en'; }
+    
+    selector.value = idiomaActual;
+    
+    selector.addEventListener('change', e => {
+      idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual); updateLanguage();
+      if(accessProductsData.length > 0) renderProductosDisney();
+      if(accessGranted) cargarSidebar(); 
+    });
+  }
+
+  function updateLanguage(){
+    const t = translations[idiomaActual] || translations['en'];
+    Object.keys(t).forEach(key => { 
+        const element = document.getElementById(key); 
+        if(element && !element.classList.contains('disney-step-done')) {
+            element.innerHTML = t[key]; 
+        } 
+    });
+    
+    if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
+    if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
+    if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
+    if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.txt_discord || "Discord";
+    if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.txt_kofi || "Ko-fi";
+  }
+
+  async function cargarSidebar() {
+    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en'];
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`;
+    let todasLasGuias = [];
+
+    try {
+        const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+        const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+        const response = await fetch(apiURL, { cache: "no-store" }); 
+        if (!response.ok) throw new Error();
+        
+        const archivos = await response.json(); 
+        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+        
+        for (let file of htmlFiles) {
+            const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+            const htmlText = await res.text();
+            const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html');
+            const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO'; 
+            let titles = {};
+            ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { 
+                titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', '');
+            });
+            todasLasGuias.push({ tag, titles, link: file.name });
+        }
+    } catch (error) { 
+        sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; 
+        return; 
+    }
+
+    const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SONY','XBOX','SD'];
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); }); 
+    let currentFile = window.location.pathname.split('/').pop() || '';
+
+    const renderGroup = (cat, guias) => { 
+        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile);
+        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed";
+
+        htmlContent += `<div class="${groupClass}">
+            <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
+                <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="sidebar-links-container">`;
+
+        guias.forEach(g => {  
+            let linkName = g.link.replace('guias/', '');  
+            let isActive = (currentFile === linkName) ? 'active' : '';  
+            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
+            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;  
+        });
+        htmlContent += `</div></div>`;
+    };
+
+    ordenDeseado.forEach(cat => { 
+        if(grupos[cat] && grupos[cat].length > 0) {
+            renderGroup(cat, grupos[cat]); 
+            delete grupos[cat];
+        }
+    });
+
+    Object.keys(grupos).forEach(cat => { 
+        renderGroup(cat, grupos[cat]);
+    });
+
+    sidebar.innerHTML = htmlContent;
+  }
+
+  const mybutton = document.getElementById("backToTopBtn");
+  window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
+  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); } };
+</script>
+</body>
+</html>
