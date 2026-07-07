@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hack 3DS - Magnethax | La Presa</title>
+
+<meta name="guide-tag" content="3DS">
+<meta name="guide-date" content="2026-07-06">
+
+<meta name="guide-title-es" content="Hack 3DS - Magnethax">
+<meta name="guide-title-en" content="Hack 3DS - Magnethax">
+<meta name="guide-title-fr" content="Hack 3DS - Magnethax">
+<meta name="guide-title-de" content="Hack 3DS - Magnethax">
+<meta name="guide-title-it" content="Hack 3DS - Magnethax">
+<meta name="guide-title-pt" content="Hack 3DS - Magnethax">
+<meta name="guide-title-ja" content="Hack 3DS - Magnethax">
+<meta name="guide-title-ko" content="Hack 3DS - Magnethax">
+
+<meta name="guide-desc-es" content="Guía para hackear tu Nintendo 3DS GRATIS en minutos con Magnethax.">
+<link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
+
+<style>
+:root{ --red:#e50914; --bg:#141414; --glass-border:rgba(255,255,255,.08); --glow-rgb: 229, 9, 20; --green: #2ecc71;}
+*{ margin:0; padding:0; box-sizing:border-box; }
+body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; line-height: 1.6; }
+
+#accessWallOverlay { position: fixed; inset: 0; z-index: 99999999; background: #141414; display: flex; justify-content: center; align-items: center; font-family: 'Segoe UI', system-ui, sans-serif; color: #f9f9f9; transition: opacity 0.5s ease, visibility 0.5s ease; }
+.disney-access-card { width: 90%; max-width: 620px; background: rgba(26, 29, 41, 0.95); backdrop-filter: blur(14px); padding: 50px 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); text-align: center; box-shadow: 0 0 60px rgba(var(--glow-rgb), 0.25); }
+.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
+.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
+.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
+.disney-progress-fill { height: 100%; width: 0%; background: var(--red); transition: width 0.7s ease; }
+.disney-step-btn { width: 100%; padding: 18px; margin: 12px 0; border-radius: 14px; border: none; background: rgba(255,255,255,0.1); color: white; font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
+.disney-step-done { background: var(--red) !important; color: #fff !important; cursor: default; }
+#disneyProductsContainer { display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto; }
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.disney-aw-product { background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.disney-aw-product:hover { transform: translateY(-6px); border-color: var(--red); }
+.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
+.disney-choose-badge { margin-top: 8px; font-size: 11px; background: var(--red); color: #fff; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
+
+#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+.topbar{ position:fixed; top:0; left:0; right:0; z-index:9998; background:rgba(0,0,0,.88); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
+
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+.right-tools{ display:flex; align-items:center; gap:12px;}
+.back-btn { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:8px 15px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:bold; font-size: 13px; text-decoration: none;}
+.back-btn:hover { background:var(--red); border-color:var(--red); transform:scale(1.05); }
+.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container{ display:flex; gap:5px; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover{ transform:scale(1.3); }
+.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+
+.main-layout { display: flex; max-width: 1250px; margin: 80px auto 0; padding: 20px; gap: 30px; align-items: flex-start; }
+.sidebar { width: 280px; flex-shrink: 0; position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; background: rgba(26, 29, 41, 0.4); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 12px; backdrop-filter: blur(10px); }
+.sidebar::-webkit-scrollbar { width: 5px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.sidebar-title { font-size: 1.05rem; color: white; margin-bottom: 20px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-group { margin-bottom: 20px; }
+.sidebar-category { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px; font-weight: bold; color: var(--red); margin-bottom: 8px; cursor: pointer; user-select: none; transition: background 0.2s; }
+.sidebar-category:hover { background: rgba(255,255,255,0.1); }
+.sidebar-category .cat-left { display: flex; align-items: center; gap: 10px; }
+.sidebar-category img { width: 22px; height: 22px; object-fit: contain; }
+.toggle-icon { font-size: 12px; color: #fff; transition: transform 0.3s ease; }
+.sidebar-group.collapsed .toggle-icon { transform: rotate(-90deg); }
+.sidebar-links-container { display: flex; flex-direction: column; overflow: hidden; }
+.sidebar-group.collapsed .sidebar-links-container { display: none; }.sidebar-link { display: block; color: #bbb; text-decoration: none; font-size: 0.9rem; padding: 8px 12px 8px 16px; border-left: 2px solid transparent; transition: 0.2s; margin-bottom: 2px; border-radius: 0 8px 8px 0; }
+.sidebar-link:hover { color: white; border-left-color: var(--red); background: rgba(255,255,255,0.03); transform: translateX(3px); }
+.sidebar-link.active { color: white; border-left-color: var(--red); background: rgba(var(--glow-rgb), 0.15); font-weight: bold; }
+
+.guide-container { flex-grow: 1; min-width: 0; background: rgba(20,20,20,0.5); border-radius: 16px; padding: 40px; border: 1px solid var(--glass-border); }
+.guide-header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--glass-border); }
+.guide-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+.guide-tag { display: inline-block; background: var(--red); color: white; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 12px; margin-bottom: 15px; }
+.guide-content h2 { color: var(--red); font-size: 1.8rem; margin: 35px 0 15px; }
+.guide-content p { color: #ccc; font-size: 1.1rem; margin-bottom: 15px; }
+.guide-content ul, .guide-content ol { margin: 15px 0 20px 25px; color: #ccc; font-size: 1.1rem; }
+.guide-content li { margin-bottom: 8px; }
+
+.alert-box { background: rgba(var(--glow-rgb), 0.1); border-left: 4px solid var(--red); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; color: #e0e0e0; }
+.dl-btn { display: inline-block; background: var(--red); color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+.dl-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(var(--glow-rgb), 0.4); }
+
+.mini-btn { background: var(--red); color: white; padding: 3px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-style: normal; margin: 0 4px; display: inline-block; transition: 0.3s; font-size: 0.9em; }
+.mini-btn:hover { transform: scale(1.05); filter: brightness(1.2); color: white; }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.05); }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
+
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+@media(max-width: 950px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center;}
+  .right-tools { margin-top: 10px; }
+  .main-layout { flex-direction: column; margin-top: 100px; padding: 10px; }
+  .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
+  .guide-container { width: 100%; order: 1; padding: 25px; }
+}
+</style>
+</head>
+<body>
+
+<div id="accessWallOverlay" style="display: none;">
+  <div class="disney-access-card">
+      <h1 class="disney-logo-title">LA PRESA</h1>
+      <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
+      <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
+      <button id="disney-btn1" class="disney-step-btn"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+      <button id="disney-btn2" class="disney-step-btn"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
+      <div id="disneyProductsContainer"></div>
+  </div>
+</div>
+
+<div id="mainHub">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
+      <div class="social-group">
+        <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+        </button>
+        <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/lapresa', '_blank')">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="right-tools">
+      <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('../guias.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+      </button>
+
+      <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('../productos.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      </button>
+
+      <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('../actualizaciones.html', '_self')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+        <span id="radarBadge" class="radar-badge"></span>
+      </button>
+
+      <a href="../guias.html" class="back-btn">
+        <span id="txt_backBtnText">← Volver a las Guías</span>
+      </a>
+      <div class="config-group">
+        <div class="theme-dots-container" id="themeDots"></div>
+        <select id="languageSelector"></select>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    
+    <aside class="sidebar" id="guideSidebar">
+      <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
+    </aside>
+
+    <main class="guide-container">
+      <div class="guide-header">
+        <span class="guide-tag" id="txt_tag">3DS</span>
+        <h1 id="txt_title">HACK 3DS - MAGNETHAX</h1>
+      </div>
+
+      <div class="guide-content">
+        
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/SYF7XLVhuOc" 
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}</style><a href=https://www.youtube.com/embed/SYF7XLVhuOc?autoplay=1><img src=https://img.youtube.com/vi/SYF7XLVhuOc/maxresdefault.jpg alt='Video'><span>▶</span></a>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="alert-box" id="txt_alert1">
+          <strong>⚠️ Compatible con modelo OLD y NEW en todas las versiones ⚠️</strong>
+        </div>
+
+        <h2 id="txt_h2_req">Requisitos</h2>
+        <ul>
+          <li id="txt_req1">Consola Virgen 3ds/2ds en cualquier versión</li>
+          <li id="txt_req2">Tarjeta Sd en formato FAT32 de 4 a 32 GB</li>
+          <li id="txt_req3">Un imán de nevera [a no ser que utilices una Old 2Ds]</li>
+          <li id="txt_req4">R4 Flasheada (Sigue <a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html" target="_blank" style="color: var(--red); text-decoration: underline;">nuestra guía aquí</a> si no la tienes)</li>
+          <li><span id="txt_req5">Archivos Hack</span> <br><a href="https://www.mediafire.com/folder/kz04zhseec6xv/NTRBOOTHAX" target="_blank" class="dl-btn" id="txt_reqBtn">Descargar Archivos</a></li>
+        </ul>
+        <p style="font-size: 14px; color: #888; margin-top: 15px;"><em id="txt_reqNote">* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a></em></p>
+
+        <h2 id="txt_h2_step1">PASO 1: Descargar Archivos Hack</h2>
+        <ul>
+          <li id="txt_s1_1">Introducir todos los archivos en la tarjeta SD de la Consola (no en la Sd de la R4).</li>
+        </ul>
+
+        <h2 id="txt_h2_step2">PASO 2: Ejecutar Exploit</h2>
+        <ul>
+          <li id="txt_s2_1">Una vez introduzcamos los archivos correspondientes en la SD y tengamos la R4 flasheada, colocaremos el imán en su posición correcta [pueden guiarse de la imagen ofertada abajo. Las Old 2Ds no precisan de imán pero sí DEBEN ACTIVAR EL MODO SLEEP].</li>
+          <li id="txt_s2_2">Además tendremos que presionar simultáneamente los siguientes botones: <strong>(Power) + (Start) + (Select) + (X)</strong>. Si todo sale bien, estaremos dentro del Godmode9.</li>
+        </ul>
+
+        <div style="text-align: center; margin: 25px 0;">
+          <img src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/magnethax.png" alt="Posición del imán" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        </div>
+
+        <h2 id="txt_h2_step3">PASO 3: Instalar Scripts</h2>
+        <ul>
+          <li id="txt_s3_1">Dentro del Godmode9, pulsaremos el botón <strong>Home</strong>.</li>
+          <li id="txt_s3_2">Acudiremos a la opción <strong>Scripts...</strong></li>
+          <li id="txt_s3_3">Ejecutaremos el script <strong>Methax_ACT3DsREX</strong>.</li>
+          <li id="txt_s3_4">Terminado el proceso, la consola reiniciará al finalizar el Script. Si saliera el panel de Luma, se debe verificar tener la 3ª opción marcada (Mostrar Nand o texto...) y el Splash de seguridad en Antes o Después.</li>
+          <li id="txt_s3_5">Darle al botón <strong>Start</strong> para salir del menú y reiniciar.</li>
+        </ul>
+
+        <div class="alert-box" style="border-left-color: var(--green); margin-top: 30px;" id="txt_alert2">
+          <strong>✅ ¡Enhorabuena!</strong> Ya tendremos la consola modificada y con el FBI inyectado.
+        </div>
+
+        <p id="txt_footer" style="margin-top: 20px; font-size: 1.1rem; color: #ccc;">Para Finalizar, tras cualquier proceso de hackeo se debe realizar el <a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html" target="_blank" style="color: var(--red); text-decoration: underline;"><strong>Respaldo NAND</strong></a>.</p>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<script>
+  /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
+  const translations = {
+    es: {
+      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
+      txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
+      txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Compatible con modelo OLD y NEW en todas las versiones ⚠️</strong>",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Consola Virgen 3DS/2DS en cualquier versión", 
+      txt_req2: "Tarjeta SD en formato FAT32 de 4 a 32 GB", 
+      txt_req3: "Un imán de nevera [a no ser que utilices una Old 2DS]",
+      txt_req4: "R4 Flasheada (Sigue <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>nuestra guía aquí</a> si no la tienes)", 
+      txt_req5: "Archivos Hack",
+      txt_reqBtn: "Descargar Archivos Hack", 
+      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
+      
+      txt_h2_step1: "PASO 1: Descargar Archivos Hack",
+      txt_s1_1: "Introducir todos los archivos en la tarjeta SD de la Consola (no en la SD de la R4).", 
+      
+      txt_h2_step2: "PASO 2: Ejecutar Exploit",
+      txt_s2_1: "Una vez introduzcamos los archivos correspondientes en la SD y tengamos la R4 flasheada, colocaremos el imán en su posición correcta [pueden guiarse de la imagen ofertada abajo. Las Old 2DS no precisan de imán pero sí DEBEN ACTIVAR EL MODO SLEEP].",
+      txt_s2_2: "Además tendremos que presionar simultáneamente los siguientes botones: <strong>(Power) + (Start) + (Select) + (X)</strong>. Si todo sale bien, estaremos dentro del Godmode9.",
+      
+      txt_h2_step3: "PASO 3: Instalar Scripts",
+      txt_s3_1: "Dentro del Godmode9, pulsaremos el botón <strong>Home</strong>.",
+      txt_s3_2: "Acudiremos a la opción <strong>Scripts...</strong>",
+      txt_s3_3: "Ejecutaremos el script <strong>Methax_ACT3DsREX</strong>.",
+      txt_s3_4: "Terminado el proceso, la consola reiniciará al finalizar el Script. Si saliera el panel de Luma, se debe verificar tener la 3ª opción marcada (Mostrar Nand o texto...) y el Splash de seguridad en Antes o Después.",
+      txt_s3_5: "Darle al botón <strong>Start</strong> para salir del menú y reiniciar.",
+
+      txt_alert2: "<strong>✅ ¡Enhorabuena!</strong> Ya tendremos la consola modificada y con el FBI inyectado.", 
+      txt_footer: "Para Finalizar, tras cualquier proceso de hackeo se debe realizar el <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>Respaldo NAND</strong></a>."
+    },
+    en: {
+      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
+      txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
+      txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Compatible with OLD and NEW models on all versions ⚠️</strong>",
+      txt_h2_req: "Requirements", 
+      txt_req1: "Virgin 3DS/2DS console on any version", 
+      txt_req2: "FAT32 formatted SD card from 4 to 32 GB", 
+      txt_req3: "A fridge magnet [unless you use an Old 2DS]", 
+      txt_req4: "Flashed R4 (Follow <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>our guide here</a> if you don't have it)",
+      txt_req5: "Hack Files",
+      txt_reqBtn: "Download Hack Files", 
+      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
+      
+      txt_h2_step1: "STEP 1: Download Hack Files",
+      txt_s1_1: "Put all the files into the Console's SD card (not the R4's SD).", 
+      
+      txt_h2_step2: "STEP 2: Execute Exploit",
+      txt_s2_1: "Once the files are placed on the SD and the R4 is flashed, place the magnet in its correct position [refer to the image below. Old 2DS do not need a magnet but MUST ACTIVATE SLEEP MODE].",
+      txt_s2_2: "You must also simultaneously press the following buttons: <strong>(Power) + (Start) + (Select) + (X)</strong>. If everything goes well, you will boot into Godmode9.",
+      
+      txt_h2_step3: "STEP 3: Install Scripts",
+      txt_s3_1: "Inside Godmode9, press the <strong>Home</strong> button.",
+      txt_s3_2: "Go to the <strong>Scripts...</strong> option.",
+      txt_s3_3: "Execute the <strong>Methax_ACT3DsREX</strong> script.",
+      txt_s3_4: "Once finished, the console will reboot. If the Luma panel appears, verify that the 3rd option is checked (Show Nand or user string...) and the security Splash is on Before or After.",
+      txt_s3_5: "Press the <strong>Start</strong> button to exit the menu and reboot.",
+
+      txt_alert2: "<strong>✅ Congratulations!</strong> The console is now modified and the FBI app is injected.", 
+      txt_footer: "To finish, after any hacking process you must perform a <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>NAND Backup</strong></a>."
+    },
+    fr: {
+      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
+      txt_awSubtitle: "Complétez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours",
+      txt_radar: "Radar de Mises à Jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Compatible avec les modèles OLD et NEW sur toutes les versions ⚠️</strong>",
+      txt_h2_req: "Exigences", 
+      txt_req1: "Console 3DS/2DS vierge sur n'importe quelle version", 
+      txt_req2: "Carte SD au format FAT32 de 4 à 32 Go", 
+      txt_req3: "Un aimant de réfrigérateur [sauf si vous utilisez une Old 2DS]", 
+      txt_req4: "R4 Flashée (Suivez <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>notre guide ici</a> si vous ne l'avez pas)",
+      txt_req5: "Fichiers Hack",
+      txt_reqBtn: "Télécharger les Fichiers Hack", 
+      txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      
+      txt_h2_step1: "ÉTAPE 1: Télécharger les Fichiers Hack",
+      txt_s1_1: "Placez tous les fichiers sur la carte SD de la Console (et non sur la SD de la R4).", 
+      
+      txt_h2_step2: "ÉTAPE 2: Exécuter l'Exploit",
+      txt_s2_1: "Une fois les fichiers correspondants sur la SD et la R4 flashée, placez l'aimant dans sa position correcte [vous pouvez vous guider avec l'image ci-dessous. Les Old 2DS n'ont pas besoin d'aimant mais DOIVENT ACTIVER LE MODE VEILLE].",
+      txt_s2_2: "Vous devrez également appuyer simultanément sur les boutons suivants : <strong>(Power) + (Start) + (Select) + (X)</strong>. Si tout se passe bien, vous serez dans Godmode9.",
+      
+      txt_h2_step3: "ÉTAPE 3: Installer les Scripts",
+      txt_s3_1: "Dans Godmode9, appuyez sur le bouton <strong>Home</strong>.",
+      txt_s3_2: "Allez à l'option <strong>Scripts...</strong>",
+      txt_s3_3: "Exécutez le script <strong>Methax_ACT3DsREX</strong>.",
+      txt_s3_4: "Une fois le processus terminé, la console redémarrera. Si le menu Luma apparaît, vérifiez que la 3ème option est cochée (Show Nand or user string...) et que le Splash de sécurité est sur Before ou After.",
+      txt_s3_5: "Appuyez sur le bouton <strong>Start</strong> pour quitter le menu et redémarrer.",
+
+      txt_alert2: "<strong>✅ Félicitations !</strong> La console est maintenant modifiée avec FBI injecté.", 
+      txt_footer: "Pour terminer, après tout processus de hack, vous devez effectuer une <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>Sauvegarde NAND</strong></a>."
+    },
+    de: {
+      txt_backBtnText: "← Zurück zu den Guides", txt_otherGuides: "Weitere Guides",
+      txt_awSubtitle: "Führen Sie die Schritte aus, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
+      txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Guides", txt_discord: "Tritt Discord bei", txt_kofi: "Unterstütze uns auf Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Kompatibel mit OLD- und NEW-Modellen auf allen Versionen ⚠️</strong>",
+      txt_h2_req: "Anforderungen", 
+      txt_req1: "Unmodifizierte 3DS/2DS Konsole (jede Version)", 
+      txt_req2: "SD-Karte im FAT32-Format von 4 bis 32 GB", 
+      txt_req3: "Ein Kühlschrankmagnet [außer du verwendest einen Old 2DS]", 
+      txt_req4: "Geflashte R4 (Folge <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>unserem Guide hier</a> falls du keine hast)",
+      txt_req5: "Hack-Dateien",
+      txt_reqBtn: "Hack-Dateien Herunterladen", 
+      txt_reqNote: "* Sieh dir auch unsere <a href='../productos.html' class='mini-btn'>Produkte</a> an",
+      
+      txt_h2_step1: "SCHRITT 1: Hack-Dateien Herunterladen",
+      txt_s1_1: "Kopiere alle Dateien auf die SD-Karte der Konsole (nicht auf die SD-Karte der R4).", 
+      
+      txt_h2_step2: "SCHRITT 2: Exploit Ausführen",
+      txt_s2_1: "Sobald die Dateien auf der SD sind und die R4 geflasht ist, platziere den Magneten an der richtigen Stelle [siehe Bild unten. Old 2DS benötigen keinen Magneten, MÜSSEN ABER DEN SLEEP-MODUS AKTIVIEREN].",
+      txt_s2_2: "Außerdem musst du folgende Tasten gleichzeitig drücken: <strong>(Power) + (Start) + (Select) + (X)</strong>. Wenn alles klappt, landest du im Godmode9.",
+      
+      txt_h2_step3: "SCHRITT 3: Skripte Installieren",
+      txt_s3_1: "Im Godmode9 die <strong>Home</strong>-Taste drücken.",
+      txt_s3_2: "Gehe zur Option <strong>Scripts...</strong>",
+      txt_s3_3: "Führe das Skript <strong>Methax_ACT3DsREX</strong> aus.",
+      txt_s3_4: "Nach Abschluss des Vorgangs startet die Konsole neu. Wenn das Luma-Menü erscheint, stelle sicher, dass die 3. Option aktiviert ist (Show Nand or user string...) und der Security Splash auf Before oder After steht.",
+      txt_s3_5: "Drücke die <strong>Start</strong>-Taste zum Verlassen und Neustarten.",
+
+      txt_alert2: "<strong>✅ Glückwunsch!</strong> Die Konsole ist nun modifiziert und FBI wurde injiziert.", 
+      txt_footer: "Zum Abschluss musst du nach jedem Hacking-Vorgang ein <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>NAND-Backup</strong></a> durchführen."
+    },
+    it: {
+      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
+      txt_awSubtitle: "Completa i passaggi per sbloccare i contenuti.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
+      txt_radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Sostienici su Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Compatibile con modelli OLD e NEW in tutte le versioni ⚠️</strong>",
+      txt_h2_req: "Requisiti", 
+      txt_req1: "Console 3DS/2DS vergine di qualsiasi versione", 
+      txt_req2: "Scheda SD in formato FAT32 da 4 a 32 GB", 
+      txt_req3: "Una calamita da frigo [a meno che tu non usi un Old 2DS]", 
+      txt_req4: "R4 Flashata (Segui <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>la nostra guida qui</a> se non la possiedi)",
+      txt_req5: "File Hack",
+      txt_reqBtn: "Scarica i File Hack", 
+      txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      
+      txt_h2_step1: "PASSO 1: Scaricare i File Hack",
+      txt_s1_1: "Inserisci tutti i file nella scheda SD della console (non nella SD della R4).", 
+      
+      txt_h2_step2: "PASSO 2: Eseguire l'Exploit",
+      txt_s2_1: "Una volta inseriti i file corrispondenti nella SD e flashata la R4, posiziona la calamita nella sua posizione corretta [fai riferimento all'immagine in basso. I vecchi 2DS non necessitano di calamita ma DEVONO ATTIVARE LA MODALITÀ RIPOSO].",
+      txt_s2_2: "Inoltre dovrai premere contemporaneamente i seguenti pulsanti: <strong>(Power) + (Start) + (Select) + (X)</strong>. Se tutto va a buon fine, entrerai in Godmode9.",
+      
+      txt_h2_step3: "PASSO 3: Installare gli Script",
+      txt_s3_1: "All'interno di Godmode9, premi il pulsante <strong>Home</strong>.",
+      txt_s3_2: "Vai all'opzione <strong>Scripts...</strong>",
+      txt_s3_3: "Esegui lo script <strong>Methax_ACT3DsREX</strong>.",
+      txt_s3_4: "Terminato il processo, la console si riavvierà. Se appare il pannello di Luma, verifica che la 3° opzione sia spuntata (Show Nand or user string...) e lo Splash di sicurezza sia su Before o After.",
+      txt_s3_5: "Premi il pulsante <strong>Start</strong> per uscire dal menu e riavviare.",
+
+      txt_alert2: "<strong>✅ Congratulazioni!</strong> Ora avrai la console modificata con FBI iniettato.", 
+      txt_footer: "Per concludere, dopo qualsiasi processo di hacking, è necessario eseguire il <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>Backup della NAND</strong></a>."
+    },
+    pt: {
+      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
+      txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio",
+      txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie no Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "HACK 3DS - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ Compatível com os modelos OLD e NEW em todas as versões ⚠️</strong>",
+      txt_h2_req: "Requisitos", 
+      txt_req1: "Console 3DS/2DS virgem em qualquer versão", 
+      txt_req2: "Cartão SD no formato FAT32 de 4 a 32 GB", 
+      txt_req3: "Um ímã de geladeira [a menos que você use um Old 2DS]", 
+      txt_req4: "R4 Flashada (Siga <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>nosso guia aqui</a> se não tiver)",
+      txt_req5: "Arquivos Hack",
+      txt_reqBtn: "Baixar Arquivos Hack", 
+      txt_reqNote: "* Você pode visualizar nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      
+      txt_h2_step1: "PASSO 1: Baixar os Arquivos Hack",
+      txt_s1_1: "Coloque todos os arquivos no cartão SD do console (não no SD do R4).", 
+      
+      txt_h2_step2: "PASSO 2: Executar o Exploit",
+      txt_s2_1: "Com os arquivos no SD e a R4 flashada, posicione o ímã no local correto [siga a imagem abaixo. O Old 2DS não precisa de ímã, mas DEVE ATIVAR O MODO DE ESPERA].",
+      txt_s2_2: "Além disso, você precisará pressionar simultaneamente os seguintes botões: <strong>(Power) + (Start) + (Select) + (X)</strong>. Se der tudo certo, você entrará no Godmode9.",
+      
+      txt_h2_step3: "PASSO 3: Instalar Scripts",
+      txt_s3_1: "Dentro do Godmode9, aperte o botão <strong>Home</strong>.",
+      txt_s3_2: "Vá para a opção <strong>Scripts...</strong>",
+      txt_s3_3: "Execute o script <strong>Methax_ACT3DsREX</strong>.",
+      txt_s3_4: "Após finalizar, o console irá reiniciar. Se aparecer o painel do Luma, verifique se a 3ª opção está marcada (Show Nand or user string...) e o Splash de segurança está em Before ou After.",
+      txt_s3_5: "Pressione <strong>Start</strong> para sair do menu e reiniciar.",
+
+      txt_alert2: "<strong>✅ Parabéns!</strong> O console já está modificado com o FBI injetado.", 
+      txt_footer: "Para finalizar, após qualquer processo de hack, você deve fazer o <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>Backup da NAND</strong></a>."
+    },
+    ja: {
+      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
+      txt_awSubtitle: "コンテンツのロックを解除するには、手順を完了してください。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. プレゼント企画に参加",
+      txt_radar: "更新レーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
+      
+      txt_tag: "3DS",
+      txt_title: "3DSハック - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ すべてのバージョンのOLDおよびNEWモデルと互換性があります ⚠️</strong>",
+      txt_h2_req: "要件", 
+      txt_req1: "未改造の3DS/2DSコンソール（全バージョン対応）", 
+      txt_req2: "FAT32形式の4〜32GBのSDカード", 
+      txt_req3: "冷蔵庫のマグネット [Old 2DSを使用している場合を除く]", 
+      txt_req4: "フラッシュ済みR4（お持ちでない場合は<a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>こちらのガイド</a>を参照してください）",
+      txt_req5: "ハックファイル",
+      txt_reqBtn: "ハックファイルをダウンロード", 
+      txt_reqNote: "* 当社の<a href='../productos.html' class='mini-btn'>製品</a>もご覧いただけます",
+      
+      txt_h2_step1: "ステップ1：ハックファイルのダウンロード",
+      txt_s1_1: "すべてのファイルをコンソールのSDカード（R4のSDではなく）に配置します。", 
+      
+      txt_h2_step2: "ステップ2：エクスプロイトの実行",
+      txt_s2_1: "SDにファイルを入れ、R4がフラッシュされたら、マグネットを正しい位置に配置します[下の画像を参照してください。Old 2DSにはマグネットは不要ですが、スリープモードを有効にする必要があります]。",
+      txt_s2_2: "さらに、次のボタンを同時に押す必要があります：<strong>(Power) + (Start) + (Select) + (X)</strong>。成功すると、Godmode9に入ります。",
+      
+      txt_h2_step3: "ステップ3：スクリプトのインストール",
+      txt_s3_1: "Godmode9内で、<strong>Home</strong>ボタンを押します。",
+      txt_s3_2: "<strong>Scripts...</strong>オプションに進みます。",
+      txt_s3_3: "<strong>Methax_ACT3DsREX</strong>スクリプトを実行します。",
+      txt_s3_4: "プロセスが完了すると、コンソールが再起動します。Lumaパネルが表示された場合は、3番目のオプション（Show Nand or user string...）がチェックされており、セキュリティスプラッシュがBeforeまたはAfterになっていることを確認してください。",
+      txt_s3_5: "<strong>Start</strong>ボタンを押してメニューを終了し、再起動します。",
+
+      txt_alert2: "<strong>✅ おめでとうございます！</strong> これでコンソールが改造され、FBIが注入されました。", 
+      txt_footer: "最後に、すべてのハッキングプロセスの後には必ず<a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>NANDバックアップ</strong></a>を実行する必要があります。"
+    },
+    ko: {
+      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드",
+      txt_awSubtitle: "콘텐츠를 잠금 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 이벤트 참여",
+      txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi에서 후원하기",
+      
+      txt_tag: "3DS",
+      txt_title: "3DS 해킹 - MAGNETHAX",
+      txt_alert1: "<strong>⚠️ 모든 버전의 OLD 및 NEW 모델과 호환됩니다 ⚠️</strong>",
+      txt_h2_req: "요구 사항", 
+      txt_req1: "순정 3DS/2DS 콘솔 (모든 버전)", 
+      txt_req2: "FAT32 포맷의 4~32GB SD 카드", 
+      txt_req3: "냉장고 자석 [Old 2DS를 사용하는 경우 제외]", 
+      txt_req4: "플래시된 R4 (없으신 경우 <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20R4.html' target='_blank' style='color: var(--red); text-decoration: underline;'>여기 가이드를 따르세요</a>)",
+      txt_req5: "해킹 파일",
+      txt_reqBtn: "해킹 파일 다운로드", 
+      txt_reqNote: "* 저희 <a href='../productos.html' class='mini-btn'>제품</a>도 확인할 수 있습니다",
+      
+      txt_h2_step1: "1단계: 해킹 파일 다운로드",
+      txt_s1_1: "모든 파일을 콘솔의 SD 카드(R4의 SD가 아님)에 복사합니다.", 
+      
+      txt_h2_step2: "2단계: 익스플로잇 실행",
+      txt_s2_1: "SD 카드에 파일을 복사하고 R4가 플래시되었으면 자석을 올바른 위치에 놓습니다 [아래 이미지를 참고하세요. Old 2DS는 자석이 필요 없지만 반드시 슬립 모드를 활성화해야 합니다].",
+      txt_s2_2: "또한 다음 버튼을 동시에 눌러야 합니다: <strong>(Power) + (Start) + (Select) + (X)</strong>. 성공하면 Godmode9으로 진입합니다.",
+      
+      txt_h2_step3: "3단계: 스크립트 설치",
+      txt_s3_1: "Godmode9에서 <strong>Home</strong> 버튼을 누릅니다.",
+      txt_s3_2: "<strong>Scripts...</strong> 옵션으로 이동합니다.",
+      txt_s3_3: "<strong>Methax_ACT3DsREX</strong> 스크립트를 실행합니다.",
+      txt_s3_4: "과정이 끝나면 콘솔이 재부팅됩니다. Luma 패널이 나타나면 세 번째 옵션(Show Nand or user string...)이 체크되어 있고 보안 스플래시가 Before 또는 After로 설정되어 있는지 확인하세요.",
+      txt_s3_5: "<strong>Start</strong> 버튼을 눌러 메뉴를 종료하고 재부팅합니다.",
+
+      txt_alert2: "<strong>✅ 축하합니다!</strong> 이제 콘솔이 개조되고 FBI가 주입되었습니다.", 
+      txt_footer: "마지막으로, 모든 해킹 과정을 마친 후에는 반드시 <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Nand.html' target='_blank' style='color: var(--red); text-decoration: underline;'><strong>NAND 백업</strong></a>을 진행해야 합니다."
+    }
+  };
+
+  /* ================= LÓGICA CORE (NO TOCAR) ================= */
+  let idiomaActual = 'en'; 
+  let accessGranted = false;
+  let s1 = false; let s2 = false; let accessProductsData = [];
+
+  function comprobarAccesoTemporal() {
+      const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+      const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
+      if (tokenGuardado === tokenValidoHoy) { accessGranted = true; } else { localStorage.removeItem("_lp_auth_tk"); accessGranted = false; }
+  }
+
+  function iniciarAppPrincipal() {
+      document.getElementById('mainHub').style.display = 'block';
+      setTimeout(() => document.getElementById('mainHub').style.opacity = '1', 50);
+      cargarSidebar();
+  }
+
+  document.getElementById('disney-btn1').onclick = function() {
+      if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
+      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
+      btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
+      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 40000);
+  };
+
+  document.getElementById('disney-btn2').onclick = function() {
+      if(s2) return;
+      const container = document.getElementById('disneyProductsContainer');
+      container.style.display = (container.style.display === "grid") ? "none" : "grid";
+  };
+
+async function cargarProductosDisney() {
+      const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
+      let all = [];
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { 
+          try { 
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
+      }
+      if (all.length >= 3) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } 
+  }
+
+  function renderProductosDisney() {
+      const cont = document.getElementById('disneyProductsContainer'); cont.innerHTML = '';
+      accessProductsData.forEach(p => {
+          let title = (typeof p.label === 'string') ? p.label : (p.label ? (p.label[idiomaActual] || p.label['en'] || p.label['es'] || 'Producto') : 'Producto');
+          const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+          let url = p.url || '#'; if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
+          const div = document.createElement('div'); div.className = 'disney-aw-product';
+          div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
+          div.onclick = () => { window.open(url, "_blank"); completarSorteoDisney(); };
+          cont.appendChild(div);
+      });
+  }
+
+  function completarSorteoDisney() {
+      if(s2) return; s2 = true;
+      const btn2 = document.getElementById('disney-btn2'); btn2.classList.add('disney-step-done'); btn2.innerText = "✅";
+      document.getElementById('disneyProductsContainer').style.display = "none"; checkProgressDisney();
+  }
+
+  function checkProgressDisney() {
+      let count = (s1 ? 1 : 0) + (s2 ? 1 : 0); document.getElementById('disney-progress').style.width = (count * 50) + "%";
+      if (count === 2) {
+          localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + new Date().toDateString()));
+          setTimeout(() => { const overlay = document.getElementById('accessWallOverlay'); overlay.style.opacity = '0'; setTimeout(() => { overlay.style.display = 'none'; iniciarAppPrincipal(); }, 500); }, 800);
+      }
+  }
+
+  const themeDotsContainer = document.getElementById('themeDots');
+  const paletaTemas = { rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' }, verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' } };
+  function initThemeDots() {
+    const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo'; themeDotsContainer.innerHTML = '';
+    Object.keys(paletaTemas).forEach(colorKey => {
+      const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
+      if (colorKey === savedTheme) dot.classList.add('active-dot');
+      dot.addEventListener('click', () => { document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot')); dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey); });
+      themeDotsContainer.appendChild(dot);
+    }); applyTheme(savedTheme);
+  }
+  function applyTheme(colorKey) { const theme = paletaTemas[colorKey] || paletaTemas.rojo; document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb); }
+
+  function createLanguageSelector(){
+    const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+    const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+    Object.keys(langs).forEach(code=>{ const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt); });
+    
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+    
+    if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+    else if (translations[browserLang]) { idiomaActual = browserLang; } 
+    else { idiomaActual = 'en'; }
+    
+    selector.value = idiomaActual;
+    
+    selector.addEventListener('change', e => {
+      idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual); updateLanguage();
+      if(accessProductsData.length > 0) renderProductosDisney();
+      if(accessGranted) cargarSidebar(); 
+    });
+  }
+
+  function updateLanguage(){
+    const t = translations[idiomaActual] || translations['en'];
+    Object.keys(t).forEach(key => { 
+        const element = document.getElementById(key); 
+        if(element && !element.classList.contains('disney-step-done')) {
+            element.innerHTML = t[key]; 
+        } 
+    });
+    
+    if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
+    if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
+    if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
+    if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.txt_discord || "Discord";
+    if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.txt_kofi || "Ko-fi";
+  }
+
+  async function cargarSidebar() {
+    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en']; 
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`; 
+    let todasLasGuias = [];
+
+    try {
+        const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+        const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+        const response = await fetch(apiURL, { cache: "no-store" }); 
+        if (!response.ok) throw new Error();
+        
+        const archivos = await response.json(); 
+        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); 
+        
+        for (let file of htmlFiles) {
+            const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+            const htmlText = await res.text();
+            const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html'); 
+            const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';  
+            let titles = {};
+            ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { 
+                titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', ''); 
+            });
+            todasLasGuias.push({ tag, titles, link: file.name }); 
+        }
+    } catch (error) { 
+        sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; 
+        return; 
+    }
+
+    const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SONY','XBOX','SD'];
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); }); 
+    let currentFile = window.location.pathname.split('/').pop() || ''; 
+
+    const renderGroup = (cat, guias) => { 
+        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'; 
+        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile); 
+        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed"; 
+
+        htmlContent += `<div class="${groupClass}">
+            <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
+                <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="sidebar-links-container">`; 
+
+        guias.forEach(g => {  
+            let linkName = g.link.replace('guias/', '');  
+            let isActive = (currentFile === linkName) ? 'active' : '';  
+            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
+            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;  
+        });
+        htmlContent += `</div></div>`; 
+    };
+
+    ordenDeseado.forEach(cat => { 
+        if(grupos[cat] && grupos[cat].length > 0) { 
+            renderGroup(cat, grupos[cat]); 
+            delete grupos[cat]; 
+        }
+    });
+
+    Object.keys(grupos).forEach(cat => { 
+        renderGroup(cat, grupos[cat]); 
+    });
+
+    sidebar.innerHTML = htmlContent; 
+  }
+
+  const mybutton = document.getElementById("backToTopBtn");
+  window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
+  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); } };
+</script>
+</body>
+</html>
