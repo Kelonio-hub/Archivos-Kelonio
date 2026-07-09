@@ -28,155 +28,114 @@ body{
   overflow-x:hidden;
   min-height: 100vh;
 }
+
 /* ================= TOPBAR ================= */
 .topbar{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
+  position:fixed; 
+  top:0; 
+  left:0; 
+  right:0; 
   z-index:9999;
-  background:rgba(0,0,0,.88);
+  background:rgba(0,0,0,.88); 
   backdrop-filter:blur(16px);
-  display:flex;
-  justify-content:space-between;
+  display:flex; 
+  justify-content:space-between; 
   align-items:center;
   padding:8px 3%; 
   gap: 10px; 
 }
-.logo{
-  font-size:1.8rem; 
-  font-weight:900;
-  color:var(--red);
-  letter-spacing:-1.5px;
-  transition: color 0.3s ease;
-  flex-shrink: 0;
+
+/* GRUPO IZQUIERDO: LOGO + REDES */
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+
+/* ICONOS BARRA SUPERIOR */
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+/* GRUPO DERECHO: HERRAMIENTAS Y BUSCADOR */
+.right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
+.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container{ display:flex; gap:5px; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover{ transform:scale(1.3); }
+.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+#productSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease; }
+#productSearch:focus { width: 200px; border: 1px solid var(--red); }
+#productSearch::placeholder{ color:#ccc; }
+
+/* Botón de guardar JSON en la barra superior */
+.save-json-btn {
+  background: var(--gold) !important;
+  color: black !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
+  font-size: 11px;
+  display: none; 
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s;
 }
-.right-tools{
-  display:flex;
-  align-items:center;
-  gap:12px; 
-  flex-shrink: 0;
-}
-.config-group{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:4px;
-}
-.theme-dots-container{
-  display:flex;
-  gap:5px;
-}
-.color-dot{
-  width:12px; 
-  height:12px;
-  border-radius:50%;
-  cursor:pointer;
-  border:1px solid rgba(0,0,0,0.4);
-  transition:transform .2s, border-color .2s;
-}
-.color-dot:hover{
-  transform:scale(1.3);
-}
-.color-dot.active-dot{
-  border:2px solid white;
-  transform:scale(1.15);
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
-}
-#languageSelector{
-  background:rgba(0,0,0,.8);
-  border:1px solid var(--glass-border);
-  color:#fff;
-  padding:4px 8px; 
-  border-radius:6px;
-  outline: none;
-  cursor: pointer;
-  font-size:11px; 
-}
-#productSearch{
-  background:rgba(255,255,255,.08);
-  border:none;
-  color:white;
-  width:170px; 
-  padding:8px 14px; 
-  border-radius:50px;
-  font-size:13px; 
-  outline:none;
-  transition: width 0.3s ease;
-}
-#productSearch:focus {
-  width: 200px;
-  border: 1px solid var(--red);
-}
-#productSearch::placeholder{
-  color:#ccc;
+.save-json-btn:hover {
+  transform: scale(1.05);
 }
 
-/* ================= CONSOLE BUTTONS ================= */
-.console-buttons{
-  display:flex;
-  gap:6px; 
-  flex-grow: 1; 
-  justify-content: center;
-  overflow-x: auto;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-  padding: 5px 0; 
+/* ================= CONSOLE BUTTONS (Ajustado para el body) ================= */
+.console-buttons { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-bottom: 20px; 
+  padding: 5px 5%;
 }
-.console-buttons::-webkit-scrollbar {
-  display: none; 
-}
-.console-btn{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:10px; 
-  padding:6px 10px; 
-  display:flex;
-  align-items:center;
-  gap:6px; 
-  cursor:pointer;
-  transition: .3s ease;
-  color:white;
-  font-weight:700;
-  font-size: 11px; 
+.console-btn { 
+  background: rgba(255,255,255,.05); 
+  border: 1px solid rgba(255,255,255,.08); 
+  border-radius: 10px; 
+  padding: 8px 14px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  cursor: pointer; 
+  transition: .3s ease; 
+  color: white; 
+  font-weight: 700; 
+  font-size: 12px; 
   white-space: nowrap; 
-  flex-shrink: 0; 
 }
-.console-btn:hover{
-  transform:scale(1.05);
-  border-color:var(--red);
-  background:rgba(var(--glow-rgb),.15);
+.console-btn:hover { 
+  transform: scale(1.05); 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.15); 
 }
-.console-btn.active{
-  border-color:var(--red);
-  background:rgba(var(--glow-rgb),.25);
-  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5);
+.console-btn.active { 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.25); 
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
 }
-.console-btn span{
-  color:white;
-  letter-spacing:.5px;
-}
-.console-btn img{
-  width:18px; 
-  height:18px;
-  object-fit:contain;
-}
-.console-btn .home-icon-btn {
-  font-size: 16px; 
-  color: white;
-  width: 18px; 
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.console-btn span { color: white; letter-spacing: .5px; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; }
+.console-btn .home-icon-btn { font-size: 16px; color: white; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
+
+/* ================= APP ================= */
+#mainApp{
+  display:block;
+  padding-top:85px; 
 }
 
 /* ================= CONTENEDOR DE SUBFILTROS DINÁMICOS ================= */
 .subcategories-filter-wrapper {
   width: 90%;
   max-width: 1300px;
-  margin: 15px auto 0 auto;
+  margin: 0 auto 15px auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -211,12 +170,6 @@ body{
   box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.4);
 }
 
-/* ================= APP ================= */
-#mainApp{
-  display:block;
-  padding-top:75px; 
-}
-
 /* ================= BANNER ALARGADO (AMAZON PRIME) ================= */
 .prime-banner {
   display: flex;
@@ -227,7 +180,7 @@ body{
   border-left: 4px solid var(--red);
   border-radius: 10px;
   padding: 10px 20px;
-  margin: 15px auto 5px auto;
+  margin: 0 auto 15px auto;
   width: 90%;
   max-width: 1300px;
   gap: 15px;
@@ -309,16 +262,16 @@ body{
 /* ================= BARRA POR LOTE STICKY (ADMIN) ================= */
 #batchAdminTools {
   position: sticky;
-  top: 65px; /* Se queda justo debajo de la topbar desktop */
-  z-index: 9990; /* Por encima de las tarjetas, por debajo del menú principal */
-  background: rgba(20, 20, 20, 0.96); /* Fondo opaco para evitar mezcla visual */
+  top: 65px; 
+  z-index: 9990; 
+  background: rgba(20, 20, 20, 0.96); 
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255,255,255,0.2);
   transition: top 0.2s ease;
 }
 @media(max-width:1100px){
   #batchAdminTools {
-    top: 112px; /* Se ajusta si la barra superior se expande en pantallas medianas/móviles */
+    top: 112px; 
   }
 }
 
@@ -349,7 +302,6 @@ body{
   flex-shrink: 0;
   background: #000;
 }
-
 .card-badge {
   position: absolute;
   top: 12px;
@@ -378,7 +330,6 @@ body{
   pointer-events: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
-
 .card-info{
   padding:18px 18px 10px 18px;
   flex-grow: 1;
@@ -488,7 +439,7 @@ body{
   width: 100%;
 }
 
-/* ================= CANDADO INVISIBLE (ESQUINA INFERIOR IZQUIERDA) ================= */
+/* ================= CANDADO INVISIBLE ================= */
 .admin-lock-btn {
   position: fixed;
   bottom: 20px;
@@ -515,25 +466,6 @@ body{
 .admin-lock-btn svg {
   width: 18px;
   height: 18px;
-}
-
-/* Botón de guardar en la barra superior */
-.save-json-btn {
-  background: var(--gold) !important;
-  color: black !important;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 11px;
-  display: none; 
-  align-items: center;
-  gap: 4px;
-  transition: transform 0.2s;
-}
-.save-json-btn:hover {
-  transform: scale(1.05);
 }
 
 /* ================= TARJETAS MÁS PEQUEÑAS (TOP VENTAS) ================= */
@@ -652,29 +584,17 @@ body{
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:1100px){
-  .topbar {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px 5%;
-  }
-  .console-buttons {
-    order: 3;
-    width: 100%;
-    margin: 8px 0 0 0;
-    justify-content: flex-start;
-  }
-  .logo { order: 1; }
-  .right-tools { order: 2; }
+@media(max-width: 1150px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
+  .topbar-left { order: 1; }
+  .right-tools { order: 2; margin-top: 5px;}
 }
-
 @media(max-width:900px){
   #productSearch{ width:140px; }
   #productSearch:focus { width: 160px; }
   .card{ min-width:240px; width: 240px; }
   .card.card-recent{ min-width:180px; width: 180px; }
 }
-
 @media(max-width:768px){
   .prime-banner {
     padding: 10px;
@@ -693,11 +613,34 @@ body{
 <body>
 
 <div class="topbar">
-  <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
   
-  <div class="console-buttons" id="consoleButtons"></div>
-
+  <div class="topbar-left">
+    <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
+    <div class="social-group">
+      <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+      </button>
+      <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/lapresa', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+      </button>
+    </div>
+  </div>
+  
   <div class="right-tools">
+    
+    <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('guias.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    </button>
+
+    <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+    </button>
+
+    <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('actualizaciones - FINAL.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+      <span id="radarBadge" class="radar-badge"></span>
+    </button>
+
     <input 
       type="text" 
       id="productSearch" 
@@ -724,6 +667,8 @@ body{
 </button>
 
 <div id="mainApp">
+  <div class="console-buttons" id="consoleButtons"></div>
+
   <div id="primeBanner" class="prime-banner" style="display:none;"></div>
 
   <div class="subcategories-filter-wrapper">
