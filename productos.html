@@ -123,7 +123,6 @@ body{
 }
 .console-btn span { color: white; letter-spacing: .5px; }
 .console-btn img { width: 18px; height: 18px; object-fit: contain; }
-.console-btn .home-icon-btn { font-size: 16px; color: white; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
 
 /* ================= APP ================= */
 #mainApp{
@@ -729,14 +728,14 @@ body{
 <script>
 /* ================= TRANSLACIONES GLOBALES ================= */
 const translations = {
-  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", home: "Home", buy: "View", zoom: "Enlarge", results: "Search Results", all: "All" },
-  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", home: "Inicio", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", all: "Todos" },
-  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", home: "Accueil", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", all: "Tous" },
-  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", home: "Inizio", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", all: "Tutti" },
-  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", home: "Início", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", all: "Todos" },
-  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", home: "Startseite", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", all: "Alle" },
-  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", home: "ホーム", buy: "見る", zoom: "拡大", results: "検索結果", all: "すべて" },
-  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", home: "홈", buy: "보기", zoom: "확대", results: "검색 결과", all: "전체" }
+  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", buy: "View", zoom: "Enlarge", results: "Search Results", all: "All" },
+  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", all: "Todos" },
+  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", all: "Tous" },
+  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", all: "Tutti" },
+  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", all: "Todos" },
+  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", all: "Alle" },
+  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", buy: "見る", zoom: "拡大", results: "検索結果", all: "すべて" },
+  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", buy: "보기", zoom: "확대", results: "검색 결과", all: "전체" }
 };
 
 /* ================= TRADUCCIONES DE SUBCATEGORÍAS ================= */
@@ -889,13 +888,6 @@ function renderConsoleButtons(){
   const container = document.getElementById('consoleButtons');
   container.innerHTML = '';
   const t = translations[idiomaActual] || translations.es;
-
-  const homeBtn = document.createElement('button');
-  homeBtn.className = 'console-btn';
-  const iconHome = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`;
-  homeBtn.innerHTML = `<div class="home-icon-btn">${iconHome}</div><span>${t.home}</span>`;
-  homeBtn.onclick = () => window.location.href = 'index.html';
-  container.appendChild(homeBtn);
 
   categories.forEach(cat => {
     const btn = document.createElement('button');
