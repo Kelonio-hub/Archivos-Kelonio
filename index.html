@@ -3,530 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo (Switch, 3DS, Wii, NDS). Accede a los archivos de La Presa de forma rápida y organizada.">
-<meta name="keywords" content="Nintendo, Switch, 3DS, Wii, NDS, La Presa, Archivos Nintendo, Emuladores, Actualizaciones">
-<meta name="author" content="La Presa">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://kelonio-hub.github.io/Archivos-Kelonio/">
-<meta property="og:title" content="Archivos Nintendo | La Presa">
-<meta property="og:description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo. Accede a los archivos de La Presa.">
-<meta property="og:image" content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://kelonio-hub.github.io/Archivos-Kelonio/">
-<meta name="twitter:title" content="Archivos Nintendo | La Presa">
-<meta name="twitter:description" content="Portal de descargas, herramientas y actualizaciones para consolas Nintendo. Accede a los archivos de La Presa.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">
-<title id="pageTitle">Archivos Nintendo | La Presa</title>
+<title id="pageTitle">Guías y Tutoriales | La Presa</title>
 <link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
-
 <style>
 :root{
   --red:#e50914; 
-  --bg:#090b13; 
-  --card-bg:#1a1d29; 
-  --glass:rgba(26,29,41,.78);
-  --glass-border:rgba(255,255,255,.1);
-  --accent:#00e6e6;
-  --gold:#ffcc00;
-  --discord:#5865F2; 
-  --kofi:#FF5E5B;    
-  --green:#2ecc71;
-  --glow-rgb: 229, 9, 20;
+  --bg:#141414;
+  --glass:rgba(20,20,20,.78);
+  --glass-border:rgba(255,255,255,.08);
+  --glow-rgb: 229, 9, 20; 
 }
 *{ margin:0; padding:0; box-sizing:border-box; }
-body{ font-family:'Segoe UI',sans-serif; background:var(--bg); color:white; overflow-x:hidden; min-height: 100vh; }
+body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; }
 
-/* ================= MURO DE ACCESO ESTILO DISNEY ================= */
-#accessWallOverlay {
-    position: fixed; inset: 0; z-index: 99999999;
-    background: #090b13; 
-    display: flex; justify-content: center; align-items: center;
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    color: #f9f9f9;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.disney-access-card { 
-    width: 90%; max-width: 620px; 
-    background: rgba(26, 29, 41, 0.95); 
-    backdrop-filter: blur(14px); 
-    padding: 50px 40px; 
-    border-radius: 24px; 
-    border: 1px solid rgba(255,255,255,0.15); 
-    text-align: center; 
-    box-shadow: 0 0 60px rgba(0, 230, 230, 0.25);
-}
-
-.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
-.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
-
-.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
-.disney-progress-fill { height: 100%; width: 0%; background: #00e6e6; transition: width 0.7s ease; }
-
-.disney-step-btn { 
-    width: 100%; padding: 18px; margin: 12px 0; 
-    border-radius: 14px; border: none; 
-    background: rgba(255,255,255,0.1); 
-    color: white; font-size: 1.15rem; font-weight: 600;
-    cursor: pointer; transition: all 0.3s;
-}
-.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
-.disney-step-done { background: #00e6e6 !important; color: #000 !important; cursor: default; }
-
-#disneyProductsContainer {
-    display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto;
-}
-#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
-#disneyProductsContainer::-webkit-scrollbar-thumb { background: #00e6e6; border-radius: 10px; }
-
-.disney-aw-product {
-    background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12);
-    border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s;
-    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-}
-.disney-aw-product:hover { transform: translateY(-6px); border-color: #00e6e6; }
-.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
-.disney-aw-product span { font-size: 13.5px; font-weight: 600; margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; }
-.disney-choose-badge { margin-top: 8px; font-size: 11px; background: #00e6e6; color: #000; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
-
-
-/* ================= TOPBAR Y MAIN HUB ================= */
-#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+/* ================= TOPBAR ================= */
 .topbar{
-  position:fixed; top:0; left:0; right:0; z-index:9999; 
-  background: linear-gradient(to bottom, rgba(9,11,19,0.95) 0%, transparent 100%); 
-  display:flex; justify-content:space-between; align-items:center; padding:15px 5%; gap: 10px; pointer-events: none;
+  position:fixed; top:0; left:0; right:0; z-index:9999;
+  background:rgba(0,0,0,.88); backdrop-filter:blur(16px);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:8px 3%; gap: 10px; 
 }
-.topbar > * { pointer-events: auto; }
-.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; flex-shrink: 0; text-decoration: none;}
+
+/* GRUPO IZQUIERDO: LOGO + REDES */
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+
+/* ICONOS ESTILO PREMIUM (Redes, Guías, Productos, Radar) */
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+/* GRUPO DERECHO: HERRAMIENTAS Y BUSCADOR */
 .right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
 .config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
 .theme-dots-container{ display:flex; gap:5px; }
-.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(255,255,255,0.2); transition:transform .2s, border-color .2s; }
+.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
 .color-dot:hover{ transform:scale(1.3); }
 .color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
 
-#languageSelector{ background:rgba(26,29,41,.9); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
-#fileSearch{ background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.05); color:white; width:190px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: 0.3s; }
-#fileSearch:focus { background:rgba(255,255,255,.15); border-color:var(--red); }
-#fileSearch::placeholder{ color:#aaa; }
+#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
+#fileSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease; }
+#fileSearch:focus { width: 200px; border: 1px solid var(--red); }
+#fileSearch::placeholder{ color:#ccc; }
 
-/* ================= LAYOUT & HERO ================= */
-#mainApp{ display:block; }
-.hero{ min-height:60vh; padding-bottom: 60px; position:relative; display:flex; align-items:center; padding-left: 6%; padding-right: 6%; background-size:cover; background-position:center; transition:all .7s ease; }
-/* Efecto de viñeta Disney (laterales oscuros y degradado por debajo) */
-.hero::before{ content:''; position:absolute; inset:0; background: linear-gradient(to right, #090b13 10%, rgba(9,11,19,0.3) 60%, #090b13); z-index: 1;}
-.hero::after{ content:''; position:absolute; inset:0; background: linear-gradient(to top, #090b13 0%, transparent 40%); z-index:2; pointer-events:none; }
-.hero-content{ position:relative; z-index:3; max-width:700px; margin-top: 50px; }
-.hero h1{ font-size:3.8rem; margin-bottom:15px; font-weight: 800; text-shadow: 0 4px 15px rgba(0,0,0,0.8); }
-.hero p{ font-size:1.15rem; color:#eee; margin-bottom:25px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-.hero button{ border:none; background:var(--red); color:white; padding:15px 35px; border-radius:10px; font-size:1.05rem; font-weight:800; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 15px rgba(var(--glow-rgb), 0.4); }
-.hero button:hover{ transform: scale(1.05); box-shadow: 0 6px 20px rgba(var(--glow-rgb), 0.6); }
-
-/* ================= CONSOLE BUTTONS (DEBAJO DEL HERO) ================= */
-.console-buttons-container {
-    padding: 0 5%;
-    margin-top: -30px; 
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
+/* ================= CONSOLE BUTTONS ================= */
 .console-buttons { 
-    display: flex; 
-    gap: 12px; 
-    overflow-x: auto; 
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-    padding: 10px 0; 
-    flex-wrap: nowrap; 
-    max-width: 100%; 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin-top: 30px; 
+  padding: 5px 0;
 }
-.console-buttons::-webkit-scrollbar { display: none; }
-.console-btn{ background:rgba(26,29,41,.85); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:10px 18px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:white; font-weight:700; font-size: 13px; white-space: nowrap; flex-shrink: 0; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-.console-btn:hover{ transform:scale(1.05); border-color:var(--red); box-shadow: 0 0 15px rgba(var(--glow-rgb),.4); }
-.console-btn.fav-active-btn{ border-color:var(--gold); }
-.console-btn span{ color:white; letter-spacing:.5px; }
-.console-btn img{ width:22px; height:22px; object-fit:contain; }
-.console-btn .fav-icon-btn { font-size: 18px; color: var(--gold); width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; text-shadow: 0 0 8px rgba(255,204,0,0.5); }
-.products-btn { background: rgba(var(--glow-rgb), 0.15); border-color: rgba(var(--glow-rgb), 0.5); }
-.products-btn:hover { background: rgba(var(--glow-rgb), 0.4); }
-.products-btn .fav-icon-btn { color: white; text-shadow: none; }
+.console-btn { 
+  background: rgba(255,255,255,.05); 
+  border: 1px solid rgba(255,255,255,.08); 
+  border-radius: 10px; 
+  padding: 8px 14px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  cursor: pointer; 
+  transition: .3s ease; 
+  color: white; 
+  font-weight: 700; 
+  font-size: 12px; 
+  white-space: nowrap; 
+}
+.console-btn:hover { 
+  transform: scale(1.05); 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.15); 
+}
+.console-btn.fav-active-btn { 
+  border-color: var(--red); 
+  background: rgba(var(--glow-rgb),.25); 
+  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
+}
+.console-btn span { color: white; letter-spacing: .5px; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; }
 
-/* Botón flotante Radar */
-.top-radar-btn { background:transparent; border:none; cursor: pointer; padding: 4px; position:relative; display: flex; align-items: center; transition: transform 0.2s; }
-.top-radar-btn:hover { transform: scale(1.1); }
-.top-radar-btn span { position:absolute; top:0; right:0; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+/* ================= HEADER HERO ================= */
+.header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
+.header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; gap: 12px; margin: 0 auto; justify-content: center; }
+.header-section h1 svg { width: 2.8rem; height: 2.8rem; fill: currentColor; transform: translateY(-2px); }
+.header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
-#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9999; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
+/* ================= GRID DE GUÍAS ================= */
+.updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
+.update-card { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+.update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
+.update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.update-tag { background: rgba(255,255,255,0.06); border: 1px solid var(--glass-border); color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+.update-date { color: #777; font-size: 12px; }
+.update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
+.update-card h3 a { color: white; text-decoration: none; transition: color 0.2s; }
+.update-card h3 a:hover { color: var(--red); }
+.update-body { color: #b3b3b3; font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; }
+.update-footer { margin-top: auto; }
+.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+.download-link:hover { filter: brightness(1.2); }
+
+/* ================= LOADER ================= */
+.loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; display: none; }
+.spinner { width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: var(--red); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ================= BOTÓN SUBIR ARRIBA ================= */
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
 #backToTopBtn:hover { transform: scale(1.1); }
 
-/* ================= CAROUSEL & CARDS ================= */
-.row{ padding:25px 5%; position: relative; z-index: 5; }
-.row h2{ margin-bottom:20px; font-size:1.8rem; letter-spacing: 1px; color: #f9f9f9; }
-.carousel{ display:flex; gap:16px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:15px; }
-.carousel::-webkit-scrollbar{ display:none; }
-.carousel-wrapper{ position:relative; }
-.carousel-arrow{ position:absolute; top:50%; transform:translateY(-50%); width:52px; height:52px; border:1px solid rgba(255,255,255,0.1); border-radius:50%; background:rgba(26,29,41,.8); color:white; font-size:28px; cursor:pointer; z-index:50; backdrop-filter:blur(10px); transition:.25s; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-.carousel-arrow:hover{ background:var(--red); border-color:var(--red); transform:translateY(-50%) scale(1.1); box-shadow: 0 0 15px rgba(var(--glow-rgb),0.5); }
-.carousel-arrow.left{ left:-20px; }
-.carousel-arrow.right{ right:-20px; }
-
-.card{ min-width:300px; width: 300px; background:var(--card-bg); border-radius:16px; overflow:hidden; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
-.card:hover{ transform:scale(1.04) translateY(-5px); z-index:20; border-color: var(--red); box-shadow: 0 0 25px rgba(var(--glow-rgb, 229, 9, 20), 0.4), 0 15px 30px rgba(0,0,0,0.6); }
-.card img{ width:100%; height:180px; object-fit:cover; flex-shrink: 0; }
-.card-info{ padding:18px 18px 10px 18px; flex-grow: 1; display: flex; flex-direction: column; }
-.card-info strong{ display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; font-size:17px; white-space: normal; color: #f9f9f9; }
-.card-info p{ font-size:14px; color:#aaa; line-height:1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-
-.card-actions { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 0 15px 15px 15px; gap: 8px; margin-top: auto; }
-.action-btn { padding: 10px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; color: white; display: flex; align-items: center; justify-content: center; background: #4a4d59; } 
-.action-btn:hover { background: var(--red) !important; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(var(--glow-rgb), 0.5); }
-.action-btn > svg, .action-btn > img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
-
-.card.card-recent{ min-width:210px; width: 210px; }
-.card.card-recent img{ height: 120px; }
-.card.card-recent .card-info{ padding: 12px 12px 6px 12px; }
-.card.card-recent .card-info strong{ font-size: 14px; margin-bottom: 4px; }
-.card.card-recent .card-info p{ font-size: 12px; -webkit-line-clamp: 2; }
-.card.card-recent .card-actions { padding: 0 12px 12px 12px; gap: 6px; }
-.card.card-recent .action-btn { padding: 8px; }
-.card.card-recent .action-btn > svg, .card.card-recent .action-btn > img { width: 16px; height: 16px; }
-
-.fav-toggle-btn{ position: absolute; top: 12px; right: 12px; background: rgba(9,11,19,.75); border: 1px solid rgba(255,255,255,.15); color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 18px; cursor: pointer; z-index: 30; display: flex; align-items: center; justify-content: center; transition: .3s; backdrop-filter: blur(5px); }
-.fav-toggle-btn:hover{ transform: scale(1.15); background: rgba(9,11,19,.9); border-color: var(--red); }
-.fav-toggle-btn.is-fav{ color: var(--gold); border-color: var(--gold); text-shadow: 0 0 8px var(--gold); }
-
-/* SKELETON SCREENS */
-.skeleton-card { min-width:300px; width: 300px; height: 300px; background: rgba(26,29,41,.6); border-radius: 16px; display: flex; flex-direction: column; padding: 0; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
-.skeleton-img { width: 100%; height: 180px; background: rgba(255,255,255,.05); }
-.skeleton-text1 { width: 60%; height: 16px; background: rgba(255,255,255,.06); margin: 18px 18px 10px; border-radius: 4px; }
-.skeleton-text2 { width: 85%; height: 12px; background: rgba(255,255,255,.04); margin: 0 18px; border-radius: 4px; }
-.skeleton-shimmer::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; transform: translateX(-100%); background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.08) 60%, rgba(255,255,255,0) 100%); animation: shimmer 1.6s infinite; }
-@keyframes shimmer { 100% { transform: translateX(100%); } }
-
-@media(max-width:900px){
-  .hero h1{ font-size:2.5rem; }
-  .hero p{ font-size:1rem; }
-  #fileSearch{ width:140px; }
-  .card, .skeleton-card{ min-width:240px; width: 240px; }
-  .card.card-recent{ min-width:180px; width: 180px; }
-  .carousel-arrow{ display:none; }
+@media(max-width: 1150px) {
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
+  .topbar-left { order: 1; }
+  .right-tools { order: 2; margin-top: 5px;}
 }
 </style>
 </head>
 <body>
 
-<div id="accessWallOverlay" style="display: none;">
-    <div class="disney-access-card">
-        <h1 class="disney-logo-title">LA PRESA</h1>
-        <p class="disney-subtitle" id="aw-subtitle">Completa los pasos para desbloquear el contenido.</p>
-        
-        <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
-        
-        <button id="disney-btn1" class="disney-step-btn">1. Suscribirse al canal</button>
-        <button id="disney-btn2" class="disney-step-btn">2. Participar en el sorteo</button>
-        
-        <div id="disneyProductsContainer"></div>
+<div class="topbar">
+  
+  <div class="topbar-left">
+    <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
+    <div class="social-group">
+      <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+      </button>
+      <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/lapresa', '_blank')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+      </button>
     </div>
+  </div>
+  
+  <div class="right-tools">
+    
+    <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('guias.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    </button>
+
+    <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('productos.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+    </button>
+
+    <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="abrirRadar()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+      <span id="radarBadge" class="radar-badge"></span>
+    </button>
+
+    <input type="text" id="fileSearch" placeholder="Buscar guías...">
+    <div class="config-group">
+      <div class="theme-dots-container" id="themeDots"></div>
+      <select id="languageSelector"></select>
+    </div>
+  </div>
 </div>
 
-<div id="mainHub">
-    <div class="topbar">
-      <a href="#" class="logo">LA PRESA</a>
-      
-      <div class="right-tools">
-        
-        <button id="guideBtn" class="top-radar-btn" title="Guías" onclick="window.open('guias.html', '_self')">
-          <div style="font-size: 20px;">📖</div>
-        </button>
-
-        <button id="radarBtn" class="top-radar-btn" title="Radar de Actualizaciones" onclick="abrirRadar()">
-          <div style="font-size: 20px;">📡</div>
-          <span id="radarBadge"></span>
-        </button>
-
-        <input type="text" id="fileSearch" placeholder="" list="file-suggestions">
-        <datalist id="file-suggestions"></datalist>
-        
-        <div class="config-group">
-          <div class="theme-dots-container" id="themeDots"></div>
-          <select id="languageSelector"></select>
-        </div>
-      </div>
-    </div>
-
-    <div id="mainApp">
-      <div class="hero" id="heroBanner">
-        <div class="hero-content">
-          <h1 id="heroTitle"></h1>
-          <p id="heroDesc"></p>
-          <button id="heroBtn"></button>
-        </div>
-      </div>
-
-      <div class="console-buttons-container">
-          <div class="console-buttons" id="consoleButtons"></div>
-      </div>
-
-      <div id="recentContainer"></div>
-      <div id="rowsContainer"></div>
-    </div>
-
-    <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+<div class="header-section">
+  <h1 id="heroTitle">
+    <svg viewBox="0 0 24 24"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    Centro de Guías
+  </h1>
+  <p id="heroDesc">Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
+  
+  <p id="heroWarning" class="hero-warning"></p>
+  
+  <div class="console-buttons" id="consoleButtons"></div>
 </div>
+
+<div class="updates-container" id="updatesGrid">
+  <div class="loader-container" id="mainLoader">
+    <div class="spinner"></div>
+    <p style="color:#aaa;" id="loaderText">Cargando guías...</p>
+  </div>
+</div>
+
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
 <script>
-/* ================= DICCIONARIO DE TRADUCCIONES COMPLETAS ================= */
+/* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-es: {
-    title: "Archivos Nintendo | La Presa", search: "Buscar archivos...", favorites: "Favoritos", noFavorites: "Aún no has añadido favoritos.", recent: "Vistos Recientemente", products: "Productos", discord: "Discord", donate: "Donar", watch: "Ver", download: "Descargar",
-    awSubtitle: "Completa los pasos para desbloquear el contenido.", awYtBtn: "Suscribirse al canal", awGiftBtn: "Participar en el sorteo", guides: "Guías"
-},
-en: {
-    title: "Nintendo Files | La Presa", search: "Search files...", favorites: "Favorites", noFavorites: "No favorites added yet.", recent: "Recently Viewed", products: "Products", discord: "Discord", donate: "Donate", watch: "Watch", download: "Download",
-    awSubtitle: "Complete the steps to unlock content.", awYtBtn: "Subscribe to channel", awGiftBtn: "Enter the giveaway", guides: "Guides"
-},
-fr: {
-    title: "Fichiers Nintendo | La Presa", search: "Rechercher...", favorites: "Favoris", noFavorites: "Aucun favori.", recent: "Vus Récemment", products: "Produits", discord: "Discord", donate: "Faire un don", watch: "Voir", download: "Télécharger",
-    awSubtitle: "Complétez les étapes pour débloquer le contenu.", awYtBtn: "S'abonner à la chaîne", awGiftBtn: "Participer au tirage", guides: "Guides"
-},
-de: {
-    title: "Nintendo-Dateien | La Presa", search: "Suchen...", favorites: "Favoriten", noFavorites: "Keine Favoriten.", recent: "Zuletzt Angesehen", products: "Produkte", discord: "Discord", donate: "Spenden", watch: "Ansehen", download: "Download",
-    awSubtitle: "Schließen Sie die Schritte ab, um Inhalte freizuschalten.", awYtBtn: "Kanal abonnieren", awGiftBtn: "Am Gewinnspiel teilnehmen", guides: "Leitfäden"
-},
-it: {
-    title: "Archivio Nintendo | La Presa", search: "Cerca file...", favorites: "Preferiti", noFavorites: "Nessun preferito.", recent: "Visti di Recente", products: "Prodotti", discord: "Discord", donate: "Dona", watch: "Guarda", download: "Scarica",
-    awSubtitle: "Completa i passaggi per sbloccare i contenidos.", awYtBtn: "Iscriviti al canale", awGiftBtn: "Partecipa al sorteggio", guides: "Guide"
-},
-pt: {
-    title: "Arquivos Nintendo | La Presa", search: "Procurar arquivos...", favorites: "Favoritos", noFavorites: "Nenhum favorito.", recent: "Vistos Recentemente", products: "Produtos", discord: "Discord", donate: "Doar", watch: "Ver", download: "Baixar",
-    awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", awYtBtn: "Inscrever-se no canal", awGiftBtn: "Participar do sorteio", guides: "Guias"
-},
-ja: {
-    title: "任天堂アーカイブ | La Presa", search: "検索...", favorites: "お気に入り", noFavorites: "お気に入りはありません。", recent: "最近見たファイル", products: "製品", discord: "Discord", donate: "寄付", watch: "見る", download: "ダウンロード",
-    awSubtitle: "アクセスするには手順を完了してください。", awYtBtn: "チャンネル登録", awGiftBtn: "抽選に参加する", guides: "ガイド"
-},
-ko: {
-    title: "닌텐도 아카이브 | La Presa", search: "검색...", favorites: "즐겨찾기", noFavorites: "즐겨찾기가 없습니다.", recent: "최근에 본 파일", products: "제품", discord: "Discord", donate: "기부", watch: "보기", download: "다운로드",
-    awSubtitle: "액세스하려면 단계를 완료하세요.", awYtBtn: "채널 구독하기", awGiftBtn: "경품 추첨 참여", guides: "가이드"
-}
+  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", heroWarning: "Si no se visualizan las guías [debido a que se ha usado más de 60 token de github], utiliza una VPN para seguir navegando o espera 1 hora hasta volver a tener acceso.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
+  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", heroWarning: "If the guides do not load [because more than 60 GitHub tokens have been used], use a VPN to continue browsing or wait 1 hour to regain access.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
+  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", heroWarning: "Si les guides ne s'affichent pas [en raison de l'utilisation de plus de 60 jetons GitHub], utilisez un VPN pour continuer à naviguer ou attendez 1 heure pour retrouver l'accès.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", heroWarning: "Wenn die Anleitungen nicht geladen werden [da mehr als 60 GitHub-Tokens verwendet wurden], nutzen Sie ein VPN zum Weitersurfen oder warten Sie 1 Stunde, um wieder Zugriff zu erhalten.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", heroWarning: "Se le guide non vengono visualizzate [poiché sono stati utilizzati più di 60 token GitHub], usa una VPN para continuare a navigare o attendi 1 ora per riavere accesso.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trouvata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", heroWarning: "Se os guias não carregarem [porque mais de 60 tokens do GitHub foram usados], use uma VPN para continuar navegando ou aguarde 1 hora para recuperar o acesso.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", heroWarning: "ガイドが表示されない場合 [GitHubのトークンが60以上使用されたため]、VPNを使用してブラウジングを続けるか、アクセスが回復するまで1時間お待ちください。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", heroWarning: "가이드가 표시되지 않는 경우 [60개 이상의 GitHub 토큰이 사용되었기 때문에], VPN을 사용하여 계속 탐색하거나 다시 액세스할 수 있을 때까지 1시간을 기다리십시오.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
-let idiomaActual = 'es'; 
-let mediaFiles = {};
-let heroItems = [];
-let heroIndex = 0;
-let heroInterval; 
-let favoritos = JSON.parse(localStorage.getItem('favoriteFiles')) || [];
-let recientes = JSON.parse(localStorage.getItem('recentFiles')) || [];
-let currentView = { type: 'home', id: null }; 
-let accessGranted = false;
+let idiomaActual = 'en'; 
+let categoriasUnicas = new Set();
+let filtroActual = 'ALL'; 
+let todasLasGuias = [];
 
-/* DOM Elements */
 const fileSearch = document.getElementById('fileSearch');
-const rowsContainer = document.getElementById('rowsContainer');
-const recentContainer = document.getElementById('recentContainer');
-const datalist = document.getElementById('file-suggestions');
+const updatesGrid = document.getElementById('updatesGrid');
+const consoleButtons = document.getElementById('consoleButtons');
 const themeDotsContainer = document.getElementById('themeDots');
 const mybutton = document.getElementById("backToTopBtn");
 
-/* ================= LÓGICA DEL MURO DISNEY ================= */
-let s1 = false;
-let s2 = false;
-let accessProductsData = [];
-
-document.getElementById('disney-btn1').onclick = function() {
-    if(s1) return;
-    const btn = this;
-    const esMembresia = Math.random() < 0.5;
-    const url = esMembresia ? 
-        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : 
-        "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1";
-    
-    window.open(url, "_blank", "noopener,noreferrer");
-    btn.innerText = "⏳ Verificando en segundo plano...";
-    btn.style.opacity = "0.7";
-    
-    setTimeout(() => {
-        s1 = true;
-        btn.classList.add('disney-step-done');
-        btn.innerText = "✅ Paso 1 completado";
-        btn.style.opacity = "1";
-        checkProgressDisney();
-    }, 40000);
-};
-
-document.getElementById('disney-btn2').onclick = function() {
-    if(s2) return;
-    const container = document.getElementById('disneyProductsContainer');
-    container.style.display = (container.style.display === "grid") ? "none" : "grid";
-};
-
-async function cargarProductosDisney() {
-    const base = 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/';
-    const files = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
-    let all = [];
-
-    for (let f of files) {
-        try {
-            let res = await fetch(base + f + '?nocache=' + Date.now());
-            if (res.ok) {
-                let data = await res.json();
-                all = all.concat(Array.isArray(data) ? data : Object.values(data));
-            }
-        } catch(e){}
-    }
-
-    if (all.length >= 3) {
-        all.sort(() => 0.5 - Math.random());
-        accessProductsData = all.slice(0, 6);
-        renderProductosDisney();
-    }
-}
-
-function renderProductosDisney() {
-    const cont = document.getElementById('disneyProductsContainer');
-    cont.innerHTML = '';
-    
-    accessProductsData.forEach(p => {
-        const title = getTranslatedText(p.label, idiomaActual) || p.label || 'Producto';
-        const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-        let url = p.url || '#';
-        if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
-
-        const div = document.createElement('div');
-        div.className = 'disney-aw-product';
-        div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
-        div.onclick = () => {
-            window.open(url, "_blank", "noopener,noreferrer");
-            completarSorteoDisney();
-        };
-        cont.appendChild(div);
-    });
-}
-
-function completarSorteoDisney() {
-    if(s2) return;
-    s2 = true;
-    const btn2 = document.getElementById('disney-btn2');
-    btn2.classList.add('disney-step-done');
-    btn2.innerText = "✅ Paso 2 completado";
-    document.getElementById('disneyProductsContainer').style.display = "none";
-    checkProgressDisney();
-}
-
-function checkProgressDisney() {
-    let count = (s1 ? 1 : 0) + (s2 ? 1 : 0);
-    document.getElementById('disney-progress').style.width = (count * 50) + "%";
-    
-    if (count === 2) {
-        const fechaActual = new Date().toDateString(); 
-        localStorage.setItem("_lp_auth_tk", btoa("lapresa_secreto_" + fechaActual));
-        
-        setTimeout(() => {
-            const overlay = document.getElementById('accessWallOverlay');
-            overlay.style.opacity = '0';
-            setTimeout(() => {
-                overlay.style.display = 'none';
-                iniciarAppPrincipal();
-            }, 500);
-        }, 800);
-    }
-}
-
-/* ================= LÓGICA DE TRADUCCIÓN COMPLETA ================= */
-function getTranslatedText(obj, lang) {
-    if (!obj) return '';
-    if (typeof obj === 'string') return obj;
-    return obj[lang] || obj['es'] || obj['en'] || Object.values(obj)[0] || '';
-}
-
-function detectBrowserLanguage() {
-  const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
-  if (translations[browserLang]) { idiomaActual = browserLang; } 
-  else { idiomaActual = 'en'; }
-}
-
-function createLanguageSelector(){
-  const selector = document.getElementById('languageSelector');
-  const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
-  
-  selector.innerHTML = '';
-  Object.keys(langs).forEach(code=>{
-    const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code];
-    selector.appendChild(opt);
-  });
-  
-  selector.value = idiomaActual;
-  selector.addEventListener('change', e=>{
-    idiomaActual = e.target.value; 
-    translateInterface();
-    if(accessProductsData.length > 0) renderProductosDisney(); 
-    
-    if (Object.keys(mediaFiles).length > 0) { 
-        renderConsoleButtons(); 
-        updateHero(); 
-        updateSuggestions(); 
-        
-        if (currentView.type === 'home') renderAllRows();
-        else if (currentView.type === 'console') showConsoleContent(currentView.id);
-        else if (currentView.type === 'favorites') showFavoritesContent();
-        else if (currentView.type === 'search') triggerSearch(currentView.id);
-    }
-  });
-}
-
-function translateInterface(){
-  const t = translations[idiomaActual] || translations['en'];
-  document.title = t.title; 
-  fileSearch.placeholder = t.search;
-  
-  const heroBtn = document.getElementById('heroBtn');
-  if(heroBtn) heroBtn.textContent = t.watch; 
-
-  const subtitle = document.getElementById('aw-subtitle');
-  if(subtitle) subtitle.innerHTML = t.awSubtitle;
-
-  const btn1 = document.getElementById('disney-btn1');
-  if(btn1 && !s1) btn1.innerHTML = "1. " + t.awYtBtn;
-
-  const btn2 = document.getElementById('disney-btn2');
-  if(btn2 && !s2) btn2.innerHTML = "2. " + t.awGiftBtn;
-
-  // NUEVO BOTÓN: Traducción del botón de guías
-  const guideBtn = document.getElementById('guideBtn');
-  if(guideBtn) guideBtn.title = t.guides || "Guías";
-}
-
-/* ================= SISTEMA DE TEMAS ================= */
+/* ================= PALETA DE COLORES ================= */
 const paletaTemas = {
-  rojo: { hex: '#e50914', rgb: '229, 9, 20' },
-  naranja: { hex: '#ff6600', rgb: '255, 102, 0' },
-  amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
-  verde: { hex: '#2ecc71', rgb: '46, 204, 113' },
-  azul: { hex: '#00aaff', rgb: '0, 170, 255' },
-  violeta: { hex: '#9b59b6', rgb: '155, 89, 182' },
-  rosa: { hex: '#ff80ab', rgb: '255, 128, 171' }
+  rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+  verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' }
 };
 
 function initThemeDots() {
-  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul'; 
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
+  themeDotsContainer.innerHTML = '';
   Object.keys(paletaTemas).forEach(colorKey => {
-    const dot = document.createElement('div'); dot.className = 'color-dot';
-    dot.style.backgroundColor = paletaTemas[colorKey].hex; dot.dataset.color = colorKey;
-    if (colorKey === savedTheme) { dot.classList.add('active-dot'); }
+    const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    if (colorKey === savedTheme) dot.classList.add('active-dot');
     dot.addEventListener('click', () => {
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
-      dot.classList.add('active-dot');
-      localStorage.setItem('selectedThemeColor', colorKey);
-      applyTheme(colorKey);
+      dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey);
     });
     themeDotsContainer.appendChild(dot);
   });
@@ -534,349 +230,89 @@ function initThemeDots() {
 }
 
 function applyTheme(colorKey) {
-  const theme = paletaTemas[colorKey] || paletaTemas.azul;
-  document.documentElement.style.setProperty('--red', theme.hex);
-  document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+  const theme = paletaTemas[colorKey] || paletaTemas.rojo;
+  document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
 }
 
-function getItemUniqueId(item, catName) { 
-    return `${catName}-${getTranslatedText(item.label, 'en') || 'archivo'}`.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+/* ================= SELECTOR DE IDIOMAS ================= */
+function createLanguageSelector(){
+  const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+  const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+  
+  Object.keys(langs).forEach(code=>{
+    const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt);
+  });
+  
+  const savedLang = localStorage.getItem('preferredLanguage');
+  const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+  
+  if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+  else if (translations[browserLang]) { idiomaActual = browserLang; } 
+  else { idiomaActual = 'en'; }
+  
+  selector.value = idiomaActual;
+  
+  selector.addEventListener('change', e => {
+    idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
+    updateLanguage(); renderFilterButtons(); renderNoticias();
+  });
 }
 
-/* ================= INICIO DE LA APP PRINCIPAL ================= */
-function comprobarAccesoTemporal() {
-    const tokenGuardado = localStorage.getItem("_lp_auth_tk");
-    const fechaActual = new Date().toDateString();
-    const tokenValidoHoy = btoa("lapresa_secreto_" + fechaActual);
-    
-    if (tokenGuardado === tokenValidoHoy) {
-        accessGranted = true; 
-    } else { 
-        localStorage.removeItem("_lp_auth_tk");
-        accessGranted = false; 
-    }
+function updateLanguage(){
+  const t = translations[idiomaActual] || translations['en'];
+  document.title = t.title;
+  
+  const titleNode = document.getElementById('heroTitle');
+  const svgIcon = titleNode.querySelector('svg');
+  titleNode.textContent = ' ' + t.heroTitle;
+  if (svgIcon) titleNode.insertBefore(svgIcon, titleNode.firstChild);
+
+  document.getElementById('heroDesc').textContent = t.heroDesc;
+  document.getElementById('heroWarning').textContent = t.heroWarning;
+  fileSearch.placeholder = t.search;
+
+  if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
+  if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.products;
+  if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.guides;
+  if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.discord;
+  if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
-function iniciarAppPrincipal() {
-    const mainHub = document.getElementById('mainHub');
-    mainHub.style.display = 'block';
-    setTimeout(() => mainHub.style.opacity = '1', 50);
-    
-    if (Object.keys(mediaFiles).length === 0) {
-        loadContent();
-        verificarNotificacionesRadar();
-    }
-}
+/* ================= BOTONES DINÁMICOS ================= */
+function renderFilterButtons() {
+  consoleButtons.innerHTML = '';
+  const t = translations[idiomaActual] || translations['en'];
 
-/* ================= CARGA DE CONTENIDO Y CATEGORÍAS ================= */
-async function loadContent(){
-  try{
-    const tokenGuardado = localStorage.getItem("_lp_auth_tk");
-    const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
-    
-    if (tokenGuardado !== tokenValidoHoy) {
-        alert("Acceso denegado. Completa los pasos nuevamente.");
-        location.reload();
-        return;
-    }
+  const btnAll = document.createElement('button');
+  btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
+  btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
+  btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
+  consoleButtons.appendChild(btnAll);
 
-    rowsContainer.innerHTML = `
-      <div class="row"><h2>SWITCH</h2><div class="carousel" id="sk-switch"></div></div>
-      <div class="row"><h2>3DS</h2><div class="carousel" id="sk-3ds"></div></div>
-    `;
-    renderSkeletons('sk-switch', 5); renderSkeletons('sk-3ds', 5);
-    
-    const urlCodificada = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0tlbG9uaW8taHViL0xpbmstM0RTL21haW4vZGF0YS9jb25zb2xhcy5qc29u"; 
-    const urlReal = atob(urlCodificada);
-
-    const response = await fetch(urlReal);
-    mediaFiles = await response.json();
-    setTimeout(() => { renderConsoleButtons(); renderRecentRow(); renderAllRows(); setupHeroRotation(); updateSuggestions(); }, 1000);
-  }catch(err){ console.error(err); alert('Error loading content.'); }
-}
-
-function renderSkeletons(containerId, count = 5) {
-  const container = document.getElementById(containerId);
-  if(!container) return;
-  container.innerHTML = '';
-  for(let i = 0; i < count; i++) {
-    const card = document.createElement('div');
-    card.className = 'skeleton-card skeleton-shimmer';
-    card.innerHTML = `<div class="skeleton-img"></div><div class="skeleton-text1"></div><div class="skeleton-text2"></div>`;
-    container.appendChild(card);
-  }
-}
-
-function buildDynamicCategories(){
   const iconMap = {
-    switch:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
-    '3ds':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
-    nds:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
-    wii:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
-    SD:'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png'
+    'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
+    '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
+    'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
+    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
+    'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
+    'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
+    'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff',
+    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png'      
   };
-  return Object.keys(mediaFiles).map(key=>({
-    id:key, title:key.toUpperCase(),
-    icon:iconMap[key] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'
-  }));
-}
 
-function renderConsoleButtons(){
-  const container = document.getElementById('consoleButtons');
-  container.innerHTML = '';
-  const categories = buildDynamicCategories();
-  
-  categories.forEach(cat=>{
+  Array.from(categoriasUnicas).sort().forEach(cat => {
     const btn = document.createElement('button');
-    btn.className = 'console-btn';
-    btn.innerHTML = `<img src="${cat.icon}"><span>${cat.title}</span>`;
-    btn.onclick = ()=>showConsoleContent(cat.id);
-    container.appendChild(btn);
-  });
-  
-  const t = translations[idiomaActual] || translations['en'];
-  
-  const favBtn = document.createElement('button');
-  favBtn.className = 'console-btn'; favBtn.id = 'mainFavoritesBtn';
-  favBtn.innerHTML = `<div class="fav-icon-btn">★</div><span>${t.favorites}</span>`;
-  favBtn.onclick = ()=>showFavoritesContent();
-  container.appendChild(favBtn);
-  
-  const prodBtn = document.createElement('button');
-  prodBtn.className = 'console-btn products-btn';
-  const iconCart = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>`;
-  prodBtn.innerHTML = `<div class="fav-icon-btn">${iconCart}</div><span>${t.products}</span>`;
-  prodBtn.onclick = () => window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_blank');
-  container.appendChild(prodBtn);
-}
-
-/* ================= HERO & BUSCADOR ================= */
-function setupHeroRotation(section = null){
-  if(heroInterval) clearInterval(heroInterval);
-  heroItems = [];
-  
-  const targetCategories = section ? [section.toLowerCase()] : ['3ds', 'wii'];
-
-  Object.keys(mediaFiles).forEach(catId => { 
-      if (targetCategories.includes(catId.toLowerCase())) {
-          mediaFiles[catId].forEach(item => { 
-              if (item.videoYoutubeIds) { heroItems.push({ ...item, _category: catId }); }
-          }); 
-      }
-  });
-
-  if(heroItems.length === 0) {
-      Object.keys(mediaFiles).forEach(catId => { 
-          if (targetCategories.includes(catId.toLowerCase())) {
-              mediaFiles[catId].forEach(item => { heroItems.push({ ...item, _category: catId }); }); 
-          }
-      });
-  }
-
-  heroItems.sort(() => 0.5 - Math.random());
-
-  if(!heroItems.length) return;
-  
-  heroIndex = 0;
-  updateHero();
-  heroInterval = setInterval(()=>{
-    heroIndex++; if(heroIndex >= heroItems.length){ heroIndex = 0; } updateHero();
-  },10000);
-}
-
-function updateHero(){
-  const item = heroItems[heroIndex]; if(!item) return;
-  const title = getTranslatedText(item.label, idiomaActual) || 'Nintendo Archive';
-  const desc = getTranslatedText(item.desc, idiomaActual) || '';
-  const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-  
-  document.getElementById('heroTitle').textContent = title;
-  document.getElementById('heroDesc').textContent = desc;
-  document.getElementById('heroBanner').style.backgroundImage = `url('${thumb}')`;
-  
-  const t = translations[idiomaActual] || translations['en'];
-  document.getElementById('heroBtn').textContent = t.watch;
-  
-  document.getElementById('heroBtn').onclick = () => {
-    const catName = item._category || 'switch';
-    registerRecentClick(item, catName); 
-    if (item.videoYoutubeIds) {
-        window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank', 'noopener,noreferrer');
-    } else {
-        window.open(item.url, '_blank', 'noopener,noreferrer'); 
-    }
-  };
-}
-
-function updateSuggestions(){
-  datalist.innerHTML = '';
-  const set = new Set();
-  Object.values(mediaFiles).forEach(cat=>{
-    cat.forEach(item=>{ 
-        const translatedLabel = getTranslatedText(item.label, idiomaActual);
-        if(translatedLabel) { set.add(translatedLabel); } 
-    });
-  });
-  set.forEach(label=>{
-    const opt = document.createElement('option');
-    opt.value = label; datalist.appendChild(opt);
+    btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
+    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}">` : `<span>📁</span>`;
+    btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
+    btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
+    consoleButtons.appendChild(btn);
   });
 }
 
-function triggerSearch(query) {
-  currentView = { type: 'search', id: query };
-  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
-  const row = document.createElement('div'); row.className = 'row';
-  row.innerHTML = `<h2>Resultados</h2><div class="carousel" id="results"></div>`;
-  rowsContainer.appendChild(row);
-  const results = document.getElementById('results'); results.style.flexWrap = 'wrap'; results.style.overflow = 'visible';
-  Object.keys(mediaFiles).forEach(catId => { 
-      mediaFiles[catId].forEach(item=>{ 
-          const title = getTranslatedText(item.label, idiomaActual).toLowerCase();
-          if(title.includes(query)){ createCard(item, catId, results, false); } 
-      }); 
-  });
-  setupHeroRotation();
-}
-
-fileSearch.addEventListener('input',()=>{
-  const query = fileSearch.value.toLowerCase().trim();
-  if(!query){ renderAllRows(); return; }
-  triggerSearch(query);
-});
-
-/* ================= VISTAS & TARJETAS ================= */
-function registerRecentClick(item, catName) {
-  const uniqueId = getItemUniqueId(item, catName);
-  recientes = recientes.filter(id => id !== uniqueId); recientes.unshift(uniqueId);
-  if(recientes.length > 5) recientes.pop();
-  localStorage.setItem('recentFiles', JSON.stringify(recientes));
-  if(!fileSearch.value.trim() && currentView.type === 'home') { renderRecentRow(); }
-}
-
-function renderRecentRow() {
-  recentContainer.innerHTML = '';
-  if (recientes.length === 0) { recentContainer.style.display = 'none'; return; }
-  recentContainer.style.display = 'block';
-  const row = document.createElement('div'); row.className = 'row';
-  row.innerHTML = `<h2 style="font-size:1.5rem; margin-bottom:12px; opacity:0.85;">${(translations[idiomaActual] || translations['en']).recent.toUpperCase()}</h2><div class="carousel" id="recentCarousel"></div>`;
-  recentContainer.appendChild(row);
-  const carousel = document.getElementById('recentCarousel');
-
-  recientes.forEach(uniqueId => {
-    let itemEncontrado = false;
-    Object.keys(mediaFiles).forEach(catId => {
-      if (itemEncontrado) return;
-      mediaFiles[catId].forEach(item => { if (getItemUniqueId(item, catId) === uniqueId) { createCard(item, catId, carousel, true); itemEncontrado = true; } });
-    });
-  });
-}
-
-function renderAllRows(){
-  currentView = { type: 'home', id: null };
-  rowsContainer.innerHTML = ''; renderRecentRow(); 
-  Object.keys(mediaFiles).forEach(catId=>{
-    const row = document.createElement('div'); row.className = 'row';
-    row.innerHTML = `<h2>${catId.toUpperCase()}</h2><div class="carousel-wrapper"><button class="carousel-arrow left">‹</button><div class="carousel" id="car-${catId}"></div><button class="carousel-arrow right">›</button></div>`;
-    rowsContainer.appendChild(row);
-    const carousel = document.getElementById(`car-${catId}`);
-    mediaFiles[catId].forEach(item=>{ createCard(item, catId, carousel, false); });
-    row.querySelector('.left').onclick = ()=>{ carousel.scrollBy({ left:-700, behavior:'smooth' }); };
-    row.querySelector('.right').onclick = ()=>{ carousel.scrollBy({ left:700, behavior:'smooth' }); };
-  });
-  setupHeroRotation();
-}
-
-function showConsoleContent(consoleId){
-  currentView = { type: 'console', id: consoleId };
-  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
-  const row = document.createElement('div'); row.className = 'row';
-  row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px;">${consoleId.toUpperCase()}</h2><div class="carousel" id="singleConsole"></div>`;
-  rowsContainer.appendChild(row);
-  const carousel = document.getElementById('singleConsole'); carousel.style.flexWrap = 'wrap'; carousel.style.overflow = 'visible';
-  mediaFiles[consoleId].forEach(item=>{ createCard(item, consoleId, carousel, false); });
-  setupHeroRotation(consoleId);
-}
-
-function showFavoritesContent(){
-  currentView = { type: 'favorites', id: null };
-  recentContainer.innerHTML = ''; recentContainer.style.display = 'none'; rowsContainer.innerHTML = '';
-  const t = translations[idiomaActual] || translations['en'];
-  const row = document.createElement('div'); row.className = 'row';
-  row.innerHTML = `<h2 style="font-size:2.5rem;margin-bottom:25px; display:flex; align-items:center; gap:15px;"><span style="color:var(--gold);">★</span>${t.favorites.toUpperCase()}</h2><div class="carousel" id="favConsole"></div>`;
-  rowsContainer.appendChild(row);
-  const carousel = document.getElementById('favConsole'); carousel.style.flexWrap = 'wrap'; carousel.style.overflow = 'visible';
-
-  let foundAny = false;
-  Object.keys(mediaFiles).forEach(catId => {
-    mediaFiles[catId].forEach(item => {
-      if(favoritos.includes(getItemUniqueId(item, catId))){ createCard(item, catId, carousel, false); foundAny = true; }
-    });
-  });
-  if(!foundAny){ carousel.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">${t.noFavorites}</p>`; }
-  setupHeroRotation();
-}
-
-function createCard(item, catName, container, isMini = false){
-  const t = translations[idiomaActual] || translations['en'];
-  const card = document.createElement('div'); card.className = isMini ? 'card card-recent' : 'card';
-  const uniqueId = getItemUniqueId(item, catName);
-  
-  const thumb = item.videoYoutubeIds ? `https://img.youtube.com/vi/${item.videoYoutubeIds}/maxresdefault.jpg` : 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-  
-  const title = getTranslatedText(item.label, idiomaActual) || '';
-  const desc = getTranslatedText(item.desc, idiomaActual) || '';
-  
-  const isFav = favoritos.includes(uniqueId) ? 'is-fav' : '';
-  const iconFav = favoritos.includes(uniqueId) ? '★' : '☆';
-  
-  const iconPlay = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
-  const iconZip = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
-  const iconDiscord = `<svg viewBox="0 0 127.14 96.36" fill="currentColor"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1,105.25,105.25,0,0,0,32.19-16.14c2.64-27.38-4.51-51.11-19.32-72.15ZM42.56,65.36c-5.36,0-9.82-5.06-9.82-11.27s4.35-11.27,9.82-11.27c5.5,0,9.9,5.14,9.82,11.27,0,6.21-4.32,11.27-9.82,11.27Zm42,0c-5.36,0-9.82-5.06-9.82-11.27s4.35-11.27,9.82-11.27c5.5,0,9.9,5.14,9.82,11.27,0,6.21-4.32,11.27-9.82,11.27Z"/></svg>`;
-  const iconDonate = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`;
-
-  let discordLink = ''; let kofiLink = '';
-  if (['wii', 'wiiu', 'wii mini'].includes(catName.toLowerCase())) { discordLink = 'https://discord.com/invite/xHg7XaYJvK'; kofiLink = 'https://ko-fi.com/wiide'; }
-  else { discordLink = 'https://discord.gg/8Fv8GDg'; kofiLink = 'https://ko-fi.com/lapresa'; }
-
-  card.innerHTML = `
-    <button class="fav-toggle-btn ${isFav}">${iconFav}</button>
-    <img src="${thumb}" loading="lazy">
-    <div class="card-info"><strong>${title}</strong><p>${desc}</p></div>
-    <div class="card-actions">
-      <button class="action-btn watch-btn" title="${t.watch}">${iconPlay}</button>
-      <button class="action-btn download-btn" title="${t.download}">${iconZip}</button>
-      <button class="action-btn discord-btn" title="${t.discord}">${iconDiscord}</button>
-      <button class="action-btn donate-btn" title="${t.donate}">${iconDonate}</button>
-    </div>
-  `;
-
-  card.querySelector('.fav-toggle-btn').onclick = (e)=>{
-    e.stopPropagation();
-    if(favoritos.includes(uniqueId)){
-      favoritos = favoritos.filter(id => id !== uniqueId); e.target.classList.remove('is-fav'); e.target.textContent = '☆';
-    } else {
-      favoritos.push(uniqueId); e.target.classList.add('is-fav'); e.target.textContent = '★';
-    }
-    localStorage.setItem('favoriteFiles', JSON.stringify(favoritos));
-    if(document.getElementById('favConsole')){ showFavoritesContent(); }
-  };
-
-  card.querySelector('.watch-btn').onclick = (e)=>{ e.stopPropagation(); if (item.videoYoutubeIds) { window.open(`https://www.youtube.com/watch?v=${item.videoYoutubeIds}`, '_blank', 'noopener,noreferrer'); } else { alert(t.noVideo || "No video."); } };
-  
-  card.querySelector('.download-btn').onclick = (e)=>{
-    e.stopPropagation();
-    registerRecentClick(item, catName); 
-    window.open(item.url, '_blank', 'noopener,noreferrer');
-  };
-  
-  card.querySelector('.discord-btn').onclick = (e)=>{ e.stopPropagation(); window.open(discordLink, '_blank', 'noopener,noreferrer'); };
-  card.querySelector('.donate-btn').onclick = (e)=>{ e.stopPropagation(); window.open(kofiLink, '_blank', 'noopener,noreferrer'); };
-
-  container.appendChild(card);
-}
-
-/* ================= RADAR Y OTRAS UTILIDADES ================= */
+/* ================= LÓGICA RADAR DE ACTUALIZACIONES ================= */
 async function verificarNotificacionesRadar() {
   const badge = document.getElementById('radarBadge');
   if (!badge) return;
@@ -897,25 +333,151 @@ function abrirRadar() {
   window.open('actualizaciones.html', '_self');
 }
 
+/* ================= RENDERIZAR PARRILLA ================= */
+function renderNoticias() {
+  const t = translations[idiomaActual] || translations['en'];
+  const query = fileSearch.value.toLowerCase().trim();
+  updatesGrid.innerHTML = '';
+
+  let filtradas = todasLasGuias;
+  
+  if (filtroActual !== 'ALL') {
+    filtradas = filtradas.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  }
+  
+  if (query) {
+    filtradas = filtradas.filter(n => {
+      let tituloAct = n.titles[idiomaActual] || n.titles['en'] || '';
+      let descAct = n.descs[idiomaActual] || n.descs['en'] || '';
+      return tituloAct.toLowerCase().includes(query) || descAct.toLowerCase().includes(query) || (n.tag && n.tag.toLowerCase().includes(query));
+    });
+  }
+
+  if (filtradas.length === 0) {
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:#aaa; font-size:1.1rem; margin-top:40px;">${t.empty}</p>`;
+    return;
+  }
+
+  let htmlResult = '';
+  filtradas.forEach(guia => {
+    const dateStr = new Date(guia.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
+    const titulo = guia.titles[idiomaActual] || guia.titles['en'] || 'Guía';
+    const descripcion = guia.descs[idiomaActual] || guia.descs['en'] || '';
+
+    htmlResult += `
+      <div class="update-card">
+        <div class="update-header">
+          <span class="update-tag">${guia.tag}</span>
+          <span class="update-date">📅 ${dateStr}</span>
+        </div>
+        <h3><a href="${guia.link}" target="_self">${titulo}</a></h3>
+        <div class="update-body">${descripcion}</div>
+        <div class="update-footer">
+          <a href="${guia.link}" target="_self" class="download-link">${t.read}</a>
+        </div>
+      </div>
+    `;
+  });
+  updatesGrid.innerHTML = htmlResult;
+}
+
+/* ================= LECTURA DINÁMICA DE GITHUB API ================= */
+async function cargarDatosGuias() {
+  const loader = document.getElementById('mainLoader');
+  loader.style.display = 'block';
+
+  // --- NUEVA LÓGICA DE CACHÉ ---
+  const cacheData = localStorage.getItem('guiasCache_v2');
+  const cacheTime = localStorage.getItem('guiasCacheTime_v2');
+  const DOCE_HORAS_MS = 12 * 60 * 60 * 1000; // 12 horas en milisegundos
+
+  // Evaluamos si el caché existe y si tiene menos de 12 horas de antigüedad
+  if (cacheData && cacheTime && (Date.now() - parseInt(cacheTime) < DOCE_HORAS_MS)) {
+    try {
+      todasLasGuias = JSON.parse(cacheData);
+      
+      // Reconstruimos las categorías únicas a partir del caché
+      todasLasGuias.forEach(n => {
+        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
+      });
+
+      loader.style.display = 'none';
+      renderFilterButtons();
+      renderNoticias();
+      return; // Salimos de la función para evitar la petición a GitHub
+    } catch (e) {
+      console.warn("Caché corrupto, recargando de la API...");
+      // Si falla el parseo, dejamos que continúe hacia el fetch de abajo
+    }
+  }
+  // --- FIN DE LÓGICA DE CACHÉ ---
+
+  try {
+    const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+    const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
+    
+    const response = await fetch(apiURL, { cache: "no-store" });
+    if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
+    
+    const archivos = await response.json();
+    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
+
+    todasLasGuias = [];
+
+    for (let file of htmlFiles) {
+      const res = await fetch(file.download_url + '?t=' + new Date().getTime());
+      const htmlText = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+      
+      const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
+      const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
+      
+      let titles = {};
+      let descs = {};
+
+      langs.forEach(l => {
+          titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
+          descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
+      });
+
+      todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` });
+    }
+    
+    // Se guarda la nueva fecha y los datos
+    localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
+    localStorage.setItem('guiasCacheTime_v2', Date.now());
+
+    todasLasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
+    todasLasGuias.forEach(n => {
+      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
+    });
+
+    loader.style.display = 'none';
+    renderFilterButtons();
+    renderNoticias();
+
+  } catch (error) {
+    console.error("Error al cargar guías:", error);
+    loader.style.display = 'none';
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
+  }
+}
+
+/* ================= LISTENERS Y ARRANQUE ================= */
+fileSearch.addEventListener('input', renderNoticias);
 window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; }
+  mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
 };
 
-/* ================= INICIALIZACIÓN ================= */
-document.addEventListener('DOMContentLoaded', () => {
-  detectBrowserLanguage();
+window.onload = () => {
   initThemeDots();
   createLanguageSelector();
-  translateInterface();
-  comprobarAccesoTemporal();
-  
-  if(accessGranted) {
-      iniciarAppPrincipal();
-  } else {
-      document.getElementById('accessWallOverlay').style.display = 'flex';
-      cargarProductosDisney();
-  }
-});
+  updateLanguage();
+  cargarDatosGuias();
+  verificarNotificacionesRadar();
+};
 </script>
 </body>
 </html>
