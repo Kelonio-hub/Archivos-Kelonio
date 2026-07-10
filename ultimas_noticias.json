@@ -1,5 +1,11 @@
 [
   {
+    "tag": "3DS / LUMA PINK",
+    "title": "LUMA PINK 13.3.4",
+    "link": "https://github.com/Kelonio-hub/Luma3DS_Pink/releases/tag/v13.3.4",
+    "date": "2026-07-09T23:11:05.000Z"
+  },
+  {
     "tag": "Switch / Hekate",
     "title": "hekate v6.5.3 & Nyx v1.9.3",
     "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
@@ -154,12 +160,6 @@
     "title": "Rekado 5.4",
     "link": "https://github.com/MenosGrante/Rekado/releases/tag/5.4",
     "date": "2025-08-28T09:58:50.000Z"
-  },
-  {
-    "tag": "3DS / LUMA PINK",
-    "title": "LUMA PINK 13.3.3",
-    "link": "https://github.com/Kelonio-hub/Luma3DS_Pink/releases/tag/v13.3.3",
-    "date": "2025-07-17T20:13:57.000Z"
   },
   {
     "tag": "Wii / USB Loader GX",
