@@ -29,7 +29,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
 .social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
 
-/* ICONOS ESTILO PREMIUM (Redes, Guías, Productos, Radar) */
+/* ICONOS ESTILO PREMIUM */
 .social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
 .social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
 .radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
@@ -87,14 +87,23 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 /* ================= HEADER HERO ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
 .header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
-.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; gap: 12px; margin: 0 auto; justify-content: center; }
-.header-section h1 svg { width: 2.8rem; height: 2.8rem; fill: currentColor; transform: translateY(-2px); }
+.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 auto; }
+.header-section h1 svg { width: 2.8rem; height: 2.8rem; fill: currentColor; transform: translateY(-2px); flex-shrink: 0; }
 .header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 .hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
-/* ================= GRID DE GUÍAS ================= */
+/* ================= GRID DE GUÍAS (ALTURAS UNIFORMES Y TRUNCADO) ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
-.update-card { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+.update-card { 
+  background: rgba(255,255,255,0.02); 
+  border: 1px solid var(--glass-border); 
+  border-radius: 16px; 
+  padding: 22px; 
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; /* Garantiza que todas las tarjetas midan exactamente lo mismo en su fila */
+}
 .update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
 .update-tag { background: rgba(255,255,255,0.06); border: 1px solid var(--glass-border); color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
@@ -102,7 +111,22 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
 .update-card h3 a { color: white; text-decoration: none; transition: color 0.2s; }
 .update-card h3 a:hover { color: var(--red); }
-.update-body { color: #b3b3b3; font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; }
+
+.update-body { 
+  color: #b3b3b3; 
+  font-size: 0.92rem; 
+  line-height: 1.5; 
+  margin-bottom: 25px; 
+  flex-grow: 1; /* Empuja el botón "Leer Guía" siempre al fondo de la tarjeta */
+  
+  /* Truncado de texto puro CSS (Máximo 3 líneas con puntos suspensivos) */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .update-footer { margin-top: auto; }
 .download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
 .download-link:hover { filter: brightness(1.2); }
@@ -125,8 +149,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 </head>
 <body>
 
-<div class="topbar">
-  
+<header class="topbar">
   <div class="topbar-left">
     <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
     <div class="social-group">
@@ -139,10 +162,9 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     </div>
   </div>
   
-  <div class="right-tools">
-    
+  <nav class="right-tools">
     <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
     </button>
 
     <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')">
@@ -159,27 +181,22 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       <div class="theme-dots-container" id="themeDots"></div>
       <select id="languageSelector"></select>
     </div>
-  </div>
-</div>
+  </nav>
+</header>
 
 <div class="header-section">
-  <h1 id="heroTitle">
-    <svg viewBox="0 0 24 24"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
-    Centro de Guías
-  </h1>
+  <h1 id="heroTitle"><svg viewBox="0 0 24 24"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg><span> Centro de Guías</span></h1>
   <p id="heroDesc">Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
-  
   <p id="heroWarning" class="hero-warning"></p>
-  
   <div class="console-buttons" id="consoleButtons"></div>
 </div>
 
-<div class="updates-container" id="updatesGrid">
+<main class="updates-container" id="updatesGrid">
   <div class="loader-container" id="mainLoader">
     <div class="spinner"></div>
     <p style="color:#aaa;" id="loaderText">Cargando guías...</p>
   </div>
-</div>
+</main>
 
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
@@ -189,9 +206,9 @@ const translations = {
   es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", heroWarning: "Si no se visualizan las guías [debido a que se ha usado más de 60 token de github], utiliza una VPN para seguir navegando o espera 1 hora hasta volver a tener acceso.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
   en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", heroWarning: "If the guides do not load [because more than 60 GitHub tokens have been used], use a VPN to continue browsing or wait 1 hour to regain access.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
   fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", heroWarning: "Si les guides ne s'affichent pas [en raison de l'utilisation de plus de 60 jetons GitHub], utilisez un VPN pour continuer à naviguer ou attendez 1 heure pour retrouver l'accès.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", heroWarning: "Wenn die Anleitungen nicht geladen werden [da mehr als 60 GitHub-Tokens verwendet wurden], nutzen Sie ein VPN zum Weitersurfen oder warten Sie 1 Stunde, um wieder Zugriff zu erhalten.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", heroWarning: "Se le guide non vengono visualizzate [poiché sono stati utilizzati più di 60 token GitHub], usa una VPN para continuare a navigare o attendi 1 ora per riavere accesso.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trouvata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", heroWarning: "Se os guias não carregarem [porque mais de 60 tokens do GitHub foram usados], use uma VPN para continuar navegando ou aguarde 1 hora para recuperar o acesso.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Atualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", heroWarning: "Wenn die Anleitungen nicht geladen werden [da mehr als 60 GitHub-Tokens verwendet wurden], nutzen Sie ein VPN zum Weitersurfen or warten Sie 1 Stunde, um wieder Zugriff zu erhalten.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo-passo per le tue console.", heroWarning: "Se le guide non vengono visualizzate [poiché sono stati utilizzati più di 60 token GitHub], usa una VPN para continuare a navigare o attendi 1 ora per riavere accesso.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Manuais e tutoriais passo a passo para seus consoles.", heroWarning: "Se os guias não carregarem [porque mais de 60 tokens do GitHub foram usados], use uma VPN para continuar navegando ou aguarde 1 hora para recuperar o acesso.", search: "Buscar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhum guia encontrado.", products: "Produtos", radar: "Radar de Actualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
   ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", heroWarning: "ガイドが表示されない場合 [GitHubのトークンが60以上使用されたため]、VPNを使用してブラウジングを続けるか、アクセスが回復するまで1時間お待ちください。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
   ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", heroWarning: "가이드가 표시되지 않는 경우 [60개 이상의 GitHub 토큰이 사용되었기 때문에], VPN을 사용하여 계속 탐색하거나 다시 액세스할 수 있을 때까지 1시간을 기다리십시오.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
@@ -218,7 +235,10 @@ function initThemeDots() {
   const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
   themeDotsContainer.innerHTML = '';
   Object.keys(paletaTemas).forEach(colorKey => {
-    const dot = document.createElement('div'); dot.className = 'color-dot'; dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    const dot = document.createElement('div'); 
+    dot.className = 'color-dot'; 
+    dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    dot.setAttribute('aria-label', `Tema ${colorKey}`);
     if (colorKey === savedTheme) dot.classList.add('active-dot');
     dot.addEventListener('click', () => {
       document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
@@ -263,9 +283,10 @@ function updateLanguage(){
   document.title = t.title;
   
   const titleNode = document.getElementById('heroTitle');
-  const svgIcon = titleNode.querySelector('svg');
-  titleNode.textContent = ' ' + t.heroTitle;
-  if (svgIcon) titleNode.insertBefore(svgIcon, titleNode.firstChild);
+  const textSpan = titleNode.querySelector('span');
+  if (textSpan) {
+    textSpan.textContent = ' ' + t.heroTitle;
+  }
 
   document.getElementById('heroDesc').textContent = t.heroDesc;
   document.getElementById('heroWarning').textContent = t.heroWarning;
@@ -292,20 +313,33 @@ function renderFilterButtons() {
   const iconMap = {
     'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
     '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
     'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
     'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
     'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
     'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
     'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
+    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
     'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
-    'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff',
-    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png'      
+    'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
   };
 
-  Array.from(categoriasUnicas).sort().forEach(cat => {
+  /* ORDEN ESTRICTO SOLICITADO PARA LOS BOTONES */
+  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
+
+  const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
+    const indexA = ordenDeseado.indexOf(a);
+    const indexB = ordenDeseado.indexOf(b);
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
+  categoriasOrdenadas.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
-    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}">` : `<span>📁</span>`;
+    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📁</span>`;
     btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
     btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
     consoleButtons.appendChild(btn);
@@ -354,7 +388,7 @@ function renderNoticias() {
   }
 
   if (filtradas.length === 0) {
-    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:#aaa; font-size:1.1rem; margin-top:40px;">${t.empty}</p>`;
+    updatesGrid.innerHTML = `<p style="color:#aaa; text-align:center; grid-column:1/-1; font-size:1.15rem; padding: 50px 0;">${t.empty}</p>`;
     return;
   }
 
@@ -381,22 +415,95 @@ function renderNoticias() {
   updatesGrid.innerHTML = htmlResult;
 }
 
-/* ================= LECTURA DINÁMICA DE GITHUB API ================= */
+/* ================= LECTURA DINÁMICA: CARGA INSTANTÁNEA (0ms) + FETCH SILENCIOSO ================= */
 async function cargarDatosGuias() {
   const loader = document.getElementById('mainLoader');
-  loader.style.display = 'block';
-
-  // --- NUEVA LÓGICA DE CACHÉ ---
   const cacheData = localStorage.getItem('guiasCache_v2');
   const cacheTime = localStorage.getItem('guiasCacheTime_v2');
-  const DOCE_HORAS_MS = 12 * 60 * 60 * 1000; // 12 horas en milisegundos
-
-  // Evaluamos si el caché existe y si tiene menos de 12 horas de antigüedad
-  if (cacheData && cacheTime && (Date.now() - parseInt(cacheTime) < DOCE_HORAS_MS)) {
+  
+  // 1. CARGA INSTANTÁNEA A 0ms DESDE CACHÉ
+  if (cacheData) {
     try {
       todasLasGuias = JSON.parse(cacheData);
+      categoriasUnicas.clear();
+      todasLasGuias.forEach(n => {
+        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
+      });
+      loader.style.display = 'none';
+      renderFilterButtons();
+      renderNoticias();
+      console.log("⚡ Guías cargadas instantáneamente desde caché local.");
+    } catch (e) {
+      console.warn("Caché local dañado. Limpiando para descarga fresca...");
+      localStorage.removeItem('guiasCache_v2');
+    }
+  } else {
+    // Solo mostramos spinner a usuarios nuevos que entran por primera vez
+    loader.style.display = 'block';
+  }
+
+  // 2. ESCUDO ANTI-BANEO GITHUB (30 Minutos): Evita gastar los 60 tokens/hora si ya revisamos hace poco
+  const TREINTA_MINUTOS_MS = 30 * 60 * 1000;
+  if (cacheTime && (Date.now() - parseInt(cacheTime) < TREINTA_MINUTOS_MS)) {
+    console.log("🛡️ Caché muy reciente. Se omite la petición en segundo plano a GitHub.");
+    return;
+  }
+
+  // 3. FETCH EN SEGUNDO PLANO (SILENCIOSO)
+  try {
+    console.log("🔄 Buscando updates en GitHub en segundo plano...");
+    const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+    const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
+    
+    const response = await fetch(apiURL, { cache: "no-store" });
+    if (!response.ok) {
+      if (response.status === 403) {
+        console.warn("⚠️ Límite de la API de GitHub alcanzado. Se mantienen los datos locales.");
+      }
+      throw new Error("No se pudo contactar con la API de GitHub");
+    }
+    
+    const archivos = await response.json();
+    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
+    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
+
+    const PromesasGuias = htmlFiles.map(async (file) => {
+      try {
+        const res = await fetch(file.download_url + '?t=' + new Date().getTime());
+        const htmlText = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        
+        const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
+        const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
+        
+        let titles = {}, descs = {};
+        langs.forEach(l => {
+            titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
+            descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
+        });
+
+        return { tag, date, titles, descs, link: `guias/${file.name}` };
+      } catch (fileError) {
+        return null;
+      }
+    });
+
+    const resultados = await Promise.all(PromesasGuias);
+    const nuevasGuias = resultados.filter(g => g !== null);
+    nuevasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    localStorage.setItem('guiasCacheTime_v2', Date.now());
+
+    // 4. ACTUALIZACIÓN INTELIGENTE: ¿Se detectaron cambios en GitHub?
+    const cambiosDetectados = JSON.stringify(nuevasGuias) !== JSON.stringify(todasLasGuias);
+
+    if (cambiosDetectados) {
+      console.log("✨ ¡Nuevos contenidos detectados! Actualizando la vista en vivo...");
+      todasLasGuias = nuevasGuias;
+      localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
       
-      // Reconstruimos las categorías únicas a partir del caché
+      categoriasUnicas.clear();
       todasLasGuias.forEach(n => {
         if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
       });
@@ -404,69 +511,29 @@ async function cargarDatosGuias() {
       loader.style.display = 'none';
       renderFilterButtons();
       renderNoticias();
-      return; // Salimos de la función para evitar la petición a GitHub
-    } catch (e) {
-      console.warn("Caché corrupto, recargando de la API...");
-      // Si falla el parseo, dejamos que continúe hacia el fetch de abajo
+    } else {
+      console.log("👍 Las guías mostradas ya eran la versión más reciente.");
+      loader.style.display = 'none';
     }
-  }
-  // --- FIN DE LÓGICA DE CACHÉ ---
-
-  try {
-    const repo = 'Kelonio-hub/Archivos-Kelonio'; 
-    const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
-    
-    const response = await fetch(apiURL, { cache: "no-store" });
-    if (!response.ok) throw new Error("No se pudo leer la carpeta en GitHub");
-    
-    const archivos = await response.json();
-    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
-    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
-
-    todasLasGuias = [];
-
-    for (let file of htmlFiles) {
-      const res = await fetch(file.download_url + '?t=' + new Date().getTime());
-      const htmlText = await res.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlText, 'text/html');
-      
-      const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
-      const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
-      
-      let titles = {};
-      let descs = {};
-
-      langs.forEach(l => {
-          titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
-          descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
-      });
-
-      todasLasGuias.push({ tag, date, titles, descs, link: `guias/${file.name}` });
-    }
-    
-    // Se guarda la nueva fecha y los datos
-    localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
-    localStorage.setItem('guiasCacheTime_v2', Date.now());
-
-    todasLasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
-    todasLasGuias.forEach(n => {
-      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
-    });
-
-    loader.style.display = 'none';
-    renderFilterButtons();
-    renderNoticias();
 
   } catch (error) {
-    console.error("Error al cargar guías:", error);
+    console.error("Error en la comprobación en segundo plano:", error.message);
     loader.style.display = 'none';
-    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
+    if (!todasLasGuias.length) {
+      updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
+    }
   }
 }
 
 /* ================= LISTENERS Y ARRANQUE ================= */
-fileSearch.addEventListener('input', renderNoticias);
+let timeoutBuscador = null;
+fileSearch.addEventListener('input', () => {
+  clearTimeout(timeoutBuscador);
+  timeoutBuscador = setTimeout(() => {
+    renderNoticias();
+  }, 250);
+});
+
 window.onscroll = function() {
   mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
 };
