@@ -34,7 +34,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
 .social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
 
-/* ICONOS ESTILO PREMIUM (Redes, Guías, Productos, Radar) */
+/* ICONOS ESTILO PREMIUM */
 .social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
 .social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
 .radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
@@ -52,7 +52,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 #fileSearch:focus { width: 200px; border: 1px solid var(--red); }
 #fileSearch::placeholder{ color:#ccc; }
 
-/* ================= CONSOLE BUTTONS (Reubicado y Ajustado) ================= */
+/* ================= CONSOLE BUTTONS ================= */
 .console-buttons { 
   display: flex; 
   gap: 10px; 
@@ -89,10 +89,31 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .console-btn span { color: white; letter-spacing: .5px; }
 .console-btn img { width: 18px; height: 18px; object-fit: contain; }
 
-/* ================= HEADER HERO ================= */
+/* ================= HEADER HERO & ORBITAL SATELLITE STYLE ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
-.header-section h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 800; }
-.header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.hero-title-wrapper { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 12px; flex-wrap: wrap; }
+
+/* NUEVO SATÉLITE CON PULSO Y FLOTACIÓN EN GRAVEDAD CERO */
+.hero-sat-icon { 
+  color: var(--red); 
+  filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); 
+  transition: color 0.3s ease; 
+  animation: satPulse 3.5s infinite ease-in-out; 
+  flex-shrink: 0; 
+}
+@keyframes satPulse {
+  0%, 100% { 
+    transform: scale(1) translateY(0px); 
+    filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); 
+  }
+  50% { 
+    transform: scale(1.12) translateY(-4px); 
+    filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); 
+  }
+}
+
+.header-section h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; }
+.header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.5; }
 
 /* ================= GRID DE ACTUALIZACIONES ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
@@ -125,7 +146,9 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   .right-tools { order: 2; margin-top: 5px;}
 }
 @media(max-width: 768px) {
-  .header-section h1 { font-size: 2.3rem; }
+  .header-section h1 { font-size: 2.2rem; }
+  .hero-title-wrapper { gap: 10px; }
+  .hero-sat-icon { width: 36px; height: 36px; }
   .updates-container { grid-template-columns: 1fr; }
 }
 </style>
@@ -156,8 +179,16 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
     </button>
 
+    <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
     <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"/>
+        <path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"/>
+        <path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"/>
+        <path d="m16 8 3-3"/>
+        <path d="M9 21a6 6 0 0 0-6-6"/>
+        <path d="M5 21a2 2 0 0 0-2-2"/>
+      </svg>
       <span id="radarBadge" class="radar-badge"></span>
     </button>
 
@@ -170,7 +201,22 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 </div>
 
 <div class="header-section">
-  <h1 id="heroTitle">📡 Radar de Actualizaciones</h1>
+  <!-- TÍTULO CON NUEVO SATÉLITE ORBITAL SINCRONIZADO -->
+  <div class="hero-title-wrapper">
+    <svg class="hero-sat-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Módulos Solares -->
+      <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.06)"/>
+      <path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.06)"/>
+      <!-- Módulo de Control Central -->
+      <path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"/>
+      <!-- Mástil y Antena Espacial -->
+      <path d="m16 8 3-3"/>
+      <!-- Ondas Digitales Irradiando a Tierra -->
+      <path d="M9 21a6 6 0 0 0-6-6"/>
+      <path d="M5 21a2 2 0 0 0-2-2"/>
+    </svg>
+    <h1 id="heroTitle">Radar de Actualizaciones</h1>
+  </div>
   <p id="heroDesc">Monitoreando en tiempo real las últimas versiones detectadas por el satélite.</p>
   
   <div class="console-buttons" id="consoleButtons"></div>
@@ -189,49 +235,49 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 /* ================= DICCIONARIO ================= */
 const translations = {
   en:{
-    title:"Updates Radar | La Presa", heroTitle: "📡 Updates Radar", heroDesc: "Real-time monitoring of the latest versions detected by our satellite.",
+    title:"Updates Radar | La Presa", heroTitle: "Updates Radar", heroDesc: "Real-time monitoring of the latest versions detected by our satellite.",
     search:"Search files...", all: "Todas", download: "📥 Download", bodyText: "New version detected in the official repository. Check the patch notes and download the updated files.",
     empty: "No updates found for this console or search.", waiting: "⚠️ The satellite hasn't collected data yet.", loading: "Loading radar database...",
     products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi"
   },
   es:{
-    title:"Radar de Actualizaciones | La Presa", heroTitle: "📡 Radar de Actualizaciones", heroDesc: "Monitoreando en tiempo real las últimas versiones detectadas por el satélite.",
+    title:"Radar de Actualizaciones | La Presa", heroTitle: "Radar de Actualizaciones", heroDesc: "Monitoreando en tiempo real las últimas versiones detectadas por el satélite.",
     search:"Buscar archivos...", all: "Todas", download: "📥 Descargar", bodyText: "Nueva versión detectada en el repositorio oficial. Revisa las notas del parche y descarga los archivos actualizados.",
     empty: "No se encontraron actualizaciones para esta búsqueda.", waiting: "⚠️ El satélite aún no ha recopilado los datos.", loading: "Cargando base de datos del radar...",
     products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi"
   },
   fr:{
-    title:"Radar de Mises à Jour | La Presa", heroTitle: "📡 Radar de Mises à Jour", heroDesc: "Surveillance en temps réel des dernières versions détectées par le satellite.",
+    title:"Radar de Mises à Jour | La Presa", heroTitle: "Radar de Mises à Jour", heroDesc: "Surveillance en temps réel des dernières versions détectées par le satellite.",
     search:"Rechercher des fichiers...", all: "Toutes", download: "📥 Télécharger", bodyText: "Nouvelle version détectée. Consultez les notes de mise à jour et téléchargez les fichiers.",
     empty: "Aucune mise à jour trouvée.", waiting: "⚠️ Le satellite n'a pas encore collecté de données.", loading: "Chargement de la base de données...",
     products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi"
   },
   it:{
-    title:"Radar Aggiornamenti | La Presa", heroTitle: "📡 Radar Aggiornamenti", heroDesc: "Monitoraggio in tempo reale delle ultime versioni rilevate dal satellite.",
+    title:"Radar Aggiornamenti | La Presa", heroTitle: "Radar Aggiornamenti", heroDesc: "Monitoraggio in tempo reale delle ultime versioni rilevate dal satellite.",
     search:"Cerca file...", all: "Tutte", download: "📥 Scarica", bodyText: "Nuova versione rilevata. Controlla le note di rilascio e scarica i file aggiornati.",
     empty: "Nessun aggiornamento trovato.", waiting: "⚠️ Il satellite non ha ancora raccolto dati.", loading: "Caricamento database...",
     products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi"
   },
   pt:{
-    title:"Radar de Atualizações | La Presa", heroTitle: "📡 Radar de Atualizações", heroDesc: "Monitoramento em tempo real das últimas versões detectadas pelo satélite.",
+    title:"Radar de Atualizações | La Presa", heroTitle: "Radar de Atualizações", heroDesc: "Monitoramento em tempo real das últimas versões detectadas pelo satélite.",
     search:"Buscar arquivos...", all: "Todas", download: "📥 Baixar", bodyText: "Nova versão detectada no repositório oficial. Verifique as notas e baixe os arquivos.",
     empty: "Nenhuma atualização encontrada.", waiting: "⚠️ O satélite ainda não coletou dados.", loading: "Carregando banco de dados...",
     products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi"
   },
   de:{
-    title:"Update-Radar | La Presa", heroTitle: "📡 Update-Radar", heroDesc: "Echtzeit-Überwachung der neuesten erfassten Versionen.",
+    title:"Update-Radar | La Presa", heroTitle: "Update-Radar", heroDesc: "Echtzeit-Überwachung der neuesten erfassten Versionen des Satelliten.",
     search:"Dateien suchen...", all: "Alle", download: "📥 Download", bodyText: "Neue Version im offiziellen Repository erkannt. Überprüfe die Patch-Notes und lade die Dateien herunter.",
     empty: "Keine Updates gefunden.", waiting: "⚠️ Der Satellit hat noch keine Daten gesammelt.", loading: "Lade Radar-Datenbank...",
     products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi"
   },
   ja:{
-    title:"更新レーダー | La Presa", heroTitle: "📡 更新レーダー", heroDesc: "人工衛星が検知した最新バージョンをリアルタイムで監視しています。",
+    title:"更新レーダー | La Presa", heroTitle: "更新レーダー", heroDesc: "人工衛星が検知した最新バージョンをリアルタイムで監視しています。",
     search:"ファイルを検索...", all: "すべて", download: "📥 ダウンロード", bodyText: "公式リポジトリで新しいバージョンが検出されました。パッチノートを確認し、ファイルをダウンロードしてください。",
-    empty: "見つかりませんでした。", waiting: "⚠️ 데이터가 아직 굴집되지 않았습니다.", loading: "データベースを読み込み中...",
+    empty: "見つかりませんでした。", waiting: "⚠️ データが 아직 굴집되지 않았습니다.", loading: "データベースを読み込み中...",
     products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート"
   },
   ko:{
-    title:"업데이트 레이더 | La Presa", heroTitle: "📡 업데이트 레이더", heroDesc: "위성이 감지한 최신 버전을 실시간으로 모니터링합니다.",
+    title:"업데이트 레이더 | La Presa", heroTitle: "업데이트 레이더", heroDesc: "위성이 감지한 최신 버전을 실시간으로 모니터링합니다.",
     search:"파일 검색...", all: "모든", download: "📥 다운로드", bodyText: "공식 저장소에서 새 버전이 감지되었습니다. 패치 노트를 확인하고 업데이트된 파일을 다운로드하세요.",
     empty: "업데이트를 찾을 수 없습니다.", waiting: "⚠️ 위성이 아직 데이터를 수집하지 않았습니다.", loading: "데이터베이스 로드 중...",
     products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기"
@@ -288,34 +334,25 @@ function applyTheme(colorKey) {
 
 /* ================= SELECTOR DE IDIOMAS ================= */
 function createLanguageSelector(){
-  const selector = document.getElementById('languageSelector');
-  selector.innerHTML = '';
-  const langs = {
-    en:'English', es:'Español', fr:'Français', it:'Italiano',
-    pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어'
-  };
+  const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+  const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+  
   Object.keys(langs).forEach(code=>{
-    const opt = document.createElement('option');
-    opt.value = code;
-    opt.textContent = langs[code];
-    selector.appendChild(opt);
+    const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt);
   });
   
   const savedLang = localStorage.getItem('preferredLanguage');
-  if(savedLang && translations[savedLang]){
-    idiomaActual = savedLang;
-  } else {
-    const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
-    idiomaActual = translations[browserLang] ? browserLang : 'es';
-  }
+  const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+  
+  if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+  else if (translations[browserLang]) { idiomaActual = browserLang; } 
+  else { idiomaActual = 'en'; }
+  
   selector.value = idiomaActual;
   
   selector.addEventListener('change', e => {
-    idiomaActual = e.target.value;
-    localStorage.setItem('preferredLanguage', idiomaActual);
-    updateLanguage();
-    renderFilterButtons();
-    renderNoticias();
+    idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
+    updateLanguage(); renderFilterButtons(); renderNoticias();
   });
 }
 
@@ -336,15 +373,14 @@ function updateLanguage(){
   if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
-/* ================= BOTONES (Sin "Inicio") ================= */
+/* ================= BOTONES DINÁMICOS ================= */
 function renderFilterButtons() {
   consoleButtons.innerHTML = '';
-  const t = translations[idiomaActual];
+  const t = translations[idiomaActual] || translations['en'];
 
-  // 1. Botón Todas
   const btnAll = document.createElement('button');
   btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
-  btnAll.innerHTML = `<span style="font-size:14px; width:18px; height:18px; display:flex; align-items:center; justify-content:center;">🌐</span><span>${t.all.toUpperCase()}</span>`;
+  btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
   btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
   consoleButtons.appendChild(btnAll);
 
@@ -352,19 +388,32 @@ function renderFilterButtons() {
     'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
     '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
     'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
     'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
-    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png'
+    'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
+    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
+    'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
+    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
+    'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
+    'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
   };
 
-  // 2. Botones dinámicos según el JSON
-  Array.from(categoriasUnicas).sort().forEach(cat => {
+  /* ORDEN ESTRICTO SOLICITADO PARA LOS BOTONES */
+  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
+
+  const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
+    const indexA = ordenDeseado.indexOf(a);
+    const indexB = ordenDeseado.indexOf(b);
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
+  categoriasOrdenadas.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
-    
-    const iconSrc = iconMap[cat] 
-      ? `<img src="${iconMap[cat]}">` 
-      : `<img src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png">`;
-    
+    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📁</span>`;
     btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
     btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
     consoleButtons.appendChild(btn);
@@ -379,7 +428,6 @@ function renderNoticias() {
 
   let filtradas = todasLasNoticias;
 
-  // Filtrado por consola
   if (filtroActual !== 'ALL') {
     filtradas = filtradas.filter(n => {
       if (!n.tag) return false;
@@ -388,7 +436,6 @@ function renderNoticias() {
     });
   }
 
-  // Filtrado por el buscador
   if (query) {
     filtradas = filtradas.filter(n => 
       n.title.toLowerCase().includes(query) || 
@@ -429,7 +476,6 @@ function renderNoticias() {
 async function cargarDatosRobot() {
   const t = translations[idiomaActual];
   try {
-    // Mantenemos el parámetro '?t=' y añadimos { cache: "no-store" } para máxima seguridad contra la caché
     const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime(), { cache: "no-store" }); 
     if(!response.ok) throw new Error();
 
@@ -460,7 +506,13 @@ async function cargarDatosRobot() {
 }
 
 /* ================= LISTENERS ================= */
-fileSearch.addEventListener('input', renderNoticias);
+let timeoutBuscador = null;
+fileSearch.addEventListener('input', () => {
+  clearTimeout(timeoutBuscador);
+  timeoutBuscador = setTimeout(() => {
+    renderNoticias();
+  }, 250);
+});
 
 window.onscroll = function() {
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
