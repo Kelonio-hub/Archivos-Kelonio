@@ -84,11 +84,32 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 .console-btn span { color: white; letter-spacing: .5px; }
 .console-btn img { width: 18px; height: 18px; object-fit: contain; }
 
-/* ================= HEADER HERO ================= */
+/* ================= HEADER HERO & ANIMACIÓN SATPULSE ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
 .header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
-.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 12px; margin: 0 auto; }
-.header-section h1 svg { width: 2.8rem; height: 2.8rem; fill: currentColor; transform: translateY(-2px); flex-shrink: 0; }
+.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0 auto; }
+
+/* ANIMACIÓN SATPULSE APLICADA AL ICONO DE GUÍAS */
+.hero-guide-icon { 
+  width: 3.2rem; 
+  height: 3.2rem; 
+  color: var(--red); 
+  filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); 
+  transition: color 0.3s ease; 
+  animation: satPulse 3.5s infinite ease-in-out; 
+  flex-shrink: 0; 
+}
+@keyframes satPulse {
+  0%, 100% { 
+    transform: scale(1) translateY(0px); 
+    filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); 
+  }
+  50% { 
+    transform: scale(1.12) translateY(-4px); 
+    filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); 
+  }
+}
+
 .header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 .hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
@@ -102,7 +123,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; 
   display: flex; 
   flex-direction: column; 
-  height: 100%; /* Garantiza que todas las tarjetas midan exactamente lo mismo en su fila */
+  height: 100%; 
 }
 .update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
@@ -117,9 +138,8 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   font-size: 0.92rem; 
   line-height: 1.5; 
   margin-bottom: 25px; 
-  flex-grow: 1; /* Empuja el botón "Leer Guía" siempre al fondo de la tarjeta */
+  flex-grow: 1; 
   
-  /* Truncado de texto puro CSS (Máximo 3 líneas con puntos suspensivos) */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -185,7 +205,13 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 </header>
 
 <div class="header-section">
-  <h1 id="heroTitle"><svg viewBox="0 0 24 24"><path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg><span> Centro de Guías</span></h1>
+  <!-- TÍTULO CON ICONO DE GUÍAS CON ANIMACIÓN SATPULSE -->
+  <h1 id="heroTitle">
+    <svg class="hero-guide-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+    </svg>
+    <span> Centro de Guías</span>
+  </h1>
   <p id="heroDesc">Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
   <p id="heroWarning" class="hero-warning"></p>
   <div class="console-buttons" id="consoleButtons"></div>
@@ -324,7 +350,6 @@ function renderFilterButtons() {
     'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
   };
 
-  /* ORDEN ESTRICTO SOLICITADO PARA LOS BOTONES */
   const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
 
   const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
@@ -421,7 +446,6 @@ async function cargarDatosGuias() {
   const cacheData = localStorage.getItem('guiasCache_v2');
   const cacheTime = localStorage.getItem('guiasCacheTime_v2');
   
-  // 1. CARGA INSTANTÁNEA A 0ms DESDE CACHÉ
   if (cacheData) {
     try {
       todasLasGuias = JSON.parse(cacheData);
@@ -438,18 +462,15 @@ async function cargarDatosGuias() {
       localStorage.removeItem('guiasCache_v2');
     }
   } else {
-    // Solo mostramos spinner a usuarios nuevos que entran por primera vez
     loader.style.display = 'block';
   }
 
-  // 2. ESCUDO ANTI-BANEO GITHUB (30 Minutos): Evita gastar los 60 tokens/hora si ya revisamos hace poco
   const TREINTA_MINUTOS_MS = 30 * 60 * 1000;
   if (cacheTime && (Date.now() - parseInt(cacheTime) < TREINTA_MINUTOS_MS)) {
     console.log("🛡️ Caché muy reciente. Se omite la petición en segundo plano a GitHub.");
     return;
   }
 
-  // 3. FETCH EN SEGUNDO PLANO (SILENCIOSO)
   try {
     console.log("🔄 Buscando updates en GitHub en segundo plano...");
     const repo = 'Kelonio-hub/Archivos-Kelonio'; 
@@ -495,7 +516,6 @@ async function cargarDatosGuias() {
 
     localStorage.setItem('guiasCacheTime_v2', Date.now());
 
-    // 4. ACTUALIZACIÓN INTELIGENTE: ¿Se detectaron cambios en GitHub?
     const cambiosDetectados = JSON.stringify(nuevasGuias) !== JSON.stringify(todasLasGuias);
 
     if (cambiosDetectados) {
