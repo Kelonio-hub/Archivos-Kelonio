@@ -18,6 +18,13 @@
 <meta name="guide-title-ko" content="Switch: Hack Mariko + Lite">
 
 <meta name="guide-desc-es" content="Guía y archivos para el hackeo de Switch Lite y Mariko.">
+<meta name="guide-desc-en" content="Guide and files for hacking Switch Lite and Mariko models.">
+<meta name="guide-desc-fr" content="Guide et fichiers pour le hack des modèles Switch Lite et Mariko.">
+<meta name="guide-desc-de" content="Anleitung und Dateien zum Hacken von Switch Lite- und Mariko-Modellen.">
+<meta name="guide-desc-it" content="Guida e file per l'hacking dei modelli Switch Lite e Mariko.">
+<meta name="guide-desc-pt" content="Guia e arquivos para o desbloqueio dos modelos Switch Lite e Mariko.">
+<meta name="guide-desc-ja" content="Switch LiteおよびMariko（新型）モデルのハック用ガイドとファイル。">
+<meta name="guide-desc-ko" content="스위치 라이트(Switch Lite) 및 마리코(Mariko) 모델의 커스텀 펌웨어 작업을 위한 가이드 및 파일.">
 <link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
 
 <style>
@@ -138,18 +145,26 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
     </div>
 
     <div class="right-tools">
-      <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('../guias.html', '_self')">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
-      </button>
+    <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
+    </button>
 
-      <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('../productos.html', '_self')">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-      </button>
+    <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+    </button>
 
-      <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('../actualizaciones.html', '_self')">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-        <span id="radarBadge" class="radar-badge"></span>
-      </button>
+    <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+    <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"/>
+        <path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"/>
+        <path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"/>
+        <path d="m16 8 3-3"/>
+        <path d="M9 21a6 6 0 0 0-6-6"/>
+        <path d="M5 21a2 2 0 0 0-2-2"/>
+      </svg>
+      <span id="radarBadge" class="radar-badge"></span>
+    </button>
 
       <a href="../guias.html" class="back-btn">
         <span id="txt_backBtnText">← Volver a las Guías</span>
@@ -169,6 +184,9 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
 
     <main class="guide-container">
       <div class="guide-header">
+        <span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
+          <img src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png" alt="SWITCH" style="width: 16px; height: 16px; object-fit: contain;">
+        
         <span class="guide-tag" id="txt_tag">SWITCH</span>
         <h1 id="txt_title">Hack Switch LITE y MARIKO</h1>
       </div>
@@ -445,7 +463,7 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
       if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
       window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
       btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
-      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 40000);
+      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 10000);
   };
 
   document.getElementById('disney-btn2').onclick = function() {
@@ -546,74 +564,175 @@ async function cargarProductosDisney() {
     if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.txt_kofi || "Ko-fi";
   }
 
-  async function cargarSidebar() {
-    const sidebar = document.getElementById('guideSidebar'); const t = translations[idiomaActual] || translations['en'];
-    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`;
-    let todasLasGuias = [];
+/* ==========================================================================
+     SISTEMA DE MENÚ DINÁMICO: STALE-WHILE-REVALIDATE + PROMISE.ALL
+     ========================================================================== */
 
-    try {
-        const repo = 'Kelonio-hub/Archivos-Kelonio'; 
-        const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
-        const response = await fetch(apiURL, { cache: "no-store" }); 
-        if (!response.ok) throw new Error();
-        
-        const archivos = await response.json(); 
-        const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
-        
-        for (let file of htmlFiles) {
-            const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
-            const htmlText = await res.text();
-            const parser = new DOMParser(); const doc = parser.parseFromString(htmlText, 'text/html');
-            const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
-            let titles = {};
-            ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => {
-                titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', '');
-            });
-            todasLasGuias.push({ tag, titles, link: file.name });
-        }
-    } catch (error) { 
-        sidebar.innerHTML = htmlContent + `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`;
-        return; 
+  async function cargarSidebar() {
+    const sidebar = document.getElementById('guideSidebar');
+    const cacheKey = '_lp_sidebar_cache';
+    
+    // --- PASO 1: CARGA INSTANTÁNEA DESDE CACHÉ (0ms) ---
+    const cacheGuardado = localStorage.getItem(cacheKey);
+    if (cacheGuardado) {
+      try {
+        const guiasCacheadas = JSON.parse(cacheGuardado);
+        renderSidebarMenu(guiasCacheadas);
+      } catch (e) {
+        console.warn("Error al leer caché del sidebar, limpiando...", e);
+        localStorage.removeItem(cacheKey);
+      }
+    } else {
+      sidebar.innerHTML = `<div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>`;
     }
 
+    // --- PASO 2: FETCH EN SEGUNDO PLANO (SILENCIOSO) ---
+    try {
+      const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+      const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+      const response = await fetch(apiURL, { cache: "no-store" }); 
+      if (!response.ok) throw new Error("Error en la respuesta de GitHub");
+      
+      const archivos = await response.json(); 
+      const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); 
+      
+      // Peticiones en paralelo y blindadas contra fallos individuales
+      const guiasPromesas = htmlFiles.map(async (file) => {
+        try {
+          const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+          if (!res.ok) return null;
+          const htmlText = await res.text();
+          const parser = new DOMParser(); 
+          const doc = parser.parseFromString(htmlText, 'text/html'); 
+          const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';  
+          let titles = {};
+          ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { 
+            titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', ''); 
+          });
+          return { tag, titles, link: file.name };
+        } catch (err) {
+          return null; // Si una guía falla, no rompe el resto del menú
+        }
+      });
+
+      const resultados = await Promise.all(guiasPromesas);
+      const todasLasGuias = resultados.filter(guia => guia !== null);
+
+      // Orden determinista para evitar falsos positivos al comparar textos
+      todasLasGuias.sort((a, b) => a.link.localeCompare(b.link));
+
+      // --- PASO 3: COMPARACIÓN Y ACTUALIZACIÓN ---
+      const nuevaDataString = JSON.stringify(todasLasGuias);
+      
+      if (cacheGuardado !== nuevaDataString) {
+        localStorage.setItem(cacheKey, nuevaDataString);
+        
+        // Si es la primera vez que entra (sin caché), renderizamos directo
+        if (!cacheGuardado) {
+          renderSidebarMenu(todasLasGuias);
+        } else {
+          // Si ya estaba viendo el caché y hubo cambios, mostramos el aviso elegante
+          mostrarAvisoActualizacion(todasLasGuias);
+        }
+      }
+    } catch (error) { 
+      if (!cacheGuardado) {
+        sidebar.innerHTML = `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; 
+      }
+      console.warn("Sincronización en segundo plano interrumpida:", error);
+    }
+  }
+
+  // --- FUNCIÓN AUXILIAR 1: RENDERIZADO DEL HTML ---
+  function renderSidebarMenu(todasLasGuias) {
+    const sidebar = document.getElementById('guideSidebar');
+    const t = translations[idiomaActual] || translations['en']; 
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`; 
+    
     const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SONY','XBOX','SD'];
-    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; let grupos = {}; todasLasGuias.forEach(g => { let cat = g.tag.split('/')[0].trim().toUpperCase(); if(!grupos[cat]) grupos[cat] = []; grupos[cat].push(g); }); 
-    let currentFile = window.location.pathname.split('/').pop() || '';
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; 
+    
+    let grupos = {}; 
+    todasLasGuias.forEach(g => { 
+      let cat = g.tag.split('/')[0].trim().toUpperCase(); 
+      if(!grupos[cat]) grupos[cat] = []; 
+      grupos[cat].push(g); 
+    }); 
+    
+    let currentFile = window.location.pathname.split('/').pop() || ''; 
 
-    const renderGroup = (cat, guias) => {
-        let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
-        let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile);
-        let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed";
+    const renderGroup = (cat, guias) => { 
+      let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'; 
+      let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile); 
+      let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed"; 
 
-        htmlContent += `<div class="${groupClass}">
-            <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
-                <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
-                <span class="toggle-icon">▼</span>
-            </div>
-            <div class="sidebar-links-container">`;
+      htmlContent += `<div class="${groupClass}">
+          <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
+              <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
+              <span class="toggle-icon">▼</span>
+          </div>
+          <div class="sidebar-links-container">`; 
 
-        guias.forEach(g => {
-            let linkName = g.link.replace('guias/', '');
-            let isActive = (currentFile === linkName) ? 'active' : '';
-            let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link);
-            htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;
-        });
-        htmlContent += `</div></div>`;
+      guias.forEach(g => {  
+        let linkName = g.link.replace('guias/', '');  
+        let isActive = (currentFile === linkName) ? 'active' : '';  
+        let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
+        
+        // Obtenemos el mismo icono de la categoría para el enlace individual
+        let linkIconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+        
+        // Añadimos la imagen antes del texto del enlace con alineación flex
+        htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}" style="display: flex; align-items: center; gap: 8px;">
+            <img src="${linkIconSrc}" style="width: 16px; height: 16px; object-fit: contain; opacity: 0.8;">
+            <span>${displayTitle}</span>
+        </a>`;  
+      });
+      htmlContent += `</div></div>`; 
     };
 
-    ordenDeseado.forEach(cat => {
-        if(grupos[cat] && grupos[cat].length > 0) {
-            renderGroup(cat, grupos[cat]);
-            delete grupos[cat];
-        }
+    ordenDeseado.forEach(cat => { 
+      if(grupos[cat] && grupos[cat].length > 0) { 
+        renderGroup(cat, grupos[cat]); 
+        delete grupos[cat]; 
+      }
     });
 
-    Object.keys(grupos).forEach(cat => {
-        renderGroup(cat, grupos[cat]);
+    Object.keys(grupos).forEach(cat => { 
+      renderGroup(cat, grupos[cat]); 
     });
 
-    sidebar.innerHTML = htmlContent;
+    sidebar.innerHTML = htmlContent; 
   }
+
+  // --- FUNCIÓN AUXILIAR 2: NOTIFICACIÓN DE ACTUALIZACIÓN ---
+  function mostrarAvisoActualizacion(nuevasGuias) {
+    const sidebar = document.getElementById('guideSidebar');
+    if (!document.getElementById('updateBanner')) {
+      const aviso = document.createElement('div');
+      aviso.id = 'updateBanner';
+      aviso.style.cssText = "background: rgba(var(--glow-rgb), 0.25); border: 1px solid var(--red); color: #fff; padding: 10px; border-radius: 8px; font-size: 12px; text-align: center; margin-bottom: 15px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3);";
+      aviso.innerHTML = "✨ Hay nuevas guías disponibles<br><span style='font-size: 11px; text-decoration: underline; opacity: 0.9;'>Haz clic para actualizar el menú</span>";
+      
+      aviso.onmouseover = () => aviso.style.transform = "scale(1.02)";
+      aviso.onmouseout = () => aviso.style.transform = "scale(1)";
+      
+      aviso.onclick = () => {
+        renderSidebarMenu(nuevasGuias);
+        aviso.remove();
+      };
+      
+      // Inserta el aviso justo debajo del título "Otras Guías"
+      if (sidebar.firstChild) {
+        sidebar.insertBefore(aviso, sidebar.children[1] || sidebar.firstChild);
+      } else {
+        sidebar.appendChild(aviso);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    cargarSidebar();
+  });
 
   const mybutton = document.getElementById("backToTopBtn");
   window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
