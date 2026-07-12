@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / Checkpoint",
+    "title": "Checkpoint 4.0.0",
+    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v4.0.0",
+    "date": "2026-07-11T14:18:03.000Z"
+  },
+  {
     "tag": "3DS / LUMA PINK",
     "title": "LUMA PINK 13.3.4",
     "link": "https://github.com/Kelonio-hub/Luma3DS_Pink/releases/tag/v13.3.4",
@@ -10,12 +16,6 @@
     "title": "hekate v6.5.3 & Nyx v1.9.3",
     "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
     "date": "2026-06-30T22:38:31.000Z"
-  },
-  {
-    "tag": "Switch / Checkpoint",
-    "title": "Checkpoint 3.13.0",
-    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v3.13.0",
-    "date": "2026-06-21T08:55:21.000Z"
   },
   {
     "tag": "Switch / DBI",
