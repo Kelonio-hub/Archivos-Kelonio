@@ -180,7 +180,6 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
         <span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
           <img src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png" alt="SD" style="width: 16px; height: 16px; object-fit: contain;">
           <span id="txt_tag">SD</span>
-        </span>
         <h1 id="txt_title">Formatear SD en FAT32 con GUIFORMAT</h1>
       </div>
 
@@ -671,7 +670,15 @@ async function cargarProductosDisney() {
         let linkName = g.link.replace('guias/', '');  
         let isActive = (currentFile === linkName) ? 'active' : '';  
         let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
-        htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}">${displayTitle}</a>`;  
+        
+        // Obtenemos el mismo icono de la categoría para el enlace individual
+        let linkIconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+        
+        // Añadimos la imagen antes del texto del enlace con alineación flex
+        htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}" style="display: flex; align-items: center; gap: 8px;">
+            <img src="${linkIconSrc}" style="width: 16px; height: 16px; object-fit: contain; opacity: 0.8;">
+            <span>${displayTitle}</span>
+        </a>`;  
       });
       htmlContent += `</div></div>`; 
     };
