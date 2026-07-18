@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / DBI",
+    "title": "DBI 905 - Russian version only",
+    "link": "https://github.com/rashevskyv/dbi/releases/tag/905ru",
+    "date": "2026-07-17T11:40:26.000Z"
+  },
+  {
     "tag": "Switch / Checkpoint",
     "title": "Checkpoint 4.0.0",
     "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v4.0.0",
@@ -16,12 +22,6 @@
     "title": "hekate v6.5.3 & Nyx v1.9.3",
     "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
     "date": "2026-06-30T22:38:31.000Z"
-  },
-  {
-    "tag": "Switch / DBI",
-    "title": "DBI 902 - Russian version only",
-    "link": "https://github.com/rashevskyv/dbi/releases/tag/902ru",
-    "date": "2026-06-19T15:18:55.000Z"
   },
   {
     "tag": "Switch / Mission Control",
