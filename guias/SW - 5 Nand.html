@@ -1,32 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hacer BACKUP completo de NAND | La Presa</title>
-
-<meta name="guide-tag" content="SWITCH">
-<meta name="guide-date" content="2026-07-06">
-
-<meta name="guide-title-es" content="Switch: Nand">
-<meta name="guide-title-en" content="Switch: Nand">
-<meta name="guide-title-fr" content="Switch: Nand">
-<meta name="guide-title-de" content="Switch: Nand">
-<meta name="guide-title-it" content="Switch: Nand">
-<meta name="guide-title-pt" content="Switch: Nand">
-<meta name="guide-title-ja" content="Switch: Nand">
-<meta name="guide-title-ko" content="Switch: Nand">
-
-<meta name="guide-desc-es" content="Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo.">
-<meta name="guide-desc-en" content="Learn to create a complete NAND backup on your Nintendo Switch using Hekate and how to restore it safely in case of any failure.">
-<meta name="guide-desc-fr" content="Apprenez à créer une sauvegarde complète de la NAND sur votre Nintendo Switch en utilisant Hekate et comment la restaurer en toute sécurité en cas de problème.">
-<meta name="guide-desc-de" content="Erfahren Sie, wie Sie eine vollständige NAND-Sicherung auf Ihrer Nintendo Switch mit Hekate erstellen und sie sicher wiederherstellen können, falls etwas schiefgeht.">
-<meta name="guide-desc-it" content="Impara a creare un backup completo della NAND sulla tua Nintendo Switch usando Hekate e come ripristinarla in modo sicuro in caso di problema.">
-<meta name="guide-desc-pt" content="Aprenda a criar um backup completo da NAND em sua Nintendo Switch usando Hekate e como restaurá-la com segurança em caso de falha.">
-<meta name="guide-desc-ja" content="Hekateを使用してNintendo SwitchのNANDの完全バックアップを作成する方法と、障害が発生した場合に安全に復元する方法を学びます。">
-<meta name="guide-desc-ko" content="Hekate를 사용하여 닌텐도 스위치의 NAND 전체 백업을 생성하고, 문제가 발생했을 때 안전하게 복원하는 방법을 배웁니다.">
-<link rel="icon" type="image/gif" href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Respaldar y Restaurar NAND (Backup Completo) | La Presa</title>
+<meta content="SWITCH" name="guide-tag"/>
+<meta content="2026-07-06" name="guide-date"/>
+<meta content="Switch: Nand" name="guide-title-es"/>
+<meta content="Switch: Nand" name="guide-title-en"/>
+<meta content="Switch: Nand" name="guide-title-fr"/>
+<meta content="Switch: Nand" name="guide-title-de"/>
+<meta content="Switch: Nand" name="guide-title-it"/>
+<meta content="Switch: Nand" name="guide-title-pt"/>
+<meta content="Switch: Nand" name="guide-title-ja"/>
+<meta content="Switch: Nand" name="guide-title-ko"/>
+<meta content="Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo." name="guide-desc-es"/>
+<meta content="Learn to create a complete NAND backup on your Nintendo Switch using Hekate and how to restore it safely in case of any failure." name="guide-desc-en"/>
+<meta content="Apprenez à créer une sauvegarde complète de la NAND sur votre Nintendo Switch en utilisant Hekate et comment la restaurer en toute sécurité en cas de problème." name="guide-desc-fr"/>
+<meta content="Erfahren Sie, wie Sie eine vollständige NAND-Sicherung auf Ihrer Nintendo Switch mit Hekate erstellen und sie sicher wiederherstellen können, falls etwas schiefgeht." name="guide-desc-de"/>
+<meta content="Impara a creare un backup completo della NAND sulla tua Nintendo Switch usando Hekate e come ripristinarla in modo sicuro in caso di problema." name="guide-desc-it"/>
+<meta content="Aprenda a criar um backup completo da NAND em sua Nintendo Switch usando Hekate e como restaurá-la com segurança em caso de falha." name="guide-desc-pt"/>
+<meta content="Hekateを使用してNintendo SwitchのNANDの完全バックアップを作成する方法と、障害が発生した場合に安全に復元する方法を学びます。" name="guide-desc-ja"/>
+<meta content="Hekate를 사용하여 닌텐도 스위치의 NAND 전체 백업을 생성하고, 문제가 발생했을 때 안전하게 복원하는 방법을 배웁니다." name="guide-desc-ko"/>
+<link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
 <style>
 :root{ --red:#e50914; --bg:#141414; --glass-border:rgba(255,255,255,.08); --glow-rgb: 229, 9, 20; }
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -116,128 +113,269 @@ body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overfl
   .guide-container { width: 100%; order: 1; padding: 25px; }
 }
 </style>
+
+<!-- ==========================================================
+     CANONICAL & HREFLANG (8 IDIOMAS + INGLÉS POR DEFECTO)
+=========================================================== -->
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html" rel="canonical"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=es" hreflang="es" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=fr" hreflang="fr" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=de" hreflang="de" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=pt" hreflang="pt" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=ja" hreflang="ja" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=ko" hreflang="ko" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html?lang=en" hreflang="x-default" rel="alternate"/>
+<!-- ==========================================================
+     OPEN GRAPH & TWITTER CARDS
+=========================================================== -->
+<meta content="website" property="og:type"/>
+<meta content="La Presa" property="og:site_name"/>
+<meta content="Respaldar y Restaurar NAND (Backup Completo)" property="og:title"/>
+<meta content="Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo." property="og:description"/>
+<meta content="https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html" property="og:url"/>
+<meta content="https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Respaldar y Restaurar NAND (Backup Completo)" name="twitter:title"/>
+<meta content="Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo." name="twitter:description"/>
+<meta content="https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization",
+  "name": "La Presa",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html#webpage",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html",
+  "name": "Respaldar y Restaurar NAND (Backup Completo) | La Presa",
+  "description": "Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo.",
+  "inLanguage": [
+    "es",
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "ja",
+    "ko"
+  ],
+  "publisher": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg"
+  },
+  "mainEntity": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html#howto"
+  },
+  "dateModified": "2026-07-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guías",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SWITCH",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias.html#switch"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Respaldar y Restaurar NAND (Backup Completo)",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html#howto",
+  "name": "Respaldar y Restaurar NAND (Backup Completo)",
+  "description": "Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo.",
+  "image": "https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg",
+  "totalTime": "PT15M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": "0"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "La Presa"
+  },
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Consola Nintendo Switch con acceso a Hekate."
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Tarjeta MicroSD con suficiente espacio libre (al menos 30 GB recomendados para un respaldo completo)."
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Hekate Bootloader"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "PASO 1: Crear el Respaldo (Backup) de la NAND",
+      "text": "Inicia tu consola en HEKATE , dirígete a la pestaña de Tools en la parte superior y entra en Backup eMMC . Ejecuta consecutivamente las opciones eMMC BOOT0 & BOOT1 y eMMC RAW GPP (este proceso tomará unos minutos). Al finalizar, extrae la MicroSD y pon a salvo la carpeta BACKUP en tu ordenador.",
+      "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html#txt_h2_step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "PASO 2: Restaurar el Respaldo de la NAND",
+      "text": "Introduce la carpeta BACKUP guardada en la raíz de la SD. Ejecuta HEKATE , dirígete a Tools , selecciona Restore eMMC y lanza de manera consecutiva eMMC BOOT0 & BOOT1 y eMMC RAW GPP .",
+      "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/SW%20-%205%20Nand.html#txt_h2_step2"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Respaldar y Restaurar NAND (Backup Completo) - Tutorial",
+  "description": "Aprende a realizar un respaldo (backup) completo de la NAND de tu Nintendo Switch usando Hekate y cómo restaurarlo de forma segura ante cualquier fallo.",
+  "thumbnailUrl": "https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg",
+  "uploadDate": "2026-07-06",
+  "embedUrl": "https://www.youtube.com/embed/SWoQINf9zSs",
+  "publisher": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
+  }
+}
+</script>
 </head>
 <body>
-
 <div id="accessWallOverlay" style="display: none;">
-  <div class="disney-access-card">
-      <h1 class="disney-logo-title">LA PRESA</h1>
-      <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
-      <div class="disney-progress-bar"><div id="disney-progress" class="disney-progress-fill"></div></div>
-      <button id="disney-btn1" class="disney-step-btn"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
-      <button id="disney-btn2" class="disney-step-btn"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
-      <div id="disneyProductsContainer"></div>
-  </div>
+<div class="disney-access-card">
+<h1 class="disney-logo-title">LA PRESA</h1>
+<p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
+<div class="disney-progress-bar"><div class="disney-progress-fill" id="disney-progress"></div></div>
+<button class="disney-step-btn" id="disney-btn1"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+<button class="disney-step-btn" id="disney-btn2"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
+<div id="disneyProductsContainer"></div>
 </div>
-
+</div>
 <div id="mainHub">
-  <div class="topbar">
-    <div class="topbar-left">
-      <div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
-      <div class="social-group">
-        <button id="discordBtn" class="social-icon-btn" title="Discord" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
-        </button>
-        <button id="kofiBtn" class="social-icon-btn" title="Ko-fi" onclick="window.open('https://ko-fi.com/lapresa', '_blank')">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="right-tools">
-    <button id="guideBtn" class="social-icon-btn" title="Guías" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg>
-    </button>
-
-    <button id="productsBtn" class="social-icon-btn" title="Productos" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-    </button>
-
-    <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
-    <button id="radarBtn" class="social-icon-btn" title="Radar de Actualizaciones" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"/>
-        <path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"/>
-        <path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"/>
-        <path d="m16 8 3-3"/>
-        <path d="M9 21a6 6 0 0 0-6-6"/>
-        <path d="M5 21a2 2 0 0 0-2-2"/>
-      </svg>
-      <span id="radarBadge" class="radar-badge"></span>
-    </button>
-
-      <a href="../guias.html" class="back-btn">
-        <span id="txt_backBtnText">← Volver a las Guías</span>
-      </a>
-      <div class="config-group">
-        <div class="theme-dots-container" id="themeDots"></div>
-        <select id="languageSelector"></select>
-      </div>
-    </div>
-  </div>
-
-  <div class="main-layout">
-    
-    <aside class="sidebar" id="guideSidebar">
-      <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
-    </aside>
-
-    <main class="guide-container">
-      <div class="guide-header">
-        <span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-          <img src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png" alt="SWITCH" style="width: 16px; height: 16px; object-fit: contain;">
-        
-        <span class="guide-tag" id="txt_tag">SWITCH</span>
-        <h1 id="txt_title">Respaldar y Restaurar NAND (Backup Completo)</h1>
-      </div>
-
-      <div class="guide-content">
-        
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/SWoQINf9zSs" 
-            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}</style><a href=https://www.youtube.com/embed/SWoQINf9zSs?autoplay=1><img src=https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg alt='Video'><span>▶</span></a>"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="alert-box" id="txt_alert1">
-          <strong>⚠️ Importante:</strong> El respaldo de la NAND es vital. Guárdalo en un lugar seguro (como tu PC o nube). Nunca compartas tu copia de la NAND con nadie, ya que contiene datos únicos de tu consola.
-        </div>
-
-        <h2 id="txt_h2_req">Requisitos</h2>
-        <ul>
-          <li id="txt_req1">Consola Nintendo Switch con acceso a Hekate.</li>
-          <li id="txt_req2">Tarjeta MicroSD con suficiente espacio libre (al menos 30 GB recomendados para un respaldo completo).</li>
-          <li><span id="txt_req3">Hekate Bootloader</span> <br><a href="https://mega.nz/folder/WBojACrL#4M8vQD5ShPQflh3ZG5iDog" target="_blank" class="dl-btn" id="txt_reqBtn">Descargar Hekate</a></li>
-        </ul>
-        <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros productos</em></p>
-
-        <h2 id="txt_h2_step1">PASO 1: Crear el Respaldo (Backup) de la NAND</h2>
-        <ol>
-          <li id="txt_s1_1">Inicia tu consola en <strong>HEKATE</strong>, dirígete a la pestaña de <strong>Tools</strong> en la parte superior y entra en <strong>Backup eMMC</strong>.</li>
-          <li id="txt_s1_2">Ejecuta consecutivamente las opciones <strong>eMMC BOOT0 & BOOT1</strong> y <strong>eMMC RAW GPP</strong> (este proceso tomará unos minutos). Al finalizar, extrae la MicroSD y pon a salvo la carpeta <strong>BACKUP</strong> en tu ordenador.</li>
-        </ol>
-
-        <h2 id="txt_h2_step2">PASO 2: Restaurar el Respaldo de la NAND</h2>
-        <ol>
-          <li id="txt_s2_1">Introduce la carpeta <strong>BACKUP</strong> guardada en la raíz de la SD. Ejecuta <strong>HEKATE</strong>, dirígete a <strong>Tools</strong>, selecciona <strong>Restore eMMC</strong> y lanza de manera consecutiva <strong>eMMC BOOT0 & BOOT1</strong> y <strong>eMMC RAW GPP</strong>.</li>
-        </ol>
-
-        <div class="alert-box" style="border-left-color: var(--green); margin-top: 30px;" id="txt_alert2">
-          <strong>✅ ¡Enhorabuena!</strong> Ahora sabes cómo proteger tu consola ante cualquier brickeo o fallo de software manteniendo tu NAND a salvo.
-        </div>
-
-        <p id="txt_footer">Recuerda revisar nuestras otras guías para exprimir al máximo tu consola de forma segura.</p>
-
-      </div>
-    </main>
-  </div>
+<div class="topbar">
+<div class="topbar-left">
+<div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
+<div class="social-group">
+<button class="social-icon-btn" id="discordBtn" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')" title="Discord">
+<svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
+</button>
+<button class="social-icon-btn" id="kofiBtn" onclick="window.open('https://ko-fi.com/lapresa', '_blank')" title="Ko-fi">
+<svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"></path></svg>
+</button>
 </div>
-
+</div>
+<div class="right-tools">
+<button class="social-icon-btn" id="guideBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')" title="Guías">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"></path></svg>
+</button>
+<button class="social-icon-btn" id="productsBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')" title="Productos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+</button>
+<!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+<button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
+<path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"></path>
+<path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"></path>
+<path d="m16 8 3-3"></path>
+<path d="M9 21a6 6 0 0 0-6-6"></path>
+<path d="M5 21a2 2 0 0 0-2-2"></path>
+</svg>
+<span class="radar-badge" id="radarBadge"></span>
+</button>
+<a class="back-btn" href="../guias.html">
+<span id="txt_backBtnText">← Volver a las Guías</span>
+</a>
+<div class="config-group">
+<div class="theme-dots-container" id="themeDots"></div>
+<select id="languageSelector"></select>
+</div>
+</div>
+</div>
+<div class="main-layout">
+<aside class="sidebar" id="guideSidebar">
+<div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
+</aside>
+<main class="guide-container">
+<div class="guide-header">
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
+<img alt="SWITCH" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png" style="width: 16px; height: 16px; object-fit: contain;"/>
+<span class="guide-tag" id="txt_tag">SWITCH</span>
+<h1 id="txt_title">Respaldar y Restaurar NAND (Backup Completo)</h1>
+</span></div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/SWoQINf9zSs" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/SWoQINf9zSs?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/SWoQINf9zSs/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> El respaldo de la NAND es vital. Guárdalo en un lugar seguro (como tu PC o nube). Nunca compartas tu copia de la NAND con nadie, ya que contiene datos únicos de tu consola.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Consola Nintendo Switch con acceso a Hekate.</li>
+<li id="txt_req2">Tarjeta MicroSD con suficiente espacio libre (al menos 30 GB recomendados para un respaldo completo).</li>
+<li><span id="txt_req3">Hekate Bootloader</span> <br/><a class="dl-btn" href="https://mega.nz/folder/WBojACrL#4M8vQD5ShPQflh3ZG5iDog" id="txt_reqBtn" target="_blank">Descargar Hekate</a></li>
+</ul>
+<p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros productos</em></p>
+<h2 id="txt_h2_step1">PASO 1: Crear el Respaldo (Backup) de la NAND</h2>
+<ol>
+<li id="txt_s1_1">Inicia tu consola en <strong>HEKATE</strong>, dirígete a la pestaña de <strong>Tools</strong> en la parte superior y entra en <strong>Backup eMMC</strong>.</li>
+<li id="txt_s1_2">Ejecuta consecutivamente las opciones <strong>eMMC BOOT0 &amp; BOOT1</strong> y <strong>eMMC RAW GPP</strong> (este proceso tomará unos minutos). Al finalizar, extrae la MicroSD y pon a salvo la carpeta <strong>BACKUP</strong> en tu ordenador.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Restaurar el Respaldo de la NAND</h2>
+<ol>
+<li id="txt_s2_1">Introduce la carpeta <strong>BACKUP</strong> guardada en la raíz de la SD. Ejecuta <strong>HEKATE</strong>, dirígete a <strong>Tools</strong>, selecciona <strong>Restore eMMC</strong> y lanza de manera consecutiva <strong>eMMC BOOT0 &amp; BOOT1</strong> y <strong>eMMC RAW GPP</strong>.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Ahora sabes cómo proteger tu consola ante cualquier brickeo o fallo de software manteniendo tu NAND a salvo.
+        </div>
+<p id="txt_footer">Recuerda revisar nuestras otras guías para exprimir al máximo tu consola de forma segura.</p>
+</div>
+</main>
+</div>
+</div>
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
-
 <script>
   /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
   const translations = {
