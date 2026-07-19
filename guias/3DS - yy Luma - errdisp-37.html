@@ -383,15 +383,16 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-<img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/>
-<span class="guide-tag" id="txt_tag">3DS</span>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
 <h1 id="txt_title">Error Luma ERRDISP 37</h1>
 </span></div>
-<div class="guide-content">
+<div class="guide-content"><div class="alert-box">
+        <div id="txt_error_img" style="margin-bottom: 15px;"></div>
+        
 <img alt="Luma Error ERRDISP 37" class="error-img" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/errdisp-37.png" style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'/>
 
-<h2 id="txt_h2_motivos">Motivos</h2>
+
+    </div><h2 id="txt_h2_motivos">Motivos</h2>
 <p id="txt_motivo_desc">Aparece al configurar el perfil. Existen daños internos en la app de Configuración.</p>
 <h2 id="txt_h2_soluciones">Soluciones</h2>
 <ul>
@@ -406,6 +407,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <script>
   const translations = {
     es: {
+      txt_error_img: "<strong>⚠️ Imagen de referencia del error:</strong>",
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
       txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
@@ -419,6 +421,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "Si el error no permite iniciar la consola y esta es modelo 3Ds [no 2Ds] se podría aplicar <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> para saltar la preconfiguración."
     },
     en: {
+      txt_error_img: "<strong>⚠️ Error reference image:</strong>",
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
       txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
@@ -432,6 +435,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "If the error prevents the console from booting and it is a 3DS model (not 2DS), you could apply <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> to skip pre-configuration."
     },
     fr: {
+      txt_error_img: "<strong>⚠️ Image de référence de l'erreur :</strong>",
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
       txt_awSubtitle: "Suivez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours",
       txt_radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
@@ -445,6 +449,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "Si l'erreur empêche la console de démarrer et qu'il s'agit d'un modèle 3DS (pas 2DS), vous pouvez appliquer <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> pour ignorer la préconfiguration."
     },
     de: {
+      txt_error_img: "<strong>⚠️ Referenzbild des Fehlers:</strong>",
       txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
       txt_awSubtitle: "Schließen Sie die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
       txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi",
@@ -458,6 +463,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "Wenn der Fehler das Starten der Konsole verhindert und es sich um ein 3DS-Modell (nicht 2DS) handelt, können Sie <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> anwenden, um die Vorkonfiguration zu überspringen."
     },
     it: {
+      txt_error_img: "<strong>⚠️ Immagine di riferimento dell'errore:</strong>",
       txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
       txt_awSubtitle: "Completa i passaggi per sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
       txt_radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
@@ -471,6 +477,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "Se l'errore impedisce l'avvio della console e si tratta di un modello 3DS (non 2DS), puoi applicare <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> per saltare la preconfigurazione."
     },
     pt: {
+      txt_error_img: "<strong>⚠️ Imagem de referência do erro:</strong>",
       txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
       txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio",
       txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie-nos no Ko-fi",
@@ -484,6 +491,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "Se o erro impedir que o console inicie e for um modelo 3DS (não 2DS), você pode aplicar <a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> para pular a pré-configuração."
     },
     ja: {
+      txt_error_img: "<strong>⚠️ エラーの参考画像:</strong>",
       txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
       txt_awSubtitle: "コンテンツのロックを解除する手順を完了してください。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. プレゼントに応募する",
       txt_radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
@@ -497,6 +505,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_sol2_desc: "エラーにより本体が起動せず、3DSモデル（2DSではない）の場合は、<a href='https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS%20-%20Los3d.html' class='mini-btn'>los3d</a> を適用して事前設定をスキップできます。"
     },
     ko: {
+      txt_error_img: "<strong>⚠️ 오류 참조 이미지:</strong>",
       txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "기타 가이드",
       txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 경품 행사에 참여하세요",
       txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi에서 후원하기",

@@ -401,15 +401,16 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-<img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/>
-<span class="guide-tag" id="txt_tag">3DS</span>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
 <h1 id="txt_title">ERROR FBI: ERROR AM (32)</h1>
 </span></div>
-<div class="guide-content">
+<div class="guide-content"><div class="alert-box">
+        <div id="txt_error_img" style="margin-bottom: 15px;"></div>
+        
 <img alt="Error AM 32" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/error-am32.png" style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'/>
 
-<div class="alert-box" id="txt_alert1">
+
+    </div><div class="alert-box" id="txt_alert1">
 <strong>⚠️ Importante:</strong> Este error impide la instalación del archivo debido a problemas de ruta, versión del FBI o compatibilidad de región.
         </div>
 <h2 id="txt_h2_req">¿Por qué ocurre este error?</h2>
@@ -443,6 +444,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <script>
   const translations = {
     es: {
+      txt_error_img: "<strong>⚠️ Imagen de referencia del error:</strong>",
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
       txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
@@ -469,6 +471,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Recuerda descargar siempre tus juegos desde fuentes confiables para evitar archivos corruptos."
     },
     en: {
+      txt_error_img: "<strong>⚠️ Error reference image:</strong>",
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
       txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",

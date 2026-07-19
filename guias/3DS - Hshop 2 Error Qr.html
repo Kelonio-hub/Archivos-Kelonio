@@ -381,14 +381,15 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-<img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/>
-<span class="guide-tag" id="txt_tag">3DS</span>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
 <h1 id="txt_title">Error QR [Generado por App Hshop]</h1>
 </span></div>
 <div class="guide-content">
-<div style="text-align: center; margin-bottom: 30px;">
-<img alt="Error QR Hshop 3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/errror%20qr.jpg" style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'>",
+<div style="text-align: center; margin-bottom: 30px;"><div class="alert-box">
+        <div id="txt_error_img" style="margin-bottom: 15px;"></div>
+        
+<img alt="Error QR Hshop 3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/errror%20qr.jpg" style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'>
+    </div>",
       
 </div>
 <div class="alert-box" id="txt_alert1">
@@ -423,6 +424,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <script>
   const translations = {
     es: {
+      txt_error_img: "<strong>⚠️ Imagen de referencia del error:</strong>",
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
       txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
@@ -441,6 +443,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>El Godmode9 no se ejecuta normalmente porque es incapaz de reconocer las rutas internas de la consola debido al fallo.</li><li>Si escaneas el QR, te llevará a un contacto con el creador del Godmode9, quien afirma que este error es un aviso de que algo va mal a nivel interno, no un error provocado por GM9.</li><li>El creador de Hshop se desliga de responsabilidades y asocia este error a un mal funcionamiento de Luma, Boot9, GM9 o a la 'calidad de la SD'.</li><li>La excusa de la 'mala calidad de la SD' oculta el verdadero problema. Nintendo nunca especificó un modelo de SD que pudiera dañar así la consola.</li><li>El proceso de descarga en Hshop es mucho más elevado y pesado que en FBI, Freeshop o la E-shop, lo cual atestigua por qué no existía este error QR antes de 2020.</li>"
     },
     en: {
+      txt_error_img: "<strong>⚠️ Error reference image:</strong>",
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
       txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
@@ -459,6 +462,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>Godmode9 fails to launch because it cannot recognize the console's internal routes.</li><li>Scanning the QR directs to the GM9 creator, who states the error is just a hardware warning, not a GM9 bug.</li><li>The Hshop creator blames Luma, GM9, or the user's 'SD card quality'.</li><li>Blaming the 'SD card quality' is often an excuse to avoid responsibility for RAM damage. Nintendo never claimed specific SDs could brick consoles like this.</li><li>The Hshop download process is more intensive than FBI or the eShop, explaining why this error wasn't seen before 2020.</li>"
     },
     fr: {
+      txt_error_img: "<strong>⚠️ Image de référence de l'erreur :</strong>",
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
       txt_awSubtitle: "Complétez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au tirage",
       txt_radar: "Radar des Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
@@ -477,6 +481,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>Godmode9 ne se lance pas car il ne reconnaît plus les routes internes.</li><li>Le QR code renvoie au créateur de GM9, qui précise qu'il s'agit d'une alerte matérielle et non d'un bug.</li><li>Le créateur d'Hshop blâme Luma, GM9 ou la 'qualité de la carte SD'.</li><li>La 'mauvaise qualité de la SD' est une excuse pour ignorer les dégâts matériels.</li><li>Le téléchargement Hshop est plus lourd que FBI ou l'eShop, expliquant l'absence de cette erreur avant 2020.</li>"
     },
     de: {
+      txt_error_img: "<strong>⚠️ Referenzbild des Fehlers:</strong>",
       txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
       txt_awSubtitle: "Führe die Schritte aus, um Inhalte freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
       txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Tritt Discord bei", txt_kofi: "Unterstütze uns auf Ko-fi",
@@ -495,6 +500,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>Godmode9 startet nicht, da es interne Pfade nicht erkennt.</li><li>Der QR-Code leitet zum GM9-Entwickler, der bestätigt, dass es sich um eine Hardware-Warnung handelt.</li><li>Der Hshop-Erfinder gibt Luma, GM9 oder der 'SD-Karten-Qualität' die Schuld.</li><li>Die Ausrede der SD-Karten-Qualität vertuscht Hardware-Schäden.</li><li>Hshop lädt intensiver herunter als FBI oder der eShop, weshalb der Fehler vor 2020 unbekannt war.</li>"
     },
     it: {
+      txt_error_img: "<strong>⚠️ Immagine di riferimento dell'errore:</strong>",
       txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
       txt_awSubtitle: "Completa i passaggi per sbloccare i contenuti.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
       txt_radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
@@ -513,6 +519,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>Godmode9 non si avvia perché non riconosce i percorsi interni.</li><li>La scansione del QR porta al creatore di GM9, che conferma essere un avviso hardware, non un bug.</li><li>Il creatore di Hshop incolpa Luma, GM9 o la 'qualità della scheda SD'.</li><li>La scusa della SD nasconde il vero problema della RAM.</li><li>Il download di Hshop è più pesante di FBI/eShop; ecco perché l'errore non esisteva prima del 2020.</li>"
     },
     pt: {
+      txt_error_img: "<strong>⚠️ Imagem de referência do erro:</strong>",
       txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
       txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscreva-se no canal", txt_awGiftBtn: "2. Participe do sorteio",
       txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entre no Discord", txt_kofi: "Apoie-nos no Ko-fi",
@@ -531,6 +538,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>Godmode9 falha pois não reconhece as rotas internas do console.</li><li>Escanear o QR leva ao criador do GM9, que afirma ser um aviso de falha de hardware, não do seu software.</li><li>O criador do Hshop culpa Luma, GM9 ou a 'qualidade do cartão SD'.</li><li>Culpar o cartão SD é uma desculpa para não assumir os danos na RAM.</li><li>O download no Hshop é muito mais pesado que no FBI ou eShop, explicando por que o erro não existia antes de 2020.</li>"
     },
     ja: {
+      txt_error_img: "<strong>⚠️ エラーの参考画像:</strong>",
       txt_backBtnText: "← ガイドへ戻る", txt_otherGuides: "他のガイド",
       txt_awSubtitle: "コンテンツのロックを解除する手順を完了してください。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. 抽選に参加",
       txt_radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
@@ -549,6 +557,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_peculiar_content: "<li>内部パスを認識できないため、Godmode9は起動しません。</li><li>QRをスキャンするとGM9作成者に繋がり、GM9のバグではなく本体のハードウェア警告であると明言されます。</li><li>Hshopの作成者は、Luma、GM9、または「SDカードの品質」を非難します。</li><li>SDの品質を非難するのはRAMの損傷を隠すための口実です。</li><li>HshopのダウンロードはFBIやeShopよりも激しいため、2020年より前にはこのエラーは存在しませんでした。</li>"
     },
     ko: {
+      txt_error_img: "<strong>⚠️ 오류 참조 이미지:</strong>",
       txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "기타 가이드",
       txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 경품 행사 참여",
       txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 가입", txt_kofi: "Ko-fi에서 후원",

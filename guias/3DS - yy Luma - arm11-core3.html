@@ -393,16 +393,17 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-<img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/>
-<span class="guide-tag" id="txt_tag">3DS</span>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
 <h1 id="txt_title">Error Luma ARM11 - Core 3</h1>
 </span></div>
 <div class="guide-content">
-<div class="error-img-container">
+<div class="error-img-container"><div class="alert-box">
+        <div id="txt_error_img" style="margin-bottom: 15px;"></div>
+        
 <img alt="Error ARM11 Core 3" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/arm11-core3.png"style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'/>
 
-</div>
+
+    </div></div>
 <div class="alert-box" id="txt_alert1">
 <strong>⚠️ Importante:</strong> Su índice de aparición está camuflado con el de Core 1, pero existe. Su aparición influye al núcleo ARM11 de la consola pudiendo corromper la ruta TWLP.
         </div>
@@ -432,6 +433,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
   const translations = {
     es: {
+      txt_error_img: "<strong>⚠️ Imagen de referencia del error:</strong>",
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
       txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
@@ -453,6 +455,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Ante cualquier duda persistente, recuerda acudir a canales autorizados o consultar con la comunidad."
     },
     en: {
+      txt_error_img: "<strong>⚠️ Error reference image:</strong>",
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
       txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
@@ -474,6 +477,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "If you have any remaining doubts, remember to visit official channels or consult the community."
     },
     fr: {
+      txt_error_img: "<strong>⚠️ Image de référence de l'erreur :</strong>",
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
       txt_awSubtitle: "Complétez les étapes pour déverrouiller le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au tirage au sort",
       txt_radar: "Radar des Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
@@ -495,6 +499,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "En cas de doute persistant, pensez à vous rendre sur les canaux officiels ou à consulter la communauté."
     },
     de: {
+      txt_error_img: "<strong>⚠️ Referenzbild des Fehlers:</strong>",
       txt_backBtnText: "← Zurück zu den Leitfäden", txt_otherGuides: "Andere Leitfäden",
       txt_awSubtitle: "Schließen Sie die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
       txt_radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Leitfäden", txt_discord: "Discord beitreten", txt_kofi: "Unterstützen Sie uns auf Ko-fi",
@@ -516,6 +521,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Wenn Sie anhaltende Zweifel haben, denken Sie daran, offizielle Kanäle zu besuchen oder die Community zu konsultieren."
     },
     it: {
+      txt_error_img: "<strong>⚠️ Immagine di riferimento dell'errore:</strong>",
       txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
       txt_awSubtitle: "Completa i passaggi para sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
       txt_radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Entra in Discord", txt_kofi: "Supportaci su Ko-fi",
@@ -537,6 +543,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "In caso di dubbi persistenti, ricordati di visitare i canali ufficiali o di consultare la community."
     },
     pt: {
+      txt_error_img: "<strong>⚠️ Imagem de referência do erro:</strong>",
       txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
       txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar no sorteio",
       txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entre no Discord", txt_kofi: "Apoie-nos no Ko-fi",
@@ -558,6 +565,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Se persistirem dúvidas, lembre-se de visitar os canais oficiais ou consultar a comunidade."
     },
     ja: {
+      txt_error_img: "<strong>⚠️ エラーの参考画像:</strong>",
       txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
       txt_awSubtitle: "コンテンツをアンロックするための手順を完了してください。", txt_awYtBtn: "1. チャンネル登録する", txt_awGiftBtn: "2. 抽選に参加する",
       txt_radar: "アップデートレーダー", txt_products: "製品情報", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiで支援",
@@ -579,6 +587,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "不審な点が残る場合は、公式チャンネルにアクセスするか、コミュニティに相談してください。"
     },
     ko: {
+      txt_error_img: "<strong>⚠️ 오류 참조 이미지:</strong>",
       txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "기타 가이드",
       txt_awSubtitle: "콘텐츠를 잠금 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독하기", txt_awGiftBtn: "2. 추첨 참여하기",
       txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 가입", txt_kofi: "Ko-fi에서 후원",

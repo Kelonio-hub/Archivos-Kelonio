@@ -391,16 +391,17 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
-<img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/>
-<span class="guide-tag" id="txt_tag">3DS</span>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
 <h1 id="txt_title">Error Luma Emunand Detected</h1>
 </span></div>
 <div class="guide-content">
-<div class="image-container">
+<div class="image-container"><div class="alert-box">
+        <div id="txt_error_img" style="margin-bottom: 15px;"></div>
+        
 <img alt="Error Luma Emunand Detected Diagram/Interface" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/imgerrores/emunand-detected.png" style='max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);'/>
 
-</div>
+
+    </div></div>
 <div class="alert-box" id="txt_alert1">
 <strong>⚠️ Info:</strong> Explicación detallada de por qué ocurre este error crítico en tu consola custom firmware.
         </div>
@@ -428,6 +429,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
   const translations = {
     es: {
+      txt_error_img: "<strong>⚠️ Imagen de referencia del error:</strong>",
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
       txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
@@ -448,6 +450,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Asegúrate de realizar copias de seguridad de tus archivos importantes antes de eliminar particiones en la consola."
     },
     en: {
+      txt_error_img: "<strong>⚠️ Error reference image:</strong>",
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
       txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
@@ -468,6 +471,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Make sure to back up your critical files before formatting or deleting partitions on the console."
     },
     fr: {
+      txt_error_img: "<strong>⚠️ Image de référence de l'erreur :</strong>",
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
       txt_awSubtitle: "Complétez les étapes pour déverrouiller le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au tirage au sort",
       txt_radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
@@ -488,6 +492,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Pensez à sauvegarder vos fichiers importants avant de supprimer des partitions sur votre console."
     },
     de: {
+      txt_error_img: "<strong>⚠️ Referenzbild des Fehlers:</strong>",
       txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Weitere Anleitungen",
       txt_awSubtitle: "Schließen Sie die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
       txt_radar: "Updates-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstützen Sie uns auf Ko-fi",
@@ -508,6 +513,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Stellen Sie sicher, dass Sie Backups Ihrer wichtigen Dateien erstellen, bevor Sie Partitionen auf der Konsole löschen."
     },
     it: {
+      txt_error_img: "<strong>⚠️ Immagine di riferimento dell'errore:</strong>",
       txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
       txt_awSubtitle: "Completa i passaggi per sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
       txt_radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
@@ -528,6 +534,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Assicurati di fare un backup dei tuoi file importanti prima di eliminare le partizioni sulla console."
     },
     pt: {
+      txt_error_img: "<strong>⚠️ Imagem de referência do erro:</strong>",
       txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
       txt_awSubtitle: "Complete os passos para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio",
       txt_radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie-nos no Ko-fi",
@@ -548,6 +555,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "Certifique-se de fazer cópias de segurança dos seus arquivos importantes antes de excluir partições no console."
     },
     ja: {
+      txt_error_img: "<strong>⚠️ エラーの参考画像:</strong>",
       txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
       txt_awSubtitle: "コンテンツをアンロックするための手順を完了してください。", txt_awYtBtn: "1. チャンネル登録する", txt_awGiftBtn: "2. 抽選に参加する",
       txt_radar: "更新レーダー", txt_products: "商品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiで応援する",
@@ -568,6 +576,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       txt_footer: "本体のパーティションを削除する前に、必ず重要なファイルのバックアップを作成してください。"
     },
     ko: {
+      txt_error_img: "<strong>⚠️ 오류 참조 이미지:</strong>",
       txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "기타 가이드",
       txt_awSubtitle: "콘텐츠를 잠금 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독하기", txt_awGiftBtn: "2. 이벤트 참여하기",
       txt_radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여하기", txt_kofi: "Ko-fi에서 후원하기",
