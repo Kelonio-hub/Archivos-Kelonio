@@ -163,10 +163,14 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
 @media(max-width: 950px) {
   .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center;}
-  .right-tools { margin-top: 10px; }
+  .right-tools { margin-top: 10px; flex-wrap: wrap; justify-content: center;}
   .main-layout { flex-direction: column; margin-top: 100px; padding: 10px; }
   .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
   .guide-container { width: 100%; order: 1; padding: 25px; }
+}
+@media(max-width: 650px) {
+  .right-tools { width: 100%; gap: 10px; justify-content: center; }
+  .config-group { flex-direction: row; gap: 15px; }
 }
 
 </style>
