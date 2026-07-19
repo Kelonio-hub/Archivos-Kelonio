@@ -251,6 +251,37 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   }
 }
 </script>
+<script>
+  /* ================= PRE-CARGA DE TEMA PARA EVITAR FLASH ================= */
+  (function() {
+    // 1. Aplicar Modo Oscuro/Claro
+    const savedMode = localStorage.getItem('selectedMode');
+    if (savedMode === 'dark' || savedMode === 'light') {
+      document.documentElement.setAttribute('data-theme', savedMode);
+    }
+
+    // 2. Aplicar Color de Acento
+    const savedTheme = localStorage.getItem('selectedThemeColor');
+    if (savedTheme) {
+      const paleta = {
+        rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
+        naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
+        amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+        verde:    { hex: '#2ecc71', rgb: '46, 204, 113' },
+        azul:     { hex: '#00aaff', rgb: '0, 170, 255' },
+        violeta:  { hex: '#9b59b6', rgb: '155, 89, 182' },
+        rosa:     { hex: '#ff80ab', rgb: '255, 128, 171' }
+      };
+      
+      const theme = paleta[savedTheme];
+      if (theme) {
+        document.documentElement.style.setProperty('--red', theme.hex);
+        document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+      }
+    }
+  })();
+</script>
+
 </head>
 <body>
 <div class="topbar">
