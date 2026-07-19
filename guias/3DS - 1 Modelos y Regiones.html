@@ -313,23 +313,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   ]
 }
 </script>
-
-<style>
-/* --- PARCHE RESPONSIVO MAESTRO --- */
-@media(max-width: 950px) {
-  .topbar { flex-wrap: wrap !important; padding: 15px 4% !important; justify-content: center !important; height: auto !important; min-height: auto !important; }
-  .topbar-left { width: 100% !important; justify-content: center !important; margin-bottom: 12px !important; flex-wrap: wrap !important; }
-  .right-tools { width: 100% !important; justify-content: center !important; flex-wrap: wrap !important; gap: 10px !important; }
-  .main-layout { margin-top: 140px !important; }
-}
-@media(max-width: 650px) {
-  .right-tools { flex-direction: column !important; align-items: center !important; }
-  .config-group { flex-direction: row !important; gap: 15px !important; margin-top: 5px !important; justify-content: center !important; width: 100% !important; }
-  /* Si el archivo tiene buscador, lo obligamos a tomar buen tamaño y ponerse arriba */
-  #fileSearch { width: 100% !important; max-width: 350px !important; order: -1 !important; margin-bottom: 5px !important; }
-  .main-layout { margin-top: 240px !important; }
-}
-</style>
 </head>
 <body>
 <div id="accessWallOverlay" style="display: none;">
@@ -402,17 +385,17 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <ul>
 <li id="txt_req1">Existen diferentes modelos de la familia 3DS. Revisa la siguiente imagen para identificar el tuyo:</li>
 </ul>
-<img alt="Modelos" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Regiones.webp"/>
+<img alt="Modelos" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Regiones.png" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);"/>
 <h2 id="txt_h2_step1">PASO 1: Regiones de Consolas</h2>
 <ol>
 <li id="txt_s1_1">Puedes comprobar la región actual de tu consola accediendo a la configuración del sistema. La última letra de la versión indica la región.</li>
 </ol>
-<img alt="Regiones" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Versiones.webp"/>
+<img alt="Regiones" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Versiones.png" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);"/>
 <h2 id="txt_h2_step2">PASO 2: Comprobación Trasera</h2>
 <ol>
 <li id="txt_s2_1">Para verificar la región original de fábrica, revisa la etiqueta en la parte trasera de tu consola.</li>
 </ol>
-<img alt="Trasera" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Regi%C3%B3n%20trasera.webp"/>
+<img alt="Trasera" class="guide-img-align" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Regi%C3%B3n%20trasera.png" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);"/>
 <div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
 <strong>✅ ¡Enhorabuena!</strong> Ahora sabes cómo identificar correctamente el modelo y la región de tu consola.
         </div>
