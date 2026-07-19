@@ -221,64 +221,82 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 @media(max-width: 650px) {
-  /* --- REESTRUCTURACIÓN DE CABECERA EXCLUSIVA MÓVIL --- */
+  /* --- REESTRUCTURACIÓN DE CABECERA TOTAL POR COORDENADAS MÓVILES --- */
   .topbar {
     display: grid !important;
-    grid-template-columns: auto 1fr !important;
-    row-gap: 18px !important;
-    column-gap: 12px !important;
-    padding: 15px 16px !important;
+    grid-template-columns: auto auto auto auto !important; /* Columnas: Logo | GrupoSocial | Carrito | Radar */
+    justify-content: center !important;
     align-items: center !important;
+    row-gap: 20px !important;
+    column-gap: 10px !important;
+    padding: 15px 12px !important;
   }
   
-  /* LA PRESA a la izquierda */
-  .topbar-left {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    width: auto !important;
-    justify-content: flex-start !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  /* Disuelve el contenedor intermedio para liberar los botones */
-  .right-tools {
+  /* Desarmamos los contenedores fantasmas para liberar las piezas en la rejilla */
+  .topbar-left, .right-tools {
     display: contents !important;
   }
   
-  /* Todos los 5 botones alineados a la derecha del logo en una sola fila */
-  .social-group {
-    grid-column: 2 !important;
+  /* FILA 1 - POSICIÓN 1: Logo LA PRESA a la izquierda */
+  .topbar-left > a, .logo {
     grid-row: 1 !important;
+    grid-column: 1 !important;
+    justify-self: start !important;
+    margin: 0 !important;
+  }
+  
+  /* FILA 1 - POSICIÓN 2: Grupo con Discord, Kofi y Guías */
+  .social-group {
+    grid-row: 1 !important;
+    grid-column: 2 !important;
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    gap: 12px !important;
+    gap: 10px !important;
     border: none !important;
     padding: 0 !important;
     margin: 0 !important;
   }
-  .social-icon-btn { display: inline-flex !important; min-width: 44px; min-height: 44px; margin: 0 !important; }
+  
+  /* FILA 1 - POSICIÓN 3: Icono de Producto (Carrito) */
+  .right-tools > a:not(.back-btn):nth-of-type(1) {
+    grid-row: 1 !important;
+    grid-column: 3 !important;
+    margin: 0 !important;
+  }
+  
+  /* FILA 1 - POSICIÓN 4: Icono de Radar */
+  .right-tools > a:not(.back-btn):nth-of-type(2) {
+    grid-row: 1 !important;
+    grid-column: 4 !important;
+    margin: 0 !important;
+  }
 
-  /* Fila 2: Selector de colores e Idiomas juntos abajo */
+  /* Normalización táctil para todos los iconos de la fila 1 */
+  .social-icon-btn, .right-tools > a:not(.back-btn) {
+    display: inline-flex !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* FILA 2: Paleta de Colores y Selector de Idioma Centrados */
   .config-group {
-    grid-column: 1 / span 2 !important;
     grid-row: 2 !important;
+    grid-column: 1 / span 4 !important;
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 20px !important;
+    gap: 22px !important;
     width: 100% !important;
-    margin: 4px 0 0 0 !important;
+    margin: 0 !important;
   }
 
-  /* Fila 3: Botón Volver a las Guías idéntico en tamaño a 'Ver otras guías' */
+  /* FILA 3: Botón Volver a las Guías (Simétrico en tamaño y forma a "Ver otras guías") */
   .back-btn {
-    grid-column: 1 / span 2 !important;
     grid-row: 3 !important;
+    grid-column: 1 / span 4 !important;
     display: flex !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -296,8 +314,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     margin: 0 !important;
   }
 
-  /* --- CORRECCIÓN DE CAJA Y CONTENIDOS --- */
-  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
+  /* --- COMPORTAMIENTO CONTENIDOS Y DIALOGO DE CONTROL --- */
   .guide-content h2 { font-size: 1.4rem; }
   .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
 
@@ -543,10 +560,11 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-  <div class="guide-title-container">
-    <h1 id="txt_title">Quitar Protección contra Escritura con HDDLLF</h1>
-  </div>
-</div>
+<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;">
+<img alt="SD" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png" style="width: 16px; height: 16px; object-fit: contain;"/>
+<span id="txt_tag">SD</span>
+<h1 id="txt_title">Quitar Protección contra Escritura con HDDLLF</h1>
+</span></div>
 <div class="guide-content">
 <div class="video-container">
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/EKVQyQ8PGfc" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/EKVQyQ8PGfc?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/EKVQyQ8PGfc/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
@@ -1151,19 +1169,17 @@ async function cargarProductosDisney() {
             function adaptarLetraTitulo() {
               const el = document.getElementById('txt_title');
               if (!el) return;
-              const contenedor = el.parentElement;
-              if (!contenedor) return;
               
-              // Tamaño inicial base
-              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
+              // Forzar tamaño inicial
+              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.4rem' : '2.5rem');
               
               let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
               let limiteSeguridad = 0;
               
-              // RED DE SEGURIDAD EXTREMA: Evita que el título engañe al ancho de la pantalla móvil
-              const limiteMaximoPantalla = Math.min(contenedor.clientWidth || window.innerWidth, window.innerWidth - 48);
+              // Red de seguridad: Calculamos la anchura real de la pantalla restando los márgenes cómodos
+              const anchoMaximoCaja = window.innerWidth <= 650 ? (window.innerWidth - 40) : (el.parentElement.clientWidth || window.innerWidth - 60);
               
-              while (el.scrollWidth > limiteMaximoPantalla && tamañoActual > 8 && limiteSeguridad < 100) {
+              while (el.scrollWidth > anchoMaximoCaja && tamañoActual > 11 && limiteSeguridad < 100) {
                 tamañoActual -= 0.5;
                 el.style.setProperty('--title-size', tamañoActual + 'px');
                 limiteSeguridad++;
@@ -1191,7 +1207,7 @@ async function cargarProductosDisney() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               });
 
-              // Menú Desplegable 'Ver Otras Guías'
+              // Menú Desplegable 'Otras Guías'
               const sidebar = document.querySelector('.sidebar');
               const mainLayout = document.querySelector('.main-layout');
               if (sidebar && mainLayout) {
@@ -1217,7 +1233,6 @@ async function cargarProductosDisney() {
               document.body.appendChild(marca);
             }
 
-            // Disparadores múltiples para asegurar sincronización de fuentes y viewport
             window.addEventListener('resize', adaptarLetraTitulo);
             document.addEventListener('DOMContentLoaded', inicializarMejorasMoviles);
             window.addEventListener('load', adaptarLetraTitulo);
