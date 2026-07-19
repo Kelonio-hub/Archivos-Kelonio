@@ -162,14 +162,10 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
 @media(max-width: 950px) {
   .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center;}
-  .right-tools { margin-top: 10px; flex-wrap: wrap; justify-content: center;}
+  .right-tools { margin-top: 10px; }
   .main-layout { flex-direction: column; margin-top: 100px; padding: 10px; }
   .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
   .guide-container { width: 100%; order: 1; padding: 25px; }
-}
-@media(max-width: 650px) {
-  .right-tools { width: 100%; gap: 10px; justify-content: center; }
-  .config-group { flex-direction: row; gap: 15px; }
 }
 
 </style>
@@ -311,6 +307,23 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   ]
 }
 </script>
+
+<style>
+/* --- PARCHE RESPONSIVO MAESTRO --- */
+@media(max-width: 950px) {
+  .topbar { flex-wrap: wrap !important; padding: 15px 4% !important; justify-content: center !important; height: auto !important; min-height: auto !important; }
+  .topbar-left { width: 100% !important; justify-content: center !important; margin-bottom: 12px !important; flex-wrap: wrap !important; }
+  .right-tools { width: 100% !important; justify-content: center !important; flex-wrap: wrap !important; gap: 10px !important; }
+  .main-layout { margin-top: 140px !important; }
+}
+@media(max-width: 650px) {
+  .right-tools { flex-direction: column !important; align-items: center !important; }
+  .config-group { flex-direction: row !important; gap: 15px !important; margin-top: 5px !important; justify-content: center !important; width: 100% !important; }
+  /* Si el archivo tiene buscador, lo obligamos a tomar buen tamaño y ponerse arriba */
+  #fileSearch { width: 100% !important; max-width: 350px !important; order: -1 !important; margin-bottom: 5px !important; }
+  .main-layout { margin-top: 240px !important; }
+}
+</style>
 </head>
 <body>
 <div id="accessWallOverlay" style="display: none;">
