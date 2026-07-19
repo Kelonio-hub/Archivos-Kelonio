@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -7,165 +6,129 @@
 <title id="pageTitle">Centro de Guías | La Presa</title>
 <link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
 <style>
-:root{
-  --red:#e50914; 
-  --bg:#141414;
-  --glass:rgba(20,20,20,.78);
-  --glass-border:rgba(255,255,255,.08);
-  --glow-rgb: 229, 9, 20; 
+
+/* ================= VARIABLES Y TEMA AUTOMÁTICO/MANUAL ================= */
+:root, :root[data-theme="dark"] {
+  --red: #00aaff; /* Acento Azul por defecto */
+  --glow-rgb: 0, 170, 255; 
+  
+  /* Tema Oscuro (Por defecto) */
+  --bg: #141414;
+  --text-main: #ffffff;
+  --text-muted: #aaa;
+  --glass: rgba(20,20,20,.78);
+  --glass-border: rgba(255,255,255,.08);
+  --topbar-bg: rgba(0,0,0,.88);
+  --card-bg: rgba(255,255,255,0.02);
+  --input-bg: rgba(255,255,255,.08);
+  --btn-bg: rgba(255,255,255,.05);
+  --icon-color: #ffffff;
+  --loader-border: rgba(255,255,255,0.1);
 }
-*{ margin:0; padding:0; box-sizing:border-box; }
-body{ font-family:'Segoe UI',sans-serif; background:#141414; color:white; overflow-x:hidden; }
+
+/* Tema Claro Forzado Manualmente */
+:root[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text-main: #141414;
+  --text-muted: #555555;
+  --glass: rgba(255,255,255,.9);
+  --glass-border: rgba(0,0,0,.15);
+  --topbar-bg: rgba(255,255,255,.95);
+  --card-bg: #ffffff;
+  --input-bg: rgba(0,0,0,.05);
+  --btn-bg: rgba(0,0,0,.05);
+  --icon-color: #333333;
+  --loader-border: rgba(0,0,0,0.1);
+}
+
+/* Tema Claro Automático (Si el usuario no ha tocado los botones) */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f8f9fa;
+    --text-main: #141414;
+    --text-muted: #555555;
+    --glass: rgba(255,255,255,.9);
+    --glass-border: rgba(0,0,0,.15);
+    --topbar-bg: rgba(255,255,255,.95);
+    --card-bg: #ffffff;
+    --input-bg: rgba(0,0,0,.05);
+    --btn-bg: rgba(0,0,0,.05);
+    --icon-color: #333333;
+    --loader-border: rgba(0,0,0,0.1);
+  }
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text-main); overflow-x:hidden; transition: background 0.3s, color 0.3s; }
 
 /* ================= TOPBAR ================= */
-.topbar{
-  position:fixed; top:0; left:0; right:0; z-index:9999;
-  background:rgba(0,0,0,.88); backdrop-filter:blur(16px);
-  display:flex; justify-content:space-between; align-items:center;
-  padding:8px 3%; gap: 10px; 
-}
-
-/* GRUPO IZQUIERDO: LOGO + REDES */
+.topbar { position:fixed; top:0; left:0; right:0; z-index:9999; background:var(--topbar-bg); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; transition: background 0.3s; }
 .topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
-.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
-.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+.logo { font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; transition: border-color 0.3s; }
 
-/* ICONOS ESTILO PREMIUM */
-.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: var(--icon-color); opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
 .social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
 .radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
 
-/* GRUPO DERECHO: HERRAMIENTAS Y BUSCADOR */
-.right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
-.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
-.theme-dots-container{ display:flex; gap:5px; }
-.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
-.color-dot:hover{ transform:scale(1.3); }
-.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+.right-tools { display:flex; align-items:center; gap:12px; flex-shrink: 0; }
+.config-group { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container { display:flex; gap:5px; align-items: center;}
+.color-dot { width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover { transform:scale(1.3); }
+.color-dot.active-dot { border:2px solid var(--text-main); transform:scale(1.15); box-shadow: 0 0 8px rgba(128,128,128,0.6); }
 
-#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
-#fileSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease; }
-#fileSearch:focus { width: 200px; border: 1px solid var(--red); }
-#fileSearch::placeholder{ color:#ccc; }
+/* Corrección del panel de idiomas */
+#languageSelector { background:var(--input-bg); border:1px solid var(--glass-border); color:var(--text-main); padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; transition: 0.3s; }
+#languageSelector option { background: var(--bg); color: var(--text-main); }
+
+#fileSearch { background:var(--input-bg); border:1px solid transparent; color:var(--text-main); width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease, border-color 0.3s, background 0.3s; }
+#fileSearch:focus { width: 200px; border-color: var(--red); }
+#fileSearch::placeholder { color:var(--text-muted); }
 
 /* ================= CONSOLE BUTTONS ================= */
-.console-buttons { 
-  display: flex; 
-  gap: 10px; 
-  justify-content: center; 
-  flex-wrap: wrap; 
-  margin-top: 30px; 
-  padding: 5px 0;
-}
-.console-btn { 
-  background: rgba(255,255,255,.05); 
-  border: 1px solid rgba(255,255,255,.08); 
-  border-radius: 10px; 
-  padding: 8px 14px; 
-  display: flex; 
-  align-items: center; 
-  gap: 6px; 
-  cursor: pointer; 
-  transition: .3s ease; 
-  color: white; 
-  font-weight: 700; 
-  font-size: 12px; 
-  white-space: nowrap; 
-}
-.console-btn:hover { 
-  transform: scale(1.05); 
-  border-color: var(--red); 
-  background: rgba(var(--glow-rgb),.15); 
-}
-.console-btn.fav-active-btn { 
-  border-color: var(--red); 
-  background: rgba(var(--glow-rgb),.25); 
-  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
-}
-.console-btn span { color: white; letter-spacing: .5px; }
-.console-btn img { width: 18px; height: 18px; object-fit: contain; }
+.console-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 30px; padding: 5px 0; }
+.console-btn { background: var(--btn-bg); border: 1px solid var(--glass-border); border-radius: 10px; padding: 8px 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: .3s ease; color: var(--text-main); font-weight: 700; font-size: 12px; white-space: nowrap; }
+.console-btn:hover { transform: scale(1.05); border-color: var(--red); background: rgba(var(--glow-rgb),.15); }
+.console-btn.fav-active-btn { border-color: var(--red); background: rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
+.console-btn span { color: var(--text-main); letter-spacing: .5px; transition: color 0.3s; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); }
 
 /* ================= HEADER HERO & ANIMACIÓN SATPULSE ================= */
-.header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, #141414 100%); }
+.header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, var(--bg) 100%); transition: background 0.3s; }
 .header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
 .header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0 auto; }
-
-/* ANIMACIÓN SATPULSE APLICADA AL ICONO DE GUÍAS */
-.hero-guide-icon { 
-  width: 3.2rem; 
-  height: 3.2rem; 
-  color: var(--red); 
-  filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); 
-  transition: color 0.3s ease; 
-  animation: satPulse 3.5s infinite ease-in-out; 
-  flex-shrink: 0; 
-}
-@keyframes satPulse {
-  0%, 100% { 
-    transform: scale(1) translateY(0px); 
-    filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); 
-  }
-  50% { 
-    transform: scale(1.12) translateY(-4px); 
-    filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); 
-  }
-}
-
-.header-section p { color: #aaa; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.hero-guide-icon { width: 3.2rem; height: 3.2rem; color: var(--red); filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); transition: color 0.3s ease; animation: satPulse 3.5s infinite ease-in-out; flex-shrink: 0; }
+@keyframes satPulse { 0%, 100% { transform: scale(1) translateY(0px); filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); } 50% { transform: scale(1.12) translateY(-4px); filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); } }
+.header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; transition: color 0.3s; }
 .hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
-/* ================= GRID DE GUÍAS (ALTURAS UNIFORMES Y TRUNCADO) ================= */
+/* ================= GRID DE GUÍAS ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
-.update-card { 
-  background: rgba(255,255,255,0.02); 
-  border: 1px solid var(--glass-border); 
-  border-radius: 16px; 
-  padding: 22px; 
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; 
-  display: flex; 
-  flex-direction: column; 
-  height: 100%; 
-}
-.update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 30px rgba(var(--glow-rgb), 0.45), 0 15px 30px rgba(0,0,0,0.6); }
+.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; }
+.update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 20px rgba(var(--glow-rgb), 0.25), 0 10px 20px rgba(0,0,0,0.15); }
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-.update-tag { background: rgba(255,255,255,0.06); border: 1px solid var(--glass-border); color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
-.update-date { color: #777; font-size: 12px; }
+.update-tag { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
+.update-date { color: var(--text-muted); font-size: 12px; transition: color 0.3s; }
 .update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
-.update-card h3 a { color: white; text-decoration: none; transition: color 0.2s; }
+.update-card h3 a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
 .update-card h3 a:hover { color: var(--red); }
-
-.update-body { 
-  color: #b3b3b3; 
-  font-size: 0.92rem; 
-  line-height: 1.5; 
-  margin-bottom: 25px; 
-  flex-grow: 1; 
-  
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
+.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
 .update-footer { margin-top: auto; }
-.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white !important; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
 .download-link:hover { filter: brightness(1.2); }
 
 /* ================= LOADER ================= */
 .loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; display: none; }
-.spinner { width: 50px; height: 50px; border: 5px solid rgba(255,255,255,0.1); border-top-color: var(--red); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+.spinner { width: 50px; height: 50px; border: 5px solid var(--loader-border); border-top-color: var(--red); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; transition: border-color 0.3s; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ================= BOTÓN SUBIR ARRIBA ================= */
+/* ================= BOTÓN SUBIR ================= */
 #backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
 #backToTopBtn:hover { transform: scale(1.1); }
 
-@media(max-width: 1150px) {
-  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
-  .topbar-left { order: 1; }
-  .right-tools { order: 2; margin-top: 5px;}
-}
+@media(max-width: 1150px) { .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; } .topbar-left { order: 1; } .right-tools { order: 2; margin-top: 5px;} }
+
 </style>
 
 <!-- ==========================================================
@@ -357,20 +320,76 @@ const paletaTemas = {
 };
 
 function initThemeDots() {
-  const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul';
+  const savedMode = localStorage.getItem('selectedMode') || 'dark'; // <- Cambiado a 'dark'
+  
   themeDotsContainer.innerHTML = '';
+  
+  // 1. Botones de colores de acento
   Object.keys(paletaTemas).forEach(colorKey => {
     const dot = document.createElement('div'); 
-    dot.className = 'color-dot'; 
+    dot.className = 'color-dot theme-color-dot'; 
     dot.style.backgroundColor = paletaTemas[colorKey].hex;
     dot.setAttribute('aria-label', `Tema ${colorKey}`);
     if (colorKey === savedTheme) dot.classList.add('active-dot');
     dot.addEventListener('click', () => {
-      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
-      dot.classList.add('active-dot'); localStorage.setItem('selectedThemeColor', colorKey); applyTheme(colorKey);
+      document.querySelectorAll('.theme-color-dot').forEach(d => d.classList.remove('active-dot'));
+      dot.classList.add('active-dot'); 
+      localStorage.setItem('selectedThemeColor', colorKey); 
+      applyTheme(colorKey);
     });
     themeDotsContainer.appendChild(dot);
   });
+
+  // Separador visual
+  const separador = document.createElement('div');
+  separador.style.width = '2px';
+  separador.style.backgroundColor = 'var(--glass-border)';
+  separador.style.margin = '0 6px';
+  separador.style.borderRadius = '2px';
+  themeDotsContainer.appendChild(separador);
+
+  // 2. Botón MODO OSCURO (Negro)
+  const dotOscuro = document.createElement('div');
+  dotOscuro.className = 'color-dot mode-dot';
+  dotOscuro.style.backgroundColor = '#141414';
+  dotOscuro.style.border = '1px solid #555';
+  dotOscuro.setAttribute('title', 'Forzar Modo Oscuro');
+  
+  // 3. Botón MODO CLARO (Blanco)
+  const dotClaro = document.createElement('div');
+  dotClaro.className = 'color-dot mode-dot';
+  dotClaro.style.backgroundColor = '#f8f9fa';
+  dotClaro.style.border = '1px solid #ccc';
+  dotClaro.setAttribute('title', 'Forzar Modo Claro');
+
+  // Restaurar configuración al cargar
+  if (savedMode === 'dark') {
+    dotOscuro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedMode === 'light') {
+    dotClaro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  // Eventos de click
+  dotOscuro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotOscuro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  });
+
+  dotClaro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotClaro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+
+  themeDotsContainer.appendChild(dotOscuro);
+  themeDotsContainer.appendChild(dotClaro);
+
   applyTheme(savedTheme);
 }
 
