@@ -165,8 +165,12 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   white-space: nowrap !important;
   display: block !important;
 }
+.guide-title-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
 
-/* Estilos base para el botón Volver Arriba (Oculto en PC) */
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -189,7 +193,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 #btn-back-to-top:active { transform: scale(0.9); }
 
-/* Estilos base para el botón Desplegable del Menú (Oculto en PC) */
 .mobile-sidebar-toggle {
   display: none;
   width: 100%;
@@ -218,40 +221,93 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 @media(max-width: 650px) {
-  .topbar-left { display: flex; justify-content: center; width: 100%; }
-  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
-  .social-group { border-left: none; padding-left: 0; gap: 12px; }
-  
-  /* Zonas de pulsación cómodas minimas de 44px para dedos */
-  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
-  .back-btn { 
-    width: auto !important; 
-    max-width: max-content;
-    margin: 8px auto !important; 
-    flex-basis: 100%;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
+  /* --- REESTRUCTURACIÓN DE CABECERA EXCLUSIVA MÓVIL --- */
+  .topbar {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    row-gap: 18px !important;
+    column-gap: 12px !important;
+    padding: 15px 16px !important;
+    align-items: center !important;
   }
   
-  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
-  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
+  /* LA PRESA a la izquierda */
+  .topbar-left {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   
+  /* Disuelve el contenedor intermedio para liberar los botones */
+  .right-tools {
+    display: contents !important;
+  }
+  
+  /* Todos los 5 botones alineados a la derecha del logo en una sola fila */
+  .social-group {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 12px !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .social-icon-btn { display: inline-flex !important; min-width: 44px; min-height: 44px; margin: 0 !important; }
+
+  /* Fila 2: Selector de colores e Idiomas juntos abajo */
+  .config-group {
+    grid-column: 1 / span 2 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 4px 0 0 0 !important;
+  }
+
+  /* Fila 3: Botón Volver a las Guías idéntico en tamaño a 'Ver otras guías' */
+  .back-btn {
+    grid-column: 1 / span 2 !important;
+    grid-row: 3 !important;
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px !important;
+    background: #16161a !important;
+    color: #0076f5 !important;
+    border: 2px solid #0076f5 !important;
+    border-radius: 10px !important;
+    font-size: 1.05rem !important;
+    font-weight: bold !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+  }
+
+  /* --- CORRECCIÓN DE CAJA Y CONTENIDOS --- */
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
   .guide-content h2 { font-size: 1.4rem; }
   .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
 
-  /* --- REFORMAS EXCLUSIVAS PARA MÓVIL --- */
-  
-  /* 1. Comportamiento Menú Hamburguesa */
   .mobile-sidebar-toggle { display: flex; }
   .sidebar { display: none !important; }
   .sidebar.active { display: block !important; margin-top: 10px; }
   
-  /* 2. Activar visualmente el botón Volver Arriba */
   #btn-back-to-top { display: flex; opacity: 0; pointer-events: none; }
   #btn-back-to-top.visible { opacity: 1; pointer-events: auto; }
 
-  /* 3. Contenedores Anti-Desbordamiento para tablas y códigos extensos */
   table, pre {
     max-width: 100% !important;
     overflow-x: auto !important;
@@ -436,8 +492,12 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   white-space: nowrap !important;
   display: block !important;
 }
+.guide-title-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
 
-/* Estilos base para el botón Volver Arriba (Oculto en PC) */
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -460,7 +520,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 #btn-back-to-top:active { transform: scale(0.9); }
 
-/* Estilos base para el botón Desplegable del Menú (Oculto en PC) */
 .mobile-sidebar-toggle {
   display: none;
   width: 100%;
@@ -489,40 +548,93 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 @media(max-width: 650px) {
-  .topbar-left { display: flex; justify-content: center; width: 100%; }
-  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
-  .social-group { border-left: none; padding-left: 0; gap: 12px; }
-  
-  /* Zonas de pulsación cómodas minimas de 44px para dedos */
-  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
-  .back-btn { 
-    width: auto !important; 
-    max-width: max-content;
-    margin: 8px auto !important; 
-    flex-basis: 100%;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
+  /* --- REESTRUCTURACIÓN DE CABECERA EXCLUSIVA MÓVIL --- */
+  .topbar {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    row-gap: 18px !important;
+    column-gap: 12px !important;
+    padding: 15px 16px !important;
+    align-items: center !important;
   }
   
-  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
-  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
+  /* LA PRESA a la izquierda */
+  .topbar-left {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   
+  /* Disuelve el contenedor intermedio para liberar los botones */
+  .right-tools {
+    display: contents !important;
+  }
+  
+  /* Todos los 5 botones alineados a la derecha del logo en una sola fila */
+  .social-group {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 12px !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .social-icon-btn { display: inline-flex !important; min-width: 44px; min-height: 44px; margin: 0 !important; }
+
+  /* Fila 2: Selector de colores e Idiomas juntos abajo */
+  .config-group {
+    grid-column: 1 / span 2 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin: 4px 0 0 0 !important;
+  }
+
+  /* Fila 3: Botón Volver a las Guías idéntico en tamaño a 'Ver otras guías' */
+  .back-btn {
+    grid-column: 1 / span 2 !important;
+    grid-row: 3 !important;
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px !important;
+    background: #16161a !important;
+    color: #0076f5 !important;
+    border: 2px solid #0076f5 !important;
+    border-radius: 10px !important;
+    font-size: 1.05rem !important;
+    font-weight: bold !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+  }
+
+  /* --- CORRECCIÓN DE CAJA Y CONTENIDOS --- */
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
   .guide-content h2 { font-size: 1.4rem; }
   .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
 
-  /* --- REFORMAS EXCLUSIVAS PARA MÓVIL --- */
-  
-  /* 1. Comportamiento Menú Hamburguesa */
   .mobile-sidebar-toggle { display: flex; }
   .sidebar { display: none !important; }
   .sidebar.active { display: block !important; margin-top: 10px; }
   
-  /* 2. Activar visualmente el botón Volver Arriba */
   #btn-back-to-top { display: flex; opacity: 0; pointer-events: none; }
   #btn-back-to-top.visible { opacity: 1; pointer-events: auto; }
 
-  /* 3. Contenedores Anti-Desbordamiento para tablas y códigos extensos */
   table, pre {
     max-width: 100% !important;
     overflow-x: auto !important;
@@ -1162,25 +1274,34 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); } };
 </script>
 <script id="mobile-enhancer">
-            function inicializarMejorasMoviles() {
-              // A. Sensor del tamaño del título (Evita saltos de línea)
+            function adaptarLetraTitulo() {
               const el = document.getElementById('txt_title');
-              if (el) {
-                const contenedor = el.parentElement;
-                el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
-                let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
-                let limiteSeguridad = 0;
-                while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 9 && limiteSeguridad < 50) {
-                  tamañoActual -= 0.5;
-                  el.style.setProperty('--title-size', tamañoActual + 'px');
-                  limiteSeguridad++;
-                }
+              if (!el) return;
+              const contenedor = el.parentElement;
+              if (!contenedor) return;
+              
+              // Tamaño inicial base
+              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
+              
+              let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
+              let limiteSeguridad = 0;
+              
+              // RED DE SEGURIDAD EXTREMA: Evita que el título engañe al ancho de la pantalla móvil
+              const limiteMaximoPantalla = Math.min(contenedor.clientWidth || window.innerWidth, window.innerWidth - 48);
+              
+              while (el.scrollWidth > limiteMaximoPantalla && tamañoActual > 8 && limiteSeguridad < 100) {
+                tamañoActual -= 0.5;
+                el.style.setProperty('--title-size', tamañoActual + 'px');
+                limiteSeguridad++;
               }
+            }
 
-              // Prevenir duplicación de elementos en el DOM si se recarga el script
+            function inicializarMejorasMoviles() {
+              adaptarLetraTitulo();
+              
               if (document.getElementById('mejoras-moviles-ready')) return;
 
-              // B. Inyección dinámica del botón 'Volver Arriba'
+              // Botón Volver Arriba
               const btnTop = document.createElement('button');
               btnTop.id = 'btn-back-to-top';
               btnTop.innerHTML = '↑';
@@ -1196,15 +1317,13 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               });
 
-              // C. Creación del Menú Hamburguesa para desplegar 'Otras Guías'
+              // Menú Desplegable 'Ver Otras Guías'
               const sidebar = document.querySelector('.sidebar');
               const mainLayout = document.querySelector('.main-layout');
               if (sidebar && mainLayout) {
                 const btnMenu = document.createElement('button');
                 btnMenu.className = 'mobile-sidebar-toggle';
                 btnMenu.innerHTML = '☰ Ver Otras Guías';
-                
-                // Colocar el botón al principio del contenedor principal
                 mainLayout.insertBefore(btnMenu, mainLayout.firstChild);
 
                 btnMenu.addEventListener('click', () => {
@@ -1218,31 +1337,24 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
                 });
               }
 
-              // Crear marca de ejecución exitosa
               const marca = document.createElement('div');
               marca.id = 'mejoras-moviles-ready';
               marca.style.display = 'none';
               document.body.appendChild(marca);
             }
 
-            // Escuchar cambios de tamaño de pantalla en tiempo real para el título
-            window.addEventListener('resize', () => {
-              const el = document.getElementById('txt_title');
-              if (el) {
-                const contenedor = el.parentElement;
-                el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
-                let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
-                let limiteSeguridad = 0;
-                while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 9 && limiteSeguridad < 50) {
-                  tamañoActual -= 0.5;
-                  el.style.setProperty('--title-size', tamañoActual + 'px');
-                  limiteSeguridad++;
-                }
-              }
-            });
-
+            // Disparadores múltiples para asegurar sincronización de fuentes y viewport
+            window.addEventListener('resize', adaptarLetraTitulo);
             document.addEventListener('DOMContentLoaded', inicializarMejorasMoviles);
-            setTimeout(inicializarMejorasMoviles, 150);
+            window.addEventListener('load', adaptarLetraTitulo);
+            
+            if (document.fonts) {
+              document.fonts.ready.then(adaptarLetraTitulo);
+            }
+            
+            setTimeout(adaptarLetraTitulo, 50);
+            setTimeout(adaptarLetraTitulo, 300);
+            setTimeout(adaptarLetraTitulo, 600);
             </script>
 </body>
 </html>
