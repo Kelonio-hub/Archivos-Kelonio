@@ -165,11 +165,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   white-space: nowrap !important;
   display: block !important;
 }
-.guide-title-container {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-}
 
 #btn-back-to-top {
   position: fixed;
@@ -221,100 +216,24 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 @media(max-width: 650px) {
-  /* --- REESTRUCTURACIÓN DE CABECERA TOTAL POR COORDENADAS MÓVILES --- */
-  .topbar {
-    display: grid !important;
-    grid-template-columns: auto auto auto auto !important; /* Columnas: Logo | GrupoSocial | Carrito | Radar */
-    justify-content: center !important;
-    align-items: center !important;
-    row-gap: 20px !important;
-    column-gap: 10px !important;
-    padding: 15px 12px !important;
+  .topbar-left { display: flex; justify-content: center; width: 100%; }
+  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
+  .social-group { border-left: none; padding-left: 0; gap: 12px; }
+  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
+  
+  .back-btn { 
+    width: auto !important; 
+    max-width: max-content;
+    margin: 8px auto !important; 
+    flex-basis: 100%;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
   
-  /* Desarmamos los contenedores fantasmas para liberar las piezas en la rejilla */
-  .topbar-left, .right-tools {
-    display: contents !important;
-  }
+  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
   
-  /* FILA 1 - POSICIÓN 1: Logo LA PRESA a la izquierda */
-  .topbar-left > a, .logo {
-    grid-row: 1 !important;
-    grid-column: 1 !important;
-    justify-self: start !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 2: Grupo con Discord, Kofi y Guías */
-  .social-group {
-    grid-row: 1 !important;
-    grid-column: 2 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 10px !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 3: Icono de Producto (Carrito) */
-  .right-tools > a:not(.back-btn):nth-of-type(1) {
-    grid-row: 1 !important;
-    grid-column: 3 !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 4: Icono de Radar */
-  .right-tools > a:not(.back-btn):nth-of-type(2) {
-    grid-row: 1 !important;
-    grid-column: 4 !important;
-    margin: 0 !important;
-  }
-
-  /* Normalización táctil para todos los iconos de la fila 1 */
-  .social-icon-btn, .right-tools > a:not(.back-btn) {
-    display: inline-flex !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* FILA 2: Paleta de Colores y Selector de Idioma Centrados */
-  .config-group {
-    grid-row: 2 !important;
-    grid-column: 1 / span 4 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 22px !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  /* FILA 3: Botón Volver a las Guías (Simétrico en tamaño y forma a "Ver otras guías") */
-  .back-btn {
-    grid-row: 3 !important;
-    grid-column: 1 / span 4 !important;
-    display: flex !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 14px !important;
-    background: #16161a !important;
-    color: #0076f5 !important;
-    border: 2px solid #0076f5 !important;
-    border-radius: 10px !important;
-    font-size: 1.05rem !important;
-    font-weight: bold !important;
-    box-sizing: border-box !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-decoration: none !important;
-    margin: 0 !important;
-  }
-
-  /* --- COMPORTAMIENTO CONTENIDOS Y DIALOGO DE CONTROL --- */
   .guide-content h2 { font-size: 1.4rem; }
   .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
 
@@ -495,11 +414,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   white-space: nowrap !important;
   display: block !important;
 }
-.guide-title-container {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-}
 
 #btn-back-to-top {
   position: fixed;
@@ -551,100 +465,24 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 @media(max-width: 650px) {
-  /* --- REESTRUCTURACIÓN DE CABECERA TOTAL POR COORDENADAS MÓVILES --- */
-  .topbar {
-    display: grid !important;
-    grid-template-columns: auto auto auto auto !important; /* Columnas: Logo | GrupoSocial | Carrito | Radar */
-    justify-content: center !important;
-    align-items: center !important;
-    row-gap: 20px !important;
-    column-gap: 10px !important;
-    padding: 15px 12px !important;
+  .topbar-left { display: flex; justify-content: center; width: 100%; }
+  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
+  .social-group { border-left: none; padding-left: 0; gap: 12px; }
+  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
+  
+  .back-btn { 
+    width: auto !important; 
+    max-width: max-content;
+    margin: 8px auto !important; 
+    flex-basis: 100%;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
   
-  /* Desarmamos los contenedores fantasmas para liberar las piezas en la rejilla */
-  .topbar-left, .right-tools {
-    display: contents !important;
-  }
+  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
   
-  /* FILA 1 - POSICIÓN 1: Logo LA PRESA a la izquierda */
-  .topbar-left > a, .logo {
-    grid-row: 1 !important;
-    grid-column: 1 !important;
-    justify-self: start !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 2: Grupo con Discord, Kofi y Guías */
-  .social-group {
-    grid-row: 1 !important;
-    grid-column: 2 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 10px !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 3: Icono de Producto (Carrito) */
-  .right-tools > a:not(.back-btn):nth-of-type(1) {
-    grid-row: 1 !important;
-    grid-column: 3 !important;
-    margin: 0 !important;
-  }
-  
-  /* FILA 1 - POSICIÓN 4: Icono de Radar */
-  .right-tools > a:not(.back-btn):nth-of-type(2) {
-    grid-row: 1 !important;
-    grid-column: 4 !important;
-    margin: 0 !important;
-  }
-
-  /* Normalización táctil para todos los iconos de la fila 1 */
-  .social-icon-btn, .right-tools > a:not(.back-btn) {
-    display: inline-flex !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* FILA 2: Paleta de Colores y Selector de Idioma Centrados */
-  .config-group {
-    grid-row: 2 !important;
-    grid-column: 1 / span 4 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 22px !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  /* FILA 3: Botón Volver a las Guías (Simétrico en tamaño y forma a "Ver otras guías") */
-  .back-btn {
-    grid-row: 3 !important;
-    grid-column: 1 / span 4 !important;
-    display: flex !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 14px !important;
-    background: #16161a !important;
-    color: #0076f5 !important;
-    border: 2px solid #0076f5 !important;
-    border-radius: 10px !important;
-    font-size: 1.05rem !important;
-    font-weight: bold !important;
-    box-sizing: border-box !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-decoration: none !important;
-    margin: 0 !important;
-  }
-
-  /* --- COMPORTAMIENTO CONTENIDOS Y DIALOGO DE CONTROL --- */
   .guide-content h2 { font-size: 1.4rem; }
   .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
 
@@ -723,9 +561,10 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </aside>
 <main class="guide-container">
 <div class="guide-header">
-<span class="guide-tag" style="display: inline-flex; align-items: center; gap: 6px;"><img alt="3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png" style="width: 16px; height: 16px; object-fit: contain;"/><span class="guide-tag" id="txt_tag">3DS</span>
-<h1 id="txt_title">ERROR LUMA ERRDISP 26</h1>
-</span></div>
+  <div class="guide-title-container">
+    <h1 id="txt_title">ERROR LUMA ERRDISP 26</h1>
+  </div>
+</div>
 <div class="guide-content">
 <div class="image-container"><div class="alert-box">
         <div id="txt_error_img" style="margin-bottom: 15px;"></div>
@@ -1349,17 +1188,17 @@ async function cargarProductosDisney() {
             function adaptarLetraTitulo() {
               const el = document.getElementById('txt_title');
               if (!el) return;
+              const contenedor = el.parentElement;
+              if (!contenedor || contenedor.clientWidth === 0) return;
               
-              // Forzar tamaño inicial
-              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.4rem' : '2.5rem');
+              // Reseteamos al tamaño máximo teórico para medir de forma limpia
+              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
               
               let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
               let limiteSeguridad = 0;
               
-              // Red de seguridad: Calculamos la anchura real de la pantalla restando los márgenes cómodos
-              const anchoMaximoCaja = window.innerWidth <= 650 ? (window.innerWidth - 40) : (el.parentElement.clientWidth || window.innerWidth - 60);
-              
-              while (el.scrollWidth > anchoMaximoCaja && tamañoActual > 11 && limiteSeguridad < 100) {
+              // Bucle de compresión milimétrica
+              while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 8 && limiteSeguridad < 100) {
                 tamañoActual -= 0.5;
                 el.style.setProperty('--title-size', tamañoActual + 'px');
                 limiteSeguridad++;
@@ -1387,7 +1226,7 @@ async function cargarProductosDisney() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               });
 
-              // Menú Desplegable 'Otras Guías'
+              // Menú Desplegable
               const sidebar = document.querySelector('.sidebar');
               const mainLayout = document.querySelector('.main-layout');
               if (sidebar && mainLayout) {
@@ -1413,14 +1252,17 @@ async function cargarProductosDisney() {
               document.body.appendChild(marca);
             }
 
+            // RED DE SEGURIDAD INTERNA (Multi-disparador anti-retardo)
             window.addEventListener('resize', adaptarLetraTitulo);
             document.addEventListener('DOMContentLoaded', inicializarMejorasMoviles);
             window.addEventListener('load', adaptarLetraTitulo);
             
+            // Si el navegador soporta la API de fuentes, recalcula al cargar la tipografía exacta
             if (document.fonts) {
               document.fonts.ready.then(adaptarLetraTitulo);
             }
             
+            // Ráfaga de seguridad por si la conexión o el dispositivo son lentos
             setTimeout(adaptarLetraTitulo, 50);
             setTimeout(adaptarLetraTitulo, 300);
             setTimeout(adaptarLetraTitulo, 600);
