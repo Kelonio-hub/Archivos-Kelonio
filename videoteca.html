@@ -131,14 +131,13 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .update-tag { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
-/* Aplicamos var(--red) tanto al h3 como al enlace interno */
 .update-card h3, 
 .update-card h3 a { 
   font-size: 1.15rem; 
   margin-bottom: 8px; 
   line-height: 1.3; 
-  color: var(--red); /* El título ahora usará siempre el color del tema elegido */
-  text-decoration: none; /* Elimina el subrayado por defecto de los enlaces */
+  color: var(--red); 
+  text-decoration: none; 
   transition: color 0.3s ease, filter 0.3s ease; 
   display: -webkit-box; 
   -webkit-line-clamp: 2; 
@@ -146,10 +145,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   overflow: hidden; 
 }
 
-/* Efecto al pasar el ratón por encima de la tarjeta */
 .update-card:hover h3, 
 .update-card:hover h3 a { 
-  filter: brightness(1.25); /* Le da un toque más brillante al color del tema al pasar el cursor */
+  filter: brightness(1.25); 
 }
 .update-body { color: var(--text-muted); font-size: 0.88rem; line-height: 1.4; margin-bottom: 16px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
 .update-footer { margin-top: auto; }
@@ -295,11 +293,18 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
 <!-- ================= ZONA PERSONAL ================= -->
 <section class="personal-zone" id="personalZone">
+  <!-- RECOMENDACIONES (Oculto por defecto, se muestra si hay historial) -->
+  <div class="personal-section-container" id="recommendationContainer" style="display: none;">
+    <div class="personal-title" id="titleRecommendations">💡 Recomendaciones</div>
+    <div class="personal-row" id="rowRecommendations"></div>
+  </div>
+
   <!-- FAVORITOS -->
   <div class="personal-section-container">
     <div class="personal-title" id="titleFavs">❤️ Tus Favoritos</div>
     <div class="personal-row" id="rowFavs"></div>
   </div>
+  
   <!-- ÚLTIMOS VISTOS -->
   <div class="personal-section-container">
     <div class="personal-title" id="titleHistory">📺 Últimos Vistos</div>
@@ -329,6 +334,16 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     <div class="video-container">
       <iframe id="youtube-frame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Reproductor de vídeo de YouTube"></iframe>
     </div>
+    
+    <!-- NUEVA SECCIÓN DE NOTAS -->
+    <div style="padding: 15px 20px; background: var(--card-bg); border-top: 1px solid var(--glass-border);">
+      <label for="videoNotes" style="display: block; font-size: 0.95rem; color: var(--red); font-weight: bold; margin-bottom: 8px;">📝 Tus apuntes personales</label>
+      <textarea id="videoNotes" placeholder="Aquí podrás apuntar anotaciones sobre cada paso..." style="width: 100%; height: 90px; background: var(--input-bg); color: var(--text-main); border: 1px solid var(--glass-border); border-radius: 8px; padding: 12px; resize: vertical; font-family: inherit; font-size: 0.9rem; outline: none; transition: border-color 0.3s;"></textarea>
+      <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+        <span id="saveIndicator" style="font-size: 0.8rem; color: var(--text-muted); opacity: 0; transition: opacity 0.3s; font-weight: bold;">Guardado automáticamente ✓</span>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -342,7 +357,7 @@ const translations = {
   it: { title: "Videoteca | La Presa", heroTitle: "Centro Video", heroDesc: "Raccolta di video e tutorial passo passo per le tue console.", search: "Cerca video...", all: "Tutte", read: "▶ Guarda Video", empty: "Nessun video trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi", favs: "❤️ I Tuoi Preferiti", history: "📺 Visti Di Recente", favEmpty: "Nessun video preferito. Clicca sul cuore su qualsiasi video per salvarlo qui!", histEmpty: "Non hai guardato nessun video di recente. Clicca su uno per iniziare!", watched: "✔ Visto" },
   pt: { title: "Videoteca | La Presa", heroTitle: "Centro de Vídeos", heroDesc: "Coleção de vídeos e tutoriais passo a passo para as tuas consolas.", search: "Procurar vídeos...", all: "Todas", read: "▶ Ver Vídeo", empty: "Nenhum vídeo encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi", favs: "❤️ Os Teus Favoritos", history: "📺 Vistos Recentemente", favEmpty: "Ainda não tens favoritos. Clica no coração de qualquer vídeo para guardá-lo aqui!", histEmpty: "Não assististe a nenhum vídeo recentemente. Clica num para começar!", watched: "✔ Visto" },
   ja: { title: "ビデオライブラリ | La Presa", heroTitle: "ビデオセンター", heroDesc: "コンソールを最大限に活用するためのビデオとステップバイステップのチュートリアル。", search: "ビデオを検索...", all: "すべて", read: "▶ ビデオを見る", empty: "ビデオが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート", favs: "❤️ お気に入り", history: "📺 最近見たビデオ", favEmpty: "お気に入りはまだありません。サムネイルのハートをクリックして保存しましょう！", histEmpty: "最近見たビデオはありません。クリックして始めましょう！", watched: "✔ 視聴済み" },
-  ko: { title: "비디오 라이브러리 | La Presa", heroTitle: "비디오 센터", heroDesc: "콘솔을 최대한 활용하기 위한 비디오 및 단계별 튜토리얼 모음.", search: "비디오 검색...", all: "모든", read: "▶ 비디오 시청", empty: "비디오를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", favs: "❤️ 즐겨찾기", history: "📺 최근 본 영상", favEmpty: "아직 즐겨찾기가 없습니다. 영상의 하트를 클릭해 여기에 저장하세요!", histEmpty: "최근에 시청한 비디오가 없습니다. 클릭해서 시작해보세요!", watched: "✔ 시청함" }
+  ko: { title: "비디오 라이브러리 | La Presa", heroTitle: "비디오 센터", heroDesc: "콘솔을 최대한 활용하기 위한 비디오 및 단계별 튜토리얼 모음.", search: "비디오 검색...", all: "모든", read: "▶ 비디오 시청", empty: "비디오를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", 가이드: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", favs: "❤️ 즐겨찾기", history: "📺 최근 본 영상", favEmpty: "아직 즐겨찾기가 없습니다. 영상의 하트를 클릭해 여기에 저장하세요!", histEmpty: "최근에 시청한 비디오가 없습니다. 클릭해서 시작해보세요!", watched: "✔ 시청함" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
@@ -350,6 +365,7 @@ let idiomaActual = 'es';
 let categoriasUnicas = new Set();
 let filtroActual = 'ALL'; 
 let todosLosVideos = [];
+let currentVideoModalId = null; // Variable para saber qué vídeo estamos editando en el modal
 
 const fileSearch = document.getElementById('fileSearch');
 const updatesGrid = document.getElementById('updatesGrid');
@@ -557,6 +573,9 @@ function renderizarSeccionesPersonales() {
   const t = translations[idiomaActual] || translations['es'];
   const rowFavs = document.getElementById('rowFavs');
   const rowHistory = document.getElementById('rowHistory');
+  const rowRecommendations = document.getElementById('rowRecommendations');
+  const recommendationContainer = document.getElementById('recommendationContainer');
+  const titleRecommendations = document.getElementById('titleRecommendations');
   
   const favIds = JSON.parse(localStorage.getItem('kelonio_favs')) || [];
   const histIds = JSON.parse(localStorage.getItem('kelonio_history')) || [];
@@ -579,6 +598,7 @@ function renderizarSeccionesPersonales() {
   // Render Historial
   if (histIds.length === 0) {
     rowHistory.innerHTML = `<div class="empty-personal-msg">${t.histEmpty}</div>`;
+    recommendationContainer.style.display = 'none'; // Ocultar recomendaciones si no hay historial
   } else {
     let htmlHist = '';
     histIds.forEach(id => {
@@ -586,6 +606,36 @@ function renderizarSeccionesPersonales() {
       if (vid) htmlHist += crearTarjetaHTML(vid, t);
     });
     rowHistory.innerHTML = htmlHist;
+
+    // --- LÓGICA DE RECOMENDACIONES ---
+    const lastWatchedId = histIds[0]; // El vídeo más reciente
+    const lastWatchedVideo = mapVideos.get(lastWatchedId);
+
+    if (lastWatchedVideo) {
+      const consoleName = lastWatchedVideo.console;
+      const tituloUltimo = lastWatchedVideo.label[idiomaActual] || lastWatchedVideo.label['es'] || 'este vídeo';
+      
+      // Filtrar vídeos de la misma consola que NO estén en el historial
+      const recommendedVideos = todosLosVideos.filter(v => 
+        v.console === consoleName && !histIds.includes(v.id)
+      );
+
+      if (recommendedVideos.length > 0) {
+        recommendationContainer.style.display = 'block';
+        // Personalizamos el título con el color de tu variable --red
+        titleRecommendations.innerHTML = `💡 Porque viste <span style="color: var(--red); margin: 0 6px;">${tituloUltimo}</span>, te recomendamos...`;
+        
+        let htmlRecs = '';
+        // Mostramos solo un máximo de 5 recomendaciones para no saturar
+        recommendedVideos.slice(0, 5).forEach(vid => {
+          htmlRecs += crearTarjetaHTML(vid, t);
+        });
+        rowRecommendations.innerHTML = htmlRecs;
+      } else {
+        // Si ya vio todos los vídeos de esa consola, lo ocultamos
+        recommendationContainer.style.display = 'none'; 
+      }
+    }
   }
 }
 
@@ -746,16 +796,23 @@ async function cargarDatosVideos() {
   }
 }
 
-/* ================= VENTANA FLOTANTE (MODAL) ================= */
+/* ================= VENTANA FLOTANTE (MODAL) Y APUNTES ================= */
 function openModal(videoId, title) {
   registrarVideoVisto(videoId);
   
   const modal = document.getElementById('video-modal');
   const iframe = document.getElementById('youtube-frame');
   const modalTitle = document.getElementById('modal-title-text');
+  const notesTextarea = document.getElementById('videoNotes');
 
+  currentVideoModalId = videoId; // Guardamos el ID actual
   modalTitle.textContent = title;
   iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  
+  // Cargar las notas guardadas previamente de este vídeo (si existen)
+  const savedNotes = localStorage.getItem(`kelonio_notes_${videoId}`) || '';
+  notesTextarea.value = savedNotes;
+
   modal.classList.add('active');
 }
 
@@ -771,7 +828,32 @@ function closeModalBtn() {
   
   modal.classList.remove('active');
   iframe.src = ''; 
+  currentVideoModalId = null; // Reseteamos el ID
 }
+
+/* Guardado automático de notas al escribir */
+document.getElementById('videoNotes').addEventListener('input', (event) => {
+  if (currentVideoModalId) {
+    // Guarda en localStorage usando una clave única por vídeo
+    localStorage.setItem(`kelonio_notes_${currentVideoModalId}`, event.target.value);
+    
+    // Muestra el indicador de "Guardado ✓" por 2 segundos
+    const indicator = document.getElementById('saveIndicator');
+    indicator.style.opacity = '1';
+    clearTimeout(indicator.timeout);
+    indicator.timeout = setTimeout(() => {
+      indicator.style.opacity = '0';
+    }, 2000);
+  }
+});
+
+// Estilo extra para el hover/focus del textarea mediante JS temporal (opcional, mejora la UI)
+document.getElementById('videoNotes').addEventListener('focus', function() {
+  this.style.borderColor = 'var(--red)';
+});
+document.getElementById('videoNotes').addEventListener('blur', function() {
+  this.style.borderColor = 'var(--glass-border)';
+});
 
 /* Permitir cerrar el modal pulsando la tecla ESC */
 document.addEventListener('keydown', (event) => {
