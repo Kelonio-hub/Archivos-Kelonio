@@ -23,12 +23,12 @@ jobs:
         run: npm install rss-parser
 
       - name: Ejecutar el Robot
-        run: node update_radar.js
+        run: node radar/update_radar.js
 
       - name: Subir cambios a la web
         run: |
           git config --global user.name 'RadarBot'
           git config --global user.email 'actions@github.com'
-          git add ultimas_noticias.json
+          git add radar/ultimas_noticias.json
           git commit -m "🤖 Radar actualizado con las últimas versiones" || echo "No hay noticias nuevas"
           git push
