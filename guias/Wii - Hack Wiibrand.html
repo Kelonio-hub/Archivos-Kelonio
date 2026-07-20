@@ -469,6 +469,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
 </button>
 <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+<button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+</button>
 <button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
 <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
@@ -556,7 +559,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     es: {
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
       txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
-      txt_radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
+      txt_videos: "Vídeos", radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
       txt_tag: "WII",
       txt_title: "HACK WII - WIIBRAND",
       txt_alert1: "<strong>⚠️ Errores Comunes:</strong> El mando Wiimote se apaga y no puedo pulsar [1] para entrar en Hackmii: incompatibilidad con algunos mandos con Motion Plus. Usa un mando antiguo.",
@@ -591,7 +594,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     en: {
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
       txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
-      txt_radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
+      txt_videos: "Videos", radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
       txt_tag: "WII",
       txt_title: "WII HACK - WIIBRAND",
       txt_alert1: "<strong>⚠️ Common Errors:</strong> Wiimote turns off and you can't press [1]: incompatibility with some newer Motion Plus remotes. Use an older Wiimote.",
@@ -626,7 +629,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     fr: {
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
       txt_awSubtitle: "Complétez les étapes pour débloquer.", txt_awYtBtn: "1. S'abonner", txt_awGiftBtn: "2. Participer au tirage",
-      txt_radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
+      txt_videos: "Vidéos", radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
       txt_tag: "WII", txt_title: "HACK WII - WIIBRAND", txt_alert1: "<strong>⚠️ Erreur:</strong> Manette s'éteint? Utilisez une ancienne Wiimote sans Motion Plus.",
       txt_h2_req: "Exigences", txt_req1: "Wii vierge version 4.3 (Toutes régions).", txt_req2: "Carte SD FAT32 (4-32 Go).", txt_req2b: "Adaptateur USB-SD.",
       txt_req3: "Fichiers Hack", txt_reqBtn: "Télécharger", txt_reqNote: "* Voir nos <a href='../productos.html' class='mini-btn'>produits</a>",
@@ -641,7 +644,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     de: {
       txt_backBtnText: "← Zurück", txt_otherGuides: "Andere Anleitungen",
       txt_awSubtitle: "Schritte abschließen.", txt_awYtBtn: "1. Abonnieren", txt_awGiftBtn: "2. Giveaway",
-      txt_radar: "Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord", txt_kofi: "Ko-fi",
+      txt_videos: "Videos", radar: "Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord", txt_kofi: "Ko-fi",
       txt_tag: "WII", txt_title: "WII HACK - WIIBRAND", txt_alert1: "<strong>⚠️ Fehler:</strong> Wiimote schaltet sich ab? Nutze eine alte Remote.",
       txt_h2_req: "Anforderungen", txt_req1: "Wii Version 4.3.", txt_req2: "SD Karte FAT32.", txt_req2b: "USB-SD Adapter.",
       txt_req3: "Hack Dateien", txt_reqBtn: "Download", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>Produkte</a>",
@@ -655,7 +658,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     it: {
       txt_backBtnText: "← Indietro", txt_otherGuides: "Altre Guide", txt_awSubtitle: "Completa i passaggi.", txt_awYtBtn: "1. Iscriviti", txt_awGiftBtn: "2. Giveaway",
-      txt_radar: "Radar", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Discord", txt_kofi: "Ko-fi",
+      txt_videos: "Video", radar: "Radar", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Discord", txt_kofi: "Ko-fi",
       txt_tag: "WII", txt_title: "MODIFICA WII - WIIBRAND", txt_alert1: "<strong>⚠️ Errore:</strong> Usa un vecchio telecomando Wii.",
       txt_h2_req: "Requisiti", txt_req1: "Wii 4.3.", txt_req2: "SD FAT32.", txt_req2b: "Adattatore USB-SD.", txt_req3: "File Hack", txt_reqBtn: "Scarica", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>Prodotti</a>",
       txt_h2_step1: "PASSO 1", txt_s1_1: "Segna l'indirizzo MAC.", txt_s1_2: "Apri il programma su PC.", txt_s1_3: "Inserisci i dati e clicca la busta verde.", txt_s1_4: "Apri la Lettera Verde su Wii.", txt_s1_5: "Installa Homebrew e BootMii.",
@@ -664,7 +667,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     pt: {
       txt_backBtnText: "← Voltar", txt_otherGuides: "Outros Guias", txt_awSubtitle: "Complete os passos.", txt_awYtBtn: "1. Inscrever", txt_awGiftBtn: "2. Sorteio",
-      txt_radar: "Radar", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Discord", txt_kofi: "Ko-fi",
+      txt_videos: "Vídeos", radar: "Radar", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Discord", txt_kofi: "Ko-fi",
       txt_tag: "WII", txt_title: "DESTRAVE WII - WIIBRAND", txt_alert1: "<strong>⚠️ Erro:</strong> Use um controle Wii antigo.",
       txt_h2_req: "Requisitos", txt_req1: "Wii 4.3.", txt_req2: "SD FAT32.", txt_req2b: "Adaptador USB-SD.", txt_req3: "Arquivos Hack", txt_reqBtn: "Baixar", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>Produtos</a>",
       txt_h2_step1: "PASSO 1", txt_s1_1: "Anote o MAC Address.", txt_s1_2: "Abra o programa no PC.", txt_s1_3: "Insira os dados e clique no envelope verde.", txt_s1_4: "Abra a Carta Verde no Wii.", txt_s1_5: "Instale Homebrew e BootMii.",
@@ -673,7 +676,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     ja: {
       txt_backBtnText: "← 戻る", txt_otherGuides: "他のガイド", txt_awSubtitle: "ロック解除", txt_awYtBtn: "1. 登録", txt_awGiftBtn: "2. 参加",
-      txt_radar: "レーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discord", txt_kofi: "Ko-fi",
+      txt_videos: "ビデオ", radar: "レーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discord", txt_kofi: "Ko-fi",
       txt_tag: "WII", txt_title: "WII ハック", txt_alert1: "<strong>⚠️ 注意:</strong> 古いリモコンを使用してください。",
       txt_h2_req: "要件", txt_req1: "Wii 4.3", txt_req2: "SD FAT32", txt_req2b: "USB-SD アダプタ", txt_req3: "ハックファイル", txt_reqBtn: "ダウンロード", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>製品</a>",
       txt_h2_step1: "ステップ 1", txt_s1_1: "MACアドレスをメモします。", txt_s1_2: "PCでプログラムを開きます。", txt_s1_3: "緑の封筒をクリック。", txt_s1_4: "Wiiで緑の手紙を開きます。", txt_s1_5: "インストールを続行します。",
@@ -682,7 +685,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     ko: {
       txt_backBtnText: "← 뒤로", txt_otherGuides: "다른 가이드", txt_awSubtitle: "잠금 해제", txt_awYtBtn: "1. 구독", txt_awGiftBtn: "2. 참가",
-      txt_radar: "레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord", txt_kofi: "Ko-fi",
+      txt_videos: "비디오", radar: "레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord", txt_kofi: "Ko-fi",
       txt_tag: "WII", txt_title: "WII 해킹", txt_alert1: "<strong>⚠️ 주의:</strong> 구형 리모컨을 사용하십시오.",
       txt_h2_req: "요구 사항", txt_req1: "Wii 4.3", txt_req2: "SD FAT32", txt_req2b: "USB-SD 어댑터", txt_req3: "해킹 파일", txt_reqBtn: "다운로드", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>제품</a>",
       txt_h2_step1: "1단계", txt_s1_1: "MAC 주소를 메모합니다.", txt_s1_2: "PC에서 프로그램을 엽니다.", txt_s1_3: "녹색 봉투 클릭.", txt_s1_4: "Wii에서 녹색 편지를 엽니다.", txt_s1_5: "설치를 계속합니다.",
@@ -872,7 +875,11 @@ async function cargarProductosDisney() {
         } 
     });
     
-    if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
+    if (document.getElementById('videosBtn')) {
+    const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
+    document.getElementById('videosBtn').title = (t && t.videos) ? t.videos : (dictVideos[idiomaActual] || 'Vídeos');
+  }
+  if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
     if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
     if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
     if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.txt_discord || "Discord";
