@@ -1458,5 +1458,88 @@ window.onload = () => {
   cargarProductos();
 };
 </script>
+<script id="mobile-enhancer">
+            function adaptarLetraTitulo() {
+              const el = document.getElementById('txt_title');
+              if (!el) return;
+              const contenedor = el.parentElement;
+              if (!contenedor || contenedor.clientWidth === 0) return;
+              
+              // Reseteamos al tamaño máximo teórico para medir de forma limpia
+              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
+              
+              let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
+              let limiteSeguridad = 0;
+              
+              // Bucle de compresión milimétrica
+              while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 8 && limiteSeguridad < 100) {
+                tamañoActual -= 0.5;
+                el.style.setProperty('--title-size', tamañoActual + 'px');
+                limiteSeguridad++;
+              }
+            }
+
+            function inicializarMejorasMoviles() {
+              adaptarLetraTitulo();
+              
+              if (document.getElementById('mejoras-moviles-ready')) return;
+
+              // Botón Volver Arriba
+              const btnTop = document.createElement('button');
+              btnTop.id = 'btn-back-to-top';
+              btnTop.innerHTML = '↑';
+              document.body.appendChild(btnTop);
+
+              window.addEventListener('scroll', () => {
+                if (window.innerWidth <= 650) {
+                  if (window.scrollY > 400) btnTop.classList.add('visible');
+                  else btnTop.classList.remove('visible');
+                }
+              });
+              btnTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              });
+
+              // Menú Desplegable
+              const sidebar = document.querySelector('.sidebar');
+              const mainLayout = document.querySelector('.main-layout');
+              if (sidebar && mainLayout) {
+                const btnMenu = document.createElement('button');
+                btnMenu.className = 'mobile-sidebar-toggle';
+                btnMenu.innerHTML = '☰ Ver Otras Guías';
+                mainLayout.insertBefore(btnMenu, mainLayout.firstChild);
+
+                btnMenu.addEventListener('click', () => {
+                  sidebar.classList.toggle('active');
+                  if (sidebar.classList.contains('active')) {
+                    btnMenu.innerHTML = '✕ Cerrar Otras Guías';
+                    sidebar.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    btnMenu.innerHTML = '☰ Ver Otras Guías';
+                  }
+                });
+              }
+
+              const marca = document.createElement('div');
+              marca.id = 'mejoras-moviles-ready';
+              marca.style.display = 'none';
+              document.body.appendChild(marca);
+            }
+
+            // RED DE SEGURIDAD INTERNA (Multi-disparador anti-retardo)
+            window.addEventListener('resize', adaptarLetraTitulo);
+            document.addEventListener('DOMContentLoaded', inicializarMejorasMoviles);
+            window.addEventListener('load', adaptarLetraTitulo);
+            
+            // Si el navegador soporta la API de fuentes, recalcula al cargar la tipografía exacta
+            if (document.fonts) {
+              document.fonts.ready.then(adaptarLetraTitulo);
+            }
+            
+            // Ráfaga de seguridad por si la conexión o el dispositivo son lentos
+            setTimeout(adaptarLetraTitulo, 50);
+            setTimeout(adaptarLetraTitulo, 300);
+            setTimeout(adaptarLetraTitulo, 600);
+            </script>
 </body>
 </html>
