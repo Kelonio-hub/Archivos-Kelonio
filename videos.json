@@ -4,7 +4,7 @@
       "id": "1",
       "label": { "en": "Switch: Check Mariko", "es": "Switch: Comprobar Mariko", "fr": "Switch : Vérifier Mariko", "it": "Switch: Verifica Mariko", "pt": "Switch: Verificar Mariko", "de": "Switch: Mariko prüfen", "ja": "Switch: Marikoを確認", "ko": "Switch: Mariko 확인" },
       "desc": { "en": "Program to check Mariko model", "es": "Programa para comprobar modelo Mariko", "fr": "Programme pour vérifier le modèle Mariko", "it": "Programma per verificare il modello Mariko", "pt": "Programa para verificar modelo Mariko", "de": "Programm zur Überprüfung des Mariko-Modells", "ja": "Marikoモデルの確認プログラム", "ko": "Mariko 모델 확인 프로그램" },
-      "videoYoutubeIds": ["bos0jN2uPug"]
+      "videoYoutubeIds": ["bos0jN2uPug"] 
     },
     {
       "id": "2",
