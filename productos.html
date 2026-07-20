@@ -85,13 +85,17 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 #fileSearch:focus { width: 200px; border-color: var(--red); }
 #fileSearch::placeholder { color:var(--text-muted); }
 
-/* ================= CONSOLE BUTTONS ================= */
+/* ================= CONSOLE BUTTONS & SUBSECTIONS ================= */
 .console-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 30px; padding: 5px 0; }
 .console-btn { background: var(--btn-bg); border: 1px solid var(--glass-border); border-radius: 10px; padding: 8px 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: .3s ease; color: var(--text-main); font-weight: 700; font-size: 12px; white-space: nowrap; }
 .console-btn:hover { transform: scale(1.05); border-color: var(--red); background: rgba(var(--glow-rgb),.15); }
 .console-btn.fav-active-btn { border-color: var(--red); background: rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
 .console-btn span { color: var(--text-main); letter-spacing: .5px; transition: color 0.3s; }
 .console-btn img { width: 18px; height: 18px; object-fit: contain; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); }
+
+.sub-filters-container, .capacity-filters-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 15px; padding: 0 5%; }
+.sub-btn { background: transparent; border: 1px solid var(--glass-border); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: 0.2s; }
+.sub-btn:hover, .sub-btn.sub-active { border-color: var(--red); color: var(--text-main); background: rgba(var(--glow-rgb), 0.08); }
 
 /* ================= HEADER HERO & ANIMACIÓN SATPULSE ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, var(--bg) 100%); transition: background 0.3s; }
@@ -102,20 +106,77 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; transition: color 0.3s; }
 .hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
-/* ================= GRID DE PRODUCTOS ================= */
+/* ================= GRID DE PRODUCTOS & CARDS AVANZADAS ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
-.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; }
+.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; position: relative;}
 .update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 20px rgba(var(--glow-rgb), 0.25), 0 10px 20px rgba(0,0,0,0.15); }
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
 .update-tag { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
 .update-date { color: var(--text-muted); font-size: 12px; transition: color 0.3s; }
-.update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
+
+/* Integración de Carrusel en Tarjeta */
+.card-carousel { position: relative; width: 100%; height: 160px; border-radius: 8px; overflow: hidden; margin-bottom: 12px; background: rgba(0,0,0,0.2); }
+.carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.3s ease; }
+.carousel-img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; cursor: pointer; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; z-index: 2; border: 1px solid rgba(255,255,255,0.1); }
+.carousel-btn:hover { background: var(--red); }
+.carousel-prev { left: 6px; }
+.carousel-next { right: 6px; }
+.carousel-dots { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; z-index: 2; }
+.carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+.carousel-dot.active { background: var(--red); width: 12px; border-radius: 4px; }
+
+.card-badge-status { position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+.status-recomendado { background: #00ffaa; color: #000; }
+.status-nuevo { background: #ffcc00; color: #000; }
+.status-agotado { background: #ff4444; color: #fff; }
+
+.update-card h3 { font-size: 1.35rem; margin-bottom: 6px; line-height: 1.3; font-weight: 700; }
 .update-card h3 a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
 .update-card h3 a:hover { color: var(--red); }
-.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
-.update-footer { margin-top: auto; }
-.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white !important; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+
+.card-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.card-price { font-size: 1.4rem; font-weight: 800; color: var(--red); }
+.card-old-price { font-size: 0.95rem; color: var(--text-muted); text-decoration: line-line-through; text-decoration: line-through; opacity: 0.7; }
+
+.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
+
+.card-actions { display: flex; gap: 8px; margin-top: auto; }
+.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; flex-grow: 1; background: var(--red); color: white !important; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 13px; transition: filter 0.3s, background 0.3s; text-align: center; }
 .download-link:hover { filter: brightness(1.2); }
+.btn-secondary-action { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; transition: 0.2s; }
+.btn-secondary-action:hover { border-color: var(--red); background: rgba(var(--glow-rgb), 0.1); }
+
+/* ================= MODAL DE AMPLIACIÓN ================= */
+.preview-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+.preview-modal.active { display: flex; opacity: 1; }
+.modal-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 35px; cursor: pointer; background: transparent; border: none; font-weight: 300; }
+.modal-close:hover { color: var(--red); }
+.modal-content { max-width: 85%; max-height: 85%; object-fit: contain; border-radius: 6px; box-shadow: 0 0 30px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease; }
+.preview-modal.active .modal-content { transform: scale(1); }
+
+/* ================= PANEL DE ADMINISTRADOR ================= */
+.admin-trigger-zone { position: fixed; bottom: 0; left: 0; width: 40px; height: 40px; z-index: 99999; cursor: default; background: transparent; }
+.admin-panel { position: fixed; top: 5%; left: 5%; width: 90%; height: 90%; background: rgba(15,15,15,0.96); border: 2px solid var(--red); border-radius: 16px; z-index: 100001; padding: 25px; box-shadow: 0 0 40px rgba(0,0,0,0.8); display: none; flex-direction: column; backdrop-filter: blur(20px); color: #fff; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px; }
+.admin-header h2 { font-size: 1.6rem; color: var(--red); font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.admin-close { background: none; border: none; color: #aaa; font-size: 24px; cursor: pointer; }
+.admin-close:hover { color: #fff; }
+.admin-main { display: flex; gap: 20px; flex-grow: 1; overflow: hidden; }
+.admin-sidebar { width: 260px; border-right: 1px solid rgba(255,255,255,0.1); padding-right: 15px; display: flex; flex-direction: column; gap: 10px; }
+.admin-menu-btn { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 10px 14px; text-align: left; color: #ccc; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.admin-menu-btn:hover, .admin-menu-btn.active { background: var(--red); color: #fff; border-color: transparent; }
+.admin-body { flex-grow: 1; overflow-y: auto; padding-left: 10px; display: flex; flex-direction: column; gap: 15px; }
+.admin-form-group { display: flex; flex-direction: column; gap: 6px; }
+.admin-form-group label { font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
+.admin-input, .admin-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; color: #fff; outline: none; font-size: 13px; }
+.admin-input:focus, .admin-select:focus { border-color: var(--red); }
+.admin-row-inline { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.admin-actions-bar { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; display: flex; justify-content: flex-end; gap: 12px; margin-top: auto; }
+.admin-btn-primary { background: var(--red); border: none; padding: 10px 20px; border-radius: 8px; color: #fff; font-weight: bold; cursor: pointer; }
+.admin-btn-primary:hover { filter: brightness(1.2); }
+.admin-btn-secondary { background: rgba(255,255,255,0.1); border: none; padding: 10px 20px; border-radius: 8px; color: #fff; font-weight: bold; cursor: pointer; }
+.admin-btn-secondary:hover { background: rgba(255,255,255,0.15); }
 
 /* ================= LOADER ================= */
 .loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; display: none; }
@@ -304,7 +365,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </nav>
 </header>
 <div class="header-section">
-<!-- TÍTULO CON ICONO DE CARRITO Y ANIMACIÓN SATPULSE -->
 <h1 id="heroTitle">
 <svg class="hero-guide-icon" fill="currentColor" viewbox="0 0 24 24">
 <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path>
@@ -314,7 +374,10 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <p id="heroDesc">Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.</p>
 <p class="hero-warning" id="heroWarning"></p>
 <div class="console-buttons" id="consoleButtons"></div>
+<div class="sub-filters-container" id="subFiltersGrid"></div>
+<div class="capacity-filters-container" id="capacityFiltersGrid"></div>
 </div>
+
 <main class="updates-container" id="updatesGrid">
 <div class="loader-container" id="mainLoader">
 <div class="spinner"></div>
@@ -322,28 +385,65 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </div>
 </main>
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<!-- ================= ELEMENTOS DEL DETALLE Y PANEL DE ADMINISTRACIÓN ================= -->
+<div class="preview-modal" id="imagePreviewModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img class="modal-content" id="modalTargetImg" src="" alt="Ampliación"/>
+</div>
+
+<div class="admin-trigger-zone" id="invisibleTrigger"></div>
+
+<div class="admin-panel" id="adminControlPanel">
+  <div class="admin-header">
+    <h2><span>⚙️</span> Panel de Administración Local</h2>
+    <button class="admin-close" onclick="cerrarPanelAdmin()">×</button>
+  </div>
+  <div class="admin-main">
+    <div class="admin-sidebar">
+      <button class="admin-menu-btn active" id="menuBtnAdd" onclick="switchAdminTab('add')">Añadir / Editar Producto</button>
+      <button class="admin-menu-btn" id="menuBtnBulk" onclick="switchAdminTab('bulk')">Reubicación por Lotes</button>
+      <button class="admin-menu-btn" id="menuBtnCats" onclick="switchAdminTab('cats')">Gestionar Subcategorías</button>
+    </div>
+    <div class="admin-body" id="adminContentArea">
+      <!-- Los formularios dinámicos se renderizan mediante JS -->
+    </div>
+  </div>
+  <div class="admin-actions-bar">
+    <button class="admin-btn-secondary" onclick="exportarJSONActualizado()">Descargar JSON de Consola</button>
+    <button class="admin-btn-primary" onclick="guardarCambiosAdmin()">Aplicar Cambios</button>
+  </div>
+</div>
+
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Productos y Accesorios | La Presa", heroTitle: "Centro de Productos", heroDesc: "Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.", search: "Buscar productos...", all: "Todos", read: "🛒 Ver Producto", empty: "No se encontraron products.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  en: { title: "Products & Accessories | La Presa", heroTitle: "Products Center", heroDesc: "Recommended accessories, useful tools, and essential hardware for your consoles.", search: "Search products...", all: "All", read: "🛒 View Product", empty: "No products found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  fr: { title: "Produits et Accessoires | La Presa", heroTitle: "Centre de Produits", heroDesc: "Accessoires recommandés, outils utiles et matériel essentiel pour vos consoles.", search: "Rechercher des produits...", all: "Tous", read: "🛒 Voir le Produit", empty: "Aucun produit trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Produkte & Zubehör | La Presa", heroTitle: "Produktzentrum", heroDesc: "Empfohlenes Zubehör, nützliche Werkzeuge und wichtige Hardware für deine Konsolen.", search: "Produkte suchen...", all: "Alle", read: "🛒 Produkt ansehen", empty: "Keine Produkte gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Prodotti e Accessori | La Presa", heroTitle: "Centro Prodotti", heroDesc: "Accessori consigliati, strumenti utili e hardware essenziale per le tue console.", search: "Cerca prodotti...", all: "Tutti", read: "🛒 Vedi Prodotto", empty: "Nessun prodotto trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Produtos e Acessórios | La Presa", heroTitle: "Centro de Produtos", heroDesc: "Acessórios recomendados, ferramentas úteis e hardware essencial para as tuas consolas.", search: "Procurar produtos...", all: "Todos", read: "🛒 Ver Produto", empty: "Nenhum produto encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  ja: { title: "製品とアクセサリー | La Presa", heroTitle: "製品センター", heroDesc: "コンソールに推奨されるアクセサリー、便利なツール、および不可欠なハードウェア。", search: "製品を検索...", all: "すべて", read: "🛒 製品を見る", empty: "製品が見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "제품 및 액세서리 | La Presa", heroTitle: "제품 센터", heroDesc: "콘솔을 위한 추천 액세서리, 유용한 도구 및 필수 하드웨어.", search: "제품 검색...", all: "모든", read: "🛒 제품 보기", empty: "제품을 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { title: "Productos y Accesorios | La Presa", heroTitle: "Centro de Productos", heroDesc: "Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.", search: "Buscar productos...", all: "Todos", read: "🛒 Ver Producto", empty: "No se encontraron productos.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi", view: "🔎 Ampliar" },
+  en: { title: "Products & Accessories | La Presa", heroTitle: "Products Center", heroDesc: "Recommended accessories, useful tools, and essential hardware for your consoles.", search: "Search products...", all: "All", read: "🛒 View Product", empty: "No products found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi", view: "🔎 Zoom" },
+  fr: { title: "Produits et Accessoires | La Presa", heroTitle: "Centre de Produits", heroDesc: "Accessoires recommandés, outils utiles et matériel essentiel pour vos consoles.", search: "Rechercher des produits...", all: "Tous", read: "🛒 Voir le Produit", empty: "Aucun produit trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous su Ko-fi", view: "🔎 Zoomer" },
+  de: { title: "Produkte & Zubehör | La Presa", heroTitle: "Produktzentrum", heroDesc: "Empfohlenes Zubehör, nützliche Werkzeuge und wichtige Hardware für deine Konsolen.", search: "Produkte suchen...", all: "Alle", read: "🛒 Produkt ansehen", empty: "Keine Produkte gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi", view: "🔎 Vergrößern" },
+  it: { title: "Prodotti e Accessori | La Presa", heroTitle: "Centro Prodotti", heroDesc: "Accessori consigliati, strumenti utili e hardware essenziale per le tue console.", search: "Cerca prodotti...", all: "Tutti", read: "🛒 Vedi Prodotto", empty: "Nessun prodotto trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi", view: "🔎 Ingrandisci" },
+  pt: { title: "Produtos e Acessórios | La Presa", heroTitle: "Centro de Produtos", heroDesc: "Acessórios recomendados, ferramentas úteis e hardware essencial para as tuas consolas.", search: "Procurar produtos...", all: "Todos", read: "🛒 Ver Producto", empty: "Nenhum produto encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi", view: "🔎 Ampliar" },
+  ja: { title: "製品とアクセサリー | La Presa", heroTitle: "製品センター", heroDesc: "コンソールに推奨されるアクセサリー、便利なツール、および不可欠なハードウェア。", search: "製品を検索...", all: "すべて", read: "🛒 製品を見る", empty: "製品が見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート", view: "🔎 拡大" },
+  ko: { title: "제품 및 액세서리 | La Presa", heroTitle: "제품 센터", heroDesc: "콘솔을 위한 추천 액세서리, 유용한 도구 및 필수 하드웨어.", search: "제품 검색...", all: "모든", read: "🛒 제품 보기", empty: "제품을 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", view: "🔎 확대" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
 let idiomaActual = 'en'; 
 let categoriasUnicas = new Set();
+let subcategoriasMapa = {}; 
 let filtroActual = 'ALL'; 
+let subfiltroActual = 'ALL';
+let filtroCapacidadActual = 'ALL';
 let todosLosProductos = [];
+let adminTabActual = 'add';
+let productoEnEdicionId = null;
 
 const fileSearch = document.getElementById('fileSearch');
 const updatesGrid = document.getElementById('updatesGrid');
 const consoleButtons = document.getElementById('consoleButtons');
+const subFiltersGrid = document.getElementById('subFiltersGrid');
+const capacityFiltersGrid = document.getElementById('capacityFiltersGrid');
 const themeDotsContainer = document.getElementById('themeDots');
 const mybutton = document.getElementById("backToTopBtn");
 
@@ -446,7 +546,7 @@ function createLanguageSelector(){
   
   selector.addEventListener('change', e => {
     idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
-    updateLanguage(); renderFilterButtons(); renderNoticias();
+    updateLanguage(); renderFilterButtons(); buildSubfiltersGrid(); renderNoticias();
   });
 }
 
@@ -475,7 +575,7 @@ function updateLanguage(){
   if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
-/* ================= BOTONES DINÁMICOS ================= */
+/* ================= FILTROS Y SUBSECCIONES AVANZADAS ================= */
 function renderFilterButtons() {
   consoleButtons.innerHTML = '';
   const t = translations[idiomaActual] || translations['en'];
@@ -483,7 +583,14 @@ function renderFilterButtons() {
   const btnAll = document.createElement('button');
   btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
   btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
-  btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
+  btnAll.onclick = () => { 
+    filtroActual = 'ALL'; 
+    subfiltroActual = 'ALL'; 
+    filtroCapacidadActual = 'ALL';
+    renderFilterButtons(); 
+    buildSubfiltersGrid();
+    renderNoticias(); 
+  };
   consoleButtons.appendChild(btnAll);
 
   const iconMap = {
@@ -495,12 +602,12 @@ function renderFilterButtons() {
     'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
     'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
     'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
-    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
-    'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
+    'SD_USB':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
+    'PLAYSTATION':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
     'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
   };
 
-  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
+  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'PLAYSTATION', 'XBOX', 'SD_USB'];
 
   const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
     const indexA = ordenDeseado.indexOf(a);
@@ -515,10 +622,67 @@ function renderFilterButtons() {
     const btn = document.createElement('button');
     btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
     const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📦</span>`;
-    btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
-    btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
+    btn.innerHTML = `${iconSrc}<span>${cat.replace('_','/')}</span>`;
+    btn.onclick = () => { 
+      filtroActual = cat; 
+      subfiltroActual = 'ALL'; 
+      filtroCapacidadActual = 'ALL';
+      renderFilterButtons(); 
+      buildSubfiltersGrid();
+      renderNoticias(); 
+    };
     consoleButtons.appendChild(btn);
   });
+}
+
+function buildSubfiltersGrid() {
+  subFiltersGrid.innerHTML = '';
+  capacityFiltersGrid.innerHTML = '';
+
+  if (filtroActual === 'ALL') return;
+
+  // Render subcategorías estándar
+  const subs = subcategoriasMapa[filtroActual] || [];
+  if (subs.length > 0) {
+    const t = translations[idiomaActual] || translations['en'];
+    const btnAllSub = document.createElement('button');
+    btnAllSub.className = 'sub-btn' + (subfiltroActual === 'ALL' ? ' sub-active' : '');
+    btnAllSub.textContent = `${t.all} Subcategorías`;
+    btnAllSub.onclick = () => {
+      subfiltroActual = 'ALL';
+      buildSubfiltersGrid();
+      renderNoticias();
+    };
+    subFiltersGrid.appendChild(btnAllSub);
+
+    subs.forEach(s => {
+      const btnSub = document.createElement('button');
+      btnSub.className = 'sub-btn' + (subfiltroActual === s ? ' sub-active' : '');
+      btnSub.textContent = s;
+      btnSub.onclick = () => {
+        subfiltroActual = s;
+        buildSubfiltersGrid();
+        renderNoticias();
+      };
+      subFiltersGrid.appendChild(btnSub);
+    });
+  }
+
+  // Si es la sección SD/USB, dibujar el filtro de capacidades
+  if (filtroActual === 'SD_USB') {
+    const capacidades = ['ALL', '32GB', '64GB', '128GB', '256GB', '512GB', '1TB'];
+    capacidades.forEach(cap => {
+      const btnCap = document.createElement('button');
+      btnCap.className = 'sub-btn' + (filtroCapacidadActual === cap ? ' sub-active' : '');
+      btnCap.textContent = cap === 'ALL' ? 'Cualquier Capacidad' : cap;
+      btnCap.onclick = () => {
+        filtroCapacidadActual = cap;
+        buildSubfiltersGrid();
+        renderNoticias();
+      };
+      capacityFiltersGrid.appendChild(btnCap);
+    });
+  }
 }
 
 /* ================= LÓGICA RADAR DE ACTUALIZACIONES ================= */
@@ -542,7 +706,40 @@ function abrirRadar() {
   window.open('actualizaciones.html', '_self');
 }
 
-/* ================= RENDERIZAR PARRILLA ================= */
+/* ================= CONTROL DE CARRUSELES Y MODAL ================= */
+let carruselEstados = {};
+
+function moverCarrusel(cardId, direccion) {
+  const contenedor = document.getElementById(`track-${cardId}`);
+  if (!contenedor) return;
+  const imagenes = contenedor.querySelectorAll('.carousel-img');
+  const total = imagenes.length;
+  if (total <= 1) return;
+
+  if (!carruselEstados[cardId]) carruselEstados[cardId] = 0;
+  
+  carruselEstados[cardId] = (carruselEstados[cardId] + direccion + total) % total;
+  contenedor.style.transform = `translateX(-${carruselEstados[cardId] * 100}%)`;
+
+  const dots = document.querySelectorAll(`#dots-${cardId} .carousel-dot`);
+  dots.forEach((dot, idx) => {
+    if (idx === carruselEstados[cardId]) dot.classList.add('active');
+    else dot.classList.remove('active');
+  });
+}
+
+function openImageModal(src) {
+  const modal = document.getElementById('imagePreviewModal');
+  const modalImg = document.getElementById('modalTargetImg');
+  modalImg.src = src;
+  modal.classList.add('active');
+}
+
+function closeImageModal() {
+  document.getElementById('imagePreviewModal').classList.remove('active');
+}
+
+/* ================= RENDERIZAR PARRILLA DE PRODUCTOS ENRIQUECIDA ================= */
 function renderNoticias() {
   const t = translations[idiomaActual] || translations['en'];
   const query = fileSearch.value.toLowerCase().trim();
@@ -552,6 +749,14 @@ function renderNoticias() {
   
   if (filtroActual !== 'ALL') {
     filtrados = filtrados.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  }
+  
+  if (subfiltroActual !== 'ALL') {
+    filtrados = filtrados.filter(n => n.tag && n.tag.split('/')[1] && n.tag.split('/')[1].trim() === subfiltroActual);
+  }
+
+  if (filtroCapacidadActual !== 'ALL' && filtroActual === 'SD_USB') {
+    filtrados = filtrados.filter(n => n.capacity && n.capacity.toUpperCase() === filtroCapacidadActual);
   }
   
   if (query) {
@@ -567,27 +772,355 @@ function renderNoticias() {
     return;
   }
 
-  let htmlResult = '';
-  filtrados.forEach(prod => {
+  filtrados.forEach((prod, index) => {
+    const cardId = prod.id || `prod-${index}`;
     const dateStr = new Date(prod.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
     const titulo = prod.titles[idiomaActual] || prod.titles['en'] || 'Producto';
     const descripcion = prod.descs[idiomaActual] || prod.descs['en'] || '';
+    
+    // Gestión de Imágenes / Carrusel
+    let imagesArr = [];
+    if (prod.images && Array.isArray(prod.images)) imagesArr = prod.images;
+    else if (prod.image) imagesArr = [prod.image];
+    if (imagesArr.length === 0) imagesArr = ['https://via.placeholder.com/400x200?text=No+Image'];
 
-    htmlResult += `
-      <div class="update-card">
-        <div class="update-header">
-          <span class="update-tag">${prod.tag}</span>
-          <span class="update-date">📅 ${dateStr}</span>
+    let carruselHTML = '';
+    if (imagesArr.length > 1) {
+      let trackHTML = '';
+      let dotsHTML = '';
+      imagesArr.forEach((imgUrl, idx) => {
+        trackHTML += `<img src="${imgUrl}" class="carousel-img" onclick="openImageModal('${imgUrl}')" alt="${titulo}"/>`;
+        dotsHTML += `<div class="carousel-dot ${idx === 0 ? 'active' : ''}"></div>`;
+      });
+      carruselHTML = `
+        <div class="card-carousel">
+          <button class="carousel-btn carousel-prev" onclick="moverCarrusel('${cardId}', -1)">‹</button>
+          <button class="carousel-btn carousel-next" onclick="moverCarrusel('${cardId}', 1)">›</button>
+          <div class="carousel-track" id="track-${cardId}">${trackHTML}</div>
+          <div class="carousel-dots" id="dots-${cardId}">${dotsHTML}</div>
         </div>
-        <h3><a href="${prod.link}" target="_blank">${titulo}</a></h3>
-        <div class="update-body">${descripcion}</div>
-        <div class="update-footer">
-          <a href="${prod.link}" target="_blank" class="download-link">${t.read}</a>
+      `;
+    } else {
+      carruselHTML = `
+        <div class="card-carousel">
+          <img src="${imagesArr[0]}" class="carousel-img" onclick="openImageModal('${imagesArr[0]}')" alt="${titulo}"/>
         </div>
+      `;
+    }
+
+    // Badge de Estado
+    let badgeHTML = '';
+    if (prod.status) {
+      let cssClass = `status-${prod.status.toLowerCase()}`;
+      badgeHTML = `<span class="card-badge-status ${cssClass}">${prod.status}</span>`;
+    }
+
+    // Precios
+    let precioHTML = '';
+    if (prod.price) {
+      precioHTML += `<span class="card-price">${prod.price}</span>`;
+      if (prod.oldPrice) {
+        precioHTML += `<span class="card-old-price">${prod.oldPrice}</span>`;
+      }
+    }
+
+    const card = document.createElement('div');
+    card.className = 'update-card';
+    card.innerHTML = `
+      ${badgeHTML}
+      ${carruselHTML}
+      <div class="update-header">
+        <span class="update-tag">${prod.tag}</span>
+        <span class="update-date">📅 ${dateStr}</span>
+      </div>
+      <h3><a href="${prod.link}" target="_blank">${titulo}</a></h3>
+      <div class="card-price-row">${precioHTML}</div>
+      <div class="update-body">${descripcion}</div>
+      <div class="card-actions">
+        <a href="${prod.link}" target="_blank" class="download-link">${t.read}</a>
+        <button class="btn-secondary-action" onclick="openImageModal('${imagesArr[0]}')">${t.view}</button>
       </div>
     `;
+
+    // Si está en sesión administrador activa, permitir doble click para editar
+    if (localStorage.getItem('adminSession') === 'active') {
+      card.addEventListener('dblclick', () => abrirEditorProducto(prod));
+      card.style.cursor = 'pointer';
+      card.title = "Doble click para editar producto";
+    }
+
+    updatesGrid.appendChild(card);
   });
-  updatesGrid.innerHTML = htmlResult;
+}
+
+/* ================= LOGICA AVANZADA DEL PANEL DE ADMINISTRACIÓN LOCAL ================= */
+const TRIGGER_HASH = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // admin2026
+
+async function verificarHash(input) {
+  const msgUint8 = new TextEncoder().encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex === TRIGGER_HASH;
+}
+
+document.getElementById('invisibleTrigger').addEventListener('click', async () => {
+  if (localStorage.getItem('adminSession') === 'active') {
+    abrirPanelAdmin();
+  } else {
+    const pass = prompt("Introduce la clave de acceso de desarrollador:");
+    if (pass && await verificarHash(pass)) {
+      localStorage.setItem('adminSession', 'active');
+      abrirPanelAdmin();
+      renderNoticias();
+    } else if (pass) {
+      alert("Clave inválida.");
+    }
+  }
+});
+
+function abrirPanelAdmin() {
+  document.getElementById('adminControlPanel').style.display = 'flex';
+  switchAdminTab(adminTabActual);
+}
+
+function cerrarPanelAdmin() {
+  document.getElementById('adminControlPanel').style.display = 'none';
+}
+
+function switchAdminTab(tab) {
+  adminTabActual = tab;
+  document.querySelectorAll('.admin-menu-btn').forEach(b => b.classList.remove('active'));
+  if(tab === 'add') document.getElementById('menuBtnAdd').classList.add('active');
+  if(tab === 'bulk') document.getElementById('menuBtnBulk').classList.add('active');
+  if(tab === 'cats') document.getElementById('menuBtnCats').classList.add('active');
+  
+  renderAdminBody();
+}
+
+function renderAdminBody() {
+  const area = document.getElementById('adminContentArea');
+  area.innerHTML = '';
+
+  if (adminTabActual === 'add') {
+    let p = todosLosProductos.find(x => x.id === productoEnEdicionId) || {
+      id: `prod-${Date.now()}`, tag: `${filtroActual !== 'ALL' ? filtroActual : 'SWITCH'} / General`, date: new Date().toISOString().split('T')[0],
+      titles: {es:'', en:''}, descs: {es:'', en:''}, images: [''], link: '', price: '', oldPrice: '', status: 'Nuevo', capacity: ''
+    };
+
+    area.innerHTML = `
+      <h3>${productoEnEdicionId ? 'Modificar Producto Existente' : 'Crear Nuevo Producto'}</h3>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>ID Único</label><input type="text" id="adm_id" class="admin-input" value="${p.id}" readonly/></div>
+        <div class="admin-form-group"><label>Fecha</label><input type="date" id="adm_date" class="admin-input" value="${p.date.split('T')[0]}"/></div>
+      </div>
+      <div class="admin-row-inline">
+        <div class="admin-form-group">
+          <label>Tag Compuesto (Consola / Subcategoría)</label>
+          <input type="text" id="adm_tag" class="admin-input" value="${p.tag}" placeholder="SWITCH / Accesorios"/>
+        </div>
+        <div class="admin-form-group">
+          <label>Estado Badge</label>
+          <select id="adm_status" class="admin-select">
+            <option value="" ${!p.status?'selected':''}>Ninguno</option>
+            <option value="Nuevo" ${p.status==='Nuevo'?'selected':''}>Nuevo</option>
+            <option value="Recomendado" ${p.status==='Recomendado'?'selected':''}>Recomendado</option>
+            <option value="Agotado" ${p.status==='Agotado'?'selected':''}>Agotado</option>
+          </select>
+        </div>
+      </div>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>Precio</label><input type="text" id="adm_price" class="admin-input" value="${p.price || ''}" placeholder="19.99€"/></div>
+        <div class="admin-form-group"><label>Precio Anterior (Opcional)</label><input type="text" id="adm_oldprice" class="admin-input" value="${p.oldPrice || ''}" placeholder="29.99€"/></div>
+      </div>
+      <div class="admin-form-group"><label>Capacidad (Solo SD/USB)</label><input type="text" id="adm_capacity" class="admin-input" value="${p.capacity || ''}" placeholder="128GB"/></div>
+      <div class="admin-form-group"><label>Título (ES)</label><input type="text" id="adm_title_es" class="admin-input" value="${p.titles.es || ''}"/></div>
+      <div class="admin-form-group"><label>Título (EN)</label><input type="text" id="adm_title_en" class="admin-input" value="${p.titles.en || ''}"/></div>
+      <div class="admin-form-group"><label>Descripción (ES)</label><textarea id="adm_desc_es" class="admin-input" style="height:60px;">${p.descs.es || ''}</textarea></div>
+      <div class="admin-form-group"><label>Descripción (EN)</label><textarea id="adm_desc_en" class="admin-input" style="height:60px;">${p.descs.en || ''}</textarea></div>
+      <div class="admin-form-group"><label>URL Enlace Externo</label><input type="text" id="adm_link" class="admin-input" value="${p.link || ''}"/></div>
+      <div class="admin-form-group">
+        <label>Imágenes (Separadas por comas si son varias)</label>
+        <input type="text" id="adm_images" class="admin-input" value="${Array.isArray(p.images) ? p.images.join(', ') : (p.image || '')}"/>
+      </div>
+    `;
+  } 
+  
+  else if (adminTabActual === 'bulk') {
+    let opcionesConsolas = Array.from(categoriasUnicas).map(c => `<option value="${c}">${c}</option>`).join('');
+    area.innerHTML = `
+      <h3>Reubicación de Productos por Lotes</h3>
+      <p style="font-size:12px; color:#aaa;">Mueve todos los productos asignados a una categoría y subcategoría hacia otra de forma masiva.</p>
+      <div class="admin-row-inline">
+        <div class="admin-form-group">
+          <label>Consola Origen</label>
+          <select id="bulk_src_con" class="admin-select">${opcionesConsolas}</select>
+        </div>
+        <div class="admin-form-group">
+          <label>Subcategoría Origen</label>
+          <input type="text" id="bulk_src_sub" class="admin-input" placeholder="Ej: Mandos"/>
+        </div>
+      </div>
+      <div class="admin-row-inline" style="margin-top:15px;">
+        <div class="admin-form-group">
+          <label>Consola Destino</label>
+          <select id="bulk_dest_con" class="admin-select">${opcionesConsolas}</select>
+        </div>
+        <div class="admin-form-group">
+          <label>Subcategoría Destino</label>
+          <input type="text" id="bulk_dest_sub" class="admin-input" placeholder="Ej: Controles Avanzados"/>
+        </div>
+      </div>
+      <button class="admin-btn-secondary" style="margin-top:15px; width:fit-content;" onclick="ejecutarReubicacionMasiva()">Ejecutar Reubicación</button>
+    `;
+  } 
+  
+  else if (adminTabActual === 'cats') {
+    let listaHTML = '';
+    Object.keys(subcategoriasMapa).forEach(con => {
+      listaHTML += `<div style="margin-bottom:12px;"><strong>${con}:</strong> <span style="color:var(--red);">${subcategoriasMapa[con].join(', ') || 'Ninguna'}</span></div>`;
+    });
+
+    area.innerHTML = `
+      <h3>Gestionar Subcategorías de Consola</h3>
+      <div style="background:rgba(0,0,0,0.2); padding:12px; border-radius:8px; max-height:200px; overflow-y:auto; margin-bottom:15px;">
+        ${listaHTML}
+      </div>
+      <div class="admin-form-group">
+        <label>Consola Seleccionada</label>
+        <select id="cat_console" class="admin-select">
+          ${Array.from(categoriasUnicas).map(c => `<option value="${c}">${c}</option>`).join('')}
+        </select>
+      </div>
+      <div class="admin-form-group" style="margin-top:10px;">
+        <label>Nueva Subcategoría a Registrar</label>
+        <input type="text" id="cat_new_sub" class="admin-input" placeholder="Ej: Fundas de Viaje"/>
+      </div>
+      <button class="admin-btn-secondary" style="margin-top:12px; width:fit-content;" onclick="añadirNuevaSubcategoria()">Registrar Subcategoría</button>
+    `;
+  }
+}
+
+function abrirEditorProducto(producto) {
+  productoEnEdicionId = producto.id;
+  switchAdminTab('add');
+  abrirPanelAdmin();
+}
+
+function añadirNuevaSubcategoria() {
+  const con = document.getElementById('cat_console').value;
+  const sub = document.getElementById('cat_new_sub').value.trim();
+  if(!sub) return;
+
+  if(!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+  if(!subcategoriasMapa[con].includes(sub)) {
+    subcategoriasMapa[con].push(sub);
+    alert(`Subcategoría "${sub}" añadida a la estructura de ${con}.`);
+    renderAdminBody();
+  }
+}
+
+function ejecutarReubicacionMasiva() {
+  const srcCon = document.getElementById('bulk_src_con').value;
+  const srcSub = document.getElementById('bulk_src_sub').value.trim();
+  const destCon = document.getElementById('bulk_dest_con').value;
+  const destSub = document.getElementById('bulk_dest_sub').value.trim();
+
+  if(!srcSub || !destSub) { alert("Completa los campos de subcategorías."); return; }
+
+  let contador = 0;
+  todosLosProductos.forEach(p => {
+    if(p.tag) {
+      let parts = p.tag.split('/');
+      let c = parts[0].trim().toUpperCase();
+      let s = parts[1] ? parts[1].trim() : '';
+      if(c === srcCon && s === srcSub) {
+        p.tag = `${destCon} / ${destSub}`;
+        contador++;
+      }
+    }
+  });
+
+  alert(`Operación completada. Se reubicaron ${contador} productos.`);
+  reconstruirFiltrosDesdeDatos();
+  renderNoticias();
+  renderAdminBody();
+}
+
+function guardarCambiosAdmin() {
+  if (adminTabActual === 'add') {
+    const id = document.getElementById('adm_id').value;
+    const tag = document.getElementById('adm_tag').value.trim();
+    const date = document.getElementById('adm_date').value;
+    const status = document.getElementById('adm_status').value;
+    const price = document.getElementById('adm_price').value.trim();
+    const oldPrice = document.getElementById('adm_oldprice').value.trim();
+    const capacity = document.getElementById('adm_capacity').value.trim();
+    const titleEs = document.getElementById('adm_title_es').value.trim();
+    const titleEn = document.getElementById('adm_title_en').value.trim();
+    const descEs = document.getElementById('adm_desc_es').value.trim();
+    const descEn = document.getElementById('adm_desc_en').value.trim();
+    const link = document.getElementById('adm_link').value.trim();
+    const imgs = document.getElementById('adm_images').value.split(',').map(x => x.trim()).filter(x => x);
+
+    if(!tag || !titleEs || !link) { alert("Tag, Título ES y Enlace Externo son obligatorios."); return; }
+
+    let idx = todosLosProductos.findIndex(x => x.id === id);
+    let p = idx !== -1 ? todosLosProductos[idx] : { id: id };
+
+    p.tag = tag;
+    p.date = date;
+    p.status = status;
+    p.price = price;
+    p.oldPrice = oldPrice;
+    p.capacity = capacity;
+    p.link = link;
+    p.images = imgs;
+    p.titles = { es: titleEs, en: titleEn || titleEs, fr: p.titles?.fr||'', de: p.titles?.de||'', it: p.titles?.it||'', pt: p.titles?.pt||'', ja: p.titles?.ja||'', ko: p.titles?.ko||'' };
+    p.descs = { es: descEs, en: descEn || descEs, fr: p.descs?.fr||'', de: p.descs?.de||'', it: p.descs?.it||'', pt: p.descs?.pt||'', ja: p.descs?.ja||'', ko: p.descs?.ko||'' };
+
+    if (idx === -1) {
+      todosLosProductos.unshift(p);
+    }
+
+    alert("Producto guardado localmente en la memoria del navegador.");
+    productoEnEdicionId = null;
+    reconstruirFiltrosDesdeDatos();
+    renderNoticias();
+    cerrarPanelAdmin();
+  }
+}
+
+function reconstruirFiltrosDesdeDatos() {
+  categoriasUnicas.clear();
+  todosLosProductos.forEach(p => {
+    if (p.tag) {
+      let parts = p.tag.split('/');
+      let con = parts[0].trim().toUpperCase();
+      let sub = parts[1] ? parts[1].trim() : 'General';
+      categoriasUnicas.add(con);
+      if(!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+      if(!subcategoriasMapa[con].includes(sub)) subcategoriasMapa[con].push(sub);
+    }
+  });
+  renderFilterButtons();
+}
+
+function exportarJSONActualizado() {
+  if (filtroActual === 'ALL') {
+    alert("Por favor selecciona primero una Consola en los botones de arriba para exportar su archivo específico.");
+    return;
+  }
+  // Filtrar solo los productos correspondientes a la consola activa
+  let productosConsola = todosLosProductos.filter(p => p.tag && p.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  
+  let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(productosConsola, null, 2));
+  let downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", `${filtroActual.toLowerCase()}.json`);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
 }
 
 /* ================= CARGAR PRODUCTOS DESDE ARCHIVOS JSON (GITHUB) ================= */
@@ -595,7 +1128,6 @@ async function cargarDatosProductos() {
   const loader = document.getElementById('mainLoader');
   loader.style.display = 'block';
 
-  // Enlaces Raw de tus 6 archivos JSON en GitHub
   const urls = [
     'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/3ds.json',
     'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/playstation.json',
@@ -608,7 +1140,6 @@ async function cargarDatosProductos() {
   try {
     const timestamp = new Date().getTime();
     
-    // Lanzamos todas las peticiones fetch de forma simultánea
     const peticiones = urls.map(url => 
       fetch(`${url}?t=${timestamp}`).then(res => {
         if (!res.ok) throw new Error(`No se pudo cargar: ${url}`);
@@ -616,17 +1147,25 @@ async function cargarDatosProductos() {
       })
     );
 
-    // Esperamos a que terminen todas y combinamos los arrays en uno solo
     const resultados = await Promise.all(peticiones);
     todosLosProductos = resultados.flat();
 
-    // Ordenamos por fecha de más reciente a más antiguo
     todosLosProductos.sort((a, b) => new Date(b.date) - new Date(a.date));
     
-    // Obtenemos las categorías únicas
+    // Extracción inicial de ID Únicos, Consolas y Subcategorías
+    subcategoriasMapa = {};
     categoriasUnicas.clear();
-    todosLosProductos.forEach(n => {
-      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
+    todosLosProductos.forEach((n, idx) => {
+      if(!n.id) n.id = `prod-init-${idx}`;
+      if (n.tag) {
+        let parts = n.tag.split('/');
+        let con = parts[0].trim().toUpperCase();
+        let sub = parts[1] ? parts[1].trim() : 'General';
+        categoriasUnicas.add(con);
+        
+        if (!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+        if (!subcategoriasMapa[con].includes(sub)) subcategoriasMapa[con].push(sub);
+      }
     });
 
     loader.style.display = 'none';
