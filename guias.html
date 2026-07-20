@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title id="pageTitle">Centro de Guías | La Presa</title>
-<link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
+<title id="pageTitle">Centro de Productos | La Presa</title>
+<link href="https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/img/Lucario.gif" rel="icon" type="image/gif"/>
 <style>
 
 /* ================= VARIABLES Y TEMA AUTOMÁTICO/MANUAL ================= */
@@ -41,7 +41,7 @@
   --loader-border: rgba(0,0,0,0.1);
 }
 
-/* Tema Claro Automático (Si el usuario no ha tocado los botones) */
+/* Tema Claro Automático */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     --bg: #f8f9fa;
@@ -78,7 +78,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .color-dot:hover { transform:scale(1.3); }
 .color-dot.active-dot { border:2px solid var(--text-main); transform:scale(1.15); box-shadow: 0 0 8px rgba(128,128,128,0.6); }
 
-/* Corrección del panel de idiomas */
 #languageSelector { background:var(--input-bg); border:1px solid var(--glass-border); color:var(--text-main); padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; transition: 0.3s; }
 #languageSelector option { background: var(--bg); color: var(--text-main); }
 
@@ -86,7 +85,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 #fileSearch:focus { width: 200px; border-color: var(--red); }
 #fileSearch::placeholder { color:var(--text-muted); }
 
-/* ================= CONSOLE BUTTONS ================= */
+/* ================= CONSOLE BUTTONS & SUBSECTIONS ================= */
 .console-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 30px; padding: 5px 0; }
 .console-btn { background: var(--btn-bg); border: 1px solid var(--glass-border); border-radius: 10px; padding: 8px 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: .3s ease; color: var(--text-main); font-weight: 700; font-size: 12px; white-space: nowrap; }
 .console-btn:hover { transform: scale(1.05); border-color: var(--red); background: rgba(var(--glow-rgb),.15); }
@@ -94,7 +93,11 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .console-btn span { color: var(--text-main); letter-spacing: .5px; transition: color 0.3s; }
 .console-btn img { width: 18px; height: 18px; object-fit: contain; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); }
 
-/* ================= HEADER HERO & ANIMACIÓN SATPULSE ================= */
+.sub-filters-container, .capacity-filters-container { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 15px; padding: 0 5%; }
+.sub-btn { background: transparent; border: 1px solid var(--glass-border); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: 0.2s; }
+.sub-btn:hover, .sub-btn.sub-active { border-color: var(--red); color: var(--text-main); background: rgba(var(--glow-rgb), 0.08); }
+
+/* ================= HEADER HERO ================= */
 .header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, var(--bg) 100%); transition: background 0.3s; }
 .header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
 .header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0 auto; }
@@ -103,20 +106,77 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; transition: color 0.3s; }
 .hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
 
-/* ================= GRID DE GUÍAS ================= */
+/* ================= GRID DE PRODUCTOS & CARDS ================= */
 .updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
-.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; }
+.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; position: relative;}
 .update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 20px rgba(var(--glow-rgb), 0.25), 0 10px 20px rgba(0,0,0,0.15); }
 .update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
 .update-tag { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
 .update-date { color: var(--text-muted); font-size: 12px; transition: color 0.3s; }
-.update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
+
+/* Carrusel de Imágenes */
+.card-carousel { position: relative; width: 100%; height: 160px; border-radius: 8px; overflow: hidden; margin-bottom: 12px; background: rgba(0,0,0,0.2); }
+.carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.3s ease; }
+.carousel-img { width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; cursor: pointer; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; z-index: 2; border: 1px solid rgba(255,255,255,0.1); }
+.carousel-btn:hover { background: var(--red); }
+.carousel-prev { left: 6px; }
+.carousel-next { right: 6px; }
+.carousel-dots { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; z-index: 2; }
+.carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); }
+.carousel-dot.active { background: var(--red); width: 12px; border-radius: 4px; }
+
+.card-badge-status { position: absolute; top: 12px; left: 12px; z-index: 3; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+.status-recomendado { background: #00ffaa; color: #000; }
+.status-nuevo { background: #ffcc00; color: #000; }
+.status-agotado { background: #ff4444; color: #fff; }
+
+.update-card h3 { font-size: 1.35rem; margin-bottom: 6px; line-height: 1.3; font-weight: 700; }
 .update-card h3 a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
 .update-card h3 a:hover { color: var(--red); }
-.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
-.update-footer { margin-top: auto; }
-.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white !important; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+
+.card-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.card-price { font-size: 1.4rem; font-weight: 800; color: var(--red); }
+.card-old-price { font-size: 0.95rem; color: var(--text-muted); text-decoration: line-through; opacity: 0.7; }
+
+.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
+
+.card-actions { display: flex; gap: 8px; margin-top: auto; }
+.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; flex-grow: 1; background: var(--red); color: white !important; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 13px; transition: filter 0.3s, background 0.3s; text-align: center; }
 .download-link:hover { filter: brightness(1.2); }
+.btn-secondary-action { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; transition: 0.2s; }
+.btn-secondary-action:hover { border-color: var(--red); background: rgba(var(--glow-rgb), 0.1); }
+
+/* ================= MODAL DE AMPLIACIÓN ================= */
+.preview-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 100000; display: none; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+.preview-modal.active { display: flex; opacity: 1; }
+.modal-close { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 35px; cursor: pointer; background: transparent; border: none; font-weight: 300; }
+.modal-close:hover { color: var(--red); }
+.modal-content { max-width: 85%; max-height: 85%; object-fit: contain; border-radius: 6px; box-shadow: 0 0 30px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.3s ease; }
+.preview-modal.active .modal-content { transform: scale(1); }
+
+/* ================= PANEL DE ADMINISTRADOR ================= */
+.admin-trigger-zone { position: fixed; bottom: 0; left: 0; width: 40px; height: 40px; z-index: 99999; cursor: default; background: transparent; }
+.admin-panel { position: fixed; top: 5%; left: 5%; width: 90%; height: 90%; background: rgba(15,15,15,0.96); border: 2px solid var(--red); border-radius: 16px; z-index: 100001; padding: 25px; box-shadow: 0 0 40px rgba(0,0,0,0.8); display: none; flex-direction: column; backdrop-filter: blur(20px); color: #fff; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px; }
+.admin-header h2 { font-size: 1.6rem; color: var(--red); font-weight: 800; display: flex; align-items: center; gap: 10px; }
+.admin-close { background: none; border: none; color: #aaa; font-size: 24px; cursor: pointer; }
+.admin-close:hover { color: #fff; }
+.admin-main { display: flex; gap: 20px; flex-grow: 1; overflow: hidden; }
+.admin-sidebar { width: 260px; border-right: 1px solid rgba(255,255,255,0.1); padding-right: 15px; display: flex; flex-direction: column; gap: 10px; }
+.admin-menu-btn { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 10px 14px; text-align: left; color: #ccc; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.admin-menu-btn:hover, .admin-menu-btn.active { background: var(--red); color: #fff; border-color: transparent; }
+.admin-body { flex-grow: 1; overflow-y: auto; padding-left: 10px; display: flex; flex-direction: column; gap: 15px; }
+.admin-form-group { display: flex; flex-direction: column; gap: 6px; }
+.admin-form-group label { font-size: 12px; font-weight: 700; color: #aaa; text-transform: uppercase; }
+.admin-input, .admin-select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 6px; color: #fff; outline: none; font-size: 13px; }
+.admin-input:focus, .admin-select:focus { border-color: var(--red); }
+.admin-row-inline { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.admin-actions-bar { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; display: flex; justify-content: flex-end; gap: 12px; margin-top: auto; }
+.admin-btn-primary { background: var(--red); border: none; padding: 10px 20px; border-radius: 8px; color: #fff; font-weight: bold; cursor: pointer; }
+.admin-btn-primary:hover { filter: brightness(1.2); }
+.admin-btn-secondary { background: rgba(255,255,255,0.1); border: none; padding: 10px 20px; border-radius: 8px; color: #fff; font-weight: bold; cursor: pointer; }
+.admin-btn-secondary:hover { background: rgba(255,255,255,0.15); }
 
 /* ================= LOADER ================= */
 .loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; display: none; }
@@ -137,140 +197,22 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   #fileSearch { width: 100%; order: 3; margin-top: 10px; } 
   #fileSearch:focus { width: 100%; } 
   .config-group { flex-direction: row; order: 2; gap: 15px; justify-content: center; width: 100%; } 
-  .header-section { padding-top: 250px; } /* Aumentamos el espacio para acomodar las 4 filas */
+  .header-section { padding-top: 250px; } 
 }
 
 </style>
 
-<!-- ==========================================================
-     CANONICAL & HREFLANG (8 IDIOMAS + INGLÉS POR DEFECTO)
-=========================================================== -->
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/" rel="canonical"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=es" hreflang="es" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=en" hreflang="en" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=fr" hreflang="fr" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=de" hreflang="de" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=it" hreflang="it" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=pt" hreflang="pt" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=ja" hreflang="ja" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=ko" hreflang="ko" rel="alternate"/>
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=en" hreflang="x-default" rel="alternate"/>
-<!-- ==========================================================
-     OPEN GRAPH & TWITTER CARDS
-=========================================================== -->
-<meta content="website" property="og:type"/>
-<meta content="La Presa" property="og:site_name"/>
-<meta content="Centro de Guías" property="og:title"/>
-<meta content="Descubre Centro de Guías en el centro de recursos de La Presa." property="og:description"/>
-<meta content="https://kelonio-hub.github.io/Archivos-Kelonio/" property="og:url"/>
-<meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" property="og:image"/>
-<meta content="es_ES" property="og:locale"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Centro de Guías" name="twitter:title"/>
-<meta content="Descubre Centro de Guías en el centro de recursos de La Presa." name="twitter:description"/>
-<meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" name="twitter:image"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization",
-  "name": "La Presa",
-  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#webpage",
-  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
-  "name": "Centro de Guías | La Presa",
-  "description": "Descubre Centro de Guías en el centro de recursos de La Presa.",
-  "inLanguage": [
-    "es",
-    "en",
-    "fr",
-    "de",
-    "it",
-    "pt",
-    "ja",
-    "ko"
-  ],
-  "publisher": {
-    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
-  },
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png"
-  },
-  "mainEntity": {
-    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#website"
-  },
-  "dateModified": "2026-07-19"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/index.html"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#website",
-  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
-  "name": "La Presa",
-  "description": "Descubre Centro de Guías en el centro de recursos de La Presa.",
-  "publisher": {
-    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
-  }
-}
-</script>
-<script>
-  /* ================= PRE-CARGA DE TEMA PARA EVITAR FLASH ================= */
-  (function() {
-    // 1. Aplicar Modo Oscuro/Claro
-    const savedMode = localStorage.getItem('selectedMode');
-    if (savedMode === 'dark' || savedMode === 'light') {
-      document.documentElement.setAttribute('data-theme', savedMode);
-    }
-
-    // 2. Aplicar Color de Acento
-    const savedTheme = localStorage.getItem('selectedThemeColor');
-    if (savedTheme) {
-      const paleta = {
-        rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
-        naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
-        amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
-        verde:    { hex: '#2ecc71', rgb: '46, 204, 113' },
-        azul:     { hex: '#00aaff', rgb: '0, 170, 255' },
-        violeta:  { hex: '#9b59b6', rgb: '155, 89, 182' },
-        rosa:     { hex: '#ff80ab', rgb: '255, 128, 171' }
-      };
-      
-      const theme = paleta[savedTheme];
-      if (theme) {
-        document.documentElement.style.setProperty('--red', theme.hex);
-        document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
-      }
-    }
-  })();
-</script>
-
+<!-- SEO & Alternates -->
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html" rel="canonical"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=es" hreflang="es" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=fr" hreflang="fr" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=de" hreflang="de" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=pt" hreflang="pt" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=ja" hreflang="ja" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=ko" hreflang="ko" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=en" hreflang="x-default" rel="alternate"/>
 </head>
 <body>
 <header class="topbar">
@@ -292,7 +234,6 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <button class="social-icon-btn" id="productsBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')" title="Productos">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
 </button>
-<!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
 <button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
 </button>
@@ -307,7 +248,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </svg>
 <span class="radar-badge" id="radarBadge"></span>
 </button>
-<input id="fileSearch" placeholder="Buscar guías..." type="text"/>
+<input id="fileSearch" placeholder="Buscar productos..." type="text"/>
 <div class="config-group">
 <div class="theme-dots-container" id="themeDots"></div>
 <select id="languageSelector"></select>
@@ -315,46 +256,83 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </nav>
 </header>
 <div class="header-section">
-<!-- TÍTULO CON ICONO DE GUÍAS CON ANIMACIÓN SATPULSE -->
 <h1 id="heroTitle">
 <svg class="hero-guide-icon" fill="currentColor" viewbox="0 0 24 24">
-<path d="M21 5c-1.1-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"></path>
+<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path>
 </svg>
-<span> Centro de Guías</span>
+<span> Centro de Productos</span>
 </h1>
-<p id="heroDesc">Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
+<p id="heroDesc">Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.</p>
 <p class="hero-warning" id="heroWarning"></p>
 <div class="console-buttons" id="consoleButtons"></div>
+<div class="sub-filters-container" id="subFiltersGrid"></div>
+<div class="capacity-filters-container" id="capacityFiltersGrid"></div>
 </div>
+
 <main class="updates-container" id="updatesGrid">
 <div class="loader-container" id="mainLoader">
 <div class="spinner"></div>
-<p id="loaderText" style="color:#aaa;">Cargando guías...</p>
+<p id="loaderText" style="color:#aaa;">Cargando productos...</p>
 </div>
 </main>
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+<!-- Modales y Panel Admin -->
+<div class="preview-modal" id="imagePreviewModal">
+  <button class="modal-close" onclick="closeImageModal()">×</button>
+  <img class="modal-content" id="modalTargetImg" src="" alt="Ampliación"/>
+</div>
+
+<div class="admin-trigger-zone" id="invisibleTrigger"></div>
+
+<div class="admin-panel" id="adminControlPanel">
+  <div class="admin-header">
+    <h2><span>⚙️</span> Panel de Administración Local</h2>
+    <button class="admin-close" onclick="cerrarPanelAdmin()">×</button>
+  </div>
+  <div class="admin-main">
+    <div class="admin-sidebar">
+      <button class="admin-menu-btn active" id="menuBtnAdd" onclick="switchAdminTab('add')">Añadir / Editar Producto</button>
+      <button class="admin-menu-btn" id="menuBtnBulk" onclick="switchAdminTab('bulk')">Reubicación por Lotes</button>
+      <button class="admin-menu-btn" id="menuBtnCats" onclick="switchAdminTab('cats')">Gestionar Subcategorías</button>
+    </div>
+    <div class="admin-body" id="adminContentArea"></div>
+  </div>
+  <div class="admin-actions-bar">
+    <button class="admin-btn-secondary" onclick="exportarJSONActualizado()">Descargar JSON de Consola</button>
+    <button class="admin-btn-primary" onclick="guardarCambiosAdmin()">Aplicar Cambios</button>
+  </div>
+</div>
+
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo passo per ottenere il massimo dalle tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Guias e tutoriais passo a passo para tirar o máximo proveito das tuas consolas.", search: "Procurar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhuma guia encontrada.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { title: "Productos y Accesorios | La Presa", heroTitle: "Centro de Productos", heroDesc: "Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.", search: "Buscar productos...", all: "Todos", read: "🛒 Ver Producto", empty: "No se encontraron productos.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi", view: "🔎 Ampliar" },
+  en: { title: "Products & Accessories | La Presa", heroTitle: "Products Center", heroDesc: "Recommended accessories, useful tools, and essential hardware for your consoles.", search: "Search products...", all: "All", read: "🛒 View Product", empty: "No products found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi", view: "🔎 Zoom" },
+  fr: { title: "Produits et Accessoires | La Presa", heroTitle: "Centre de Produits", heroDesc: "Accessoires recommandés, outils utiles et matériel essentiel pour vos consoles.", search: "Rechercher des produits...", all: "Tous", read: "🛒 Voir le Produit", empty: "Aucun produit trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous su Ko-fi", view: "🔎 Zoomer" },
+  de: { title: "Produkte & Zubehör | La Presa", heroTitle: "Produktzentrum", heroDesc: "Empfohlenes Zubehör, nützliche Werkzeuge und wichtige Hardware für deine Konsolen.", search: "Produkte suchen...", all: "Alle", read: "🛒 Produkt ansehen", empty: "Keine Produkte gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi", view: "🔎 Vergrößern" },
+  it: { title: "Prodotti e Accessori | La Presa", heroTitle: "Centro Prodotti", heroDesc: "Accessori consigliati, strumenti utili e hardware essenziale per le tue console.", search: "Cerca prodotti...", all: "Tutti", read: "🛒 Vedi Prodotto", empty: "Nessun prodotto trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi", view: "🔎 Ingrandisci" },
+  pt: { title: "Produtos e Acessórios | La Presa", heroTitle: "Centro de Produtos", heroDesc: "Acessórios recomendados, ferramentas úteis e hardware essencial para as tuas consolas.", search: "Procurar produtos...", all: "Todos", read: "🛒 Ver Producto", empty: "Nenhum produto encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizaciones", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi", view: "🔎 Ampliar" },
+  ja: { title: "製品とアクセサリー | La Presa", heroTitle: "製品センター", heroDesc: "コンソールに推奨されるアクセサリー、便利なツール、および不可欠なハードウェア。", search: "製品を検索...", all: "すべて", read: "🛒 製品を見る", empty: "製品が見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート", view: "🔎 拡大" },
+  ko: { title: "제품 및 액세서리 | La Presa", heroTitle: "제품 센터", heroDesc: "콘솔을 위한 추천 액세서리, 유용한 도구 및 필수 하드웨어.", search: "제품 검색...", all: "모든", read: "🛒 제품 보기", empty: "제품을 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", view: "🔎 확대" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
 let idiomaActual = 'en'; 
 let categoriasUnicas = new Set();
+let subcategoriasMapa = {}; 
 let filtroActual = 'ALL'; 
-let todasLasGuias = [];
+let subfiltroActual = 'ALL';
+let filtroCapacidadActual = 'ALL';
+let todosLosProductos = [];
+let adminTabActual = 'add';
+let productoEnEdicionId = null;
 
 const fileSearch = document.getElementById('fileSearch');
 const updatesGrid = document.getElementById('updatesGrid');
 const consoleButtons = document.getElementById('consoleButtons');
+const subFiltersGrid = document.getElementById('subFiltersGrid');
+const capacityFiltersGrid = document.getElementById('capacityFiltersGrid');
 const themeDotsContainer = document.getElementById('themeDots');
 const mybutton = document.getElementById("backToTopBtn");
 
@@ -366,16 +344,14 @@ const paletaTemas = {
 
 function initThemeDots() {
   const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul';
-  const savedMode = localStorage.getItem('selectedMode') || 'dark'; // <- Cambiado a 'dark'
+  const savedMode = localStorage.getItem('selectedMode') || 'dark';
   
   themeDotsContainer.innerHTML = '';
   
-  // 1. Botones de colores de acento
   Object.keys(paletaTemas).forEach(colorKey => {
     const dot = document.createElement('div'); 
     dot.className = 'color-dot theme-color-dot'; 
     dot.style.backgroundColor = paletaTemas[colorKey].hex;
-    dot.setAttribute('aria-label', `Tema ${colorKey}`);
     if (colorKey === savedTheme) dot.classList.add('active-dot');
     dot.addEventListener('click', () => {
       document.querySelectorAll('.theme-color-dot').forEach(d => d.classList.remove('active-dot'));
@@ -386,7 +362,6 @@ function initThemeDots() {
     themeDotsContainer.appendChild(dot);
   });
 
-  // Separador visual
   const separador = document.createElement('div');
   separador.style.width = '2px';
   separador.style.backgroundColor = 'var(--glass-border)';
@@ -394,21 +369,16 @@ function initThemeDots() {
   separador.style.borderRadius = '2px';
   themeDotsContainer.appendChild(separador);
 
-  // 2. Botón MODO OSCURO (Negro)
   const dotOscuro = document.createElement('div');
   dotOscuro.className = 'color-dot mode-dot';
   dotOscuro.style.backgroundColor = '#141414';
   dotOscuro.style.border = '1px solid #555';
-  dotOscuro.setAttribute('title', 'Forzar Modo Oscuro');
   
-  // 3. Botón MODO CLARO (Blanco)
   const dotClaro = document.createElement('div');
   dotClaro.className = 'color-dot mode-dot';
   dotClaro.style.backgroundColor = '#f8f9fa';
   dotClaro.style.border = '1px solid #ccc';
-  dotClaro.setAttribute('title', 'Forzar Modo Claro');
 
-  // Restaurar configuración al cargar
   if (savedMode === 'dark') {
     dotOscuro.classList.add('active-dot');
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -417,7 +387,6 @@ function initThemeDots() {
     document.documentElement.setAttribute('data-theme', 'light');
   }
 
-  // Eventos de click
   dotOscuro.addEventListener('click', () => {
     document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
     dotOscuro.classList.add('active-dot');
@@ -440,7 +409,8 @@ function initThemeDots() {
 
 function applyTheme(colorKey) {
   const theme = paletaTemas[colorKey] || paletaTemas.rojo;
-  document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+  document.documentElement.style.setProperty('--red', theme.hex); 
+  document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
 }
 
 /* ================= SELECTOR DE IDIOMAS ================= */
@@ -463,7 +433,7 @@ function createLanguageSelector(){
   
   selector.addEventListener('change', e => {
     idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
-    updateLanguage(); renderFilterButtons(); renderNoticias();
+    updateLanguage(); renderFilterButtons(); buildSubfiltersGrid(); renderNoticias();
   });
 }
 
@@ -473,12 +443,10 @@ function updateLanguage(){
   
   const titleNode = document.getElementById('heroTitle');
   const textSpan = titleNode.querySelector('span');
-  if (textSpan) {
-    textSpan.textContent = ' ' + t.heroTitle;
-  }
+  if (textSpan) textSpan.textContent = ' ' + t.heroTitle;
 
   document.getElementById('heroDesc').textContent = t.heroDesc;
-  document.getElementById('heroWarning').textContent = t.heroWarning;
+  document.getElementById('heroWarning').textContent = t.heroWarning || '';
   fileSearch.placeholder = t.search;
 
   if (document.getElementById('videosBtn')) {
@@ -492,7 +460,7 @@ function updateLanguage(){
   if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
-/* ================= BOTONES DINÁMICOS ================= */
+/* ================= FILTROS Y SUBSECCIONES AVANZADAS ================= */
 function renderFilterButtons() {
   consoleButtons.innerHTML = '';
   const t = translations[idiomaActual] || translations['en'];
@@ -500,24 +468,31 @@ function renderFilterButtons() {
   const btnAll = document.createElement('button');
   btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
   btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
-  btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
+  btnAll.onclick = () => { 
+    filtroActual = 'ALL'; 
+    subfiltroActual = 'ALL'; 
+    filtroCapacidadActual = 'ALL';
+    renderFilterButtons(); 
+    buildSubfiltersGrid();
+    renderNoticias(); 
+  };
   consoleButtons.appendChild(btnAll);
 
   const iconMap = {
-    'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
-    '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
-    'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
-    'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
-    'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
-    'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
-    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
-    'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
-    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
-    'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
+    'SWITCH':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
+    '3DS':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    'NDS':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'NDSI':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'WII':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
+    'WII MINI':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
+    'WII U':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
+    'VWII':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
+    'SD_USB':'https://cdn.jsdelivr.net/gh/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
+    'PLAYSTATION':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
     'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
   };
 
-  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
+  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'PLAYSTATION', 'XBOX', 'SD_USB'];
 
   const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
     const indexA = ordenDeseado.indexOf(a);
@@ -531,184 +506,479 @@ function renderFilterButtons() {
   categoriasOrdenadas.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
-    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📁</span>`;
-    btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
-    btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
+    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📦</span>`;
+    btn.innerHTML = `${iconSrc}<span>${cat.replace('_','/')}</span>`;
+    btn.onclick = () => { 
+      filtroActual = cat; 
+      subfiltroActual = 'ALL'; 
+      filtroCapacidadActual = 'ALL';
+      renderFilterButtons(); 
+      buildSubfiltersGrid();
+      renderNoticias(); 
+    };
     consoleButtons.appendChild(btn);
   });
 }
 
-/* ================= LÓGICA RADAR DE ACTUALIZACIONES ================= */
-async function verificarNotificacionesRadar() {
-  const badge = document.getElementById('radarBadge');
-  if (!badge) return;
-  try {
-    const response = await fetch('ultimas_noticias.json');
-    if(!response.ok) return;
-    const noticias = await response.json();
-    if(noticias.length > 0) {
-      const ultimaFechaNoticia = new Date(noticias[0].date).getTime();
-      const ultimaVisitaRadar = localStorage.getItem('ultimaVisitaRadar');
-      if(!ultimaVisitaRadar || ultimaFechaNoticia > parseInt(ultimaVisitaRadar)) { badge.style.display = 'block'; }
-    }
-  } catch (error) { console.log("Aún no hay base de datos del radar."); }
+function buildSubfiltersGrid() {
+  subFiltersGrid.innerHTML = '';
+  capacityFiltersGrid.innerHTML = '';
+
+  if (filtroActual === 'ALL') return;
+
+  const subs = subcategoriasMapa[filtroActual] || [];
+  if (subs.length > 0) {
+    const t = translations[idiomaActual] || translations['en'];
+    const btnAllSub = document.createElement('button');
+    btnAllSub.className = 'sub-btn' + (subfiltroActual === 'ALL' ? ' sub-active' : '');
+    btnAllSub.textContent = `${t.all} Subcategorías`;
+    btnAllSub.onclick = () => {
+      subfiltroActual = 'ALL';
+      buildSubfiltersGrid();
+      renderNoticias();
+    };
+    subFiltersGrid.appendChild(btnAllSub);
+
+    subs.forEach(s => {
+      const btnSub = document.createElement('button');
+      btnSub.className = 'sub-btn' + (subfiltroActual === s ? ' sub-active' : '');
+      btnSub.textContent = s;
+      btnSub.onclick = () => {
+        subfiltroActual = s;
+        buildSubfiltersGrid();
+        renderNoticias();
+      };
+      subFiltersGrid.appendChild(btnSub);
+    });
+  }
+
+  if (filtroActual === 'SD_USB') {
+    const capacidades = ['ALL', '32GB', '64GB', '128GB', '256GB', '512GB', '1TB'];
+    capacidades.forEach(cap => {
+      const btnCap = document.createElement('button');
+      btnCap.className = 'sub-btn' + (filtroCapacidadActual === cap ? ' sub-active' : '');
+      btnCap.textContent = cap === 'ALL' ? 'Cualquier Capacidad' : cap;
+      btnCap.onclick = () => {
+        filtroCapacidadActual = cap;
+        buildSubfiltersGrid();
+        renderNoticias();
+      };
+      capacityFiltersGrid.appendChild(btnCap);
+    });
+  }
 }
 
-function abrirRadar() {
-  localStorage.setItem('ultimaVisitaRadar', Date.now().toString());
-  window.open('actualizaciones.html', '_self');
+/* ================= COMPORTAMIENTO CARRUSEL ================= */
+let carruselEstados = {};
+
+function moverCarrusel(cardId, direccion) {
+  const contenedor = document.getElementById(`track-${cardId}`);
+  if (!contenedor) return;
+  const imagenes = contenedor.querySelectorAll('.carousel-img');
+  const total = imagenes.length;
+  if (total <= 1) return;
+
+  if (!carruselEstados[cardId]) carruselEstados[cardId] = 0;
+  
+  carruselEstados[cardId] = (carruselEstados[cardId] + direccion + total) % total;
+  contenedor.style.transform = `translateX(-${carruselEstados[cardId] * 100}%)`;
+
+  const dots = document.querySelectorAll(`#dots-${cardId} .carousel-dot`);
+  dots.forEach((dot, idx) => {
+    if (idx === carruselEstados[cardId]) dot.classList.add('active');
+    else dot.classList.remove('active');
+  });
 }
 
-/* ================= RENDERIZAR PARRILLA ================= */
+function openImageModal(src) {
+  const modal = document.getElementById('imagePreviewModal');
+  const modalImg = document.getElementById('modalTargetImg');
+  modalImg.src = src;
+  modal.classList.add('active');
+}
+
+function closeImageModal() {
+  document.getElementById('imagePreviewModal').classList.remove('active');
+}
+
+/* ================= RENDERIZAR PARRILLA DE PRODUCTOS ================= */
 function renderNoticias() {
   const t = translations[idiomaActual] || translations['en'];
   const query = fileSearch.value.toLowerCase().trim();
   updatesGrid.innerHTML = '';
 
-  let filtradas = todasLasGuias;
+  let filtrados = todosLosProductos;
   
   if (filtroActual !== 'ALL') {
-    filtradas = filtradas.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+    filtrados = filtrados.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  }
+  
+  if (subfiltroActual !== 'ALL') {
+    filtrados = filtrados.filter(n => n.tag && n.tag.split('/')[1] && n.tag.split('/')[1].trim() === subfiltroActual);
+  }
+
+  if (filtroCapacidadActual !== 'ALL' && filtroActual === 'SD_USB') {
+    filtrados = filtrados.filter(n => n.capacity && n.capacity.toUpperCase() === filtroCapacidadActual);
   }
   
   if (query) {
-    filtradas = filtradas.filter(n => {
+    filtrados = filtrados.filter(n => {
       let tituloAct = n.titles[idiomaActual] || n.titles['en'] || '';
       let descAct = n.descs[idiomaActual] || n.descs['en'] || '';
       return tituloAct.toLowerCase().includes(query) || descAct.toLowerCase().includes(query) || (n.tag && n.tag.toLowerCase().includes(query));
     });
   }
 
-  if (filtradas.length === 0) {
+  if (filtrados.length === 0) {
     updatesGrid.innerHTML = `<p style="color:#aaa; text-align:center; grid-column:1/-1; font-size:1.15rem; padding: 50px 0;">${t.empty}</p>`;
     return;
   }
 
-  let htmlResult = '';
-  filtradas.forEach(guia => {
-    const dateStr = new Date(guia.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
-    const titulo = guia.titles[idiomaActual] || guia.titles['en'] || 'Guía';
-    const descripcion = guia.descs[idiomaActual] || guia.descs['en'] || '';
+  filtrados.forEach((prod, index) => {
+    const cardId = prod.id || `prod-${index}`;
+    const dateStr = new Date(prod.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
+    const titulo = prod.titles[idiomaActual] || prod.titles['en'] || 'Producto';
+    const descripcion = prod.descs[idiomaActual] || prod.descs['en'] || '';
+    
+    let imagesArr = [];
+    if (prod.images && Array.isArray(prod.images)) imagesArr = prod.images;
+    else if (prod.image) imagesArr = [prod.image];
+    if (imagesArr.length === 0) imagesArr = ['https://via.placeholder.com/400x200?text=No+Image'];
 
-    htmlResult += `
-      <div class="update-card">
-        <div class="update-header">
-          <span class="update-tag">${guia.tag}</span>
-          <span class="update-date">📅 ${dateStr}</span>
+    let carruselHTML = '';
+    if (imagesArr.length > 1) {
+      let trackHTML = '';
+      let dotsHTML = '';
+      imagesArr.forEach((imgUrl, idx) => {
+        trackHTML += `<img src="${imgUrl}" class="carousel-img" onclick="openImageModal('${imgUrl}')" alt="${titulo}"/>`;
+        dotsHTML += `<div class="carousel-dot ${idx === 0 ? 'active' : ''}"></div>`;
+      });
+      carruselHTML = `
+        <div class="card-carousel">
+          <button class="carousel-btn carousel-prev" onclick="moverCarrusel('${cardId}', -1)">‹</button>
+          <button class="carousel-btn carousel-next" onclick="moverCarrusel('${cardId}', 1)">›</button>
+          <div class="carousel-track" id="track-${cardId}">${trackHTML}</div>
+          <div class="carousel-dots" id="dots-${cardId}">${dotsHTML}</div>
         </div>
-        <h3><a href="${guia.link}" target="_self">${titulo}</a></h3>
-        <div class="update-body">${descripcion}</div>
-        <div class="update-footer">
-          <a href="${guia.link}" target="_self" class="download-link">${t.read}</a>
+      `;
+    } else {
+      carruselHTML = `
+        <div class="card-carousel">
+          <img src="${imagesArr[0]}" class="carousel-img" onclick="openImageModal('${imagesArr[0]}')" alt="${titulo}"/>
         </div>
+      `;
+    }
+
+    let badgeHTML = '';
+    if (prod.status) {
+      let cssClass = `status-${prod.status.toLowerCase()}`;
+      badgeHTML = `<span class="card-badge-status ${cssClass}">${prod.status}</span>`;
+    }
+
+    let precioHTML = '';
+    if (prod.price) {
+      precioHTML += `<span class="card-price">${prod.price}</span>`;
+      if (prod.oldPrice) {
+        precioHTML += `<span class="card-old-price">${prod.oldPrice}</span>`;
+      }
+    }
+
+    const card = document.createElement('div');
+    card.className = 'update-card';
+    card.innerHTML = `
+      ${badgeHTML}
+      ${carruselHTML}
+      <div class="update-header">
+        <span class="update-tag">${prod.tag}</span>
+        <span class="update-date">📅 ${dateStr}</span>
+      </div>
+      <h3><a href="${prod.link}" target="_blank">${titulo}</a></h3>
+      <div class="card-price-row">${precioHTML}</div>
+      <div class="update-body">${descripcion}</div>
+      <div class="card-actions">
+        <a href="${prod.link}" target="_blank" class="download-link">${t.read}</a>
+        <button class="btn-secondary-action" onclick="openImageModal('${imagesArr[0]}')">${t.view}</button>
       </div>
     `;
+
+    if (localStorage.getItem('adminSession') === 'active') {
+      card.addEventListener('dblclick', () => abrirEditorProducto(prod));
+      card.style.cursor = 'pointer';
+      card.title = "Doble click para editar producto";
+    }
+
+    updatesGrid.appendChild(card);
   });
-  updatesGrid.innerHTML = htmlResult;
 }
 
-/* ================= LECTURA DINÁMICA: CARGA INSTANTÁNEA (0ms) + FETCH SILENCIOSO ================= */
-async function cargarDatosGuias() {
-  const loader = document.getElementById('mainLoader');
-  const cacheData = localStorage.getItem('guiasCache_v2');
-  const cacheTime = localStorage.getItem('guiasCacheTime_v2');
-  
-  if (cacheData) {
-    try {
-      todasLasGuias = JSON.parse(cacheData);
-      categoriasUnicas.clear();
-      todasLasGuias.forEach(n => {
-        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
-      });
-      loader.style.display = 'none';
-      renderFilterButtons();
-      renderNoticias();
-      console.log("⚡ Guías cargadas instantáneamente desde caché local.");
-    } catch (e) {
-      console.warn("Caché local dañado. Limpiando para descarga fresca...");
-      localStorage.removeItem('guiasCache_v2');
-    }
-  } else {
-    loader.style.display = 'block';
-  }
+/* ================= PANEL DE ADMINISTRACIÓN LOCAL ================= */
+// Firma Hash SHA-256 generada para la clave exacta "Kelonio-21"
+const TRIGGER_HASH = "3bb870c9779dfaa0e71912a7f590bf7e710b80efbe73b06456f96be4b998cfb6";
 
-  const TREINTA_MINUTOS_MS = 30 * 60 * 1000;
-  if (cacheTime && (Date.now() - parseInt(cacheTime) < TREINTA_MINUTOS_MS)) {
-    console.log("🛡️ Caché muy reciente. Se omite la petición en segundo plano a GitHub.");
-    return;
+async function verificarHash(input) {
+  const msgUint8 = new TextEncoder().encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('') === TRIGGER_HASH;
+}
+
+document.getElementById('invisibleTrigger').addEventListener('click', async () => {
+  if (localStorage.getItem('adminSession') === 'active') {
+    abrirPanelAdmin();
+  } else {
+    const pass = prompt("Introduce la clave de acceso de desarrollador:");
+    if (pass && await verificarHash(pass)) {
+      localStorage.setItem('adminSession', 'active');
+      abrirPanelAdmin();
+      renderNoticias();
+    } else if (pass) {
+      alert("Clave inválida.");
+    }
   }
+});
+
+function abrirPanelAdmin() {
+  document.getElementById('adminControlPanel').style.display = 'flex';
+  switchAdminTab(adminTabActual);
+}
+
+function cerrarPanelAdmin() {
+  document.getElementById('adminControlPanel').style.display = 'none';
+}
+
+function switchAdminTab(tab) {
+  adminTabActual = tab;
+  document.querySelectorAll('.admin-menu-btn').forEach(b => b.classList.remove('active'));
+  if(tab === 'add') document.getElementById('menuBtnAdd').classList.add('active');
+  if(tab === 'bulk') document.getElementById('menuBtnBulk').classList.add('active');
+  if(tab === 'cats') document.getElementById('menuBtnCats').classList.add('active');
+  renderAdminBody();
+}
+
+function renderAdminBody() {
+  const area = document.getElementById('adminContentArea');
+  area.innerHTML = '';
+
+  if (adminTabActual === 'add') {
+    let p = todosLosProductos.find(x => x.id === productoEnEdicionId) || {
+      id: `prod-${Date.now()}`, tag: `${filtroActual !== 'ALL' ? filtroActual : 'SWITCH'} / General`, date: new Date().toISOString().split('T')[0],
+      titles: {es:'', en:''}, descs: {es:'', en:''}, images: [''], link: '', price: '', oldPrice: '', status: 'Nuevo', capacity: ''
+    };
+
+    area.innerHTML = `
+      <h3>${productoEnEdicionId ? 'Modificar Producto Existente' : 'Crear Nuevo Producto'}</h3>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>ID Único</label><input type="text" id="adm_id" class="admin-input" value="${p.id}" readonly/></div>
+        <div class="admin-form-group"><label>Fecha</label><input type="date" id="adm_date" class="admin-input" value="${p.date.split('T')[0]}"/></div>
+      </div>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>Tag Compuesto (Consola / Subcategoría)</label><input type="text" id="adm_tag" class="admin-input" value="${p.tag}" placeholder="SWITCH / Accesorios"/></div>
+        <div class="admin-form-group">
+          <label>Estado Badge</label>
+          <select id="adm_status" class="admin-select">
+            <option value="" ${!p.status?'selected':''}>Ninguno</option>
+            <option value="Nuevo" ${p.status==='Nuevo'?'selected':''}>Nuevo</option>
+            <option value="Recomendado" ${p.status==='Recomendado'?'selected':''}>Recomendado</option>
+            <option value="Agotado" ${p.status==='Agotado'?'selected':''}>Agotado</option>
+          </select>
+        </div>
+      </div>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>Precio</label><input type="text" id="adm_price" class="admin-input" value="${p.price || ''}" placeholder="19.99€"/></div>
+        <div class="admin-form-group"><label>Precio Anterior</label><input type="text" id="adm_oldprice" class="admin-input" value="${p.oldPrice || ''}" placeholder="29.99€"/></div>
+      </div>
+      <div class="admin-form-group"><label>Capacidad (Solo SD/USB)</label><input type="text" id="adm_capacity" class="admin-input" value="${p.capacity || ''}" placeholder="128GB"/></div>
+      <div class="admin-form-group"><label>Título (ES)</label><input type="text" id="adm_title_es" class="admin-input" value="${p.titles.es || ''}"/></div>
+      <div class="admin-form-group"><label>Título (EN)</label><input type="text" id="adm_title_en" class="admin-input" value="${p.titles.en || ''}"/></div>
+      <div class="admin-form-group"><label>Descripción (ES)</label><textarea id="adm_desc_es" class="admin-input" style="height:60px;">${p.descs.es || ''}</textarea></div>
+      <div class="admin-form-group"><label>Descripción (EN)</label><textarea id="adm_desc_en" class="admin-input" style="height:60px;">${p.descs.en || ''}</textarea></div>
+      <div class="admin-form-group"><label>URL Enlace Externo</label><input type="text" id="adm_link" class="admin-input" value="${p.link || ''}"/></div>
+      <div class="admin-form-group"><label>Imágenes (Separadas por comas)</label><input type="text" id="adm_images" class="admin-input" value="${Array.isArray(p.images) ? p.images.join(', ') : (p.image || '')}"/></div>
+    `;
+  } 
+  else if (adminTabActual === 'bulk') {
+    let opcionesConsolas = Array.from(categoriasUnicas).map(c => `<option value="${c}">${c}</option>`).join('');
+    area.innerHTML = `
+      <h3>Reubicación de Productos por Lotes</h3>
+      <div class="admin-row-inline">
+        <div class="admin-form-group"><label>Consola Origen</label><select id="bulk_src_con" class="admin-select">${opcionesConsolas}</select></div>
+        <div class="admin-form-group"><label>Subcategoría Origen</label><input type="text" id="bulk_src_sub" class="admin-input" placeholder="Ej: Mandos"/></div>
+      </div>
+      <div class="admin-row-inline" style="margin-top:15px;">
+        <div class="admin-form-group"><label>Consola Destino</label><select id="bulk_dest_con" class="admin-select">${opcionesConsolas}</select></div>
+        <div class="admin-form-group"><label>Subcategoría Destino</label><input type="text" id="bulk_dest_sub" class="admin-input" placeholder="Ej: Avanzados"/></div>
+      </div>
+      <button class="admin-btn-secondary" style="margin-top:15px;" onclick="ejecutarReubicacionMasiva()">Ejecutar Reubicación</button>
+    `;
+  } 
+  else if (adminTabActual === 'cats') {
+    let listaHTML = '';
+    Object.keys(subcategoriasMapa).forEach(con => {
+      listaHTML += `<div style="margin-bottom:12px;"><strong>${con}:</strong> <span style="color:var(--red);">${subcategoriasMapa[con].join(', ') || 'Ninguna'}</span></div>`;
+    });
+    area.innerHTML = `
+      <h3>Gestionar Subcategorías</h3>
+      <div style="background:rgba(0,0,0,0.2); padding:12px; border-radius:8px; max-height:200px; overflow-y:auto; margin-bottom:15px;">${listaHTML}</div>
+      <div class="admin-form-group"><label>Consola Seleccionada</label><select id="cat_console" class="admin-select">${Array.from(categoriasUnicas).map(c => `<option value="${c}">${c}</option>`).join('')}</select></div>
+      <div class="admin-form-group" style="margin-top:10px;"><label>Nueva Subcategoría</label><input type="text" id="cat_new_sub" class="admin-input"/></div>
+      <button class="admin-btn-secondary" style="margin-top:12px;" onclick="añadirNuevaSubcategoria()">Registrar Subcategoría</button>
+    `;
+  }
+}
+
+function abrirEditorProducto(producto) {
+  productoEnEdicionId = producto.id;
+  switchAdminTab('add');
+  abrirPanelAdmin();
+}
+
+function añadirNuevaSubcategoria() {
+  const con = document.getElementById('cat_console').value;
+  const sub = document.getElementById('cat_new_sub').value.trim();
+  if(!sub) return;
+  if(!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+  if(!subcategoriasMapa[con].includes(sub)) {
+    subcategoriasMapa[con].push(sub);
+    alert(`Subcategoría "${sub}" añadida.`);
+    renderAdminBody();
+  }
+}
+
+function ejecutarReubicacionMasiva() {
+  const srcCon = document.getElementById('bulk_src_con').value;
+  const srcSub = document.getElementById('bulk_src_sub').value.trim();
+  const destCon = document.getElementById('bulk_dest_con').value;
+  const destSub = document.getElementById('bulk_dest_sub').value.trim();
+
+  if(!srcSub || !destSub) { alert("Campos incompletos."); return; }
+
+  let contador = 0;
+  todosLosProductos.forEach(p => {
+    if(p.tag) {
+      let parts = p.tag.split('/');
+      if(parts[0].trim().toUpperCase() === srcCon && parts[1] && parts[1].trim() === srcSub) {
+        p.tag = `${destCon} / ${destSub}`;
+        contador++;
+      }
+    }
+  });
+  alert(`Reubicados ${contador} productos.`);
+  reconstruirFiltrosDesdeDatos();
+  renderNoticias();
+  renderAdminBody();
+}
+
+function guardarCambiosAdmin() {
+  if (adminTabActual === 'add') {
+    const id = document.getElementById('adm_id').value;
+    const tag = document.getElementById('adm_tag').value.trim();
+    const date = document.getElementById('adm_date').value;
+    const status = document.getElementById('adm_status').value;
+    const price = document.getElementById('adm_price').value.trim();
+    const oldPrice = document.getElementById('adm_oldprice').value.trim();
+    const capacity = document.getElementById('adm_capacity').value.trim();
+    const titleEs = document.getElementById('adm_title_es').value.trim();
+    const titleEn = document.getElementById('adm_title_en').value.trim();
+    const descEs = document.getElementById('adm_desc_es').value.trim();
+    const descEn = document.getElementById('adm_desc_en').value.trim();
+    const link = document.getElementById('adm_link').value.trim();
+    const imgs = document.getElementById('adm_images').value.split(',').map(x => x.trim()).filter(x => x);
+
+    if(!tag || !titleEs || !link) { alert("Campos obligatorios incompletos."); return; }
+
+    let idx = todosLosProductos.findIndex(x => x.id === id);
+    let p = idx !== -1 ? todosLosProductos[idx] : { id: id };
+
+    p.tag = tag; p.date = date; p.status = status; p.price = price; p.oldPrice = oldPrice; p.capacity = capacity; p.link = link; p.images = imgs;
+    p.titles = { es: titleEs, en: titleEn || titleEs };
+    p.descs = { es: descEs, en: descEn || descEs };
+
+    if (idx === -1) todosLosProductos.unshift(p);
+
+    alert("Guardado localmente en memoria.");
+    productoEnEdicionId = null;
+    reconstruirFiltrosDesdeDatos();
+    renderNoticias();
+    cerrarPanelAdmin();
+  }
+}
+
+function reconstruirFiltrosDesdeDatos() {
+  categoriasUnicas.clear();
+  todosLosProductos.forEach(p => {
+    if (p.tag) {
+      let parts = p.tag.split('/');
+      let con = parts[0].trim().toUpperCase();
+      let sub = parts[1] ? parts[1].trim() : 'General';
+      categoriasUnicas.add(con);
+      if(!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+      if(!subcategoriasMapa[con].includes(sub)) subcategoriasMapa[con].push(sub);
+    }
+  });
+  renderFilterButtons();
+}
+
+function exportarJSONActualizado() {
+  if (filtroActual === 'ALL') { alert("Selecciona una consola antes."); return; }
+  let productosConsola = todosLosProductos.filter(p => p.tag && p.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  let dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(productosConsola, null, 2));
+  let downloadAnchor = document.createElement('a');
+  downloadAnchor.setAttribute("href", dataStr);
+  downloadAnchor.setAttribute("download", `${filtroActual.toLowerCase()}.json`);
+  document.body.appendChild(downloadAnchor);
+  downloadAnchor.click();
+  downloadAnchor.remove();
+}
+
+/* ================= CARGAR PRODUCTOS DESDE PROXYS AUTORIZADOS ================= */
+async function cargarDatosProductos() {
+  const loader = document.getElementById('mainLoader');
+  loader.style.display = 'block';
+
+  // Usamos cdn.jsdelivr.net en lugar de raw.githubusercontent.com para saltar el bloqueo CORS
+  const urls = [
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/3ds.json',
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/playstation.json',
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/sd_usb.json',
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/switch.json',
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/wii.json',
+    'https://cdn.jsdelivr.net/gh/Kelonio-hub/Archivos-Kelonio@main/productos/xbox.json'
+  ];
 
   try {
-    console.log("🔄 Buscando updates en GitHub en segundo plano...");
-    const repo = 'Kelonio-hub/Archivos-Kelonio'; 
-    const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
-    
-    const response = await fetch(apiURL, { cache: "no-store" });
-    if (!response.ok) {
-      if (response.status === 403) {
-        console.warn("⚠️ Límite de la API de GitHub alcanzado. Se mantienen los datos locales.");
-      }
-      throw new Error("No se pudo contactar con la API de GitHub");
-    }
-    
-    const archivos = await response.json();
-    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
-    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
+    const timestamp = new Date().getTime();
+    const peticiones = urls.map(url => 
+      fetch(`${url}?t=${timestamp}`).then(res => {
+        if (!res.ok) throw new Error();
+        return res.json();
+      })
+    );
 
-    const PromesasGuias = htmlFiles.map(async (file) => {
-      try {
-        const res = await fetch(file.download_url + '?t=' + new Date().getTime());
-        const htmlText = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, 'text/html');
-        
-        const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
-        const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
-        
-        let titles = {}, descs = {};
-        langs.forEach(l => {
-            titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
-            descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
-        });
-
-        return { tag, date, titles, descs, link: `guias/${file.name}` };
-      } catch (fileError) {
-        return null;
+    const resultados = await Promise.all(peticiones);
+    todosLosProductos = resultados.flat();
+    todosLosProductos.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    subcategoriasMapa = {};
+    categoriasUnicas.clear();
+    todosLosProductos.forEach((n, idx) => {
+      if(!n.id) n.id = `prod-init-${idx}`;
+      if (n.tag) {
+        let parts = n.tag.split('/');
+        let con = parts[0].trim().toUpperCase();
+        let sub = parts[1] ? parts[1].trim() : 'General';
+        categoriasUnicas.add(con);
+        if (!subcategoriasMapa[con]) subcategoriasMapa[con] = [];
+        if (!subcategoriasMapa[con].includes(sub)) subcategoriasMapa[con].push(sub);
       }
     });
 
-    const resultados = await Promise.all(PromesasGuias);
-    const nuevasGuias = resultados.filter(g => g !== null);
-    nuevasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    localStorage.setItem('guiasCacheTime_v2', Date.now());
-
-    const cambiosDetectados = JSON.stringify(nuevasGuias) !== JSON.stringify(todasLasGuias);
-
-    if (cambiosDetectados) {
-      console.log("✨ ¡Nuevos contenidos detectados! Actualizando la vista en vivo...");
-      todasLasGuias = nuevasGuias;
-      localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
-      
-      categoriasUnicas.clear();
-      todasLasGuias.forEach(n => {
-        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
-      });
-
-      loader.style.display = 'none';
-      renderFilterButtons();
-      renderNoticias();
-    } else {
-      console.log("👍 Las guías mostradas ya eran la versión más reciente.");
-      loader.style.display = 'none';
-    }
+    loader.style.display = 'none';
+    renderFilterButtons();
+    renderNoticias();
 
   } catch (error) {
-    console.error("Error en la comprobación en segundo plano:", error.message);
     loader.style.display = 'none';
-    if (!todasLasGuias.length) {
-      updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
-    }
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">Error de comunicación con el repositorio. Revisa la configuración CORS.</p>`;
   }
 }
 
@@ -716,9 +986,7 @@ async function cargarDatosGuias() {
 let timeoutBuscador = null;
 fileSearch.addEventListener('input', () => {
   clearTimeout(timeoutBuscador);
-  timeoutBuscador = setTimeout(() => {
-    renderNoticias();
-  }, 250);
+  timeoutBuscador = setTimeout(() => { renderNoticias(); }, 250);
 });
 
 window.onscroll = function() {
@@ -729,8 +997,7 @@ window.onload = () => {
   initThemeDots();
   createLanguageSelector();
   updateLanguage();
-  cargarDatosGuias();
-  verificarNotificacionesRadar();
+  cargarDatosProductos();
 };
 </script>
 </body>
