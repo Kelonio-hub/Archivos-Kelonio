@@ -1,5 +1,5 @@
 {
-  "switch": [
+  "SWITCH": [
     {
       "id": "1",
       "label": { "en": "Switch: Check Mariko", "es": "Switch: Comprobar Mariko", "fr": "Switch : Vérifier Mariko", "it": "Switch: Verifica Mariko", "pt": "Switch: Verificar Mariko", "de": "Switch: Mariko prüfen", "ja": "Switch: Marikoを確認", "ko": "Switch: Mariko 확인" },
@@ -129,7 +129,7 @@
       "videoYoutubeIds": ["7oQzpDx2mHc"]
     }
   ],
-  "3ds": [
+  "3DS": [
     {
       "id": "21",
       "label": { "en": "3DS: Hack - MSET9", "es": "3DS: Hack - MSET9", "fr": "3DS : Hack - MSET9", "it": "3DS: Hack - MSET9", "pt": "3DS: Hack - MSET9", "de": "3DS: Hack - MSET9", "ja": "3DS: Hack - MSET9", "ko": "3DS: Hack - MSET9" },
@@ -467,7 +467,7 @@
       "videoYoutubeIds": ["TYymdrfkPt4"]
     }
   ],
-  "nds": [
+  "NDS": [
     {
       "id": "1",
       "label": { "en": "NDS: Hack NDSi - MemoryPit", "es": "NDS: Hack NDSi - MemoryPit", "fr": "NDS : Hack NDSi - MemoryPit", "it": "NDS: Hack NDSi - MemoryPit", "pt": "NDS: Hack NDSi - MemoryPit", "de": "NDS: Hack NDSi - MemoryPit", "ja": "NDS: Hack NDSi - MemoryPit", "ko": "NDS: Hack NDSi - MemoryPit" },
@@ -493,30 +493,12 @@
       "videoYoutubeIds": ["BaB_n_6PB48"]
     }
   ],
-  "wii": [
+  "WII": [
     {
       "id": "1",
       "label": { "en": "Wii: Hack Wii - WiiBrand", "es": "Wii: Hack wii - Wiibrand", "fr": "Wii : Hack Wii - WiiBrand", "it": "Wii: Hack Wii - WiiBrand", "pt": "Wii: Hack Wii - WiiBrand", "de": "Wii: Hack Wii - WiiBrand", "ja": "Wii: Hack Wii - WiiBrand", "ko": "Wii: Hack Wii - WiiBrand" },
       "desc": { "en": "WiiBrand hack for Wii", "es": "Hack WiiBrand para Wii", "fr": "Hack WiiBrand pour Wii", "it": "Hack WiiBrand per Wii", "pt": "Hack WiiBrand para Wii", "de": "WiiBrand-Hack für Wii", "ja": "Wii用WiiBrandハック", "ko": "Wii WiiBrand 핵" },
       "videoYoutubeIds": ["MQ6GjU_vtuA"]
-    },
-    {
-      "id": "2",
-      "label": { "en": "Wii: Hack Wii Mini - BlueBomb", "es": "Wii: Hack Wii Mini - BlueBomb", "fr": "Wii : Hack Wii Mini - BlueBomb", "it": "Wii: Hack Wii Mini - BlueBomb", "pt": "Wii: Hack Wii Mini - BlueBomb", "de": "Wii: Hack Wii Mini - BlueBomb", "ja": "Wii: Hack Wii Mini - BlueBomb", "ko": "Wii: Hack Wii Mini - BlueBomb" },
-      "desc": { "en": "BlueBomb hack for Wii Mini", "es": "Hack BlueBomb para Wii Mini", "fr": "Hack BlueBomb pour Wii Mini", "it": "Hack BlueBomb per Wii Mini", "pt": "Hack BlueBomb para Wii Mini", "de": "BlueBomb-Hack für Wii Mini", "ja": "Wii Mini用BlueBombハック", "ko": "Wii Mini BlueBomb 핵" },
-      "videoYoutubeIds": ["1clOkDVWhoQ"]
-    },
-    {
-      "id": "3",
-      "label": { "en": "WiiU: Hack WiiU - CFW Dual", "es": "WiiU: Hack WIIU CFW-DUAL", "fr": "WiiU : Hack WiiU - CFW Dual", "it": "WiiU: Hack WiiU - CFW Dual", "pt": "WiiU: Hack WiiU - CFW Dual", "de": "WiiU: Hack WiiU - CFW Dual", "ja": "WiiU: Hack WiiU - CFW Dual", "ko": "WiiU: Hack WiiU - CFW Dual" },
-      "desc": { "en": "CFW Dual hack for Wii U", "es": "Hack CFW Dual para Wii U", "fr": "Hack CFW Dual pour Wii U", "it": "Hack CFW Dual per Wii U", "pt": "Hack CFW Dual para Wii U", "de": "CFW Dual-Hack für Wii U", "ja": "Wii U用CFW Dualハック", "ko": "Wii U CFW Dual 핵" },
-      "videoYoutubeIds": ["ZnkHeuM5Pd0"]
-    },
-    {
-      "id": "4",
-      "label": { "en": "Wii: Hack vWii - Compat", "es": "Wii: Hack vWii - Compat", "fr": "Wii : Hack vWii - Compat", "it": "Wii: Hack vWii - Compat", "pt": "Wii: Hack vWii - Compat", "de": "Wii: Hack vWii - Compat", "ja": "Wii: Hack vWii - Compat", "ko": "Wii: Hack vWii - Compat" },
-      "desc": { "en": "vWii compatibility hack for Wii", "es": "Hack de compatibilidad vWii para Wii", "fr": "Hack de compatibilité vWii pour Wii", "it": "Hack di compatibilità vWii per Wii", "pt": "Hack de compatibilidade vWii para Wii", "de": "vWii-Kompatibilitäts-Hack für Wii", "ja": "Wii用vWii互換性ハック", "ko": "Wii vWii 호환성 핵" },
-      "videoYoutubeIds": ["EdRX5HB0-xs"]
     },
     {
       "id": "11",
@@ -525,70 +507,16 @@
       "videoYoutubeIds": ["Y9Q33T1ZQCA"]
     },
     {
-      "id": "12",
-      "label": { "en": "WiiU: Install cIOS", "es": "WiiU: Instalar CIOS", "fr": "WiiU : Installer cIOS", "it": "WiiU: Installa cIOS", "pt": "WiiU: Instalar cIOS", "de": "WiiU: cIOS installieren", "ja": "WiiU: cIOSインストール", "ko": "WiiU: cIOS 설치" },
-      "desc": { "en": "cIOS installation tool for vWii", "es": "Herramienta de instalación cIOS vWii", "fr": "Outil d'installation cIOS pour vWii", "it": "Strumento di installazione cIOS per vWii", "pt": "Ferramenta de instalação cIOS para vWii", "de": "cIOS-Installations-Tool für vWii", "ja": "vWii用cIOSインストールツール", "ko": "vWii cIOS 설치 도구" },
-      "videoYoutubeIds": ["ANKIGJCZDFg"]
-    },
-    {
-      "id": "13",
-      "label": { "en": "WiiU: Install cIOS", "es": "WiiU: Instalar CIOS", "fr": "WiiU : Installer cIOS", "it": "WiiU: Installa cIOS", "pt": "WiiU: Instalar cIOS", "de": "WiiU: cIOS installieren", "ja": "WiiU: cIOSインストール", "ko": "WiiU: cIOS 설치" },
-      "desc": { "en": "cIOS installation tool for vWii", "es": "Herramienta de instalación cIOS vWii", "fr": "Outil d'installation cIOS pour vWii", "it": "Strumento di installazione cIOS per vWii ", "pt": "Ferramenta de instalação cIOS para vWii", "de": "cIOS-Installations-Tool für vWii", "ja": "vWii用cIOSインストールツール", "ko": "vWii cIOS 설치 도구" },
-      "videoYoutubeIds": ["sm5q-wke_ZA"]
-    },
-    {
-      "id": "14",
-      "label": { "en": "WiiMini: Install cIOS", "es": "WiiMini: Instalar CIOS", "fr": "WiiMini: Installer cIOS", "it": "WiiMini: Installa cIOS", "pt": "WiiMini: Instalar cIOS", "de": "WiiMini: cIOS installieren", "ja": "WiiMini: cIOSインストール", "ko": "WiiMini: cIOS 설치" },
-      "desc": { "en": "cIOS installation tool for WiiMini", "es": "Herramienta de instalación cIOS para WiiMini", "fr": "Outil d'installation cIOS pour WiiMini", "it": "Strumento di installazione cIOS per WiiMini", "pt": "Ferramenta de instalação cIOS para WiiMini", "de": "cIOS-Installations-Tool für WiiMini", "ja": "WiiMini用cIOSインストールツール", "ko": "WiiMini cIOS 설치 도구" },
-      "videoYoutubeIds": ["L5TgRr5Zre4"]
-    },
-    {
-      "id": "15",
-      "label": { "en": "WiiMini: Install cIOS", "es": "WiiMini: Instalar CIOS", "fr": "WiiMini: Installer cIOS", "it": "WiiMini: Installa cIOS", "pt": "WiiMini: Instalar cIOS", "de": "WiiMini: cIOS installieren", "ja": "WiiMini: cIOSインストール", "ko": "WiiMini: cIOS 설치" },
-      "desc": { "en": "cIOS installation tool for WiiMini", "es": "Herramienta de instalación cIOS para WiiMini", "fr": "Outil d'installation cIOS pour WiiMini", "it": "Strumento di installazione cIOS per WiiMini", "pt": "Ferramenta de instalação cIOS para WiiMini", "de": "cIOS-Installations-Tool für WiiMini", "ja": "WiiMini用cIOSインストールツール", "ko": "WiiMini cIOS 설치 도구" },
-      "videoYoutubeIds": ["Hr3MHaMypnI"]
-    },
-    {
       "id": "16",
       "label": { "en": "Wii: Priiloader", "es": "Wii: Priiloader", "fr": "Wii : Priiloader", "it": "Wii: Priiloader", "pt": "Wii: Priiloader", "de": "Wii: Priiloader", "ja": "Wii: Priiloader", "ko": "Wii: Priiloader" },
       "desc": { "en": "Priiloader for Wii", "es": "Priiloader para Wii", "fr": "Priiloader pour Wii", "it": "Priiloader per Wii", "pt": "Priiloader para Wii", "de": "Priiloader für Wii", "ja": "Wii用Priiloader", "ko": "Wii Priiloader" },
       "videoYoutubeIds": ["4OlP0CLJdGY"]
     },
     {
-      "id": "17",
-      "label": { "en": "WiiMini: Priiloader", "es": "WiiMini: Priiloader", "fr": "WiiMini: Priiloader", "it": "WiiMini: Priiloader", "pt": "WiiMini: Priiloader", "de": "WiiMini: Priiloader", "ja": "WiiMini: Priiloader", "ko": "WiiMini: Priiloader" },
-      "desc": { "en": "Priiloader for WiiMini", "es": "Priiloader para WiiMini", "fr": "Priiloader pour WiiMini", "it": "Priiloader per WiiMini", "pt": "Priiloader para WiiMini", "de": "Priiloader für WiiMini", "ja": "WiiMini用Priiloader", "ko": "WiiMini: Priiloader" },
-      "videoYoutubeIds": ["bMnYoYa9flQ"]
-    },
-    {
-      "id": "18",
-      "label": { "en": "WiiU: Priiloader", "es": "WiiU: Priiloader", "fr": "WiiU: Priiloader", "it": "WiiU: Priiloader", "pt": "WiiU: Priiloader", "de": "WiiU: Priiloader", "ja": "WiiU: Priiloader", "ko": "WiiU: Priiloader" },
-      "desc": { "en": "Priiloader for WiiU", "es": "Priiloader para WiiU", "fr": "Priiloader pour WiiU", "it": "Priiloader per WiiU", "pt": "Priiloader para WiiU", "de": "Priiloader für WiiU", "ja": "WiiU用Priiloader", "ko": "WiiU Priiloader" },
-      "videoYoutubeIds": ["t7pVbWWkJpo"]
-    },
-    {
       "id": "20",
       "label": { "en": "Wii: USBLoader GX", "es": "Wii: USBLoader-GX", "fr": "Wii: USBLoader GX", "it": "Wii: USBLoader GX", "pt": "Wii: USBLoader GX", "de": "Wii: USBLoader GX", "ja": "Wii: USBLoader GX", "ko": "Wii: USBLoader GX" },
       "desc": { "en": "USBLoader GX for Wii", "es": "USBLoader GX para Wii", "fr": "USBLoader GX pour Wii", "it": "USBLoader GX per Wii", "pt": "USBLoader GX para Wii", "de": "USBLoader GX für Wii", "ja": "Wii用USBLoader GX", "ko": "Wii USBLoader GX" },
       "videoYoutubeIds": ["dmis0r0zfgo"]
-    },
-    {
-      "id": "21",
-      "label": { "en": "WiiMini: USBLoader GX", "es": "WiiMini: USBLoader-GX", "fr": "WiiMini: USBLoader GX", "it": "WiiMini: USBLoader GX", "pt": "WiiMini: USBLoader GX", "de": "WiiMini: USBLoader GX", "ja": "WiiMini: USBLoader GX", "ko": "WiiMini: USBLoader GX" },
-      "desc": { "en": "USBLoader GX for WiiMini", "es": "USBLoader GX para WiiMini", "fr": "USBLoader GX pour WiiMini", "it": "USBLoader GX per WiiMini", "pt": "USBLoader GX para WiiMini", "de": "USBLoader GX für WiiMini", "ja": "WiiMini用USBLoader GX", "ko": "WiiMini USBLoader GX" },
-      "videoYoutubeIds": ["PO8R79_khyY"]
-    },
-    {
-      "id": "22",
-      "label": { "en": "WiiU: USBLoader GX", "es": "WiiU: USBLoader-GX", "fr": "WiiU: USBLoader GX", "it": "WiiU: USBLoader GX", "pt": "WiiU: USBLoader GX", "de": "WiiU: USBLoader GX", "ja": "WiiU: USBLoader GX", "ko": "WiiU: USBLoader GX" },
-      "desc": { "en": "USBLoader GX for WiiU", "es": "USBLoader GX para WiiU", "fr": "USBLoader GX pour WiiU", "it": "USBLoader GX per WiiU", "pt": "USBLoader GX para WiiU", "de": "USBLoader GX für WiiU", "ja": "WiiU用USBLoader GX", "ko": "WiiU USBLoader GX" },
-      "videoYoutubeIds": ["98gTZQCvxmA"]
-    },
-    {
-      "id": "23",
-      "label": { "en": "WiiU: Wii on WiiU - TeconMoon", "es": "WiiU: Wii en wiiu - Tecomoon", "fr": "WiiU : Wii sur WiiU - TeconMoon", "it": "WiiU: Wii su WiiU - TeconMoon", "pt": "WiiU: Wii no WiiU - TeconMoon", "de": "WiiU: Wii auf WiiU - TeconMoon", "ja": "WiiU: Wii on WiiU - TeconMoon", "ko": "WiiU: Wii on WiiU - TeconMoon" },
-      "desc": { "en": "TeconMoon tool to run Wii on Wii U", "es": "Herramienta TeconMoon para ejecutar Wii en Wii U", "fr": "Outil TeconMoon pour exécuter Wii sur Wii U", "it": "Strumento TeconMoon per eseguire Wii su Wii U", "pt": "Ferramenta TeconMoon para rodar Wii no Wii U", "de": "TeconMoon-Tool zum Ausführen von Wii auf Wii U", "ja": "Wii U用Wii実行ツールTeconMoon", "ko": "Wii U Wii 실행 TeconMoon 도구" },
-      "videoYoutubeIds": ["do7l_YJPSjw"]
     },
     {
       "id": "24",
@@ -607,18 +535,6 @@
       "label": { "en": "Wii: Nintendont", "es": "Wii: Nintendont", "fr": "Wii: Nintendont", "it": "Wii: Nintendont", "pt": "Wii: Nintendont", "de": "Wii: Nintendont", "ja": "Wii: Nintendont", "ko": "Wii: Nintendont" },
       "desc": { "en": "Nintendont GameCube loader for Wii", "es": "Cargador Nintendont GameCube para Wii", "fr": "Chargeur GameCube Nintendont pour Wii", "it": "Loader GameCube Nintendont per Wii", "pt": "Loader GameCube Nintendont para Wii", "de": "Nintendont GameCube Loader für Wii", "ja": "Wii用Nintendont GameCubeローダー", "ko": "Wii Nintendont GameCube 로더" },
       "videoYoutubeIds": ["8Z0v_bcwWZ4"]
-    },
-    {
-      "id": "27",
-      "label": { "en": "WiiU: Nintendont", "es": "WiiU: Nintendont", "fr": "WiiU: Nintendont", "it": "WiiU: Nintendont", "pt": "WiiU: Nintendont", "de": "WiiU: Nintendont", "ja": "WiiU: Nintendont", "ko": "WiiU: Nintendont" },
-      "desc": { "en": "Nintendont GameCube loader for WiiU", "es": "Cargador Nintendont GameCube para WiiU", "fr": "Chargeur GameCube Nintendont pour WiiU", "it": "Loader GameCube Nintendont per WiiU", "pt": "Loader GameCube Nintendont para WiiU", "de": "Nintendont GameCube Loader für WiiU", "ja": "WiiU用Nintendont GameCubeローダー", "ko": "WiiU Nintendont GameCube 로더" },
-      "videoYoutubeIds": ["rSJGpBZtGfA"]
-    },
-    {
-      "id": "28",
-      "label": { "en": "WiiMini: Nintendont", "es": "WiiMini: Nintendont", "fr": "WiiMini: Nintendont", "it": "WiiMini: Nintendont", "pt": "WiiMini: Nintendont", "de": "WiiMini: Nintendont", "ja": "WiiMini: Nintendont", "ko": "Wii: Nintendont" },
-      "desc": { "en": "Nintendont GameCube loader for WiiMini", "es": "Cargador Nintendont GameCube para WiiMini", "fr": "Chargeur GameCube Nintendont pour WiiMini", "it": "Loader GameCube Nintendont per WiiMini", "pt": "Loader GameCube Nintendont para WiiMini", "de": "Nintendont GameCube Loader für WiiMini", "ja": "WiiMini用Nintendont GameCubeローダー", "ko": "WiiMini Nintendont GameCube 로더" },
-      "videoYoutubeIds": ["ihOaZigO3Dc"]
     },
     {
       "id": "29",
@@ -644,5 +560,232 @@
       "desc": { "en": "WiiStation PS1 emulator for Wii", "es": "Emulador PS1 WiiStation para Wii", "fr": "Émulateur PS1 WiiStation pour Wii", "it": "Emulatore PS1 WiiStation per Wii", "pt": "Emulador PS1 WiiStation para Wii", "de": "WiiStation PS1 Emulator für Wii", "ja": "Wii用WiiStation PS1エミュレーター", "ko": "Wii WiiStation PS1 에뮬레이터" },
       "videoYoutubeIds": ["jr3mB0U_eAs"]
     }
-  ]
+  ],
+  "WII MINI": [
+    {
+      "id": "2",
+      "label": { "en": "Wii: Hack Wii Mini - BlueBomb", "es": "Wii: Hack Wii Mini - BlueBomb", "fr": "Wii : Hack Wii Mini - BlueBomb", "it": "Wii: Hack Wii Mini - BlueBomb", "pt": "Wii: Hack Wii Mini - BlueBomb", "de": "Wii: Hack Wii Mini - BlueBomb", "ja": "Wii: Hack Wii Mini - BlueBomb", "ko": "Wii: Hack Wii Mini - BlueBomb" },
+      "desc": { "en": "BlueBomb hack for Wii Mini", "es": "Hack BlueBomb para Wii Mini", "fr": "Hack BlueBomb pour Wii Mini", "it": "Hack BlueBomb per Wii Mini", "pt": "Hack BlueBomb para Wii Mini", "de": "BlueBomb-Hack für Wii Mini", "ja": "Wii Mini用BlueBombハック", "ko": "Wii Mini BlueBomb 핵" },
+      "videoYoutubeIds": ["1clOkDVWhoQ"]
+    },
+    {
+      "id": "14",
+      "label": { "en": "WiiMini: Install cIOS", "es": "WiiMini: Instalar CIOS", "fr": "WiiMini: Installer cIOS", "it": "WiiMini: Installa cIOS", "pt": "WiiMini: Instalar cIOS", "de": "WiiMini: cIOS installieren", "ja": "WiiMini: cIOSインストール", "ko": "WiiMini: cIOS 설치" },
+      "desc": { "en": "cIOS installation tool for WiiMini", "es": "Herramienta de instalación cIOS para WiiMini", "fr": "Outil d'installation cIOS pour WiiMini", "it": "Strumento di installazione cIOS per WiiMini", "pt": "Ferramenta de instalação cIOS para WiiMini", "de": "cIOS-Installations-Tool für WiiMini", "ja": "WiiMini用cIOSインストールツール", "ko": "WiiMini cIOS 설치 도구" },
+      "videoYoutubeIds": ["L5TgRr5Zre4"]
+    },
+    {
+      "id": "15",
+      "label": { "en": "WiiMini: Install cIOS", "es": "WiiMini: Instalar CIOS", "fr": "WiiMini: Installer cIOS", "it": "WiiMini: Installa cIOS", "pt": "WiiMini: Instalar cIOS", "de": "WiiMini: cIOS installieren", "ja": "WiiMini: cIOSインストール", "ko": "WiiMini: cIOS 설치" },
+      "desc": { "en": "cIOS installation tool for WiiMini", "es": "Herramienta de instalación cIOS para WiiMini", "fr": "Outil d'installation cIOS pour WiiMini", "it": "Strumento di installazione cIOS per WiiMini", "pt": "Ferramenta de instalação cIOS para WiiMini", "de": "cIOS-Installations-Tool für WiiMini", "ja": "WiiMini用cIOSインストールツール", "ko": "WiiMini cIOS 설치 도구" },
+      "videoYoutubeIds": ["Hr3MHaMypnI"]
+    },
+    {
+      "id": "17",
+      "label": { "en": "WiiMini: Priiloader", "es": "WiiMini: Priiloader", "fr": "WiiMini: Priiloader", "it": "WiiMini: Priiloader", "pt": "WiiMini: Priiloader", "de": "WiiMini: Priiloader", "ja": "WiiMini: Priiloader", "ko": "WiiMini: Priiloader" },
+      "desc": { "en": "Priiloader for WiiMini", "es": "Priiloader para WiiMini", "fr": "Priiloader pour WiiMini", "it": "Priiloader per WiiMini", "pt": "Priiloader para WiiMini", "de": "Priiloader für WiiMini", "ja": "WiiMini用Priiloader", "ko": "WiiMini: Priiloader" },
+      "videoYoutubeIds": ["bMnYoYa9flQ"]
+    },
+    {
+      "id": "21",
+      "label": { "en": "WiiMini: USBLoader GX", "es": "WiiMini: USBLoader-GX", "fr": "WiiMini: USBLoader GX", "it": "WiiMini: USBLoader GX", "pt": "WiiMini: USBLoader GX", "de": "WiiMini: USBLoader GX", "ja": "WiiMini: USBLoader GX", "ko": "WiiMini: USBLoader GX" },
+      "desc": { "en": "USBLoader GX for WiiMini", "es": "USBLoader GX para WiiMini", "fr": "USBLoader GX pour WiiMini", "it": "USBLoader GX per WiiMini", "pt": "USBLoader GX para WiiMini", "de": "USBLoader GX für WiiMini", "ja": "WiiMini用USBLoader GX", "ko": "WiiMini USBLoader GX" },
+      "videoYoutubeIds": ["PO8R79_khyY"]
+    },
+    {
+      "id": "28",
+      "label": { "en": "WiiMini: Nintendont", "es": "WiiMini: Nintendont", "fr": "WiiMini: Nintendont", "it": "WiiMini: Nintendont", "pt": "WiiMini: Nintendont", "de": "WiiMini: Nintendont", "ja": "WiiMini: Nintendont", "ko": "Wii: Nintendont" },
+      "desc": { "en": "Nintendont GameCube loader for WiiMini", "es": "Cargador Nintendont GameCube para WiiMini", "fr": "Chargeur GameCube Nintendont pour WiiMini", "it": "Loader GameCube Nintendont per WiiMini", "pt": "Loader GameCube Nintendont para WiiMini", "de": "Nintendont GameCube Loader für WiiMini", "ja": "WiiMini用Nintendont GameCubeローダー", "ko": "WiiMini Nintendont GameCube 로더" },
+      "videoYoutubeIds": ["ihOaZigO3Dc"]
+    }
+  ],
+  "WII U": [
+    {
+      "id": "3",
+      "label": { "en": "WiiU: Hack WiiU - CFW Dual", "es": "WiiU: Hack WIIU CFW-DUAL", "fr": "WiiU : Hack WiiU - CFW Dual", "it": "WiiU: Hack WiiU - CFW Dual", "pt": "WiiU: Hack WiiU - CFW Dual", "de": "WiiU: Hack WiiU - CFW Dual", "ja": "WiiU: Hack WiiU - CFW Dual", "ko": "WiiU: Hack WiiU - CFW Dual" },
+      "desc": { "en": "CFW Dual hack for Wii U", "es": "Hack CFW Dual para Wii U", "fr": "Hack CFW Dual pour Wii U", "it": "Hack CFW Dual per Wii U", "pt": "Hack CFW Dual para Wii U", "de": "CFW Dual-Hack für Wii U", "ja": "Wii U用CFW Dualハック", "ko": "Wii U CFW Dual 핵" },
+      "videoYoutubeIds": ["ZnkHeuM5Pd0"]
+    },
+    {
+      "id": "18",
+      "label": { "en": "WiiU: Priiloader", "es": "WiiU: Priiloader", "fr": "WiiU: Priiloader", "it": "WiiU: Priiloader", "pt": "WiiU: Priiloader", "de": "WiiU: Priiloader", "ja": "WiiU: Priiloader", "ko": "WiiU: Priiloader" },
+      "desc": { "en": "Priiloader for WiiU", "es": "Priiloader para WiiU", "fr": "Priiloader pour WiiU", "it": "Priiloader per WiiU", "pt": "Priiloader para WiiU", "de": "Priiloader für WiiU", "ja": "WiiU用Priiloader", "ko": "WiiU Priiloader" },
+      "videoYoutubeIds": ["t7pVbWWkJpo"]
+    },
+    {
+      "id": "22",
+      "label": { "en": "WiiU: USBLoader GX", "es": "WiiU: USBLoader-GX", "fr": "WiiU: USBLoader GX", "it": "WiiU: USBLoader GX", "pt": "WiiU: USBLoader GX", "de": "WiiU: USBLoader GX", "ja": "WiiU: USBLoader GX", "ko": "WiiU: USBLoader GX" },
+      "desc": { "en": "USBLoader GX for WiiU", "es": "USBLoader GX para WiiU", "fr": "USBLoader GX pour WiiU", "it": "USBLoader GX per WiiU", "pt": "USBLoader GX para WiiU", "de": "USBLoader GX für WiiU", "ja": "WiiU用USBLoader GX", "ko": "WiiU USBLoader GX" },
+      "videoYoutubeIds": ["98gTZQCvxmA"]
+    },
+    {
+      "id": "23",
+      "label": { "en": "WiiU: Wii on WiiU - TeconMoon", "es": "WiiU: Wii en wiiu - Tecomoon", "fr": "WiiU : Wii sur WiiU - TeconMoon", "it": "WiiU: Wii su WiiU - TeconMoon", "pt": "WiiU: Wii no WiiU - TeconMoon", "de": "WiiU: Wii auf WiiU - TeconMoon", "ja": "WiiU: Wii on WiiU - TeconMoon", "ko": "WiiU: Wii on WiiU - TeconMoon" },
+      "desc": { "en": "TeconMoon tool to run Wii on Wii U", "es": "Herramienta TeconMoon para ejecutar Wii en Wii U", "fr": "Outil TeconMoon pour exécuter Wii sur Wii U", "it": "Strumento TeconMoon per eseguire Wii su Wii U", "pt": "Ferramenta TeconMoon para rodar Wii no Wii U", "de": "TeconMoon-Tool zum Ausführen von Wii auf Wii U", "ja": "Wii U用Wii実行ツールTeconMoon", "ko": "Wii U Wii 실행 TeconMoon 도구" },
+      "videoYoutubeIds": ["do7l_YJPSjw"]
+    },
+    {
+      "id": "27",
+      "label": { "en": "WiiU: Nintendont", "es": "WiiU: Nintendont", "fr": "WiiU: Nintendont", "it": "WiiU: Nintendont", "pt": "WiiU: Nintendont", "de": "WiiU: Nintendont", "ja": "WiiU: Nintendont", "ko": "WiiU: Nintendont" },
+      "desc": { "en": "Nintendont GameCube loader for WiiU", "es": "Cargador Nintendont GameCube para WiiU", "fr": "Chargeur GameCube Nintendont pour WiiU", "it": "Loader GameCube Nintendont per WiiU", "pt": "Loader GameCube Nintendont para WiiU", "de": "Nintendont GameCube Loader für WiiU", "ja": "WiiU用Nintendont GameCubeローダー", "ko": "WiiU Nintendont GameCube 로더" },
+      "videoYoutubeIds": ["rSJGpBZtGfA"]
+    },
+    {
+      "id": "4",
+      "label": { "en": "Wii: Hack vWii - Compat", "es": "Wii: Hack vWii - Compat", "fr": "Wii : Hack vWii - Compat", "it": "Wii: Hack vWii - Compat", "pt": "Wii: Hack vWii - Compat", "de": "Wii: Hack vWii - Compat", "ja": "Wii: Hack vWii - Compat", "ko": "Wii: Hack vWii - Compat" },
+      "desc": { "en": "vWii compatibility hack for Wii", "es": "Hack de compatibilidad vWii para Wii", "fr": "Hack de compatibilité vWii pour Wii", "it": "Hack di compatibilità vWii per Wii", "pt": "Hack de compatibilidade vWii para Wii", "de": "vWii-Kompatibilitäts-Hack für Wii", "ja": "Wii用vWii互換性ハック", "ko": "Wii vWii 호환성 핵" },
+      "videoYoutubeIds": ["EdRX5HB0-xs"]
+    },
+    {
+      "id": "12",
+      "label": { "en": "WiiU: Install cIOS", "es": "WiiU: Instalar CIOS", "fr": "WiiU : Installer cIOS", "it": "WiiU: Installa cIOS", "pt": "WiiU: Instalar cIOS", "de": "WiiU: cIOS installieren", "ja": "WiiU: cIOSインストール", "ko": "WiiU: cIOS 설치" },
+      "desc": { "en": "cIOS installation tool for vWii", "es": "Herramienta de instalación cIOS vWii", "fr": "Outil d'installation cIOS pour vWii", "it": "Strumento di installazione cIOS per vWii", "pt": "Ferramenta de instalação cIOS para vWii", "de": "cIOS-Installations-Tool für vWii", "ja": "vWii用cIOSインストールツール", "ko": "vWii cIOS 설치 도구" },
+      "videoYoutubeIds": ["ANKIGJCZDFg"]
+    },
+    {
+      "id": "13",
+      "label": { "en": "WiiU: Install cIOS", "es": "WiiU: Instalar CIOS", "fr": "WiiU : Installer cIOS", "it": "WiiU: Installa cIOS", "pt": "WiiU: Instalar cIOS", "de": "WiiU: cIOS installieren", "ja": "WiiU: cIOSインストール", "ko": "WiiU: cIOS 설치" },
+      "desc": { "en": "cIOS installation tool for vWii", "es": "Herramienta de instalación cIOS vWii", "fr": "Outil d'installation cIOS pour vWii", "it": "Strumento di installazione cIOS per vWii ", "pt": "Ferramenta de instalação cIOS para vWii", "de": "cIOS-Installations-Tool für vWii", "ja": "vWii用cIOSインストールツール", "ko": "vWii cIOS 설치 도구" },
+      "videoYoutubeIds": ["sm5q-wke_ZA"]
+    }
+  ],
+  "SD": [
+  {
+    "id": "1",
+    "label": {
+      "en": "SD: GUIFormat (FAT32)",
+      "es": "SD: GUIFormat",
+      "fr": "SD : GUIFormat (FAT32)",
+      "it": "SD: GUIFormat",
+      "pt": "SD: GUIFormat",
+      "de": "SD: GUIFormat",
+      "ja": "SD: GUIFormat",
+      "ko": "SD: GUIFormat"
+    },
+    "desc": {
+      "en": "Guide to format SD card with GUIFormat (FAT32)",
+      "es": "Guía para formatear tarjeta SD con GUIFormat (FAT32)",
+      "fr": "Guide pour formater la carte SD avec GUIFormat (FAT32)",
+      "it": "Guida per formattare SD con GUIFormat (FAT32)",
+      "pt": "Guia para formatar cartão SD com GUIFormat (FAT32)",
+      "de": "Anleitung zum Formatieren der SD-Karte mit GUIFormat (FAT32)",
+      "ja": "SDカードFAT32フォーマットGUIFormatガイド",
+      "ko": "SD 카드 FAT32 GUIFormat 포맷 가이드"
+    },
+    "tipo": "guia",
+    "guiaPath": "guias/SD/guiformat",
+    "url": "https://www.mediafire.com/folder/nq6o3e1ak3pbe/GUIFORMAT",
+    "videoYoutubeIds": ["CqrJ3fdQaP8"]
+  },
+  {
+    "id": "2",
+    "label": {
+      "en": "SD: HDDLLF",
+      "es": "SD: HDDLLF",
+      "fr": "SD : HDDLLF",
+      "it": "SD: HDDLLF",
+      "pt": "SD: HDDLLF",
+      "de": "SD: HDDLLF",
+      "ja": "SD: HDDLLF",
+      "ko": "SD: HDDLLF"
+    },
+    "desc": {
+      "en": "Guide to low-level format with HDDLLF",
+      "es": "Guía para formateo de bajo nivel con HDDLLF",
+      "fr": "Guide pour le formatage bas niveau avec HDDLLF",
+      "it": "Guida per la formattazione low-level con HDDLLF",
+      "pt": "Guia para formatação low-level com HDDLLF",
+      "de": "Anleitung zum Low-Level-Formatieren mit HDDLLF",
+      "ja": "HDDLLF低レベルフォーマットガイド",
+      "ko": "HDDLLF 저수준 포맷 가이드"
+    },
+    "tipo": "guia",
+    "guiaPath": "guias/SD/hddllf",
+    "url": "https://www.mediafire.com/folder/cz7onqvq127s8/HDDLLF",
+    "videoYoutubeIds": ["EKVQyQ8PGfc"]
+  },
+  {
+    "id": "3",
+    "label": {
+      "en": "SD: H2testw (Test SD)",
+      "es": "SD: H2testw",
+      "fr": "SD : H2testw (Tester SD)",
+      "it": "SD: H2testw",
+      "pt": "SD: H2testw",
+      "de": "SD: H2testw",
+      "ja": "SD: H2testw",
+      "ko": "SD: H2testw"
+    },
+    "desc": {
+      "en": "Guide to test SD card integrity with H2testw",
+      "es": "Guía para probar integridad de tarjeta SD con H2testw",
+      "fr": "Guide pour tester l'intégrité de la carte SD avec H2testw",
+      "it": "Guida per testare l'integrità della SD con H2testw",
+      "pt": "Guia para testar integridade do cartão SD com H2testw",
+      "de": "Anleitung zum Testen der SD-Karten-Integrität mit H2testw",
+      "ja": "H2testw SDカード整合性テストガイド",
+      "ko": "H2testw SD 카드 무결성 테스트 가이드"
+    },
+    "tipo": "guia",
+    "guiaPath": "guias/SD/h2testw",
+    "url": "https://www.mediafire.com/folder/wk4sdkt7721nr/H2TESTW",
+    "videoYoutubeIds": ["KjQJyIqa-lE"]
+  },
+  {
+    "id": "4",
+    "label": {
+      "en": "SD: RMP (SD Prep)",
+      "es": "SD: RMP",
+      "fr": "SD : RMP (Préparer SD)",
+      "it": "SD: RMP",
+      "pt": "SD: RMP",
+      "de": "SD: RMP",
+      "ja": "SD: RMP",
+      "ko": "SD: RMP"
+    },
+    "desc": {
+      "en": "Guide to prepare SD card with RMP",
+      "es": "Guía para preparar tarjeta SD con RMP",
+      "fr": "Guide pour préparer la carte SD avec RMP",
+      "it": "Guida per preparare la SD con RMP",
+      "pt": "Guia para preparar cartão SD com RMP",
+      "de": "Anleitung zum Vorbereiten der SD-Karte mit RMP",
+      "ja": "RMP SDカード準備ガイド",
+      "ko": "RMP SD 카드 준비 가이드"
+    },
+    "tipo": "guia",
+    "guiaPath": "guias/SD/rmp",
+    "url": "https://www.mediafire.com/folder/8ogmifi13v5gv/RMP",
+    "videoYoutubeIds": ["HTojwb3kScY"]
+  },
+  {
+    "id": "5",
+    "label": {
+      "en": "SD: Recognize SD on PC",
+      "es": "SD: Reconocer SD en PC",
+      "fr": "SD : Reconnaître SD sur PC",
+      "it": "SD: Riconoscere SD su PC",
+      "pt": "SD: Reconhecer SD no PC",
+      "de": "SD: SD-Karte auf PC erkennen",
+      "ja": "SD: PCでSDカードを認識",
+      "ko": "SD: PC에서 SD 카드 인식"
+    },
+    "desc": {
+      "en": "Guide to recognize SD card on PC",
+      "es": "Guía para reconocer tarjeta SD en Pc",
+      "fr": "Guide pour reconnaître la carte SD sur PC",
+      "it": "Guida per riconoscere la scheda SD sul PC",
+      "pt": "Guia para reconhecer cartão SD no PC",
+      "de": "Anleitung zum Erkennen einer SD-Karte auf dem PC",
+      "ja": "PCでSDカードを認識するガイド",
+      "ko": "PC에서 SD카드 인식 안내"
+    },
+    "tipo": "guia",
+    "guiaPath": "guias/SD/rmp",
+    "url": "https://www.mediafire.com/folder/8ogmifi13v5gv/RMP",
+    "videoYoutubeIds": ["jBmMYJbEwKM"]
+  }
+],
+  "SONY": [],
+  "XBOX": []
 }
