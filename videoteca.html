@@ -792,8 +792,8 @@ function renderVideos() {
 async function cargarDatosVideos() {
   const loader = document.getElementById('mainLoader'); loader.style.display = 'block';
   try {
-    const response = await fetch('consolas.json', { cache: "no-store" });
-    if (!response.ok) throw new Error("No se pudo cargar consolas.json");
+    const response = await fetch('videos.json', { cache: "no-store" });
+    if (!response.ok) throw new Error("No se pudo cargar videos.json");
     const consolasData = await response.json();
     todosLosVideos = []; categoriasUnicas.clear();
 
@@ -817,7 +817,7 @@ async function cargarDatosVideos() {
     renderizarSeccionesPersonales(); 
     renderVideos();
     iniciarHeroCarousel();
-  } catch (error) { loader.style.display = 'none'; updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">Error cargando <b>consolas.json</b>.</p>`; }
+  } catch (error) { loader.style.display = 'none'; updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">Error cargando <b>videos.json</b>.</p>`; }
 }
 
 /* ================= VENTANA FLOTANTE Y NOTAS ================= */
