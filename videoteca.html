@@ -97,6 +97,29 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   color: var(--text-muted);
 }
 
+.hero-guide-icon { 
+  width: 3.2rem; 
+  height: 3.2rem; 
+  color: var(--red); 
+  filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); 
+  transition: color 0.3s ease; 
+  animation: satPulse 3.5s infinite ease-in-out; 
+  flex-shrink: 0; 
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@keyframes satPulse { 
+  0%, 100% { 
+    transform: scale(1) translateY(0px); 
+    filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); 
+  } 
+  50% { 
+    transform: scale(1.12) translateY(-4px); 
+    filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); 
+  } 
+}
+
 /* ================= HERO CAROUSEL (ESTILO DISNEY+) ================= */
 .hero-carousel {
   position: relative;
@@ -150,7 +173,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   margin-bottom: 15px;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
   line-height: 1.1;
-  color: #fff; /* Siempre blanco para contraste */
+  color: #fff;
 }
 .hero-desc {
   font-size: 1.2rem;
@@ -184,9 +207,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   box-shadow: 0 6px 20px rgba(255,255,255,0.3);
 }
 
-/* ================= ZONA PERSONAL ================= */
+/* ================= ZONA PERSONAL (RECOMENDACIONES) ================= */
 .personal-zone { padding: 0 5% 30px; }
-.personal-section-container { margin-bottom: 30px; }
+.personal-section-container { margin-bottom: 10px; }
 .personal-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; color: var(--text-main); display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--glass-border); padding-bottom: 8px; }
 .personal-title.centered-title { justify-content: center; border-bottom: none; font-size: 1.6rem; margin-top: 20px; }
 .personal-row { display: flex; gap: 20px; overflow-x: auto; padding: 10px 5px 20px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--red) var(--glass-border); }
@@ -294,9 +317,10 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
 <!-- ================= ENCABEZADO PRINCIPAL ESTÁTICO ================= -->
 <div class="page-header" id="pageHeader">
-  <h1 id="mainTitle">Centro de Vídeos</h1>
-  <p id="mainSubtitle">Colección de vídeos y tutoriales paso a paso para tus consolas.</p>
+  <h1 id="heroTitle"><svg class="hero-guide-icon" fill="currentColor" viewbox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"></path></svg><span id="mainTitle"> Centro de Vídeos</span></h1>
+  <p id="mainSubtitle">Colección de vídeos y tutoriales paso a paso para sacar el máximo provecho a tus consolas.</p>
 </div>
+
 
 <!-- ================= HERO CAROUSEL DISNEY+ ================= -->
 <div id="heroCarousel" class="hero-carousel" style="display: none;">
@@ -309,33 +333,21 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   </div>
 </div>
 
-<!-- ================= ZONA PERSONAL ================= -->
-<section class="personal-zone" id="personalZone">
-  <!-- 1. SEGUIR VIENDO -->
-  <div class="personal-section-container">
-    <div class="personal-title" id="titleHistory">📺 Seguir viendo</div>
-    <div class="personal-row" id="rowHistory"></div>
-  </div>
-
-  <!-- 2. FAVORITOS -->
-  <div class="personal-section-container">
-    <div class="personal-title" id="titleFavs">❤️ Favoritos</div>
-    <div class="personal-row" id="rowFavs"></div>
-  </div>
-  
-  <!-- 3. RECOMENDACIONES (Oculto por defecto) -->
+<!-- ================= ZONA PERSONAL (SOLO RECOMENDACIONES) ================= -->
+<section class="personal-zone" id="personalZone" style="padding-top: 15px;">
+  <!-- RECOMENDACIONES (Oculto por defecto) -->
   <div class="personal-section-container" id="recommendationContainer" style="display: none;">
     <div class="personal-title" id="titleRecommendations">💡 Recomendaciones</div>
     <div class="personal-row" id="rowRecommendations"></div>
   </div>
 </section>
 
-<!-- ================= 4. PANEL DE VÍDEOS ================= -->
+<!-- ================= PANEL DE VÍDEOS ================= -->
 <section class="personal-zone" style="padding-bottom: 0;">
-  <div class="personal-title centered-title" id="titleVideoPanel">🎮 Panel de vídeos</div>
+  <div class="personal-title centered-title" id="titleVideoPanel">� Panel de vídeos</div>
 </section>
 
-<!-- BOTONES DE CONSOLA -->
+<!-- BOTONES DE CONSOLA Y FILTROS PERSONALES -->
 <div class="console-buttons" id="consoleButtons"></div>
 
 <main class="updates-container" id="updatesGrid">
@@ -373,35 +385,35 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 /* ================= DICCIONARIO COMPLETO (8 IDIOMAS) ================= */
 const translations = {
   es: { title: "Videoteca | La Presa", mainTitle: "Centro de Vídeos", mainSubtitle: "Colección de vídeos y tutoriales paso a paso para tus consolas.", search: "Buscar vídeos...", all: "Todas", read: "▶ Ver Vídeo", empty: "No se encontraron vídeos.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi", 
-    favs: "❤️ Favoritos", history: "📺 Seguir viendo", recommendations: "💡 Recomendaciones", videoPanel: "🎮 Panel de vídeos", 
+    favs: "❤️ Favoritos", history: "🍿 Seguir viendo", recommendations: "💡 Recomendaciones", videoPanel: "📺 Panel de vídeos", 
     favEmpty: "Aún no tienes vídeos favoritos. ¡Pulsa el corazón en cualquier miniatura!", histEmpty: "No has visto ningún vídeo recientemente.", watched: "✔ Visto",
     recsPrefix: "💡 Porque viste ", recsSuffix: ", te recomendamos...", notesTitle: "📝 Tus apuntes personales", notesPlaceholder: "Aquí podrás apuntar anotaciones sobre cada paso...", saveSuccess: "Guardado automáticamente ✓", playNow: "▶ Reproducir" },
   en: { title: "Video Library | La Presa", mainTitle: "Video Center", mainSubtitle: "Step-by-step video tutorials collection for your consoles.", search: "Search videos...", all: "All", read: "▶ Watch Video", empty: "No videos found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi", 
-    favs: "❤️ Favorites", history: "📺 Continue Watching", recommendations: "💡 Recommendations", videoPanel: "🎮 Video Panel", 
+    favs: "❤️ Favorites", history: "🍿 Continue Watching", recommendations: "💡 Recommendations", videoPanel: "📺 Video Panel", 
     favEmpty: "No favorite videos yet. Click the heart on any thumbnail!", histEmpty: "You haven't watched any videos recently.", watched: "✔ Watched",
     recsPrefix: "💡 Because you watched ", recsSuffix: ", we recommend...", notesTitle: "📝 Your personal notes", notesPlaceholder: "You can write down notes for each step here...", saveSuccess: "Saved automatically ✓", playNow: "▶ Play Now" },
   fr: { title: "Vidéothèque | La Presa", mainTitle: "Centre Vidéo", mainSubtitle: "Collection de tutoriels vidéo étape par étape pour vos consoles.", search: "Rechercher des vidéos...", all: "Toutes", read: "▶ Voir la Vidéo", empty: "Aucune vidéo trouvée.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi", 
-    favs: "❤️ Favoris", history: "📺 Reprendre la lecture", recommendations: "💡 Recommandations", videoPanel: "🎮 Panneau de vidéos", 
+    favs: "❤️ Favoris", history: "🍿 Reprendre la lecture", recommendations: "💡 Recommandations", videoPanel: "📺 Panneau de vidéos", 
     favEmpty: "Aucun favori pour l'instant. Cliquez sur le cœur d'une vidéo !", histEmpty: "Vous n'avez pas regardé de vidéo récemment.", watched: "✔ Vu",
     recsPrefix: "💡 Parce que vous avez regardé ", recsSuffix: ", nous recommandons...", notesTitle: "📝 Vos notes personnelles", notesPlaceholder: "Vous pouvez noter des informations pour chaque étape ici...", saveSuccess: "Enregistré automatiquement ✓", playNow: "▶ Lecture" },
   de: { title: "Videobibliothek | La Presa", mainTitle: "Video-Center", mainSubtitle: "Schritt-für-Schritt-Video-Tutorials für deine Konsolen.", search: "Videos suchen...", all: "Alle", read: "▶ Video ansehen", empty: "Keine Videos gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi", 
-    favs: "❤️ Favoriten", history: "📺 Weiter ansehen", recommendations: "💡 Empfehlungen", videoPanel: "🎮 Video-Panel", 
+    favs: "❤️ Favoriten", history: "🍿 Weiter ansehen", recommendations: "💡 Empfehlungen", videoPanel: "📺 Video-Panel", 
     favEmpty: "Noch keine Favoriten. Klicke auf das Herz bei einem Video!", histEmpty: "Du hast in letzter Zeit keine Videos gesehen.", watched: "✔ Gesehen",
     recsPrefix: "💡 Weil du ", recsSuffix: " gesehen hast, empfehlen wir...", notesTitle: "📝 Deine persönlichen Notizen", notesPlaceholder: "Hier kannst du dir Notizen zu jedem Schritt machen...", saveSuccess: "Automatisch gespeichert ✓", playNow: "▶ Abspielen" },
   it: { title: "Videoteca | La Presa", mainTitle: "Centro Video", mainSubtitle: "Collezione di video tutorial passo dopo passo per le tue console.", search: "Cerca video...", all: "Tutte", read: "▶ Guarda Video", empty: "Nessun video trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi", 
-    favs: "❤️ Preferiti", history: "📺 Continua a guardare", recommendations: "💡 Raccomandazioni", videoPanel: "🎮 Pannello video", 
+    favs: "❤️ Preferiti", history: "🍿 Continua a guardare", recommendations: "💡 Raccomandazioni", videoPanel: "📺 Pannello video", 
     favEmpty: "Nessun video preferito. Clicca sul cuore su qualsiasi video!", histEmpty: "Non hai guardato nessun video di recente.", watched: "✔ Visto",
     recsPrefix: "💡 Poiché hai guardato ", recsSuffix: ", ti consigliamo...", notesTitle: "📝 I tuoi appunti personali", notesPlaceholder: "Qui puoi annotare appunti per ogni passaggio...", saveSuccess: "Salvato automaticamente ✓", playNow: "▶ Riproduci" },
   pt: { title: "Videoteca | La Presa", mainTitle: "Centro de Vídeos", mainSubtitle: "Coleção de tutoriais em vídeo passo a passo para as tuas consolas.", search: "Procurar vídeos...", all: "Todas", read: "▶ Ver Vídeo", empty: "Nenhum vídeo encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi", 
-    favs: "❤️ Favoritos", history: "📺 Continuar a ver", recommendations: "💡 Recomendações", videoPanel: "🎮 Painel de vídeos", 
+    favs: "❤️ Favoritos", history: "🍿 Continuar a ver", recommendations: "💡 Recomendações", videoPanel: "📺 Painel de vídeos", 
     favEmpty: "Ainda não tens favoritos. Clica no coração de qualquer vídeo!", histEmpty: "Não assististe a nenhum vídeo recentemente.", watched: "✔ Visto",
     recsPrefix: "💡 Porque viste ", recsSuffix: ", recomendamos...", notesTitle: "📝 As tuas notas pessoais", notesPlaceholder: "Podes apontar notas sobre cada passo aqui...", saveSuccess: "Guardado automaticamente ✓", playNow: "▶ Reproduzir" },
   ja: { title: "ビデオライブラリ | La Presa", mainTitle: "ビデオセンター", mainSubtitle: "コンソール向けのステップバイステップのビデオチュートリアルコレクション。", search: "ビデオを検索...", all: "すべて", read: "▶ ビデオを見る", empty: "ビデオが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート", 
-    favs: "❤️ お気に入り", history: "📺 続きを見る", recommendations: "💡 おすすめ", videoPanel: "🎮 ビデオパネル", 
+    favs: "❤️ お気に入り", history: "🍿 続きを見る", recommendations: "💡 おすすめ", videoPanel: "📺 ビデオパネル", 
     favEmpty: "お気に入りはまだありません。サムネイルのハートをクリックしてください！", histEmpty: "最近見たビデオはありません。", watched: "✔ 視聴済み",
     recsPrefix: "💡 「", recsSuffix: "」を見たあなたへのおすすめ...", notesTitle: "📝 個人的なメモ", notesPlaceholder: "ここで各ステップのメモを取ることができます...", saveSuccess: "自動保存されました ✓", playNow: "▶ 再生する" },
   ko: { title: "비디오 라이브러리 | La Presa", mainTitle: "비디오 센터", mainSubtitle: "콘솔을 위한 단계별 비디오 튜토리얼 모음.", search: "비디오 검색...", all: "모든", read: "▶ 비디오 시청", empty: "비디오를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", 가이드: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", 
-    favs: "❤️ 즐겨찾기", history: "📺 계속 시청하기", recommendations: "💡 추천", videoPanel: "🎮 비디오 패널", 
+    favs: "❤️ 즐겨찾기", history: "🍿 계속 시청하기", recommendations: "💡 추천", videoPanel: "📺 비디오 패널", 
     favEmpty: "아직 즐겨찾기가 없습니다. 썸네일의 하트를 클릭하세요!", histEmpty: "최근에 시청한 비디오가 없습니다.", watched: "✔ 시청함",
     recsPrefix: "💡 '", recsSuffix: "' 시청 기록 기반 추천...", notesTitle: "📝 개인 메모", notesPlaceholder: "여기에 각 단계에 대한 메모를 작성할 수 있습니다...", saveSuccess: "자동으로 저장됨 ✓", playNow: "▶ 재생" }
 };
@@ -480,14 +492,12 @@ function updateLanguage(){
   fileSearch.placeholder = t.search;
 
   /* TEXTOS HEADER CLÁSICO */
-  document.getElementById('mainTitle').textContent = t.mainTitle;
-  document.getElementById('mainSubtitle').textContent = t.mainSubtitle;
+  if(document.getElementById('mainTitle')) document.getElementById('mainTitle').textContent = t.mainTitle;
+  if(document.getElementById('mainSubtitle')) document.getElementById('mainSubtitle').textContent = t.mainSubtitle;
 
   /* TÍTULOS Y ETIQUETAS */
-  document.getElementById('titleFavs').textContent = t.favs;
-  document.getElementById('titleHistory').textContent = t.history;
-  document.getElementById('titleRecommendations').textContent = t.recommendations;
-  document.getElementById('titleVideoPanel').textContent = t.videoPanel;
+  if(document.getElementById('titleRecommendations')) document.getElementById('titleRecommendations').textContent = t.recommendations;
+  if(document.getElementById('titleVideoPanel')) document.getElementById('titleVideoPanel').textContent = t.videoPanel;
   
   document.getElementById('notesLabel').textContent = t.notesTitle;
   document.getElementById('videoNotes').placeholder = t.notesPlaceholder;
@@ -559,23 +569,29 @@ function registrarVideoVisto(videoId) {
   let historial = JSON.parse(localStorage.getItem('kelonio_history')) || [];
   historial = historial.filter(id => id !== videoId);
   historial.unshift(videoId);
-  if (historial.length > 8) historial.pop();
+  if (historial.length > 20) historial.pop(); // Aumentamos límite para que el botón valga la pena
   localStorage.setItem('kelonio_history', JSON.stringify(historial));
-  renderizarSeccionesPersonales(); renderVideos();
+  renderizarSeccionesPersonales(); 
+  if (filtroActual === 'HISTORY') renderVideos(); // Refrescar si estamos en esa pestaña
 }
 
 function toggleFavorito(event, videoId) {
   event.stopPropagation();
   let favoritos = JSON.parse(localStorage.getItem('kelonio_favs')) || [];
-  if (favoritos.includes(videoId)) { favoritos = favoritos.filter(id => id !== videoId); } else { favoritos.push(videoId); }
+  if (favoritos.includes(videoId)) { favoritos = favoritos.filter(id => id !== videoId); } else { favoritos.unshift(videoId); }
   localStorage.setItem('kelonio_favs', JSON.stringify(favoritos));
-  renderizarSeccionesPersonales(); renderVideos();
+  if (filtroActual === 'FAVORITES') renderVideos(); // Refrescar si estamos en esa pestaña
+  else {
+    // Si no estamos en la pestaña, solo actualizamos el corazón visualmente en la tarjeta clickeada
+    const btn = event.currentTarget;
+    btn.classList.toggle('active-heart');
+  }
 }
 
 function esFavorito(videoId) { return (JSON.parse(localStorage.getItem('kelonio_favs')) || []).includes(videoId); }
 function esVisto(videoId) { return (JSON.parse(localStorage.getItem('kelonio_history')) || []).includes(videoId); }
 
-/* ================= RENDERIZAR ZONA PERSONAL ================= */
+/* ================= RENDERIZAR RECOMENDACIONES Y TARJETAS ================= */
 function crearTarjetaHTML(video, t) {
   const videoId = video.id;
   const titulo = video.label[idiomaActual] || video.label['en'] || video.label['es'] || 'Vídeo';
@@ -605,24 +621,14 @@ function crearTarjetaHTML(video, t) {
 
 function renderizarSeccionesPersonales() {
   const t = translations[idiomaActual] || translations['es'];
-  const rowFavs = document.getElementById('rowFavs');
-  const rowHistory = document.getElementById('rowHistory');
   const rowRecommendations = document.getElementById('rowRecommendations');
   const recommendationContainer = document.getElementById('recommendationContainer');
   const titleRecommendations = document.getElementById('titleRecommendations');
   
-  const favIds = JSON.parse(localStorage.getItem('kelonio_favs')) || [];
   const histIds = JSON.parse(localStorage.getItem('kelonio_history')) || [];
   const mapVideos = new Map(); todosLosVideos.forEach(v => mapVideos.set(v.id, v));
 
-  if (histIds.length === 0) {
-    rowHistory.innerHTML = `<div class="empty-personal-msg">${t.histEmpty}</div>`;
-    recommendationContainer.style.display = 'none';
-  } else {
-    let htmlHist = '';
-    histIds.forEach(id => { const vid = mapVideos.get(id); if (vid) htmlHist += crearTarjetaHTML(vid, t); });
-    rowHistory.innerHTML = htmlHist;
-
+  if (histIds.length > 0) {
     const lastWatchedVideo = mapVideos.get(histIds[0]);
     if (lastWatchedVideo) {
       const consoleName = lastWatchedVideo.console;
@@ -639,15 +645,9 @@ function renderizarSeccionesPersonales() {
       } else {
         recommendationContainer.style.display = 'none'; 
       }
-    }
-  }
-
-  if (favIds.length === 0) {
-    rowFavs.innerHTML = `<div class="empty-personal-msg">${t.favEmpty}</div>`;
+    } else { recommendationContainer.style.display = 'none'; }
   } else {
-    let htmlFavs = '';
-    favIds.forEach(id => { const vid = mapVideos.get(id); if (vid) htmlFavs += crearTarjetaHTML(vid, t); });
-    rowFavs.innerHTML = htmlFavs;
+    recommendationContainer.style.display = 'none';
   }
 }
 
@@ -655,12 +655,31 @@ function renderizarSeccionesPersonales() {
 function renderFilterButtons() {
   consoleButtons.innerHTML = '';
   const t = translations[idiomaActual] || translations['es'];
+  
+  // Botón Todas
   const btnAll = document.createElement('button');
   btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
   btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
   btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderVideos(); };
   consoleButtons.appendChild(btnAll);
 
+  // Botón Historial
+  const histText = t.history.replace(/🍿 /g, '').toUpperCase();
+  const btnHistory = document.createElement('button');
+  btnHistory.className = 'console-btn' + (filtroActual === 'HISTORY' ? ' fav-active-btn' : '');
+  btnHistory.innerHTML = `<span>🍿</span><span>${histText}</span>`;
+  btnHistory.onclick = () => { filtroActual = 'HISTORY'; renderFilterButtons(); renderVideos(); };
+  consoleButtons.appendChild(btnHistory);
+
+  // Botón Favoritos
+  const favText = t.favs.replace(/❤️ /g, '').toUpperCase();
+  const btnFav = document.createElement('button');
+  btnFav.className = 'console-btn' + (filtroActual === 'FAVORITES' ? ' fav-active-btn' : '');
+  btnFav.innerHTML = `<span>❤️</span><span>${favText}</span>`;
+  btnFav.onclick = () => { filtroActual = 'FAVORITES'; renderFilterButtons(); renderVideos(); };
+  consoleButtons.appendChild(btnFav);
+
+  // Iconos de consolas
   const iconMap = {
     'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
     'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
@@ -675,6 +694,7 @@ function renderFilterButtons() {
     if (iA !== -1 && iB !== -1) return iA - iB;
     if (iA !== -1) return -1; if (iB !== -1) return 1; return a.localeCompare(b);
   });
+  
   categoriasOrdenadas.forEach(cat => {
     const btn = document.createElement('button'); btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
     const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📁</span>`;
@@ -704,7 +724,18 @@ function renderVideos() {
   updatesGrid.innerHTML = '';
 
   let filtrados = todosLosVideos;
-  if (filtroActual !== 'ALL') { filtrados = filtrados.filter(v => v.console === filtroActual); }
+  
+  if (filtroActual === 'FAVORITES') {
+    const favIds = JSON.parse(localStorage.getItem('kelonio_favs')) || [];
+    filtrados = favIds.map(id => todosLosVideos.find(v => v.id === id)).filter(v => v);
+  } else if (filtroActual === 'HISTORY') {
+    const histIds = JSON.parse(localStorage.getItem('kelonio_history')) || [];
+    filtrados = histIds.map(id => todosLosVideos.find(v => v.id === id)).filter(v => v);
+  } else if (filtroActual !== 'ALL') { 
+    filtrados = filtrados.filter(v => v.console === filtroActual); 
+  }
+
+  // Aplicar buscador de texto
   if (query) {
     filtrados = filtrados.filter(v => {
       let tA = (v.label[idiomaActual] || v.label['en'] || v.label['es'] || '').toLowerCase();
@@ -713,7 +744,15 @@ function renderVideos() {
     });
   }
 
-  if (filtrados.length === 0) { updatesGrid.innerHTML = `<p style="color:#aaa; text-align:center; grid-column:1/-1; font-size:1.15rem; padding: 50px 0;">${t.empty}</p>`; return; }
+  if (filtrados.length === 0) { 
+    let msgVacio = t.empty;
+    if (filtroActual === 'FAVORITES' && !query) msgVacio = t.favEmpty;
+    if (filtroActual === 'HISTORY' && !query) msgVacio = t.histEmpty;
+    
+    updatesGrid.innerHTML = `<p style="color:#aaa; text-align:center; grid-column:1/-1; font-size:1.15rem; padding: 50px 0;">${msgVacio}</p>`; 
+    return; 
+  }
+  
   let htmlResult = ''; filtrados.forEach(video => { htmlResult += crearTarjetaHTML(video, t); });
   updatesGrid.innerHTML = htmlResult;
 }
