@@ -792,7 +792,7 @@ function renderVideos() {
 async function cargarDatosVideos() {
   const loader = document.getElementById('mainLoader'); loader.style.display = 'block';
   try {
-    const response = await fetch('videos.json', { cache: "no-store" });
+    const response = await fetch('videos/videos.json', { cache: "no-store" });
     if (!response.ok) throw new Error("No se pudo cargar videos.json");
     const consolasData = await response.json();
     todosLosVideos = []; categoriasUnicas.clear();
