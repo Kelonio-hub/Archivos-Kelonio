@@ -304,6 +304,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
 </button>
 <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+<button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+</button>
 <button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
 <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
@@ -356,49 +359,49 @@ const translations = {
     title:"Updates Radar | La Presa", heroTitle: "Updates Radar", heroDesc: "Real-time monitoring of the latest versions detected by our satellite.",
     search:"Search files...", all: "Todas", download: "📥 Download", bodyText: "New version detected in the official repository. Check the patch notes and download the updated files.",
     empty: "No updates found for this console or search.", waiting: "⚠️ The satellite hasn't collected data yet.", loading: "Loading radar database...",
-    products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi"
+    products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi"
   },
   es:{
     title:"Radar de Actualizaciones | La Presa", heroTitle: "Radar de Actualizaciones", heroDesc: "Monitoreando en tiempo real las últimas versiones detectadas por el satélite.",
     search:"Buscar archivos...", all: "Todas", download: "📥 Descargar", bodyText: "Nueva versión detectada en el repositorio oficial. Revisa las notas del parche y descarga los archivos actualizados.",
     empty: "No se encontraron actualizaciones para esta búsqueda.", waiting: "⚠️ El satélite aún no ha recopilado los datos.", loading: "Cargando base de datos del radar...",
-    products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi"
+    products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi"
   },
   fr:{
     title:"Radar de Mises à Jour | La Presa", heroTitle: "Radar de Mises à Jour", heroDesc: "Surveillance en temps réel des dernières versions détectées par le satellite.",
     search:"Rechercher des fichiers...", all: "Toutes", download: "📥 Télécharger", bodyText: "Nouvelle version détectée. Consultez les notes de mise à jour et téléchargez les fichiers.",
     empty: "Aucune mise à jour trouvée.", waiting: "⚠️ Le satellite n'a pas encore collecté de données.", loading: "Chargement de la base de données...",
-    products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi"
+    products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi"
   },
   it:{
     title:"Radar Aggiornamenti | La Presa", heroTitle: "Radar Aggiornamenti", heroDesc: "Monitoraggio in tempo reale delle ultime versioni rilevate dal satellite.",
     search:"Cerca file...", all: "Tutte", download: "📥 Scarica", bodyText: "Nuova versione rilevata. Controlla le note di rilascio e scarica i file aggiornati.",
     empty: "Nessun aggiornamento trovato.", waiting: "⚠️ Il satellite non ha ancora raccolto dati.", loading: "Caricamento database...",
-    products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi"
+    products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi"
   },
   pt:{
     title:"Radar de Atualizações | La Presa", heroTitle: "Radar de Atualizações", heroDesc: "Monitoramento em tempo real das últimas versões detectadas pelo satélite.",
     search:"Buscar arquivos...", all: "Todas", download: "📥 Baixar", bodyText: "Nova versão detectada no repositório oficial. Verifique as notas e baixe os arquivos.",
     empty: "Nenhuma atualização encontrada.", waiting: "⚠️ O satélite ainda não coletou dados.", loading: "Carregando banco de dados...",
-    products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi"
+    products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi"
   },
   de:{
     title:"Update-Radar | La Presa", heroTitle: "Update-Radar", heroDesc: "Echtzeit-Überwachung der neuesten erfassten Versionen des Satelliten.",
     search:"Dateien suchen...", all: "Alle", download: "📥 Download", bodyText: "Neue Version im offiziellen Repository erkannt. Überprüfe die Patch-Notes und lade die Dateien herunter.",
     empty: "Keine Updates gefunden.", waiting: "⚠️ Der Satellit hat noch keine Daten gesammelt.", loading: "Lade Radar-Datenbank...",
-    products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi"
+    products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi"
   },
   ja:{
     title:"更新レーダー | La Presa", heroTitle: "更新レーダー", heroDesc: "人工衛星が検知した最新バージョンをリアルタイムで監視しています。",
     search:"ファイルを検索...", all: "すべて", download: "📥 ダウンロード", bodyText: "公式リポジトリで新しいバージョンが検出されました。パッチノートを確認し、ファイルをダウンロードしてください。",
     empty: "見つかりませんでした。", waiting: "⚠️ データが 아직 굴집되지 않았습니다.", loading: "データベースを読み込み中...",
-    products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート"
+    products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート"
   },
   ko:{
     title:"업데이트 레이더 | La Presa", heroTitle: "업데이트 레이더", heroDesc: "위성이 감지한 최신 버전을 실시간으로 모니터링합니다.",
     search:"파일 검색...", all: "모든", download: "📥 다운로드", bodyText: "공식 저장소에서 새 버전이 감지되었습니다. 패치 노트를 확인하고 업데이트된 파일을 다운로드하세요.",
     empty: "업데이트를 찾을 수 없습니다.", waiting: "⚠️ 위성이 아직 데이터를 수집하지 않았습니다.", loading: "데이터베이스 로드 중...",
-    products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기"
+    products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기"
   }
 };
 
@@ -539,6 +542,10 @@ function updateLanguage(){
   const loaderText = document.getElementById('loaderText');
   if(loaderText) loaderText.textContent = t.loading;
   
+  if (document.getElementById('videosBtn')) {
+    const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
+    document.getElementById('videosBtn').title = (t && t.videos) ? t.videos : (dictVideos[idiomaActual] || 'Vídeos');
+  }
   if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
   if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.products;
   if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.guides;
