@@ -3,610 +3,142 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title id="pageTitle">Productos | La Presa</title>
+<title id="pageTitle">Centro de Productos | La Presa</title>
 <link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
 <style>
-:root{
-  --red:#e50914; 
-  --bg:#141414;
-  --glass:rgba(20,20,20,.78);
-  --glass-border:rgba(255,255,255,.08);
-  --accent:#00aaff;
-  --gold:#ffcc00;
-  --discord:#5865F2; 
-  --kofi:#FF5E5B;    
+
+/* ================= VARIABLES Y TEMA AUTOMÁTICO/MANUAL ================= */
+:root, :root[data-theme="dark"] {
+  --red: #00aaff; /* Acento Azul por defecto */
+  --glow-rgb: 0, 170, 255; 
+  
+  /* Tema Oscuro (Por defecto) */
+  --bg: #141414;
+  --text-main: #ffffff;
+  --text-muted: #aaa;
+  --glass: rgba(20,20,20,.78);
+  --glass-border: rgba(255,255,255,.08);
+  --topbar-bg: rgba(0,0,0,.88);
+  --card-bg: rgba(255,255,255,0.02);
+  --input-bg: rgba(255,255,255,.08);
+  --btn-bg: rgba(255,255,255,.05);
+  --icon-color: #ffffff;
+  --loader-border: rgba(255,255,255,0.1);
 }
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+
+/* Tema Claro Forzado Manualmente */
+:root[data-theme="light"] {
+  --bg: #f8f9fa;
+  --text-main: #141414;
+  --text-muted: #555555;
+  --glass: rgba(255,255,255,.9);
+  --glass-border: rgba(0,0,0,.15);
+  --topbar-bg: rgba(255,255,255,.95);
+  --card-bg: #ffffff;
+  --input-bg: rgba(0,0,0,.05);
+  --btn-bg: rgba(0,0,0,.05);
+  --icon-color: #333333;
+  --loader-border: rgba(0,0,0,0.1);
 }
-body{
-  font-family:'Segoe UI',sans-serif;
-  background:#141414;
-  color:white;
-  overflow-x:hidden;
-  min-height: 100vh;
+
+/* Tema Claro Automático */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f8f9fa;
+    --text-main: #141414;
+    --text-muted: #555555;
+    --glass: rgba(255,255,255,.9);
+    --glass-border: rgba(0,0,0,.15);
+    --topbar-bg: rgba(255,255,255,.95);
+    --card-bg: #ffffff;
+    --input-bg: rgba(0,0,0,.05);
+    --btn-bg: rgba(0,0,0,.05);
+    --icon-color: #333333;
+    --loader-border: rgba(0,0,0,0.1);
+  }
 }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text-main); overflow-x:hidden; transition: background 0.3s, color 0.3s; }
 
 /* ================= TOPBAR ================= */
-.topbar{
-  position:fixed; 
-  top:0; 
-  left:0; 
-  right:0; 
-  z-index:9999;
-  background:rgba(0,0,0,.88); 
-  backdrop-filter:blur(16px);
-  display:flex; 
-  justify-content:space-between; 
-  align-items:center;
-  padding:8px 3%; 
-  gap: 10px; 
-}
-
-/* GRUPO IZQUIERDO: LOGO + REDES */
+.topbar { position:fixed; top:0; left:0; right:0; z-index:9999; background:var(--topbar-bg); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; transition: background 0.3s; }
 .topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
-.logo{ font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
-.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; }
+.logo { font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor: pointer;}
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; transition: border-color 0.3s; }
 
-/* ICONOS BARRA SUPERIOR */
-.social-icon-btn { background:transparent; border:none; cursor: pointer; color: white; opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: var(--icon-color); opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
 .social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
 .radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
 
-/* GRUPO DERECHO: HERRAMIENTAS Y BUSCADOR */
-.right-tools{ display:flex; align-items:center; gap:12px; flex-shrink: 0; }
-.config-group{ display:flex; flex-direction:column; align-items:center; gap:4px; }
-.theme-dots-container{ display:flex; gap:5px; }
-.color-dot{ width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
-.color-dot:hover{ transform:scale(1.3); }
-.color-dot.active-dot{ border:2px solid white; transform:scale(1.15); box-shadow: 0 0 8px rgba(255,255,255,0.6); }
+.right-tools { display:flex; align-items:center; gap:12px; flex-shrink: 0; }
+.config-group { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container { display:flex; gap:5px; align-items: center;}
+.color-dot { width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(0,0,0,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover { transform:scale(1.3); }
+.color-dot.active-dot { border:2px solid var(--text-main); transform:scale(1.15); box-shadow: 0 0 8px rgba(128,128,128,0.6); }
 
-#languageSelector{ background:rgba(0,0,0,.8); border:1px solid var(--glass-border); color:#fff; padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; }
-#productSearch{ background:rgba(255,255,255,.08); border:none; color:white; width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease; }
-#productSearch:focus { width: 200px; border: 1px solid var(--red); }
-#productSearch::placeholder{ color:#ccc; }
+#languageSelector { background:var(--input-bg); border:1px solid var(--glass-border); color:var(--text-main); padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; transition: 0.3s; }
+#languageSelector option { background: var(--bg); color: var(--text-main); }
 
-/* Botón de guardar JSON en la barra superior */
-.save-json-btn {
-  background: var(--gold) !important;
-  color: black !important;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-size: 11px;
-  display: none; 
-  align-items: center;
-  gap: 4px;
-  transition: transform 0.2s;
-}
-.save-json-btn:hover {
-  transform: scale(1.05);
-}
+#fileSearch { background:var(--input-bg); border:1px solid transparent; color:var(--text-main); width:170px; padding:8px 14px; border-radius:50px; font-size:13px; outline:none; transition: width 0.3s ease, border-color 0.3s, background 0.3s; }
+#fileSearch:focus { width: 200px; border-color: var(--red); }
+#fileSearch::placeholder { color:var(--text-muted); }
 
-/* ================= CONSOLE BUTTONS (Ajustado para el body) ================= */
-.console-buttons { 
-  display: flex; 
-  gap: 10px; 
-  justify-content: center; 
-  flex-wrap: wrap; 
-  margin-bottom: 20px; 
-  padding: 5px 5%;
-}
-.console-btn { 
-  background: rgba(255,255,255,.05); 
-  border: 1px solid rgba(255,255,255,.08); 
-  border-radius: 10px; 
-  padding: 8px 14px; 
-  display: flex; 
-  align-items: center; 
-  gap: 6px; 
-  cursor: pointer; 
-  transition: .3s ease; 
-  color: white; 
-  font-weight: 700; 
-  font-size: 12px; 
-  white-space: nowrap; 
-}
-.console-btn:hover { 
-  transform: scale(1.05); 
-  border-color: var(--red); 
-  background: rgba(var(--glow-rgb),.15); 
-}
-.console-btn.active { 
-  border-color: var(--red); 
-  background: rgba(var(--glow-rgb),.25); 
-  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); 
-}
-.console-btn span { color: white; letter-spacing: .5px; }
-.console-btn img { width: 18px; height: 18px; object-fit: contain; }
+/* ================= CONSOLE BUTTONS ================= */
+.console-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 30px; padding: 5px 0; }
+.console-btn { background: var(--btn-bg); border: 1px solid var(--glass-border); border-radius: 10px; padding: 8px 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: .3s ease; color: var(--text-main); font-weight: 700; font-size: 12px; white-space: nowrap; }
+.console-btn:hover { transform: scale(1.05); border-color: var(--red); background: rgba(var(--glow-rgb),.15); }
+.console-btn.fav-active-btn { border-color: var(--red); background: rgba(var(--glow-rgb),.25); box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5); }
+.console-btn span { color: var(--text-main); letter-spacing: .5px; transition: color 0.3s; }
+.console-btn img { width: 18px; height: 18px; object-fit: contain; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); }
 
-/* ================= APP ================= */
-#mainApp{
-  display:block;
-  padding-top:85px; 
+/* ================= HEADER HERO & ANIMACIÓN SATPULSE ================= */
+.header-section { padding: 130px 5% 40px; text-align: center; background: linear-gradient(to bottom, rgba(var(--glow-rgb),0.15) 0%, var(--bg) 100%); transition: background 0.3s; }
+.header-title-container { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 10px; }
+.header-section h1 { font-size: 3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0 auto; }
+.hero-guide-icon { width: 3.2rem; height: 3.2rem; color: var(--red); filter: drop-shadow(0 0 14px rgba(var(--glow-rgb), 0.7)); transition: color 0.3s ease; animation: satPulse 3.5s infinite ease-in-out; flex-shrink: 0; }
+@keyframes satPulse { 0%, 100% { transform: scale(1) translateY(0px); filter: drop-shadow(0 0 12px rgba(var(--glow-rgb), 0.6)); } 50% { transform: scale(1.12) translateY(-4px); filter: drop-shadow(0 0 26px rgba(var(--glow-rgb), 1)); } }
+.header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; transition: color 0.3s; }
+.hero-warning { color: var(--red); font-size: 0.85rem !important; font-style: italic; margin-top: 15px !important; font-weight: 600; opacity: 0.9; }
+
+/* ================= GRID DE PRODUCTOS ================= */
+.updates-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; padding: 0 5% 60px; }
+.update-card { background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 22px; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, background 0.3s; display: flex; flex-direction: column; height: 100%; }
+.update-card:hover { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 0 20px rgba(var(--glow-rgb), 0.25), 0 10px 20px rgba(0,0,0,0.15); }
+.update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.update-tag { background: var(--btn-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: background 0.3s, color 0.3s; }
+.update-date { color: var(--text-muted); font-size: 12px; transition: color 0.3s; }
+.update-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; }
+.update-card h3 a { color: var(--text-main); text-decoration: none; transition: color 0.2s; }
+.update-card h3 a:hover { color: var(--red); }
+.update-body { color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; margin-bottom: 25px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; transition: color 0.3s; }
+.update-footer { margin-top: auto; }
+.download-link { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: var(--red); color: white !important; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: bold; transition: filter 0.3s, background 0.3s; }
+.download-link:hover { filter: brightness(1.2); }
+
+/* ================= LOADER ================= */
+.loader-container { text-align: center; padding: 50px; width: 100%; grid-column: 1 / -1; display: none; }
+.spinner { width: 50px; height: 50px; border: 5px solid var(--loader-border); border-top-color: var(--red); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; transition: border-color 0.3s; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ================= BOTÓN SUBIR ================= */
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+@media(max-width: 1150px) { 
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; } 
+  .topbar-left { order: 1; } 
+  .right-tools { order: 2; margin-top: 5px; flex-wrap: wrap; justify-content: center; } 
+}
+@media(max-width: 650px) { 
+  .right-tools { width: 100%; gap: 15px; } 
+  #fileSearch { width: 100%; order: 3; margin-top: 10px; } 
+  #fileSearch:focus { width: 100%; } 
+  .config-group { flex-direction: row; order: 2; gap: 15px; justify-content: center; width: 100%; } 
+  .header-section { padding-top: 250px; } 
 }
 
-/* ================= CONTENEDOR DE SUBFILTROS DINÁMICOS ================= */
-.subcategories-filter-wrapper {
-  width: 90%;
-  max-width: 1300px;
-  margin: 0 auto 15px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.subcat-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap; 
-  padding: 4px 0;
-}
-.subcat-filter-btn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ccc;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  margin-bottom: 5px; 
-}
-.subcat-filter-btn:hover {
-  border-color: var(--red);
-  color: #fff;
-}
-.subcat-filter-btn.active {
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.4);
-}
-
-/* ================= BANNER ALARGADO (AMAZON PRIME) ================= */
-.prime-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(90deg, rgba(0, 170, 255, 0.12), rgba(20, 20, 20, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 4px solid var(--red);
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 0 auto 15px auto;
-  width: 90%;
-  max-width: 1300px;
-  gap: 15px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.prime-banner:hover {
-  transform: translateY(-2px);
-  border-color: var(--red);
-  box-shadow: 0 4px 15px rgba(var(--glow-rgb), 0.25);
-}
-.prime-banner-img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
-.prime-banner-info {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-}
-.prime-banner-info strong {
-  font-size: 14px;
-  color: #fff;
-  letter-spacing: 0.5px;
-}
-.prime-banner-info p {
-  font-size: 12.5px;
-  color: #bbb;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.prime-banner-btn {
-  background: var(--red);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 18px;
-  font-weight: 700;
-  font-size: 12px;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: filter 0.2s;
-}
-.prime-banner-btn:hover {
-  filter: brightness(1.2);
-}
-
-/* ================= ROWS & CAROUSELS ================= */
-.row {
-  padding: 20px 5%;
-}
-.row h2{
-  margin-bottom:20px;
-  font-size:2rem;
-  color: white;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-.row.featured h2 {
-  color: var(--red);
-}
-.carousel{
-  display:flex;
-  gap:16px;
-  overflow-x:auto;
-  scroll-behavior:smooth;
-  padding-bottom:15px;
-}
-.carousel::-webkit-scrollbar{
-  display:none;
-}
-
-/* ================= BARRA POR LOTE STICKY (ADMIN) ================= */
-#batchAdminTools {
-  position: sticky;
-  top: 65px; 
-  z-index: 9990; 
-  background: rgba(20, 20, 20, 0.96); 
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 1px rgba(255,255,255,0.2);
-  transition: top 0.2s ease;
-}
-@media(max-width:1100px){
-  #batchAdminTools {
-    top: 112px; 
-  }
-}
-
-/* ================= CARDS SIMÉTRICAS ================= */
-.card{
-  min-width:300px;
-  width: 300px;
-  background:rgba(255,255,255,.05);
-  border-radius:16px;
-  overflow:hidden;
-  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border: 1px solid rgba(255,255,255,.1);
-  cursor: pointer;
-}
-.card:hover{
-  transform:scale(1.03);
-  z-index:20;
-  border-color: var(--red);
-  box-shadow: 0 0 30px rgba(var(--glow-rgb, 229, 9, 20), 0.45), 0 15px 30px rgba(0,0,0,0.6);
-}
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  flex-shrink: 0;
-  background: #000;
-}
-.card-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 30px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(255,255,255,0.15);
-  pointer-events: none;
-}
-.card-size-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--red);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 10px;
-  font-weight: 800;
-  pointer-events: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-.card-info{
-  padding:18px 18px 10px 18px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.card-info strong{
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-bottom: 8px;
-  font-size:16px;
-  white-space: normal;
-}
-.card-info p{
-  font-size:13.5px;
-  color:#ccc;
-  line-height:1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.card-info .price-tag {
-  color: var(--gold);
-  font-weight: bold;
-  margin-top: auto;
-  padding-top: 8px;
-  font-size: 15px;
-}
-
-/* ================= SECCIÓN DE ACCIONES ================= */
-.card-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 15px 15px 15px;
-  gap: 8px;
-  margin-top: auto;
-}
-.action-btn {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 12px;
-  gap: 6px;
-}
-.action-btn:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.3);
-}
-.action-btn > svg {
-  width: 18px;
-  height: 18px;
-}
-.buy-btn {
-  background: var(--red);
-}
-.zoom-btn {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* Elementos del Admin Panel en Tarjetas */
-.admin-card-tools {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 15px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.admin-select-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.admin-select-group label {
-  font-size: 10px;
-  color: #aaa;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.admin-select-multiple {
-  background: #222;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 4px;
-  font-size: 11px;
-  outline: none;
-}
-.admin-select-multiple option {
-  padding: 2px 4px;
-}
-.delete-btn {
-  background: #cc0000 !important;
-  color: white;
-  width: 100%;
-}
-
-/* ================= CANDADO INVISIBLE ================= */
-.admin-lock-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 10005; 
-  background: rgba(20, 20, 20, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0; 
-  transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-}
-.admin-lock-btn:hover {
-  opacity: 1;
-  background: #141414;
-  border-color: var(--red);
-}
-.admin-lock-btn svg {
-  width: 18px;
-  height: 18px;
-}
-
-/* ================= TARJETAS MÁS PEQUEÑAS (TOP VENTAS) ================= */
-.card.card-recent{
-  min-width:210px;
-  width: 210px;
-}
-.card.card-recent img{
-  height: 140px;
-}
-.card.card-recent .card-info{
-  padding: 12px 12px 6px 12px;
-}
-.card.card-recent .card-info strong{
-  font-size: 14px;
-  -webkit-line-clamp: 1;
-}
-.card.card-recent .card-info p{
-  font-size: 12px;
-  -webkit-line-clamp: 2;
-}
-
-/* ================= PAGINACIÓN ================= */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  flex-wrap: wrap;
-}
-#paginationContainerTop {
-  margin-bottom: 20px;
-}
-#paginationContainerBottom {
-  margin-top: 30px;
-}
-.page-btn {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.1);
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all .3s ease;
-  font-weight: bold;
-  font-size: 13px;
-}
-.page-btn:hover {
-  border-color: var(--red);
-  background: rgba(var(--glow-rgb),.15);
-}
-.page-btn.active {
-  background: var(--red);
-  border-color: var(--red);
-  box-shadow: 0 0 10px rgba(var(--glow-rgb), 0.5);
-}
-.page-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-/* ================= MODAL IMAGEN ================= */
-#imageModal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  backdrop-filter: blur(12px);
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  padding: 20px;
-}
-#imageModal img {
-  max-width: 95%;
-  max-height: 95vh;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.9);
-}
-#imageModal .modal-close {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 40px;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-#imageModal .modal-close:hover {
-  transform: scale(1.2);
-  color: var(--red);
-}
-
-/* ================= BOTÓN SUBIR ARRIBA ================= */
-#backToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 9998;
-  background: var(--red);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  font-size: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: opacity 0.3s, transform 0.3s;
-}
-#backToTopBtn:hover {
-  transform: scale(1.1);
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width: 1150px) {
-  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; }
-  .topbar-left { order: 1; }
-  .right-tools { order: 2; margin-top: 5px;}
-}
-@media(max-width:900px){
-  #productSearch{ width:140px; }
-  #productSearch:focus { width: 160px; }
-  .card{ min-width:240px; width: 240px; }
-  .card.card-recent{ min-width:180px; width: 180px; }
-}
-@media(max-width:768px){
-  .prime-banner {
-    padding: 10px;
-    width: 95%;
-  }
-  .prime-banner-info p {
-    white-space: normal;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-}
 </style>
 
 <!-- ==========================================================
@@ -627,14 +159,14 @@ body{
 =========================================================== -->
 <meta content="website" property="og:type"/>
 <meta content="La Presa" property="og:site_name"/>
-<meta content="Productos | La Presa" property="og:title"/>
-<meta content="Descubre Productos | La Presa en el centro de recursos de La Presa." property="og:description"/>
+<meta content="Centro de Productos" property="og:title"/>
+<meta content="Descubre el Centro de Productos y accesorios en el centro de recursos de La Presa." property="og:description"/>
 <meta content="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html" property="og:url"/>
 <meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" property="og:image"/>
 <meta content="es_ES" property="og:locale"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Productos | La Presa" name="twitter:title"/>
-<meta content="Descubre Productos | La Presa en el centro de recursos de La Presa." name="twitter:description"/>
+<meta content="Centro de Productos" name="twitter:title"/>
+<meta content="Descubre el Centro de Productos y accesorios en el centro de recursos de La Presa." name="twitter:description"/>
 <meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" name="twitter:image"/>
 <script type="application/ld+json">
 {
@@ -655,8 +187,8 @@ body{
   "@type": "WebPage",
   "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#webpage",
   "url": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html",
-  "name": "Productos | La Presa",
-  "description": "Descubre Productos | La Presa en el centro de recursos de La Presa.",
+  "name": "Centro de Productos | La Presa",
+  "description": "Descubre el Centro de Productos y accesorios en el centro de recursos de La Presa.",
   "inLanguage": [
     "es",
     "en",
@@ -675,9 +207,9 @@ body{
     "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png"
   },
   "mainEntity": {
-    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#collection"
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#website"
   },
-  "dateModified": "2026-07-19"
+  "dateModified": "2026-07-20"
 }
 </script>
 <script type="application/ld+json">
@@ -694,28 +226,44 @@ body{
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Productos | La Presa",
+      "name": "Productos",
       "item": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html"
     }
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#collection",
-  "name": "Productos | La Presa",
-  "description": "Descubre Productos | La Presa en el centro de recursos de La Presa.",
-  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html",
-  "isPartOf": {
-    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#webpage"
-  }
-}
+<script>
+  /* ================= PRE-CARGA DE TEMA PARA EVITAR FLASH ================= */
+  (function() {
+    const savedMode = localStorage.getItem('selectedMode');
+    if (savedMode === 'dark' || savedMode === 'light') {
+      document.documentElement.setAttribute('data-theme', savedMode);
+    }
+
+    const savedTheme = localStorage.getItem('selectedThemeColor');
+    if (savedTheme) {
+      const paleta = {
+        rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
+        naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
+        amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+        verde:    { hex: '#2ecc71', rgb: '46, 204, 113' },
+        azul:     { hex: '#00aaff', rgb: '0, 170, 255' },
+        violeta:  { hex: '#9b59b6', rgb: '155, 89, 182' },
+        rosa:     { hex: '#ff80ab', rgb: '255, 128, 171' }
+      };
+      
+      const theme = paleta[savedTheme];
+      if (theme) {
+        document.documentElement.style.setProperty('--red', theme.hex);
+        document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+      }
+    }
+  })();
 </script>
+
 </head>
 <body>
-<div class="topbar">
+<header class="topbar">
 <div class="topbar-left">
 <div class="logo" onclick="window.location.href='index.html'">LA PRESA</div>
 <div class="social-group">
@@ -727,14 +275,13 @@ body{
 </button>
 </div>
 </div>
-<div class="right-tools">
+<nav class="right-tools">
 <button class="social-icon-btn" id="guideBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')" title="Guías">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"></path></svg>
 </button>
 <button class="social-icon-btn" id="productsBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')" title="Productos">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
 </button>
-<!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
 <button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
 </button>
@@ -749,971 +296,369 @@ body{
 </svg>
 <span class="radar-badge" id="radarBadge"></span>
 </button>
-<input autocomplete="off" id="productSearch" placeholder="Buscar productos..." type="text"/>
+<input id="fileSearch" placeholder="Buscar productos..." type="text"/>
 <div class="config-group">
 <div class="theme-dots-container" id="themeDots"></div>
-<div style="display: flex; gap: 6px; align-items: center;">
-<button class="save-json-btn" id="saveJsonBtn" title="Descargar JSON de la categoría actual">
-          💾 Guardar JSON
-        </button>
-</div>
 <select id="languageSelector"></select>
 </div>
-</div>
-</div>
-<button class="admin-lock-btn" id="adminLockBtn" title="Modo Administrator">
-<svg fill="none" id="lockIcon" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
-<rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect>
-<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+</nav>
+</header>
+<div class="header-section">
+<!-- TÍTULO CON ICONO DE CARRITO Y ANIMACIÓN SATPULSE -->
+<h1 id="heroTitle">
+<svg class="hero-guide-icon" fill="currentColor" viewbox="0 0 24 24">
+<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path>
 </svg>
-</button>
-<div id="mainApp">
+<span> Centro de Productos</span>
+</h1>
+<p id="heroDesc">Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.</p>
+<p class="hero-warning" id="heroWarning"></p>
 <div class="console-buttons" id="consoleButtons"></div>
-<div class="prime-banner" id="primeBanner" style="display:none;"></div>
-<div class="subcategories-filter-wrapper">
-<div class="subcat-row" id="subcategoriesFilterRow" style="display:none;"></div>
-<div class="subcat-row" id="sizesGBRow" style="display:none;"></div>
-<div class="subcat-row" id="sizesTBRow" style="display:none;"></div>
 </div>
-<div id="featuredContainer" style="display:none">
-<div class="row featured" id="bestsellersRow" style="display:none;">
-<h2 id="titleBestsellers">TOP VENTAS</h2>
-<div class="carousel" id="bestsellersCarousel"></div>
+<main class="updates-container" id="updatesGrid">
+<div class="loader-container" id="mainLoader">
+<div class="spinner"></div>
+<p id="loaderText" style="color:#aaa;">Cargando productos...</p>
 </div>
-</div>
-<div id="rowsContainer">
-<div class="row">
-<h2 id="currentCategoryTitle" style="font-size:2.5rem;">SWITCH</h2>
-<div class="pagination" id="paginationContainerTop"></div>
-<div id="batchAdminTools" style="display:none; margin-bottom: 20px; padding: 15px; border: 1px solid rgba(255,255,255,.1); border-radius: 12px; gap: 15px; align-items: center; flex-wrap: wrap;">
-<label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:bold; color:var(--gold); cursor:pointer; user-select:none;">
-<input id="selectAllBatchChk" style="width:16px; height:16px; cursor:pointer;" type="checkbox"/> Seleccionar página actual
-        </label>
-<div style="display:flex; align-items:center; gap:6px; font-size:13px;">
-<span>Mover a Consola:</span>
-<select id="batchConsoleSelect" style="background:#222; color:white; border:1px solid rgba(255,255,255,.2); padding:6px; border-radius:6px; outline:none; font-size:12px;"></select>
-</div>
-<div style="display:flex; align-items:center; gap:6px; font-size:13px;">
-<span>Mover a Subcategoría:</span>
-<select id="batchSubcatSelect" style="background:#222; color:white; border:1px solid rgba(255,255,255,.2); padding:6px; border-radius:6px; outline:none; font-size:12px;"></select>
-</div>
-<button id="newSubcategoryBtn" style="background:var(--gold); color:black; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer;">
-          ➕ Nueva Subcategoría
-        </button>
-<button id="deleteBatchBtn" style="background:#cc0000; color:white; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer;">
-          🗑️ Eliminar Seleccionados
-        </button>
-<button id="applyBatchBtn" style="background:var(--red); color:white; border:none; padding:8px 16px; border-radius:6px; font-weight:700; font-size:12px; cursor:pointer; transition:transform 0.2s;">
-          ⚡ Aplicar Cambios por Lote
-        </button>
-</div>
-<div class="carousel" id="productsGrid" style="flex-wrap: wrap; overflow: visible;"></div>
-<div class="pagination" id="paginationContainerBottom"></div>
-</div>
-</div>
-</div>
-<div id="imageModal">
-<span class="modal-close" id="imageModalClose">×</span>
-<img alt="Imagen ampliada" id="enlargedImage" src=""/>
-</div>
+</main>
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 <script>
-/* ================= TRANSLACIONES GLOBALES ================= */
+/* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  en: { title: "Products | La Presa", search: "Search products...", topVentas: "TOP SALES", buy: "View", zoom: "Enlarge", results: "Search Results", all: "All" },
-  es: { title: "Productos | La Presa", search: "Buscar productos...", topVentas: "TOP VENTAS", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", all: "Todos" },
-  fr: { title: "Produits | La Presa", search: "Rechercher...", topVentas: "TOP VENTES", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", all: "Tous" },
-  it: { title: "Prodotti | La Presa", search: "Cerca prodotti...", topVentas: "TOP VENDITE", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", all: "Tutti" },
-  pt: { title: "Produtos | La Presa", search: "Buscar productos...", topVentas: "TOP VENDAS", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", all: "Todos" },
-  de: { title: "Produkte | La Presa", search: "Produkte suchen...", topVentas: "TOP VERKÄUFE", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", all: "Alle" },
-  ja: { title: "製品 | La Presa", search: "製品を検索...", topVentas: "トップセールス", buy: "見る", zoom: "拡大", results: "検索結果", all: "すべて" },
-  ko: { title: "제품 | La Presa", search: "제품 검색...", topVentas: "인기 상품", buy: "보기", zoom: "확대", results: "검색 결과", all: "전체" }
+  es: { title: "Productos y Accesorios | La Presa", heroTitle: "Centro de Productos", heroDesc: "Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.", search: "Buscar productos...", all: "Todos", read: "🛒 Ver Producto", empty: "No se encontraron products.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
+  en: { title: "Products & Accessories | La Presa", heroTitle: "Products Center", heroDesc: "Recommended accessories, useful tools, and essential hardware for your consoles.", search: "Search products...", all: "All", read: "🛒 View Product", empty: "No products found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
+  fr: { title: "Produits et Accessoires | La Presa", heroTitle: "Centre de Produits", heroDesc: "Accessoires recommandés, outils utiles et matériel essentiel pour vos consoles.", search: "Rechercher des produits...", all: "Tous", read: "🛒 Voir le Produit", empty: "Aucun produit trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
+  de: { title: "Produkte & Zubehör | La Presa", heroTitle: "Produktzentrum", heroDesc: "Empfohlenes Zubehör, nützliche Werkzeuge und wichtige Hardware für deine Konsolen.", search: "Produkte suchen...", all: "Alle", read: "🛒 Produkt ansehen", empty: "Keine Produkte gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Prodotti e Accessori | La Presa", heroTitle: "Centro Prodotti", heroDesc: "Accessori consigliati, strumenti utili e hardware essenziale per le tue console.", search: "Cerca prodotti...", all: "Tutti", read: "🛒 Vedi Prodotto", empty: "Nessun prodotto trovato.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Produtos e Acessórios | La Presa", heroTitle: "Centro de Produtos", heroDesc: "Acessórios recomendados, ferramentas úteis e hardware essencial para as tuas consolas.", search: "Procurar produtos...", all: "Todos", read: "🛒 Ver Produto", empty: "Nenhum produto encontrado.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  ja: { title: "製品とアクセサリー | La Presa", heroTitle: "製品センター", heroDesc: "コンソールに推奨されるアクセサリー、便利なツール、および不可欠なハードウェア。", search: "製品を検索...", all: "すべて", read: "🛒 製品を見る", empty: "製品が見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
+  ko: { title: "제품 및 액세서리 | La Presa", heroTitle: "제품 센터", heroDesc: "콘솔을 위한 추천 액세서리, 유용한 도구 및 필수 하드웨어.", search: "제품 검색...", all: "모든", read: "🛒 제품 보기", empty: "제품을 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
-/* ================= TRADUCCIONES DE SUBCATEGORÍAS ================= */
-const subcatTranslations = {
-  "Novedades": { es: "Novedades", en: "New Arrivals", fr: "Nouveautés", it: "Novità", pt: "Novidades", de: "Neuheiten", ja: "新着", ko: "신상품" },
-  "Consolas": { es: "Consolas", en: "Consoles", fr: "Consoles", it: "Console", pt: "Consoles", de: "Konsolen", ja: "コンソール", ko: "콘솔" },
-  "Videojuegos": { es: "Videojuegos", en: "Video Games", fr: "Jeux Vidéo", it: "Videogiochi", pt: "Videojogos", de: "Videospiele", ja: "ビデオゲーム", ko: "비디오 게임" },
-  "Tarjeta de Regalo": { es: "Tarjetas de Regalo", en: "Gift Cards", fr: "Cartes Cadeaux", it: "Carte Regalo", pt: "Cartões de Presente", de: "Geschenkkarten", ja: "ギフトカード", ko: "기프트 카드" },
-  "Mandos-Perifericos": { es: "Mandos y Accesorios", en: "Controllers & Accessories", fr: "Manettes & Accessoires", it: "Controller e Accessori", pt: "Controles e Acessórios", de: "Controller & Zubehör", ja: "コントローラーとアクセサリー", ko: "컨트롤러 및 accesorios" },
-  "Fundas-Proteccion": { es: "Fundas y Protección", en: "Cases & Protection", fr: "Housses & Protection", it: "Custodie e Protezione", pt: "Capas e Proteção", de: "Hüllen & Schutz", ja: "ケースと保護", ko: "케이스 및 보호" },
-  "Tarjeta SD": { es: "Tarjeta SD", en: "SD Card", fr: "Carte SD", it: "Scheda SD", pt: "Cartão SD", de: "SD-Karte", ja: "SDカード", ko: "SD카드" },
-  "USB": { es: "USB", en: "USB", fr: "USB", it: "USB", pt: "USB", de: "USB", ja: "USB", ko: "USB" },
-  "Disco duro externo": { es: "Disco Duro Externo", en: "External Hard Drive", fr: "Disque Dur Externe", it: "Hard Disk Esterno", pt: "Disco Rígido Externo", de: "Externe Festplatte", ja: "外付けハードドライブ", ko: "외장 하드 드라이브" },
-  "Adaptadores": { es: "Adaptadores", en: "Adapters", fr: "Adaptateurs", it: "Adattatori", pt: "Adaptadores", de: "Adapter", ja: "アダプター", ko: "어댑터" },
-  "Baterías": { es: "Baterías", en: "Batteries", fr: "Batteries", it: "Batterie", pt: "Baterias", de: "Batterien", ja: "バッテリー", ko: "배터리" },
-  "Ordenadores": { es: "Ordenadores", en: "Computers", fr: "Ordinateurs", it: "Computer", pt: "Computadores", de: "Computer", ja: "コンピューター", ko: "컴퓨터" }
-};
+/* ================= VARIABLES GLOBALES ================= */
+let idiomaActual = 'en'; 
+let categoriasUnicas = new Set();
+let filtroActual = 'ALL'; 
+let todosLosProductos = [];
 
-const subcatOrder = ['Novedades', 'Consolas', 'Videojuegos', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo', 'Adaptadores', 'Baterías', 'Ordenadores'];
+const fileSearch = document.getElementById('fileSearch');
+const updatesGrid = document.getElementById('updatesGrid');
+const consoleButtons = document.getElementById('consoleButtons');
+const themeDotsContainer = document.getElementById('themeDots');
+const mybutton = document.getElementById("backToTopBtn");
 
-/* ================= PRODUCTO PRIME HARDCODEADO ================= */
-const PRODUCTO_PRIME = {
-  "id": "prime-promo",
-  "label": {
-    "en": "Amazon Prime", "es": "Amazon Prime", "fr": "Amazon Prime", "it": "Amazon Prime", "pt": "Amazon Prime", "de": "Amazon Prime", "ja": "Amazon Prime", "ko": "Amazon Prime"
-  },
-  "desc": {
-    "en": "Deals and free shipping on millions of products. Includes: Prime Video, Prime Music, Prime Photos and Prime Reading.\nSubscribe for €4.99/month or €49.90/year.",
-    "es": "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.\nSuscríbete por 4,99€/mes o 49,90 €/año.",
-    "fr": "Offres et livraison gratuite sur des millions de produits. Comprend : Prime Video, Prime Music, Prime Photos et Prime Reading.\nAbonnez-vous pour 4,99 €/mois ou 49,90 €/an.",
-    "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
-    "pt": "Ofertas e envios grátis em milhões de productos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês o 49,90 €/ano.",
-    "de": "Angebote und kostenloser Versand bei Millionen von Produkten. Enthält: Prime Video, Prime Music, Prime Photos und Prime Reading.\nAbonniere für 4,99 €/Monat oder 49,90 €/Jahr.",
-    "ja": "数百万の商品でお得な特典と無料配送。Prime Video、Prime Music、Prime Photos、Prime Readingが含まれます。\n月額4.99€または年額49.90€で購読。",
-    "ko": "수백만 개의 제품에 대한 혜택 outdoor 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
-  },
-  "img": "https://gazetadasemana.com.br/images/colunas/10044/06072023165518_Amazon_Pri.jpg",
-  "url": "https://amzn.to/4pq5Pp6"
-};
-
-/* ================= GLOBAL ================= */
-let isAdmin = false;
-let idiomaActual = 'es';
-let allProducts = [];
-let categoriaActual = 'Switch';
-let subcategoriaSeleccionada = 'ALL'; 
-let tamanoSeleccionado = 'ALL';         
-let paginaActual = 1;
-const itemsPorPagina = 24; 
-let batchToolsInitialized = false;
-
-const categories = [
-  { id: 'Switch',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
-  { id: 'PLAYSTATION', icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
-  { id: 'XBOX',        icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
-  { id: '3DS_NDS',     icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS / NDS', en: '3DS / NDS' } },
-  { id: 'WII_WIIU',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII', en: 'WII' } },
-  { id: 'SD/USB',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
-];
-
-const categoryJsonMap = {
-  'Switch': 'switch.json',
-  'PLAYSTATION': 'playstation.json',
-  'XBOX': 'xbox.json',
-  'WII_WIIU': 'wii.json',
-  'SD/USB': 'sd_usb.json',
-  '3DS_NDS': '3ds.json' 
-};
-
-/* ================= TEMAS ================= */
+/* ================= PALETA DE COLORES ================= */
 const paletaTemas = {
-  rojo:     { hex: '#e50914', rgb: '229, 9, 20' },
-  naranja:  { hex: '#ff6600', rgb: '255, 102, 0' },
-  amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
-  verde:    { hex: '#2ecc71', rgb: '46, 204, 113' },
-  azul:     { hex: '#00aaff', rgb: '0, 170, 255' },
-  violeta:  { hex: '#9b59b6', rgb: '155, 89, 182' },
-  rosa:     { hex: '#ff80ab', rgb: '255, 128, 171' }
+  rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' },
+  verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' }
 };
 
 function initThemeDots() {
-  const savedTheme = localStorage.getItem('selectedThemeColor') || 'rojo';
-  const container = document.getElementById('themeDots');
-  container.innerHTML = '';
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul';
+  const savedMode = localStorage.getItem('selectedMode') || 'dark';
+  
+  themeDotsContainer.innerHTML = '';
   
   Object.keys(paletaTemas).forEach(colorKey => {
-    const dot = document.createElement('div');
-    dot.className = 'color-dot';
+    const dot = document.createElement('div'); 
+    dot.className = 'color-dot theme-color-dot'; 
     dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    dot.setAttribute('aria-label', `Tema ${colorKey}`);
     if (colorKey === savedTheme) dot.classList.add('active-dot');
-    
     dot.addEventListener('click', () => {
-      document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active-dot'));
-      dot.classList.add('active-dot');
-      localStorage.setItem('selectedThemeColor', colorKey);
+      document.querySelectorAll('.theme-color-dot').forEach(d => d.classList.remove('active-dot'));
+      dot.classList.add('active-dot'); 
+      localStorage.setItem('selectedThemeColor', colorKey); 
       applyTheme(colorKey);
     });
-    
-    container.appendChild(dot);
+    themeDotsContainer.appendChild(dot);
   });
+
+  const separador = document.createElement('div');
+  separador.style.width = '2px';
+  separador.style.backgroundColor = 'var(--glass-border)';
+  separador.style.margin = '0 6px';
+  separador.style.borderRadius = '2px';
+  themeDotsContainer.appendChild(separador);
+
+  const dotOscuro = document.createElement('div');
+  dotOscuro.className = 'color-dot mode-dot';
+  dotOscuro.style.backgroundColor = '#141414';
+  dotOscuro.style.border = '1px solid #555';
+  dotOscuro.setAttribute('title', 'Forzar Modo Oscuro');
+  
+  const dotClaro = document.createElement('div');
+  dotClaro.className = 'color-dot mode-dot';
+  dotClaro.style.backgroundColor = '#f8f9fa';
+  dotClaro.style.border = '1px solid #ccc';
+  dotClaro.setAttribute('title', 'Forzar Modo Claro');
+
+  if (savedMode === 'dark') {
+    dotOscuro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedMode === 'light') {
+    dotClaro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  dotOscuro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotOscuro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  });
+
+  dotClaro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotClaro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+
+  themeDotsContainer.appendChild(dotOscuro);
+  themeDotsContainer.appendChild(dotClaro);
+
   applyTheme(savedTheme);
 }
 
 function applyTheme(colorKey) {
   const theme = paletaTemas[colorKey] || paletaTemas.rojo;
-  document.documentElement.style.setProperty('--red', theme.hex);
-  document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
+  document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb);
 }
 
-/* ================= IDIOMAS ================= */
+/* ================= SELECTOR DE IDIOMAS ================= */
 function createLanguageSelector(){
-  const selector = document.getElementById('languageSelector');
-  const langs = {
-    en:'English', es:'Español', fr:'Français', it:'Italiano',
-    pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어'
-  };
-  selector.innerHTML = '';
+  const selector = document.getElementById('languageSelector'); selector.innerHTML = '';
+  const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+  
   Object.keys(langs).forEach(code=>{
-    const opt = document.createElement('option');
-    opt.value = code;
-    opt.textContent = langs[code];
-    selector.appendChild(opt);
+    const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code]; selector.appendChild(opt);
   });
   
-  const browserLang = (navigator.language || 'en').split('-')[0].toLowerCase();
-  if(translations[browserLang]) idiomaActual = browserLang;
+  const savedLang = localStorage.getItem('preferredLanguage');
+  const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+  
+  if (savedLang && translations[savedLang]) { idiomaActual = savedLang; } 
+  else if (translations[browserLang]) { idiomaActual = browserLang; } 
+  else { idiomaActual = 'en'; }
   
   selector.value = idiomaActual;
+  
   selector.addEventListener('change', e => {
-    idiomaActual = e.target.value;
-    updateLanguage();
-    if (allProducts.length > 0) {
-      renderConsoleButtons();
-      renderPrimeProduct();
-      generarBarraSubcategoriasYCapacidades(); 
-      renderProducts(categoriaActual, document.getElementById('productSearch').value);
-    }
+    idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
+    updateLanguage(); renderFilterButtons(); renderNoticias();
   });
 }
 
 function updateLanguage(){
-  const t = translations[idiomaActual] || translations.es;
+  const t = translations[idiomaActual] || translations['en'];
   document.title = t.title;
-  document.getElementById('productSearch').placeholder = t.search;
-  document.getElementById('titleBestsellers').textContent = t.topVentas;
+  
+  const titleNode = document.getElementById('heroTitle');
+  const textSpan = titleNode.querySelector('span');
+  if (textSpan) {
+    textSpan.textContent = ' ' + t.heroTitle;
+  }
+
+  document.getElementById('heroDesc').textContent = t.heroDesc;
+  document.getElementById('heroWarning').textContent = t.heroWarning || '';
+  fileSearch.placeholder = t.search;
+
+  if (document.getElementById('videosBtn')) {
+    const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
+    document.getElementById('videosBtn').title = (t && t.videos) ? t.videos : (dictVideos[idiomaActual] || 'Vídeos');
+  }
+  if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
+  if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.products;
+  if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.guides;
+  if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.discord;
+  if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.kofi;
 }
 
-/* ================= TOPBAR BOTONES DE CONSOLA ================= */
-function renderConsoleButtons(){
-  const container = document.getElementById('consoleButtons');
-  container.innerHTML = '';
-  const t = translations[idiomaActual] || translations.es;
+/* ================= BOTONES DINÁMICOS ================= */
+function renderFilterButtons() {
+  consoleButtons.innerHTML = '';
+  const t = translations[idiomaActual] || translations['en'];
 
-  categories.forEach(cat => {
+  const btnAll = document.createElement('button');
+  btnAll.className = 'console-btn' + (filtroActual === 'ALL' ? ' fav-active-btn' : '');
+  btnAll.innerHTML = `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span>${t.all.toUpperCase()}</span>`;
+  btnAll.onclick = () => { filtroActual = 'ALL'; renderFilterButtons(); renderNoticias(); };
+  consoleButtons.appendChild(btnAll);
+
+  const iconMap = {
+    'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png',
+    '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png',
+    'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png',
+    'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png',
+    'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png',
+    'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png',
+    'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png',
+    'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png',
+    'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff',
+    'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff'
+  };
+
+  const ordenDeseado = ['SWITCH', '3DS', 'NDS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SD'];
+
+  const categoriasOrdenadas = Array.from(categoriasUnicas).sort((a, b) => {
+    const indexA = ordenDeseado.indexOf(a);
+    const indexB = ordenDeseado.indexOf(b);
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
+  categoriasOrdenadas.forEach(cat => {
     const btn = document.createElement('button');
-    btn.className = `console-btn ${cat.id === categoriaActual ? 'active' : ''}`;
-    btn.innerHTML = `<img src="${cat.icon}"><span>${cat.label[idiomaActual] || cat.label.es}</span>`;
-    
-    btn.onclick = () => {
-      document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      categoriaActual = cat.id;
-      subcategoriaSeleccionada = 'ALL'; 
-      tamanoSeleccionado = 'ALL';         
-      paginaActual = 1; 
-      document.getElementById('productSearch').value = ''; 
-      document.getElementById('primeBanner').style.display = 'flex'; 
-      document.getElementById('currentCategoryTitle').textContent = (cat.label[idiomaActual] || cat.label.es).toUpperCase();
-      
-      generarBarraSubcategoriasYCapacidades(); 
-      renderProducts(cat.id, '');
-    };
-    container.appendChild(btn);
+    btn.className = 'console-btn' + (filtroActual === cat ? ' fav-active-btn' : '');
+    const iconSrc = iconMap[cat] ? `<img src="${iconMap[cat]}" alt="Logo ${cat}">` : `<span>📦</span>`;
+    btn.innerHTML = `${iconSrc}<span>${cat}</span>`;
+    btn.onclick = () => { filtroActual = cat; renderFilterButtons(); renderNoticias(); };
+    consoleButtons.appendChild(btn);
   });
 }
 
-/* ================= GENERADOR DE SUBFILTROS DINÁMICOS ================= */
-function generarBarraSubcategoriasYCapacidades() {
-  const subcatRow = document.getElementById('subcategoriesFilterRow');
-  const rowGB = document.getElementById('sizesGBRow');
-  const rowTB = document.getElementById('sizesTBRow');
-  const t = translations[idiomaActual] || translations.es;
-  
-  subcatRow.innerHTML = '';
-  rowGB.innerHTML = '';
-  rowTB.innerHTML = '';
-  
-  subcatRow.style.display = 'none';
-  rowGB.style.display = 'none';
-  rowTB.style.display = 'none';
-
-  let productosCategoria = allProducts.filter(item => {
-    if (!item.console) return false;
-    if (categoriaActual.toLowerCase() === '3ds_nds') {
-      if (Array.isArray(item.console)) {
-        return item.console.some(c => c.toLowerCase() === '3ds' || c.toLowerCase() === 'nds');
-      }
-      return item.console.toLowerCase() === '3ds' || item.console.toLowerCase() === 'nds';
-    }
-    if (Array.isArray(item.console)) {
-      return item.console.some(c => c.toLowerCase() === categoriaActual.toLowerCase());
-    }
-    return item.console.toLowerCase() === categoriaActual.toLowerCase();
-  });
-
-  if (productosCategoria.length === 0) return;
-
-  // -- Subcategorías --
-  let subcatsUnicas = new Set();
-  productosCategoria.forEach(p => {
-    if (p.subcategory) {
-      if (Array.isArray(p.subcategory)) {
-        p.subcategory.forEach(sub => { if(sub !== 'Ninguno') subcatsUnicas.add(sub); });
-      } else if (p.subcategory !== 'Ninguno') {
-        subcatsUnicas.add(p.subcategory);
-      }
-    }
-  });
-
-  if (subcatsUnicas.size > 0) {
-    subcatRow.style.display = 'flex';
-    const btnAll = document.createElement('button');
-    btnAll.className = `subcat-filter-btn ${subcategoriaSeleccionada === 'ALL' ? 'active' : ''}`;
-    btnAll.textContent = t.all;
-    btnAll.onclick = () => {
-      subcategoriaSeleccionada = 'ALL';
-      paginaActual = 1;
-      generarBarraSubcategoriasYCapacidades();
-      renderProducts(categoriaActual);
-    };
-    subcatRow.appendChild(btnAll);
-
-    let listaSubcats = Array.from(subcatsUnicas).sort((a, b) => {
-      let indexA = subcatOrder.indexOf(a);
-      let indexB = subcatOrder.indexOf(b);
-      if (indexA === -1) indexA = 999;
-      if (indexB === -1) indexB = 999;
-      return indexA - indexB;
-    });
-
-    listaSubcats.forEach(sub => {
-      const btn = document.createElement('button');
-      btn.className = `subcat-filter-btn ${subcategoriaSeleccionada === sub ? 'active' : ''}`;
-      const translatedText = subcatTranslations[sub] ? (subcatTranslations[sub][idiomaActual] || subcatTranslations[sub]['es']) : sub;
-      btn.textContent = translatedText;
-      btn.onclick = () => {
-        subcategoriaSeleccionada = sub;
-        paginaActual = 1;
-        generarBarraSubcategoriasYCapacidades();
-        renderProducts(categoriaActual);
-      };
-      subcatRow.appendChild(btn);
-    });
-  }
-
-  // -- Capacidades (SD/USB) --
-  if (categoriaActual === 'SD/USB') {
-    rowGB.style.display = 'flex';
-    rowTB.style.display = 'flex';
-
-    let tamanosUnicos = new Set();
-    productosCategoria.forEach(p => {
-      if (p.size && p.size !== 'Ninguno') tamanosUnicos.add(p.size);
-    });
-
-    let listaTamanos = Array.from(tamanosUnicos).sort((a, b) => {
-      let numA = parseInt(a), numB = parseInt(b);
-      if (a.includes('TB') && !b.includes('TB')) return 1;
-      if (!a.includes('TB') && b.includes('TB')) return -1;
-      return numA - numB;
-    });
-
-    if (listaTamanos.length > 0) {
-      // Botón "Todos"
-      const btnAllSize = document.createElement('button');
-      btnAllSize.className = `subcat-filter-btn ${tamanoSeleccionado === 'ALL' ? 'active' : ''}`;
-      btnAllSize.textContent = t.all + " (Capacidad)";
-      btnAllSize.onclick = () => {
-        tamanoSeleccionado = 'ALL';
-        paginaActual = 1;
-        generarBarraSubcategoriasYCapacidades();
-        renderProducts(categoriaActual);
-      };
-      rowGB.appendChild(btnAllSize);
-
-      // Distribuir en filas
-      listaTamanos.forEach(tam => {
-        const btnSize = document.createElement('button');
-        btnSize.className = `subcat-filter-btn ${tamanoSeleccionado === tam ? 'active' : ''}`;
-        btnSize.textContent = tam;
-        btnSize.onclick = () => {
-          tamanoSeleccionado = tam;
-          paginaActual = 1;
-          generarBarraSubcategoriasYCapacidades();
-          renderProducts(categoriaActual);
-        };
-
-        // Lógica de separación: si tiene TB, a la fila 2 (TB), sino, fila 1 (GB)
-        if (tam.includes('TB')) {
-          rowTB.appendChild(btnSize);
-        } else {
-          rowGB.appendChild(btnSize);
-        }
-      });
-    }
-  }
-}
-
-/* ================= CARGA DE DATOS ================= */
-async function cargarProductos() {
+/* ================= LÓGICA RADAR DE ACTUALIZACIONES ================= */
+async function verificarNotificacionesRadar() {
+  const badge = document.getElementById('radarBadge');
+  if (!badge) return;
   try {
-    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
-    const archivos = [
-      'switch.json', 'playstation.json', 'xbox.json', '3ds.json', 
-      'nds.json', 'wii.json', 'sd_usb.json'
-    ];
+    const response = await fetch('ultimas_noticias.json');
+    if(!response.ok) return;
+    const noticias = await response.json();
+    if(noticias.length > 0) {
+      const ultimaFechaNoticia = new Date(noticias[0].date).getTime();
+      const ultimaVisitaRadar = localStorage.getItem('ultimaVisitaRadar');
+      if(!ultimaVisitaRadar || ultimaFechaNoticia > parseInt(ultimaVisitaRadar)) { badge.style.display = 'block'; }
+    }
+  } catch (error) { console.log("Aún no hay base de datos del radar."); }
+}
 
-    const promesas = archivos.map(archivo => 
-      fetch(baseUrl + archivo + '?v=' + new Date().getTime())
-        .then(res => res.ok ? res.json() : [])
-        .catch(() => []) 
+function abrirRadar() {
+  localStorage.setItem('ultimaVisitaRadar', Date.now().toString());
+  window.open('actualizaciones.html', '_self');
+}
+
+/* ================= RENDERIZAR PARRILLA ================= */
+function renderNoticias() {
+  const t = translations[idiomaActual] || translations['en'];
+  const query = fileSearch.value.toLowerCase().trim();
+  updatesGrid.innerHTML = '';
+
+  let filtrados = todosLosProductos;
+  
+  if (filtroActual !== 'ALL') {
+    filtrados = filtrados.filter(n => n.tag && n.tag.split('/')[0].trim().toUpperCase() === filtroActual);
+  }
+  
+  if (query) {
+    filtrados = filtrados.filter(n => {
+      let tituloAct = n.titles[idiomaActual] || n.titles['en'] || '';
+      let descAct = n.descs[idiomaActual] || n.descs['en'] || '';
+      return tituloAct.toLowerCase().includes(query) || descAct.toLowerCase().includes(query) || (n.tag && n.tag.toLowerCase().includes(query));
+    });
+  }
+
+  if (filtrados.length === 0) {
+    updatesGrid.innerHTML = `<p style="color:#aaa; text-align:center; grid-column:1/-1; font-size:1.15rem; padding: 50px 0;">${t.empty}</p>`;
+    return;
+  }
+
+  let htmlResult = '';
+  filtrados.forEach(prod => {
+    const dateStr = new Date(prod.date).toLocaleDateString(idiomaActual, { year: 'numeric', month: 'short', day: 'numeric' });
+    const titulo = prod.titles[idiomaActual] || prod.titles['en'] || 'Producto';
+    const descripcion = prod.descs[idiomaActual] || prod.descs['en'] || '';
+
+    htmlResult += `
+      <div class="update-card">
+        <div class="update-header">
+          <span class="update-tag">${prod.tag}</span>
+          <span class="update-date">📅 ${dateStr}</span>
+        </div>
+        <h3><a href="${prod.link}" target="_blank">${titulo}</a></h3>
+        <div class="update-body">${descripcion}</div>
+        <div class="update-footer">
+          <a href="${prod.link}" target="_blank" class="download-link">${t.read}</a>
+        </div>
+      </div>
+    `;
+  });
+  updatesGrid.innerHTML = htmlResult;
+}
+
+/* ================= CARGAR PRODUCTOS DESDE ARCHIVOS JSON (GITHUB) ================= */
+async function cargarDatosProductos() {
+  const loader = document.getElementById('mainLoader');
+  loader.style.display = 'block';
+
+  // Enlaces Raw de tus 6 archivos JSON en GitHub
+  const urls = [
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/3ds.json',
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/playstation.json',
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/sd_usb.json',
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/switch.json',
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/wii.json',
+    'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/productos/xbox.json'
+  ];
+
+  try {
+    const timestamp = new Date().getTime();
+    
+    // Lanzamos todas las peticiones fetch de forma simultánea
+    const peticiones = urls.map(url => 
+      fetch(`${url}?t=${timestamp}`).then(res => {
+        if (!res.ok) throw new Error(`No se pudo cargar: ${url}`);
+        return res.json();
+      })
     );
 
-    const resultadosArrays = await Promise.all(promesas);
+    // Esperamos a que terminen todas y combinamos los arrays en uno solo
+    const resultados = await Promise.all(peticiones);
+    todosLosProductos = resultados.flat();
+
+    // Ordenamos por fecha de más reciente a más antiguo
+    todosLosProductos.sort((a, b) => new Date(b.date) - new Date(a.date));
     
-    allProducts = resultadosArrays.flatMap((array, index) => {
-      return array.map((item, subIndex) => {
-        // CORRECCIÓN PRINCIPAL: Forzamos un id único runtime por combinación de archivo y posición.
-        // Esto evita colisiones si tus archivos JSON tienen campos "id" repetidos entre sí (ej: id=1 en Switch y id=1 en Xbox).
-        item.id = `prod-${index}-${subIndex}`;
-        if (!item._originFile) item._originFile = archivos[index];
-        return item;
-      });
+    // Obtenemos las categorías únicas
+    categoriasUnicas.clear();
+    todosLosProductos.forEach(n => {
+      if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
     });
-    
-    renderPrimeProduct();
-    generarBarraSubcategoriasYCapacidades(); 
-    renderProducts(categoriaActual);
+
+    loader.style.display = 'none';
+    renderFilterButtons();
+    renderNoticias();
 
   } catch (error) {
-    console.error('Error cargando productos:', error);
-    document.getElementById('productsGrid').innerHTML = 
-      `<p style="color:var(--red); font-size:18px; padding:20px 0;">Error al cargar el catálogo de productos.</p>`;
+    console.error("Error cargando productos:", error);
+    loader.style.display = 'none';
+    updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudo cargar la lista de productos. Revisa tu conexión o los archivos JSON en GitHub.</p>`;
   }
 }
 
-/* ================= RENDERIZAR PRODUCTO DESTACADO ================= */
-function renderPrimeProduct() {
-  const banner = document.getElementById('primeBanner');
-  if (!banner) return;
-  
-  const t = translations[idiomaActual] || translations.es;
-  const label = PRODUCTO_PRIME.label[idiomaActual] || PRODUCTO_PRIME.label.es;
-  const desc = PRODUCTO_PRIME.desc[idiomaActual] || PRODUCTO_PRIME.desc.es;
-  
-  let cleanDesc = desc.replace(/\n/g, ' — ');
-
-  banner.innerHTML = `
-    <img src="${PRODUCTO_PRIME.img}" class="prime-banner-img" alt="${label}">
-    <div class="prime-banner-info">
-      <strong>${label}</strong>
-      <p>${cleanDesc}</p>
-    </div>
-    <button class="prime-banner-btn">${t.buy}</button>
-  `;
-  
-  banner.onclick = () => window.open(PRODUCTO_PRIME.url, '_blank');
-  banner.style.display = 'flex';
-}
-
-/* ================= CREADOR DE TARJETAS ================= */
-function createProductCard(item, container, isMini = false) {
-  const card = document.createElement('div');
-  card.className = isMini ? 'card card-recent' : 'card';
-  card.dataset.id = item.id;
-  
-  const t = translations[idiomaActual] || translations.es;
-  const label = item.label?.[idiomaActual] || item.label?.es || 'Producto';
-  const desc = item.desc?.[idiomaActual] || item.desc?.es || '';
-  
-  let price = item.price || ''; 
-  let finalDesc = desc;
-
-  if (!price && desc.includes('\n')) {
-    const lines = desc.split('\n');
-    finalDesc = lines[0] || '';
-    price = lines[1] || '';
-  }
-
-  const iconCart = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>`;
-  const iconZoom = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
-
-  let badgeHtml = '';
-  if (item.subcategory && item.subcategory !== 'Ninguno') {
-    const subcats = Array.isArray(item.subcategory) ? item.subcategory : [item.subcategory];
-    const translatedBadges = subcats.map(sub => subcatTranslations[sub] ? (subcatTranslations[sub][idiomaActual] || subcatTranslations[sub]['es']) : sub);
-    badgeHtml = `<div class="card-badge">${translatedBadges.join(', ').toUpperCase()}</div>`;
-  }
-  
-  const sizeBadgeHtml = (item.size && item.size !== 'Ninguno') ? `<div class="card-size-badge">${item.size}</div>` : '';
-
-  card.innerHTML = `
-    ${badgeHtml}
-    ${sizeBadgeHtml}
-    <img src="${item.img}" loading="lazy" alt="${label}">
-    <div class="card-info">
-      <strong>${label}</strong>
-      <p>${finalDesc}</p>
-      ${price ? `<div class="price-tag">${price}</div>` : ''}
-    </div>
-    <div class="card-actions">
-      <button class="action-btn buy-btn" title="${t.buy}">${iconCart} <span>${t.buy}</span></button>
-      <button class="action-btn zoom-btn" title="${t.zoom}">${iconZoom} <span>${t.zoom}</span></button>
-    </div>
-  `;
-
-  if (isAdmin) {
-    const adminTools = document.createElement('div');
-    adminTools.className = 'admin-card-tools';
-    adminTools.onclick = (e) => e.stopPropagation();
-
-    const currentConsoles = (Array.isArray(item.console) ? item.console : [item.console]).map(c => c.toLowerCase());
-    let consoleOptions = categories.map(c => 
-      `<option value="${c.id}" ${currentConsoles.includes(c.id.toLowerCase()) ? 'selected' : ''}>${c.id}</option>`
-    ).join('');
-    if (!currentConsoles.includes('nds') && (currentConsoles.includes('3ds') || currentConsoles.includes('3ds_nds'))) {
-      consoleOptions += `<option value="NDS">NDS</option>`;
-    } else if (currentConsoles.includes('nds')) {
-      consoleOptions += `<option value="NDS" selected>NDS</option>`;
-    }
-
-    const currentSubcats = Array.isArray(item.subcategory) ? item.subcategory : [item.subcategory];
-    const subcatOptions = subcatOrder.map(sub => 
-      `<option value="${sub}" ${currentSubcats.includes(sub) ? 'selected' : ''}>${sub}</option>`
-    ).join('');
-
-    adminTools.innerHTML = `
-      <div class="admin-select-group" style="flex-direction: row; gap: 8px; align-items: center; margin-bottom: 4px; background: rgba(255,255,255,0.05); padding: 6px; border-radius: 4px;">
-        <input type="checkbox" class="product-batch-checkbox" data-id="${item.id}" style="width: 16px; height: 16px; cursor: pointer;">
-        <label style="font-size: 11px; color: var(--gold); font-weight: bold; cursor: pointer; text-transform: none;">Seleccionar lote</label>
-      </div>
-      <div class="admin-select-group">
-        <label>Categorías (Ctrl+Click)</label>
-        <select class="admin-select-multiple console-select" multiple size="3">
-          ${consoleOptions}
-        </select>
-      </div>
-      <div class="admin-select-group">
-        <label>Subcategorías (Ctrl+Click)</label>
-        <select class="admin-select-multiple subcat-select" multiple size="3">
-          ${subcatOptions}
-        </select>
-      </div>
-      <button class="action-btn delete-btn">❌ Eliminar Producto</button>
-    `;
-
-    adminTools.querySelector('.console-select').addEventListener('change', (e) => {
-      const selectedConsoles = Array.from(e.target.selectedOptions).map(opt => opt.value);
-      item.console = selectedConsoles.length === 1 ? selectedConsoles[0] : selectedConsoles;
-      generarBarraSubcategoriasYCapacidades();
-      renderProducts(categoriaActual, document.getElementById('productSearch').value);
-    });
-
-    adminTools.querySelector('.subcat-select').addEventListener('change', (e) => {
-      const selectedSubcats = Array.from(e.target.selectedOptions).map(opt => opt.value);
-      item.subcategory = selectedSubcats.length === 0 ? 'Ninguno' : (selectedSubcats.length === 1 ? selectedSubcats[0] : selectedSubcats);
-      generarBarraSubcategoriasYCapacidades();
-      renderProducts(categoriaActual, document.getElementById('productSearch').value);
-    });
-
-    adminTools.querySelector('.delete-btn').addEventListener('click', () => {
-      if(confirm(`¿Estás seguro de que deseas eliminar "${label}"?`)) {
-        allProducts = allProducts.filter(p => p.id !== item.id);
-        generarBarraSubcategoriasYCapacidades();
-        renderProducts(categoriaActual, document.getElementById('productSearch').value);
-      }
-    });
-
-    card.appendChild(adminTools);
-  }
-
-  card.onclick = () => {
-    if(!isAdmin) window.open(item.url, '_blank');
-  };
-  
-  card.querySelector('.buy-btn').onclick = (e) => {
-    e.stopPropagation();
-    window.open(item.url, '_blank');
-  };
-
-  card.querySelector('.zoom-btn').onclick = (e) => {
-    e.stopPropagation();
-    document.getElementById('enlargedImage').src = item.img;
-    document.getElementById('imageModal').style.display = 'flex';
-  };
-
-  container.appendChild(card);
-}
-
-/* ================= RENDERIZADO PRINCIPAL DE CATÁLOGO ================= */
-function renderProducts(catId, searchTerm = '') {
-  const grid = document.getElementById('productsGrid');
-  grid.innerHTML = '';
-  const t = translations[idiomaActual] || translations.es;
-
-  const selectAllChk = document.getElementById('selectAllBatchChk');
-  if(selectAllChk) selectAllChk.checked = false;
-
-  let filtered = allProducts.filter(item => 
-    item.label?.es !== "Amazon Prime" && 
-    !(item.label?.es && item.label.es.toLowerCase().includes("amazon prime"))
-  );
-
-  if (searchTerm.trim() !== '') {
-    const term = searchTerm.toLowerCase().trim();
-    filtered = filtered.filter(item => {
-      const label = (item.label?.[idiomaActual] || item.label?.es || '').toLowerCase();
-      const desc = (item.desc?.[idiomaActual] || item.desc?.es || '').toLowerCase();
-      return label.includes(term) || desc.includes(term);
-    });
-    document.getElementById('currentCategoryTitle').textContent = t.results.toUpperCase();
-    
-    document.getElementById('subcategoriesFilterRow').style.display = 'none';
-    document.getElementById('sizesGBRow').style.display = 'none';
-    document.getElementById('sizesTBRow').style.display = 'none';
-  } 
-  else {
-    filtered = filtered.filter(item => {
-      if (!item.console) return false;
-      
-      const itemConsole = Array.isArray(item.console) 
-        ? item.console.map(c => c.toLowerCase()) 
-        : [item.console.toLowerCase()];
-      
-      const targetCat = catId.toLowerCase();
-
-      if (targetCat === '3ds_nds') {
-        return itemConsole.includes('3ds') || itemConsole.includes('nds');
-      } else {
-        return itemConsole.includes(targetCat);
-      }
-    });
-
-    if (subcategoriaSeleccionada !== 'ALL') {
-      filtered = filtered.filter(item => {
-        if (Array.isArray(item.subcategory)) {
-          return item.subcategory.some(s => s.toLowerCase() === subcategoriaSeleccionada.toLowerCase());
-        }
-        return item.subcategory?.toLowerCase() === subcategoriaSeleccionada.toLowerCase();
-      });
-    }
-
-    if (catId === 'SD/USB' && tamanoSeleccionado !== 'ALL') {
-      filtered = filtered.filter(item => item.size === tamanoSeleccionado);
-    }
-  }
-
-  if (filtered.length === 0) {
-    grid.innerHTML = `<p style="color:#aaa; font-size:18px; padding:20px 0;">No se encontraron productos con los filtros seleccionados.</p>`;
-    document.getElementById('paginationContainerTop').innerHTML = '';
-    document.getElementById('paginationContainerBottom').innerHTML = '';
-    return;
-  }
-
-  const totalPages = Math.ceil(filtered.length / itemsPorPagina);
-  
-  if (paginaActual > totalPages) paginaActual = totalPages || 1; 
-
-  const startIndex = (paginaActual - 1) * itemsPorPagina;
-  const endIndex = startIndex + itemsPorPagina;
-  const pagedItems = filtered.slice(startIndex, endIndex);
-
-  pagedItems.forEach(item => createProductCard(item, grid, false));
-  renderPagination(totalPages);
-}
-
-function renderPagination(totalPages) {
-  const containerTop = document.getElementById('paginationContainerTop');
-  const containerBottom = document.getElementById('paginationContainerBottom');
-  
-  containerTop.innerHTML = '';
-  containerBottom.innerHTML = '';
-
-  if (totalPages <= 1) return;
-
-  const buildPaginationButtons = (container) => {
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'page-btn';
-    prevBtn.textContent = '←';
-    prevBtn.disabled = paginaActual === 1;
-    prevBtn.onclick = () => {
-      paginaActual--;
-      renderProducts(categoriaActual, document.getElementById('productSearch').value);
-      window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
-    };
-    container.appendChild(prevBtn);
-
-    for (let i = 1; i <= totalPages; i++) {
-      if (i === 1 || i === totalPages || (i >= paginaActual - 2 && i <= paginaActual + 2)) {
-        const pageBtn = document.createElement('button');
-        pageBtn.className = `page-btn ${i === paginaActual ? 'active' : ''}`;
-        pageBtn.textContent = i;
-        pageBtn.onclick = () => {
-          paginaActual = i;
-          renderProducts(categoriaActual, document.getElementById('productSearch').value);
-          window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
-        };
-        container.appendChild(pageBtn);
-      } else if (i === paginaActual - 3 || i === paginaActual + 3) {
-        const dots = document.createElement('span');
-        dots.textContent = '...';
-        dots.style.color = '#fff';
-        container.appendChild(dots);
-      }
-    }
-
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'page-btn';
-    nextBtn.textContent = '→';
-    nextBtn.disabled = paginaActual === totalPages;
-    nextBtn.onclick = () => {
-      paginaActual++;
-      renderProducts(categoriaActual, document.getElementById('productSearch').value);
-      window.scrollTo({ top: document.getElementById('rowsContainer').offsetTop - 80, behavior: 'smooth' });
-    };
-    container.appendChild(nextBtn);
-  };
-
-  buildPaginationButtons(containerTop);
-  buildPaginationButtons(containerBottom);
-}
-
-/* ================= INICIALIZADOR Y LOGICA POR LOTE (ADMIN) ================= */
-function initBatchTools() {
-  if (batchToolsInitialized) return;
-  
-  const consoleSel = document.getElementById('batchConsoleSelect');
-  const subcatSel = document.getElementById('batchSubcatSelect');
-  
-  if(!consoleSel || !subcatSel) return;
-
-  consoleSel.innerHTML = '<option value="KEEP">— No cambiar —</option>';
-  categories.forEach(c => {
-    consoleSel.innerHTML += `<option value="${c.id}">${c.id}</option>`;
-  });
-  consoleSel.innerHTML += `<option value="NDS">NDS</option>`;
-  
-  subcatSel.innerHTML = '<option value="KEEP">— No cambiar —</option><option value="Ninguno">Ninguno</option>';
-  subcatOrder.forEach(sub => {
-    subcatSel.innerHTML += `<option value="${sub}">${sub}</option>`;
-  });
-
-  document.getElementById('selectAllBatchChk').addEventListener('change', (e) => {
-    const checkboxes = document.querySelectorAll('.product-batch-checkbox');
-    checkboxes.forEach(chk => chk.checked = e.target.checked);
-  });
-
-  document.getElementById('applyBatchBtn').addEventListener('click', applyBatchChanges);
-  const ns=document.getElementById('newSubcategoryBtn');
-  if(ns) ns.addEventListener('click', createNewSubcategory);
-  const db=document.getElementById('deleteBatchBtn');
-  if(db) db.addEventListener('click', deleteBatchProducts);
-  
-  batchToolsInitialized = true;
-}
-
-function applyBatchChanges() {
-  const checkboxes = document.querySelectorAll('.product-batch-checkbox:checked');
-  if (checkboxes.length === 0) {
-    alert("No has seleccionado ningún producto en la página actual para modificar.");
-    return;
-  }
-
-  const targetConsole = document.getElementById('batchConsoleSelect').value;
-  const targetSubcat = document.getElementById('batchSubcatSelect').value;
-
-  if (targetConsole === 'KEEP' && targetSubcat === 'KEEP') {
-    alert("Por favor, selecciona al menos un cambio válido en los desplegables (Consola o Subcategoría).");
-    return;
-  }
-
-  if (!confirm(`¿Estás seguro de mover y actualizar estos ${checkboxes.length} productos seleccionados?`)) {
-    return;
-  }
-
-  checkboxes.forEach(chk => {
-    const prodId = chk.dataset.id;
-    const item = allProducts.find(p => p.id === prodId);
-    if (item) {
-      if (targetConsole !== 'KEEP') {
-        item.console = targetConsole;
-      }
-      if (targetSubcat !== 'KEEP') {
-        item.subcategory = targetSubcat;
-      }
-    }
-  });
-
-  alert("¡Productos actualizados con éxito por lote!");
-
-  document.getElementById('selectAllBatchChk').checked = false;
-  generarBarraSubcategoriasYCapacidades();
-  renderProducts(categoriaActual, document.getElementById('productSearch').value);
-}
-
-/* ================= EVENTOS Y SEARCH ================= */
-let debounceTimer;
-const searchInput = document.getElementById('productSearch');
-searchInput.addEventListener('input', () => {
-  clearTimeout(debounceTimer);
-  debounceTimer = setTimeout(() => {
-    paginaActual = 1; 
-    const val = searchInput.value;
-    if(val.trim() !== '') {
-      document.getElementById('primeBanner').style.display = 'none';
-      document.querySelectorAll('.console-btn').forEach(b => b.classList.remove('active')); 
-    } else {
-      document.getElementById('primeBanner').style.display = 'flex';
-      document.getElementById('currentCategoryTitle').textContent = (categories.find(c => c.id === categoriaActual).label[idiomaActual] || categories.find(c => c.id === categoriaActual).label.es).toUpperCase();
-      
-      const btns = document.querySelectorAll('.console-btn');
-      btns.forEach(btn => {
-        if(btn.textContent.includes(categories.find(c => c.id === categoriaActual).label.es)) {
-          btn.classList.add('active');
-        }
-      });
-      generarBarraSubcategoriasYCapacidades(); 
-    }
-    renderProducts(categoriaActual, val);
-  }, 300); 
+/* ================= LISTENERS Y ARRANQUE ================= */
+let timeoutBuscador = null;
+fileSearch.addEventListener('input', () => {
+  clearTimeout(timeoutBuscador);
+  timeoutBuscador = setTimeout(() => {
+    renderNoticias();
+  }, 250);
 });
 
-/* ================= GESTIÓN GHOST-LOCK Y MODO ADMIN ================= */
-const adminLockBtn = document.getElementById('adminLockBtn');
-const saveJsonBtn = document.getElementById('saveJsonBtn');
-const lockIcon = document.getElementById('lockIcon');
-
-async function hashearTexto(texto) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(texto);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-adminLockBtn.addEventListener('click', async () => {
-  if (!isAdmin) {
-    const pass = prompt("Proxys:");
-    if (pass) {
-      const hashIngresado = await hashearTexto(pass);
-      const hashCorrecto = "65d21f24c2164508323ab774fdf0e95e23313bd71a505fb1b4a87839032b1531"; 
-      if (hashIngresado === hashCorrecto) {
-        isAdmin = true;
-        lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path>`; 
-        adminLockBtn.style.borderColor = "var(--gold)";
-        adminLockBtn.style.opacity = "1"; 
-        saveJsonBtn.style.display = "flex"; 
-        document.getElementById('batchAdminTools').style.display = "flex"; 
-        initBatchTools(); 
-        alert("OK!");
-      } else {
-        alert("https://amzn.to/4dUrbsh");
-      }
-    }
-  } else {
-    isAdmin = false;
-    lockIcon.innerHTML = `<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>`; 
-    adminLockBtn.style.borderColor = "rgba(255,255,255,0.2)";
-    adminLockBtn.style.opacity = "0"; 
-    saveJsonBtn.style.display = "none";
-    document.getElementById('batchAdminTools').style.display = "none"; 
-    alert("Modo Administrator Desactivado.");
-  }
-  renderProducts(categoriaActual, document.getElementById('productSearch').value);
-});
-
-saveJsonBtn.addEventListener('click', () => {
-  let targetJsonFile = categoryJsonMap[categoriaActual] || 'productos.json';
-  let exportProducts = allProducts.filter(item => {
-    if (!item.console) return false;
-    if (categoriaActual.toLowerCase() === '3ds_nds') {
-      if (Array.isArray(item.console)) return item.console.some(c => c.toLowerCase() === '3ds' || c.toLowerCase() === 'nds');
-      return item.console.toLowerCase() === '3ds' || item.console.toLowerCase() === 'nds';
-    }
-    if (Array.isArray(item.console)) return item.console.some(c => c.toLowerCase() === categoriaActual.toLowerCase());
-    return item.console.toLowerCase() === categoriaActual.toLowerCase();
-  });
-
-  let cleanedProducts = exportProducts.map(p => {
-    let copy = { ...p };
-    delete copy.id;
-    delete copy._originFile;
-    return copy;
-  });
-
-  if (categoriaActual === '3DS_NDS') {
-    const confirmSplit = confirm("Estás en 3DS/NDS. ¿Quieres descargar el archivo específico de 3DS? (Cancelar para descargar el de NDS)");
-    targetJsonFile = confirmSplit ? '3ds.json' : 'nds.json';
-    cleanedProducts = exportProducts.filter(p => p._originFile === targetJsonFile).map(p => {
-      let copy = { ...p }; delete copy.id; delete copy._originFile; return copy;
-    });
-  }
-
-  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(cleanedProducts, null, 2));
-  const downloadAnchor = document.createElement('a');
-  downloadAnchor.setAttribute("href", dataStr);
-  downloadAnchor.setAttribute("download", targetJsonFile);
-  document.body.appendChild(downloadAnchor);
-  downloadAnchor.click();
-  downloadAnchor.remove();
-});
-
-/* ================= MODAL IMAGEN ================= */
-const modal = document.getElementById('imageModal');
-const close = document.getElementById('imageModalClose');
-close.onclick = () => modal.style.display = 'none';
-modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-
-/* ================= SCROLL SUBIR ================= */
-const mybutton = document.getElementById("backToTopBtn");
 window.onscroll = function() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+  mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
 };
 
-
-function loadCustomSubcategories(){
-  try{
-    const custom = JSON.parse(localStorage.getItem('customSubcategories') || '[]');
-    custom.forEach(sub=>{
-      if(!subcatOrder.includes(sub)){
-        subcatOrder.push(sub);
-      }
-      if(!subcatTranslations[sub]){
-        subcatTranslations[sub]={es:sub,en:sub,fr:sub,it:sub,pt:sub,de:sub,ja:sub,ko:sub};
-      }
-    });
-  }catch(e){}
-}
-
-function saveCustomSubcategories(){
-  const base=['Novedades','Consolas','Videojuegos','Tarjeta de Regalo','Mandos-Perifericos','Fundas-Proteccion','Tarjeta SD','USB','Disco duro externo','Adaptadores','Baterías','Ordenadores'];
-  localStorage.setItem('customSubcategories',JSON.stringify(subcatOrder.filter(x=>!base.includes(x))));
-}
-
-function createNewSubcategory(){
-  const nombre=(prompt('Nombre de la nueva subcategoría:')||'').trim();
-  if(!nombre) return;
-  if(subcatOrder.includes(nombre)){ alert('La subcategoría ya existe.'); return; }
-
-  subcatOrder.push(nombre);
-  subcatTranslations[nombre]={es:nombre,en:nombre,fr:nombre,it:nombre,pt:nombre,de:nombre,ja:nombre,ko:nombre};
-  saveCustomSubcategories();
-
-  generarBarraSubcategoriasYCapacidades();
-  initBatchTools();
-  renderProducts(categoriaActual, document.getElementById('productSearch').value);
-}
-
-function deleteBatchProducts(){
-  const selected=document.querySelectorAll('.product-batch-checkbox:checked');
-  if(selected.length===0){
-    alert('No has seleccionado ningún producto.');
-    return;
-  }
-
-  if(!confirm(`¿Eliminar ${selected.length} productos seleccionados?`)) return;
-
-  const ids=[...selected].map(x=>x.dataset.id);
-  allProducts=allProducts.filter(p=>!ids.includes(p.id));
-
-  generarBarraSubcategoriasYCapacidades();
-  renderProducts(categoriaActual, document.getElementById('productSearch').value);
-}
-
-/* ================= INICIO ================= */
 window.onload = () => {
-  loadCustomSubcategories();
   initThemeDots();
   createLanguageSelector();
   updateLanguage();
-  renderConsoleButtons();
-  cargarProductos();
+  cargarDatosProductos();
+  verificarNotificacionesRadar();
 };
 </script>
 </body>
