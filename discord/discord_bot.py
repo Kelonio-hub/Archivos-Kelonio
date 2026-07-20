@@ -4,7 +4,7 @@ import random
 import sys
 
 # Configuración de URLs de los catálogos
-BASE_URL = "https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/"
+BASE_URL = "https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/"
 ARCHIVOS = ['switch.json', 'playstation.json', 'xbox.json', '3ds.json', 'nds.json', 'wii_wii_u.json', 'sd_usb.json']
 ENLACE_WEB = "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html"
 
