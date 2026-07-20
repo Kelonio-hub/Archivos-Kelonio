@@ -293,6 +293,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
 </button>
 <!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+<button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+</button>
 <button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
 <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
@@ -333,14 +336,14 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo passo per ottenere il massimo dalle tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Guias e tutoriais passo a passo para tirar o máximo proveito das tuas consolas.", search: "Procurar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhuma guia encontrada.", products: "Produtos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
+  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
+  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo passo per ottenere il massimo dalle tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Guias e tutoriais passo a passo para tirar o máximo proveito das tuas consolas.", search: "Procurar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhuma guia encontrada.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
+  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
@@ -478,6 +481,10 @@ function updateLanguage(){
   document.getElementById('heroWarning').textContent = t.heroWarning;
   fileSearch.placeholder = t.search;
 
+  if (document.getElementById('videosBtn')) {
+    const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
+    document.getElementById('videosBtn').title = (t && t.videos) ? t.videos : (dictVideos[idiomaActual] || 'Vídeos');
+  }
   if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.radar;
   if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.products;
   if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.guides;
