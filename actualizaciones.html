@@ -656,7 +656,7 @@ function renderNoticias() {
 async function cargarDatosRobot() {
   const t = translations[idiomaActual];
   try {
-    const response = await fetch('ultimas_noticias.json?t=' + new Date().getTime(), { cache: "no-store" }); 
+    const response = await fetch('radar/ultimas_noticias.json?t=' + new Date().getTime(), { cache: "no-store" }); 
     if(!response.ok) throw new Error();
 
     todasLasNoticias = await response.json();
