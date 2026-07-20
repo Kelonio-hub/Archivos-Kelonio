@@ -884,7 +884,7 @@ const categories = [
   { id: 'PLAYSTATION', icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
   { id: 'XBOX',        icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
   { id: '3DS_NDS',     icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', label: { es: '3DS / NDS', en: '3DS / NDS' } },
-  { id: 'WII',         icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII', en: 'WII' } },
+  { id: 'WII_WIIU',    icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', label: { es: 'WII', en: 'WII' } },
   { id: 'SD/USB',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png', label: { es: 'SD / USB', en: 'SD / USB' } }
 ];
 
@@ -892,9 +892,9 @@ const categoryJsonMap = {
   'Switch': 'switch.json',
   'PLAYSTATION': 'playstation.json',
   'XBOX': 'xbox.json',
-  'WII': 'wii.json',
+  'WII_WIIU': 'wii.json',
   'SD/USB': 'sd_usb.json',
-  '3DS_NDS': '3ds.json'
+  '3DS_NDS': '3ds.json' 
 };
 
 /* ================= TEMAS ================= */
@@ -1139,7 +1139,7 @@ function generarBarraSubcategoriasYCapacidades() {
 /* ================= CARGA DE DATOS ================= */
 async function cargarProductos() {
   try {
-    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/';
+    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
     const archivos = [
       'switch.json', 'playstation.json', 'xbox.json', '3ds.json', 
       'nds.json', 'wii.json', 'sd_usb.json'
