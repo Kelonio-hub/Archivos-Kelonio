@@ -279,14 +279,30 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .video-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
 .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-@media(max-width: 1150px) { .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; } .topbar-left { order: 1; } .right-tools { order: 2; margin-top: 5px; flex-wrap: wrap; justify-content: center; } }
-@media(max-width: 650px) { 
+@media(max-width: 1150px) { 
+  .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; } 
+  .topbar-left { order: 1; } 
+  .right-tools { order: 2; margin-top: 5px; flex-wrap: wrap; justify-content: center; } 
+  
+  /* Añade esto para proteger el título en pantallas intermedias/tablets */
+  .page-header { padding-top: 150px; }
+  
+}@media(max-width: 650px) { 
   .right-tools { width: 100%; gap: 15px; } 
   #fileSearch { width: 100%; order: 3; margin-top: 10px; } 
   #fileSearch:focus { width: 100%; } 
   .config-group { flex-direction: row; order: 2; gap: 15px; justify-content: center; width: 100%; } 
-  .page-header { padding: 140px 5% 10px; }
+  
+  /* --- CÓDIGO CORREGIDO --- */
+  /* Aumentamos de 140px a 230px para compensar la altura de la barra en móviles */
+  .page-header { padding: 230px 5% 10px; }
+  
   .page-header h1 { font-size: 2rem; }
+  
+  /* Ajustamos proporcionalmente el tamaño del icono/emoticono en móviles */
+  .hero-guide-icon { width: 2.2rem; height: 2.2rem; margin-right: 6px; }
+  /* ------------------------ */
+
   .hero-carousel { width: 100%; border-radius: 0; height: 50vh; padding: 30px 5%; margin-top: 0; }
   .hero-title { font-size: 2rem; }
   .hero-desc { font-size: 1rem; }
