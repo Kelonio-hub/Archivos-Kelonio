@@ -156,14 +156,139 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 #backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: opacity 0.3s, transform 0.3s; }
 #backToTopBtn:hover { transform: scale(1.1); }
 
+/* ================= ESTILOS EXCLUSIVOS ADMIN ================= */
+.admin-toolbar { display: none; position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 99999; background: var(--topbar-bg); backdrop-filter: blur(16px); border: 1px solid var(--red); padding: 10px 20px; border-radius: 50px; box-shadow: 0 0 25px rgba(var(--glow-rgb), 0.5); gap: 12px; align-items: center; flex-wrap: wrap; }
+.admin-toolbar span { font-weight: 800; color: var(--red); font-size: 13px; margin-right: 5px; }
+.admin-btn { background: rgba(var(--glow-rgb), 0.2); border: 1px solid var(--red); color: var(--text-main); padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 12px; cursor: pointer; transition: 0.2s; }
+.admin-btn:hover { background: var(--red); color: #fff; transform: scale(1.05); }
+.admin-btn.danger { background: rgba(229, 9, 20, 0.2); border-color: #e50914; }
+.admin-btn.danger:hover { background: #e50914; color: #fff; }
+
+.admin-card-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 15px 12px 15px; border-top: 1px dashed var(--glass-border); padding-top: 10px; }
+.admin-action-btn { padding: 6px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; border: 1px solid var(--glass-border); background: var(--input-bg); color: var(--text-main); transition: 0.2s; }
+.admin-action-btn.edit:hover { border-color: var(--gold); color: var(--gold); }
+.admin-action-btn.delete:hover { border-color: #e50914; color: #e50914; }
+
+.custom-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); z-index: 100000; justify-content: center; align-items: center; padding: 20px; }
+.custom-modal-content { background: var(--bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 25px; width: 100%; max-width: 500px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); max-height: 90vh; overflow-y: auto; }
+.custom-modal-content h3 { color: var(--red); margin-bottom: 15px; font-size: 1.5rem; text-align: center; }
+.form-group { margin-bottom: 12px; display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-size: 12px; font-weight: bold; color: var(--text-muted); }
+.form-group input, .form-group select, .form-group textarea { background: var(--input-bg); border: 1px solid var(--glass-border); color: var(--text-main); padding: 8px 12px; border-radius: 8px; outline: none; font-size: 13px; font-family: inherit; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--red); }
+.modal-btn-group { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
 /* ================= RESPONSIVE ================= */
 @media(max-width: 1150px) { .topbar { flex-wrap: wrap; padding: 10px 4%; justify-content: center; } .topbar-left { order: 1; } .right-tools { order: 2; margin-top: 5px; flex-wrap: wrap; justify-content: center; } }
 @media(max-width: 900px) { #productSearch { width: 140px; } #productSearch:focus { width: 160px; } .card { min-width: 240px; width: 240px; } }
 @media(max-width: 650px) { .right-tools { width: 100%; gap: 15px; } #productSearch { width: 100%; order: 3; margin-top: 10px; } #productSearch:focus { width: 100%; } .config-group { flex-direction: row; order: 2; gap: 15px; justify-content: center; width: 100%; } .header-section { padding-top: 150px; } }
-@media(max-width: 768px) { .prime-banner { padding: 10px; width: 95%; } .prime-banner-info p { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } }
+@media(max-width: 768px) { .prime-banner { padding: 10px; width: 95%; } .prime-banner-info p { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .admin-toolbar { width: 95%; justify-content: center; } }
 
 </style>
-
+<!-- ==========================================================
+     CANONICAL & HREFLANG (8 IDIOMAS + INGLÉS POR DEFECTO)
+=========================================================== -->
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html" rel="canonical"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=es" hreflang="es" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=fr" hreflang="fr" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=de" hreflang="de" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=pt" hreflang="pt" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=ja" hreflang="ja" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=ko" hreflang="ko" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html?lang=en" hreflang="x-default" rel="alternate"/>
+<!-- ==========================================================
+     OPEN GRAPH & TWITTER CARDS
+=========================================================== -->
+<meta content="website" property="og:type"/>
+<meta content="La Presa" property="og:site_name"/>
+<meta content="Productos | La Presa" property="og:title"/>
+<meta content="Descubre Productos | La Presa en el centro de recursos de La Presa." property="og:description"/>
+<meta content="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html" property="og:url"/>
+<meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Productos | La Presa" name="twitter:title"/>
+<meta content="Descubre Productos | La Presa en el centro de recursos de La Presa." name="twitter:description"/>
+<meta content="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization",
+  "name": "La Presa",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#webpage",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html",
+  "name": "Productos | La Presa",
+  "description": "Descubre Productos | La Presa en el centro de recursos de La Presa.",
+  "inLanguage": [
+    "es",
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "ja",
+    "ko"
+  ],
+  "publisher": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png"
+  },
+  "mainEntity": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#collection"
+  },
+  "dateModified": "2026-07-19"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Productos | La Presa",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html#collection",
+  "name": "Productos | La Presa",
+  "description": "Descubre Productos | La Presa en el centro de recursos de La Presa.",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/productos.html",
+  "isPartOf": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#webpage"
+  }
+}
+</script>
 <script>
   /* PRE-CARGA TEMA */
   (function() {
@@ -211,7 +336,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
 <path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
-<path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"></path>
+<path d="m17 11 4 4-4 4-4" fill="rgba(255,255,255,0.08)"></path>
 <path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"></path>
 <path d="m16 8 3-3"></path>
 <path d="M9 21a6 6 0 0 0-6-6"></path>
@@ -282,17 +407,268 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <!-- Candado de admin invisible -->
 <a href="#" id="adminPadlock" style="position: fixed; bottom: 10px; left: 10px; opacity: 0; z-index: 9999; cursor: default; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; text-decoration: none;">🔒</a>
 
+<!-- PANEL FLOTANTE DE ADMINISTRACIÓN -->
+<div class="admin-toolbar" id="adminToolbar">
+  <span>🛠️ MODO ADMIN</span>
+  <button class="admin-btn" onclick="openProductModal()">➕ Añadir Producto</button>
+  <button class="admin-btn" onclick="openCategoryModal()">📂 Crear Categoría/Subcat.</button>
+  <button class="admin-btn" onclick="saveToLocalStorage()">💾 Guardar (Local)</button>
+  <button class="admin-btn" onclick="openDownloadModal()">📥 Descargar JSON</button>
+  <button class="admin-btn danger" onclick="logoutAdmin()">❌ Salir</button>
+</div>
+
+<!-- MODAL LOGIN ADMIN -->
+<div class="custom-modal" id="adminLoginModal">
+  <div class="custom-modal-content" style="max-width: 350px;">
+    <h3>🔒 Acceso Admin</h3>
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" id="adminPasswordInput" placeholder="Introduce contraseña..." />
+    </div>
+    <div class="modal-btn-group">
+      <button class="admin-btn" onclick="closeCustomModals()">Cancelar</button>
+      <button class="admin-btn" style="background:var(--red); color:#fff;" onclick="verifyAdminPassword()">Entrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CREAR/EDITAR PRODUCTO -->
+<div class="custom-modal" id="productFormModal">
+  <div class="custom-modal-content">
+    <h3 id="productModalTitle">➕ Añadir Producto</h3>
+    <input type="hidden" id="editProductId" />
+    <div class="form-group">
+      <label>Título / Nombre del Producto</label>
+      <input type="text" id="prodLabel" placeholder="Ej: Mando Pro Switch" />
+    </div>
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="prodDesc" rows="2" placeholder="Ej: Excelente mando inalámbrico con giroscopio..."></textarea>
+    </div>
+    <div class="form-group">
+      <label>Precio (Opcional)</label>
+      <input type="text" id="prodPrice" placeholder="Ej: 29.99 €" />
+    </div>
+    <div class="form-group">
+      <label>URL de Imagen</label>
+      <input type="text" id="prodImg" placeholder="https://..." />
+    </div>
+    <div class="form-group">
+      <label>URL de Compra / Afiliado</label>
+      <input type="text" id="prodUrl" placeholder="https://amzn.to/..." />
+    </div>
+    <div class="form-group">
+      <label>Consola / Categoría Principal</label>
+      <select id="prodConsole"></select>
+    </div>
+    <div class="form-group">
+      <label>Subcategoría</label>
+      <select id="prodSubcat"></select>
+    </div>
+    <div class="form-group">
+      <label>Capacidad / Tamaño (Opcional, Ej: 128GB, 1TB)</label>
+      <input type="text" id="prodSize" placeholder="Ninguno" />
+    </div>
+    <div class="form-group">
+      <label>Archivo JSON de Origen</label>
+      <select id="prodOrigin">
+        <option value="switch.json">switch.json</option>
+        <option value="playstation.json">playstation.json</option>
+        <option value="xbox.json">xbox.json</option>
+        <option value="3ds.json">3ds.json</option>
+        <option value="nds.json">nds.json</option>
+        <option value="wii.json">wii.json</option>
+        <option value="sd_usb.json">sd_usb.json</option>
+      </select>
+    </div>
+    <div class="modal-btn-group">
+      <button class="admin-btn" onclick="closeCustomModals()">Cancelar</button>
+      <button class="admin-btn" style="background:var(--red); color:#fff;" onclick="saveProductForm()">Guardar Producto</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CREAR CATEGORÍA / SUBCATEGORÍA -->
+<div class="custom-modal" id="categoryFormModal">
+  <div class="custom-modal-content">
+    <h3>📂 Crear Categoría o Subcategoría</h3>
+    <div class="form-group">
+      <label>Tipo de creación</label>
+      <select id="catType" onchange="toggleCatFields()">
+        <option value="subcat">Subcategoría (Filtro superior)</option>
+        <option value="maincat">Categoría Principal (Consola)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Nombre / Etiqueta</label>
+      <input type="text" id="catName" placeholder="Ej: Retro, Accesorios VR..." />
+    </div>
+    <div class="form-group" id="catIconGroup" style="display:none;">
+      <label>URL del Icono (Para Consolas)</label>
+      <input type="text" id="catIcon" placeholder="https://..." />
+    </div>
+    <div class="modal-btn-group">
+      <button class="admin-btn" onclick="closeCustomModals()">Cancelar</button>
+      <button class="admin-btn" style="background:var(--red); color:#fff;" onclick="saveNewCategory()">Crear</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DESCARGAR JSON -->
+<div class="custom-modal" id="downloadModal">
+  <div class="custom-modal-content" style="max-width: 400px;">
+    <h3>📥 Descargar JSON Modificado</h3>
+    <div class="form-group">
+      <label>Selecciona el archivo para descargar con tus cambios:</label>
+      <select id="downloadSelect">
+        <option value="ALL">Todos en un archivo (master_products.json)</option>
+        <option value="switch.json">switch.json</option>
+        <option value="playstation.json">playstation.json</option>
+        <option value="xbox.json">xbox.json</option>
+        <option value="3ds.json">3ds.json</option>
+        <option value="nds.json">nds.json</option>
+        <option value="wii.json">wii.json</option>
+        <option value="sd_usb.json">sd_usb.json</option>
+      </select>
+    </div>
+    <div class="modal-btn-group">
+      <button class="admin-btn" onclick="closeCustomModals()">Cancelar</button>
+      <button class="admin-btn" style="background:var(--red); color:#fff;" onclick="executeDownloadJSON()">Descargar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 /* ================= TRANSLACIONES GLOBALES ================= */
 const translations = {
-  en: { title: "Products Center | La Presa", main: "Products Center", sub: "Recommended accessories, useful tools, and essential hardware for your consoles.", search: "Search products...", buy: "View", zoom: "Enlarge", results: "Search Results", all: "All", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  es: { title: "Centro de Productos | La Presa", main: "Centro de Productos", sub: "Accesorios recomendados, herramientas útiles y hardware esencial para tus consolas.", search: "Buscar productos...", buy: "Ver", zoom: "Ampliar", results: "Resultados de búsqueda", all: "Todos", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  fr: { title: "Centre de Produits | La Presa", main: "Centre de Produits", sub: "Accessoires recommandés, outils utiles et matériel essentiel pour vos consoles.", search: "Rechercher...", buy: "Voir", zoom: "Agrandir", results: "Résultats de recherche", all: "Tous", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  it: { title: "Centro Prodotti | La Presa", main: "Centro Prodotti", sub: "Accessori consigliati, strumenti utili e hardware essenziale per le tue console.", search: "Cerca prodotti...", buy: "Vedi", zoom: "Ingrandisci", results: "Risultati di ricerca", all: "Tutti", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Centro de Produtos | La Presa", main: "Centro de Produtos", sub: "Acessórios recomendados, ferramentas úteis e hardware essencial para seus consoles.", search: "Buscar productos...", buy: "Ver", zoom: "Ampliar", results: "Resultados da pesquisa", all: "Todos", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  de: { title: "Produkte Center | La Presa", main: "Produkte Center", sub: "Empfohlenes Zubehör, nützliche Werkzeuge und wichtige Hardware für Ihre Konsolen.", search: "Produkte suchen...", buy: "Ansehen", zoom: "Vergrößern", results: "Suchergebnisse", all: "Alle", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  ja: { title: "製品センター | La Presa", main: "製品センター", sub: "お使いのコンソールに推奨されるアクセサリー、便利なツール、および必須のハードウェア。", search: "製品を検索...", buy: "見る", zoom: "拡大", results: "検索結果", all: "すべて", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "제품 센터 | La Presa", main: "제품 센터", sub: "콘솔을 위한 권장 액세서리, 유용한 도구 및 필수 하드웨어.", search: "제품 검색...", buy: "보기", zoom: "확대", results: "검색 결과", 전: "전체", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { 
+    title: "Centro de Productos | La Presa", 
+    main: "Centro de Productos", 
+    sub: "Consolas, videojuegos y accesorios.", 
+    search: "Buscar productos...", 
+    buy: "Ver", 
+    zoom: "Ampliar", 
+    results: "Resultados de búsqueda", 
+    all: "Todos", 
+    products: "Productos", 
+    videos: "Vídeos", 
+    radar: "Radar de Actualizaciones", 
+    guides: "Guías", 
+    discord: "Únete a Discord", 
+    kofi: "Apóyanos en Ko-fi" 
+  },
+  en: { 
+    title: "Products Center | La Presa", 
+    main: "Products Center", 
+    sub: "Consoles, video games, and accessories.", 
+    search: "Search products...", 
+    buy: "View", 
+    zoom: "Enlarge", 
+    results: "Search Results", 
+    all: "All", 
+    products: "Products", 
+    videos: "Videos", 
+    radar: "Update Radar", 
+    guides: "Guides", 
+    discord: "Join Discord", 
+    kofi: "Support us on Ko-fi" 
+  },
+  fr: { 
+    title: "Centre de Produits | La Presa", 
+    main: "Centre de Produits", 
+    sub: "Consoles, jeux vidéo et accessoires.", 
+    search: "Rechercher...", 
+    buy: "Voir", 
+    zoom: "Agrandir", 
+    results: "Résultats de recherche", 
+    all: "Tous", 
+    products: "Produits", 
+    videos: "Vidéos", 
+    radar: "Radar des Mises à jour", 
+    guides: "Guides", 
+    discord: "Rejoindre Discord", 
+    kofi: "Soutenez-nous sur Ko-fi" 
+  },
+  it: { 
+    title: "Centro Prodotti | La Presa", 
+    main: "Centro Prodotti", 
+    sub: "Console, videogiochi e accessori.", 
+    search: "Cerca prodotti...", 
+    buy: "Vedi", 
+    zoom: "Ingrandisci", 
+    results: "Risultati di ricerca", 
+    all: "Tutti", 
+    products: "Prodotti", 
+    videos: "Video", 
+    radar: "Radar Aggiornamenti", 
+    guides: "Guide", 
+    discord: "Unisciti a Discord", 
+    kofi: "Supportaci su Ko-fi" 
+  },
+  pt: { 
+    title: "Centro de Produtos | La Presa", 
+    main: "Centro de Produtos", 
+    sub: "Consoles, videogames e acessórios.", 
+    search: "Buscar produtos...", 
+    buy: "Ver", 
+    zoom: "Ampliar", 
+    results: "Resultados da pesquisa", 
+    all: "Todos", 
+    products: "Produtos", 
+    videos: "Vídeos", 
+    radar: "Radar de Atualizações", 
+    guides: "Guias", 
+    discord: "Junte-se ao Discord", 
+    kofi: "Apoie-nos no Ko-fi" 
+  },
+  de: { 
+    title: "Produkte Center | La Presa", 
+    main: "Produkte Center", 
+    sub: "Konsolen, Videospiele und Zubehör.", 
+    search: "Produkte suchen...", 
+    buy: "Ansehen", 
+    zoom: "Vergrößern", 
+    results: "Suchergebnisse", 
+    all: "Alle", 
+    products: "Produkte", 
+    videos: "Videos", 
+    radar: "Update-Radar", 
+    guides: "Anleitungen", 
+    discord: "Treten Sie Discord bei", 
+    kofi: "Unterstützen Sie uns auf Ko-fi" 
+  },
+  ja: { 
+    title: "製品センター | La Presa", 
+    main: "製品センター", 
+    sub: "コンソール、ビデオゲーム、アクセサリー。", 
+    search: "製品を検索...", 
+    buy: "見る", 
+    zoom: "拡大", 
+    results: "検索結果", 
+    all: "すべて", 
+    products: "製品", 
+    videos: "ビデオ", 
+    radar: "更新レーダー", 
+    guides: "ガイド", 
+    discord: "Discordに参加する", 
+    kofi: "Ko-fiでサポート" 
+  },
+  ko: { 
+    title: "제품 센터 | La Presa", 
+    main: "제품 센터", 
+    sub: "콘솔, 비디오 게임 및 액세서리.", 
+    search: "제품 검색...", 
+    buy: "보기", 
+    zoom: "확대", 
+    results: "검색 결과", 
+    all: "전체", 
+    products: "제품", 
+    videos: "비디오", 
+    radar: "업데이트 레이더", 
+    guides: "가이드", 
+    discord: "Discord 가입하기", 
+    kofi: "Ko-fi에서 지원하기" 
+  }
 };
 
 /* ================= TRADUCCIONES DE SUBCATEGORÍAS ================= */
@@ -312,14 +688,23 @@ const subcatTranslations = {
   "Ordenadores": { es: "Ordenadores", en: "Computers", fr: "Ordinateurs", it: "Computer", pt: "Computadores", de: "Computer", ja: "コンピューター", ko: "컴퓨터" }
 };
 
-const subcatOrder = ['Novedades', 'Consolas', 'Videojuegos', 'Figuras', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo', 'Adaptadores', 'Baterías', 'Ordenadores'];
+let subcatOrder = ['Novedades', 'Consolas', 'Videojuegos', 'Figuras', 'Tarjeta de Regalo', 'Mandos-Perifericos', 'Fundas-Proteccion', 'Tarjeta SD', 'USB', 'Disco duro externo', 'Adaptadores', 'Baterías', 'Ordenadores'];
 
+/* ================= PRODUCTO PRIME HARDCODEADO ================= */
 const PRODUCTO_PRIME = {
   "id": "prime-promo",
-  "label": { "en": "Amazon Prime", "es": "Amazon Prime", "fr": "Amazon Prime", "it": "Amazon Prime", "pt": "Amazon Prime", "de": "Amazon Prime", "ja": "Amazon Prime", "ko": "Amazon Prime" },
+  "label": {
+    "en": "Amazon Prime", "es": "Amazon Prime", "fr": "Amazon Prime", "it": "Amazon Prime", "pt": "Amazon Prime", "de": "Amazon Prime", "ja": "Amazon Prime", "ko": "Amazon Prime"
+  },
   "desc": {
-    "en": "Deals and free shipping on millions of products. Subscribe for €4.99/month or €49.90/year.",
-    "es": "Ofertas y envíos gratis en millones de productos. Suscríbete por 4,99€/mes o 49,90 €/año."
+    "en": "Deals and free shipping on millions of products. Includes: Prime Video, Prime Music, Prime Photos and Prime Reading.\nSubscribe for €4.99/month or €49.90/year.",
+    "es": "Ofertas y envíos gratis en millones de productos. Incluye: Prime Video, Prime Music, Prime Photos y Prime Reading.\nSuscríbete por 4,99€/mes o 49,90 €/año.",
+    "fr": "Offres et livraison gratuite sur des millions de produits. Comprend : Prime Video, Prime Music, Prime Photos et Prime Reading.\nAbonnez-vous pour 4,99 €/mois ou 49,90 €/an.",
+    "it": "Offerte e spedizioni gratuite su milioni di prodotti. Include: Prime Video, Prime Music, Prime Photos e Reading.\nAbbonati per 4,99 €/mese o 49,90 €/anno.",
+    "pt": "Ofertas e envios grátis em milhões de productos. Inclui: Prime Video, Prime Music, Prime Photos e Reading.\nInscreva-se por 4,99 €/mês o 49,90 €/ano.",
+    "de": "Angebote und kostenloser Versand bei Millionen von Produkten. Enthält: Prime Video, Prime Music, Prime Photos und Prime Reading.\nAbonniere für 4,99 €/Monat oder 49,90 €/Jahr.",
+    "ja": "数百万の商品でお得な特典と無料配送。Prime Video、Prime Music、Prime Photos、Prime Readingが含まれます。\n月額4.99€または年額49.90€で購読。",
+    "ko": "수백만 개의 제품에 대한 혜택 outdoor 무료 배송. Prime Video, Prime Music, Prime Photos, Prime Reading 포함.\n월 4.99€ 또는 연 49.90€ 구독."
   },
   "img": "https://gazetadasemana.com.br/images/colunas/10044/06072023165518_Amazon_Pri.jpg",
   "url": "https://amzn.to/4pq5Pp6"
@@ -334,7 +719,7 @@ let tamanoSeleccionado = 'ALL';
 let paginaActual = 1;
 const itemsPorPagina = 24; 
 
-const categories = [
+let categories = [
   { id: 'Switch',      icon: 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', label: { es: 'SWITCH', en: 'SWITCH' } },
   { id: 'PLAYSTATION', icon: 'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', label: { es: 'PLAYSTATION', en: 'PLAYSTATION' } },
   { id: 'XBOX',        icon: 'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', label: { es: 'XBOX', en: 'XBOX' } },
@@ -351,6 +736,255 @@ const categoryJsonMap = {
   'SD/USB': 'sd_usb.json',
   '3DS_NDS': '3ds.json' 
 };
+
+/* ================= GESTIÓN GHOST-LOCK Y MODO ADMIN (SHA-256) ================= */
+let isAdmin = false;
+
+const adminPadlock = document.getElementById('adminPadlock');
+const adminToolbar = document.getElementById('adminToolbar');
+
+async function hashearTexto(texto) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(texto);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+adminPadlock.addEventListener('click', async (e) => {
+  e.preventDefault();
+  if (!isAdmin) {
+    const pass = prompt("Proxys:");
+    if (pass) {
+      const hashIngresado = await hashearTexto(pass);
+      const hashCorrecto = "65d21f24c2164508323ab774fdf0e95e23313bd71a505fb1b4a87839032b1531"; 
+      
+      if (hashIngresado === hashCorrecto) {
+        isAdmin = true;
+        adminToolbar.style.display = 'flex';
+        alert("OK!");
+      } else {
+        alert("https://amzn.to/4dUrbsh");
+      }
+    }
+  } else {
+    isAdmin = false;
+    adminToolbar.style.display = 'none';
+    alert("Modo Administrator Desactivado.");
+  }
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+});
+
+function logoutAdmin() {
+  isAdmin = false;
+  adminToolbar.style.display = 'none';
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+}
+
+function closeCustomModals() {
+  document.querySelectorAll('.custom-modal').forEach(m => m.style.display = 'none');
+}
+
+function populateAdminSelects() {
+  const consoleSelect = document.getElementById('prodConsole');
+  const subcatSelect = document.getElementById('prodSubcat');
+  consoleSelect.innerHTML = '';
+  subcatSelect.innerHTML = '';
+
+  categories.forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat.id;
+    opt.textContent = cat.label.es || cat.id;
+    consoleSelect.appendChild(opt);
+  });
+
+  const subcats = new Set(subcatOrder);
+  allProducts.forEach(p => {
+    if (p.subcategory && p.subcategory !== 'Ninguno') {
+      if (Array.isArray(p.subcategory)) p.subcategory.forEach(s => subcats.add(s));
+      else subcats.add(p.subcategory);
+    }
+  });
+
+  const optNone = document.createElement('option');
+  optNone.value = 'Ninguno'; optNone.textContent = 'Ninguno / General';
+  subcatSelect.appendChild(optNone);
+
+  Array.from(subcats).forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s; opt.textContent = s;
+    subcatSelect.appendChild(opt);
+  });
+}
+
+function openProductModal(editId = null) {
+  populateAdminSelects();
+  const title = document.getElementById('productModalTitle');
+  
+  if (editId) {
+    const prod = allProducts.find(p => p.id === editId);
+    if (!prod) return;
+    title.textContent = "✏️ Editar Producto";
+    document.getElementById('editProductId').value = prod.id;
+    document.getElementById('prodLabel').value = prod.label?.es || '';
+    document.getElementById('prodDesc').value = prod.desc?.es || '';
+    document.getElementById('prodPrice').value = prod.price || '';
+    document.getElementById('prodImg').value = prod.img || '';
+    document.getElementById('prodUrl').value = prod.url || '';
+    document.getElementById('prodConsole').value = Array.isArray(prod.console) ? prod.console[0] : (prod.console || 'Switch');
+    document.getElementById('prodSubcat').value = Array.isArray(prod.subcategory) ? prod.subcategory[0] : (prod.subcategory || 'Ninguno');
+    document.getElementById('prodSize').value = prod.size || '';
+    document.getElementById('prodOrigin').value = prod._originFile || 'switch.json';
+  } else {
+    title.textContent = "➕ Añadir Producto";
+    document.getElementById('editProductId').value = '';
+    document.getElementById('prodLabel').value = '';
+    document.getElementById('prodDesc').value = '';
+    document.getElementById('prodPrice').value = '';
+    document.getElementById('prodImg').value = '';
+    document.getElementById('prodUrl').value = '';
+    document.getElementById('prodConsole').value = categoriaActual;
+    document.getElementById('prodSubcat').value = subcategoriaSeleccionada === 'ALL' ? 'Ninguno' : subcategoriaSeleccionada;
+    document.getElementById('prodSize').value = tamanoSeleccionado === 'ALL' ? '' : tamanoSeleccionado;
+    document.getElementById('prodOrigin').value = categoryJsonMap[categoriaActual] || 'switch.json';
+  }
+  
+  document.getElementById('productFormModal').style.display = 'flex';
+}
+
+function saveProductForm() {
+  const editId = document.getElementById('editProductId').value;
+  const labelText = document.getElementById('prodLabel').value.trim();
+  const descText = document.getElementById('prodDesc').value.trim();
+  const priceText = document.getElementById('prodPrice').value.trim();
+  const imgText = document.getElementById('prodImg').value.trim();
+  const urlText = document.getElementById('prodUrl').value.trim();
+  const consoleVal = document.getElementById('prodConsole').value;
+  const subcatVal = document.getElementById('prodSubcat').value;
+  const sizeVal = document.getElementById('prodSize').value.trim() || 'Ninguno';
+  const originVal = document.getElementById('prodOrigin').value;
+
+  if (!labelText || !imgText || !urlText) {
+    alert("Por favor rellena al menos el Nombre, Imagen y URL de compra.");
+    return;
+  }
+
+  const newProdData = {
+    id: editId || `prod-custom-${Date.now()}`,
+    label: { es: labelText, en: labelText },
+    desc: { es: descText, en: descText },
+    price: priceText,
+    img: imgText,
+    url: urlText,
+    console: consoleVal,
+    subcategory: subcatVal,
+    size: sizeVal,
+    _originFile: originVal
+  };
+
+  if (editId) {
+    const idx = allProducts.findIndex(p => p.id === editId);
+    if (idx !== -1) {
+      allProducts[idx] = { ...allProducts[idx], ...newProdData };
+    }
+  } else {
+    allProducts.unshift(newProdData);
+  }
+
+  closeCustomModals();
+  generarBarraSubcategoriasYCapacidades();
+  renderProducts(categoriaActual, document.getElementById('productSearch').value);
+  alert("Producto guardado temporalmente. Pulsa '💾 Guardar (Local)' para hacerlo persistente.");
+}
+
+function deleteProductAdmin(id) {
+  if (confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+    allProducts = allProducts.filter(p => p.id !== id);
+    generarBarraSubcategoriasYCapacidades();
+    renderProducts(categoriaActual, document.getElementById('productSearch').value);
+    alert("Producto eliminado. Recuerda pulsar '💾 Guardar (Local)' para guardar los cambios.");
+  }
+}
+
+function openCategoryModal() {
+  document.getElementById('catName').value = '';
+  document.getElementById('catIcon').value = '';
+  document.getElementById('catType').value = 'subcat';
+  toggleCatFields();
+  document.getElementById('categoryFormModal').style.display = 'flex';
+}
+
+function toggleCatFields() {
+  const type = document.getElementById('catType').value;
+  document.getElementById('catIconGroup').style.display = type === 'maincat' ? 'flex' : 'none';
+}
+
+function saveNewCategory() {
+  const type = document.getElementById('catType').value;
+  const name = document.getElementById('catName').value.trim();
+  
+  if (!name) return alert("Por favor escribe un nombre.");
+
+  if (type === 'maincat') {
+    const icon = document.getElementById('catIcon').value.trim() || 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png';
+    const newId = name.toUpperCase().replace(/\s+/g, '_');
+    if (!categories.some(c => c.id === newId)) {
+      categories.push({ id: newId, icon: icon, label: { es: name.toUpperCase(), en: name.toUpperCase() } });
+      renderConsoleButtons();
+      localStorage.setItem('saved_categories_override', JSON.stringify(categories));
+    }
+  } else {
+    if (!subcatOrder.includes(name)) {
+      subcatOrder.push(name);
+      generarBarraSubcategoriasYCapacidades();
+      localStorage.setItem('saved_subcats_override', JSON.stringify(subcatOrder));
+    }
+  }
+
+  closeCustomModals();
+  alert("Categoría/Subcategoría creada con éxito.");
+}
+
+function saveToLocalStorage() {
+  try {
+    localStorage.setItem('saved_products_data', JSON.stringify(allProducts));
+    alert("✅ ¡Todos los cambios han sido guardados en LocalStorage! Permanecerán activos incluso al recargar la página.");
+  } catch(e) {
+    alert("Error al guardar en localStorage: Puede que hayas superado el límite de almacenamiento del navegador.");
+  }
+}
+
+function openDownloadModal() {
+  document.getElementById('downloadModal').style.display = 'flex';
+}
+
+function executeDownloadJSON() {
+  const fileType = document.getElementById('downloadSelect').value;
+  let exportData = [];
+  let fileName = "productos.json";
+
+  if (fileType === 'ALL') {
+    exportData = allProducts.map(({ _originFile, ...rest }) => rest);
+    fileName = "master_products.json";
+  } else {
+    exportData = allProducts
+      .filter(p => p._originFile === fileType)
+      .map(({ _originFile, ...rest }) => rest);
+    fileName = fileType;
+  }
+
+  const jsonStr = JSON.stringify(exportData, null, 2);
+  const blob = new Blob([jsonStr], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  closeCustomModals();
+}
 
 /* ================= TEMAS ================= */
 const paletaTemas = {
@@ -441,7 +1075,7 @@ function applyTheme(colorKey) {
 /* ================= IDIOMAS ================= */
 function createLanguageSelector(){
   const selector = document.getElementById('languageSelector');
-  const langs = { en:'English', es:'Español', fr:'Français', it:'Italiano', pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어' };
+  const langs = {es:'Español', en:'English', fr:'Français', it:'Italiano', pt:'Português', de:'Deutsch', ja:'日本語', ko:'한국어' };
   selector.innerHTML = '';
   Object.keys(langs).forEach(code=>{
     const opt = document.createElement('option'); opt.value = code; opt.textContent = langs[code];
@@ -593,18 +1227,29 @@ function generarBarraSubcategoriasYCapacidades() {
 /* ================= CARGA DE DATOS ================= */
 async function cargarProductos() {
   try {
-    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
-    const archivos = ['switch.json', 'playstation.json', 'xbox.json', '3ds.json', 'nds.json', 'wii.json', 'sd_usb.json'];
-    const promesas = archivos.map(archivo => fetch(baseUrl + archivo + '?v=' + new Date().getTime()).then(res => res.ok ? res.json() : []).catch(() => []));
-    const resultadosArrays = await Promise.all(promesas);
-    
-    allProducts = resultadosArrays.flatMap((array, index) => {
-      return array.map((item, subIndex) => {
-        item.id = `prod-${index}-${subIndex}`;
-        if (!item._originFile) item._originFile = archivos[index];
-        return item;
+    const savedCategories = localStorage.getItem('saved_categories_override');
+    if (savedCategories) categories = JSON.parse(savedCategories);
+    const savedSubcats = localStorage.getItem('saved_subcats_override');
+    if (savedSubcats) subcatOrder = JSON.parse(savedSubcats);
+    renderConsoleButtons();
+
+    const savedData = localStorage.getItem('saved_products_data');
+    if (savedData) {
+      allProducts = JSON.parse(savedData);
+    } else {
+      const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
+      const archivos = ['switch.json', 'playstation.json', 'xbox.json', '3ds.json', 'nds.json', 'wii.json', 'sd_usb.json'];
+      const promesas = archivos.map(archivo => fetch(baseUrl + archivo + '?v=' + new Date().getTime()).then(res => res.ok ? res.json() : []).catch(() => []));
+      const resultadosArrays = await Promise.all(promesas);
+      
+      allProducts = resultadosArrays.flatMap((array, index) => {
+        return array.map((item, subIndex) => {
+          item.id = `prod-${index}-${subIndex}`;
+          if (!item._originFile) item._originFile = archivos[index];
+          return item;
+        });
       });
-    });
+    }
     
     renderPrimeProduct(); generarBarraSubcategoriasYCapacidades(); renderProducts(categoriaActual);
   } catch (error) {
@@ -654,6 +1299,16 @@ function createProductCard(item, container) {
   }
   const sizeBadgeHtml = (item.size && item.size !== 'Ninguno') ? `<div class="card-size-badge">${item.size}</div>` : '';
 
+  let adminActionsHtml = '';
+  if (isAdmin) {
+    adminActionsHtml = `
+      <div class="admin-card-actions">
+        <button class="admin-action-btn edit" onclick="event.stopPropagation(); openProductModal('${item.id}')">✏️ Editar</button>
+        <button class="admin-action-btn delete" onclick="event.stopPropagation(); deleteProductAdmin('${item.id}')">🗑️ Eliminar</button>
+      </div>
+    `;
+  }
+
   card.innerHTML = `
     ${badgeHtml}${sizeBadgeHtml}
     <img src="${item.img}" loading="lazy" alt="${label}">
@@ -664,6 +1319,7 @@ function createProductCard(item, container) {
       <button class="action-btn buy-btn" title="${t.buy}">${iconCart} <span>${t.buy}</span></button>
       <button class="action-btn zoom-btn" title="${t.zoom}">${iconZoom} <span>${t.zoom}</span></button>
     </div>
+    ${adminActionsHtml}
   `;
 
   card.onclick = () => window.open(item.url, '_blank');
