@@ -420,6 +420,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   }
 }
 </script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 <div id="accessWallOverlay" style="display: none;">
@@ -427,7 +428,14 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <h1 class="disney-logo-title">LA PRESA</h1>
 <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
 <div class="disney-progress-bar"><div class="disney-progress-fill" id="disney-progress"></div></div>
-<button class="disney-step-btn" id="disney-btn1"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+    <!-- Mensaje recordatorio con ID para traducción dinámica -->
+    <p id="txt_awReminder" style="margin-bottom: 10px; font-weight: bold; font-size: 0.95em;">
+            Para acceder a las Guías, recuerde estar suscrito <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">al canal</a>.
+        </p>
+    <!-- Doble entrada para el Paso 1 -->
+    <button class="disney-step-btn" id="disney-btn1-sub"><span id="txt_awYtBtn">1A. Verificar suscripción</span></button>
+    <!-- Oculto por defecto, se activa tras fallar el paso 1A -->
+    <button class="disney-step-btn" id="disney-btn1-join" style="display: none;"><span id="txt_awJoinBtn">1B. Membresía / Membership / Membros</span></button>
 <button class="disney-step-btn" id="disney-btn2"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
 <div id="disneyProductsContainer"></div>
 </div>
@@ -524,7 +532,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   const translations = {
     es: {
       txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
-      txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo",
+      
       txt_videos: "Vídeos", radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
       
       txt_tag: "SWITCH",
@@ -549,7 +557,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     en: {
       txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
-      txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway",
+      
       txt_videos: "Videos", radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
       
       txt_tag: "SWITCH",
@@ -574,7 +582,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     fr: {
       txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
-      txt_awSubtitle: "Complétez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours",
+      
       txt_videos: "Vidéos", radar: "Radar des Mises à Jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
       
       txt_tag: "SWITCH",
@@ -599,7 +607,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     de: {
       txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
-      txt_awSubtitle: "Schließen Sie die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen",
+      
       txt_videos: "Videos", radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstützen Sie uns auf Ko-fi",
       
       txt_tag: "SWITCH",
@@ -624,7 +632,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     it: {
       txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
-      txt_awSubtitle: "Completa i passaggi per sbloccare i contenuti.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway",
+      
       txt_videos: "Video", radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
       
       txt_tag: "SWITCH",
@@ -649,7 +657,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     pt: {
       txt_backBtnText: "← Voltar para os Guias", txt_otherGuides: "Outros Guias",
-      txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio",
+      
       txt_videos: "Vídeos", radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entre no Discord", txt_kofi: "Apoie-nos no Ko-fi",
       
       txt_tag: "SWITCH",
@@ -674,7 +682,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     ja: {
       txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド",
-      txt_awSubtitle: "コンテンツのロックを解除するための手順を完了してください。", txt_awYtBtn: "1. チャンネル登録する", txt_awGiftBtn: "2. プレゼント企画に参加する",
+      
       txt_videos: "ビデオ", radar: "更新レーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiで支援する",
       
       txt_tag: "SWITCH",
@@ -699,7 +707,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     },
     ko: {
       txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "기타 가이드",
-      txt_awSubtitle: "콘텐츠를 잠금 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독하기", txt_awGiftBtn: "2. 경품 행사에 참여하기",
+      
       txt_videos: "비디오", radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi에서 후원하기",
       
       txt_tag: "SWITCH",
@@ -741,11 +749,281 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       cargarSidebar();
   }
 
-  document.getElementById('disney-btn1').onclick = function() {
-      if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
-      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
-      btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
-      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 10000);
+    // ==========================================
+  // PASO 1: Configuración de la API de Google/YouTube y Membresía Multiidioma
+  // ==========================================
+  const CLIENT_ID = "316282527970-k8roorg133u98gcra57n8qe72bkkkbkk.apps.googleusercontent.com";
+  const CHANNEL_ID = "UCJbYmHLNcrPUUA9oyBGtsKw";
+  let accessToken = null;
+  let tokenClient = null;
+
+  // Detector de idioma perfeccionado: prioriza el navegador del usuario y soporta 8 idiomas
+  function getSiteLang() {
+    // 1. Idioma guardado previamente por el usuario (si aplica)
+    const savedLang = localStorage.getItem('userLang');
+    if (savedLang) return savedLang.toLowerCase();
+
+    // 2. PRIORIDAD PRINCIPAL: Idioma del navegador del usuario
+    const navLang = (navigator.language || navigator.userLanguage || 'es').substring(0, 2).toLowerCase();
+    const supportedLangs = ['es', 'en', 'pt', 'fr', 'de', 'it', 'ja', 'ko'];
+    
+    if (supportedLangs.includes(navLang)) {
+      return navLang;
+    }
+
+    // 3. Escaneo de texto visible (fallback para idiomas no detectados directamente)
+    let visibleText = "";
+    if (document.body) {
+      const clone = document.body.cloneNode(true);
+      clone.querySelectorAll("script, style, noscript, template").forEach(el => el.remove());
+      visibleText = clone.innerText || clone.textContent || "";
+    }
+
+    if (visibleText.trim().length > 0) {
+      if (/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/.test(visibleText)) return 'ja';
+      if (/[\uac00-\ud7af\u1100-\u11ff]/.test(visibleText)) return 'ko';
+      if (/Schritte|freizuschalten|Gewinnspiel|Inhalt|abonnieren|Teilnehmen/i.test(visibleText)) return 'de';
+      if (/Étapes|Débloquer|Concours|Chaîne|Abonner/i.test(visibleText)) return 'fr';
+      if (/Etapas|Desbloquear|Sorteio|Canal|Inscrever/i.test(visibleText)) return 'pt';
+      if (/Passaggi|Sbloccare|Concorso|Canale|Iscriviti/i.test(visibleText)) return 'it';
+      if (/Unlock|Steps|Participate|Giveaway|Subscribe/i.test(visibleText)) return 'en';
+    }
+
+    // 4. Fallback final si nada coincide
+    return 'es';
+  }
+
+  // Diccionario completo con 8 idiomas (Incluye subtítulo, recordatorio y botones)
+  const i18n_disney = {
+    es: {
+      subtitle: "Completa los pasos para desbloquear el contenido.",
+      reminder: 'Para acceder a las Guías, recuerde estar suscrito <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">al canal</a>.',
+      subMsg: "Debe estar suscrito al canal para continuar.",
+      domainErr: "Tu cuenta no es Gmail, sino de dominio corporativo/empresa. Use la opción 2 Membresía para acceder a las guías.",
+      verifyBtn: "Verificar suscripción",
+      btn1B: "Membresía del Canal",
+      giftBtn: "2. Participar en el sorteo",
+      connecting: "⏳ Conectando...",
+      verifying: "⏳ Verificando...",
+      success: "✅ Usuario suscrito. ¡Paso 1 completado!",
+      apiError: "❌ Hubo un error al verificar. Inténtalo de nuevo o usa Membresía."
+    },
+    en: {
+      subtitle: "Complete the steps to unlock the content.",
+      reminder: 'To access the Guides, remember to be subscribed to <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">the channel</a>.',
+      subMsg: "You must be subscribed to the channel to continue.",
+      domainErr: "Your account is a domain/work account, not Gmail. Use option 2 Membership to access the guides.",
+      verifyBtn: "Verify subscription",
+      btn1B: "Channel Membership",
+      giftBtn: "2. Enter the giveaway",
+      connecting: "⏳ Connecting...",
+      verifying: "⏳ Verifying...",
+      success: "✅ User subscribed. Step 1 completed!",
+      apiError: "❌ Error during verification. Try again or use Membership."
+    },
+    pt: {
+      subtitle: "Conclua as etapas para desbloquear o conteúdo.",
+      reminder: 'Para acessar os Guias, lembre-se de estar inscrito no <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">canal</a>.',
+      subMsg: "Você deve estar inscrito no canal para continuar.",
+      domainErr: "Sua conta não é do Gmail, mas de um domínio corporativo. Use a opção 2 Seja Membro para acessar os guias.",
+      verifyBtn: "Verificar inscrição",
+      btn1B: "Seja Membro do Canal",
+      giftBtn: "2. Participar do sorteio",
+      connecting: "⏳ Conectando...",
+      verifying: "⏳ Verificando...",
+      success: "✅ Inscrito com sucesso. Passo 1 concluído!",
+      apiError: "❌ Erro ao verificar. Tente novamente ou use Seja Membro."
+    },
+    fr: {
+      subtitle: "Complétez les étapes pour débloquer le contenu.",
+      reminder: 'Pour accéder aux Guides, n\'oubliez pas de vous abonner à <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">la chaîne</a>.',
+      subMsg: "Vous devez être abonné à la chaîne pour continuer.",
+      domainErr: "Votre compte est un compte de domaine et non Gmail. Utilisez l'option 2 Membre pour accéder aux guides.",
+      verifyBtn: "Vérifier l'abonnement",
+      btn1B: "Membre de la chaîne",
+      giftBtn: "2. Participer au tirage au sort",
+      connecting: "⏳ Connexion...",
+      verifying: "⏳ Vérification...",
+      success: "✅ Abonné avec succès. Étape 1 terminée !",
+      apiError: "❌ Erreur de vérification. Réessayez ou utilisez l'option Membre."
+    },
+    de: {
+      subtitle: "Führe die Schritte aus, um den Inhalt freizuschalten.",
+      reminder: 'Um auf die Leitfäden zuzugreifen, denke daran, den <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">Kanal zu abonnieren</a>.',
+      subMsg: "Sie müssen den Kanal abonnieren, um fortzufahren.",
+      domainErr: "Ihr Konto ist kein Gmail-, sondern ein Domänenkonto. Nutzen Sie Option 2 Mitgliedschaft, um auf die Leitfäden zuzugreifen.",
+      verifyBtn: "Abonnement überprüfen",
+      btn1B: "Kanalmitgliedschaft",
+      giftBtn: "2. Am Gewinnspiel teilnehmen",
+      connecting: "⏳ Verbinde...",
+      verifying: "⏳ Überprüfe...",
+      success: "✅ Erfolgreich abonniert. Schritt 1 abgeschlossen!",
+      apiError: "❌ Fehler bei der Überprüfung. Erneut versuchen oder Mitgliedschaft nutzen."
+    },
+    it: {
+      subtitle: "Completa i passaggi per sbloccare il contenuto.",
+      reminder: 'Per accedere alle Guide, ricordati di essere iscritto al <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">canale</a>.',
+      subMsg: "Devi essere iscritto al canale per continuare.",
+      domainErr: "Il tuo account non è Gmail, ma un account aziendale/dominio. Usa l'opzione 2 Abbonati per accedere alle guide.",
+      verifyBtn: "Verifica iscrizione",
+      btn1B: "Abbonati al canale",
+      giftBtn: "2. Partecipa al sorteggio",
+      connecting: "⏳ Connessione...",
+      verifying: "⏳ Verifica...",
+      success: "✅ Iscritto con successo. Passo 1 completato!",
+      apiError: "❌ Errore durante la verifica. Riprova o usa l'opzione Abbonati."
+    },
+    ja: {
+      subtitle: "コンテンツをロック解除するには手順を完了してください。",
+      reminder: 'ガイドにアクセスするには、<a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">チャンネル登録</a>をお願いします。',
+      subMsg: "続行するにはチャンネル登録が必要です。",
+      domainErr: "アカウントがGmailではなくドメインアカウントです。ガイドにアクセスするにはオプション2「メンバーシップ」を使用してください。",
+      verifyBtn: "登録を確認",
+      btn1B: "メンバーシップ確認",
+      giftBtn: "2. 抽選に参加する",
+      connecting: "⏳ 接続中...",
+      verifying: "⏳ 確認中...",
+      success: "✅ 登録が確認されました。ステップ1完了！",
+      apiError: "❌ 確認エラーが発生しました。再試行するかメンバーシップをご利用ください。"
+    },
+    ko: {
+      subtitle: "콘텐츠를 잠금 해제하려면 단계를 완료하세요.",
+      reminder: '가이드에 액세스하려면 <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1" target="_blank" style="color: #ff0000; text-decoration: underline;">채널을 구독</a>해 주세요.',
+      subMsg: "계속하려면 채널을 구독해야 합니다.",
+      domainErr: "계정이 Gmail이 아닌 도메인 계정입니다. 가이드에 액세스하려면 옵션 2 멤버십을 사용하세요.",
+      verifyBtn: "구독 확인",
+      btn1B: "채널 멤버십",
+      giftBtn: "2. 경품 추첨 참여하기",
+      connecting: "⏳ 연결 중...",
+      verifying: "⏳ 확인 중...",
+      success: "✅ 구독이 확인되었습니다. 1단계 완료!",
+      apiError: "❌ 확인 중 오류가 발생했습니다. 다시 시도하거나 멤버십을 사용하세요."
+    }
+  };
+
+  // EVALUACIÓN INMEDIATA: Se evalúa 'tLang' al cargar el script
+  const userLang = getSiteLang();
+  let tLang = i18n_disney[userLang] || i18n_disney['es'];
+
+  // Actualizar todas las etiquetas de la interfaz (Subtítulo, Recordatorio y Botones)
+  function initBtnLang() {
+      const currentLang = getSiteLang();
+      tLang = i18n_disney[currentLang] || i18n_disney['es'];
+
+      const btnSubtitle = document.getElementById('txt_awSubtitle');
+      const btnReminder = document.getElementById('txt_awReminder');
+      const btn1A = document.getElementById('txt_awYtBtn');
+      const btn1B = document.getElementById('txt_awJoinBtn');
+      const btnGift = document.getElementById('txt_awGiftBtn');
+
+      if (btnSubtitle && tLang.subtitle) btnSubtitle.innerText = tLang.subtitle;
+      if (btnReminder && tLang.reminder) btnReminder.innerHTML = tLang.reminder;
+      if (btn1A && tLang.verifyBtn) btn1A.innerText = "1A. " + tLang.verifyBtn;
+      if (btn1B && tLang.btn1B) btn1B.innerText = "1B. " + tLang.btn1B;
+      if (btnGift && tLang.giftBtn) btnGift.innerText = tLang.giftBtn;
+  }
+
+  if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initBtnLang);
+  } else {
+      initBtnLang();
+  }
+
+  // --- OPCIÓN 1A: Verificación Google ---
+  document.getElementById('disney-btn1-sub').onclick = function() {
+      if(typeof s1 !== 'undefined' && s1) return; 
+      const btn = this;
+      btn.innerText = tLang.connecting; 
+      btn.style.opacity = "0.7";
+
+      document.getElementById('disney-btn1-join').style.display = 'none';
+
+      if (!tokenClient) {
+          if (window.google && google.accounts && google.accounts.oauth2) {
+              tokenClient = google.accounts.oauth2.initTokenClient({
+                  client_id: CLIENT_ID,
+                  scope: "https://www.googleapis.com/auth/youtube.readonly",
+                  callback: (response) => {
+                      if (response.error) {
+                          alert(tLang.domainErr);
+                          btn.innerText = "1A. " + tLang.verifyBtn;
+                          btn.style.opacity = "1";
+                          document.getElementById('disney-btn1-join').style.display = 'inline-block';
+                          return;
+                      }
+                      accessToken = response.access_token;
+                      comprobarSuscripcionDisney();
+                  },
+                  error_callback: (err) => {
+                      console.error("Google Auth Error:", err);
+                      alert(tLang.domainErr);
+                      btn.innerText = "1A. " + tLang.verifyBtn;
+                      btn.style.opacity = "1";
+                      document.getElementById('disney-btn1-join').style.display = 'inline-block';
+                  }
+              });
+          } else {
+              alert("Google API loading...");
+              btn.innerText = "1A. " + tLang.verifyBtn; 
+              btn.style.opacity = "1";
+              return;
+          }
+      }
+      tokenClient.requestAccessToken();
+  };
+
+  // Validación real en YouTube
+  async function comprobarSuscripcionDisney() {
+      const btn = document.getElementById('disney-btn1-sub');
+      btn.innerText = tLang.verifying; 
+      try {
+          const url = `https://www.googleapis.com/youtube/v3/subscriptions?part=snippet&mine=true&forChannelId=${CHANNEL_ID}`;
+          const response = await fetch(url, { headers: { Authorization: "Bearer " + accessToken } });
+          
+          if (response.status === 403) {
+              alert(tLang.domainErr);
+              btn.innerText = "1A. " + tLang.verifyBtn; btn.style.opacity = "1";
+              document.getElementById('disney-btn1-join').style.display = 'inline-block';
+              return;
+          }
+
+          const data = await response.json();
+
+          if (data.items && data.items.length > 0) {
+              alert(tLang.success);
+              s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney();
+          } else {
+              alert("❌ " + tLang.subMsg);
+              btn.innerText = "1A. " + tLang.verifyBtn; btn.style.opacity = "1";
+              
+              document.getElementById('disney-btn1-join').style.display = 'inline-block';
+              window.open("https://www.youtube.com/channel/" + CHANNEL_ID + "?sub_confirmation=1", "_blank");
+          }
+      } catch (error) {
+          console.error("Error al verificar:", error);
+          alert(tLang.domainErr);
+          btn.innerText = "1A. " + tLang.verifyBtn; btn.style.opacity = "1";
+          document.getElementById('disney-btn1-join').style.display = 'inline-block';
+      }
+  }
+
+  // --- OPCIÓN 1B: Membresía / Membership (Espera de 60s) ---
+  document.getElementById('disney-btn1-join').onclick = function() {
+      if(typeof s1 !== 'undefined' && s1) return;
+      const btn = this;
+      btn.innerText = "⏳..."; 
+      btn.style.opacity = "0.7";
+      
+      document.getElementById('disney-btn1-sub').style.display = 'none';
+      window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
+      
+      setTimeout(() => { 
+          s1 = true; 
+          btn.classList.add('disney-step-done'); 
+          btn.innerText = "✅"; 
+          btn.style.opacity = "1"; 
+          checkProgressDisney(); 
+      }, 60000);
   };
 
   document.getElementById('disney-btn2').onclick = function() {
