@@ -693,50 +693,38 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       cargarSidebar();
   }
 
-    // Configuración de la API de Google/YouTube
+// Configuración de la API de Google/YouTube
   const CLIENT_ID = "316282527970-k8roorg133u98gcra57n8qe72bkkkbkk.apps.googleusercontent.com";
   const CHANNEL_ID = "UCJbYmHLNcrPUUA9oyBGtsKw";
   let accessToken = null;
-
-  const tokenClient = google.accounts.oauth2.initTokenClient({
-      client_id: CLIENT_ID,
-      scope: "https://www.googleapis.com/auth/youtube.readonly",
-      callback: (response) => {
-          accessToken = response.access_token;
-          comprobarSuscripcionDisney();
-      }
-  });
+  let tokenClient = null;
 
   document.getElementById('disney-btn1').onclick = function() {
       if(s1) return; 
       const btn = this;
       btn.innerText = "⏳ Conectando..."; 
       btn.style.opacity = "0.7";
+
+      // Inicializar el cliente solo si aún no está listo y la librería ya cargó
+      if (!tokenClient) {
+          if (window.google && google.accounts && google.accounts.oauth2) {
+              tokenClient = google.accounts.oauth2.initTokenClient({
+                  client_id: CLIENT_ID,
+                  scope: "https://www.googleapis.com/auth/youtube.readonly",
+                  callback: (response) => {
+                      accessToken = response.access_token;
+                      comprobarSuscripcionDisney();
+                  }
+              });
+          } else {
+              alert("La API de Google aún está cargando. Por favor, reintenta en un segundo.");
+              btn.innerText = "1. Suscribirse al canal"; 
+              btn.style.opacity = "1";
+              return;
+          }
+      }
       tokenClient.requestAccessToken();
   };
-
-  async function comprobarSuscripcionDisney() {
-      const btn = document.getElementById('disney-btn1');
-      btn.innerText = "⏳ Verificando..."; 
-      try {
-          const url = `https://www.googleapis.com/youtube/v3/subscriptions?part=snippet&mine=true&forChannelId=${CHANNEL_ID}`;
-          const response = await fetch(url, { headers: { Authorization: "Bearer " + accessToken } });
-          const data = await response.json();
-
-          if (data.items && data.items.length > 0) {
-              alert("✅ Usuario suscrito. ¡Paso 1 completado!");
-              s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney();
-          } else {
-              alert("❌ No estás suscrito. Suscríbete al canal para continuar.");
-              btn.innerText = "1. Suscribirse al canal"; btn.style.opacity = "1";
-              window.open("https://www.youtube.com/channel/" + CHANNEL_ID + "?sub_confirmation=1", "_blank");
-          }
-      } catch (error) {
-          console.error("Error al verificar:", error);
-          alert("❌ Hubo un error al verificar. Inténtalo de nuevo.");
-          btn.innerText = "1. Suscribirse al canal"; btn.style.opacity = "1";
-      }
-  }
 
   document.getElementById('disney-btn2').onclick = function() {
       if(s2) return;
