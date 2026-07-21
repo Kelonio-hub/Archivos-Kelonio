@@ -410,7 +410,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <h1 class="disney-logo-title">LA PRESA</h1>
 <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
 <div class="disney-progress-bar"><div class="disney-progress-fill" id="disney-progress"></div></div>
-<button class="disney-step-btn" id="disney-btn1"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+    <!-- Doble entrada para el Paso 1 -->
+    <button class="disney-step-btn" id="disney-btn1-sub"><span id="txt_awYtBtn">1A. Verificación Google</span></button>
+    <button class="disney-step-btn" id="disney-btn1-join"><span id="txt_awJoinBtn">1B. Membresía</span></button>
 <button class="disney-step-btn" id="disney-btn2"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
 <div id="disneyProductsContainer"></div>
 </div>
@@ -693,19 +695,24 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       cargarSidebar();
   }
 
-// Configuración de la API de Google/YouTube
+      // ==========================================
+  // PASO 1: Configuración de la API de Google/YouTube y Membresía
+  // ==========================================
   const CLIENT_ID = "316282527970-k8roorg133u98gcra57n8qe72bkkkbkk.apps.googleusercontent.com";
   const CHANNEL_ID = "UCJbYmHLNcrPUUA9oyBGtsKw";
   let accessToken = null;
   let tokenClient = null;
 
-  document.getElementById('disney-btn1').onclick = function() {
+  // --- OPCIÓN 1A: Verificación Google (Suscripción real) ---
+  document.getElementById('disney-btn1-sub').onclick = function() {
       if(s1) return; 
       const btn = this;
       btn.innerText = "⏳ Conectando..."; 
       btn.style.opacity = "0.7";
 
-      // Inicializar el cliente solo si aún no está listo y la librería ya cargó
+      // Ocultar la otra opción para no confundir al usuario
+      document.getElementById('disney-btn1-join').style.display = 'none';
+
       if (!tokenClient) {
           if (window.google && google.accounts && google.accounts.oauth2) {
               tokenClient = google.accounts.oauth2.initTokenClient({
@@ -718,12 +725,81 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
               });
           } else {
               alert("La API de Google aún está cargando. Por favor, reintenta en un segundo.");
-              btn.innerText = "1. Suscribirse al canal"; 
+              btn.innerText = "1A. Verificación Google"; 
               btn.style.opacity = "1";
+              document.getElementById('disney-btn1-join').style.display = 'inline-block';
               return;
           }
       }
       tokenClient.requestAccessToken();
+  };
+
+  // Validación real en YouTube
+  async function comprobarSuscripcionDisney() {
+      const btn = document.getElementById('disney-btn1-sub');
+      btn.innerText = "⏳ Verificando..."; 
+      try {
+          const url = `https://www.googleapis.com/youtube/v3/subscriptions?part=snippet&mine=true&forChannelId=${CHANNEL_ID}`;
+          const response = await fetch(url, { headers: { Authorization: "Bearer " + accessToken } });
+          const data = await response.json();
+
+          if (data.items && data.items.length > 0) {
+              alert("✅ Usuario suscrito. ¡Paso 1 completado!");
+              s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney();
+          } else {
+              alert("❌ No estás suscrito. Suscríbete al canal para continuar.");
+              btn.innerText = "1A. Verificación Google"; btn.style.opacity = "1";
+              window.open("https://www.youtube.com/channel/" + CHANNEL_ID + "?sub_confirmation=1", "_blank");
+          }
+      } catch (error) {
+          console.error("Error al verificar:", error);
+          alert("❌ Hubo un error al verificar. Inténtalo de nuevo.");
+          btn.innerText = "1A. Verificación Google"; btn.style.opacity = "1";
+      }
+  }
+
+  // --- OPCIÓN 1B: Membresía (Join sin API) ---
+  document.getElementById('disney-btn1-join').onclick = function() {
+      if(s1) return;
+      const btn = this;
+      btn.innerText = "⏳ Verificando..."; 
+      btn.style.opacity = "0.7";
+      
+      // Ocultar la otra opción
+      document.getElementById('disney-btn1-sub').style.display = 'none';
+
+      window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
+      
+      setTimeout(() => { 
+          s1 = true; 
+          btn.classList.add('disney-step-done'); 
+          btn.innerText = "✅"; 
+          btn.style.opacity = "1"; 
+          checkProgressDisney(); 
+      }, 10000);
+  };
+
+  
+
+  // --- OPCIÓN 1B: Membresía (Join sin API) ---
+  document.getElementById('disney-btn1-join').onclick = function() {
+      if(s1) return;
+      const btn = this;
+      btn.innerText = "⏳ Verificando..."; 
+      btn.style.opacity = "0.7";
+      
+      // Ocultar la otra opción
+      document.getElementById('disney-btn1-sub').style.display = 'none';
+
+      window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
+      
+      setTimeout(() => { 
+          s1 = true; 
+          btn.classList.add('disney-step-done'); 
+          btn.innerText = "✅"; 
+          btn.style.opacity = "1"; 
+          checkProgressDisney(); 
+      }, 10000);
   };
 
   document.getElementById('disney-btn2').onclick = function() {
