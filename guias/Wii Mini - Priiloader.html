@@ -433,7 +433,9 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <h1 class="disney-logo-title">LA PRESA</h1>
 <p class="disney-subtitle" id="txt_awSubtitle">Completa los pasos para desbloquear el contenido.</p>
 <div class="disney-progress-bar"><div class="disney-progress-fill" id="disney-progress"></div></div>
-<button class="disney-step-btn" id="disney-btn1"><span id="txt_awYtBtn">1. Suscribirse al canal</span></button>
+    <!-- Doble entrada para el Paso 1 -->
+    <button class="disney-step-btn" id="disney-btn1-sub"><span id="txt_awYtBtn">1A. Verificación Google</span></button>
+    <button class="disney-step-btn" id="disney-btn1-join"><span id="txt_awJoinBtn">1B. Membresía</span></button>
 <button class="disney-step-btn" id="disney-btn2"><span id="txt_awGiftBtn">2. Participar en el sorteo</span></button>
 <div id="disneyProductsContainer"></div>
 </div>
@@ -775,12 +777,44 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
       cargarSidebar();
   }
 
-  document.getElementById('disney-btn1').onclick = function() {
-      if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
-      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
-      btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
-      setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 10000);
-  };
+      // --- LÓGICA DE DOBLE ENTRADA (PASO 1) ---
+    function procesarPaso1(btn) {
+        if(s1) return;
+        
+        btn.innerText = "⏳ Verificando..."; 
+        btn.style.opacity = "0.7";
+        
+        // Ocultar la otra opción para no confundir al usuario
+        const btnSub = document.getElementById('disney-btn1-sub');
+        const btnJoin = document.getElementById('disney-btn1-join');
+        if (btn.id === 'disney-btn1-sub') {
+            btnJoin.style.display = 'none';
+        } else {
+            btnSub.style.display = 'none';
+        }
+
+        setTimeout(() => { 
+            s1 = true; 
+            btn.classList.add('disney-step-done'); 
+            btn.innerText = "✅"; 
+            btn.style.opacity = "1"; 
+            checkProgressDisney(); 
+        }, 10000);
+    }
+
+    // Opción 1A: Verificación Google (Suscripción normal)
+    document.getElementById('disney-btn1-sub').onclick = function() {
+        if(s1) return;
+        window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
+        procesarPaso1(this);
+    };
+
+    // Opción 1B: Membresía (Join)
+    document.getElementById('disney-btn1-join').onclick = function() {
+        if(s1) return;
+        window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
+        procesarPaso1(this);
+    };
 
   document.getElementById('disney-btn2').onclick = function() {
       if(s2) return;
