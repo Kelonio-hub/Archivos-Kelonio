@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Wii U / Inkay",
+    "title": "v3.0.0",
+    "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
+    "date": "2026-07-20T14:06:40.000Z"
+  },
+  {
     "tag": "Switch / DBI",
     "title": "DBI 905 - Russian version only",
     "link": "https://github.com/rashevskyv/dbi/releases/tag/905ru",
@@ -172,12 +178,6 @@
     "title": "d2x-v11-beta3",
     "link": "https://github.com/wiidev/d2x-cios/releases/tag/d2x-v11-beta3",
     "date": "2025-03-24T05:40:04.000Z"
-  },
-  {
-    "tag": "Wii U / Inkay",
-    "title": "v3.0.0",
-    "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
-    "date": "2025-02-15T21:25:28.000Z"
   },
   {
     "tag": "Wii / CfgUSBLoader",
