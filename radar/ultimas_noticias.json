@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / Checkpoint",
+    "title": "Checkpoint 5.0.0",
+    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.0.0",
+    "date": "2026-07-26T09:36:36.000Z"
+  },
+  {
     "tag": "Wii U / Inkay",
     "title": "v3.0.0",
     "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
@@ -10,12 +16,6 @@
     "title": "DBI 905 - Russian version only",
     "link": "https://github.com/rashevskyv/dbi/releases/tag/905ru",
     "date": "2026-07-17T11:40:26.000Z"
-  },
-  {
-    "tag": "Switch / Checkpoint",
-    "title": "Checkpoint 4.0.0",
-    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v4.0.0",
-    "date": "2026-07-11T14:18:03.000Z"
   },
   {
     "tag": "3DS / LUMA PINK",
