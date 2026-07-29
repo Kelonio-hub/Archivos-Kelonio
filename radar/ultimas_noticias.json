@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / nxdumptool",
+    "title": "nxdumptool-rewrite (latest commit build)",
+    "link": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/rewrite-prerelease",
+    "date": "2026-07-28T07:50:37.000Z"
+  },
+  {
     "tag": "Switch / Checkpoint",
     "title": "Checkpoint 5.0.0",
     "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.0.0",
@@ -76,12 +82,6 @@
     "title": "v27.24.1 (hotfix)",
     "link": "https://github.com/DS-Homebrew/TWiLightMenu/releases/tag/v27.24.1",
     "date": "2026-05-24T03:18:20.000Z"
-  },
-  {
-    "tag": "Switch / nxdumptool",
-    "title": "nxdumptool-rewrite (latest commit build)",
-    "link": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/rewrite-prerelease",
-    "date": "2026-04-29T14:03:44.000Z"
   },
   {
     "tag": "Switch / 90DNS Tester",
