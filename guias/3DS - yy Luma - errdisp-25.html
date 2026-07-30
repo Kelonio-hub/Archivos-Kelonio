@@ -738,7 +738,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 
   document.getElementById('disney-btn1').onclick = function() {
       if(s1) return; const btn = this; const esMembresia = Math.random() < 0.5;
-      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" : "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1", "_blank");
+      window.open(esMembresia ? "https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
       btn.innerText = "⏳ Verificando..."; btn.style.opacity = "0.7";
       setTimeout(() => { s1 = true; btn.classList.add('disney-step-done'); btn.innerText = "✅"; btn.style.opacity = "1"; checkProgressDisney(); }, 60000);
   };
