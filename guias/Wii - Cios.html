@@ -516,7 +516,164 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <ul>
 <li id="txt_req1">Tarjeta SD o unidad USB.</li>
 <li id="txt_req2">Consola conectada a la corriente y con Homebrew Channel.</li>
-<li><span id="txt_req3">Archivos D2X-V11-BETA3</span> <br/><a class="dl-btn" href="https://www.mediafire.com/folder/c5f5687kadkkl/CIOS+WII" id="txt_reqBtn" target="_blank">Descargar Archivos</a></li>
+<li><span id="txt_req3">Archivos D2X-V11-BETA3</span> <br/>
+<!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA ================= -->
+<div id="paypal-support-widget" style="background: rgba(0,0,0,0.05); border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 15px; width: 100%; max-width: 500px; font-family: sans-serif; text-align: left;">
+    
+    <!-- Título principal y subtítulo (Recupera var(--red) del tema de la web) -->
+    <label id="pp-title" style="font-size: 1.1rem; font-weight: bold; display:block; margin-bottom: 5px; color: var(--red);"></label>
+    <div id="pp-subtitle" style="font-size: 0.85rem; color: #666; margin-bottom: 15px;"></div>
+    
+    <div style="margin-bottom: 15px;">
+        <select id="pp-amount" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
+            <!-- Opción de 1€ seleccionada por defecto -->
+            <option value="0" id="pp-free"></option>
+            <option value="1" selected>1.00 EUR</option>
+            <option value="3">3.00 EUR</option>
+            <option value="5">5.00 EUR</option>
+            <option value="10">10.00 EUR</option>
+            <option value="20">20.00 EUR</option>
+            <option value="custom" id="pp-other-amount"></option>
+        </select>
+        
+        <input type="number" id="pp-custom-amount" style="display: none; padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; box-sizing: border-box;" min="0.50" step="0.50">
+    </div>
+
+    <!-- Contenedor del botón de PayPal -->
+    <div id="paypal-button-container" style="display: none; margin-top: 15px;"></div>
+
+    <!-- Mensaje de éxito -->
+    <div id="pp-success-msg" style="display: none; text-align: center; background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-weight: bold;"></div>
+
+    <!-- Botón de Descargar Archivos (Recupera var(--red) del tema de la web) -->
+    <a href="https://www.mediafire.com/folder/c5f5687kadkkl/CIOS+WII" id="pp-download-btn" target="_blank" style="display: none; background: var(--red); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; box-sizing: border-box;"></a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. DICCIONARIO DE TRADUCCIONES Y LOCALES DE PAYPAL
+    const translations = {
+        es: { title: "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", subtitle: "(La opción gratuita siempre estará disponible)", free: "Gratis", other: "Otro importe", placeholder: "Ej: 2.50", download: "Descargar Archivos", success: "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente." },
+        en: { title: "You can now support the project! [FILES]", subtitle: "(The free option will always be available)", free: "Free", other: "Other amount", placeholder: "Ex: 2.50", download: "Download Files", success: "Thank you for supporting the project. Your payment was successful." },
+        fr: { title: "Vous pouvez désormais soutenir le projet! [FICHIERS]", subtitle: "(L'option gratuite sera toujours disponible)", free: "Gratuit", other: "Autre montant", placeholder: "Ex: 2.50", download: "Télécharger les fichiers", success: "Merci de soutenir le projet. Votre paiement a bien été reçu." },
+        it: { title: "Ora puoi sostenere il progetto! [FILE]", subtitle: "(L'opzione gratuita sarà sempre disponibile)", free: "Gratis", other: "Altro importo", placeholder: "Es: 2.50", download: "Scarica i file", success: "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente." },
+        de: { title: "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", subtitle: "(Die kostenlose Option wird immer verfügbar sein)", free: "Kostenlos", other: "Anderer Betrag", placeholder: "Bsp: 2.50", download: "Dateien herunterladen", success: "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich." },
+        pt: { title: "Agora você pode apoiar o projeto! [ARQUIVOS]", subtitle: "(A opção gratuita estará sempre disponível)", free: "Grátis", other: "Outro valor", placeholder: "Ex: 2.50", download: "Baixar Arquivos", success: "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso." },
+        ja: { title: "プロジェクトを支援できるようになりました！ [ファイル]", subtitle: "（無料オプションは常に利用可能です）", free: "無料", other: "その他の金額", placeholder: "例: 2.50", download: "ファイルをダウンロード", success: "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。" },
+        ko: { title: "이제 프로젝트를 후원할 수 있습니다! [파일]", subtitle: "(무료 옵션은 항상 제공됩니다)", free: "무료", other: "기타 금액", placeholder: "예: 2.50", download: "파일 다운로드", success: "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다." }
+    };
+
+    const locales = { es: 'es_ES', en: 'en_US', fr: 'fr_FR', it: 'it_IT', de: 'de_DE', pt: 'pt_PT', ja: 'ja_JP', ko: 'ko_KR' };
+
+    const amountSelect = document.getElementById('pp-amount');
+    const customAmountInput = document.getElementById('pp-custom-amount');
+    const paypalContainer = document.getElementById('paypal-button-container');
+    const downloadBtn = document.getElementById('pp-download-btn');
+    const successMsg = document.getElementById('pp-success-msg');
+
+    function getLang() {
+        let lang = (localStorage.getItem('preferredLanguage') || navigator.language || navigator.userLanguage || "en").substring(0, 2).toLowerCase();
+        return translations[lang] ? lang : 'en';
+    }
+
+    // 2. Controlar la vista
+    function updateView() {
+        const val = amountSelect.value;
+        successMsg.style.display = 'none'; 
+
+        if (val === '0') {
+            customAmountInput.style.display = 'none';
+            paypalContainer.style.display = 'none';
+            downloadBtn.style.display = 'block';
+        } else {
+            customAmountInput.style.display = val === 'custom' ? 'block' : 'none';
+            paypalContainer.style.display = 'block';
+            downloadBtn.style.display = 'none';
+        }
+    }
+
+    // 3. Renderizar botones de PayPal
+    function renderPayPal() {
+        if (!window.paypal) return;
+        paypalContainer.innerHTML = '';
+        
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                let finalAmount = amountSelect.value === 'custom' ? customAmountInput.value : amountSelect.value;
+                if (!finalAmount || parseFloat(finalAmount) < 0.5) finalAmount = "0.50"; 
+                
+                return actions.order.create({
+                    purchase_units: [{ amount: { value: parseFloat(finalAmount).toFixed(2) } }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    amountSelect.style.display = 'none';
+                    customAmountInput.style.display = 'none';
+                    paypalContainer.style.display = 'none';
+                    
+                    successMsg.style.display = 'block';
+                    downloadBtn.style.display = 'block';
+                });
+            }
+        }).render('#paypal-button-container');
+    }
+
+    // 4. Recargar el SDK de PayPal según el idioma
+    function loadPayPalSDK(lang, callback) {
+        const scriptId = 'paypal-sdk-script';
+        let oldScript = document.getElementById(scriptId);
+        
+        if (oldScript) {
+            oldScript.remove();
+            if (window.paypal) delete window.paypal; 
+        }
+        
+        paypalContainer.innerHTML = '';
+        
+        const locale = locales[lang] || 'en_US';
+        const script = document.createElement('script');
+        script.id = scriptId;
+        script.src = `https://www.paypal.com/sdk/js?client-id=BAAVNxy3Tb2YimilSFmYtRneRHtNa9WqZwfcVXSwpX88LHG9OCSn7hwPMTassgMIf5oyVHms5YdsmQpUZk&currency=EUR&locale=${locale}`;
+        
+        script.onload = () => {
+            renderPayPal();
+            if (callback) callback();
+        };
+        document.body.appendChild(script);
+    }
+
+    // 5. Actualizar interfaz según el idioma seleccionado
+    function updatePayPalLanguage() {
+        let lang = getLang();
+        
+        document.getElementById('pp-title').innerText = translations[lang].title;
+        document.getElementById('pp-subtitle').innerText = translations[lang].subtitle;
+        document.getElementById('pp-free').innerText = translations[lang].free;
+        document.getElementById('pp-other-amount').innerText = translations[lang].other;
+        customAmountInput.placeholder = translations[lang].placeholder;
+        downloadBtn.innerText = translations[lang].download;
+        successMsg.innerText = translations[lang].success;
+
+        loadPayPalSDK(lang, () => {
+            updateView();
+        });
+    }
+
+    amountSelect.addEventListener('change', updateView);
+    
+    const pageLangSelector = document.getElementById('languageSelector');
+    if (pageLangSelector) {
+        pageLangSelector.addEventListener('change', () => {
+            setTimeout(updatePayPalLanguage, 100);
+        });
+    }
+
+    updatePayPalLanguage(); 
+});
+</script>
+<!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA ================= -->
+</li>
 </ul>
 <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a class="mini-btn" href="../productos.html">productos</a></em></p>
 <h2 id="txt_h2_step1">PASO 1: Descargar Archivos</h2>
