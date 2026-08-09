@@ -465,6 +465,12 @@
       "label": { "en": "3DS: Universal Updater", "es": "3DS: Universal Updater", "fr": "3DS : Universal Updater", "it": "3DS: Universal Updater", "pt": "3DS: Universal Updater", "de": "3DS: Universal Updater", "ja": "3DS: Universal Updater", "ko": "3DS: Universal Updater" },
       "desc": { "en": "Universal Updater for 3DS homebrew", "es": "Universal Updater para homebrew en 3DS", "fr": "Universal Updater pour homebrew 3DS", "it": "Universal Updater per homebrew 3DS", "pt": "Universal Updater para homebrew no 3DS", "de": "Universal Updater für 3DS Homebrew", "ja": "3DS用Universal Updaterホームブリュー", "ko": "3DS Universal Updater 홈브류" },
       "videoYoutubeIds": ["TYymdrfkPt4"]
+    },
+    {
+      "id": "57",
+      "label": { "en": "3DS: Speculum", "es": "3DS: Speculum", "fr": "3DS : Speculum", "it": "3DS: Speculum", "pt": "3DS: Speculum", "de": "3DS: Speculum", "ja": "3DS: Speculum", "ko": "3DS: Speculum" },
+      "desc": { "en": "Speculum tool for 3DS", "es": "Herramienta Speculum para 3DS", "fr": "Outil Speculum pour 3DS", "it": "Strumento Speculum per 3DS", "pt": "Ferramenta Speculum para 3DS", "de": "Speculum-Tool für 3DS", "ja": "3DS用Speculumツール", "ko": "3DS Speculum 도구" },
+      "videoYoutubeIds": ["KJEZynKTlqw"]
     }
   ],
   "NDS": [
