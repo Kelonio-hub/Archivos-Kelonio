@@ -595,170 +595,8 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <li id="txt_req1">Consola 3DS o 2DS con acceso previo a Luma3DS/GodMode9.</li>
 <li id="txt_req2">Tarjeta SD o microSD con espacio suficiente.</li>
 <li><span id="txt_req3">Archivos necesarios:</span> <br/>
-<!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA ================= -->
-<div id="paypal-support-widget" style="background: rgba(0,0,0,0.05); border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 15px; width: 100%; max-width: 500px; font-family: sans-serif; text-align: left;">
-    
-    <!-- Título principal y subtítulo -->
-    <label id="pp-title" style="font-size: 1.1rem; font-weight: bold; display:block; margin-bottom: 5px; color: var(--red);"></label>
-    <div id="pp-subtitle" style="font-size: 0.85rem; color: #666; margin-bottom: 15px;"></div>
-    
-    <div style="margin-bottom: 15px;">
-        <select id="pp-amount" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
-            <option value="0" id="pp-free"></option>
-            <option value="1" selected>1.00 EUR</option>
-            <option value="3">3.00 EUR</option>
-            <option value="5">5.00 EUR</option>
-            <option value="10">10.00 EUR</option>
-            <option value="20">20.00 EUR</option>
-            <option value="custom" id="pp-other-amount"></option>
-        </select>
-        
-        <input type="number" id="pp-custom-amount" style="display: none; padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; box-sizing: border-box;" min="0.50" step="0.50">
-    </div>
-
-    <!-- Contenedor del botón de PayPal -->
-    <div id="paypal-button-container" style="display: none; margin-top: 15px;"></div>
-
-    <!-- Mensaje de éxito -->
-    <div id="pp-success-msg" style="display: none; text-align: center; background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-weight: bold;"></div>
-
-    <!-- Botones de Descargar Archivos (Ambos vinculados al estado del PayPal / Gratis) -->
-    <div id="download-buttons-container" style="display: flex; flex-direction: column; gap: 10px;">
-        <a href="https://uploady-download.kelonioug.workers.dev/download?url=https://patrins.com/s/8db41db86a636a46faaa3d697aa91bb1&account=1" id="pp-download-btn" style="display: none; background: var(--red); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; box-sizing: border-box;">Descargar Script</a>
-        <a class="dl-btn" href="https://www.mediafire.com/folder/whnssjlczk1vs/ARCHIVO+CTRNAND+11.15" id="txt_reqBtn2" target="_blank" style="display: none; text-align: center; width: 100%; box-sizing: border-box; margin-top: 0;">Descargar CTRNAND</a>
-    </div>
-
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. DICCIONARIO DE TRADUCCIONES Y LOCALES DE PAYPAL
-    const translations = {
-        es: { title: "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", subtitle: "(La opción gratuita siempre estará disponible)", free: "Gratis", other: "Otro importe", placeholder: "Ej: 2.50", download: "Descargar Script", success: "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente." },
-        en: { title: "You can now support the project! [FILES]", subtitle: "(The free option will always be available)", free: "Free", other: "Other amount", placeholder: "Ex: 2.50", download: "Download Script", success: "Thank you for supporting the project. Your payment was successful." },
-        fr: { title: "Vous pouvez désormais soutenir le projet! [FICHIERS]", subtitle: "(L'option gratuite sera toujours disponible)", free: "Gratuit", other: "Autre montant", placeholder: "Ex: 2.50", download: "Télécharger Script", success: "Merci de soutenir le projet. Votre paiement a bien été reçu." },
-        it: { title: "Ora puoi sostenere il progetto! [FILE]", subtitle: "(L'opzione gratuita sarà sempre disponibile)", free: "Gratis", other: "Altro importo", placeholder: "Es: 2.50", download: "Scarica Script", success: "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente." },
-        de: { title: "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", subtitle: "(Die kostenlose Option wird immer verfügbar sein)", free: "Kostenlos", other: "Anderer Betrag", placeholder: "Bsp: 2.50", download: "Script herunterladen", success: "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich." },
-        pt: { title: "Agora você pode apoiar o projeto! [ARQUIVOS]", subtitle: "(A opção gratuita estará sempre disponível)", free: "Grátis", other: "Outro valor", placeholder: "Ex: 2.50", download: "Baixar Script", success: "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso." },
-        ja: { title: "プロジェクトを支援できるようになりました！ [ファイル]", subtitle: "（無料オプションは常に利用可能です）", free: "無料", other: "その他の金額", placeholder: "例: 2.50", download: "スクリプトをダウンロード", success: "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。" },
-        ko: { title: "이제 프로젝트를 후원할 수 있습니다! [파일]", subtitle: "(무료 옵션은 항상 제공됩니다)", free: "무료", other: "기타 금액", placeholder: "예: 2.50", download: "스크립트 다운로드", success: "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다." }
-    };
-
-    const locales = { es: 'es_ES', en: 'en_US', fr: 'fr_FR', it: 'it_IT', de: 'de_DE', pt: 'pt_PT', ja: 'ja_JP', ko: 'ko_KR' };
-
-    const amountSelect = document.getElementById('pp-amount');
-    const customAmountInput = document.getElementById('pp-custom-amount');
-    const paypalContainer = document.getElementById('paypal-button-container');
-    const downloadBtn = document.getElementById('pp-download-btn');
-    const ctrnandBtn = document.getElementById('txt_reqBtn2');
-    const successMsg = document.getElementById('pp-success-msg');
-
-    function getLang() {
-        let lang = (localStorage.getItem('preferredLanguage') || navigator.language || navigator.userLanguage || "en").substring(0, 2).toLowerCase();
-        return translations[lang] ? lang : 'en';
-    }
-
-    // 2. Controlar la vista
-    function updateView() {
-        const val = amountSelect.value;
-        successMsg.style.display = 'none'; 
-
-        if (val === '0') {
-            customAmountInput.style.display = 'none';
-            paypalContainer.style.display = 'none';
-            downloadBtn.style.display = 'block';
-            if (ctrnandBtn) ctrnandBtn.style.display = 'block';
-        } else {
-            customAmountInput.style.display = val === 'custom' ? 'block' : 'none';
-            paypalContainer.style.display = 'block';
-            downloadBtn.style.display = 'none';
-            if (ctrnandBtn) ctrnandBtn.style.display = 'none';
-        }
-    }
-
-    // 3. Renderizar botones de PayPal
-    function renderPayPal() {
-        if (!window.paypal) return;
-        paypalContainer.innerHTML = '';
-        
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                let finalAmount = amountSelect.value === 'custom' ? customAmountInput.value : amountSelect.value;
-                if (!finalAmount || parseFloat(finalAmount) < 0.5) finalAmount = "0.50"; 
-                
-                return actions.order.create({
-                    purchase_units: [{ amount: { value: parseFloat(finalAmount).toFixed(2) } }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    amountSelect.style.display = 'none';
-                    customAmountInput.style.display = 'none';
-                    paypalContainer.style.display = 'none';
-                    
-                    successMsg.style.display = 'block';
-                    downloadBtn.style.display = 'block';
-                    if (ctrnandBtn) ctrnandBtn.style.display = 'block';
-                });
-            }
-        }).render('#paypal-button-container');
-    }
-
-    // 4. Recargar el SDK de PayPal según el idioma
-    function loadPayPalSDK(lang, callback) {
-        const scriptId = 'paypal-sdk-script';
-        let oldScript = document.getElementById(scriptId);
-        
-        if (oldScript) {
-            oldScript.remove();
-            if (window.paypal) delete window.paypal; 
-        }
-        
-        paypalContainer.innerHTML = '';
-        
-        const locale = locales[lang] || 'en_US';
-        const script = document.createElement('script');
-        script.id = scriptId;
-        script.src = `https://www.paypal.com/sdk/js?client-id=BAAVNxy3Tb2YimilSFmYtRneRHtNa9WqZwfcVXSwpX88LHG9OCSn7hwPMTassgMIf5oyVHms5YdsmQpUZk&currency=EUR&locale=${locale}`;
-        
-        script.onload = () => {
-            renderPayPal();
-            if (callback) callback();
-        };
-        document.body.appendChild(script);
-    }
-
-    // 5. Actualizar interfaz según el idioma seleccionado
-    function updatePayPalLanguage() {
-        let lang = getLang();
-        
-        document.getElementById('pp-title').innerText = translations[lang].title;
-        document.getElementById('pp-subtitle').innerText = translations[lang].subtitle;
-        document.getElementById('pp-free').innerText = translations[lang].free;
-        document.getElementById('pp-other-amount').innerText = translations[lang].other;
-        customAmountInput.placeholder = translations[lang].placeholder;
-        downloadBtn.innerText = translations[lang].download;
-        successMsg.innerText = translations[lang].success;
-
-        loadPayPalSDK(lang, () => {
-            updateView();
-        });
-    }
-
-    amountSelect.addEventListener('change', updateView);
-    
-    const pageLangSelector = document.getElementById('languageSelector');
-    if (pageLangSelector) {
-        pageLangSelector.addEventListener('change', () => {
-            setTimeout(updatePayPalLanguage, 100);
-        });
-    }
-
-    updatePayPalLanguage(); 
-});
-</script>
-<!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA ================= -->
-
+<a class="dl-btn" href="https://www.mediafire.com/folder/3qw73cb3bma7e/SCRIPT+CTRNAND+v25.1" id="txt_reqBtn1" target="_blank">Script CTRNAND v25.1</a>
+<a class="dl-btn" href="https://www.mediafire.com/folder/whnssjlczk1vs/ARCHIVO+CTRNAND+11.15" id="txt_reqBtn2" target="_blank">Imagen CTRNAND 11.15</a>
 </li>
 </ul>
 <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a class="mini-btn" href="../productos.html">productos</a></em></p>
@@ -795,8 +633,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Consola 3DS o 2DS con acceso previo a Luma3DS/GodMode9.", 
       txt_req2: "Tarjeta SD o microSD con espacio suficiente.", 
       txt_req3: "Archivos necesarios:", 
-      txt_reqBtn1: "Descargar Script", 
-      txt_reqBtn2: "Descargar CTRNAND", 
+      txt_reqBtn1: "Script CTRNAND v25.1", 
+      txt_reqBtn2: "Imagen CTRNAND 11.15", 
       txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       
       txt_h2_step1: "PASO 1: Preparación de la Tarjeta SD",
@@ -821,8 +659,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "3DS or 2DS console with prior access to Luma3DS/GodMode9.", 
       txt_req2: "SD or microSD card with enough free space.", 
       txt_req3: "Required files:", 
-      txt_reqBtn1: "Download Script", 
-      txt_reqBtn2: "Download CTRNAND", 
+      txt_reqBtn1: "Script CTRNAND v25.1", 
+      txt_reqBtn2: "Image CTRNAND 11.15", 
       txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       
       txt_h2_step1: "STEP 1: SD Card Preparation",
@@ -847,8 +685,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Console 3DS ou 2DS avec un accès préalable à Luma3DS/GodMode9.", 
       txt_req2: "Carte SD ou microSD avec suffisamment d'espace.", 
       txt_req3: "Fichiers requis:", 
-      txt_reqBtn1: "Télécharger le Script", 
-      txt_reqBtn2: "Télécharger CTRNAND",
+      txt_reqBtn1: "Script CTRNAND v25.1", 
+      txt_reqBtn2: "Image CTRNAND 11.15", 
       txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
       
       txt_h2_step1: "ÉTAPE 1: Préparation de la Carte SD",
@@ -873,8 +711,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "3DS oder 2DS Konsole mit vorherigem Zugang zu Luma3DS/GodMode9.", 
       txt_req2: "SD- oder microSD-Karte mit ausreichend Speicherplatz.", 
       txt_req3: "Benötigte Dateien:", 
-      txt_reqBtn1: "Skript Herunterladen", 
-      txt_reqBtn2: "CTRNAND Herunterladen",
+      txt_reqBtn1: "Skript CTRNAND v25.1", 
+      txt_reqBtn2: "Bild CTRNAND 11.15", 
       txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
       
       txt_h2_step1: "SCHRITT 1: Vorbereitung der SD-Karte",
@@ -899,8 +737,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Console 3DS o 2DS con accesso precedente a Luma3DS/GodMode9.", 
       txt_req2: "Scheda SD o microSD con spazio sufficiente.", 
       txt_req3: "File richiesti:", 
-      txt_reqBtn1: "Scarica Script", 
-      txt_reqBtn2: "Scarica CTRNAND",
+      txt_reqBtn1: "Script CTRNAND v25.1", 
+      txt_reqBtn2: "Immagine CTRNAND 11.15", 
       txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
       
       txt_h2_step1: "PASSAGGIO 1: Preparazione della Scheda SD",
@@ -925,8 +763,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Console 3DS ou 2DS com acesso prévio ao Luma3DS/GodMode9.", 
       txt_req2: "Cartão SD ou microSD com espaço suficiente.", 
       txt_req3: "Arquivos necessários:", 
-      txt_reqBtn1: "Baixar Script", 
-      txt_reqBtn2: "Baixar CTRNAND",
+      txt_reqBtn1: "Script CTRNAND v25.1", 
+      txt_reqBtn2: "Imagem CTRNAND 11.15", 
       txt_reqNote: "* Você pode conferir nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
       
       txt_h2_step1: "PASSO 1: Preparação do Cartão SD",
@@ -951,8 +789,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Luma3DS/GodMode9にアクセス可能な3DSまたは2DSコンソール。", 
       txt_req2: "十分な空き容量のあるSDまたはmicroSDカード。", 
       txt_req3: "必要なファイル:", 
-      txt_reqBtn1: "スクリプトをダウンロード", 
-      txt_reqBtn2: "CTRNANDをダウンロード",
+      txt_reqBtn1: "スクリプト CTRNAND v25.1", 
+      txt_reqBtn2: "イメージ CTRNAND 11.15", 
       txt_reqNote: "* 私たちの<a href='../productos.html' class='mini-btn'>製品</a>を確認できます",
       
       txt_h2_step1: "ステップ 1: SDカードの準備",
@@ -977,8 +815,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Luma3DS/GodMode9에 액세스 가능한 3DS 또는 2DS 콘솔.", 
       txt_req2: "여유 공간이 충분한 SD 또는 microSD 카드.", 
       txt_req3: "필요한 파일:", 
-      txt_reqBtn1: "스크립트 다운로드", 
-      txt_reqBtn2: "CTRNAND 다운로드",
+      txt_reqBtn1: "스크립트 CTRNAND v25.1", 
+      txt_reqBtn2: "이미지 CTRNAND 11.15", 
       txt_reqNote: "* 저희 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다",
       
       txt_h2_step1: "1단계: SD 카드 준비",
