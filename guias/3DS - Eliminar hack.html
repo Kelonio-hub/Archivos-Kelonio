@@ -595,16 +595,16 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <li id="txt_req1">Consola Nintendo 3DS/2DS con Boot9Strap (nunca revivida).</li>
 <li id="txt_req2">Tarjeta SD legible en PC y Consola.</li>
 <li><span id="txt_req3">Script de eliminación v25 e imagen CTRNAND correspondiente a tu modelo.</span> <br/>
+  
 <!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA ================= -->
 <div id="paypal-support-widget" style="background: rgba(0,0,0,0.05); border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 15px; width: 100%; max-width: 500px; font-family: sans-serif; text-align: left;">
     
-    <!-- Título principal y subtítulo (Recupera var(--red) del tema de la web) -->
+    <!-- Título principal y subtítulo -->
     <label id="pp-title" style="font-size: 1.1rem; font-weight: bold; display:block; margin-bottom: 5px; color: var(--red);"></label>
     <div id="pp-subtitle" style="font-size: 0.85rem; color: #666; margin-bottom: 15px;"></div>
     
     <div style="margin-bottom: 15px;">
         <select id="pp-amount" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
-            <!-- Opción de 1€ seleccionada por defecto -->
             <option value="0" id="pp-free"></option>
             <option value="1" selected>1.00 EUR</option>
             <option value="3">3.00 EUR</option>
@@ -623,22 +623,26 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     <!-- Mensaje de éxito -->
     <div id="pp-success-msg" style="display: none; text-align: center; background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-weight: bold;"></div>
 
-    <!-- Botón de Descargar Archivos (Recupera var(--red) del tema de la web) -->
-    <a href="https://www.mediafire.com/folder/1yfs92z21v0vf/SCRIPT+ELIMINAR+HACK" id="pp-download-btn" target="_blank" style="display: none; background: var(--red); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; box-sizing: border-box;"></a>
+    <!-- Botones de Descargar Archivos (Ambos vinculados al estado del PayPal / Gratis) -->
+    <div id="download-buttons-container" style="display: flex; flex-direction: column; gap: 10px;">
+        <a class="dl-btn" href="https://www.mediafire.com/folder/1yfs92z21v0vf/SCRIPT+ELIMINAR+HACK" id="pp-download-btn" target="_blank" style="display: none; text-align: center; width: 100%; box-sizing: border-box; margin-top: 0;">;">Descargar Script</a>
+        <a class="dl-btn" href="https://www.mediafire.com/folder/whnssjlczk1vs/ARCHIVO+CTRNAND+11.15" id="txt_reqBtn2" target="_blank" style="display: none; text-align: center; width: 100%; box-sizing: border-box; margin-top: 0;">Descargar CTRNAND</a>
+    </div>
+
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     // 1. DICCIONARIO DE TRADUCCIONES Y LOCALES DE PAYPAL
     const translations = {
-        es: { title: "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", subtitle: "(La opción gratuita siempre estará disponible)", free: "Gratis", other: "Otro importe", placeholder: "Ej: 2.50", download: "Descargar Archivos", success: "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente." },
-        en: { title: "You can now support the project! [FILES]", subtitle: "(The free option will always be available)", free: "Free", other: "Other amount", placeholder: "Ex: 2.50", download: "Download Files", success: "Thank you for supporting the project. Your payment was successful." },
-        fr: { title: "Vous pouvez désormais soutenir le projet! [FICHIERS]", subtitle: "(L'option gratuite sera toujours disponible)", free: "Gratuit", other: "Autre montant", placeholder: "Ex: 2.50", download: "Télécharger les fichiers", success: "Merci de soutenir le projet. Votre paiement a bien été reçu." },
-        it: { title: "Ora puoi sostenere il progetto! [FILE]", subtitle: "(L'opzione gratuita sarà sempre disponibile)", free: "Gratis", other: "Altro importo", placeholder: "Es: 2.50", download: "Scarica i file", success: "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente." },
-        de: { title: "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", subtitle: "(Die kostenlose Option wird immer verfügbar sein)", free: "Kostenlos", other: "Anderer Betrag", placeholder: "Bsp: 2.50", download: "Dateien herunterladen", success: "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich." },
-        pt: { title: "Agora você pode apoiar o projeto! [ARQUIVOS]", subtitle: "(A opção gratuita estará sempre disponível)", free: "Grátis", other: "Outro valor", placeholder: "Ex: 2.50", download: "Baixar Arquivos", success: "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso." },
-        ja: { title: "プロジェクトを支援できるようになりました！ [ファイル]", subtitle: "（無料オプションは常に利用可能です）", free: "無料", other: "その他の金額", placeholder: "例: 2.50", download: "ファイルをダウンロード", success: "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。" },
-        ko: { title: "이제 프로젝트를 후원할 수 있습니다! [파일]", subtitle: "(무료 옵션은 항상 제공됩니다)", free: "무료", other: "기타 금액", placeholder: "예: 2.50", download: "파일 다운로드", success: "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다." }
+        es: { title: "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", subtitle: "(La opción gratuita siempre estará disponible)", free: "Gratis", other: "Otro importe", placeholder: "Ej: 2.50", download: "Descargar Script", success: "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente." },
+        en: { title: "You can now support the project! [FILES]", subtitle: "(The free option will always be available)", free: "Free", other: "Other amount", placeholder: "Ex: 2.50", download: "Download Script", success: "Thank you for supporting the project. Your payment was successful." },
+        fr: { title: "Vous pouvez désormais soutenir le projet! [FICHIERS]", subtitle: "(L'option gratuite sera toujours disponible)", free: "Gratuit", other: "Autre montant", placeholder: "Ex: 2.50", download: "Télécharger Script", success: "Merci de soutenir le projet. Votre paiement a bien été reçu." },
+        it: { title: "Ora puoi sostenere il progetto! [FILE]", subtitle: "(L'opzione gratuita sarà sempre disponibile)", free: "Gratis", other: "Altro importo", placeholder: "Es: 2.50", download: "Scarica Script", success: "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente." },
+        de: { title: "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", subtitle: "(Die kostenlose Option wird immer verfügbar sein)", free: "Kostenlos", other: "Anderer Betrag", placeholder: "Bsp: 2.50", download: "Script herunterladen", success: "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich." },
+        pt: { title: "Agora você pode apoiar o projeto! [ARQUIVOS]", subtitle: "(A opção gratuita estará sempre disponível)", free: "Grátis", other: "Outro valor", placeholder: "Ex: 2.50", download: "Baixar Script", success: "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso." },
+        ja: { title: "プロジェクトを支援できるようになりました！ [ファイル]", subtitle: "（無料オプションは常に利用可能です）", free: "無料", other: "その他の金額", placeholder: "例: 2.50", download: "スクリプトをダウンロード", success: "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。" },
+        ko: { title: "이제 프로젝트를 후원할 수 있습니다! [파일]", subtitle: "(무료 옵션은 항상 제공됩니다)", free: "무료", other: "기타 금액", placeholder: "예: 2.50", download: "스크립트 다운로드", success: "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다." }
     };
 
     const locales = { es: 'es_ES', en: 'en_US', fr: 'fr_FR', it: 'it_IT', de: 'de_DE', pt: 'pt_PT', ja: 'ja_JP', ko: 'ko_KR' };
@@ -647,6 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const customAmountInput = document.getElementById('pp-custom-amount');
     const paypalContainer = document.getElementById('paypal-button-container');
     const downloadBtn = document.getElementById('pp-download-btn');
+    const ctrnandBtn = document.getElementById('txt_reqBtn2');
     const successMsg = document.getElementById('pp-success-msg');
 
     function getLang() {
@@ -663,10 +668,12 @@ document.addEventListener("DOMContentLoaded", () => {
             customAmountInput.style.display = 'none';
             paypalContainer.style.display = 'none';
             downloadBtn.style.display = 'block';
+            if (ctrnandBtn) ctrnandBtn.style.display = 'block';
         } else {
             customAmountInput.style.display = val === 'custom' ? 'block' : 'none';
             paypalContainer.style.display = 'block';
             downloadBtn.style.display = 'none';
+            if (ctrnandBtn) ctrnandBtn.style.display = 'none';
         }
     }
 
@@ -692,6 +699,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     successMsg.style.display = 'block';
                     downloadBtn.style.display = 'block';
+                    if (ctrnandBtn) ctrnandBtn.style.display = 'block';
                 });
             }
         }).render('#paypal-button-container');
@@ -751,6 +759,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 <!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA ================= -->
+
 </li>
 </ul>
 <p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a class="mini-btn" href="../productos.html">productos</a></em></p>
@@ -787,7 +796,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Consola Nintendo 3DS/2DS con Boot9Strap (nunca revivida).", 
       txt_req2: "Tarjeta SD legible en PC y Consola.", 
       txt_req3: "Script de eliminación v25 e imagen CTRNAND correspondiente a tu modelo.", 
-      txt_reqBtn: "Descargar Archivos", 
+      txt_reqBtn1: "Descargar Script",
+      txt_reqBtn2: "Descargar CTRNAND", 
       txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       
       txt_h2_step1: "PASO 1: Preparar los archivos en la SD",
@@ -812,7 +822,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Nintendo 3DS/2DS console with Boot9Strap (never revived).", 
       txt_req2: "SD Card readable on PC and Console.", 
       txt_req3: "Removal Script v25 and CTRNAND image file corresponding to your model.", 
-      txt_reqBtn: "Download Files", 
+      txt_reqBtn1: "Download Script", 
+      txt_reqBtn2: "Download CTRNAND",
       txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       
       txt_h2_step1: "STEP 1: Prepare files on the SD card",
@@ -837,7 +848,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Console Nintendo 3DS/2DS avec Boot9Strap (jamais ranimée).", 
       txt_req2: "Carte SD lisible sur PC et Console.", 
       txt_req3: "Script de suppression v25 et image CTRNAND correspondant à votre modèle.", 
-      txt_reqBtn: "Télécharger les fichiers", 
+      txt_reqBtn1: "Télécharger le Script", 
+      txt_reqBtn2: "Télécharger CTRNAND",
       txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
       
       txt_h2_step1: "ÉTAPE 1 : Préparer les fichiers sur la carte SD",
@@ -862,7 +874,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Nintendo 3DS/2DS Konsole mit Boot9Strap (nie wiederbelebt).", 
       txt_req2: "SD-Karte lesbar auf PC und Konsole.", 
       txt_req3: "Entfernungsskript v25 und CTRNAND-Imagedatei für Ihr Modell.", 
-      txt_reqBtn: "Dateien herunterladen", 
+      txt_reqBtn1: "Skript Herunterladen", 
+      txt_reqBtn2: "CTRNAND Herunterladen",
       txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
       
       txt_h2_step1: "SCHRITT 1: Dateien auf der SD-Karte vorbereiten",
@@ -887,7 +900,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Console Nintendo 3DS/2DS con Boot9Strap (mai ripristinata con Lazarus).", 
       txt_req2: "Scheda SD leggibile su PC e Console.", 
       txt_req3: "Script di rimozione v25 e immagine CTRNAND corrispondente al proprio modello.", 
-      txt_reqBtn: "Scarica i file", 
+      txt_reqBtn1: "Scarica Script", 
+      txt_reqBtn2: "Scarica CTRNAND",
       txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
       
       txt_h2_step1: "PASSO 1: Preparazione dei file sulla scheda SD",
@@ -912,7 +926,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Consola Nintendo 3DS/2DS com Boot9Strap (nunca restaurada via Lazarus).", 
       txt_req2: "Cartão SD legível no PC e na Consola.", 
       txt_req3: "Script de remoção v25 e imagem CTRNAND correspondente ao seu modelo.", 
-      txt_reqBtn: "Baixar Arquivos", 
+      txt_reqBtn1: "Baixar Script", 
+      txt_reqBtn2: "Baixar CTRNAND",
       txt_reqNote: "* Você pode conferir os nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
       
       txt_h2_step1: "PASSO 1: Preparar os arquivos no cartão SD",
@@ -937,7 +952,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Boot9Strapが導入されたNintendo 3DS/2DS本体（Lazarus復旧歴なし）。", 
       txt_req2: "PCおよび本体で読み込み可能なSDカード。", 
       txt_req3: "削除スクリプトv25およびお使いのモデルに対応するCTRNANDイメージ。", 
-      txt_reqBtn: "ファイルをダウンロード", 
+      txt_reqBtn1: "スクリプトをダウンロード", 
+      txt_reqBtn2: "CTRNANDをダウンロード",
       txt_reqNote: "* <a href='../productos.html' class='mini-btn'>おすすめ製品</a>もご覧いただけます",
       
       txt_h2_step1: "ステップ 1：SDカードのファイル準備",
@@ -962,7 +978,8 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req1: "Boot9Strap이 설치된 닌텐도 3DS/2DS 기기 (Lazarus 복구 이력 없음).", 
       txt_req2: "PC와 기기에서 인식 가능한 SD 카드.", 
       txt_req3: "삭제 스크립트 v25 및 기기 모델에 맞는 CTRNAND 이미지 파일.", 
-      txt_reqBtn: "파일 다운로드", 
+      txt_reqBtn1: "스크립트 다운로드", 
+      txt_reqBtn2: "CTRNAND 다운로드",
       txt_reqNote: "* 저희 <a href='../productos.html' class='mini-btn'>추천 제품</a>을 확인해 보세요",
       
       txt_h2_step1: "1단계: SD 카드에 파일 준비하기",
