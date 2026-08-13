@@ -1,15 +1,15 @@
 [
   {
+    "tag": "Switch / Checkpoint",
+    "title": "Checkpoint 5.1.0",
+    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.1.0",
+    "date": "2026-08-12T10:10:39.000Z"
+  },
+  {
     "tag": "Switch / nxdumptool",
     "title": "nxdumptool-rewrite (latest commit build)",
     "link": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/rewrite-prerelease",
     "date": "2026-08-04T00:08:48.000Z"
-  },
-  {
-    "tag": "Switch / Checkpoint",
-    "title": "Checkpoint 5.0.0",
-    "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.0.0",
-    "date": "2026-07-26T09:36:36.000Z"
   },
   {
     "tag": "Wii U / Inkay",
