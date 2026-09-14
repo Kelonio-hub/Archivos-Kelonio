@@ -1236,7 +1236,7 @@ async function cargarProductosDisney() {
           const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
           let url = p.url || '#'; if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
           const div = document.createElement('div'); div.className = 'disney-aw-product';
-          div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">${t.txt_choose}</div>`;
+          div.innerHTML = `<img src="${img}"><span>${title}</span><div class="disney-choose-badge">ELEGIR</div>`;
           div.onclick = () => { window.open(url, "_blank"); completarSorteoDisney(); };
           cont.appendChild(div);
       });
