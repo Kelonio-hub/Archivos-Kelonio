@@ -1,5 +1,11 @@
 [
   {
+    "tag": "Switch / DBI",
+    "title": "DBI 912 - Russian version only",
+    "link": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
+    "date": "2026-09-18T07:14:24.000Z"
+  },
+  {
     "tag": "Switch / Rekado",
     "title": "Rekado 5.4",
     "link": "https://github.com/MenosGrante/Rekado/releases/tag/5.4",
@@ -28,12 +34,6 @@
     "title": "v3.0.0",
     "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
     "date": "2026-07-20T14:06:40.000Z"
-  },
-  {
-    "tag": "Switch / DBI",
-    "title": "DBI 905 - Russian version only",
-    "link": "https://github.com/rashevskyv/dbi/releases/tag/905ru",
-    "date": "2026-07-17T11:40:26.000Z"
   },
   {
     "tag": "3DS / LUMA PINK",
