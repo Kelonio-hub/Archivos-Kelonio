@@ -590,6 +590,23 @@ body.youtube-wall-locked #accessWallOverlay{position:fixed;inset:0;z-index:21474
 @media(max-width:600px){body.youtube-wall-locked #accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
 </style>
 
+<script id="kelonio-youtube-cache-guard">
+(function(){
+  try {
+    var raw = localStorage.getItem('kelonio.youtube.access.v11');
+    if (!raw) return;
+    var d = JSON.parse(raw);
+    var ts = Number(d && d.verifiedAt || 0);
+    var ok = !!(d && d.verified === true && ts > 0 && (Date.now() - ts) >= 0 && (Date.now() - ts) < 86400000);
+    if (ok) document.documentElement.classList.add('kelonio-youtube-cache-valid');
+  } catch (_) {}
+})();
+</script>
+<style id="kelonio-youtube-cache-guard-style">
+html.kelonio-youtube-cache-valid body.youtube-wall-locked{overflow:auto!important}
+html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
+</style>
+
 </head>
 <body class="youtube-wall-locked">
 <div id="accessWallOverlay" role="dialog" aria-modal="true" aria-labelledby="youtubeAccessTitle">
