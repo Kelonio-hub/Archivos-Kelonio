@@ -665,18 +665,39 @@
     }
   }
 
+  function unlockFromCache(cached) {
+    ownerDetected = cached.owner === true;
+    unlocked = true;
+
+    // La plantilla de las guías incluye un muro estático para evitar que
+    // el contenido aparezca antes de que cargue este script. En una
+    // recarga con caché válida ese muro ya existe en el DOM, por lo que
+    // debemos ocultarlo explícitamente antes de salir de bootstrap().
+    wall = document.getElementById('accessWallOverlay');
+    injectStyles();
+    document.documentElement.classList.remove('youtube-wall-locked');
+    document.body.classList.remove('youtube-wall-locked');
+
+    if (wall) {
+      wall.classList.add('youtube-wall-hidden');
+      window.setTimeout(() => {
+        if (wall) wall.remove();
+      }, 380);
+    }
+
+    showMemberCta();
+    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
+      detail: { source: 'local-cache-24h', owner: cached.owner }
+    }));
+  }
+
   async function bootstrap() {
     const videos = document.querySelectorAll('.guide-content .video-container');
     if (!videos.length) return;
 
     const cached = readAccessCache();
     if (cached && cached.verified) {
-      ownerDetected = cached.owner;
-      unlocked = true;
-      showMemberCta();
-      document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-        detail: { source: 'local-cache-24h', owner: cached.owner }
-      }));
+      unlockFromCache(cached);
       return;
     }
 
