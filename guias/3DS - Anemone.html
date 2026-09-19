@@ -858,11 +858,11 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 
     <input type="number" id="pp-custom-amount" style="display: none; padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; box-sizing: border-box;" min="0.50" step="0.50">
 
-    <div id="pp-membership-area" style="display:none; margin-top:12px;">
-      <div id="pp-membership-msg" style="margin:0 0 10px; text-align:center; font-size:.82rem; line-height:1.4; font-weight:800; color:#777;"></div>
-      <div id="pp-membership-actions" style="display:flex; flex-direction:column; gap:10px;">
-        <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; justify-content:center; width:100%; min-height:46px; padding:12px 14px; border-radius:10px; background:var(--red); color:#fff; text-align:center; font-size:.95rem; line-height:1.2; font-weight:900; text-decoration:none; box-sizing:border-box;">Hacerse miembro</a>
-        <a href="https://www.mediafire.com/folder/rhd4xcgmrhwry/Anemone" id="pp-membership-download" target="_blank" rel="noopener noreferrer" aria-disabled="true" style="display:flex; align-items:center; justify-content:center; width:100%; min-height:46px; padding:12px 14px; border-radius:10px; background:transparent; border:1px solid rgba(127,127,127,.45); color:#8a8a8a; text-align:center; font-size:.95rem; line-height:1.2; font-weight:900; text-decoration:none; box-sizing:border-box; cursor:default; pointer-events:none; transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;">Descargar Archivos</a>
+    <div id="pp-membership-area" class="pp-membership-area" hidden>
+      <div id="pp-membership-msg" class="pp-membership-msg"></div>
+      <div id="pp-membership-actions" class="pp-membership-actions">
+        <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" target="_blank" rel="noopener noreferrer" class="pp-membership-join">Hacerse miembro</a>
+        <a href="https://www.mediafire.com/folder/rhd4xcgmrhwry/Anemone" id="pp-membership-download" target="_blank" rel="noopener noreferrer" aria-disabled="true" class="pp-membership-download">Descargar Archivos</a>
       </div>
     </div>
   </div>
@@ -874,6 +874,17 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
   <a href="https://www.mediafire.com/folder/rhd4xcgmrhwry/Anemone" id="pp-download-btn" target="_blank" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;"></a>
 </div>
 
+<style id="kelonio-membership-panel-v20">
+  #pp-membership-area{display:block!important;margin-top:12px;}
+  #pp-membership-area[hidden]{display:none!important;}
+  #pp-membership-actions{display:flex!important;flex-direction:column;gap:10px;width:100%;}
+  #pp-membership-msg{margin:0 0 10px;text-align:center;font-size:.82rem;line-height:1.4;font-weight:800;color:#777;min-height:1.2em;}
+  #pp-membership-join,#pp-membership-download{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;padding:12px 14px;border-radius:10px;text-align:center;font-size:.95rem;line-height:1.2;font-weight:900;text-decoration:none;box-sizing:border-box;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease;}
+  #pp-membership-join{background:var(--red);color:#fff!important;}
+  #pp-membership-download{background:transparent;color:#8a8a8a;border:1px solid rgba(127,127,127,.45);cursor:default;pointer-events:none;}
+  #pp-membership-download.pp-membership-ready{background:var(--red);border-color:var(--red);color:#fff!important;cursor:pointer;pointer-events:auto;box-shadow:0 6px 18px rgba(0,0,0,.16);}
+  #pp-membership-download.pp-membership-ready:hover{transform:translateY(-1px);}
+</style>
 <script id="kelonio-download-access-v19">
 document.addEventListener("DOMContentLoaded", () => {
   'use strict';
@@ -952,6 +963,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function writePendingUntil(v) { try { localStorage.setItem(MEMBERSHIP_PENDING_KEY,String(v)); } catch (_) {} }
   function clearTimer() { if (timer) { clearInterval(timer); timer=null; } }
   function styleMembershipDownload(active) {
+    membershipDownload.classList.toggle('pp-membership-ready', active);
     membershipDownload.setAttribute('aria-disabled', active ? 'false' : 'true');
     membershipDownload.style.pointerEvents = active ? 'auto' : 'none';
     membershipDownload.style.cursor = active ? 'pointer' : 'default';
@@ -963,12 +975,15 @@ document.addEventListener("DOMContentLoaded", () => {
     membershipDownload.tabIndex = active ? 0 : -1;
   }
   function unlockMembership() {
-    clearTimer(); until=0; membershipArea.style.display='block'; membershipMsg.style.display='none'; styleMembershipDownload(true); downloadBtn.style.display='none'; writeMembershipCache();
+    clearTimer(); until=0; membershipArea.hidden=false; membershipMsg.style.display='none'; styleMembershipDownload(true); downloadBtn.style.display='none'; writeMembershipCache();
   }
   function showMembershipChecking() {
-    membershipArea.style.display='block';
+    membershipArea.hidden=false;
     membershipMsg.textContent=text().verifying;
     membershipMsg.style.display='block';
+    const membershipActions=document.getElementById('pp-membership-actions');
+    if(membershipActions) membershipActions.style.display='flex';
+    membershipJoin.hidden=false; membershipDownload.hidden=false;
     styleMembershipDownload(false);
     downloadBtn.style.display='none';
   }
@@ -985,7 +1000,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tickMembership();
     timer=setInterval(tickMembership,500);
   }
-  function hideMembershipGate() { clearTimer(); until=0; membershipArea.style.display='none'; membershipMsg.style.display='none'; styleMembershipDownload(false); }
+  function hideMembershipGate() { clearTimer(); until=0; membershipArea.hidden=true; membershipMsg.style.display='none'; styleMembershipDownload(false); }
   function resetPaymentView() { successMsg.style.display='none'; paypalLoading.style.display='none'; customAmountInput.style.display='none'; paypalContainer.style.display='none'; paypalContainer.innerHTML=''; paypalRendered=false; }
   function loadPayPalSDK() {
     if (window.paypal) return Promise.resolve();
@@ -1027,7 +1042,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLanguage();
   amountSelect.value='membership';
   if(readMembershipCache()) unlockMembership();
-  else showMembershipChecking();
+  else updateView(false);
 });
 </script>
 <!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
