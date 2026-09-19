@@ -35,9 +35,7 @@
       auth: 'Necesitamos autorización de YouTube para comprobar tu suscripción.',
       needConfig: 'El acceso por suscripción necesita configurar el Client ID de Google.',
       error: 'No se ha podido verificar la suscripción. Inténtalo de nuevo.',
-  
-      member: 'Hacerse miembro',
-      memberAria: 'Hacerse miembro del canal de YouTube',
+      openYoutube: 'Abrir YouTube',
       subscribeAria: 'Suscribirme al canal de YouTube con mi cuenta de Google',
       owner: 'Propietario de Kelonio detectado ✓',
       ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.'
@@ -54,9 +52,7 @@
       auth: 'YouTube authorization is needed to check your subscription.',
       needConfig: 'Subscription access requires the Google Client ID to be configured.',
       error: 'The subscription could not be verified. Please try again.',
-
-      member: 'Join',
-      memberAria: 'Join the YouTube channel',
+      openYoutube: 'Open YouTube',
       subscribeAria: 'Subscribe to the YouTube channel with my Google account',
       owner: 'Kelonio owner detected ✓',
       ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.'
@@ -73,9 +69,7 @@
       auth: "Une autorisation YouTube est nécessaire pour vérifier votre abonnement.",
       needConfig: "L'accès par abonnement nécessite de configurer le Client ID Google.",
       error: "Impossible de vérifier l'abonnement. Réessayez.",
-
-      member: 'Devenir membre',
-      memberAria: 'Devenir membre de la chaîne YouTube',
+      openYoutube: 'Ouvrir YouTube',
       subscribeAria: 'S’abonner à la chaîne YouTube avec mon compte Google',
       owner: 'Propriétaire de Kelonio détecté ✓',
       ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est déverrouillé automatiquement.'
@@ -92,9 +86,7 @@
       auth: 'Zur Prüfung deines Abonnements ist eine YouTube-Autorisierung erforderlich.',
       needConfig: 'Für den Zugriff per Abonnement muss die Google Client-ID konfiguriert werden.',
       error: 'Das Abonnement konnte nicht überprüft werden. Bitte erneut versuchen.',
-
-      member: 'Mitglied werden',
-      memberAria: 'Mitglied des YouTube-Kanals werden',
+      openYoutube: 'YouTube öffnen',
       subscribeAria: 'Den YouTube-Kanal mit meinem Google-Konto abonnieren',
       owner: 'Kelonio-Inhaber erkannt ✓',
       ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.'
@@ -111,9 +103,7 @@
       auth: 'È necessaria l’autorizzazione di YouTube per verificare la tua iscrizione.',
       needConfig: 'Per l’accesso tramite iscrizione è necessario configurare il Client ID Google.',
       error: 'Non è stato possibile verificare l’iscrizione. Riprova.',
-
-      member: 'Diventa membro',
-      memberAria: 'Diventa membro del canale YouTube',
+      openYoutube: 'Apri YouTube',
       subscribeAria: 'Iscriviti al canale YouTube con il mio account Google',
       owner: 'Proprietario Kelonio rilevato ✓',
       ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.'
@@ -130,9 +120,7 @@
       auth: 'É necessária autorização do YouTube para verificar a sua subscrição.',
       needConfig: 'O acesso por subscrição requer a configuração do Client ID da Google.',
       error: 'Não foi possível verificar a subscrição. Tente novamente.',
-
-      member: 'Tornar-se membro',
-      memberAria: 'Tornar-se membro do canal do YouTube',
+      openYoutube: 'Abrir o YouTube',
       subscribeAria: 'Subscrever o canal do YouTube com a minha conta Google',
       owner: 'Proprietário da Kelonio detetado ✓',
       ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.'
@@ -149,9 +137,7 @@
       auth: '登録状況を確認するには YouTube の認証が必要です。',
       needConfig: '登録によるアクセスには Google Client ID の設定が必要です。',
       error: '登録状況を確認できませんでした。もう一度お試しください。',
-
-      member: 'メンバーになる',
-      memberAria: 'YouTube チャンネルのメンバーになる',
+      openYoutube: 'YouTube を開く',
       subscribeAria: 'Google アカウントで YouTube チャンネルに登録',
       owner: 'Kelonio オーナーを確認しました ✓',
       ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。'
@@ -168,9 +154,7 @@
       auth: '구독 여부를 확인하려면 YouTube 인증이 필요합니다.',
       needConfig: '구독을 통한 접근을 사용하려면 Google Client ID 설정이 필요합니다.',
       error: '구독을 확인할 수 없습니다. 다시 시도해 주세요.',
-  
-      member: '멤버 되기',
-      memberAria: 'YouTube 채널 멤버 되기',
+      openYoutube: 'YouTube 열기',
       subscribeAria: 'Google 계정으로 YouTube 채널 구독',
       owner: 'Kelonio 소유자 확인 ✓',
       ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.'
@@ -238,6 +222,7 @@
   }
 
   function buildWall() {
+    removeLegacyMemberCta();
     wall = document.getElementById('accessWallOverlay');
     if (!wall) {
       wall = document.createElement('div');
@@ -329,33 +314,13 @@
     if (el) el.textContent = custom || t()[key] || '';
   }
 
-  function showMemberCta() {
-    const videos = Array.from(document.querySelectorAll('.guide-content .video-container'));
-    if (!videos.length || document.getElementById('youtube-cta-box')) return;
 
-    const last = videos[videos.length - 1];
-    const box = document.createElement('section');
-    box.id = 'youtube-cta-box';
-    box.className = 'youtube-cta-box';
-    box.innerHTML = `
-      <div class="youtube-cta-actions">
-        <a class="youtube-cta-member" target="_blank" rel="noopener noreferrer sponsored"></a>
-      </div>`;
-
-    const style = document.createElement('style');
-    style.textContent = `
-      .youtube-cta-box{width:100%;margin:4px 0 30px;padding:17px 0 5px;border-top:1px solid var(--glass-border);text-align:center}
-      .youtube-cta-member{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:10px;background:var(--red);color:#fff!important;text-decoration:none!important;font:900 .86rem/1.15 'Segoe UI',system-ui,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:filter .18s ease,transform .18s ease}
-      .youtube-cta-member:hover{filter:brightness(1.08);transform:translateY(-2px)}
-      .youtube-cta-member:focus-visible{outline:2px solid currentColor;outline-offset:3px}
-    `;
-    box.appendChild(style);
-    last.insertAdjacentElement('afterend', box);
-
-    const link = box.querySelector('.youtube-cta-member');
-    link.href = JOIN_URL;
-    link.textContent = t().member;
-    link.setAttribute('aria-label', t().memberAria);
+  function removeLegacyMemberCta() {
+    document.querySelectorAll('#youtube-cta-box, .youtube-cta-box').forEach(el => el.remove());
+    document.querySelectorAll('.youtube-cta-member').forEach(el => {
+      const box = el.closest('#youtube-cta-box, .youtube-cta-box');
+      if (box) box.remove();
+    });
   }
 
   function hideWall(cacheKind) {
@@ -373,7 +338,6 @@
       }, 380);
     }
 
-    showMemberCta();
     document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted'));
   }
 
@@ -698,7 +662,6 @@
       }, 380);
     }
 
-    showMemberCta();
     document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
       detail: { source: 'local-cache-24h', owner: cached.owner }
     }));
@@ -706,7 +669,15 @@
 
   async function bootstrap() {
     const videos = document.querySelectorAll('.guide-content .video-container');
-    if (!videos.length) return;
+    if (!videos.length) {
+      // Defense in depth: non-video guides must never inherit the YouTube wall
+      // from an older template or a stale DOM state.
+      document.documentElement.classList.remove('youtube-wall-locked');
+      document.body.classList.remove('youtube-wall-locked');
+      const legacyWall = document.getElementById('accessWallOverlay');
+      if (legacyWall) legacyWall.remove();
+      return;
+    }
 
     const cached = readAccessCache();
     if (cached && cached.verified) {
@@ -778,12 +749,7 @@
 
   document.addEventListener('kelonio:languageChanged', () => {
     refreshTexts();
-    const member = document.querySelector('#youtube-cta-box .youtube-cta-member');
-    if (member) {
-      member.textContent = t().member;
-      member.setAttribute('aria-label', t().memberAria);
-    }
   });
 
-  document.addEventListener('DOMContentLoaded', bootstrap, { once: true });
+  document.addEventListener('DOMContentLoaded', () => { removeLegacyMemberCta(); bootstrap(); }, { once: true });
 })();
