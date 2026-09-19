@@ -379,6 +379,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 @media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
 @media(max-width:650px){.guide-products-media{height:170px}}
 
+.guide-products-image-link{display:block;text-decoration:none;color:inherit}.guide-products-image-link img{cursor:pointer;display:block;width:100%;height:auto}
 </style>
 
 <!-- ==========================================================
@@ -1131,28 +1132,28 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
   const translations = {
     es: {
-      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías", txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo", txt_videos: "Vídeos", radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi", txt_tag: "3DS", txt_title: "Guía Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Permite descargar programas y sus respectivas actualizaciones. Se aconseja descargar únicamente los programas que se conozcan.", txt_h2_req: "Requisitos y Consejos", txt_req1: "Ver el repositorio oficial de cada programa antes de su descarga.", txt_req2: "Tener la consola 3DS modificada.", txt_req3: "Archivos de Universal Updater", txt_reqBtn: "Descargar Archivos", txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>", txt_h2_step1: "PASO 1: Lo que NO debes descargar", txt_s1_1: "No se aconseja descargar programas relativos al Hack: Luma, Godmode9, FBI o, incluso, el propio CFW Safe9.", txt_s1_2: "No se aconseja descargar programas que requieran sobrescritura elevada de archivos en la SD, tales como: Twlmenu, Pretendo.", txt_h2_step2: "PASO 2: Consejos Finales", txt_s2_1: "Utiliza Universal Updater con precaución e infórmate siempre antes de instalar cualquier aplicación desconocida.", txt_alert2: "<strong>✅ ¡Enhorabuena!</strong> Ahora conoces los riesgos y ventajas de Universal Updater en 2026.", txt_footer: "Disfruta de tu 3DS con responsabilidad."
+      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías", txt_awSubtitle: "Completa los pasos para desbloquear el contenido.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Participar en el sorteo", txt_videos: "Vídeos", radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi", txt_tag: "3DS", txt_title: "Guía Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Permite descargar programas y sus respectivas actualizaciones. Se aconseja descargar únicamente los programas que se conozcan.", txt_h2_req: "Requisitos y Consejos", txt_req1: "Ver el repositorio oficial de cada programa antes de su descarga.", txt_req2: "Tener la consola 3DS modificada.", txt_req3: "Archivos de Universal Updater", txt_reqBtn: "Descargar Archivos" txt_h2_step1: "PASO 1: Lo que NO debes descargar", txt_s1_1: "No se aconseja descargar programas relativos al Hack: Luma, Godmode9, FBI o, incluso, el propio CFW Safe9.", txt_s1_2: "No se aconseja descargar programas que requieran sobrescritura elevada de archivos en la SD, tales como: Twlmenu, Pretendo.", txt_h2_step2: "PASO 2: Consejos Finales", txt_s2_1: "Utiliza Universal Updater con precaución e infórmate siempre antes de instalar cualquier aplicación desconocida.", txt_alert2: "<strong>✅ ¡Enhorabuena!</strong> Ahora conoces los riesgos y ventajas de Universal Updater en 2026.", txt_footer: "Disfruta de tu 3DS con responsabilidad."
     },
     en: {
-      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides", txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway", txt_videos: "Videos", radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi", txt_tag: "3DS", txt_title: "Universal Updater Guide", txt_alert1: "<strong>⚠️ Important:</strong> It allows you to download programs and their updates. It is advised to only download known programs.", txt_h2_req: "Requirements & Tips", txt_req1: "Check the official repository of each program before downloading.", txt_req2: "Have a modded 3DS console.", txt_req3: "Universal Updater Files", txt_reqBtn: "Download Files", txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>", txt_h2_step1: "STEP 1: What NOT to download", txt_s1_1: "It is not recommended to download hack-related programs like Luma, Godmode9, FBI, or even the CFW Safe9.", txt_s1_2: "It is not recommended to download programs that require heavy SD file overwriting, such as Twlmenu or Pretendo.", txt_h2_step2: "STEP 2: Final Advice", txt_s2_1: "Use Universal Updater with caution and always gather information before installing unknown apps.", txt_alert2: "<strong>✅ Congratulations!</strong> You now know the risks and benefits of Universal Updater in 2026.", txt_footer: "Enjoy your 3DS responsibly."
+      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides", txt_awSubtitle: "Complete the steps to unlock content.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Enter the giveaway", txt_videos: "Videos", radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi", txt_tag: "3DS", txt_title: "Universal Updater Guide", txt_alert1: "<strong>⚠️ Important:</strong> It allows you to download programs and their updates. It is advised to only download known programs.", txt_h2_req: "Requirements & Tips", txt_req1: "Check the official repository of each program before downloading.", txt_req2: "Have a modded 3DS console.", txt_req3: "Universal Updater Files", txt_reqBtn: "Download Files" txt_h2_step1: "STEP 1: What NOT to download", txt_s1_1: "It is not recommended to download hack-related programs like Luma, Godmode9, FBI, or even the CFW Safe9.", txt_s1_2: "It is not recommended to download programs that require heavy SD file overwriting, such as Twlmenu or Pretendo.", txt_h2_step2: "STEP 2: Final Advice", txt_s2_1: "Use Universal Updater with caution and always gather information before installing unknown apps.", txt_alert2: "<strong>✅ Congratulations!</strong> You now know the risks and benefits of Universal Updater in 2026.", txt_footer: "Enjoy your 3DS responsibly."
     },
     fr: {
-      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides", txt_awSubtitle: "Terminez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours", txt_videos: "Vidéos", radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi", txt_tag: "3DS", txt_title: "Guide Universal Updater", txt_alert1: "<strong>⚠️ Important :</strong> Permet de télécharger des programmes et leurs mises à jour. Il est conseillé de ne télécharger que les programmes connus.", txt_h2_req: "Prérequis et Conseils", txt_req1: "Vérifiez le dépôt officiel de chaque programme avant le téléchargement.", txt_req2: "Avoir une console 3DS modifiée.", txt_req3: "Fichiers Universal Updater", txt_reqBtn: "Télécharger les Fichiers", txt_reqNote: "* Vous pouvez voir nos <a href='../productos.html' class='mini-btn'>produits</a>", txt_h2_step1: "ÉTAPE 1 : Ce qu'il NE FAUT PAS télécharger", txt_s1_1: "Il n'est pas conseillé de télécharger des programmes liés au Hack : Luma, Godmode9, FBI, ou même le CFW Safe9.", txt_s1_2: "Il n'est pas conseillé de télécharger des programmes nécessitant un fort écrasement de fichiers sur la carte SD, comme Twlmenu, Pretendo.", txt_h2_step2: "ÉTAPE 2 : Conseils finaux", txt_s2_1: "Utilisez Universal Updater avec précaution et informez-vous toujours avant d'installer des applications inconnues.", txt_alert2: "<strong>✅ Félicitations !</strong> Vous connaissez maintenant les risques et avantages d'Universal Updater en 2026.", txt_footer: "Profitez de votre 3DS de manière responsable."
+      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides", txt_awSubtitle: "Terminez les étapes pour débloquer le contenu.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Participer au concours", txt_videos: "Vidéos", radar: "Radar de Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi", txt_tag: "3DS", txt_title: "Guide Universal Updater", txt_alert1: "<strong>⚠️ Important :</strong> Permet de télécharger des programmes et leurs mises à jour. Il est conseillé de ne télécharger que les programmes connus.", txt_h2_req: "Prérequis et Conseils", txt_req1: "Vérifiez le dépôt officiel de chaque programme avant le téléchargement.", txt_req2: "Avoir une console 3DS modifiée.", txt_req3: "Fichiers Universal Updater", txt_reqBtn: "Télécharger les Fichiers" txt_h2_step1: "ÉTAPE 1 : Ce qu'il NE FAUT PAS télécharger", txt_s1_1: "Il n'est pas conseillé de télécharger des programmes liés au Hack : Luma, Godmode9, FBI, ou même le CFW Safe9.", txt_s1_2: "Il n'est pas conseillé de télécharger des programmes nécessitant un fort écrasement de fichiers sur la carte SD, comme Twlmenu, Pretendo.", txt_h2_step2: "ÉTAPE 2 : Conseils finaux", txt_s2_1: "Utilisez Universal Updater avec précaution et informez-vous toujours avant d'installer des applications inconnues.", txt_alert2: "<strong>✅ Félicitations !</strong> Vous connaissez maintenant les risques et avantages d'Universal Updater en 2026.", txt_footer: "Profitez de votre 3DS de manière responsable."
     },
     de: {
-      txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen", txt_awSubtitle: "Schließe die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen", txt_videos: "Videos", radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi", txt_tag: "3DS", txt_title: "Universal Updater Anleitung", txt_alert1: "<strong>⚠️ Wichtig:</strong> Ermöglicht das Herunterladen von Programmen und deren Updates. Es wird empfohlen, nur bekannte Programme herunterzuladen.", txt_h2_req: "Anforderungen & Tipps", txt_req1: "Überprüfen Sie vor dem Herunterladen das offizielle Repository jedes Programms.", txt_req2: "Eine gemoddete 3DS-Konsole haben.", txt_req3: "Universal Updater Dateien", txt_reqBtn: "Dateien Herunterladen", txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen", txt_h2_step1: "SCHRITT 1: Was Sie NICHT herunterladen sollten", txt_s1_1: "Es wird nicht empfohlen, Hack-bezogene Programme wie Luma, Godmode9, FBI oder sogar CFW Safe9 herunterzuladen.", txt_s1_2: "Es wird nicht empfohlen, Programme herunterzuladen, die starkes Überschreiben von SD-Dateien erfordern, wie Twlmenu oder Pretendo.", txt_h2_step2: "SCHRITT 2: Letzte Ratschläge", txt_s2_1: "Verwenden Sie Universal Updater mit Vorsicht und informieren Sie sich immer, bevor Sie unbekannte Apps installieren.", txt_alert2: "<strong>✅ Herzlichen Glückwunsch!</strong> Sie kennen nun die Risiken und Vorteile von Universal Updater im Jahr 2026.", txt_footer: "Genießen Sie Ihren 3DS verantwortungsbewusst."
+      txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen", txt_awSubtitle: "Schließe die Schritte ab, um den Inhalt freizuschalten.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Am Gewinnspiel teilnehmen", txt_videos: "Videos", radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi", txt_tag: "3DS", txt_title: "Universal Updater Anleitung", txt_alert1: "<strong>⚠️ Wichtig:</strong> Ermöglicht das Herunterladen von Programmen und deren Updates. Es wird empfohlen, nur bekannte Programme herunterzuladen.", txt_h2_req: "Anforderungen & Tipps", txt_req1: "Überprüfen Sie vor dem Herunterladen das offizielle Repository jedes Programms.", txt_req2: "Eine gemoddete 3DS-Konsole haben.", txt_req3: "Universal Updater Dateien", txt_reqBtn: "Dateien Herunterladen" txt_h2_step1: "SCHRITT 1: Was Sie NICHT herunterladen sollten", txt_s1_1: "Es wird nicht empfohlen, Hack-bezogene Programme wie Luma, Godmode9, FBI oder sogar CFW Safe9 herunterzuladen.", txt_s1_2: "Es wird nicht empfohlen, Programme herunterzuladen, die starkes Überschreiben von SD-Dateien erfordern, wie Twlmenu oder Pretendo.", txt_h2_step2: "SCHRITT 2: Letzte Ratschläge", txt_s2_1: "Verwenden Sie Universal Updater mit Vorsicht und informieren Sie sich immer, bevor Sie unbekannte Apps installieren.", txt_alert2: "<strong>✅ Herzlichen Glückwunsch!</strong> Sie kennen nun die Risiken und Vorteile von Universal Updater im Jahr 2026.", txt_footer: "Genießen Sie Ihren 3DS verantwortungsbewusst."
     },
     it: {
-      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide", txt_awSubtitle: "Completa i passaggi per sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway", txt_videos: "Video", radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi", txt_tag: "3DS", txt_title: "Guida Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Consente di scaricare programmi e i relativi aggiornamenti. Si consiglia di scaricare solo programmi conosciuti.", txt_h2_req: "Requisiti e Consigli", txt_req1: "Controllare la repository ufficiale di ogni programma prima di scaricarlo.", txt_req2: "Avere una console 3DS modificata.", txt_req3: "File Universal Updater", txt_reqBtn: "Scarica i File", txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>", txt_h2_step1: "PASSO 1: Cosa NON scaricare", txt_s1_1: "Non si consiglia di scaricare programmi relativi all'Hack come Luma, Godmode9, FBI o il CFW Safe9 stesso.", txt_s1_2: "Non è consigliato scaricare programmi che richiedono un'elevata sovrascrittura dei file sulla SD, come Twlmenu, Pretendo.", txt_h2_step2: "PASSO 2: Consigli Finali", txt_s2_1: "Utilizza Universal Updater con cautela e informati sempre prima di installare applicazioni sconosciute.", txt_alert2: "<strong>✅ Congratulazioni!</strong> Ora conosci i rischi e i vantaggi di Universal Updater nel 2026.", txt_footer: "Divertiti con il tuo 3DS responsabilmente."
+      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide", txt_awSubtitle: "Completa i passaggi per sbloccare il contenuto.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Partecipa al giveaway", txt_videos: "Video", radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi", txt_tag: "3DS", txt_title: "Guida Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Consente di scaricare programmi e i relativi aggiornamenti. Si consiglia di scaricare solo programmi conosciuti.", txt_h2_req: "Requisiti e Consigli", txt_req1: "Controllare la repository ufficiale di ogni programma prima di scaricarlo.", txt_req2: "Avere una console 3DS modificata.", txt_req3: "File Universal Updater", txt_reqBtn: "Scarica i File" txt_h2_step1: "PASSO 1: Cosa NON scaricare", txt_s1_1: "Non si consiglia di scaricare programmi relativi all'Hack come Luma, Godmode9, FBI o il CFW Safe9 stesso.", txt_s1_2: "Non è consigliato scaricare programmi che richiedono un'elevata sovrascrittura dei file sulla SD, come Twlmenu, Pretendo.", txt_h2_step2: "PASSO 2: Consigli Finali", txt_s2_1: "Utilizza Universal Updater con cautela e informati sempre prima di installare applicazioni sconosciute.", txt_alert2: "<strong>✅ Congratulazioni!</strong> Ora conosci i rischi e i vantaggi di Universal Updater nel 2026.", txt_footer: "Divertiti con il tuo 3DS responsabilmente."
     },
     pt: {
-      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias", txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio", txt_videos: "Vídeos", radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie-nos no Ko-fi", txt_tag: "3DS", txt_title: "Guia Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Permite baixar programas e suas respectivas atualizações. É aconselhável baixar apenas programas conhecidos.", txt_h2_req: "Requisitos e Dicas", txt_req1: "Verifique o repositório oficial de cada programa antes de fazer o download.", txt_req2: "Ter um console 3DS modificado.", txt_req3: "Arquivos do Universal Updater", txt_reqBtn: "Baixar Arquivos", txt_reqNote: "* Você pode ver nossos <a href='../productos.html' class='mini-btn'>produtos</a>", txt_h2_step1: "PASSO 1: O que NÃO baixar", txt_s1_1: "Não é recomendado baixar programas relacionados ao Hack: Luma, Godmode9, FBI ou mesmo o próprio CFW Safe9.", txt_s1_2: "Não é aconselhável baixar programas que exigem alta sobrescrita de arquivos no SD, como: Twlmenu, Pretendo.", txt_h2_step2: "PASSO 2: Conselhos Finais", txt_s2_1: "Use o Universal Updater com cautela e informe-se sempre antes de instalar aplicativos desconhecidos.", txt_alert2: "<strong>✅ Parabéns!</strong> Agora você conhece os riscos e benefícios do Universal Updater em 2026.", txt_footer: "Aproveite o seu 3DS com responsabilidade."
+      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias", txt_awSubtitle: "Conclua as etapas para desbloquear o conteúdo.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Participar do sorteio", txt_videos: "Vídeos", radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Junte-se ao Discord", txt_kofi: "Apoie-nos no Ko-fi", txt_tag: "3DS", txt_title: "Guia Universal Updater", txt_alert1: "<strong>⚠️ Importante:</strong> Permite baixar programas e suas respectivas atualizações. É aconselhável baixar apenas programas conhecidos.", txt_h2_req: "Requisitos e Dicas", txt_req1: "Verifique o repositório oficial de cada programa antes de fazer o download.", txt_req2: "Ter um console 3DS modificado.", txt_req3: "Arquivos do Universal Updater", txt_reqBtn: "Baixar Arquivos" txt_h2_step1: "PASSO 1: O que NÃO baixar", txt_s1_1: "Não é recomendado baixar programas relacionados ao Hack: Luma, Godmode9, FBI ou mesmo o próprio CFW Safe9.", txt_s1_2: "Não é aconselhável baixar programas que exigem alta sobrescrita de arquivos no SD, como: Twlmenu, Pretendo.", txt_h2_step2: "PASSO 2: Conselhos Finais", txt_s2_1: "Use o Universal Updater com cautela e informe-se sempre antes de instalar aplicativos desconhecidos.", txt_alert2: "<strong>✅ Parabéns!</strong> Agora você conhece os riscos e benefícios do Universal Updater em 2026.", txt_footer: "Aproveite o seu 3DS com responsabilidade."
     },
     ja: {
-      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド", txt_awSubtitle: "コンテンツのロックを解除する手順を完了します。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. 抽選に参加する", txt_videos: "ビデオ", radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート", txt_tag: "3DS", txt_title: "Universal Updater ガイド", txt_alert1: "<strong>⚠️ 重要:</strong> プログラムとそのアップデートをダウンロードできます。既知のプログラムのみをダウンロードすることをお勧めします。", txt_h2_req: "必要なものとヒント", txt_req1: "ダウンロードする前に各プログラムの公式リポジトリを確認してください。", txt_req2: "改造済みの3DS本体があること。", txt_req3: "Universal Updater ファイル", txt_reqBtn: "ファイルをダウンロード", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>製品</a> を確認できます", txt_h2_step1: "ステップ 1: ダウンロードすべきでないもの", txt_s1_1: "Luma、Godmode9、FBI、またはCFW Safe9自体のハック関連プログラムをダウンロードすることはお勧めしません。", txt_s1_2: "TwlmenuやPretendoなど、SDファイルの大量の上書きが必要なプログラムのダウンロードはお勧めしません。", txt_h2_step2: "ステップ 2: 最後のアドバイス", txt_s2_1: "Universal Updaterを注意して使用し、未知のアプリをインストールする前に必ず情報を収集してください。", txt_alert2: "<strong>✅ おめでとうございます！</strong> 2026年におけるUniversal Updaterのリスクと利点を理解できました。", txt_footer: "責任を持って3DSをお楽しみください。"
+      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "その他のガイド", txt_awSubtitle: "コンテンツのロックを解除する手順を完了します。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. 抽選に参加する", txt_videos: "ビデオ", radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート", txt_tag: "3DS", txt_title: "Universal Updater ガイド", txt_alert1: "<strong>⚠️ 重要:</strong> プログラムとそのアップデートをダウンロードできます。既知のプログラムのみをダウンロードすることをお勧めします。", txt_h2_req: "必要なものとヒント", txt_req1: "ダウンロードする前に各プログラムの公式リポジトリを確認してください。", txt_req2: "改造済みの3DS本体があること。", txt_req3: "Universal Updater ファイル", txt_reqBtn: "ファイルをダウンロード" txt_h2_step1: "ステップ 1: ダウンロードすべきでないもの", txt_s1_1: "Luma、Godmode9、FBI、またはCFW Safe9自体のハック関連プログラムをダウンロードすることはお勧めしません。", txt_s1_2: "TwlmenuやPretendoなど、SDファイルの大量の上書きが必要なプログラムのダウンロードはお勧めしません。", txt_h2_step2: "ステップ 2: 最後のアドバイス", txt_s2_1: "Universal Updaterを注意して使用し、未知のアプリをインストールする前に必ず情報を収集してください。", txt_alert2: "<strong>✅ おめでとうございます！</strong> 2026年におけるUniversal Updaterのリスクと利点を理解できました。", txt_footer: "責任を持って3DSをお楽しみください。"
     },
     ko: {
-      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드", txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 경품 행사 참여", txt_videos: "비디오", radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 가입", txt_kofi: "Ko-fi에서 지원", txt_tag: "3DS", txt_title: "Universal Updater 가이드", txt_alert1: "<strong>⚠️ 중요:</strong> 프로그램과 업데이트를 다운로드할 수 있습니다. 알고 있는 프로그램만 다운로드하는 것이 좋습니다.", txt_h2_req: "요구 사항 및 팁", txt_req1: "다운로드하기 전에 각 프로그램의 공식 저장소를 확인하십시오.", txt_req2: "개조된 3DS 콘솔이 있어야 합니다.", txt_req3: "Universal Updater 파일", txt_reqBtn: "파일 다운로드", txt_reqNote: "* 저희 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다", txt_h2_step1: "1단계: 다운로드하지 말아야 할 것", txt_s1_1: "Luma, Godmode9, FBI 또는 CFW Safe9와 같은 해킹 관련 프로그램은 다운로드하지 않는 것이 좋습니다.", txt_s1_2: "Twlmenu나 Pretendo와 같이 SD 파일 덮어쓰기가 많이 필요한 프로그램은 다운로드하지 않는 것이 좋습니다.", txt_h2_step2: "2단계: 마지막 조언", txt_s2_1: "Universal Updater를 주의해서 사용하고 알 수 없는 앱을 설치하기 전에 항상 정보를 수집하십시오.", txt_alert2: "<strong>✅ 축하합니다!</strong> 이제 2026년 Universal Updater의 위험과 이점을 알게 되었습니다.", txt_footer: "책임감 있게 3DS를 즐기십시오."
+      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드", txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. 경품 행사 참여", txt_videos: "비디오", radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 가입", txt_kofi: "Ko-fi에서 지원", txt_tag: "3DS", txt_title: "Universal Updater 가이드", txt_alert1: "<strong>⚠️ 중요:</strong> 프로그램과 업데이트를 다운로드할 수 있습니다. 알고 있는 프로그램만 다운로드하는 것이 좋습니다.", txt_h2_req: "요구 사항 및 팁", txt_req1: "다운로드하기 전에 각 프로그램의 공식 저장소를 확인하십시오.", txt_req2: "개조된 3DS 콘솔이 있어야 합니다.", txt_req3: "Universal Updater 파일", txt_reqBtn: "파일 다운로드" txt_h2_step1: "1단계: 다운로드하지 말아야 할 것", txt_s1_1: "Luma, Godmode9, FBI 또는 CFW Safe9와 같은 해킹 관련 프로그램은 다운로드하지 않는 것이 좋습니다.", txt_s1_2: "Twlmenu나 Pretendo와 같이 SD 파일 덮어쓰기가 많이 필요한 프로그램은 다운로드하지 않는 것이 좋습니다.", txt_h2_step2: "2단계: 마지막 조언", txt_s2_1: "Universal Updater를 주의해서 사용하고 알 수 없는 앱을 설치하기 전에 항상 정보를 수집하십시오.", txt_alert2: "<strong>✅ 축하합니다!</strong> 이제 2026년 Universal Updater의 위험과 이점을 알게 되었습니다.", txt_footer: "책임감 있게 3DS를 즐기십시오."
     }
   };
 
@@ -1278,7 +1279,8 @@ document.addEventListener("DOMContentLoaded", () => {
       idiomaActual = e.target.value; 
       localStorage.setItem('preferredLanguage', idiomaActual); 
       updateLanguage();
-      cargarSidebar(); 
+      cargarSidebar();
+      document.dispatchEvent(new CustomEvent('kelonio:languageChanged')); 
     });
   }
 
@@ -1524,8 +1526,8 @@ document.addEventListener("DOMContentLoaded", () => {
     de:{catalog:"Sie können unsere",products:"Produkte",buy:"Produkt ansehen",empty:"Keine Produkte verfügbar"},
     it:{catalog:"Puoi visualizzare i nostri",products:"prodotti",buy:"Vedi prodotto",empty:"Nessun prodotto disponibile"},
     pt:{catalog:"Pode visualizar os nossos",products:"produtos",buy:"Ver produto",empty:"Nenhum produto disponível"},
-    ja:{catalog:"当社の",products:"製品",buy:"商品を見る",empty:"商品がありません"},
-    ko:{catalog:"저희",products:"제품",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
+    ja:{catalog:"当社の",products:"製品をご覧いただけます",buy:"商品を見る",empty:"商品がありません"},
+    ko:{catalog:"저희",products:"제품을 확인하실 수 있습니다",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
   };
   const CACHE_MS=30*60*1000;
   let cfg,items=[],idx=0,timer=null;
@@ -1535,38 +1537,162 @@ document.addEventListener("DOMContentLoaded", () => {
   const aside=document.getElementById("guideProductsSidebar");
   const card=document.getElementById("guideProductsCard");
   if(!aside||!card)return;
-  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function lang(){
+    const saved=localStorage.getItem("preferredLanguage");
+    if(saved&&DICT[saved])return saved;
+    const current=(typeof idiomaActual!=="undefined"?idiomaActual:"");
+    if(DICT[current])return current;
+    const browser=(navigator.language||navigator.userLanguage||"es").split("-")[0].toLowerCase();
+    return DICT[browser]?browser:"es";
+  }
   function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
   function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
   function txt(k){return (DICT[lang()]||DICT.es)[k]}
-  function setHead(){const lead=aside.querySelector("#guideProductsCatalogLead"),link=aside.querySelector("#guideProductsCatalogLink");if(lead)lead.textContent=txt("catalog");if(link){link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";link.querySelector("strong").textContent=txt("products")}aside.querySelector(".guide-products-section-pill").textContent=cfg.label}
-  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  function setHead(){
+    const lead=aside.querySelector("#guideProductsCatalogLead");
+    const link=aside.querySelector("#guideProductsCatalogLink");
+    if(lead)lead.textContent=txt("catalog");
+    if(link){
+      link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";
+      const strong=link.querySelector("strong");
+      if(strong)strong.textContent=txt("products");
+    }
+    const pill=aside.querySelector(".guide-products-section-pill");
+    if(pill)pill.textContent=cfg.label;
+  }
+  function url(p){
+    try{
+      const u=new URL(String(p.url||""),location.href);
+      if(!/^https?:$/.test(u.protocol))return "#";
+      if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");
+      return u.href;
+    }catch(e){return "#"}
+  }
   async function load(){
     const key="kelonio-products:"+cfg.file;
-    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
-    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
+    try{
+      const c=JSON.parse(localStorage.getItem(key)||"null");
+      if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data;
+    }catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw Error("HTTP "+r.status);
+    const d=await r.json();
+    const list=Array.isArray(d)?d:Object.values(d||{});
+    try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}
+    return list;
   }
   function choose(list){
     const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
     const active=list.filter(p=>!p.status||norm(p.status)==="active");
-    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const ranked=active.map((p,i)=>{
+      const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));
+      let s=p.img?1:0;
+      cfg.terms.forEach(t=>{
+        const q=norm(t);
+        if(q&&hay.includes(q))s+=4;
+        if(q&&title.includes(q))s+=2;
+      });
+      return {p,i,s};
+    }).sort((a,b)=>b.s-a.s||a.i-b.i);
     const pool=ranked.slice(0,Math.min(36,ranked.length));
     for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
-  function fill(p){
-    card.innerHTML="";const l=lang();
-    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
-    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
-    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
-    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
-    const meta=document.createElement("div");meta.className="guide-products-meta";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  function dots(){
+    const d=document.getElementById("guideProductsDots");
+    if(!d)return;
+    d.innerHTML="";
+    items.forEach((_,i)=>{
+      const s=document.createElement("span");
+      s.className="guide-products-dot"+(i===idx?" active":"");
+      d.appendChild(s);
+    });
   }
-  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
-  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
-  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  function fill(p){
+    card.innerHTML="";
+    const l=lang();
+    const affiliate=url(p);
+
+    const media=document.createElement("div");
+    media.className="guide-products-media";
+    const imageLink=document.createElement("a");
+    imageLink.className="guide-products-image-link";
+    imageLink.href=affiliate;
+    imageLink.target="_blank";
+    imageLink.rel="noopener noreferrer sponsored";
+    imageLink.setAttribute("aria-label",String(byLang(p.label,l)||"Producto"));
+
+    const img=document.createElement("img");
+    img.src=p.img||"../img/Logo Zip.png";
+    img.alt=String(byLang(p.label,l)||"Producto");
+    img.loading="lazy";
+    img.referrerPolicy="no-referrer";
+    img.onerror=()=>{if(img.src.endsWith("/Logo%20Zip.png")||img.src.endsWith("/Logo Zip.png"))return;img.src="../img/Logo Zip.png"};
+    imageLink.appendChild(img);
+    media.appendChild(imageLink);
+
+    const cat=document.createElement("div");
+    cat.className="guide-products-category";
+    cat.textContent=p.subcategory||"Producto";
+
+    const h=document.createElement("h3");
+    h.className="guide-products-title";
+    h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+
+    const desc=document.createElement("p");
+    desc.className="guide-products-description";
+    desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ").replace(/\s*\d+[,.]\d{2}\s*€\s*$/," ").trim();
+
+    const meta=document.createElement("div");
+    meta.className="guide-products-meta";
+    const a=document.createElement("a");
+    a.className="guide-products-button";
+    a.href=affiliate;
+    a.target="_blank";
+    a.rel="noopener noreferrer sponsored";
+    a.textContent=txt("buy")+" ↗";
+    meta.append(a);
+
+    card.append(media,cat,h,desc,meta);
+    card.classList.remove("is-changing");
+    dots();
+  }
+  function render(next){
+    if(!items.length)return;
+    if(next){
+      card.classList.add("is-changing");
+      setTimeout(()=>fill(items[idx]),170);
+    }else fill(items[idx]);
+  }
+  function restart(){
+    clearInterval(timer);
+    const bar=document.getElementById("guideProductsTimer");
+    if(bar){
+      bar.style.animation="none";
+      requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite");
+    }
+    timer=setInterval(()=>{
+      if(document.hidden||items.length<2)return;
+      idx=(idx+1)%items.length;
+      render(true);
+    },5000);
+  }
+  function boot(){
+    setHead();
+    load().then(list=>{
+      items=choose(list);
+      if(!items.length){card.textContent=txt("empty");return}
+      render(false);
+      restart();
+    }).catch(()=>{card.textContent=txt("empty")});
+  }
+  document.addEventListener("kelonio:languageChanged",()=>{
+    setHead();
+    if(items.length)fill(items[idx]);
+  });
+  document.addEventListener("visibilitychange",()=>{
+    if(!document.hidden&&items.length>1)restart();
+  });
   document.addEventListener("DOMContentLoaded",boot,{once:true});
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();

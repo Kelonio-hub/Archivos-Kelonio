@@ -379,6 +379,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 @media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
 @media(max-width:650px){.guide-products-media{height:170px}}
 
+.guide-products-image-link{display:block;text-decoration:none;color:inherit}.guide-products-image-link img{cursor:pointer;display:block;width:100%;height:auto}
 </style>
 
 <!-- ==========================================================
@@ -1134,7 +1135,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Lector de tarjetas SD o método para gestionar sus archivos.", 
       txt_req3: "Guía de Actualización Obligatoria", 
       txt_reqBtn: "Ir a la Guía Act3DS", 
-      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       
       txt_h2_step1: "PASO 1: Identificar el Motivo",
       txt_s1_1: "El fallo se manifiesta comúnmente con la pantalla negra y el mensaje 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1160,7 +1160,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD card reader or method to manage its files.", 
       txt_req3: "Mandatory Update Guide", 
       txt_reqBtn: "Go to Act3DS Guide", 
-      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       
       txt_h2_step1: "STEP 1: Identify the Cause",
       txt_s1_1: "The failure commonly manifests with a black screen and the message 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1186,7 +1185,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Lecteur de carte SD ou méthode pour gérer ses fichiers.", 
       txt_req3: "Guide de Mise à Jour Obligatoire", 
       txt_reqBtn: "Aller au Guide Act3DS", 
-      txt_reqNote: "* Vous pouvez voir nos <a href='../productos.html' class='mini-btn'>produits</a>",
       
       txt_h2_step1: "ÉTAPE 1: Identifier la Cause",
       txt_s1_1: "La panne se manifeste couramment par un écran noir et le message 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1212,7 +1210,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD-Kartenleser oder Methode zur Verwaltung der Dateien.", 
       txt_req3: "Obligatorischer Update-Leitfaden", 
       txt_reqBtn: "Zum Act3DS-Leitfaden", 
-      txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
       
       txt_h2_step1: "SCHRITT 1: Ursache identifizieren",
       txt_s1_1: "Der Fehler äußert sich meist durch einen schwarzen Bildschirm und die Meldung 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1238,7 +1235,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Lettore di schede SD o metodo per gestire i file.", 
       txt_req3: "Guida di Aggiornamento Obbligatoria", 
       txt_reqBtn: "Vai alla Guida Act3DS", 
-      txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
       
       txt_h2_step1: "PASSO 1: Identificare il Motivo",
       txt_s1_1: "Il problema si manifesta comunemente con una schermata nera e il messaggio 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1264,7 +1260,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Leitor de cartões SD ou método para gerir os seus ficheiros.", 
       txt_req3: "Guia de Atualização Obrigatório", 
       txt_reqBtn: "Ir para o Guia Act3DS", 
-      txt_reqNote: "* Pode visualizar os nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
       
       txt_h2_step1: "PASSO 1: Identificar o Motivo",
       txt_s1_1: "A falha manifesta-se commumente com um ecrã preto e a mensagem 'Failed to apply 1 FIRM patch(es)'.", 
@@ -1290,7 +1285,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SDカードリーダーまたはファイルを管理する方法。", 
       txt_req3: "必須のアップデートガイド", 
       txt_reqBtn: "Act3DSガイドへ進む", 
-      txt_reqNote: "* <a href='../productos.html' class='mini-btn'>製品</a>を確認することができます",
       
       txt_h2_step1: "ステップ 1: 原因の特定",
       txt_s1_1: "このエラーは通常、黒い画面に「Failed to apply 1 FIRM patch(es)」というメッセージが表示されて発生します。", 
@@ -1316,7 +1310,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD 카드 리더기 또는 파일을 관리할 수 있는 방법.", 
       txt_req3: "필수 업데이트 가이드", 
       txt_reqBtn: "Act3DS 가이드로 이동", 
-      txt_reqNote: "* 제공되는 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다",
       
       txt_h2_step1: "1단계: 원인 파악",
       txt_s1_1: "이 오류는 일반적으로 검은 화면과 함께 'Failed to apply 1 FIRM patch(es)'라는 메시지가 표시되면서 나타납니다.", 
@@ -1452,7 +1445,8 @@ document.addEventListener("DOMContentLoaded", () => {
       idiomaActual = e.target.value; 
       localStorage.setItem('preferredLanguage', idiomaActual); 
       updateLanguage();
-      cargarSidebar(); 
+      cargarSidebar();
+      document.dispatchEvent(new CustomEvent('kelonio:languageChanged')); 
     });
   }
 
@@ -1700,8 +1694,8 @@ document.addEventListener("DOMContentLoaded", () => {
     de:{catalog:"Sie können unsere",products:"Produkte",buy:"Produkt ansehen",empty:"Keine Produkte verfügbar"},
     it:{catalog:"Puoi visualizzare i nostri",products:"prodotti",buy:"Vedi prodotto",empty:"Nessun prodotto disponibile"},
     pt:{catalog:"Pode visualizar os nossos",products:"produtos",buy:"Ver produto",empty:"Nenhum produto disponível"},
-    ja:{catalog:"当社の",products:"製品",buy:"商品を見る",empty:"商品がありません"},
-    ko:{catalog:"저희",products:"제품",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
+    ja:{catalog:"当社の",products:"製品をご覧いただけます",buy:"商品を見る",empty:"商品がありません"},
+    ko:{catalog:"저희",products:"제품을 확인하실 수 있습니다",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
   };
   const CACHE_MS=30*60*1000;
   let cfg,items=[],idx=0,timer=null;
@@ -1711,38 +1705,162 @@ document.addEventListener("DOMContentLoaded", () => {
   const aside=document.getElementById("guideProductsSidebar");
   const card=document.getElementById("guideProductsCard");
   if(!aside||!card)return;
-  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function lang(){
+    const saved=localStorage.getItem("preferredLanguage");
+    if(saved&&DICT[saved])return saved;
+    const current=(typeof idiomaActual!=="undefined"?idiomaActual:"");
+    if(DICT[current])return current;
+    const browser=(navigator.language||navigator.userLanguage||"es").split("-")[0].toLowerCase();
+    return DICT[browser]?browser:"es";
+  }
   function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
   function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
   function txt(k){return (DICT[lang()]||DICT.es)[k]}
-  function setHead(){const lead=aside.querySelector("#guideProductsCatalogLead"),link=aside.querySelector("#guideProductsCatalogLink");if(lead)lead.textContent=txt("catalog");if(link){link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";link.querySelector("strong").textContent=txt("products")}aside.querySelector(".guide-products-section-pill").textContent=cfg.label}
-  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  function setHead(){
+    const lead=aside.querySelector("#guideProductsCatalogLead");
+    const link=aside.querySelector("#guideProductsCatalogLink");
+    if(lead)lead.textContent=txt("catalog");
+    if(link){
+      link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";
+      const strong=link.querySelector("strong");
+      if(strong)strong.textContent=txt("products");
+    }
+    const pill=aside.querySelector(".guide-products-section-pill");
+    if(pill)pill.textContent=cfg.label;
+  }
+  function url(p){
+    try{
+      const u=new URL(String(p.url||""),location.href);
+      if(!/^https?:$/.test(u.protocol))return "#";
+      if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");
+      return u.href;
+    }catch(e){return "#"}
+  }
   async function load(){
     const key="kelonio-products:"+cfg.file;
-    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
-    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
+    try{
+      const c=JSON.parse(localStorage.getItem(key)||"null");
+      if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data;
+    }catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw Error("HTTP "+r.status);
+    const d=await r.json();
+    const list=Array.isArray(d)?d:Object.values(d||{});
+    try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}
+    return list;
   }
   function choose(list){
     const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
     const active=list.filter(p=>!p.status||norm(p.status)==="active");
-    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const ranked=active.map((p,i)=>{
+      const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));
+      let s=p.img?1:0;
+      cfg.terms.forEach(t=>{
+        const q=norm(t);
+        if(q&&hay.includes(q))s+=4;
+        if(q&&title.includes(q))s+=2;
+      });
+      return {p,i,s};
+    }).sort((a,b)=>b.s-a.s||a.i-b.i);
     const pool=ranked.slice(0,Math.min(36,ranked.length));
     for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
-  function fill(p){
-    card.innerHTML="";const l=lang();
-    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
-    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
-    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
-    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
-    const meta=document.createElement("div");meta.className="guide-products-meta";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  function dots(){
+    const d=document.getElementById("guideProductsDots");
+    if(!d)return;
+    d.innerHTML="";
+    items.forEach((_,i)=>{
+      const s=document.createElement("span");
+      s.className="guide-products-dot"+(i===idx?" active":"");
+      d.appendChild(s);
+    });
   }
-  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
-  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
-  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  function fill(p){
+    card.innerHTML="";
+    const l=lang();
+    const affiliate=url(p);
+
+    const media=document.createElement("div");
+    media.className="guide-products-media";
+    const imageLink=document.createElement("a");
+    imageLink.className="guide-products-image-link";
+    imageLink.href=affiliate;
+    imageLink.target="_blank";
+    imageLink.rel="noopener noreferrer sponsored";
+    imageLink.setAttribute("aria-label",String(byLang(p.label,l)||"Producto"));
+
+    const img=document.createElement("img");
+    img.src=p.img||"../img/Logo Zip.png";
+    img.alt=String(byLang(p.label,l)||"Producto");
+    img.loading="lazy";
+    img.referrerPolicy="no-referrer";
+    img.onerror=()=>{if(img.src.endsWith("/Logo%20Zip.png")||img.src.endsWith("/Logo Zip.png"))return;img.src="../img/Logo Zip.png"};
+    imageLink.appendChild(img);
+    media.appendChild(imageLink);
+
+    const cat=document.createElement("div");
+    cat.className="guide-products-category";
+    cat.textContent=p.subcategory||"Producto";
+
+    const h=document.createElement("h3");
+    h.className="guide-products-title";
+    h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+
+    const desc=document.createElement("p");
+    desc.className="guide-products-description";
+    desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ").replace(/\s*\d+[,.]\d{2}\s*€\s*$/," ").trim();
+
+    const meta=document.createElement("div");
+    meta.className="guide-products-meta";
+    const a=document.createElement("a");
+    a.className="guide-products-button";
+    a.href=affiliate;
+    a.target="_blank";
+    a.rel="noopener noreferrer sponsored";
+    a.textContent=txt("buy")+" ↗";
+    meta.append(a);
+
+    card.append(media,cat,h,desc,meta);
+    card.classList.remove("is-changing");
+    dots();
+  }
+  function render(next){
+    if(!items.length)return;
+    if(next){
+      card.classList.add("is-changing");
+      setTimeout(()=>fill(items[idx]),170);
+    }else fill(items[idx]);
+  }
+  function restart(){
+    clearInterval(timer);
+    const bar=document.getElementById("guideProductsTimer");
+    if(bar){
+      bar.style.animation="none";
+      requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite");
+    }
+    timer=setInterval(()=>{
+      if(document.hidden||items.length<2)return;
+      idx=(idx+1)%items.length;
+      render(true);
+    },5000);
+  }
+  function boot(){
+    setHead();
+    load().then(list=>{
+      items=choose(list);
+      if(!items.length){card.textContent=txt("empty");return}
+      render(false);
+      restart();
+    }).catch(()=>{card.textContent=txt("empty")});
+  }
+  document.addEventListener("kelonio:languageChanged",()=>{
+    setHead();
+    if(items.length)fill(items[idx]);
+  });
+  document.addEventListener("visibilitychange",()=>{
+    if(!document.hidden&&items.length>1)restart();
+  });
   document.addEventListener("DOMContentLoaded",boot,{once:true});
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();
