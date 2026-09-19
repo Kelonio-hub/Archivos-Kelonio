@@ -645,8 +645,38 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </style>
 <link href="../assets/accessibility.css" rel="stylesheet"/>
 <meta content="Todo lo que necesitas saber sobre Godmode9." name="description"/>
+
+<style id="kelonio-youtube-wall-static">
+html.youtube-wall-locked, body.youtube-wall-locked{overflow:hidden!important}
+body.youtube-wall-locked #accessWallOverlay{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,9,12,.97);color:#fff}
+.youtube-access-card{width:min(92vw,560px);padding:42px 34px 32px;text-align:center;border-radius:24px;background:linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));border:1px solid rgba(255,255,255,.12);box-shadow:0 25px 80px rgba(0,0,0,.45)}
+.youtube-access-icon{width:62px;height:44px;margin:0 auto 22px;border-radius:12px;background:#e50914;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900}
+.youtube-access-card h1{margin:0 0 12px;font-size:2rem;font-weight:900;color:#fff}
+.youtube-access-lead{margin:0 auto 12px;max-width:470px;font-size:1.05rem;line-height:1.55;color:#f2f2f2}
+.youtube-access-detail{margin:0 auto 22px;max-width:470px;font-size:.92rem;line-height:1.5;color:#aeb3bd}
+.youtube-access-status{min-height:22px;margin:0 0 12px;color:#cfd3da;font-weight:700;font-size:.84rem}
+.youtube-access-btn{width:100%;border:0;border-radius:12px;padding:14px 20px;background:#e50914;color:#fff;font:900 1rem/1.2 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+.youtube-access-btn:disabled{opacity:.72;cursor:wait}
+.youtube-access-youtube{display:block;margin:13px 0 0;color:#aeb3bd;text-decoration:none;font-size:.8rem;font-weight:700}
+.youtube-access-brand{margin-top:24px;color:#686e79;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:600px){body.youtube-wall-locked #accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
+</style>
+
 </head>
-<body>
+<body class="youtube-wall-locked">
+<div id="accessWallOverlay" role="dialog" aria-modal="true" aria-labelledby="youtubeAccessTitle">
+  <div class="youtube-access-card" role="document">
+    <div class="youtube-access-icon" aria-hidden="true">▶</div>
+    <h1 id="youtubeAccessTitle"></h1>
+    <p class="youtube-access-lead" id="youtubeAccessLead"></p>
+    <p class="youtube-access-detail" id="youtubeAccessDetail"></p>
+    <div class="youtube-access-status" id="youtubeAccessStatus" role="status" aria-live="polite"></div>
+    <button type="button" class="youtube-access-btn" id="youtubeAccessSubscribe"></button>
+    <a class="youtube-access-youtube" id="youtubeAccessOpenYoutube" target="_blank" rel="noopener noreferrer"></a>
+    <div class="youtube-access-brand">YouTube · Kelonio</div>
+  </div>
+</div>
+
 <div id="mainHub">
 <div class="topbar">
 <div class="topbar-left">
@@ -1867,6 +1897,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();
 </script>
+
+
+<!-- Suscripción directa YouTube con Google Identity Services -->
+<script src="../js/youtube-auth-config.js"></script>
+<script src="../js/youtube-auth.js" defer></script>
 
 </body>
 </html>
