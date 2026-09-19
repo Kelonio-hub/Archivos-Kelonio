@@ -664,6 +664,10 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 .sidebar-fallback a{color:var(--red);font-weight:800;text-decoration:none}
 
 </style>
+<style id="kelonio-no-legacy-youtube-cta">
+#youtube-cta-box, .youtube-cta-box { display:none !important; visibility:hidden !important; height:0 !important; min-height:0 !important; margin:0 !important; padding:0 !important; border:0 !important; overflow:hidden !important; }
+.youtube-cta-member { display:none !important; }
+</style>
 </head>
 <body class="youtube-wall-locked">
 <div id="accessWallOverlay" role="dialog" aria-modal="true" aria-labelledby="youtubeAccessTitle">
@@ -1731,7 +1735,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Suscripción directa YouTube con Google Identity Services -->
 <script src="../js/youtube-auth-config.js"></script>
-<script src="../js/youtube-auth.js" defer></script>
+<script src="../js/youtube-auth.js?v=23" defer></script>
 
 </body>
 </html>
