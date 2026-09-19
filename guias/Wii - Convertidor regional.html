@@ -535,46 +535,90 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 </script>
 <link href="../assets/accessibility.css" rel="stylesheet"/>
 <meta content="Permite el intercambio regional de juegos de Wii y bloquea sus actualizaciones." name="description"/>
+<style id="kelonio-v14-layout-fix">
 
-<style id="kelonio-youtube-wall-static">
-html.youtube-wall-locked, body.youtube-wall-locked{overflow:hidden!important}
-body.youtube-wall-locked #accessWallOverlay{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,9,12,.97);color:#fff}
-.youtube-access-card{width:min(92vw,560px);padding:42px 34px 32px;text-align:center;border-radius:24px;background:linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));border:1px solid rgba(255,255,255,.12);box-shadow:0 25px 80px rgba(0,0,0,.45)}
-.youtube-access-icon{width:62px;height:44px;margin:0 auto 22px;border-radius:12px;background:#e50914;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900}
-.youtube-access-card h1{margin:0 0 12px;font-size:2rem;font-weight:900;color:#fff}
-.youtube-access-lead{margin:0 auto 12px;max-width:470px;font-size:1.05rem;line-height:1.55;color:#f2f2f2}
-.youtube-access-detail{margin:0 auto 22px;max-width:470px;font-size:.92rem;line-height:1.5;color:#aeb3bd}
-.youtube-access-status{min-height:22px;margin:0 0 12px;color:#cfd3da;font-weight:700;font-size:.84rem}
-.youtube-access-btn{width:100%;border:0;border-radius:12px;padding:14px 20px;background:#e50914;color:#fff;font:900 1rem/1.2 'Segoe UI',system-ui,sans-serif;cursor:pointer}
-.youtube-access-btn:disabled{opacity:.72;cursor:wait}
-.youtube-access-youtube{display:block;margin:13px 0 0;color:#aeb3bd;text-decoration:none;font-size:.8rem;font-weight:700}
-.youtube-access-brand{margin-top:24px;color:#686e79;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-@media(max-width:600px){body.youtube-wall-locked #accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
+/* ================= V14 — LAYOUT ROBUSTO DE GUÍAS ================= */
+.main-layout{
+  width:100%;
+  max-width:1600px;
+  box-sizing:border-box;
+  margin:80px auto 0;
+  padding:20px;
+  gap:24px;
+  align-items:start;
+}
+
+.guide-title-container{width:100%;min-width:0;box-sizing:border-box;}
+.guide-title-container h1{
+  font-size:clamp(1.8rem, 3.25vw, 2.8rem) !important;
+  line-height:1.16 !important;
+  white-space:normal !important;
+  display:block !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  overflow-wrap:break-word !important;
+  word-break:normal !important;
+  hyphens:auto !important;
+  text-wrap:balance !important;
+}
+
+.guide-container{min-width:0;max-width:none;box-sizing:border-box;overflow:hidden;}
+.guide-header{min-width:0;}
+.guide-header h1{overflow-wrap:break-word;}
+
+.guide-products-sidebar{box-sizing:border-box;min-width:0;}
+.guide-products-title{overflow-wrap:anywhere;}
+.guide-products-description{overflow-wrap:anywhere;}
+
+/* Tres columnas cuando hay espacio real: guía izquierda + contenido + productos derecha. */
+@media (min-width:1181px){
+  .main-layout{
+    display:grid;
+    grid-template-columns:minmax(250px,270px) minmax(0,1fr) minmax(250px,270px);
+  }
+  .sidebar,.guide-products-sidebar{width:auto;flex:none;}
+}
+
+/* Tablet / ventanas estrechas: mantenemos el panel de guías lateral.
+   El catálogo de productos baja debajo del contenido para que nunca tape títulos. */
+@media (min-width:761px) and (max-width:1180px){
+  .main-layout{
+    display:grid;
+    grid-template-columns:minmax(195px,220px) minmax(0,1fr);
+    gap:18px;
+    padding:16px;
+    margin-top:65px;
+  }
+  .sidebar{width:auto;flex:none;grid-column:1;grid-row:1;}
+  .guide-container{width:auto;grid-column:2;grid-row:1;}
+  .guide-products-sidebar{
+    width:100%;
+    max-width:none;
+    position:static;
+    grid-column:1 / -1;
+    grid-row:2;
+    margin-top:2px;
+  }
+}
+
+/* En móvil mantenemos una sola columna y el menú de guías se abre desde su botón. */
+@media (max-width:760px){
+  .main-layout{width:100%;max-width:none;display:flex;flex-direction:column;margin-top:15px;padding:10px;gap:14px;}
+  .guide-container{width:100%;order:1;padding:20px !important;}
+  .guide-products-sidebar{width:100%;position:static;order:2;max-width:none;margin-top:0;}
+  .sidebar{width:100%;position:static;order:3;max-height:none;}
+  .guide-title-container h1{font-size:clamp(1.55rem,7vw,2rem) !important;line-height:1.18 !important;}
+}
+
+
+.sidebar-fallback{display:flex;flex-direction:column;gap:10px;text-align:center;color:var(--text-main);font-size:.9rem;padding:8px}
+.sidebar-fallback strong{font-size:1.02rem}
+.sidebar-fallback a{color:var(--red);font-weight:800;text-decoration:none}
+
 </style>
-
-<script id="kelonio-youtube-cache-guard">
-(function(){
-  try {
-    var raw = localStorage.getItem('kelonio.youtube.access.v11');
-    if (!raw) return;
-    var d = JSON.parse(raw);
-    var ts = Number(d && d.verifiedAt || 0);
-    var ok = !!(d && d.verified === true && ts > 0 && (Date.now() - ts) >= 0 && (Date.now() - ts) < 86400000);
-    if (ok) document.documentElement.classList.add('kelonio-youtube-cache-valid');
-  } catch (_) {}
-})();
-</script>
-<style id="kelonio-youtube-cache-guard-style">
-html.kelonio-youtube-cache-valid body.youtube-wall-locked{overflow:auto!important}
-html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
-</style>
-
 </head>
-<body class="youtube-wall-locked">
-<div id="accessWallOverlay" role="dialog" aria-modal="true" aria-labelledby="youtubeAccessTitle">
-  <div class="youtube-access-card" role="document">
-    <div class="youtube-access-icon" aria-hidden="true">▶</div>
-    <h1 id="youtubeAccessTitle"></h1>
+<body>
+<h1 id="youtubeAccessTitle"></h1>
     <p class="youtube-access-lead" id="youtubeAccessLead"></p>
     <p class="youtube-access-detail" id="youtubeAccessDetail"></p>
     <div class="youtube-access-status" id="youtubeAccessStatus" role="status" aria-live="polite"></div>
@@ -630,6 +674,7 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 </div>
 <div class="main-layout">
 <aside class="sidebar" id="guideSidebar">
+<div class="sidebar-fallback" aria-hidden="true"><strong>Otras Guías</strong><a href="../guias.html">Ver todas las guías</a></div>
 <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
 </aside>
 <main class="guide-container">

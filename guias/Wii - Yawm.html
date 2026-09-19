@@ -569,6 +569,87 @@ html.kelonio-youtube-cache-valid body.youtube-wall-locked{overflow:auto!importan
 html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 </style>
 
+<style id="kelonio-v14-layout-fix">
+
+/* ================= V14 — LAYOUT ROBUSTO DE GUÍAS ================= */
+.main-layout{
+  width:100%;
+  max-width:1600px;
+  box-sizing:border-box;
+  margin:80px auto 0;
+  padding:20px;
+  gap:24px;
+  align-items:start;
+}
+
+.guide-title-container{width:100%;min-width:0;box-sizing:border-box;}
+.guide-title-container h1{
+  font-size:clamp(1.8rem, 3.25vw, 2.8rem) !important;
+  line-height:1.16 !important;
+  white-space:normal !important;
+  display:block !important;
+  max-width:100% !important;
+  margin:0 auto 10px !important;
+  overflow-wrap:break-word !important;
+  word-break:normal !important;
+  hyphens:auto !important;
+  text-wrap:balance !important;
+}
+
+.guide-container{min-width:0;max-width:none;box-sizing:border-box;overflow:hidden;}
+.guide-header{min-width:0;}
+.guide-header h1{overflow-wrap:break-word;}
+
+.guide-products-sidebar{box-sizing:border-box;min-width:0;}
+.guide-products-title{overflow-wrap:anywhere;}
+.guide-products-description{overflow-wrap:anywhere;}
+
+/* Tres columnas cuando hay espacio real: guía izquierda + contenido + productos derecha. */
+@media (min-width:1181px){
+  .main-layout{
+    display:grid;
+    grid-template-columns:minmax(250px,270px) minmax(0,1fr) minmax(250px,270px);
+  }
+  .sidebar,.guide-products-sidebar{width:auto;flex:none;}
+}
+
+/* Tablet / ventanas estrechas: mantenemos el panel de guías lateral.
+   El catálogo de productos baja debajo del contenido para que nunca tape títulos. */
+@media (min-width:761px) and (max-width:1180px){
+  .main-layout{
+    display:grid;
+    grid-template-columns:minmax(195px,220px) minmax(0,1fr);
+    gap:18px;
+    padding:16px;
+    margin-top:65px;
+  }
+  .sidebar{width:auto;flex:none;grid-column:1;grid-row:1;}
+  .guide-container{width:auto;grid-column:2;grid-row:1;}
+  .guide-products-sidebar{
+    width:100%;
+    max-width:none;
+    position:static;
+    grid-column:1 / -1;
+    grid-row:2;
+    margin-top:2px;
+  }
+}
+
+/* En móvil mantenemos una sola columna y el menú de guías se abre desde su botón. */
+@media (max-width:760px){
+  .main-layout{width:100%;max-width:none;display:flex;flex-direction:column;margin-top:15px;padding:10px;gap:14px;}
+  .guide-container{width:100%;order:1;padding:20px !important;}
+  .guide-products-sidebar{width:100%;position:static;order:2;max-width:none;margin-top:0;}
+  .sidebar{width:100%;position:static;order:3;max-height:none;}
+  .guide-title-container h1{font-size:clamp(1.55rem,7vw,2rem) !important;line-height:1.18 !important;}
+}
+
+
+.sidebar-fallback{display:flex;flex-direction:column;gap:10px;text-align:center;color:var(--text-main);font-size:.9rem;padding:8px}
+.sidebar-fallback strong{font-size:1.02rem}
+.sidebar-fallback a{color:var(--red);font-weight:800;text-decoration:none}
+
+</style>
 </head>
 <body class="youtube-wall-locked">
 <div id="accessWallOverlay" role="dialog" aria-modal="true" aria-labelledby="youtubeAccessTitle">
@@ -630,6 +711,7 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 </div>
 <div class="main-layout">
 <aside class="sidebar" id="guideSidebar">
+<div class="sidebar-fallback" aria-hidden="true"><strong>Otras Guías</strong><a href="../guias.html">Ver todas las guías</a></div>
 <div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
 </aside>
 <main class="guide-container">
