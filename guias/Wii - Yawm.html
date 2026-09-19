@@ -379,6 +379,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 @media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
 @media(max-width:650px){.guide-products-media{height:170px}}
 
+.guide-products-image-link{display:block;text-decoration:none;color:inherit}.guide-products-image-link img{cursor:pointer;display:block;width:100%;height:auto}
 </style>
 
 <!-- ==========================================================
@@ -1035,7 +1036,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Tarjeta SD o unidad USB conectada.", 
       txt_req3: "Archivos de YAWM ModMii Edition", 
       txt_reqBtn: "Descargar YAWM", 
-      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       
       txt_h2_step1: "PASO 1: Funciones Generales",
       txt_s1_1: "Permite crear y eliminar accesos directos en el menú Home de la consola.", 
@@ -1060,7 +1060,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD card or USB drive connected.", 
       txt_req3: "YAWM ModMii Edition files", 
       txt_reqBtn: "Download YAWM", 
-      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       
       txt_h2_step1: "STEP 1: General Features",
       txt_s1_1: "Allows creating and deleting shortcuts on the Home menu.", 
@@ -1085,7 +1084,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Carte SD ou clé USB connectée.", 
       txt_req3: "Fichiers de YAWM ModMii Edition", 
       txt_reqBtn: "Télécharger YAWM", 
-      txt_reqNote: "* Vous pouvez consulter nos <a href='../productos.html' class='mini-btn'>produits</a>",
       
       txt_h2_step1: "ÉTAPE 1 : Caractéristiques Générales",
       txt_s1_1: "Permet de créer et de supprimer des raccourcis dans le menu Home.", 
@@ -1110,7 +1108,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD-Karte oder USB-Laufwerk angeschlossen.", 
       txt_req3: "YAWM ModMii Edition Dateien", 
       txt_reqBtn: "YAWM herunterladen", 
-      txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
       
       txt_h2_step1: "SCHRITT 1: Allgemeine Funktionen",
       txt_s1_1: "Ermöglicht das Erstellen und Löschen von Verknüpfungen im Home-Menü.", 
@@ -1135,7 +1132,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Scheda SD o unità USB collegata.", 
       txt_req3: "File YAWM ModMii Edition", 
       txt_reqBtn: "Scarica YAWM", 
-      txt_reqNote: "* Puoi visualizzare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
       
       txt_h2_step1: "PASSO 1: Funzionalità Generali",
       txt_s1_1: "Permette di creare e rimuovere scorciatoie nel menu Home.", 
@@ -1160,7 +1156,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Cartão SD ou unidade USB conectada.", 
       txt_req3: "Arquivos do YAWM ModMii Edition", 
       txt_reqBtn: "Baixar YAWM", 
-      txt_reqNote: "* Pode ver os nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
       
       txt_h2_step1: "PASSO 1: Funcionalidades Gerais",
       txt_s1_1: "Permite criar e remover atalhos no menu Home.", 
@@ -1185,7 +1180,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SDカードまたはUSBドライブ。", 
       txt_req3: "YAWM ModMii Editionのファイル", 
       txt_reqBtn: "YAWMをダウンロード", 
-      txt_reqNote: "* 私たちの<a href='../productos.html' class='mini-btn'>製品</a>を確認できます",
       
       txt_h2_step1: "ステップ 1：一般的な機能",
       txt_s1_1: "Homeメニューのショートカットを作成および削除できます。", 
@@ -1210,7 +1204,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD 카드 또는 USB 드라이브.", 
       txt_req3: "YAWM ModMii Edition 파일", 
       txt_reqBtn: "YAWM 다운로드", 
-      txt_reqNote: "* 우리의 <a href='../productos.html' class='mini-btn'>제품</a>을 확인할 수 있습니다",
       
       txt_h2_step1: "1단계: 일반 기능",
       txt_s1_1: "홈 메뉴에서 바로 가기를 만들고 삭제할 수 있습니다.", 
@@ -1346,7 +1339,8 @@ document.addEventListener("DOMContentLoaded", () => {
       idiomaActual = e.target.value; 
       localStorage.setItem('preferredLanguage', idiomaActual); 
       updateLanguage();
-      cargarSidebar(); 
+      cargarSidebar();
+      document.dispatchEvent(new CustomEvent('kelonio:languageChanged')); 
     });
   }
 
@@ -1594,8 +1588,8 @@ document.addEventListener("DOMContentLoaded", () => {
     de:{catalog:"Sie können unsere",products:"Produkte",buy:"Produkt ansehen",empty:"Keine Produkte verfügbar"},
     it:{catalog:"Puoi visualizzare i nostri",products:"prodotti",buy:"Vedi prodotto",empty:"Nessun prodotto disponibile"},
     pt:{catalog:"Pode visualizar os nossos",products:"produtos",buy:"Ver produto",empty:"Nenhum produto disponível"},
-    ja:{catalog:"当社の",products:"製品",buy:"商品を見る",empty:"商品がありません"},
-    ko:{catalog:"저희",products:"제품",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
+    ja:{catalog:"当社の",products:"製品をご覧いただけます",buy:"商品を見る",empty:"商品がありません"},
+    ko:{catalog:"저희",products:"제품을 확인하실 수 있습니다",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
   };
   const CACHE_MS=30*60*1000;
   let cfg,items=[],idx=0,timer=null;
@@ -1605,38 +1599,162 @@ document.addEventListener("DOMContentLoaded", () => {
   const aside=document.getElementById("guideProductsSidebar");
   const card=document.getElementById("guideProductsCard");
   if(!aside||!card)return;
-  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function lang(){
+    const saved=localStorage.getItem("preferredLanguage");
+    if(saved&&DICT[saved])return saved;
+    const current=(typeof idiomaActual!=="undefined"?idiomaActual:"");
+    if(DICT[current])return current;
+    const browser=(navigator.language||navigator.userLanguage||"es").split("-")[0].toLowerCase();
+    return DICT[browser]?browser:"es";
+  }
   function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
   function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
   function txt(k){return (DICT[lang()]||DICT.es)[k]}
-  function setHead(){const lead=aside.querySelector("#guideProductsCatalogLead"),link=aside.querySelector("#guideProductsCatalogLink");if(lead)lead.textContent=txt("catalog");if(link){link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";link.querySelector("strong").textContent=txt("products")}aside.querySelector(".guide-products-section-pill").textContent=cfg.label}
-  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  function setHead(){
+    const lead=aside.querySelector("#guideProductsCatalogLead");
+    const link=aside.querySelector("#guideProductsCatalogLink");
+    if(lead)lead.textContent=txt("catalog");
+    if(link){
+      link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";
+      const strong=link.querySelector("strong");
+      if(strong)strong.textContent=txt("products");
+    }
+    const pill=aside.querySelector(".guide-products-section-pill");
+    if(pill)pill.textContent=cfg.label;
+  }
+  function url(p){
+    try{
+      const u=new URL(String(p.url||""),location.href);
+      if(!/^https?:$/.test(u.protocol))return "#";
+      if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");
+      return u.href;
+    }catch(e){return "#"}
+  }
   async function load(){
     const key="kelonio-products:"+cfg.file;
-    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
-    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
+    try{
+      const c=JSON.parse(localStorage.getItem(key)||"null");
+      if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data;
+    }catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw Error("HTTP "+r.status);
+    const d=await r.json();
+    const list=Array.isArray(d)?d:Object.values(d||{});
+    try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}
+    return list;
   }
   function choose(list){
     const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
     const active=list.filter(p=>!p.status||norm(p.status)==="active");
-    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const ranked=active.map((p,i)=>{
+      const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));
+      let s=p.img?1:0;
+      cfg.terms.forEach(t=>{
+        const q=norm(t);
+        if(q&&hay.includes(q))s+=4;
+        if(q&&title.includes(q))s+=2;
+      });
+      return {p,i,s};
+    }).sort((a,b)=>b.s-a.s||a.i-b.i);
     const pool=ranked.slice(0,Math.min(36,ranked.length));
     for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
-  function fill(p){
-    card.innerHTML="";const l=lang();
-    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
-    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
-    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
-    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
-    const meta=document.createElement("div");meta.className="guide-products-meta";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  function dots(){
+    const d=document.getElementById("guideProductsDots");
+    if(!d)return;
+    d.innerHTML="";
+    items.forEach((_,i)=>{
+      const s=document.createElement("span");
+      s.className="guide-products-dot"+(i===idx?" active":"");
+      d.appendChild(s);
+    });
   }
-  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
-  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
-  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  function fill(p){
+    card.innerHTML="";
+    const l=lang();
+    const affiliate=url(p);
+
+    const media=document.createElement("div");
+    media.className="guide-products-media";
+    const imageLink=document.createElement("a");
+    imageLink.className="guide-products-image-link";
+    imageLink.href=affiliate;
+    imageLink.target="_blank";
+    imageLink.rel="noopener noreferrer sponsored";
+    imageLink.setAttribute("aria-label",String(byLang(p.label,l)||"Producto"));
+
+    const img=document.createElement("img");
+    img.src=p.img||"../img/Logo Zip.png";
+    img.alt=String(byLang(p.label,l)||"Producto");
+    img.loading="lazy";
+    img.referrerPolicy="no-referrer";
+    img.onerror=()=>{if(img.src.endsWith("/Logo%20Zip.png")||img.src.endsWith("/Logo Zip.png"))return;img.src="../img/Logo Zip.png"};
+    imageLink.appendChild(img);
+    media.appendChild(imageLink);
+
+    const cat=document.createElement("div");
+    cat.className="guide-products-category";
+    cat.textContent=p.subcategory||"Producto";
+
+    const h=document.createElement("h3");
+    h.className="guide-products-title";
+    h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+
+    const desc=document.createElement("p");
+    desc.className="guide-products-description";
+    desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ").replace(/\s*\d+[,.]\d{2}\s*€\s*$/," ").trim();
+
+    const meta=document.createElement("div");
+    meta.className="guide-products-meta";
+    const a=document.createElement("a");
+    a.className="guide-products-button";
+    a.href=affiliate;
+    a.target="_blank";
+    a.rel="noopener noreferrer sponsored";
+    a.textContent=txt("buy")+" ↗";
+    meta.append(a);
+
+    card.append(media,cat,h,desc,meta);
+    card.classList.remove("is-changing");
+    dots();
+  }
+  function render(next){
+    if(!items.length)return;
+    if(next){
+      card.classList.add("is-changing");
+      setTimeout(()=>fill(items[idx]),170);
+    }else fill(items[idx]);
+  }
+  function restart(){
+    clearInterval(timer);
+    const bar=document.getElementById("guideProductsTimer");
+    if(bar){
+      bar.style.animation="none";
+      requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite");
+    }
+    timer=setInterval(()=>{
+      if(document.hidden||items.length<2)return;
+      idx=(idx+1)%items.length;
+      render(true);
+    },5000);
+  }
+  function boot(){
+    setHead();
+    load().then(list=>{
+      items=choose(list);
+      if(!items.length){card.textContent=txt("empty");return}
+      render(false);
+      restart();
+    }).catch(()=>{card.textContent=txt("empty")});
+  }
+  document.addEventListener("kelonio:languageChanged",()=>{
+    setHead();
+    if(items.length)fill(items[idx]);
+  });
+  document.addEventListener("visibilitychange",()=>{
+    if(!document.hidden&&items.length>1)restart();
+  });
   document.addEventListener("DOMContentLoaded",boot,{once:true});
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();

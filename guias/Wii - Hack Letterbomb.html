@@ -379,6 +379,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 @media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
 @media(max-width:650px){.guide-products-media{height:170px}}
 
+.guide-products-image-link{display:block;text-decoration:none;color:inherit}.guide-products-image-link img{cursor:pointer;display:block;width:100%;height:auto}
 </style>
 
 <!-- ==========================================================
@@ -1068,7 +1069,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "Tarjeta SD en formato FAT32 de 4 a 32 GB y un Adaptador Auxiliar Usb-SD.", 
       txt_req3: "Web oficial de HackMii", 
       txt_reqBtn: "Ir a please.hackmii.com", 
-      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       txt_h2_step1: "PASO 1: ACTIVAR LETTERBOMB",
       txt_s1_1: "En la consola acudiremos a: Configuración de Wii > Internet > Datos de la consola Wii > Dirección MAC Wi-Fi. Anotaremos la dirección MAC que salga en pantalla.", 
       txt_s1_2: "Abre el navegador en el PC, acude a HackMii. Selecciona tu versión de sistema (U, E, J o K), ingresa tu MAC, completa el CAPTCHA, y haz clic en 'Cortar el cable rojo'. Descarga el .zip, descomprímelo y mete el contenido en la SD.",
@@ -1095,7 +1095,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req2: "SD Card (FAT32, 4 to 32 GB) and an SD-USB Adapter.", 
       txt_req3: "Official HackMii website", 
       txt_reqBtn: "Go to please.hackmii.com", 
-      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       txt_h2_step1: "STEP 1: ACTIVATE LETTERBOMB",
       txt_s1_1: "On the Wii go to: Wii Settings > Internet > Console Information > MAC Address. Write down the MAC Address.", 
       txt_s1_2: "On your PC, visit HackMii. Select your system menu version (U, E, J or K), input your MAC, complete the CAPTCHA, and click 'Cut the red wire'. Extract the downloaded .zip to your SD card.",
@@ -1117,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "HACK WII - LETTERBOMB",
       txt_alert1: "<strong>⚠️ Erreur Courante:</strong> La Wiimote s'éteint et impossible d'appuyer sur [1]. Utilisez une ancienne Wiimote sans Motion Plus intégré.",
       txt_h2_req: "Exigences", txt_req1: "Console Wii vierge version 4.3 (toutes régions).", txt_req2: "Carte SD FAT32 (4-32 Go) et adaptateur USB-SD.", 
-      txt_req3: "Site officiel de HackMii", txt_reqBtn: "Aller sur please.hackmii.com", txt_reqNote: "* Voir nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      txt_req3: "Site officiel de HackMii", txt_reqBtn: "Aller sur please.hackmii.com"
       txt_h2_step1: "ÉTAPE 1 : ACTIVER LETTERBOMB", txt_s1_1: "Sur la Wii, allez dans : Paramètres > Internet > Informations de la console > Adresse MAC.", 
       txt_s1_2: "Sur PC, allez sur HackMii, entrez votre version, votre MAC, le CAPTCHA, et cliquez sur 'Couper le fil rouge'. Extrayez le .zip sur la SD.", txt_s1_3: "Insérez la SD, ouvrez le Bureau Wii, ouvrez la Lettre Rouge. Attendez, appuyez sur [1] puis 'Continue'.",
       txt_h2_step2: "ÉTAPE 2 : INSTALLER HOMEBREW CHANNEL", txt_s2_1: "Sélectionnez 'Install The Homebrew Channel'. Une fois 'Success' affiché, appuyez sur 'Continue'.",
@@ -1133,7 +1132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "WII HACK - LETTERBOMB",
       txt_alert1: "<strong>⚠️ Häufiger Fehler:</strong> Wiimote trennt sich und [1] kann nicht gedrückt werden. Nutze eine ältere Wiimote ohne Motion Plus.",
       txt_h2_req: "Anforderungen", txt_req1: "Unberührte Wii-Konsole Version 4.3 (Alle Regionen).", txt_req2: "SD-Karte (FAT32, 4-32 GB) und SD-USB-Adapter.", 
-      txt_req3: "Offizielle HackMii Website", txt_reqBtn: "Gehe zu please.hackmii.com", txt_reqNote: "* Siehe unsere <a href='../productos.html' class='mini-btn'>Produkte</a>",
+      txt_req3: "Offizielle HackMii Website", txt_reqBtn: "Gehe zu please.hackmii.com"
       txt_h2_step1: "SCHRITT 1: LETTERBOMB AKTIVIEREN", txt_s1_1: "Gehe zu: Wii-Einstellungen > Internet > Konsoleninformationen > MAC-Adresse. Notieren.", 
       txt_s1_2: "Gehe am PC auf HackMii, gib Region, MAC und CAPTCHA ein, klicke auf 'Rotes Kabel durchschneiden'. Entpacke die ZIP-Datei auf die SD.", txt_s1_3: "SD einlegen, Wii-Pinnwand öffnen, roten Brief (Bombe) anklicken. Warten, [1] drücken, 'Continue' wählen.",
       txt_h2_step2: "SCHRITT 2: HOMEBREW CHANNEL INSTALLIEREN", txt_s2_1: "Wähle 'Install The Homebrew Channel'. Nach 'Success', wähle 'Continue'.",
@@ -1149,7 +1148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "MODIFICA WII - LETTERBOMB",
       txt_alert1: "<strong>⚠️ Errore Comune:</strong> Il Wiimote si scollega. Usa un telecomando vecchio senza Motion Plus integrato.",
       txt_h2_req: "Requisiti", txt_req1: "Console Wii originale in versione 4.3.", txt_req2: "Scheda SD FAT32 (4-32 GB) e adattatore USB.", 
-      txt_req3: "Sito HackMii", txt_reqBtn: "Vai a please.hackmii.com", txt_reqNote: "* Guarda i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      txt_req3: "Sito HackMii", txt_reqBtn: "Vai a please.hackmii.com"
       txt_h2_step1: "PASSO 1: ATTIVARE LETTERBOMB", txt_s1_1: "Su Wii: Impostazioni > Internet > Info Console > Indirizzo MAC.", 
       txt_s1_2: "Su PC, vai su HackMii, metti MAC e regione, completa il CAPTCHA, taglia il filo rosso ed estrai il .zip nella SD.", txt_s1_3: "Metti la SD nella Wii, apri la Bacheca, clicca la Lettera Rossa. Premi [1] e poi 'Continue'.",
       txt_h2_step2: "PASSO 2: INSTALLARE HOMEBREW CHANNEL", txt_s2_1: "Seleziona 'Install The Homebrew Channel'. Quando dice 'Success', premi 'Continue'.",
@@ -1165,7 +1164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "HACK WII - LETTERBOMB",
       txt_alert1: "<strong>⚠️ Erro Comum:</strong> O Wiimote desliga e não dá pra apertar [1]. Use um controle antigo sem Motion Plus.",
       txt_h2_req: "Requisitos", txt_req1: "Console Wii Virgem na versão 4.3.", txt_req2: "Cartão SD FAT32 (4 a 32 GB) e adaptador USB.", 
-      txt_req3: "Site HackMii", txt_reqBtn: "Ir para please.hackmii.com", txt_reqNote: "* Veja nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      txt_req3: "Site HackMii", txt_reqBtn: "Ir para please.hackmii.com"
       txt_h2_step1: "PASSO 1: ATIVAR LETTERBOMB", txt_s1_1: "No Wii: Configurações do Wii > Internet > Informações do Console > Endereço MAC.", 
       txt_s1_2: "No PC, acesse HackMii, coloque MAC, versão, CAPTCHA, clique em cortar fio vermelho. Extraia o .zip no SD.", txt_s1_3: "No Wii, abra o Mural do Wii, clique na Carta Vermelha. Aperte [1] e depois 'Continue'.",
       txt_h2_step2: "PASSO 2: INSTALAR HOMEBREW CHANNEL", txt_s2_1: "Selecione 'Install The Homebrew Channel'. Ao ver 'Success', pressione 'Continue'.",
@@ -1181,7 +1180,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "WIIハック - LETTERBOMB",
       txt_alert1: "<strong>⚠️ よくあるエラー:</strong> Wiimoteの接続が切れ [1] を押せない場合。Motion Plusが内蔵されていない古いリモコンを使用してください。",
       txt_h2_req: "要件", txt_req1: "バージョン4.3の未改造Wii本体（全リージョン対応）。", txt_req2: "FAT32フォーマットのSDカード（4～32GB）とUSBアダプター。", 
-      txt_req3: "HackMii公式サイト", txt_reqBtn: "please.hackmii.comへ行く", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>製品</a>もチェック",
+      txt_req3: "HackMii公式サイト", txt_reqBtn: "please.hackmii.comへ行く"
       txt_h2_step1: "ステップ 1: LETTERBOMBの有効化", txt_s1_1: "Wii設定 > インターネット > 本体情報 > MACアドレスをメモします。", 
       txt_s1_2: "PCでHackMiiにアクセスし、MACとリージョンを入力、CAPTCHAを完了し、赤い線を切ります。ZIPをSDに展開します。", txt_s1_3: "SDを挿入し、Wii伝言板から赤い手紙を開きます。[1]を押し、'Continue'を選択。",
       txt_h2_step2: "ステップ 2: HOMEBREW CHANNELのインストール", txt_s2_1: "'Install The Homebrew Channel'を選択。'Success'と出たら'Continue'を押します。",
@@ -1197,7 +1196,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_tag: "WII", txt_title: "WII 해킹 - LETTERBOMB",
       txt_alert1: "<strong>⚠️ 일반적인 오류:</strong> Wiimote 연결이 끊어져 [1]을 누를 수 없는 경우. Motion Plus가 없는 구형 리모컨을 사용하세요.",
       txt_h2_req: "요구 사항", txt_req1: "버전 4.3의 순정 Wii 콘솔.", txt_req2: "FAT32 형식의 SD 카드(4~32GB) 및 USB 어댑터.", 
-      txt_req3: "HackMii 공식 웹사이트", txt_reqBtn: "please.hackmii.com 방문", txt_reqNote: "* 당사의 <a href='../productos.html' class='mini-btn'>제품</a> 확인",
+      txt_req3: "HackMii 공식 웹사이트", txt_reqBtn: "please.hackmii.com 방문"
       txt_h2_step1: "1단계: LETTERBOMB 활성화", txt_s1_1: "Wii 설정 > 인터넷 > 본체 정보 > MAC 주소를 메모합니다.", 
       txt_s1_2: "PC에서 HackMii에 접속, MAC 및 지역 입력, 캡차 완료 후 빨간 선을 자릅니다. ZIP을 SD에 압축 해제합니다.", txt_s1_3: "SD를 넣고 Wii 게시판에서 빨간 편지를 엽니다. [1]을 누르고 'Continue'를 선택합니다.",
       txt_h2_step2: "2단계: HOMEBREW CHANNEL 설치", txt_s2_1: "'Install The Homebrew Channel' 선택. 'Success'가 나오면 'Continue'를 누릅니다.",
@@ -1330,7 +1329,8 @@ document.addEventListener("DOMContentLoaded", () => {
       idiomaActual = e.target.value; 
       localStorage.setItem('preferredLanguage', idiomaActual); 
       updateLanguage();
-      cargarSidebar(); 
+      cargarSidebar();
+      document.dispatchEvent(new CustomEvent('kelonio:languageChanged')); 
     });
   }
 
@@ -1578,8 +1578,8 @@ document.addEventListener("DOMContentLoaded", () => {
     de:{catalog:"Sie können unsere",products:"Produkte",buy:"Produkt ansehen",empty:"Keine Produkte verfügbar"},
     it:{catalog:"Puoi visualizzare i nostri",products:"prodotti",buy:"Vedi prodotto",empty:"Nessun prodotto disponibile"},
     pt:{catalog:"Pode visualizar os nossos",products:"produtos",buy:"Ver produto",empty:"Nenhum produto disponível"},
-    ja:{catalog:"当社の",products:"製品",buy:"商品を見る",empty:"商品がありません"},
-    ko:{catalog:"저희",products:"제품",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
+    ja:{catalog:"当社の",products:"製品をご覧いただけます",buy:"商品を見る",empty:"商品がありません"},
+    ko:{catalog:"저희",products:"제품을 확인하실 수 있습니다",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
   };
   const CACHE_MS=30*60*1000;
   let cfg,items=[],idx=0,timer=null;
@@ -1589,38 +1589,162 @@ document.addEventListener("DOMContentLoaded", () => {
   const aside=document.getElementById("guideProductsSidebar");
   const card=document.getElementById("guideProductsCard");
   if(!aside||!card)return;
-  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function lang(){
+    const saved=localStorage.getItem("preferredLanguage");
+    if(saved&&DICT[saved])return saved;
+    const current=(typeof idiomaActual!=="undefined"?idiomaActual:"");
+    if(DICT[current])return current;
+    const browser=(navigator.language||navigator.userLanguage||"es").split("-")[0].toLowerCase();
+    return DICT[browser]?browser:"es";
+  }
   function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
   function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
   function txt(k){return (DICT[lang()]||DICT.es)[k]}
-  function setHead(){const lead=aside.querySelector("#guideProductsCatalogLead"),link=aside.querySelector("#guideProductsCatalogLink");if(lead)lead.textContent=txt("catalog");if(link){link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";link.querySelector("strong").textContent=txt("products")}aside.querySelector(".guide-products-section-pill").textContent=cfg.label}
-  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  function setHead(){
+    const lead=aside.querySelector("#guideProductsCatalogLead");
+    const link=aside.querySelector("#guideProductsCatalogLink");
+    if(lead)lead.textContent=txt("catalog");
+    if(link){
+      link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";
+      const strong=link.querySelector("strong");
+      if(strong)strong.textContent=txt("products");
+    }
+    const pill=aside.querySelector(".guide-products-section-pill");
+    if(pill)pill.textContent=cfg.label;
+  }
+  function url(p){
+    try{
+      const u=new URL(String(p.url||""),location.href);
+      if(!/^https?:$/.test(u.protocol))return "#";
+      if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");
+      return u.href;
+    }catch(e){return "#"}
+  }
   async function load(){
     const key="kelonio-products:"+cfg.file;
-    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
-    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
+    try{
+      const c=JSON.parse(localStorage.getItem(key)||"null");
+      if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data;
+    }catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw Error("HTTP "+r.status);
+    const d=await r.json();
+    const list=Array.isArray(d)?d:Object.values(d||{});
+    try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}
+    return list;
   }
   function choose(list){
     const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
     const active=list.filter(p=>!p.status||norm(p.status)==="active");
-    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const ranked=active.map((p,i)=>{
+      const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));
+      let s=p.img?1:0;
+      cfg.terms.forEach(t=>{
+        const q=norm(t);
+        if(q&&hay.includes(q))s+=4;
+        if(q&&title.includes(q))s+=2;
+      });
+      return {p,i,s};
+    }).sort((a,b)=>b.s-a.s||a.i-b.i);
     const pool=ranked.slice(0,Math.min(36,ranked.length));
     for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
-  function fill(p){
-    card.innerHTML="";const l=lang();
-    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
-    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
-    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
-    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
-    const meta=document.createElement("div");meta.className="guide-products-meta";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  function dots(){
+    const d=document.getElementById("guideProductsDots");
+    if(!d)return;
+    d.innerHTML="";
+    items.forEach((_,i)=>{
+      const s=document.createElement("span");
+      s.className="guide-products-dot"+(i===idx?" active":"");
+      d.appendChild(s);
+    });
   }
-  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
-  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
-  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  function fill(p){
+    card.innerHTML="";
+    const l=lang();
+    const affiliate=url(p);
+
+    const media=document.createElement("div");
+    media.className="guide-products-media";
+    const imageLink=document.createElement("a");
+    imageLink.className="guide-products-image-link";
+    imageLink.href=affiliate;
+    imageLink.target="_blank";
+    imageLink.rel="noopener noreferrer sponsored";
+    imageLink.setAttribute("aria-label",String(byLang(p.label,l)||"Producto"));
+
+    const img=document.createElement("img");
+    img.src=p.img||"../img/Logo Zip.png";
+    img.alt=String(byLang(p.label,l)||"Producto");
+    img.loading="lazy";
+    img.referrerPolicy="no-referrer";
+    img.onerror=()=>{if(img.src.endsWith("/Logo%20Zip.png")||img.src.endsWith("/Logo Zip.png"))return;img.src="../img/Logo Zip.png"};
+    imageLink.appendChild(img);
+    media.appendChild(imageLink);
+
+    const cat=document.createElement("div");
+    cat.className="guide-products-category";
+    cat.textContent=p.subcategory||"Producto";
+
+    const h=document.createElement("h3");
+    h.className="guide-products-title";
+    h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+
+    const desc=document.createElement("p");
+    desc.className="guide-products-description";
+    desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ").replace(/\s*\d+[,.]\d{2}\s*€\s*$/," ").trim();
+
+    const meta=document.createElement("div");
+    meta.className="guide-products-meta";
+    const a=document.createElement("a");
+    a.className="guide-products-button";
+    a.href=affiliate;
+    a.target="_blank";
+    a.rel="noopener noreferrer sponsored";
+    a.textContent=txt("buy")+" ↗";
+    meta.append(a);
+
+    card.append(media,cat,h,desc,meta);
+    card.classList.remove("is-changing");
+    dots();
+  }
+  function render(next){
+    if(!items.length)return;
+    if(next){
+      card.classList.add("is-changing");
+      setTimeout(()=>fill(items[idx]),170);
+    }else fill(items[idx]);
+  }
+  function restart(){
+    clearInterval(timer);
+    const bar=document.getElementById("guideProductsTimer");
+    if(bar){
+      bar.style.animation="none";
+      requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite");
+    }
+    timer=setInterval(()=>{
+      if(document.hidden||items.length<2)return;
+      idx=(idx+1)%items.length;
+      render(true);
+    },5000);
+  }
+  function boot(){
+    setHead();
+    load().then(list=>{
+      items=choose(list);
+      if(!items.length){card.textContent=txt("empty");return}
+      render(false);
+      restart();
+    }).catch(()=>{card.textContent=txt("empty")});
+  }
+  document.addEventListener("kelonio:languageChanged",()=>{
+    setHead();
+    if(items.length)fill(items[idx]);
+  });
+  document.addEventListener("visibilitychange",()=>{
+    if(!document.hidden&&items.length>1)restart();
+  });
   document.addEventListener("DOMContentLoaded",boot,{once:true});
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();

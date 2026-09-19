@@ -379,6 +379,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 @media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
 @media(max-width:650px){.guide-products-media{height:170px}}
 
+.guide-products-image-link{display:block;text-decoration:none;color:inherit}.guide-products-image-link img{cursor:pointer;display:block;width:100%;height:auto}
 </style>
 
 <!-- ==========================================================
@@ -1094,7 +1095,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req5: "PC con Bluetooth y sistema LINUX.",
       txt_req3: "Archivos Hack", 
       txt_reqBtn: "Descargar Archivos", 
-      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
       
       txt_h2_step1: "PASO 1. DESCARGAR ARCHIVOS HACK",
       txt_s1_1: "Formatear el USB con <a href='../guias/SD - Guiformat.html' style='color:var(--red);'>guiformat-sd-fat32</a>.", 
@@ -1141,7 +1141,6 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_req5: "PC with Bluetooth and LINUX OS.",
       txt_req3: "Hack Files", 
       txt_reqBtn: "Download Files", 
-      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
       
       txt_h2_step1: "STEP 1. DOWNLOAD HACK FILES",
       txt_s1_1: "Format the USB with <a href='../guias/SD - Guiformat.html' style='color:var(--red);'>guiformat-sd-fat32</a>.", 
@@ -1179,7 +1178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "Vidéos", radar: "Radar des Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
       txt_tag: "WII MINI", txt_title: "HACK WII MINI - BLUEBOMB",
       txt_alert1: "<strong>⚠️ Important :</strong> La Wiimote s'éteint et vous ne pouvez pas appuyer sur [1] pour entrer dans Hackmii. Incompatibilité avec les nouvelles Wiimotes (Motion Plus intégré). Utilisez une ancienne Wiimote.",
-      txt_h2_req: "Exigences", txt_req1: "Console Wii vierge en version 4.3 (Toutes régions).", txt_req2: "USB formatée en Fat32.", txt_req4: "Adaptateur Bluetooth compatible Linux.", txt_req5: "PC avec Bluetooth et OS LINUX.", txt_req3: "Fichiers Hack", txt_reqBtn: "Télécharger les Fichiers", txt_reqNote: "* Vous pouvez voir nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      txt_h2_req: "Exigences", txt_req1: "Console Wii vierge en version 4.3 (Toutes régions).", txt_req2: "USB formatée en Fat32.", txt_req4: "Adaptateur Bluetooth compatible Linux.", txt_req5: "PC avec Bluetooth et OS LINUX.", txt_req3: "Fichiers Hack", txt_reqBtn: "Télécharger les Fichiers"
       txt_h2_step1: "ÉTAPE 1. TÉLÉCHARGER LES FICHIERS", txt_s1_1: "Formatez la clé USB avec guiformat-sd-fat32.", txt_s1_2: "Placez <code>boot.elf</code> à la racine de l'USB.", txt_s1_3: "Insérez l'USB à l'arrière de la console éteinte.", txt_s1_4: "Installez Linux Ubuntu sur le PC.",
       txt_h2_step2: "ÉTAPE 2. EXÉCUTER L'EXPLOIT", txt_s2_1: "Sur Ubuntu, vérifiez la connexion internet et le Bluetooth.", txt_s2_2: "Ouvrez le Terminal.", txt_s2_3: "Tapez <code>Sudo Su</code> (Entrée) et votre mot de passe.", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code> (Entrée).", txt_s2_7: "Choisissez <strong>[1] pour Wii</strong> ou <strong>[2] pour Wii Mini</strong>.", txt_s2_8: "Choisissez <strong>[1] Américaine</strong> ou <strong>[2] Européenne</strong>.", txt_s2_9: "Lorsque 'Waiting to accept' apparaît, passez à l'étape 3.",
       txt_h2_step3: "ÉTAPE 3. EXÉCUTER HACKMII", txt_s3_1: "Allumez la console. Sur l'écran d'avertissement, appuyez plusieurs fois sur SYNC.", txt_s3_2: "Vérifiez dans le terminal Ubuntu que la connexion est établie et attendez le payload.", txt_s3_3: "Si l'USB est reconnue, HackMii se lancera.",
@@ -1192,7 +1191,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "Videos", radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstütze uns auf Ko-fi",
       txt_tag: "WII MINI", txt_title: "WII MINI HACK - BLUEBOMB",
       txt_alert1: "<strong>⚠️ Wichtig:</strong> Die Wiimote schaltet sich aus und Sie können nicht [1] drücken. Dies liegt an neuen Wiimotes mit integriertem Motion Plus. Verwenden Sie eine alte Wiimote.",
-      txt_h2_req: "Voraussetzungen", txt_req1: "Unmodifizierte Wii-Konsole auf Version 4.3 (Alle Regionen).", txt_req2: "USB-Stick in Fat32.", txt_req4: "Linux-kompatibler Bluetooth-Adapter.", txt_req5: "PC mit Bluetooth und LINUX-Betriebssystem.", txt_req3: "Hack-Dateien", txt_reqBtn: "Dateien herunterladen", txt_reqNote: "* Sie können unsere <a href='../productos.html' class='mini-btn'>Produkte</a> ansehen",
+      txt_h2_req: "Voraussetzungen", txt_req1: "Unmodifizierte Wii-Konsole auf Version 4.3 (Alle Regionen).", txt_req2: "USB-Stick in Fat32.", txt_req4: "Linux-kompatibler Bluetooth-Adapter.", txt_req5: "PC mit Bluetooth und LINUX-Betriebssystem.", txt_req3: "Hack-Dateien", txt_reqBtn: "Dateien herunterladen"
       txt_h2_step1: "SCHRITT 1. DATEIEN HERUNTERLADEN", txt_s1_1: "Formatieren Sie den USB-Stick mit guiformat.", txt_s1_2: "Legen Sie <code>boot.elf</code> in das Stammverzeichnis des USB-Sticks.", txt_s1_3: "Stecken Sie den USB-Stick in die ausgeschaltete Konsole.", txt_s1_4: "Installieren Sie Linux Ubuntu auf dem PC.",
       txt_h2_step2: "SCHRITT 2. EXPLOIT AUSFÜHREN", txt_s2_1: "Überprüfen Sie in Ubuntu die Internet- und Bluetooth-Verbindung.", txt_s2_2: "Öffnen Sie das Terminal.", txt_s2_3: "Geben Sie <code>Sudo Su</code> ein (Enter) und dann das Passwort.", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code> (Enter).", txt_s2_7: "Wählen Sie <strong>[1] für Wii</strong> oder <strong>[2] für Wii Mini</strong>.", txt_s2_8: "Wählen Sie <strong>[1] Amerikanisch</strong> oder <strong>[2] Europäisch</strong>.", txt_s2_9: "Wenn 'Waiting to accept' erscheint, gehen Sie zu Schritt 3.",
       txt_h2_step3: "SCHRITT 3. HACKMII AUSFÜHREN", txt_s3_1: "Schalten Sie die Konsole ein. Drücken Sie beim Warnbildschirm wiederholt SYNC.", txt_s3_2: "Überprüfen Sie das Ubuntu-Terminal auf die Verbindung und warten Sie auf den Payload.", txt_s3_3: "HackMii wird gestartet, wenn der USB-Stick erkannt wurde.",
@@ -1205,7 +1204,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "Video", radar: "Radar degli Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
       txt_tag: "WII MINI", txt_title: "HACK WII MINI - BLUEBOMB",
       txt_alert1: "<strong>⚠️ Importante:</strong> Il telecomando Wiimote si spegne e non puoi premere [1]. C'è incompatibilità con i nuovi Wiimote con Motion Plus integrato. Usa un vecchio Wiimote.",
-      txt_h2_req: "Requisiti", txt_req1: "Console Wii vergine versione 4.3 (Tutte le Regioni).", txt_req2: "USB formattata in Fat32.", txt_req4: "Adattatore Bluetooth compatibile con Linux.", txt_req5: "PC con Bluetooth e sistema LINUX.", txt_req3: "File Hack", txt_reqBtn: "Scarica i File", txt_reqNote: "* Puoi controllare i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      txt_h2_req: "Requisiti", txt_req1: "Console Wii vergine versione 4.3 (Tutte le Regioni).", txt_req2: "USB formattata in Fat32.", txt_req4: "Adattatore Bluetooth compatibile con Linux.", txt_req5: "PC con Bluetooth e sistema LINUX.", txt_req3: "File Hack", txt_reqBtn: "Scarica i File"
       txt_h2_step1: "PASSO 1. SCARICA I FILE", txt_s1_1: "Formatta l'USB con guiformat.", txt_s1_2: "Metti <code>boot.elf</code> nella root dell'USB.", txt_s1_3: "Inserisci l'USB nel retro della console (spenta).", txt_s1_4: "Installa Linux Ubuntu sul PC.",
       txt_h2_step2: "PASSO 2. ESEGUI L'EXPLOIT", txt_s2_1: "Su Ubuntu, verifica connessione internet e Bluetooth.", txt_s2_2: "Apri il Terminale.", txt_s2_3: "Scrivi <code>Sudo Su</code> (Invio) e inserisci la Password.", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code> (Invio).", txt_s2_7: "Scegli <strong>[1] per Wii</strong> o <strong>[2] per Wii Mini</strong>.", txt_s2_8: "Scegli <strong>[1] Americana</strong> o <strong>[2] Europea</strong>.", txt_s2_9: "Quando appare 'Waiting to accept', vai al Passo 3.",
       txt_h2_step3: "PASSO 3. ESEGUI HACKMII", txt_s3_1: "Accendi la console. Nella schermata di Avvertenza, premi ripetutamente il tasto SYNC.", txt_s3_2: "Controlla il Terminale Ubuntu per la connessione e attendi il payload.", txt_s3_3: "Se l'USB viene riconosciuta, si aprirà HackMii.",
@@ -1218,7 +1217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "Vídeos", radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entrar no Discord", txt_kofi: "Apoie-nos no Ko-fi",
       txt_tag: "WII MINI", txt_title: "HACK WII MINI - BLUEBOMB",
       txt_alert1: "<strong>⚠️ Importante:</strong> O controle Wiimote desliga e você não consegue pressionar [1]. Incompatibilidade com novos Wiimotes com Motion Plus integrado. Use um Wiimote antigo.",
-      txt_h2_req: "Requisitos", txt_req1: "Console Wii original na versão 4.3 (Todas as Regiões).", txt_req2: "USB formatado em Fat32.", txt_req4: "Adaptador Bluetooth compatível com Linux.", txt_req5: "PC com Bluetooth e sistema LINUX.", txt_req3: "Arquivos Hack", txt_reqBtn: "Baixar Arquivos", txt_reqNote: "* Você pode ver nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      txt_h2_req: "Requisitos", txt_req1: "Console Wii original na versão 4.3 (Todas as Regiões).", txt_req2: "USB formatado em Fat32.", txt_req4: "Adaptador Bluetooth compatível com Linux.", txt_req5: "PC com Bluetooth e sistema LINUX.", txt_req3: "Arquivos Hack", txt_reqBtn: "Baixar Arquivos"
       txt_h2_step1: "PASSO 1. BAIXAR ARQUIVOS", txt_s1_1: "Formate o USB com guiformat.", txt_s1_2: "Coloque <code>boot.elf</code> na raiz do USB.", txt_s1_3: "Insira o USB na parte de trás do console (desligado).", txt_s1_4: "Instale Linux Ubuntu no PC.",
       txt_h2_step2: "PASSO 2. EXECUTAR EXPLOIT", txt_s2_1: "No Ubuntu, verifique a internet e o Bluetooth.", txt_s2_2: "Abra o Terminal.", txt_s2_3: "Digite <code>Sudo Su</code> (Enter) e sua Senha.", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code> (Enter).", txt_s2_7: "Escolha <strong>[1] para Wii</strong> ou <strong>[2] para Wii Mini</strong>.", txt_s2_8: "Escolha <strong>[1] Americana</strong> ou <strong>[2] Europeia</strong>.", txt_s2_9: "Quando a tela mostrar 'Waiting to accept', vá para o Passo 3.",
       txt_h2_step3: "PASSO 3. EXECUTAR HACKMII", txt_s3_1: "Ligue o console. Na tela de Aviso, pressione repetidamente o botão SYNC.", txt_s3_2: "Verifique o Terminal Ubuntu para a conexão e aguarde o payload.", txt_s3_3: "Se o USB for reconhecido, o HackMii abrirá.",
@@ -1231,7 +1230,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "ビデオ", radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
       txt_tag: "WII MINI", txt_title: "WII MINI ハック - BLUEBOMB",
       txt_alert1: "<strong>⚠️ 重要:</strong> Wiimoteの電源が切れ、[1]を押せません。Motion Plus内蔵の新しいWiimoteとは互換性がありません。古いWiimoteを使用してください。",
-      txt_h2_req: "要件", txt_req1: "バージョン4.3の未改造Wii本体（全リージョン対応）。", txt_req2: "Fat32形式のUSB。", txt_req4: "Linux対応のBluetoothアダプタ。", txt_req5: "BluetoothおよびLINUX OS搭載のPC。", txt_req3: "ハックファイル", txt_reqBtn: "ファイルをダウンロード", txt_reqNote: "* 私たちの<a href='../productos.html' class='mini-btn'>製品</a>を確認できます",
+      txt_h2_req: "要件", txt_req1: "バージョン4.3の未改造Wii本体（全リージョン対応）。", txt_req2: "Fat32形式のUSB。", txt_req4: "Linux対応のBluetoothアダプタ。", txt_req5: "BluetoothおよびLINUX OS搭載のPC。", txt_req3: "ハックファイル", txt_reqBtn: "ファイルをダウンロード"
       txt_h2_step1: "ステップ 1. ファイルのダウンロード", txt_s1_1: "guiformatでUSBをフォーマットします。", txt_s1_2: "USBのルートに<code>boot.elf</code>を配置します。", txt_s1_3: "USBを本体背面に挿入します（本体の電源はオフ）。", txt_s1_4: "PCにLinux Ubuntuをインストールします。",
       txt_h2_step2: "ステップ 2. エクスプロイトの実行", txt_s2_1: "UbuntuでネットとBluetoothを確認します。", txt_s2_2: "ターミナルを開きます。", txt_s2_3: "<code>Sudo Su</code>（Enter）を入力し、パスワードを入力します。", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code>（Enter）。", txt_s2_7: "<strong>[1] Wii</strong> または <strong>[2] Wii Mini</strong> を選択します。", txt_s2_8: "<strong>[1] アメリカ版</strong> または <strong>[2] ヨーロッパ版</strong> を選択します。", txt_s2_9: "画面に「Waiting to accept」と表示されたら、ステップ3に進みます。",
       txt_h2_step3: "ステップ 3. HACKMIIの実行", txt_s3_1: "本体の電源を入れます。警告画面でSYNCボタンを連打します。", txt_s3_2: "Ubuntuのターミナルで接続を確認し、ペイロードを待ちます。", txt_s3_3: "USBが認識されれば、HackMiiが起動します。",
@@ -1244,7 +1243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       txt_videos: "비디오", radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 가입", txt_kofi: "Ko-fi에서 후원하기",
       txt_tag: "WII MINI", txt_title: "WII MINI 해킹 - BLUEBOMB",
       txt_alert1: "<strong>⚠️ 중요:</strong> Wiimote가 꺼지고 [1]을 누를 수 없습니다. Motion Plus가 내장된 최신 Wiimote와 호환되지 않습니다. 구형 Wiimote를 사용하세요.",
-      txt_h2_req: "요구 사항", txt_req1: "버전 4.3의 순정 Wii 콘솔 (모든 지역 유효).", txt_req2: "Fat32로 포맷된 USB.", txt_req4: "Linux 호환 Bluetooth 어댑터.", txt_req5: "Bluetooth 및 LINUX OS가 있는 PC.", txt_req3: "해킹 파일", txt_reqBtn: "파일 다운로드", txt_reqNote: "* 저희 <a href='../productos.html' class='mini-btn'>제품</a>을 확인하실 수 있습니다",
+      txt_h2_req: "요구 사항", txt_req1: "버전 4.3의 순정 Wii 콘솔 (모든 지역 유효).", txt_req2: "Fat32로 포맷된 USB.", txt_req4: "Linux 호환 Bluetooth 어댑터.", txt_req5: "Bluetooth 및 LINUX OS가 있는 PC.", txt_req3: "해킹 파일", txt_reqBtn: "파일 다운로드"
       txt_h2_step1: "1단계. 파일 다운로드", txt_s1_1: "guiformat을 사용하여 USB를 포맷합니다.", txt_s1_2: "USB의 루트에 <code>boot.elf</code>를 놓습니다.", txt_s1_3: "콘솔 뒷면에 USB를 삽입합니다 (콘솔이 꺼져 있어야 함).", txt_s1_4: "PC에 Linux Ubuntu를 설치합니다.",
       txt_h2_step2: "2단계. 익스플로잇 실행", txt_s2_1: "Ubuntu에서 인터넷 및 Bluetooth 연결을 확인합니다.", txt_s2_2: "터미널을 엽니다.", txt_s2_3: "<code>Sudo Su</code> (Enter)를 입력하고 비밀번호를 입력합니다.", txt_s2_4: "<code>wget https://wii.hacks.guide/assets/files/bluebomb-helper.sh</code>", txt_s2_5: "<code>chmod +x bluebomb-helper.sh</code>", txt_s2_6: "<code>./bluebomb-helper.sh</code> (Enter).", txt_s2_7: "<strong>[1] Wii</strong> 또는 <strong>[2] Wii Mini</strong>를 선택합니다.", txt_s2_8: "<strong>[1] 미국판</strong> 또는 <strong>[2] 유럽판</strong>을 선택합니다.", txt_s2_9: "'Waiting to accept' 화면이 나타나면 3단계로 이동합니다.",
       txt_h2_step3: "3단계. HACKMII 실행", txt_s3_1: "콘솔을 켭니다. 경고 화면에서 SYNC 버튼을 반복해서 누릅니다.", txt_s3_2: "Ubuntu 터미널에서 연결을 확인하고 페이로드를 기다립니다.", txt_s3_3: "USB가 인식되면 HackMii가 시작됩니다.",
@@ -1375,7 +1374,8 @@ document.addEventListener("DOMContentLoaded", () => {
       idiomaActual = e.target.value; 
       localStorage.setItem('preferredLanguage', idiomaActual); 
       updateLanguage();
-      cargarSidebar(); 
+      cargarSidebar();
+      document.dispatchEvent(new CustomEvent('kelonio:languageChanged')); 
     });
   }
 
@@ -1623,8 +1623,8 @@ document.addEventListener("DOMContentLoaded", () => {
     de:{catalog:"Sie können unsere",products:"Produkte",buy:"Produkt ansehen",empty:"Keine Produkte verfügbar"},
     it:{catalog:"Puoi visualizzare i nostri",products:"prodotti",buy:"Vedi prodotto",empty:"Nessun prodotto disponibile"},
     pt:{catalog:"Pode visualizar os nossos",products:"produtos",buy:"Ver produto",empty:"Nenhum produto disponível"},
-    ja:{catalog:"当社の",products:"製品",buy:"商品を見る",empty:"商品がありません"},
-    ko:{catalog:"저희",products:"제품",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
+    ja:{catalog:"当社の",products:"製品をご覧いただけます",buy:"商品を見る",empty:"商品がありません"},
+    ko:{catalog:"저희",products:"제품을 확인하실 수 있습니다",buy:"제품 보기",empty:"사용 가능한 제품이 없습니다"}
   };
   const CACHE_MS=30*60*1000;
   let cfg,items=[],idx=0,timer=null;
@@ -1634,38 +1634,162 @@ document.addEventListener("DOMContentLoaded", () => {
   const aside=document.getElementById("guideProductsSidebar");
   const card=document.getElementById("guideProductsCard");
   if(!aside||!card)return;
-  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function lang(){
+    const saved=localStorage.getItem("preferredLanguage");
+    if(saved&&DICT[saved])return saved;
+    const current=(typeof idiomaActual!=="undefined"?idiomaActual:"");
+    if(DICT[current])return current;
+    const browser=(navigator.language||navigator.userLanguage||"es").split("-")[0].toLowerCase();
+    return DICT[browser]?browser:"es";
+  }
   function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
   function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
   function txt(k){return (DICT[lang()]||DICT.es)[k]}
-  function setHead(){const lead=aside.querySelector("#guideProductsCatalogLead"),link=aside.querySelector("#guideProductsCatalogLink");if(lead)lead.textContent=txt("catalog");if(link){link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";link.querySelector("strong").textContent=txt("products")}aside.querySelector(".guide-products-section-pill").textContent=cfg.label}
-  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  function setHead(){
+    const lead=aside.querySelector("#guideProductsCatalogLead");
+    const link=aside.querySelector("#guideProductsCatalogLink");
+    if(lead)lead.textContent=txt("catalog");
+    if(link){
+      link.href="https://kelonio-hub.github.io/Archivos-Kelonio/productos.html";
+      const strong=link.querySelector("strong");
+      if(strong)strong.textContent=txt("products");
+    }
+    const pill=aside.querySelector(".guide-products-section-pill");
+    if(pill)pill.textContent=cfg.label;
+  }
+  function url(p){
+    try{
+      const u=new URL(String(p.url||""),location.href);
+      if(!/^https?:$/.test(u.protocol))return "#";
+      if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");
+      return u.href;
+    }catch(e){return "#"}
+  }
   async function load(){
     const key="kelonio-products:"+cfg.file;
-    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
-    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
+    try{
+      const c=JSON.parse(localStorage.getItem(key)||"null");
+      if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data;
+    }catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw Error("HTTP "+r.status);
+    const d=await r.json();
+    const list=Array.isArray(d)?d:Object.values(d||{});
+    try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}
+    return list;
   }
   function choose(list){
     const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
     const active=list.filter(p=>!p.status||norm(p.status)==="active");
-    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const ranked=active.map((p,i)=>{
+      const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));
+      let s=p.img?1:0;
+      cfg.terms.forEach(t=>{
+        const q=norm(t);
+        if(q&&hay.includes(q))s+=4;
+        if(q&&title.includes(q))s+=2;
+      });
+      return {p,i,s};
+    }).sort((a,b)=>b.s-a.s||a.i-b.i);
     const pool=ranked.slice(0,Math.min(36,ranked.length));
     for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
     return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
-  function fill(p){
-    card.innerHTML="";const l=lang();
-    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
-    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
-    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
-    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
-    const meta=document.createElement("div");meta.className="guide-products-meta";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  function dots(){
+    const d=document.getElementById("guideProductsDots");
+    if(!d)return;
+    d.innerHTML="";
+    items.forEach((_,i)=>{
+      const s=document.createElement("span");
+      s.className="guide-products-dot"+(i===idx?" active":"");
+      d.appendChild(s);
+    });
   }
-  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
-  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
-  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  function fill(p){
+    card.innerHTML="";
+    const l=lang();
+    const affiliate=url(p);
+
+    const media=document.createElement("div");
+    media.className="guide-products-media";
+    const imageLink=document.createElement("a");
+    imageLink.className="guide-products-image-link";
+    imageLink.href=affiliate;
+    imageLink.target="_blank";
+    imageLink.rel="noopener noreferrer sponsored";
+    imageLink.setAttribute("aria-label",String(byLang(p.label,l)||"Producto"));
+
+    const img=document.createElement("img");
+    img.src=p.img||"../img/Logo Zip.png";
+    img.alt=String(byLang(p.label,l)||"Producto");
+    img.loading="lazy";
+    img.referrerPolicy="no-referrer";
+    img.onerror=()=>{if(img.src.endsWith("/Logo%20Zip.png")||img.src.endsWith("/Logo Zip.png"))return;img.src="../img/Logo Zip.png"};
+    imageLink.appendChild(img);
+    media.appendChild(imageLink);
+
+    const cat=document.createElement("div");
+    cat.className="guide-products-category";
+    cat.textContent=p.subcategory||"Producto";
+
+    const h=document.createElement("h3");
+    h.className="guide-products-title";
+    h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+
+    const desc=document.createElement("p");
+    desc.className="guide-products-description";
+    desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ").replace(/\s*\d+[,.]\d{2}\s*€\s*$/," ").trim();
+
+    const meta=document.createElement("div");
+    meta.className="guide-products-meta";
+    const a=document.createElement("a");
+    a.className="guide-products-button";
+    a.href=affiliate;
+    a.target="_blank";
+    a.rel="noopener noreferrer sponsored";
+    a.textContent=txt("buy")+" ↗";
+    meta.append(a);
+
+    card.append(media,cat,h,desc,meta);
+    card.classList.remove("is-changing");
+    dots();
+  }
+  function render(next){
+    if(!items.length)return;
+    if(next){
+      card.classList.add("is-changing");
+      setTimeout(()=>fill(items[idx]),170);
+    }else fill(items[idx]);
+  }
+  function restart(){
+    clearInterval(timer);
+    const bar=document.getElementById("guideProductsTimer");
+    if(bar){
+      bar.style.animation="none";
+      requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite");
+    }
+    timer=setInterval(()=>{
+      if(document.hidden||items.length<2)return;
+      idx=(idx+1)%items.length;
+      render(true);
+    },5000);
+  }
+  function boot(){
+    setHead();
+    load().then(list=>{
+      items=choose(list);
+      if(!items.length){card.textContent=txt("empty");return}
+      render(false);
+      restart();
+    }).catch(()=>{card.textContent=txt("empty")});
+  }
+  document.addEventListener("kelonio:languageChanged",()=>{
+    setHead();
+    if(items.length)fill(items[idx]);
+  });
+  document.addEventListener("visibilitychange",()=>{
+    if(!document.hidden&&items.length>1)restart();
+  });
   document.addEventListener("DOMContentLoaded",boot,{once:true});
   window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();
