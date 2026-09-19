@@ -844,159 +844,213 @@ html.kelonio-youtube-cache-valid #accessWallOverlay{display:none!important}
 <li id="txt_req2">Tarjeta SD con espacio suficiente.</li>
 <li><span id="txt_req3">Archivos de Anemone</span> <br/>
 
-<!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA ================= -->
-<div id="paypal-support-widget"
-     style="background: rgba(0,0,0,0.05); border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 15px; width: 100%; max-width: 500px; font-family: sans-serif; text-align: left;">
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V18 ================= -->
+<div id="paypal-support-widget" class="kelonio-download-widget" style="background: rgba(0,0,0,0.05); border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 15px; width: 100%; max-width: 500px; font-family: sans-serif; text-align: left; box-sizing: border-box;">
+  <label id="pp-title" style="font-size: 1.1rem; font-weight: bold; display:block; margin-bottom: 5px; color: var(--red);"></label>
+  <div id="pp-subtitle" style="font-size: 0.85rem; color: #666; margin-bottom: 15px;"></div>
 
-    <label id="pp-title"
-           style="font-size: 1.1rem; font-weight: bold; display:block; margin-bottom: 5px; color: var(--red);">
-    </label>
+  <div style="margin-bottom: 15px;">
+    <select id="pp-amount" aria-label="Acceso a los archivos" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
+      <option value="membership" id="pp-membership" selected></option>
+      <option value="0" id="pp-free"></option>
+      <option value="custom" id="pp-other-amount"></option>
+    </select>
 
-    <div id="pp-subtitle"
-         style="font-size: 0.85rem; color: #666; margin-bottom: 15px;"></div>
+    <input type="number" id="pp-custom-amount" style="display: none; padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; box-sizing: border-box;" min="0.50" step="0.50">
 
-    <div style="margin-bottom: 15px;">
-        <select id="pp-amount"
-                style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; width: 100%; font-size: 1rem; font-weight: bold; margin-bottom: 10px; cursor: pointer;">
-            <option value="0" id="pp-free"></option>
-            <option value="membership" id="pp-membership"></option>
-        </select>
+    <a href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-msg" target="_blank" rel="noopener noreferrer" style="display:none; margin-top:12px; padding:12px 14px; border-radius:10px; background:rgba(229,9,20,.08); color:var(--text-main,#222); font-size:.9rem; line-height:1.45; text-align:center; font-weight:800; text-decoration:none;">Verificando membresía…</a>
+  </div>
 
-        <div id="pp-membership-msg" style="display:none; margin-top:12px; padding:12px 14px; border-radius:10px; background:rgba(229,9,20,.08); color:var(--text-main,#222); font-size:.9rem; line-height:1.45; text-align:center; font-weight:800;"></div>
-    </div>
+  <div id="paypal-button-container" style="display: none; margin-top: 15px;"></div>
+  <div id="pp-paypal-loading" style="display:none; text-align:center; margin:10px 0; font-weight:800; font-size:.85rem; color:#777;"></div>
+  <div id="pp-success-msg" style="display: none; text-align: center; background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 8px; margin-bottom: 15px; font-weight: bold;"></div>
 
-    <a href="https://www.mediafire.com/folder/rhd4xcgmrhwry/Anemone" id="pp-download-btn"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="display: block; background: var(--red); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; width: 100%; cursor: pointer; box-sizing: border-box;">
-    </a>
+  <a href="https://www.mediafire.com/folder/rhd4xcgmrhwry/Anemone" id="pp-download-btn" target="_blank" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;"></a>
+</div>
 
-<script id="kelonio-membership-gate-v17">
+<script id="kelonio-download-access-v18">
 document.addEventListener("DOMContentLoaded", () => {
   'use strict';
   const amountSelect = document.getElementById('pp-amount');
   const freeOption = document.getElementById('pp-free');
   const membershipOption = document.getElementById('pp-membership');
+  const contributionOption = document.getElementById('pp-other-amount');
   const membershipMsg = document.getElementById('pp-membership-msg');
   const downloadBtn = document.getElementById('pp-download-btn');
+  const customAmountInput = document.getElementById('pp-custom-amount');
+  const paypalContainer = document.getElementById('paypal-button-container');
+  const paypalLoading = document.getElementById('pp-paypal-loading');
+  const successMsg = document.getElementById('pp-success-msg');
   const titleEl = document.getElementById('pp-title');
   const subtitleEl = document.getElementById('pp-subtitle');
-  if (!amountSelect || !freeOption || !membershipOption || !membershipMsg || !downloadBtn || !titleEl || !subtitleEl) return;
+  if (!amountSelect || !freeOption || !membershipOption || !contributionOption || !membershipMsg || !downloadBtn || !customAmountInput || !paypalContainer || !paypalLoading || !successMsg || !titleEl || !subtitleEl) return;
 
-  const T = {"es": {"title": "Acceso a los archivos", "subtitle": "Elige una opción para continuar.", "free": "Gratis", "membership": "Membresía", "download": "Descargar Archivos"}, "en": {"title": "File access", "subtitle": "Choose an option to continue.", "free": "Free", "membership": "Membership", "download": "Download Files"}, "fr": {"title": "Accès aux fichiers", "subtitle": "Choisissez une option pour continuer.", "free": "Gratuit", "membership": "Devenir membre", "download": "Télécharger les fichiers"}, "de": {"title": "Zugriff auf die Dateien", "subtitle": "Wähle eine Option, um fortzufahren.", "free": "Kostenlos", "membership": "Mitgliedschaft", "download": "Dateien herunterladen"}, "it": {"title": "Accesso ai file", "subtitle": "Scegli un'opzione per continuare.", "free": "Gratis", "membership": "Diventa membro", "download": "Scarica i file"}, "pt": {"title": "Acesso aos ficheiros", "subtitle": "Escolha uma opção para continuar.", "free": "Grátis", "membership": "Membresia", "download": "Descarregar ficheiros"}, "ja": {"title": "ファイルへのアクセス", "subtitle": "続行するにはオプションを選択してください。", "free": "無料", "membership": "メンバーシップ", "download": "ファイルをダウンロード"}, "ko": {"title": "파일 이용", "subtitle": "계속하려면 옵션을 선택하세요.", "free": "무료", "membership": "멤버십", "download": "파일 다운로드"}};
-  const WAIT_MS = 40 * 1000;
-  const CACHE_MS = 24 * 60 * 60 * 1000;
-  const STORAGE_KEY = 'kelonio.membership.access.v17';
-  const MEMBERSHIP_URL = 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join';
+  const T = {"es": {"title": "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", "subtitle": "(La opción gratuita siempre estará disponible)", "free": "Gratis", "membership": "Membresía", "contribution": "Contribución", "placeholder": "Ej: 2.50", "download": "Descargar Archivos", "success": "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente.", "verifying": "Verificando membresía…", "membershipAria": "Abrir la página de membresía y continuar", "paypalLoading": "Cargando PayPal…"}, "en": {"title": "You can now support the project! [FILES]", "subtitle": "(The free option will always be available)", "free": "Free", "membership": "Membership", "contribution": "Contribution", "placeholder": "Ex: 2.50", "download": "Download Files", "success": "Thank you for supporting the project. Your payment was successful.", "verifying": "Verifying membership…", "membershipAria": "Open the membership page and continue", "paypalLoading": "Loading PayPal…"}, "fr": {"title": "Vous pouvez désormais soutenir le projet ! [FICHIERS]", "subtitle": "(L'option gratuite sera toujours disponible)", "free": "Gratuit", "membership": "Devenir membre", "contribution": "Contribution", "placeholder": "Ex : 2.50", "download": "Télécharger les fichiers", "success": "Merci de soutenir le projet. Votre paiement a bien été reçu.", "verifying": "Vérification de l’adhésion…", "membershipAria": "Ouvrir la page d’adhésion et continuer", "paypalLoading": "Chargement de PayPal…"}, "de": {"title": "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", "subtitle": "(Die kostenlose Option wird immer verfügbar sein)", "free": "Kostenlos", "membership": "Mitgliedschaft", "contribution": "Beitrag", "placeholder": "Bsp: 2.50", "download": "Dateien herunterladen", "success": "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich.", "verifying": "Mitgliedschaft wird überprüft…", "membershipAria": "Mitgliedschaftsseite öffnen und fortfahren", "paypalLoading": "PayPal wird geladen…"}, "it": {"title": "Ora puoi sostenere il progetto! [FILE]", "subtitle": "(L'opzione gratuita sarà sempre disponibile)", "free": "Gratis", "membership": "Diventa membro", "contribution": "Contribuzione", "placeholder": "Es: 2.50", "download": "Scarica i file", "success": "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente.", "verifying": "Verifica dell’iscrizione…", "membershipAria": "Apri la pagina di iscrizione e continua", "paypalLoading": "Caricamento di PayPal…"}, "pt": {"title": "Agora você pode apoiar o projeto! [ARQUIVOS]", "subtitle": "(A opção gratuita estará sempre disponível)", "free": "Grátis", "membership": "Membresia", "contribution": "Contribuição", "placeholder": "Ex: 2.50", "download": "Baixar Arquivos", "success": "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso.", "verifying": "A verificar a membresia…", "membershipAria": "Abrir a página de adesão e continuar", "paypalLoading": "A carregar o PayPal…"}, "ja": {"title": "プロジェクトを支援できるようになりました！ [ファイル]", "subtitle": "（無料オプションは常に利用可能です）", "free": "無料", "membership": "メンバーシップ", "contribution": "貢献", "placeholder": "例: 2.50", "download": "ファイルをダウンロード", "success": "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。", "verifying": "メンバーシップを確認中…", "membershipAria": "メンバーシップページを開いて続行", "paypalLoading": "PayPalを読み込んでいます…"}, "ko": {"title": "이제 프로젝트를 후원할 수 있습니다! [파일]", "subtitle": "(무료 옵션은 항상 제공됩니다)", "free": "무료", "membership": "멤버십", "contribution": "기부금", "placeholder": "예: 2.50", "download": "파일 다운로드", "success": "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다.", "verifying": "멤버십 확인 중…", "membershipAria": "멤버십 페이지를 열고 계속", "paypalLoading": "PayPal 로드 중…"}};
+  const LOCALES = {"es": "es_ES", "en": "en_US", "fr": "fr_FR", "it": "it_IT", "de": "de_DE", "pt": "pt_PT", "ja": "ja_JP", "ko": "ko_KR"};
+  const JOIN_URL = 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join';
+  const PAYPAL_CLIENT_ID = 'BAAVNxy3Tb2YimilSFmYtRneRHtNa9WqZwfcVXSwpX88LHG9OCSn7hwPMTassgMIf5oyVHms5YdsmQpUZk';
+  const MEMBERSHIP_CACHE_KEY = 'kelonio.membership.access.v18';
+  const MEMBERSHIP_PENDING_KEY = 'kelonio.membership.pending.v18';
+  const MEMBERSHIP_CACHE_MS = 24 * 60 * 60 * 1000;
+  const MEMBERSHIP_WAIT_MS = 40 * 1000;
   let timer = null;
   let until = 0;
+  let paypalPromise = null;
+  let paypalRendered = false;
 
   function getLang() {
-    const current = String(window.idiomaActual || '').toLowerCase().split('-')[0];
-    const raw = current || String(localStorage.getItem('preferredLanguage') || document.documentElement.lang || navigator.language || 'es').toLowerCase();
-    const k = raw.split('-')[0];
-    return T[k] ? k : 'es';
-  }
-
-  function labels() { return T[getLang()] || T.es; }
-
-  function readCache() {
     try {
-      const v = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-      return v && Number(v.expiresAt) > Date.now() ? v : null;
-    } catch (_) { return null; }
+      const current = String(window.idiomaActual || '').toLowerCase().split('-')[0];
+      const pref = String(localStorage.getItem('preferredLanguage') || '').toLowerCase().split('-')[0];
+      const raw = current || pref || String(document.documentElement.lang || navigator.language || 'es').toLowerCase().split('-')[0];
+      return T[raw] ? raw : 'es';
+    } catch (_) { return 'es'; }
   }
-
-  function writeCache() {
-    try {
-      const now = Date.now();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({verifiedAt: now, expiresAt: now + CACHE_MS}));
-    } catch (_) {}
-  }
-
-  function clearTimer() {
-    if (timer) { clearInterval(timer); timer = null; }
-  }
-
-  function setDownload(visible) {
-    downloadBtn.style.display = visible ? 'block' : 'none';
-  }
-
+  function text() { return T[getLang()] || T.es; }
   function applyLanguage() {
-    const t = labels();
+    const t = text();
     titleEl.textContent = t.title;
     subtitleEl.textContent = t.subtitle;
-    freeOption.textContent = t.free;
     membershipOption.textContent = t.membership;
+    freeOption.textContent = t.free;
+    contributionOption.textContent = t.contribution;
+    customAmountInput.placeholder = t.placeholder;
     downloadBtn.textContent = t.download;
-    if (amountSelect.value === 'membership' && until > Date.now()) membershipMsg.textContent = t.verifying || 'Verifying membership…';
+    successMsg.textContent = t.success;
+    membershipMsg.textContent = t.verifying;
+    membershipMsg.setAttribute('aria-label', t.membershipAria);
+    paypalLoading.textContent = t.paypalLoading;
+    if (amountSelect.value === 'membership' && until > Date.now()) membershipMsg.textContent = t.verifying;
   }
-
-  Object.keys(T).forEach(k => T[k].verifying = {
-    es:'Verificando membresía…',
-    en:'Verifying membership…',
-    fr:'Vérification de l’adhésion…',
-    de:'Mitgliedschaft wird überprüft…',
-    it:'Verifica dell’iscrizione…',
-    pt:'A verificar a membresia…',
-    ja:'メンバーシップを確認中…',
-    ko:'멤버십 확인 중…'
-  }[k]);
-
-  function unlock() {
+  function readMembershipCache() {
+    try {
+      const raw = localStorage.getItem(MEMBERSHIP_CACHE_KEY);
+      if (!raw) return false;
+      const v = JSON.parse(raw);
+      if (!v || Number(v.expiresAt) <= Date.now()) { localStorage.removeItem(MEMBERSHIP_CACHE_KEY); return false; }
+      return v.verified === true;
+    } catch (_) { return false; }
+  }
+  function writeMembershipCache() {
+    try {
+      const now = Date.now();
+      localStorage.setItem(MEMBERSHIP_CACHE_KEY, JSON.stringify({verified:true, verifiedAt:now, expiresAt:now + MEMBERSHIP_CACHE_MS}));
+      localStorage.removeItem(MEMBERSHIP_PENDING_KEY);
+    } catch (_) {}
+  }
+  function readPendingUntil() {
+    try {
+      const v = Number(localStorage.getItem(MEMBERSHIP_PENDING_KEY) || 0);
+      return v > Date.now() ? v : 0;
+    } catch (_) { return 0; }
+  }
+  function writePendingUntil(v) { try { localStorage.setItem(MEMBERSHIP_PENDING_KEY, String(v)); } catch (_) {} }
+  function clearTimer() { if (timer) { clearInterval(timer); timer = null; } }
+  function unlockMembership() {
+    clearTimer(); until = 0; membershipMsg.style.display = 'none'; downloadBtn.style.display = 'block'; writeMembershipCache();
+  }
+  function showMembershipChecking() {
+    membershipMsg.textContent = text().verifying; membershipMsg.href = JOIN_URL; membershipMsg.style.display = 'block'; downloadBtn.style.display = 'none';
+  }
+  function tickMembership() {
+    if (Date.now() >= until) unlockMembership();
+    else showMembershipChecking();
+  }
+  function startMembershipGate(openPage) {
     clearTimer();
-    until = 0;
-    membershipMsg.style.display = 'none';
-    setDownload(true);
-    writeCache();
+    if (readMembershipCache()) { unlockMembership(); return; }
+    const pending = readPendingUntil();
+    until = pending || (Date.now() + MEMBERSHIP_WAIT_MS);
+    writePendingUntil(until);
+    if (openPage) {
+      try { window.open(JOIN_URL, '_blank', 'noopener,noreferrer'); } catch (_) {}
+    }
+    tickMembership();
+    timer = setInterval(tickMembership, 500);
   }
-
-  function showChecking() {
-    membershipMsg.textContent = labels().verifying;
-    membershipMsg.style.display = 'block';
-    setDownload(false);
+  function hideMembershipGate() {
+    clearTimer(); until=0; membershipMsg.style.display='none';
   }
-
-  function tick() {
-    if (Date.now() >= until) unlock();
-    else showChecking();
+  function resetPaymentView() {
+    successMsg.style.display='none';
+    paypalLoading.style.display='none';
+    customAmountInput.style.display='none';
+    paypalContainer.style.display='none';
+    paypalContainer.innerHTML='';
+    paypalRendered=false;
   }
-
-  function startMembership() {
-    clearTimer();
-    if (readCache()) { unlock(); return; }
-    setDownload(false);
-    const popup = window.open(MEMBERSHIP_URL, '_blank', 'noopener,noreferrer');
-    // The navigation is initiated by the user's select action. The timer is independent of popup result.
-    void popup;
-    until = Date.now() + WAIT_MS;
-    showChecking();
-    timer = setInterval(tick, 500);
+  function loadPayPalSDK() {
+    if (window.paypal) return Promise.resolve();
+    if (paypalPromise) return paypalPromise;
+    paypalPromise = new Promise((resolve,reject)=>{
+      const existing=document.getElementById('paypal-sdk-script-v18');
+      if(existing) { existing.addEventListener('load',resolve,{once:true}); existing.addEventListener('error',()=>reject(new Error('paypal_load_failed')),{once:true}); return; }
+      const script=document.createElement('script');
+      script.id='paypal-sdk-script-v18';
+      script.src='https://www.paypal.com/sdk/js?client-id='+encodeURIComponent(PAYPAL_CLIENT_ID)+'&currency=EUR&locale='+(LOCALES[getLang()]||'en_US');
+      script.onload=()=>resolve(); script.onerror=()=>reject(new Error('paypal_load_failed'));
+      document.head.appendChild(script);
+    });
+    return paypalPromise;
   }
-
-  function updateView() {
-    if (amountSelect.value === 'membership') {
-      if (readCache()) unlock();
-      else if (!timer) startMembership();
+  function renderPayPal() {
+    if (!window.paypal || paypalRendered) return;
+    paypalRendered=true; paypalContainer.innerHTML='';
+    window.paypal.Buttons({
+      createOrder: function(data, actions) {
+        let finalAmount=customAmountInput.value;
+        if (!finalAmount || parseFloat(finalAmount)<0.5) finalAmount='0.50';
+        return actions.order.create({ purchase_units:[{ amount:{ value:parseFloat(finalAmount).toFixed(2) } }] });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function() {
+          amountSelect.style.display='none'; customAmountInput.style.display='none'; paypalContainer.style.display='none'; paypalLoading.style.display='none'; successMsg.style.display='block'; downloadBtn.style.display='block';
+        });
+      }
+    }).render('#paypal-button-container');
+  }
+  async function showContribution() {
+    hideMembershipGate(); successMsg.style.display='none'; downloadBtn.style.display='none'; customAmountInput.style.display='block'; paypalContainer.style.display='block'; paypalLoading.style.display='block';
+    try { await loadPayPalSDK(); paypalLoading.style.display='none'; renderPayPal(); } catch (_) { paypalLoading.textContent='PayPal'; }
+  }
+  function showFree() {
+    hideMembershipGate(); resetPaymentView(); downloadBtn.style.display='block';
+  }
+  function updateView(fromUser) {
+    const value=amountSelect.value;
+    if (value==='membership') {
+      resetPaymentView();
+      if (readMembershipCache()) unlockMembership();
+      else startMembershipGate(Boolean(fromUser));
+    } else if (value==='0') {
+      clearTimer(); until=0; showFree();
     } else {
-      clearTimer();
-      membershipMsg.style.display = 'none';
-      until = 0;
-      setDownload(true);
+      clearTimer(); until=0; showContribution();
     }
   }
-
-  amountSelect.addEventListener('change', updateView);
-  document.addEventListener('kelonio:languageChanged', applyLanguage);
-  const langSelector = document.getElementById('languageSelector');
-  if (langSelector) langSelector.addEventListener('change', () => setTimeout(applyLanguage, 0));
+  amountSelect.addEventListener('change', ()=>updateView(true));
+  membershipMsg.addEventListener('click', (ev)=>{
+    if (!readMembershipCache()) {
+      ev.preventDefault();
+      startMembershipGate(true);
+    } else { unlockMembership(); }
+  });
+  const languageSelector=document.getElementById('languageSelector');
+  if(languageSelector) languageSelector.addEventListener('change',()=>setTimeout(()=>{ applyLanguage(); if(amountSelect.value==='contribution'){} },0));
+  document.addEventListener('kelonio:languageChanged',()=>setTimeout(applyLanguage,0));
 
   applyLanguage();
-  amountSelect.value = '0';
-  setDownload(true);
+  amountSelect.value='membership';
+  if (readMembershipCache()) unlockMembership();
+  else {
+    // Membership is the first/default choice, but opening YouTube is kept behind a user gesture.
+    membershipMsg.style.display='block';
+    membershipMsg.textContent=text().verifying;
+    downloadBtn.style.display='none';
+  }
 });
 </script>
-<!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA ================= -->
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V18 ================= -->
 
 </li>
 </ul>
