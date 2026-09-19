@@ -346,6 +346,37 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   }
 }
 
+
+/* ======== ESCAPARATE DE PRODUCTOS RELACIONADOS ======== */
+.guide-products-sidebar{width:285px;flex:0 0 285px;position:sticky;top:90px;align-self:flex-start;max-height:calc(100vh - 110px);overflow:hidden;background:var(--card-bg);border:1px solid var(--glass-border);border-radius:16px;padding:16px;backdrop-filter:blur(10px);transition:.3s}
+.guide-products-sidebar:hover{border-color:rgba(var(--glow-rgb),.45)}
+.guide-products-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px}
+.guide-products-heading{margin:0;color:var(--text-main);font-size:1rem;font-weight:900}
+.guide-products-subtitle{margin:4px 0 0;color:var(--text-muted);font-size:.74rem;line-height:1.35}
+.guide-products-section-pill{flex:0 0 auto;background:rgba(var(--glow-rgb),.12);color:var(--red);border:1px solid rgba(var(--glow-rgb),.25);border-radius:999px;padding:4px 8px;font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.4px}
+.guide-products-stage{min-height:365px}
+.guide-products-card{display:flex;flex-direction:column;gap:10px;min-height:350px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(var(--glow-rgb),.07),rgba(255,255,255,.015));border:1px solid var(--glass-border);opacity:1;transform:translateY(0);transition:opacity .3s ease,transform .3s ease,border-color .25s}
+.guide-products-card.is-changing{opacity:0;transform:translateY(7px)}
+.guide-products-media{width:100%;height:145px;display:flex;align-items:center;justify-content:center;padding:10px;border-radius:10px;background:rgba(255,255,255,.045);border:1px solid var(--glass-border);overflow:hidden}
+.guide-products-media img{width:100%;height:100%;object-fit:contain}
+.guide-products-category{color:var(--red);font-size:.64rem;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+.guide-products-title{margin:0;color:var(--text-main);font-size:.9rem;line-height:1.28;font-weight:800;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.guide-products-description{margin:0;color:var(--text-muted);font-size:.75rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:3.1em}
+.guide-products-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.guide-products-price{color:var(--red);font-size:1rem;font-weight:900;white-space:nowrap}
+.guide-products-button{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff!important;text-decoration:none;border-radius:8px;padding:8px 10px;font-size:.7rem;font-weight:900;transition:.2s}
+.guide-products-button:hover{filter:brightness(1.15);transform:translateY(-1px)}
+.guide-products-foot{margin-top:10px;display:flex;align-items:center;gap:8px}
+.guide-products-dots{display:flex;gap:5px;align-items:center;max-width:90px;flex-wrap:wrap}
+.guide-products-dot{width:6px;height:6px;border-radius:50%;background:var(--text-muted);opacity:.35;transition:.2s}.guide-products-dot.active{background:var(--red);opacity:1;transform:scale(1.35)}
+.guide-products-timer{height:3px;flex:1;background:rgba(127,127,127,.18);border-radius:999px;overflow:hidden}.guide-products-timer span{display:block;height:100%;width:0;background:var(--red);animation:guideProductsTimer 5s linear infinite}@keyframes guideProductsTimer{from{width:0}to{width:100%}}
+.guide-products-more{display:flex;align-items:center;justify-content:center;width:100%;margin-top:10px;color:var(--text-muted);text-decoration:none;font-size:.7rem;font-weight:800;padding:7px 8px;border:1px solid var(--glass-border);border-radius:8px;transition:.2s}.guide-products-more:hover{color:var(--text-main);border-color:rgba(var(--glow-rgb),.4);background:rgba(var(--glow-rgb),.07)}
+#recommended-product-box{display:none!important}
+@media(min-width:951px){.main-layout{max-width:1510px;gap:24px}}
+@media(max-width:1180px) and (min-width:951px){.sidebar{width:245px;flex-basis:245px}.guide-products-sidebar{width:255px;flex-basis:255px}.guide-container{padding:28px}}
+@media(max-width:950px){.guide-products-sidebar{width:100%;position:static;order:2;margin-top:20px;max-height:none}.guide-products-stage{min-height:0}.guide-products-card{min-height:0}.sidebar{order:3}}
+@media(max-width:650px){.guide-products-media{height:170px}}
+
 </style>
 
 <!-- ==========================================================
@@ -969,6 +1000,15 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 </div>
 </main>
+<aside class="guide-products-sidebar" id="guideProductsSidebar" aria-label="Productos relacionados con la guía">
+  <div class="guide-products-head">
+    <div><h2 class="guide-products-heading"></h2><p class="guide-products-subtitle"></p></div>
+    <span class="guide-products-section-pill"></span>
+  </div>
+  <div class="guide-products-stage"><article class="guide-products-card" id="guideProductsCard" aria-live="polite"></article></div>
+  <div class="guide-products-foot"><div class="guide-products-dots" id="guideProductsDots" aria-hidden="true"></div><div class="guide-products-timer"><span id="guideProductsTimer"></span></div></div>
+  <a class="guide-products-more" href="../productos.html"></a>
+</aside>
 </div>
 </div>
 <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Volver arriba">↑</button>
@@ -1527,92 +1567,71 @@ document.addEventListener("DOMContentLoaded", () => {
             </script>
 
 <script id="script-producto-recomendado">
-(function() {
-  let productoActualSeleccionado = null;
-
-  async function cargarProductoRecomendado() {
-    const box = document.getElementById('recommended-product-box');
-    if (!box) return;
-
-    const tagMeta = document.querySelector('meta[name="guide-tag"]');
-    const consoleTag = tagMeta ? tagMeta.content.split('/')[0].trim().toUpperCase() : 'ALL';
-
-    const endpoints = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
-    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
-
-    let todosLosProductos = [];
-    for (const file of endpoints) {
-      try {
-        const res = await fetch(baseUrl + file + '?t=' + Date.now());
-        if (res.ok) {
-          const data = await res.json();
-          const lista = Array.isArray(data) ? data : Object.values(data);
-          todosLosProductos = todosLosProductos.concat(lista);
-        }
-      } catch(e) {}
-    }
-
-    if (!todosLosProductos.length) return;
-
-    let coincidentes = todosLosProductos.filter(p => {
-      if (!p.console) return false;
-      const c = p.console.toUpperCase();
-      return c === consoleTag || (consoleTag.includes('WII') && c.includes('WII')) || (consoleTag.includes('3DS') && c.includes('3DS'));
-    });
-
-    if (!coincidentes.length) coincidentes = todosLosProductos;
-
-    productoActualSeleccionado = coincidentes[Math.floor(Math.random() * coincidentes.length)];
-    renderizarTarjetaProducto();
+(function(){
+  "use strict";
+  const MAP={
+    "SWITCH":{file:"switch.json",label:"Switch",terms:["switch","mando","funda","consola","accesorio","cargador"]},
+    "3DS":{file:"3ds.json",label:"3DS / NDS",terms:["3ds","nds","r4","tarjeta","bateria","cargador","pantalla","funda","hardware"]},
+    "NDSI":{file:"3ds.json",label:"3DS / NDS",terms:["nds","dsi","r4","tarjeta","bateria","cargador"]},
+    "WII":{file:"wii.json",label:"Wii",terms:["wii","mando","sensor","cable","nunchuk","juego"]},
+    "WII U":{file:"wii.json",label:"Wii U",terms:["wii u","wiiu","gamepad","mando","cable","juego"]},
+    "VWII":{file:"wii.json",label:"Wii / vWii",terms:["wii","mando","sensor","cable","nintendont","usb"]},
+    "WII MINI":{file:"wii.json",label:"Wii / Wii Mini",terms:["wii mini","wii","mando","cable","usb","sensor"]},
+    "WII / WII MINI / VWII":{file:"wii.json",label:"Wii / vWii / Wii Mini",terms:["wii","mando","cable","usb","sensor"]},
+    "SD":{file:"sd_usb.json",label:"SD / USB",terms:["sd","micro sd","usb","disco duro","adaptador","bateria","cable"]}
+  };
+  const DICT={
+    es:{title:"Productos relacionados",sub:"Accesorios de esta sección",buy:"Ver producto",more:"Ver catálogo completo",empty:"No hay productos disponibles"},
+    en:{title:"Related products",sub:"Accessories from this section",buy:"View product",more:"View full catalog",empty:"No products available"},
+    fr:{title:"Produits associés",sub:"Accessoires de cette section",buy:"Voir le produit",more:"Voir le catalogue",empty:"Aucun produit disponible"},
+    de:{title:"Passende Produkte",sub:"Zubehör aus diesem Bereich",buy:"Produkt ansehen",more:"Gesamtkatalog ansehen",empty:"Keine Produkte verfügbar"},
+    it:{title:"Prodotti correlati",sub:"Accessori di questa sezione",buy:"Vedi prodotto",more:"Catalogo completo",empty:"Nessun prodotto disponibile"},
+    pt:{title:"Produtos relacionados",sub:"Acessórios desta secção",buy:"Ver produto",more:"Ver catálogo",empty:"Nenhum produto disponível"},
+    ja:{title:"関連商品",sub:"このセクションのアクセサリー",buy:"商品を見る",more:"カタログを見る",empty:"商品がありません"},
+    ko:{title:"관련 제품",sub:"이 섹션의 액세서리",buy:"제품 보기",more:"전체 카탈로그",empty:"사용 가능한 제품이 없습니다"}
+  };
+  const CACHE_MS=30*60*1000;
+  let cfg,items=[],idx=0,timer=null;
+  const meta=document.querySelector('meta[name="guide-tag"]');
+  const tag=(meta?.content||"").trim().toUpperCase();
+  cfg=MAP[tag]||MAP["SD"];
+  const aside=document.getElementById("guideProductsSidebar");
+  const card=document.getElementById("guideProductsCard");
+  if(!aside||!card)return;
+  function lang(){return (typeof idiomaActual!=="undefined"&&idiomaActual)||localStorage.getItem("preferredLanguage")||"es"}
+  function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
+  function byLang(v,l){return typeof v==="string"?v:(v?.[l]||v?.es||v?.en||Object.values(v||{})[0]||"")}
+  function txt(k){return (DICT[lang()]||DICT.es)[k]}
+  function setHead(){aside.querySelector(".guide-products-heading").textContent=txt("title");aside.querySelector(".guide-products-subtitle").textContent=txt("sub");aside.querySelector(".guide-products-section-pill").textContent=cfg.label;aside.querySelector(".guide-products-more").textContent=txt("more")}
+  function url(p){try{const u=new URL(String(p.url||""),location.href);if(!/^https?:$/.test(u.protocol))return "#";if(!u.searchParams.has("tag"))u.searchParams.set("tag","kelonio-21");return u.href}catch(e){return "#"}}
+  async function load(){
+    const key="kelonio-products:"+cfg.file;
+    try{const c=JSON.parse(localStorage.getItem(key)||"null");if(c&&Array.isArray(c.data)&&Date.now()-c.ts<CACHE_MS)return c.data}catch(e){}
+    const r=await fetch("../productos/"+cfg.file+"?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const d=await r.json();const list=Array.isArray(d)?d:Object.values(d||{});try{localStorage.setItem(key,JSON.stringify({ts:Date.now(),data:list}))}catch(e){}return list;
   }
-
-  function renderizarTarjetaProducto() {
-    const box = document.getElementById('recommended-product-box');
-    if (!box || !productoActualSeleccionado) return;
-
-    const p = productoActualSeleccionado;
-    const lang = (typeof idiomaActual !== 'undefined') ? idiomaActual : 'es';
-
-    const label = (p.label && p.label[lang]) || (p.label && p.label['es']) || p.label || 'Accesorio Recomendado';
-    const desc = (p.desc && p.desc[lang]) || (p.desc && p.desc['es']) || p.desc || '';
-    const img = p.img || '../img/Logo Zip.png';
-    let url = p.url || '#';
-    if (url !== '#' && !url.includes('tag=')) {
-      url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21';
-    }
-
-    const dictBadge = {
-      es: 'Recomendado para tu consola', en: 'Recommended for your console',
-      fr: 'Recommandé pour votre console', de: 'Empfohlen für deine Konsole',
-      it: 'Consigliato per la tua console', pt: 'Recomendado para o seu console',
-      ja: 'あなたのゲーム機におすすめ', ko: '콘솔 추천 제품'
-    };
-
-    const dictBtn = {
-      es: 'Ver en Amazon', en: 'View on Amazon', fr: 'Voir sur Amazon',
-      de: 'Auf Amazon ansehen', it: 'Vedi su Amazon', pt: 'Ver na Amazon',
-      ja: 'Amazonで見る', ko: 'Amazonで見る'
-    };
-
-    box.innerHTML = `
-      <div class="product-card-widget">
-        <span class="product-badge">🛒 ${dictBadge[lang] || dictBadge['es']}</span>
-        <div class="product-card-body">
-          <img src="${img}" alt="${label}" class="product-card-img" />
-          <div class="product-card-info">
-            <h4 class="product-card-title">${label}</h4>
-            <div class="product-card-price">${p.price || ''}</div>
-            <p class="product-card-desc">${desc.replace(/\n/g, ' ')}</p>
-            <a href="${url}" target="_blank" rel="noopener noreferrer" class="product-card-btn">${dictBtn[lang] || dictBtn['es']} ↗</a>
-          </div>
-        </div>
-      </div>
-    `;
+  function choose(list){
+    const title=norm(document.querySelector("#txt_title,.guide-header h1")?.textContent||document.title);
+    const active=list.filter(p=>!p.status||norm(p.status)==="active");
+    const ranked=active.map((p,i)=>{const hay=norm([byLang(p.label,lang()),byLang(p.desc,lang()),p.subcategory,p.console].join(" "));let s=p.img?1:0;cfg.terms.forEach(t=>{const q=norm(t);if(q&&hay.includes(q))s+=4;if(q&&title.includes(q))s+=2});return {p,i,s}}).sort((a,b)=>b.s-a.s||a.i-b.i);
+    const pool=ranked.slice(0,Math.min(36,ranked.length));
+    for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+    return pool.slice(0,Math.min(8,pool.length)).map(x=>x.p);
   }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(cargarProductoRecomendado, 300);
-  });
+  function dots(){const d=document.getElementById("guideProductsDots");d.innerHTML="";items.forEach((_,i)=>{const s=document.createElement("span");s.className="guide-products-dot"+(i===idx?" active":"");d.appendChild(s)})}
+  function fill(p){
+    card.innerHTML="";const l=lang();
+    const media=document.createElement("div");media.className="guide-products-media";const img=document.createElement("img");img.src=p.img||"../img/Logo Zip.png";img.alt=String(byLang(p.label,l)||"Producto");img.loading="lazy";img.referrerPolicy="no-referrer";img.onerror=()=>{img.src="../img/Logo Zip.png"};media.appendChild(img);
+    const cat=document.createElement("div");cat.className="guide-products-category";cat.textContent=p.subcategory||"Producto";
+    const h=document.createElement("h3");h.className="guide-products-title";h.textContent=String(byLang(p.label,l)||"Producto recomendado");
+    const desc=document.createElement("p");desc.className="guide-products-description";desc.textContent=String(byLang(p.desc,l)||"").replace(/\s*\n\s*/g," ");
+    const meta=document.createElement("div");meta.className="guide-products-meta";const price=document.createElement("div");price.className="guide-products-price";price.textContent=p.price||"";const a=document.createElement("a");a.className="guide-products-button";a.href=url(p);a.target="_blank";a.rel="noopener noreferrer sponsored";a.textContent=txt("buy")+" ↗";meta.append(price,a);card.append(media,cat,h,desc,meta);card.classList.remove("is-changing");dots();
+  }
+  function render(next){if(!items.length)return;if(next){card.classList.add("is-changing");setTimeout(()=>fill(items[idx]),170)}else fill(items[idx])}
+  function restart(){clearInterval(timer);const bar=document.getElementById("guideProductsTimer");if(bar){bar.style.animation="none";requestAnimationFrame(()=>bar.style.animation="guideProductsTimer 5s linear infinite")}timer=setInterval(()=>{if(document.hidden||items.length<2)return;idx=(idx+1)%items.length;render(true)},5000)}
+  function boot(){setHead();load().then(list=>{items=choose(list);if(!items.length){card.textContent=txt("empty");return}render(false);restart()}).catch(()=>{card.textContent=txt("empty")})}
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&items.length>1)restart()});
+  document.addEventListener("DOMContentLoaded",boot,{once:true});
+  window.addEventListener("load",()=>{if(!items.length)setTimeout(()=>boot(),120)},{once:true});
 })();
 </script>
 
