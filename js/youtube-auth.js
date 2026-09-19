@@ -262,6 +262,14 @@
 
     injectStyles();
     refreshTexts();
+    // Keep the button disabled until GIS has initialized and the silent
+    // background check has finished. This prevents a click from racing with
+    // the silent token request and overwriting its callback.
+    const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
+    if (subscribeButton) {
+      subscribeButton.disabled = true;
+      subscribeButton.setAttribute('aria-disabled', 'true');
+    }
     return wall;
   }
 
@@ -473,7 +481,8 @@
       };
 
       try {
-        tokenClient.requestAccessToken({ prompt: promptValue });
+        const request = promptValue ? { prompt: promptValue } : {};
+        tokenClient.requestAccessToken(request);
       } catch (err) {
         reject(err instanceof Error ? err : new Error('oauth_error'));
       }
@@ -580,28 +589,25 @@
   async function ensureSubscription() {
     if (busy || unlocked) return;
 
+    // GIS is preloaded and the button remains disabled until the initial
+    // silent check completes. requestAccessToken() therefore runs directly
+    // from this click, preserving the user gesture required for Google's
+    // account/consent UI.
+    if (!gisReady) {
+      setStatus('auth');
+      return;
+    }
+
     busy = true;
     refreshTexts();
     setStatus('subscribing');
 
     try {
-      if (!gisReady) {
-        await loadGIS();
-        if (!initGIS()) throw new Error('gis_not_ready');
-      }
-
       if (!accessToken) {
-        // First try without UI. If Google needs interaction/consent, the user
-        // explicitly clicked the button, so request the consent flow.
-        try {
-          await tokenRequest('none');
-        } catch (silentError) {
-          if (silentError.message === 'scope_not_granted' || isRecoverableOAuthError(silentError.message)) {
-            await tokenRequest('consent');
-          } else {
-            throw silentError;
-          }
-        }
+        // No prompt override: reuse a previous grant if it exists; otherwise
+        // Google opens the account/consent flow. Crucially, this call is made
+        // directly from the button click, with no awaited request before it.
+        await tokenRequest('');
       }
 
       if (await checkOwnerChannel()) {
@@ -619,8 +625,7 @@
           await subscribe();
         } catch (error) {
           if (error.message === 'unauthorized') {
-            await tokenRequest('consent');
-            await subscribe();
+            throw new Error('reauthorization_needed');
           } else {
             throw error;
           }
@@ -635,8 +640,7 @@
           verified = await checkSubscription();
         } catch (error) {
           if (error.message === 'unauthorized') {
-            await tokenRequest('consent');
-            continue;
+            throw new Error('reauthorization_needed');
           }
           throw error;
         }
@@ -655,13 +659,22 @@
       const message = error && error.message ? error.message : '';
       const text = message === 'not_configured'
         ? t().needConfig
-        : (message === 'scope_not_granted' || isRecoverableOAuthError(message)
+        : (message === 'reauthorization_needed' || message === 'scope_not_granted' || isRecoverableOAuthError(message)
           ? t().auth
           : t().error);
       setStatus(null, text);
     } finally {
       busy = false;
-      if (wall) refreshTexts();
+      if (wall) {
+        refreshTexts();
+        if (!unlocked && !ownerDetected && gisReady) {
+          const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
+          if (subscribeButton) {
+            subscribeButton.disabled = false;
+            subscribeButton.setAttribute('aria-disabled', 'false');
+          }
+        }
+      }
     }
   }
 
@@ -745,8 +758,21 @@
         refreshTexts();
         setStatus('auth');
       }
+
+      if (!unlocked) {
+        const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
+        if (subscribeButton) {
+          subscribeButton.disabled = false;
+          subscribeButton.setAttribute('aria-disabled', 'false');
+        }
+      }
     } catch (_) {
       setStatus('auth');
+      const subscribeButton = wall && wall.querySelector('#youtubeAccessSubscribe');
+      if (subscribeButton) {
+        subscribeButton.disabled = false;
+        subscribeButton.setAttribute('aria-disabled', 'false');
+      }
     }
   }
 
