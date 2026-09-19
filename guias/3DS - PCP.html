@@ -1694,27 +1694,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   const mybutton = document.getElementById("backToTopBtn");
   window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
-  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); iniciarAppPrincipal(); };
+  function initGuideUIOnce(){ initThemeDots(); createLanguageSelector(); updateLanguage(); iniciarAppPrincipal(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initGuideUIOnce, {once:true});
+  else initGuideUIOnce();
 </script>
 <script id="mobile-enhancer">
             function adaptarLetraTitulo() {
               const el = document.getElementById('txt_title');
               if (!el) return;
-              const contenedor = el.parentElement;
-              if (!contenedor || contenedor.clientWidth === 0) return;
-              
-              // Reseteamos al tamaño máximo teórico para medir de forma limpia
-              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
-              
-              let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
-              let limiteSeguridad = 0;
-              
-              // Bucle de compresión milimétrica
-              while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 8 && limiteSeguridad < 100) {
-                tamañoActual -= 0.5;
-                el.style.setProperty('--title-size', tamañoActual + 'px');
-                limiteSeguridad++;
-              }
+              // El título ahora se adapta mediante CSS y salto de línea; nunca se comprime a tamaños ilegibles.
+              el.style.removeProperty('--title-size');
             }
 
             function inicializarMejorasMoviles() {
