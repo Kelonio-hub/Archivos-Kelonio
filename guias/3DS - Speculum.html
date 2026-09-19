@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -103,7 +103,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 .disney-choose-badge { margin-top: 8px; font-size: 11px; background: var(--red); color: #fff; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
 
 /* --- MAIN HUB & TOPBAR --- */
-#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+#mainHub { display: block; opacity: 1; transition: opacity 0.5s ease; }
 .topbar { position:fixed; top:0; left:0; right:0; z-index:9998; background:var(--topbar-bg); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); transition: background 0.3s, border-color 0.3s; }
 .logo { font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
 .topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
@@ -195,6 +195,99 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   table, pre { max-width: 100% !important; overflow-x: auto !important; display: block !important; white-space: nowrap; }
   code { word-break: break-all; }
 }
+
+/* ================= TARJETA DE PRODUCTO RECOMENDADO ================= */
+.product-card-widget {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 25px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.product-card-widget:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+.product-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(var(--glow-rgb), 0.18);
+  color: var(--red);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.product-card-body {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.product-card-img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.06);
+  padding: 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  border: 1px solid var(--glass-border);
+}
+.product-card-info {
+  flex-grow: 1;
+}
+.product-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.product-card-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--red);
+  margin-bottom: 6px;
+}
+.product-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-card-btn {
+  display: inline-block;
+  background: var(--red);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.2s;
+}
+.product-card-btn:hover {
+  filter: brightness(1.2);
+  transform: scale(1.03);
+}
+@media(max-width: 550px) {
+  .product-card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .product-card-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
 </style>
 
 <!-- CANONICAL & HREFLANG -->
@@ -1230,7 +1323,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("DOMContentLoaded", () => { cargarSidebar(); });
   const mybutton = document.getElementById("backToTopBtn");
   window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
-  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); } };
+  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); iniciarAppPrincipal(); };
 </script>
 <script id="mobile-enhancer">
   function adaptarLetraTitulo() {
@@ -1262,5 +1355,96 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.fonts) { document.fonts.ready.then(adaptarLetraTitulo); }
   setTimeout(adaptarLetraTitulo, 50); setTimeout(adaptarLetraTitulo, 300); setTimeout(adaptarLetraTitulo, 600);
 </script>
+
+<script id="script-producto-recomendado">
+(function() {
+  let productoActualSeleccionado = null;
+
+  async function cargarProductoRecomendado() {
+    const box = document.getElementById('recommended-product-box');
+    if (!box) return;
+
+    const tagMeta = document.querySelector('meta[name="guide-tag"]');
+    const consoleTag = tagMeta ? tagMeta.content.split('/')[0].trim().toUpperCase() : 'ALL';
+
+    const endpoints = ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json'];
+    const baseUrl = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
+
+    let todosLosProductos = [];
+    for (const file of endpoints) {
+      try {
+        const res = await fetch(baseUrl + file + '?t=' + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          const lista = Array.isArray(data) ? data : Object.values(data);
+          todosLosProductos = todosLosProductos.concat(lista);
+        }
+      } catch(e) {}
+    }
+
+    if (!todosLosProductos.length) return;
+
+    let coincidentes = todosLosProductos.filter(p => {
+      if (!p.console) return false;
+      const c = p.console.toUpperCase();
+      return c === consoleTag || (consoleTag.includes('WII') && c.includes('WII')) || (consoleTag.includes('3DS') && c.includes('3DS'));
+    });
+
+    if (!coincidentes.length) coincidentes = todosLosProductos;
+
+    productoActualSeleccionado = coincidentes[Math.floor(Math.random() * coincidentes.length)];
+    renderizarTarjetaProducto();
+  }
+
+  function renderizarTarjetaProducto() {
+    const box = document.getElementById('recommended-product-box');
+    if (!box || !productoActualSeleccionado) return;
+
+    const p = productoActualSeleccionado;
+    const lang = (typeof idiomaActual !== 'undefined') ? idiomaActual : 'es';
+
+    const label = (p.label && p.label[lang]) || (p.label && p.label['es']) || p.label || 'Accesorio Recomendado';
+    const desc = (p.desc && p.desc[lang]) || (p.desc && p.desc['es']) || p.desc || '';
+    const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+    let url = p.url || '#';
+    if (url !== '#' && !url.includes('tag=')) {
+      url += (url.includes('?') ? '&' : '?') + 'tag=kelonio-21';
+    }
+
+    const dictBadge = {
+      es: 'Recomendado para tu consola', en: 'Recommended for your console',
+      fr: 'Recommandé pour votre console', de: 'Empfohlen für deine Konsole',
+      it: 'Consigliato per la tua console', pt: 'Recomendado para o seu console',
+      ja: 'あなたのゲーム機におすすめ', ko: '콘솔 추천 제품'
+    };
+
+    const dictBtn = {
+      es: 'Ver en Amazon', en: 'View on Amazon', fr: 'Voir sur Amazon',
+      de: 'Auf Amazon ansehen', it: 'Vedi su Amazon', pt: 'Ver na Amazon',
+      ja: 'Amazonで見る', ko: 'Amazonで見る'
+    };
+
+    box.innerHTML = `
+      <div class="product-card-widget">
+        <span class="product-badge">🛒 ${dictBadge[lang] || dictBadge['es']}</span>
+        <div class="product-card-body">
+          <img src="${img}" alt="${label}" class="product-card-img" />
+          <div class="product-card-info">
+            <h4 class="product-card-title">${label}</h4>
+            <div class="product-card-price">${p.price || ''}</div>
+            <p class="product-card-desc">${desc.replace(/\n/g, ' ')}</p>
+            <a href="${url}" target="_blank" rel="noopener noreferrer" class="product-card-btn">${dictBtn[lang] || dictBtn['es']} ↗</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(cargarProductoRecomendado, 300);
+  });
+})();
+</script>
+
 </body>
 </html>
