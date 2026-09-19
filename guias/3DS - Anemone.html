@@ -977,6 +977,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function unlockMembership() {
     clearTimer(); until=0; membershipArea.hidden=false; membershipMsg.style.display='none'; styleMembershipDownload(true); downloadBtn.style.display='none'; writeMembershipCache();
   }
+  function showMembershipIdle() {
+    membershipArea.hidden=false;
+    membershipMsg.textContent='';
+    membershipMsg.style.display='none';
+    const membershipActions=document.getElementById('pp-membership-actions');
+    if(membershipActions) membershipActions.style.display='flex';
+    membershipJoin.hidden=false;
+    membershipDownload.hidden=false;
+    styleMembershipDownload(false);
+    downloadBtn.style.display='none';
+  }
   function showMembershipChecking() {
     membershipArea.hidden=false;
     membershipMsg.textContent=text().verifying;
@@ -1028,11 +1039,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if(value==='membership'){
       resetPaymentView();
       if(readMembershipCache()) unlockMembership();
-      else startMembershipGate(Boolean(fromUser));
+      else {
+        const pending=readPendingUntil();
+        if(pending) startMembershipGate(false);
+        else showMembershipIdle();
+      }
     } else if(value==='0'){ clearTimer(); until=0; showFree(); } else { clearTimer(); until=0; showContribution(); }
   }
   amountSelect.addEventListener('change',()=>updateView(true));
-  membershipJoin.addEventListener('click',()=>{});
+  membershipJoin.addEventListener('click',()=>startMembershipGate(false));
   membershipDownload.addEventListener('click',(ev)=>{ if(membershipDownload.getAttribute('aria-disabled')==='true' || !readMembershipCache()){ ev.preventDefault(); startMembershipGate(false); } });
   const languageSelector=document.getElementById('languageSelector');
   if(languageSelector) languageSelector.addEventListener('change',()=>setTimeout(()=>{ applyLanguage(); },0));
@@ -1042,7 +1057,11 @@ document.addEventListener("DOMContentLoaded", () => {
   applyLanguage();
   amountSelect.value='membership';
   if(readMembershipCache()) unlockMembership();
-  else updateView(false);
+  else {
+    const pending=readPendingUntil();
+    if(pending) startMembershipGate(false);
+    else showMembershipIdle();
+  }
 });
 </script>
 <!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
