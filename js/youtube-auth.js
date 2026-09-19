@@ -35,7 +35,7 @@
       auth: 'Necesitamos autorización de YouTube para comprobar tu suscripción.',
       needConfig: 'El acceso por suscripción necesita configurar el Client ID de Google.',
       error: 'No se ha podido verificar la suscripción. Inténtalo de nuevo.',
-      openYoutube: 'Abrir YouTube',
+
       subscribeAria: 'Suscribirme al canal de YouTube con mi cuenta de Google',
       owner: 'Propietario de Kelonio detectado ✓',
       ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.'
@@ -52,7 +52,7 @@
       auth: 'YouTube authorization is needed to check your subscription.',
       needConfig: 'Subscription access requires the Google Client ID to be configured.',
       error: 'The subscription could not be verified. Please try again.',
-      openYoutube: 'Open YouTube',
+   
       subscribeAria: 'Subscribe to the YouTube channel with my Google account',
       owner: 'Kelonio owner detected ✓',
       ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.'
@@ -69,7 +69,7 @@
       auth: "Une autorisation YouTube est nécessaire pour vérifier votre abonnement.",
       needConfig: "L'accès par abonnement nécessite de configurer le Client ID Google.",
       error: "Impossible de vérifier l'abonnement. Réessayez.",
-      openYoutube: 'Ouvrir YouTube',
+
       subscribeAria: 'S’abonner à la chaîne YouTube avec mon compte Google',
       owner: 'Propriétaire de Kelonio détecté ✓',
       ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est déverrouillé automatiquement.'
@@ -86,7 +86,7 @@
       auth: 'Zur Prüfung deines Abonnements ist eine YouTube-Autorisierung erforderlich.',
       needConfig: 'Für den Zugriff per Abonnement muss die Google Client-ID konfiguriert werden.',
       error: 'Das Abonnement konnte nicht überprüft werden. Bitte erneut versuchen.',
-      openYoutube: 'YouTube öffnen',
+
       subscribeAria: 'Den YouTube-Kanal mit meinem Google-Konto abonnieren',
       owner: 'Kelonio-Inhaber erkannt ✓',
       ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.'
@@ -103,7 +103,7 @@
       auth: 'È necessaria l’autorizzazione di YouTube per verificare la tua iscrizione.',
       needConfig: 'Per l’accesso tramite iscrizione è necessario configurare il Client ID Google.',
       error: 'Non è stato possibile verificare l’iscrizione. Riprova.',
-      openYoutube: 'Apri YouTube',
+
       subscribeAria: 'Iscriviti al canale YouTube con il mio account Google',
       owner: 'Proprietario Kelonio rilevato ✓',
       ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.'
@@ -120,7 +120,7 @@
       auth: 'É necessária autorização do YouTube para verificar a sua subscrição.',
       needConfig: 'O acesso por subscrição requer a configuração do Client ID da Google.',
       error: 'Não foi possível verificar a subscrição. Tente novamente.',
-      openYoutube: 'Abrir o YouTube',
+
       subscribeAria: 'Subscrever o canal do YouTube com a minha conta Google',
       owner: 'Proprietário da Kelonio detetado ✓',
       ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.'
@@ -137,7 +137,7 @@
       auth: '登録状況を確認するには YouTube の認証が必要です。',
       needConfig: '登録によるアクセスには Google Client ID の設定が必要です。',
       error: '登録状況を確認できませんでした。もう一度お試しください。',
-      openYoutube: 'YouTube を開く',
+
       subscribeAria: 'Google アカウントで YouTube チャンネルに登録',
       owner: 'Kelonio オーナーを確認しました ✓',
       ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。'
@@ -154,7 +154,7 @@
       auth: '구독 여부를 확인하려면 YouTube 인증이 필요합니다.',
       needConfig: '구독을 통한 접근을 사용하려면 Google Client ID 설정이 필요합니다.',
       error: '구독을 확인할 수 없습니다. 다시 시도해 주세요.',
-      openYoutube: 'YouTube 열기',
+
       subscribeAria: 'Google 계정으로 YouTube 채널 구독',
       owner: 'Kelonio 소유자 확인 ✓',
       ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.'
