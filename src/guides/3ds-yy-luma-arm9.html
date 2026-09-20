@@ -1,0 +1,30 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">ERROR LUMA ARM9</h1>
+</div>
+</div>
+<div class="guide-content"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="ERROR LUMA ARM9" class="guide-img" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/ARM9.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div><div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Este error aborda principalmente problemas de HARDWARE (consola o tarjeta SD), pero también puede indicar un error de SOFTWARE si la ruta de la NAND falta o está dañada.
+        </div>
+<h2 id="txt_h2_boot">ERROR DURANTE EL ARRANQUE</h2>
+<ul>
+<li id="txt_boot_1"><strong>[any type]:</strong> Puede que la SD esté corrupta, teniendo que formatearse con una herramienta adecuada o probar con otra tarjeta.</li>
+<li id="txt_boot_2"><strong>[any type]:</strong> Puede que la ruta <code>[1:]/data</code> tenga un problema.</li>
+<li id="txt_boot_3"><strong>[any type]:</strong> Puede que falte el archivo en la ruta <code>[1:]/rw/sys</code>.</li>
+<li id="txt_boot_4"><strong>[data abort]:</strong> Puede faltar la carpeta <code>shared2</code> en <code>[2:]TWLN</code>.</li>
+<li id="txt_boot_5"><strong>[data abort]:</strong> Puede aparecer si se han eliminado títulos del sistema. Se soluciona restableciendo con el Modo Recovery o reestableciendo la NAND o el CTRNAND.</li>
+<li id="txt_boot_6"><strong>[prefetch abort (kernel panic)]:</strong> Aparece cuando la falla es de HARDWARE (cámara, wifi, etc.).</li>
+<li id="txt_boot_7"><strong>[prefetch abort (svcBreak)]:</strong> Es un error de código interno, relativo al Movable o al Fixeo de CMACs. Se deberá restablecer el movable, fixear los CMACs manualmente o restablecer la NAND o el CTRNAND.</li>
+</ul>
+<h2 id="txt_h2_post">ERROR POSTERIOR AL ARRANQUE</h2>
+<p id="txt_post_desc">Puede aparecer en archivos <code>.nds</code>, <code>.3dsx</code>, bajo el error <em>data abort</em>, o en aplicaciones del sistema, bajo el error <em>menu</em> o <em>nwm</em> si se trata de la conexión wifi. Quedarían totalmente al margen los archivos <code>.cia</code>, pues estos reflejan errores de núcleo ARM11.</p>
+<h2 id="txt_h2_exception">EXCEPCIÓN</h2>
+<p id="txt_exception_desc">El error puede aparecer al intentar instalar el CFW antiguo A9LH en un sistema con BOOT9, sirviendo en este caso más de bloqueo definitivo que de advertencia.</p>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--red); margin-top: 30px;">
+<strong>📌 Enlaces de Interés:</strong> Si necesitas restablecer tu sistema debido a este error, consulta nuestras guías específicas.
+        </div>
+<p id="txt_footer">Puedes guiarte usando los procesos de restablecimiento oficiales en nuestra web.</p>
+</div>

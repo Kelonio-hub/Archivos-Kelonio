@@ -1,0 +1,78 @@
+<div class="guide-header">
+<span class="guide-tag">3DS</span>
+<div class="guide-title-container">
+<h1 id="txt_title">Cómo diagnosticar tu Nintendo 3DS con Speculum v26[cite: 2]</h1>
+</div>
+</div>
+<div class="guide-content">
+<!-- VÍDEO YOUTUBE EMBED -->
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/KJEZynKTlqw" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/KJEZynKTlqw?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/KJEZynKTlqw/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<!-- ALERTA DE EJEMPLO -->
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Este script se ejecuta mediante GodMode9 para realizar un escaneo detallado del estado del sistema y generar un archivo de registro (.log)[cite: 2].
+</div>
+<!-- SECCIÓN 1: REQUISITOS -->
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Consola Nintendo 3DS con Custom Firmware (Luma3DS y GodMode9)[cite: 2].</li>
+<li id="txt_req2">Tarjeta SD o MicroSD compatible[cite: 2].</li>
+<li><span id="txt_req3">Paquete de archivos Speculum v26</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://www.mediafire.com/folder/1uuir1zkrgyq4/Speculum" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://www.mediafire.com/folder/1uuir1zkrgyq4/Speculum" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<!-- SECCIÓN 2: PASO 1 -->
+<h2 id="txt_h2_step1">PASO 1: Copia de los archivos a la Tarjeta SD</h2>
+<ol>
+<li id="txt_s1_1">Extrae la tarjeta SD de tu consola Nintendo 3DS e introdúcela en tu ordenador[cite: 2].</li>
+<li id="txt_s1_2">Abre el paquete en formato WinRAR descargado (Speculum v26) y copia todo su contenido (las carpetas <code>luma</code>, <code>gm9</code> y el archivo <code>boot.firm</code>) directamente en la raíz de tu tarjeta SD[cite: 2].</li>
+<li id="txt_s1_3">Si la tarjeta ya contiene carpetas previa a la copia, reemplaza los archivos cuando el sistema te lo pida[cite: 2].</li>
+</ol>
+<!-- SECCIÓN 3: PASO 2 -->
+<h2 id="txt_h2_step2">PASO 2: Ejecución del Script Speculum en GodMode9</h2>
+<ol>
+<li id="txt_s2_1">Inserta nuevamente la tarjeta SD en tu Nintendo 3DS y enciende la consola manteniendo pulsado el botón <strong>START</strong> para acceder a GodMode9 (o al menú de payloads de Luma3DS)[cite: 2].</li>
+<li id="txt_s2_2">Una vez en GodMode9, pulsa el botón <strong>HOME</strong> (la casita) para desplegar el menú emergente[cite: 2].</li>
+<li id="txt_s2_3">Selecciona la opción <strong>Scripts...</strong> y ejecuta el script llamado <strong>speculum v26</strong> pulsando el botón <strong>A</strong>[cite: 2].</li>
+<li id="txt_s2_4">Selecciona tu idioma preferido para el informe de diagnóstico (Español, Inglés, Francés, Italiano, Portugués o Alemán) y confirma la ejecución[cite: 2].</li>
+<li id="txt_s2_5">Espera aproximadamente 30 segundos hasta que la pantalla indique <strong>"Escaneo completado"</strong>. Pulsa el botón <strong>A</strong> para apagar automáticamente la consola[cite: 2].</li>
+</ol>
+<!-- SECCIÓN 4: PASO 3 -->
+<h2 id="txt_h2_step3">PASO 3: Lectura del Reporte de Diagnóstico</h2>
+<ol>
+<li id="txt_s3_1">Vuelve a conectar la tarjeta SD a tu ordenador[cite: 2].</li>
+<li id="txt_s3_2">En la raíz de la tarjeta SD encontrarás el reporte generado en formato <code>.log</code> (por ejemplo, <code>000.log</code>) junto con las instrucciones para el soporte en Discord[cite: 2].</li>
+<li id="txt_s3_3">Abre el archivo <code>.log</code> con cualquier editor de texto para consultar la salud de tu consola, comprobaciones del Custom Firmware, diagnóstico de volcados de error (ARM9, ARM11) y la lista priorizada de soluciones para reparar tu sistema[cite: 2].</li>
+</ol>
+<!-- ALERTA FINAL DE ÉXITO -->
+<div class="alert-box" id="txt_alert2" style="border-left-color: #2ecc71; margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Has completado el escaneo diagnóstico de tu Nintendo 3DS con éxito[cite: 2].
+</div>
+<p id="txt_footer">Abre el archivo .log generado para solucionar los problemas específicos indicados en las recomendaciones[cite: 2].</p>
+</div>
