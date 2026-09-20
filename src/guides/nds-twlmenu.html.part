@@ -1,0 +1,59 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Instalar juegos NDS en Nintendo DSi</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/1lOzNqlHGiQ" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/1lOzNqlHGiQ?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/1lOzNqlHGiQ/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> TWiLight Menu++ se instala mediante el proceso de hackeo de tu consola. Si aún no la has modificado, te recomendamos seguir la guía de <a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/nds-1-hack-memory.html" style="color:var(--red);font-weight:bold;text-decoration:underline;">Memorypit</a>.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Consola Nintendo DSi con TWiLight Menu++ ya instalado.</li>
+<li id="txt_req2">Tus ROMs o juegos de Nintendo DS en formato .nds.</li>
+<li><span id="txt_req3">Lista de juegos compatibles con Twlmenu</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://docs.google.com/spreadsheets/d/1LRTkXOUXraTMjg1eedz_f7b5jiuyMv2x6e_jY_nyHSc/htmlview" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://docs.google.com/spreadsheets/d/1LRTkXOUXraTMjg1eedz_f7b5jiuyMv2x6e_jY_nyHSc/htmlview" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">PASO 1: Preparar la Tarjeta SD</h2>
+<ol>
+<li id="txt_s1_1">Apaga tu consola, extrae la tarjeta SD e insértala en tu ordenador.</li>
+<li id="txt_s1_2">Dentro de la tarjeta SD, ve a la carpeta "roms" y luego a la carpeta "nds". (Si no existen, créalas). Copia todos tus juegos en formato .nds dentro de esa carpeta.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Jugar en la consola</h2>
+<ol>
+<li id="txt_s2_1">Inserta de nuevo la tarjeta SD en tu Nintendo DSi. Inicia la consola, abre TWiLight Menu++ y navega hasta la carpeta donde copiaste tus juegos para ejecutarlos.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Ya puedes disfrutar de tus juegos de Nintendo DS en tu DSi.
+        </div>
+<p id="txt_footer">Recuerda revisar la lista de compatibilidad si algún juego presenta fallos o no arranca correctamente.</p>
+</div>

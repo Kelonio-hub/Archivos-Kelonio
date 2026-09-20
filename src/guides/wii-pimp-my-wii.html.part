@@ -1,0 +1,56 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Pimp My Wii</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> NO EJECUTARLO EN vWii NI WII MINI. PUEDE GENERAR BRICK. Se recomienda tener Bootmii como Boot2 (o IOS + Priiloader) y una copia de la NAND.
+        </div>
+<h2 id="txt_h2_req">Características del Programa</h2>
+<ul>
+<li id="txt_req1">Permite hacer un chequeo de los IOS y cIOS.</li>
+<li id="txt_req2">Permite instalar los IOS y cIOS Hermes <strong>[OBSOLETOS]</strong>.</li>
+<li id="txt_req3">Permite instalar/desinstalar WAD [Accesos Directos].</li>
+<li>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="javascript:void(0);" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="javascript:void(0);" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">ADVERTENCIAS DE USO</h2>
+<ol>
+<li id="txt_s1_1">El Homebrew Channel puede quedarse inoperativo.</li>
+<li id="txt_s1_2">Se recomienda encarecidamente utilizar <strong>Yawm</strong> para instalar y desinstalar los cIOS y Canales en su lugar.</li>
+</ol>
+<h2 id="txt_h2_step2">PROMOCIÓN EN YOUTUBE Y FOROS</h2>
+<ol>
+<li id="txt_s2_1">Si ve el programa en algún foro o YouTube como "novedoso", fíjese en la fecha de publicación. A menudo se promociona por pura ignorancia sobre la Scene actual de Wii, mezclando archivos nuevos con procesos antiguos, lo que ocasiona errores de compatibilidad.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--red); margin-top: 30px;">
+<strong>⚠️ Peligro:</strong> A pesar de las pruebas realizadas por el autor, Attila, este programa puede ocasionar daños irreversibles en tu Wii.
+        </div>
+<p id="txt_footer">Te sugerimos seguir guías modernas y utilizar herramientas actualizadas para tu Wii.</p>
+</div>

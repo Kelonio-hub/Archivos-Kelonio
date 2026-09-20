@@ -1,0 +1,56 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">ONLINE WII</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Este proceso revive las funciones de red de tu consola mediante servidores no oficiales.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Consola Wii conectada a Internet.</li>
+<li id="txt_req2">Tener el Homebrew Channel instalado.</li>
+<li><span id="txt_req3">Archivos v2.1.3 de Online.</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://www.mediafire.com/folder/xi7zy3t8hkl4c/Online" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://www.mediafire.com/folder/xi7zy3t8hkl4c/Online" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">PASO 1: Beneficios</h2>
+<ol>
+<li id="txt_s1_1">Permite seguir utilizando las App de fábrica que fueron descontinuadas.</li>
+<li id="txt_s1_2">Permite seguir utilizando el Online en algunos juegos.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Servidores</h2>
+<ol>
+<li id="txt_s2_1">Se precisa de Conectividad al servidor de Riiconect: <a href="https://rc24.xyz/" target="_blank">https://rc24.xyz/</a></li>
+<li id="txt_s2_2">Se precisa de Conectividad al servidor de Wiimmfi: <a href="https://wiimmfi.de/" target="_blank">https://wiimmfi.de/</a></li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Consulta los usuarios en línea en tiempo real aquí: <a href="https://wiimmfi.de/stat?m=25" target="_blank">Usuarios Wiimmfi</a>.
+        </div>
+<p id="txt_footer">¡Vuelve a disfrutar de tus juegos favoritos en línea!</p>
+</div>

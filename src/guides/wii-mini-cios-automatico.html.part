@@ -1,0 +1,58 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Instalar cIOS en Wii Mini (Automático)</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/L5TgRr5Zre4" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/L5TgRr5Zre4?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/L5TgRr5Zre4/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Wii Mini, a diferencia de Wii y vWii, solo precisa de un cIOS (el 57). Instalar otros puede presentar incompatibilidad con algunos Homebrews o incluso causar el brickeo de la consola si se instalan los originales de Wii.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Una Tarjeta SD (formato FAT32)</li>
+<li id="txt_req2">Consola Wii Mini con Homebrew Channel instalado</li>
+<li><span id="txt_req3">Archivos de instalación cIOS</span> <br/>
+<!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA ================= -->
+<div class="kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title">
+</label>
+<div class="pp-subtitle-style" id="pp-subtitle">
+</div>
+<div style="margin-bottom: 15px;">
+<select class="pp-select-style" id="pp-amount">
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" selected="" value="custom">
+                Elegir valor...
+            </option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container">
+</div>
+<div class="pp-success-style" id="pp-success-msg">
+</div>
+<a class="pp-download-style" href="https://www.mediafire.com/folder/keng2csyz22hm/CIOS+WII+MINI" id="pp-download-btn" rel="noopener noreferrer" target="_blank">
+</a>
+</div>
+<!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA ================= -->
+</li>
+</ul>
+<p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a class="mini-btn" href="../productos.html">productos</a></em></p>
+<h2 id="txt_h2_step1">PASO 1: Descargar archivos y preparar SD</h2>
+<ol>
+<li id="txt_s1_1">Descarga el Pack de Archivos cIOS usando el botón superior.</li>
+<li id="txt_s1_2">Descomprime su contenido directamente en la raíz de la Tarjeta SD e introdúcela en la Consola.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Instalar cIOS 57</h2>
+<ol>
+<li id="txt_s2_1">Acude al Homebrew Channel, carga el programa YAWM, selecciona el cIOS 57 que hemos ubicado en la raíz de la SD y procede con la instalación.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> El proceso de instalación del cIOS es automático. Tu Wii Mini está lista.
+        </div>
+<p id="txt_footer">Si tienes dudas durante el proceso, te recomendamos revisar el vídeo adjunto arriba.</p>
+</div>

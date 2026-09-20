@@ -1,0 +1,56 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Eliminar Hack vWii</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Para eliminar el hack de Virtual Wii restauraremos la NAND donante. Sigue los pasos cuidadosamente.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Homebrew <strong>vWii Decaffeinator</strong>.</li>
+<li id="txt_req2">Archivos de "ARRANQUE HOME" (Solo si utilizas Tiramisu) <a class="mini-btn" href="https://www.mediafire.com/folder/dezv235ha2gfu/WIIU+CFW-DUAL" target="_blank">Descargar</a></li>
+<li><span id="txt_req3">Archivos v2 (NAND)</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://www.mediafire.com/folder/4z1rto7ytsk7w/NAND" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://www.mediafire.com/folder/4z1rto7ytsk7w/NAND" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">PASO 1: Preparación en la tarjeta SD</h2>
+<ol>
+<li id="txt_s1_1"><strong>Si utilizas el CFW TIRAMISU</strong> se debe quitar el autoarranque: Mete los archivos "ARRANQUE HOME" en la SD y enciende la consola. Ejecuta: <em>Check &gt; Boot Options &gt; Switch back to Wii U</em>.</li>
+<li id="txt_s1_2">Descarga el Homebrew <strong>vWii Decaffeinator</strong> e introduce la carpeta <code>decaffeinator</code> en la ruta <code>wiiu/apps</code> de tu tarjeta SD.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Restauración con Decaffeinator</h2>
+<ol>
+<li id="txt_s2_1">Introduce la SD con los archivos e inicia el CFW en la consola (Tiramisu, Mocha...). Abre el HBL y ejecuta <strong>vWii Decaffeinator</strong>.</li>
+<li id="txt_s2_2">Dentro del programa, aplica la opción <strong>Light mode</strong>. <em>(Si esto no solventara el error, vuelve a ejecutar y aplica la opción "Aggressive Mode")</em>.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Completado!</strong> Al finalizar, si todo fue correcto, la consola se actualizará y tendremos la consola vWII deshackeada y virgen de nuevo.
+        </div>
+<p id="txt_footer"><strong>Atención:</strong> Se tendrá que configurar de nuevo el Gamepad. Si utilizas Tiramisu, deberás configurar de nuevo el autoarranque metiendo los archivos "Arranque Home" en la SD, acudiendo a Salud y Seguridad, y ejecutando: <em>Check &gt; Boot Options &gt; Switch back to Wii U</em>.</p>
+</div>

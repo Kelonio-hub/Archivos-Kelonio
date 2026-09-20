@@ -1,0 +1,38 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">NAND: Respaldo y Restauración</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ ADVERTENCIAS IMPORTANTES:</strong>
+<ul>
+<li>Restaurar la NAND con BootMii si está instalado como <strong>boot2</strong>. Si BootMii se ejecuta como <strong>IOS</strong> podría brickear la consola.</li>
+<li>Si se fuerza la instalación de una NAND <strong>no correspondiente</strong> a la propia consola, podremos generar aún más problemas (brick severo).</li>
+<li>Tras el proceso de restauración, los juegos y programas de la consola se perderán si no se respaldaron previamente.</li>
+<li>El firmware de la consola será exactamente el generado durante el respaldo; se deberá actualizar la consola si se precisa.</li>
+</ul>
+</div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">BootMii instalado en la consola (preferentemente como boot2 para restauración).</li>
+<li id="txt_req2">Tarjeta SD compatible insertada con los archivos de BootMii.</li>
+</ul>
+<h2 id="txt_h2_step1">APLICAR RESPALDO NAND CUANDO:</h2>
+<ol>
+<li id="txt_s1_1">Se termine de realizar el proceso de hackeo en la consola (copia limpia).</li>
+<li id="txt_s1_2">De forma periódica, para asegurarnos de que los juegos, programas y sus progresos tengan un respaldo actualizado.</li>
+</ol>
+<h2 id="txt_h2_step2">APLICAR RESTAURACIÓN NAND CUANDO:</h2>
+<p id="txt_s2_0" style="color: #ccc; margin-left: 25px; margin-bottom: 10px;">Si el sistema de la consola presenta algún tipo de problema interno en sus rutas:</p>
+<ol>
+<li id="txt_s2_1">La consola presenta <strong>Brick</strong> (la consola no enciende o no pasa del menú).</li>
+<li id="txt_s2_2">Las aplicaciones de fábrica lanzan un error persistente al iniciar.</li>
+<li id="txt_s2_3">Se presente algún problema de rendimiento funcional que <strong>no sea error de hardware</strong> (ejemplo: un botón no es reconocido por conflicto de software interno).</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--glow-rgb); margin-top: 30px;">
+<strong>⛔ NO APLICAR RESTAURACIÓN NAND CUANDO:</strong><br/>
+          El error lo está generando un <strong>juego</strong> específico. En este caso, el problema es el archivo utilizado (.wbfs, .iso) o el medio de carga (USB/SD) y no el sistema base de la consola.
+        </div>
+<p id="txt_footer">Recuerda almacenar siempre tus archivos <code>nand.bin</code> y <code>keys.bin</code> en un lugar seguro (como tu PC o almacenamiento en la nube) por si tu tarjeta SD se daña.</p>
+</div>

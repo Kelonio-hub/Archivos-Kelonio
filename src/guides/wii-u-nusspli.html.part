@@ -1,0 +1,29 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Guía de NUSSPLI: Análisis y Consecuencias</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> NUSSPLI es un homebrew ilegal, inmoral y clasista destinado a instalar juegos, vulnerando los derechos de Nintendo.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Exclusivamente compatible con CFW Aroma.</li>
+<li id="txt_req2">La descarga se realiza a través del procesador de la consola desde los servidores oficiales de Nintendo.</li>
+</ul>
+<div aria-hidden="true" id="recommended-product-box"></div>
+<h2 id="txt_h2_step1">PASO 1: Consecuencias y Problemas Morales</h2>
+<ol>
+<li id="txt_s1_1">Posibles denuncias legales por parte de Nintendo.</li>
+<li id="txt_s1_2">Obliga a instalar Aroma por su incompatibilidad con otros CFW, siendo inmoral para el prestigio de los antiguos desarrolladores.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Seguridad de la Consola</h2>
+<ol>
+<li id="txt_s2_1">No puede romper la consola; es lo suficientemente potente y evita archivos corruptos al usar servidores de Nintendo.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ Conclusión:</strong> El servidor no le dará soporte debido a la vulneración legislativa, y su promoción suele buscar fama y dinero.
+        </div>
+<p id="txt_footer">El código abierto imposibilita la exclusividad. Siempre debe primar la libre elección de CFW del usuario por encima de los intereses en YouTube y foros.</p>
+</div>

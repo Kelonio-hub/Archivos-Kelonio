@@ -1,0 +1,77 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">HACK WII - WIIBRAND</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/MQ6GjU_vtuA" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/MQ6GjU_vtuA?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/MQ6GjU_vtuA/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Errores Comunes:</strong> El mando Wiimote se apaga y no puedo pulsar [1] para entrar en Hackmii: según parece existe una cierta incompatibilidad con algunos de los mandos Wiimote más nuevos que traen integrados el Motion Plus. Se deberá realizar el proceso con un mando Wii mote de los antiguos.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Consola Virgen Wii en versión 4.3 (Todas las Regiones son Válidas).</li>
+<li id="txt_req2">Tarjeta Sd en formato FAT32 de 4 a 32 GB.</li>
+<li id="txt_req2b">Adaptador Auxiliar Usb-SD.</li>
+<li><span id="txt_req3">Archivos Hack (Wiibrand)</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://www.mediafire.com/folder/7u3b2luagtnwg/WII+WIIBRAND" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://www.mediafire.com/folder/7u3b2luagtnwg/WII+WIIBRAND" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">PASO 1: ACTIVAR WIIBRAND</h2>
+<ol>
+<li id="txt_s1_1">En la consola acudiremos a: Configuración de Wii &gt; Internet &gt; Datos de la consola Wii &gt; Dirección MAC Wi-Fi. Anotaremos la dirección MAC que salga en pantalla.</li>
+<li id="txt_s1_2">Una vez anotado, en el PC introduciremos la SD, descargaremos los Archivos Hack y abriremos el programa.</li>
+<li id="txt_s1_3">En el programa: Indica la región y la versión de su Wii. Ingresa la dirección MAC de su Wii. Identifica la unidad SD donde se guardarán los archivos. Dale al Sobre verde para iniciar la operación.</li>
+<li id="txt_s1_4">Tras finalizar, introduciremos la SD ya con los archivos en la consola WII. Abre el Tablón de Wii y selecciona la Carta Verde con el icono de una bomba.</li>
+<li id="txt_s1_5">Tras unos segundos se abrirá HackMii Installer, presiona el botón [1]. Seleccionamos "Continue", y seguimos los pasos en pantalla para instalar el Homebrew Channel y el BootMii.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: INSTALAR HOMEBREW CHANNEL</h2>
+<ol>
+<li id="txt_s2_1">Seleccionar Opcion Install The Homebrew Channel.</li>
+<li id="txt_s2_2">Cuando se haya instalado aparecerá un mensaje de aviso: Success.</li>
+<li id="txt_s2_3">Presionar la Opción Continue para regresar al panel de instalación.</li>
+</ol>
+<h2 id="txt_h2_step3">PASO 3: INSTALAR BOOTMII</h2>
+<ol>
+<li id="txt_s3_1">Seleccionar Opción BootMii.</li>
+<li id="txt_s3_2">Si aparece, seleccione BootMii as Boot2. Si no aparece, seleccione BootMii as IOS.</li>
+<li id="txt_s3_3">Seleccione "Yes, continue" para copiar los archivos, y de nuevo a "Continue" para instalar BootMii.</li>
+<li id="txt_s3_4">Si se ha instalado correctamente aparecerá el texto "SUCCESS". Selecciona "Continue" para volver a la pantalla de instalación.</li>
+<li id="txt_s3_5">Seleccionaremos "Return to the main menu" y luego "Exit" para acudir al Homebrew Launcher.</li>
+</ol>
+<h2 id="txt_h2_step4">PASO 4: LIMPIEZA SD</h2>
+<ol>
+<li id="txt_s4_1">En el ordenador podremos eliminar los archivos de la Sd para que el acceso al Letterbomb no siga presente en el Tablón de Wii.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Ya habremos terminado el objetivo base de la modificación.
+        </div>
+<p id="txt_footer">Sin embargo, aún nos quedará: <br/><a class="dl-btn" href="wii-cios.html">Instalar Cios-Wii</a> <a class="dl-btn" href="wii-priiloader.html">Instalar Priiloader-Wii</a></p>
+</div>

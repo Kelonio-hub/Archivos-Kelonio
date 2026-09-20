@@ -1,0 +1,56 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">HOME NO ARRANCA - WII U</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Esta es una posible solución para cuando el menú HOME de tu Wii U no arranca o se queda en negro.
+        </div>
+<h2 id="txt_h2_req">Requisitos</h2>
+<ul>
+<li id="txt_req1">Destornillador para la tapa de la pila.</li>
+<li id="txt_req2">Una pila CR2032 nueva (opcional, por si la actual está agotada).</li>
+<li style="display:none;"><span id="txt_req3">No se necesitan archivos</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="#" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="#" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Si el problema persiste, revisa otros fallos de hardware.</em></p>
+<h2 id="txt_h2_step1">PASO 1: Apagar y extraer la pila</h2>
+<ol>
+<li id="txt_s1_1">Apaga la consola por completo y desconéctala de la corriente.</li>
+<li id="txt_s1_2">Desatornilla la tapa lateral y saca la pila de la BIOS.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Esperar y reiniciar</h2>
+<ol>
+<li id="txt_s2_1">Espera aproximadamente 20 minutos, vuelve a colocar la pila y enciende la consola.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Listo!</strong> El menú HOME debería arrancar normalmente si era un fallo temporal de la BIOS.
+        </div>
+<p id="txt_footer">Si esto no soluciona tu problema, puede que tu consola sufra de un fallo de memoria (NAND) más grave.</p>
+</div>
