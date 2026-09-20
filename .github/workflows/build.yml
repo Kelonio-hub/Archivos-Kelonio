@@ -1,4 +1,4 @@
-name: Build and validate site
+name: Build, validate and deploy site
 
 on:
   push:
@@ -7,11 +7,18 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python
@@ -22,14 +29,27 @@ jobs:
         run: python -m pip install beautifulsoup4
       - name: Normalize internal guide references
         run: python scripts/normalize_guide_refs.py
-      - name: Build canonical guides
+      - name: Build public artifact
         run: python scripts/build_site.py && python scripts/generate_sitemap.py
-      - name: Validate site
+      - name: Validate public artifact
         run: python scripts/validate_site.py && python scripts/check_links.py
-      - name: Commit generated site
-        if: github.event_name == 'push'
-        run: |
-          git config user.name 'SiteBuilderBot'
-          git config user.email 'actions@github.com'
-          git add guias sitemap.xml search-index.json data/guide-index.json data/guides.json
-          git diff --cached --quiet || (git commit -m 'chore: build canonical guide pages [skip ci]' && git push)
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
