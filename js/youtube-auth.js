@@ -1,9 +1,19 @@
-/* Kelonio — Muro de acceso por suscripción a YouTube
+/* Kelonio — Muro de acceso por membresía de YouTube
  *
- * Acceso condicionado a una suscripción real al canal configurado.
- * Usa Google Identity Services + YouTube Data API, sin bots ni
- * automatización de la interfaz de YouTube.
+ * Flujo:
+ *  1. Si existe una autorización local válida (<24 h), se desbloquea la guía.
+ *  2. Si no existe, se muestra un muro.
+ *  3. El usuario pulsa "Hacerse miembro" y se abre el canal de Kelonio en
+ *     una pestaña nueva.
+ *  4. Comienza una cuenta atrás de 60 segundos.
+ *  5. Al finalizar los 60 segundos, se guarda el acceso durante 24 horas
+ *     y se desbloquea la guía.
+ *
+ * IMPORTANTE:
+ * Este sistema ya no usa Google OAuth ni YouTube Data API. El acceso se basa
+ * en la espera de 60 segundos y en un caché local de 24 horas.
  */
+
 (function () {
   'use strict';
 
@@ -11,196 +21,137 @@
   window.__kelonioYoutubeWallLoaded = true;
 
   const C = window.KELONIO_YOUTUBE_CONFIG || {};
-  const CLIENT_ID = String(C.clientId || '');
-  const CHANNEL_ID = String(C.channelId || '');
-  const CHANNEL_URL = String(C.channelUrl || 'https://www.youtube.com/');
-  const JOIN_URL = String(C.joinUrl || (CHANNEL_URL.replace(/\/$/, '') + '/join'));
-  const YT_SCOPE = 'https://www.googleapis.com/auth/youtube';
-  const API = 'https://www.googleapis.com/youtube/v3';
-  const GIS_URL = 'https://accounts.google.com/gsi/client';
-  const CONFIG_OK = /^\d[\w-]*\.apps\.googleusercontent\.com$/.test(CLIENT_ID) && !CLIENT_ID.startsWith('PON_AQUI');
-  const CACHE_KEY = 'kelonio.youtube.access.v11';
+  const CHANNEL_URL = String(
+    C.channelUrl || 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw'
+  );
+
+  const CACHE_KEY = 'kelonio.youtube.access.v12';
   const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+  const WAIT_MS = 60 * 1000;
 
   const DICT = {
     es: {
       title: 'Acceso a la guía',
-      lead: 'Para continuar, suscríbete al canal de Kelonio en YouTube.',
-      detail: 'La suscripción se comprueba con tu cuenta de Google y, una vez verificada, tendrás acceso a la guía.',
-      subscribe: 'Suscribirme con Google',
-      checking: 'Comprobando tu suscripción…',
-      subscribing: 'Suscribiendo…',
-      subscribed: 'Suscripción verificada ✓',
-      success: 'Suscripción verificada. Abriendo la guía…',
-      auth: 'Necesitamos autorización de YouTube para comprobar tu suscripción.',
-      needConfig: 'El acceso por suscripción necesita configurar el Client ID de Google.',
-      error: 'No se ha podido verificar la suscripción. Inténtalo de nuevo.',
-  
+      lead: 'Para continuar, hazte miembro del canal de Kelonio en YouTube.',
+      detail: 'Pulsa el botón para abrir el canal de Kelonio en una nueva pestaña. Cuando transcurran 60 segundos, la guía se desbloqueará durante 24 horas.',
       member: 'Hacerse miembro',
-      memberAria: 'Hacerse miembro del canal de YouTube',
-      subscribeAria: 'Suscribirme al canal de YouTube con mi cuenta de Google',
-      owner: 'Propietario de Kelonio detectado ✓',
-      ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.'
+      memberAria: 'Hacerse miembro del canal de YouTube de Kelonio',
+      opening: 'Abriendo el canal de Kelonio…',
+      countdown: 'Acceso disponible en {seconds} segundos…',
+      success: 'Acceso concedido. Abriendo la guía…',
+      openChannel: 'Abrir canal de Kelonio en YouTube',
+      ready: 'Acceso disponible.'
     },
     en: {
       title: 'Guide access',
-      lead: 'To continue, subscribe to the Kelonio channel on YouTube.',
-      detail: 'Your subscription is checked with your Google account. Once verified, you will have access to the guide.',
-      subscribe: 'Subscribe with Google',
-      checking: 'Checking your subscription…',
-      subscribing: 'Subscribing…',
-      subscribed: 'Subscription verified ✓',
-      success: 'Subscription verified. Opening the guide…',
-      auth: 'YouTube authorization is needed to check your subscription.',
-      needConfig: 'Subscription access requires the Google Client ID to be configured.',
-      error: 'The subscription could not be verified. Please try again.',
-
-      member: 'Join',
-      memberAria: 'Join the YouTube channel',
-      subscribeAria: 'Subscribe to the YouTube channel with my Google account',
-      owner: 'Kelonio owner detected ✓',
-      ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.'
+      lead: 'To continue, become a member of the Kelonio channel on YouTube.',
+      detail: 'Press the button to open the Kelonio channel in a new tab. After 60 seconds, the guide will be unlocked for 24 hours.',
+      member: 'Become a member',
+      memberAria: 'Become a member of the Kelonio YouTube channel',
+      opening: 'Opening the Kelonio channel…',
+      countdown: 'Access available in {seconds} seconds…',
+      success: 'Access granted. Opening the guide…',
+      openChannel: 'Open Kelonio channel on YouTube',
+      ready: 'Access available.'
     },
     fr: {
       title: 'Accès au guide',
-      lead: 'Pour continuer, abonnez-vous à la chaîne Kelonio sur YouTube.',
-      detail: 'Votre abonnement est vérifié avec votre compte Google. Une fois vérifié, vous aurez accès au guide.',
-      subscribe: "M'abonner avec Google",
-      checking: 'Vérification de votre abonnement…',
-      subscribing: 'Abonnement en cours…',
-      subscribed: 'Abonnement vérifié ✓',
-      success: 'Abonnement vérifié. Ouverture du guide…',
-      auth: "Une autorisation YouTube est nécessaire pour vérifier votre abonnement.",
-      needConfig: "L'accès par abonnement nécessite de configurer le Client ID Google.",
-      error: "Impossible de vérifier l'abonnement. Réessayez.",
-
+      lead: 'Pour continuer, devenez membre de la chaîne Kelonio sur YouTube.',
+      detail: 'Appuyez sur le bouton pour ouvrir la chaîne Kelonio dans un nouvel onglet. Après 60 secondes, le guide sera débloqué pendant 24 heures.',
       member: 'Devenir membre',
-      memberAria: 'Devenir membre de la chaîne YouTube',
-      subscribeAria: 'S’abonner à la chaîne YouTube avec mon compte Google',
-      owner: 'Propriétaire de Kelonio détecté ✓',
-      ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est déverrouillé automatiquement.'
+      memberAria: 'Devenir membre de la chaîne YouTube de Kelonio',
+      opening: 'Ouverture de la chaîne Kelonio…',
+      countdown: 'Accès disponible dans {seconds} secondes…',
+      success: 'Accès accordé. Ouverture du guide…',
+      openChannel: 'Ouvrir la chaîne Kelonio sur YouTube',
+      ready: 'Accès disponible.'
     },
     de: {
       title: 'Zugriff auf die Anleitung',
-      lead: 'Um fortzufahren, abonniere den Kelonio-Kanal auf YouTube.',
-      detail: 'Dein Abonnement wird mit deinem Google-Konto geprüft. Nach der Bestätigung erhältst du Zugriff auf die Anleitung.',
-      subscribe: 'Mit Google abonnieren',
-      checking: 'Abonnement wird geprüft…',
-      subscribing: 'Abonnement wird durchgeführt…',
-      subscribed: 'Abonnement bestätigt ✓',
-      success: 'Abonnement bestätigt. Anleitung wird geöffnet…',
-      auth: 'Zur Prüfung deines Abonnements ist eine YouTube-Autorisierung erforderlich.',
-      needConfig: 'Für den Zugriff per Abonnement muss die Google Client-ID konfiguriert werden.',
-      error: 'Das Abonnement konnte nicht überprüft werden. Bitte erneut versuchen.',
-
+      lead: 'Um fortzufahren, werde Mitglied des Kelonio-Kanals auf YouTube.',
+      detail: 'Klicke auf die Schaltfläche, um den Kelonio-Kanal in einem neuen Tab zu öffnen. Nach 60 Sekunden wird die Anleitung für 24 Stunden freigeschaltet.',
       member: 'Mitglied werden',
-      memberAria: 'Mitglied des YouTube-Kanals werden',
-      subscribeAria: 'Den YouTube-Kanal mit meinem Google-Konto abonnieren',
-      owner: 'Kelonio-Inhaber erkannt ✓',
-      ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.'
+      memberAria: 'Mitglied des Kelonio-YouTube-Kanals werden',
+      opening: 'Kelonio-Kanal wird geöffnet…',
+      countdown: 'Zugriff in {seconds} Sekunden verfügbar…',
+      success: 'Zugriff gewährt. Anleitung wird geöffnet…',
+      openChannel: 'Kelonio-Kanal auf YouTube öffnen',
+      ready: 'Zugriff verfügbar.'
     },
     it: {
       title: 'Accesso alla guida',
-      lead: 'Per continuare, iscriviti al canale Kelonio su YouTube.',
-      detail: 'La tua iscrizione viene verificata con il tuo account Google. Dopo la verifica avrai accesso alla guida.',
-      subscribe: 'Iscriviti con Google',
-      checking: 'Controllo dell’iscrizione…',
-      subscribing: 'Iscrizione in corso…',
-      subscribed: 'Iscrizione verificata ✓',
-      success: 'Iscrizione verificata. Apertura della guida…',
-      auth: 'È necessaria l’autorizzazione di YouTube per verificare la tua iscrizione.',
-      needConfig: 'Per l’accesso tramite iscrizione è necessario configurare il Client ID Google.',
-      error: 'Non è stato possibile verificare l’iscrizione. Riprova.',
-
+      lead: 'Per continuare, diventa membro del canale Kelonio su YouTube.',
+      detail: 'Premi il pulsante per aprire il canale Kelonio in una nuova scheda. Dopo 60 secondi, la guida sarà sbloccata per 24 ore.',
       member: 'Diventa membro',
-      memberAria: 'Diventa membro del canale YouTube',
-      subscribeAria: 'Iscriviti al canale YouTube con il mio account Google',
-      owner: 'Proprietario Kelonio rilevato ✓',
-      ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.'
+      memberAria: 'Diventa membro del canale YouTube di Kelonio',
+      opening: 'Apertura del canale Kelonio…',
+      countdown: 'Accesso disponibile tra {seconds} secondi…',
+      success: 'Accesso concesso. Apertura della guida…',
+      openChannel: 'Apri il canale Kelonio su YouTube',
+      ready: 'Accesso disponibile.'
     },
     pt: {
       title: 'Acesso ao guia',
-      lead: 'Para continuar, subscreva o canal Kelonio no YouTube.',
-      detail: 'A sua subscrição é verificada com a sua conta Google. Depois de verificada, terá acesso ao guia.',
-      subscribe: 'Subscrever com Google',
-      checking: 'A verificar a subscrição…',
-      subscribing: 'A subscrever…',
-      subscribed: 'Subscrição verificada ✓',
-      success: 'Subscrição verificada. A abrir o guia…',
-      auth: 'É necessária autorização do YouTube para verificar a sua subscrição.',
-      needConfig: 'O acesso por subscrição requer a configuração do Client ID da Google.',
-      error: 'Não foi possível verificar a subscrição. Tente novamente.',
-
+      lead: 'Para continuar, torne-se membro do canal Kelonio no YouTube.',
+      detail: 'Prima o botão para abrir o canal Kelonio num novo separador. Após 60 segundos, o guia ficará desbloqueado durante 24 horas.',
       member: 'Tornar-se membro',
-      memberAria: 'Tornar-se membro do canal do YouTube',
-      subscribeAria: 'Subscrever o canal do YouTube com a minha conta Google',
-      owner: 'Proprietário da Kelonio detetado ✓',
-      ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.'
+      memberAria: 'Tornar-se membro do canal do YouTube de Kelonio',
+      opening: 'A abrir o canal Kelonio…',
+      countdown: 'Acesso disponível em {seconds} segundos…',
+      success: 'Acesso concedido. A abrir o guia…',
+      openChannel: 'Abrir o canal Kelonio no YouTube',
+      ready: 'Acesso disponível.'
     },
     ja: {
       title: 'ガイドへのアクセス',
-      lead: '続行するには、YouTube の Kelonio チャンネルに登録してください。',
-      detail: 'Google アカウントでチャンネル登録を確認します。確認が完了すると、このガイドにアクセスできます。',
-      subscribe: 'Google でチャンネル登録',
-      checking: '登録状況を確認中…',
-      subscribing: 'チャンネル登録中…',
-      subscribed: '登録を確認しました ✓',
-      success: '登録を確認しました。ガイドを開きます…',
-      auth: '登録状況を確認するには YouTube の認証が必要です。',
-      needConfig: '登録によるアクセスには Google Client ID の設定が必要です。',
-      error: '登録状況を確認できませんでした。もう一度お試しください。',
-
+      lead: '続行するには、YouTube の Kelonio チャンネルのメンバーになってください。',
+      detail: 'ボタンを押すと Kelonio チャンネルを新しいタブで開きます。60 秒後、ガイドが 24 時間利用できるようになります。',
       member: 'メンバーになる',
-      memberAria: 'YouTube チャンネルのメンバーになる',
-      subscribeAria: 'Google アカウントで YouTube チャンネルに登録',
-      owner: 'Kelonio オーナーを確認しました ✓',
-      ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。'
+      memberAria: 'Kelonio YouTube チャンネルのメンバーになる',
+      opening: 'Kelonio チャンネルを開いています…',
+      countdown: '{seconds} 秒後にアクセスできます…',
+      success: 'アクセスが許可されました。ガイドを開きます…',
+      openChannel: 'YouTube で Kelonio チャンネルを開く',
+      ready: 'アクセスできます。'
     },
     ko: {
       title: '가이드 이용',
-      lead: '계속하려면 YouTube에서 Kelonio 채널을 구독하세요.',
-      detail: 'Google 계정으로 구독 여부를 확인합니다. 확인되면 가이드에 접근할 수 있습니다.',
-      subscribe: 'Google로 구독하기',
-      checking: '구독 확인 중…',
-      subscribing: '구독하는 중…',
-      subscribed: '구독 확인 완료 ✓',
-      success: '구독이 확인되었습니다. 가이드를 엽니다…',
-      auth: '구독 여부를 확인하려면 YouTube 인증이 필요합니다.',
-      needConfig: '구독을 통한 접근을 사용하려면 Google Client ID 설정이 필요합니다.',
-      error: '구독을 확인할 수 없습니다. 다시 시도해 주세요.',
-  
+      lead: '계속하려면 YouTube에서 Kelonio 채널의 멤버가 되어 주세요.',
+      detail: '버튼을 누르면 새 탭에서 Kelonio 채널이 열립니다. 60초가 지나면 24시간 동안 가이드가 잠금 해제됩니다.',
       member: '멤버 되기',
-      memberAria: 'YouTube 채널 멤버 되기',
-      subscribeAria: 'Google 계정으로 YouTube 채널 구독',
-      owner: 'Kelonio 소유자 확인 ✓',
-      ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.'
+      memberAria: 'Kelonio YouTube 채널의 멤버 되기',
+      opening: 'Kelonio 채널을 여는 중…',
+      countdown: '{seconds}초 후 이용할 수 있습니다…',
+      success: '접근이 허용되었습니다. 가이드를 엽니다…',
+      openChannel: 'YouTube에서 Kelonio 채널 열기',
+      ready: '이용할 수 있습니다.'
     }
   };
 
-  let tokenClient = null;
-  let accessToken = null;
-  let gisReady = false;
-  let busy = false;
-  let unlocked = false;
-  let ownerDetected = false;
   let wall = null;
-  let gisLoadPromise = null;
+  let unlocked = false;
+  let busy = false;
+  let countdownTimer = null;
+  let countdownEndsAt = 0;
 
   function readAccessCache() {
     try {
       const raw = localStorage.getItem(CACHE_KEY);
       if (!raw) return null;
+
       const data = JSON.parse(raw);
       if (!data || typeof data !== 'object') return null;
+
       const verifiedAt = Number(data.verifiedAt || 0);
       const age = Date.now() - verifiedAt;
+
       if (!verifiedAt || age < 0 || age >= CACHE_TTL_MS) {
         localStorage.removeItem(CACHE_KEY);
         return null;
       }
+
       return {
         verified: data.verified === true,
-        owner: data.owner === true,
         verifiedAt
       };
     } catch (_) {
@@ -208,19 +159,14 @@
     }
   }
 
-  function writeAccessCache(kind) {
+  function writeAccessCache() {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        version: 11,
+        version: 12,
         verified: true,
-        owner: kind === 'owner',
         verifiedAt: Date.now()
       }));
     } catch (_) {}
-  }
-
-  function clearAccessCache() {
-    try { localStorage.removeItem(CACHE_KEY); } catch (_) {}
   }
 
   function lang() {
@@ -228,7 +174,11 @@
       const l = typeof window.idiomaActual === 'string' ? window.idiomaActual : '';
       if (l && DICT[l]) return l;
     } catch (_) {}
-    const raw = String(document.documentElement.lang || navigator.language || 'es').toLowerCase();
+
+    const raw = String(
+      document.documentElement.lang || navigator.language || 'es'
+    ).toLowerCase();
+
     const k = raw.split('-')[0];
     return DICT[k] ? k : 'es';
   }
@@ -239,6 +189,7 @@
 
   function buildWall() {
     wall = document.getElementById('accessWallOverlay');
+
     if (!wall) {
       wall = document.createElement('div');
       wall.id = 'accessWallOverlay';
@@ -250,26 +201,40 @@
 
     wall.innerHTML = `
       <div class="youtube-access-card" role="document">
-        <div class="youtube-access-icon" aria-hidden="true">▶</div>
+        <div class="youtube-access-icon" aria-hidden="true">★</div>
         <h1 id="youtubeAccessTitle"></h1>
         <p class="youtube-access-lead" id="youtubeAccessLead"></p>
         <p class="youtube-access-detail" id="youtubeAccessDetail"></p>
-        <div class="youtube-access-status" id="youtubeAccessStatus" role="status" aria-live="polite"></div>
-        <button type="button" class="youtube-access-btn" id="youtubeAccessSubscribe"></button>
-        <a class="youtube-access-youtube" id="youtubeAccessOpenYoutube" target="_blank" rel="noopener noreferrer"></a>
+
+        <div class="youtube-access-status" id="youtubeAccessStatus"
+             role="status" aria-live="polite"></div>
+
+        <div class="youtube-access-progress" aria-hidden="true">
+          <div class="youtube-access-progress-bar" id="youtubeAccessProgressBar"></div>
+        </div>
+
+        <button type="button"
+                class="youtube-access-btn"
+                id="youtubeAccessMember"></button>
+
+        <a class="youtube-access-youtube"
+           id="youtubeAccessOpenYoutube"
+           target="_blank"
+           rel="noopener noreferrer"></a>
+
         <div class="youtube-access-brand">YouTube · Kelonio</div>
-      </div>`;
+      </div>
+    `;
 
     injectStyles();
     refreshTexts();
-    // Keep the button disabled until GIS has initialized and the silent
-    // background check has finished. This prevents a click from racing with
-    // the silent token request and overwriting its callback.
-    const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-    if (subscribeButton) {
-      subscribeButton.disabled = true;
-      subscribeButton.setAttribute('aria-disabled', 'true');
+
+    const button = wall.querySelector('#youtubeAccessMember');
+    if (button) {
+      button.disabled = false;
+      button.setAttribute('aria-disabled', 'false');
     }
+
     return wall;
   }
 
@@ -279,94 +244,435 @@
     const style = document.createElement('style');
     style.id = 'kelonio-youtube-wall-style';
     style.textContent = `
-      html.youtube-wall-locked, body.youtube-wall-locked{overflow:hidden!important}
-      #accessWallOverlay{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,9,12,.96);backdrop-filter:blur(12px);color:#fff;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .35s ease,visibility .35s ease}
-      #accessWallOverlay.youtube-wall-hidden{opacity:0;visibility:hidden;pointer-events:none}
-      .youtube-access-card{width:min(92vw,560px);padding:42px 34px 32px;text-align:center;border-radius:24px;background:linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));border:1px solid rgba(255,255,255,.12);box-shadow:0 25px 80px rgba(0,0,0,.45),0 0 0 1px rgba(229,9,20,.06)}
-      .youtube-access-icon{width:62px;height:44px;margin:0 auto 22px;border-radius:12px;background:#e50914;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 10px 30px rgba(229,9,20,.3)}
-      .youtube-access-card h1{margin:0 0 12px;font-size:clamp(1.65rem,4vw,2.2rem);font-weight:900;letter-spacing:-.4px;color:#fff}
-      .youtube-access-lead{margin:0 auto 12px;max-width:470px;font-size:1.05rem;line-height:1.55;color:#f2f2f2}
-      .youtube-access-detail{margin:0 auto 22px;max-width:470px;font-size:.92rem;line-height:1.5;color:#aeb3bd}
-      .youtube-access-status{min-height:22px;margin:0 0 12px;color:#cfd3da;font-weight:700;font-size:.84rem}
-      .youtube-access-btn{width:100%;border:0;border-radius:12px;padding:14px 20px;background:#e50914;color:#fff;font:900 1rem/1.2 'Segoe UI',system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 26px rgba(229,9,20,.25);transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
-      .youtube-access-btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 14px 32px rgba(229,9,20,.34)}
-      .youtube-access-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
-      .youtube-access-btn:disabled{opacity:.72;cursor:wait}
-      .youtube-access-youtube{display:block;margin:13px 0 0;color:#aeb3bd;text-decoration:none;font-size:.8rem;font-weight:700}
-      .youtube-access-youtube:hover{text-decoration:underline;color:#fff}
-      .youtube-access-brand{margin-top:24px;color:#686e79;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-      @media(max-width:600px){#accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
+      html.youtube-wall-locked,
+      body.youtube-wall-locked {
+        overflow: hidden !important;
+      }
+
+      #accessWallOverlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2147483000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: rgba(8,9,12,.96);
+        backdrop-filter: blur(12px);
+        color: #fff;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity .35s ease, visibility .35s ease;
+      }
+
+      #accessWallOverlay.youtube-wall-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .youtube-access-card {
+        width: min(92vw, 560px);
+        padding: 42px 34px 32px;
+        text-align: center;
+        border-radius: 24px;
+        background: linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));
+        border: 1px solid rgba(255,255,255,.12);
+        box-shadow:
+          0 25px 80px rgba(0,0,0,.45),
+          0 0 0 1px rgba(229,9,20,.06);
+      }
+
+      .youtube-access-icon {
+        width: 62px;
+        height: 62px;
+        margin: 0 auto 22px;
+        border-radius: 50%;
+        background: #e50914;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: 900;
+        box-shadow: 0 10px 30px rgba(229,9,20,.3);
+      }
+
+      .youtube-access-card h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.65rem,4vw,2.2rem);
+        font-weight: 900;
+        letter-spacing: -.4px;
+        color: #fff;
+      }
+
+      .youtube-access-lead {
+        margin: 0 auto 12px;
+        max-width: 470px;
+        font-size: 1.05rem;
+        line-height: 1.55;
+        color: #f2f2f2;
+      }
+
+      .youtube-access-detail {
+        margin: 0 auto 22px;
+        max-width: 470px;
+        font-size: .92rem;
+        line-height: 1.5;
+        color: #aeb3bd;
+      }
+
+      .youtube-access-status {
+        min-height: 22px;
+        margin: 0 0 12px;
+        color: #cfd3da;
+        font-weight: 700;
+        font-size: .84rem;
+      }
+
+      .youtube-access-progress {
+        width: 100%;
+        height: 8px;
+        margin: 0 0 18px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255,255,255,.08);
+      }
+
+      .youtube-access-progress-bar {
+        width: 0%;
+        height: 100%;
+        border-radius: inherit;
+        background: #e50914;
+        transition: width .25s linear;
+      }
+
+      .youtube-access-btn {
+        width: 100%;
+        border: 0;
+        border-radius: 12px;
+        padding: 14px 20px;
+        background: #e50914;
+        color: #fff;
+        font: 900 1rem/1.2 'Segoe UI',system-ui,sans-serif;
+        cursor: pointer;
+        box-shadow: 0 10px 26px rgba(229,9,20,.25);
+        transition:
+          transform .18s ease,
+          filter .18s ease,
+          box-shadow .18s ease;
+      }
+
+      .youtube-access-btn:hover:not(:disabled) {
+        transform: translateY(-2px);
+        filter: brightness(1.08);
+        box-shadow: 0 14px 32px rgba(229,9,20,.34);
+      }
+
+      .youtube-access-btn:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 3px;
+      }
+
+      .youtube-access-btn:disabled {
+        opacity: .72;
+        cursor: wait;
+      }
+
+      .youtube-access-youtube {
+        display: block;
+        margin: 13px 0 0;
+        color: #aeb3bd;
+        text-decoration: none;
+        font-size: .8rem;
+        font-weight: 700;
+      }
+
+      .youtube-access-youtube:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+
+      .youtube-access-brand {
+        margin-top: 24px;
+        color: #686e79;
+        font-size: .72rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      @media(max-width:600px) {
+        #accessWallOverlay {
+          padding: 16px;
+        }
+
+        .youtube-access-card {
+          padding: 34px 22px 25px;
+          border-radius: 20px;
+        }
+
+        .youtube-access-lead {
+          font-size: .98rem;
+        }
+
+        .youtube-access-detail {
+          font-size: .86rem;
+        }
+      }
     `;
+
     document.head.appendChild(style);
   }
 
   function refreshTexts() {
     if (!wall) return;
+
     const d = t();
     const q = (id) => wall.querySelector('#' + id);
 
-    if (q('youtubeAccessTitle')) q('youtubeAccessTitle').textContent = d.title;
-    if (q('youtubeAccessLead')) q('youtubeAccessLead').textContent = d.lead;
-    if (q('youtubeAccessDetail')) q('youtubeAccessDetail').textContent = d.detail;
+    if (q('youtubeAccessTitle')) {
+      q('youtubeAccessTitle').textContent = d.title;
+    }
+
+    if (q('youtubeAccessLead')) {
+      q('youtubeAccessLead').textContent = d.lead;
+    }
+
+    if (q('youtubeAccessDetail')) {
+      q('youtubeAccessDetail').textContent = d.detail;
+    }
 
     const open = q('youtubeAccessOpenYoutube');
     if (open) {
-      open.textContent = d.openYoutube;
+      open.textContent = d.openChannel;
       open.href = CHANNEL_URL;
-      open.setAttribute('aria-label', d.openYoutube);
+      open.setAttribute('aria-label', d.openChannel);
     }
 
-    const button = q('youtubeAccessSubscribe');
+    const button = q('youtubeAccessMember');
     if (button) {
-      button.textContent = busy ? d.subscribing : (ownerDetected ? d.owner : (unlocked ? d.subscribed : d.subscribe));
-      button.disabled = busy || unlocked || ownerDetected;
-      button.setAttribute('aria-label', d.subscribeAria);
+      button.textContent = busy
+        ? d.countdown.replace('{seconds}', getRemainingSeconds())
+        : d.member;
+      button.disabled = busy || unlocked;
+      button.setAttribute(
+        'aria-label',
+        d.memberAria
+      );
     }
   }
 
-  function setStatus(key, custom) {
+  function setStatusText(text) {
     const el = wall && wall.querySelector('#youtubeAccessStatus');
-    if (el) el.textContent = custom || t()[key] || '';
+    if (el) el.textContent = text || '';
+  }
+
+  function getRemainingSeconds() {
+    if (!countdownEndsAt) return 60;
+    return Math.max(0, Math.ceil((countdownEndsAt - Date.now()) / 1000));
+  }
+
+  function setProgress(percent) {
+    const bar = wall && wall.querySelector('#youtubeAccessProgressBar');
+    if (bar) {
+      bar.style.width = Math.max(0, Math.min(100, percent)) + '%';
+    }
+  }
+
+  function openChannel() {
+    /*
+     * Se abre en una pestaña nueva para que la guía siga activa y pueda
+     * completar la cuenta atrás de 60 segundos.
+     */
+    try {
+      const popup = window.open(
+        CHANNEL_URL,
+        '_blank',
+        'noopener,noreferrer'
+      );
+
+      if (!popup) {
+        const link = wall && wall.querySelector('#youtubeAccessOpenYoutube');
+        if (link) link.click();
+        return false;
+      }
+
+      try {
+        popup.opener = null;
+      } catch (_) {}
+
+      return true;
+    } catch (_) {
+      const link = wall && wall.querySelector('#youtubeAccessOpenYoutube');
+      if (link) link.click();
+      return false;
+    }
+  }
+
+  function finishAccess() {
+    if (unlocked) return;
+
+    if (countdownTimer) {
+      window.clearInterval(countdownTimer);
+      countdownTimer = null;
+    }
+
+    countdownEndsAt = 0;
+    busy = false;
+    unlocked = true;
+
+    writeAccessCache();
+
+    const d = t();
+    setStatusText(d.success);
+    setProgress(100);
+
+    document.documentElement.classList.remove('youtube-wall-locked');
+    document.body.classList.remove('youtube-wall-locked');
+
+    const button = wall && wall.querySelector('#youtubeAccessMember');
+    if (button) {
+      button.disabled = true;
+      button.textContent = d.ready;
+    }
+
+    if (wall) {
+      wall.classList.add('youtube-wall-hidden');
+      window.setTimeout(() => {
+        if (wall) wall.remove();
+      }, 380);
+    }
+
+    showMemberCta();
+
+    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
+      detail: { source: 'member-60s-cache-24h' }
+    }));
+  }
+
+  function startCountdown() {
+    if (busy || unlocked) return;
+
+    busy = true;
+    countdownEndsAt = Date.now() + WAIT_MS;
+
+    const button = wall && wall.querySelector('#youtubeAccessMember');
+    if (button) {
+      button.disabled = true;
+      button.setAttribute('aria-disabled', 'true');
+    }
+
+    const d = t();
+    setStatusText(d.opening);
+
+    function tick() {
+      const remaining = getRemainingSeconds();
+      const elapsed = Math.max(0, WAIT_MS - Math.max(0, countdownEndsAt - Date.now()));
+      const percent = (elapsed / WAIT_MS) * 100;
+
+      setStatusText(
+        remaining > 0
+          ? d.countdown.replace('{seconds}', String(remaining))
+          : d.ready
+      );
+
+      setProgress(percent);
+
+      if (remaining <= 0) {
+        finishAccess();
+      }
+    }
+
+    tick();
+    countdownTimer = window.setInterval(tick, 250);
+  }
+
+  function handleMemberClick() {
+    if (busy || unlocked) return;
+
+    openChannel();
+    startCountdown();
   }
 
   function showMemberCta() {
-    const videos = Array.from(document.querySelectorAll('.guide-content .video-container'));
+    const videos = Array.from(
+      document.querySelectorAll('.guide-content .video-container')
+    );
+
     if (!videos.length || document.getElementById('youtube-cta-box')) return;
 
     const last = videos[videos.length - 1];
     const box = document.createElement('section');
+
     box.id = 'youtube-cta-box';
     box.className = 'youtube-cta-box';
     box.innerHTML = `
       <div class="youtube-cta-actions">
-        <a class="youtube-cta-member" target="_blank" rel="noopener noreferrer sponsored"></a>
-      </div>`;
+        <a class="youtube-cta-member"
+           target="_blank"
+           rel="noopener noreferrer sponsored"></a>
+      </div>
+    `;
 
     const style = document.createElement('style');
     style.textContent = `
-      .youtube-cta-box{width:100%;margin:4px 0 30px;padding:17px 0 5px;border-top:1px solid var(--glass-border);text-align:center}
-      .youtube-cta-member{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:10px;background:var(--red);color:#fff!important;text-decoration:none!important;font:900 .86rem/1.15 'Segoe UI',system-ui,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:filter .18s ease,transform .18s ease}
-      .youtube-cta-member:hover{filter:brightness(1.08);transform:translateY(-2px)}
-      .youtube-cta-member:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+      .youtube-cta-box {
+        width: 100%;
+        margin: 4px 0 30px;
+        padding: 17px 0 5px;
+        border-top: 1px solid var(--glass-border);
+        text-align: center;
+      }
+
+      .youtube-cta-member {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 18px;
+        border-radius: 10px;
+        background: var(--red);
+        color: #fff !important;
+        text-decoration: none !important;
+        font: 900 .86rem/1.15 'Segoe UI',system-ui,sans-serif;
+        box-shadow: 0 6px 18px rgba(0,0,0,.18);
+        transition: filter .18s ease, transform .18s ease;
+      }
+
+      .youtube-cta-member:hover {
+        filter: brightness(1.08);
+        transform: translateY(-2px);
+      }
+
+      .youtube-cta-member:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
     `;
+
     box.appendChild(style);
     last.insertAdjacentElement('afterend', box);
 
     const link = box.querySelector('.youtube-cta-member');
-    link.href = JOIN_URL;
+    if (!link) return;
+
+    link.href = CHANNEL_URL;
     link.textContent = t().member;
     link.setAttribute('aria-label', t().memberAria);
   }
 
-  function hideWall(cacheKind) {
+  function unlockFromCache(cached) {
+    if (!cached || !cached.verified) return;
+
     unlocked = true;
-    writeAccessCache(cacheKind === 'owner' ? 'owner' : 'subscription');
+
+    wall = document.getElementById('accessWallOverlay');
+    injectStyles();
+
     document.documentElement.classList.remove('youtube-wall-locked');
     document.body.classList.remove('youtube-wall-locked');
 
     if (wall) {
-      refreshTexts();
-      setStatus('success');
       wall.classList.add('youtube-wall-hidden');
       window.setTimeout(() => {
         if (wall) wall.remove();
@@ -374,341 +680,34 @@
     }
 
     showMemberCta();
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted'));
+
+    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
+      detail: {
+        source: 'local-cache-24h'
+      }
+    }));
   }
 
   function showWall() {
     if (!wall) buildWall();
+
     wall.classList.remove('youtube-wall-hidden');
+
     document.documentElement.classList.add('youtube-wall-locked');
     document.body.classList.add('youtube-wall-locked');
+
     refreshTexts();
   }
 
-  function loadGIS() {
-    if (!CONFIG_OK || !CHANNEL_ID) {
-      return Promise.reject(new Error('not_configured'));
-    }
+  function bootstrap() {
+    const videos = document.querySelectorAll(
+      '.guide-content .video-container'
+    );
 
-    if (window.google && google.accounts && google.accounts.oauth2) {
-      return Promise.resolve();
-    }
-
-    if (gisLoadPromise) return gisLoadPromise;
-
-    gisLoadPromise = new Promise((resolve, reject) => {
-      const existing = document.querySelector('script[data-kelonio-gis]');
-      if (existing) {
-        existing.addEventListener('load', resolve, { once: true });
-        existing.addEventListener('error', () => reject(new Error('gis_load_failed')), { once: true });
-        return;
-      }
-
-      const script = document.createElement('script');
-      script.src = GIS_URL;
-      script.async = true;
-      script.defer = true;
-      script.dataset.kelonioGis = '1';
-      script.onload = resolve;
-      script.onerror = () => reject(new Error('gis_load_failed'));
-      document.head.appendChild(script);
-    }).finally(() => {
-      gisLoadPromise = null;
-    });
-
-    return gisLoadPromise;
-  }
-
-  function initGIS() {
-    if (gisReady) return true;
-    if (!(window.google && google.accounts && google.accounts.oauth2)) return false;
-
-    tokenClient = google.accounts.oauth2.initTokenClient({
-      client_id: CLIENT_ID,
-      scope: YT_SCOPE,
-      include_granted_scopes: true,
-      callback: () => {},
-      error_callback: () => {}
-    });
-
-    gisReady = true;
-    return true;
-  }
-
-  function isRecoverableOAuthError(message) {
-    return [
-      'interaction_required',
-      'consent_required',
-      'login_required',
-      'access_denied',
-      'oauth_error'
-    ].includes(String(message || ''));
-  }
-
-  function tokenRequest(promptValue) {
-    return new Promise((resolve, reject) => {
-      if (!gisReady || !tokenClient) {
-        reject(new Error('gis_not_ready'));
-        return;
-      }
-
-      tokenClient.callback = (resp) => {
-        if (!resp || !resp.access_token) {
-          reject(new Error((resp && (resp.error || resp.error_description)) || 'no_token'));
-          return;
-        }
-
-        const grantedScope = String(resp.scope || '').split(/\s+/).filter(Boolean);
-        let scopeOk = grantedScope.includes(YT_SCOPE);
-
-        try {
-          if (typeof google.accounts.oauth2.hasGrantedAllScopes === 'function') {
-            scopeOk = google.accounts.oauth2.hasGrantedAllScopes(resp, YT_SCOPE);
-          }
-        } catch (_) {}
-
-        if (!scopeOk) {
-          reject(new Error('scope_not_granted'));
-          return;
-        }
-
-        accessToken = resp.access_token;
-        resolve(resp);
-      };
-
-      tokenClient.error_callback = (err) => {
-        reject(new Error((err && (err.type || err.error || err.message)) || 'oauth_error'));
-      };
-
-      try {
-        const request = promptValue ? { prompt: promptValue } : {};
-        tokenClient.requestAccessToken(request);
-      } catch (err) {
-        reject(err instanceof Error ? err : new Error('oauth_error'));
-      }
-    });
-  }
-
-  async function apiFetch(url, options) {
-    const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 20000);
-
-    try {
-      const headers = Object.assign({}, (options && options.headers) || {}, {
-        Authorization: 'Bearer ' + accessToken
-      });
-      return await fetch(url, Object.assign({}, options || {}, { headers, signal: controller.signal }));
-    } finally {
-      window.clearTimeout(timer);
-    }
-  }
-
-  async function checkOwnerChannel() {
-    if (!accessToken || !CHANNEL_ID) return false;
-
-    const params = new URLSearchParams({
-      part: 'id',
-      mine: 'true',
-      maxResults: '50'
-    });
-
-    const response = await apiFetch(API + '/channels?' + params.toString());
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (!response.ok) {
-      throw new Error('owner_check_failed_' + response.status);
-    }
-
-    const data = await response.json();
-    return Array.isArray(data.items) && data.items.some((item) => String(item && item.id || '') === CHANNEL_ID);
-  }
-
-  async function checkSubscription() {
-    if (!accessToken) return false;
-
-    const params = new URLSearchParams({
-      part: 'id',
-      mine: 'true',
-      forChannelId: CHANNEL_ID,
-      maxResults: '1'
-    });
-
-    const response = await apiFetch(API + '/subscriptions?' + params.toString());
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (!response.ok) {
-      throw new Error('check_failed_' + response.status);
-    }
-
-    const data = await response.json();
-    return Array.isArray(data.items) && data.items.length > 0;
-  }
-
-  async function subscribe() {
-    const response = await apiFetch(API + '/subscriptions?part=snippet', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        snippet: {
-          resourceId: {
-            kind: 'youtube#channel',
-            channelId: CHANNEL_ID
-          }
-        }
-      })
-    });
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (response.ok) return true;
-
-    // In case the subscription was created between the initial check and insert.
-    if (response.status === 400) {
-      try {
-        const data = await response.json();
-        const duplicated = data && data.error && Array.isArray(data.error.errors) &&
-          data.error.errors.some((item) => item && item.reason === 'subscriptionDuplicate');
-        if (duplicated) return true;
-      } catch (_) {}
-    }
-
-    throw new Error('insert_failed_' + response.status);
-  }
-
-  async function ensureSubscription() {
-    if (busy || unlocked) return;
-
-    // GIS is preloaded and the button remains disabled until the initial
-    // silent check completes. requestAccessToken() therefore runs directly
-    // from this click, preserving the user gesture required for Google's
-    // account/consent UI.
-    if (!gisReady) {
-      setStatus('auth');
-      return;
-    }
-
-    busy = true;
-    refreshTexts();
-    setStatus('subscribing');
-
-    try {
-      if (!accessToken) {
-        // No prompt override: reuse a previous grant if it exists; otherwise
-        // Google opens the account/consent flow. Crucially, this call is made
-        // directly from the button click, with no awaited request before it.
-        await tokenRequest('');
-      }
-
-      if (await checkOwnerChannel()) {
-        ownerDetected = true;
-        const d = t();
-        refreshTexts();
-        setStatus(null, d.ownerDetail || d.owner);
-        hideWall('owner');
-        return;
-      }
-
-      let subscribed = await checkSubscription();
-      if (!subscribed) {
-        try {
-          await subscribe();
-        } catch (error) {
-          if (error.message === 'unauthorized') {
-            throw new Error('reauthorization_needed');
-          } else {
-            throw error;
-          }
-        }
-      }
-
-      // The insert call itself is the authoritative success response. Re-check
-      // once when possible so the UI only unlocks after the API confirms it.
-      let verified = false;
-      for (let attempt = 0; attempt < 3 && !verified; attempt += 1) {
-        try {
-          verified = await checkSubscription();
-        } catch (error) {
-          if (error.message === 'unauthorized') {
-            throw new Error('reauthorization_needed');
-          }
-          throw error;
-        }
-
-        if (!verified && attempt < 2) {
-          await new Promise((resolve) => window.setTimeout(resolve, 800));
-        }
-      }
-
-      if (!verified) throw new Error('verification_failed');
-
-      hideWall('subscription');
-    } catch (error) {
-      accessToken = null;
-      clearAccessCache();
-      const message = error && error.message ? error.message : '';
-      const text = message === 'not_configured'
-        ? t().needConfig
-        : (message === 'reauthorization_needed' || message === 'scope_not_granted' || isRecoverableOAuthError(message)
-          ? t().auth
-          : t().error);
-      setStatus(null, text);
-    } finally {
-      busy = false;
-      if (wall) {
-        refreshTexts();
-        if (!unlocked && !ownerDetected && gisReady) {
-          const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-          if (subscribeButton) {
-            subscribeButton.disabled = false;
-            subscribeButton.setAttribute('aria-disabled', 'false');
-          }
-        }
-      }
-    }
-  }
-
-  function unlockFromCache(cached) {
-    ownerDetected = cached.owner === true;
-    unlocked = true;
-
-    // La plantilla de las guías incluye un muro estático para evitar que
-    // el contenido aparezca antes de que cargue este script. En una
-    // recarga con caché válida ese muro ya existe en el DOM, por lo que
-    // debemos ocultarlo explícitamente antes de salir de bootstrap().
-    wall = document.getElementById('accessWallOverlay');
-    injectStyles();
-    document.documentElement.classList.remove('youtube-wall-locked');
-    document.body.classList.remove('youtube-wall-locked');
-
-    if (wall) {
-      wall.classList.add('youtube-wall-hidden');
-      window.setTimeout(() => {
-        if (wall) wall.remove();
-      }, 380);
-    }
-
-    showMemberCta();
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-      detail: { source: 'local-cache-24h', owner: cached.owner }
-    }));
-  }
-
-  async function bootstrap() {
-    const videos = document.querySelectorAll('.guide-content .video-container');
     if (!videos.length) return;
 
     const cached = readAccessCache();
+
     if (cached && cached.verified) {
       unlockFromCache(cached);
       return;
@@ -717,71 +716,39 @@
     buildWall();
     showWall();
 
-    const button = wall.querySelector('#youtubeAccessSubscribe');
-    button.addEventListener('click', ensureSubscription);
+    const button = wall.querySelector('#youtubeAccessMember');
 
-    if (!CONFIG_OK || !CHANNEL_ID) {
-      setStatus('needConfig');
-      return;
-    }
-
-    try {
-      setStatus('checking');
-      await loadGIS();
-      if (!initGIS()) throw new Error('gis_not_ready');
-
-      // Silent detection: if this browser already has a Google session and
-      // already granted this app access to YouTube, no consent UI is shown.
-      try {
-        await tokenRequest('none');
-        try {
-          if (await checkOwnerChannel()) {
-            ownerDetected = true;
-            const d = t();
-            refreshTexts();
-            setStatus(null, d.ownerDetail || d.owner);
-            hideWall('owner');
-            return;
-          }
-        } catch (ownerError) {
-          if (ownerError.message === 'unauthorized') throw ownerError;
-        }
-        if (await checkSubscription()) {
-          hideWall('subscription');
-          return;
-        }
-        accessToken = null;
-        refreshTexts();
-        setStatus('auth');
-      } catch (_) {
-        accessToken = null;
-        refreshTexts();
-        setStatus('auth');
-      }
-
-      if (!unlocked) {
-        const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-        if (subscribeButton) {
-          subscribeButton.disabled = false;
-          subscribeButton.setAttribute('aria-disabled', 'false');
-        }
-      }
-    } catch (_) {
-      setStatus('auth');
-      const subscribeButton = wall && wall.querySelector('#youtubeAccessSubscribe');
-      if (subscribeButton) {
-        subscribeButton.disabled = false;
-        subscribeButton.setAttribute('aria-disabled', 'false');
-      }
+    if (button) {
+      button.addEventListener('click', handleMemberClick);
     }
   }
 
   document.addEventListener('kelonio:languageChanged', () => {
     refreshTexts();
-    const member = document.querySelector('#youtube-cta-box .youtube-cta-member');
+
+    const member = document.querySelector(
+      '#youtube-cta-box .youtube-cta-member'
+    );
+
     if (member) {
       member.textContent = t().member;
       member.setAttribute('aria-label', t().memberAria);
+    }
+
+    if (busy && countdownEndsAt) {
+      const remaining = getRemainingSeconds();
+      setStatusText(
+        remaining > 0
+          ? t().countdown.replace('{seconds}', String(remaining))
+          : t().ready
+      );
+    }
+  });
+
+  window.addEventListener('beforeunload', () => {
+    if (countdownTimer) {
+      window.clearInterval(countdownTimer);
+      countdownTimer = null;
     }
   });
 
