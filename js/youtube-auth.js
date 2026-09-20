@@ -32,56 +32,48 @@
   const DICT = {
     es: {
       title: 'Acceso a la guía',
-      lead: 'Para continuar, hazte miembro del canal de Kelonio en YouTube.',
-      member: 'Hacerse miembro',
-      memberAria: 'Hacerse miembro del canal de YouTube de Kelonio',
+      member: 'Suscribirse',
+      memberAria: 'Suscribirse al canal de YouTube de Kelonio',
       success: 'Acceso concedido. Abriendo la guía…',
     },
     en: {
       title: 'Guide access',
-      lead: 'To continue, become a member of the Kelonio channel on YouTube.',
       member: 'Become a member',
       memberAria: 'Become a member of the Kelonio YouTube channel',
       success: 'Access granted. Opening the guide…',
     },
     fr: {
       title: 'Accès au guide',
-      lead: 'Pour continuer, devenez membre de la chaîne Kelonio sur YouTube.',
       member: 'Devenir membre',
       memberAria: 'Devenir membre de la chaîne YouTube de Kelonio',
       success: 'Accès accordé. Ouverture du guide…',
     },
     de: {
       title: 'Zugriff auf die Anleitung',
-      lead: 'Um fortzufahren, werde Mitglied des Kelonio-Kanals auf YouTube.',
       member: 'Mitglied werden',
       memberAria: 'Mitglied des Kelonio-YouTube-Kanals werden',
       success: 'Zugriff gewährt. Anleitung wird geöffnet…',
     },
     it: {
       title: 'Accesso alla guida',
-      lead: 'Per continuare, diventa membro del canale Kelonio su YouTube.',
       member: 'Diventa membro',
       memberAria: 'Diventa membro del canale YouTube di Kelonio',
       success: 'Accesso concesso. Apertura della guida…',
     },
     pt: {
       title: 'Acesso ao guia',
-      lead: 'Para continuar, torne-se membro do canal Kelonio no YouTube.',
       member: 'Tornar-se membro',
       memberAria: 'Tornar-se membro do canal do YouTube de Kelonio',
       success: 'Acesso concedido. A abrir o guia…',
     },
     ja: {
       title: 'ガイドへのアクセス',
-      lead: '続行するには、YouTube の Kelonio チャンネルのメンバーになってください。',
       member: 'メンバーになる',
       memberAria: 'Kelonio YouTube チャンネルのメンバーになる',
       success: 'アクセスが許可されました。ガイドを開きます…',
     },
     ko: {
       title: '가이드 이용',
-      lead: '계속하려면 YouTube에서 Kelonio 채널의 멤버가 되어 주세요.',
       member: '멤버 되기',
       memberAria: 'Kelonio YouTube 채널의 멤버 되기',
       success: '접근이 허용되었습니다. 가이드를 엽니다…',
@@ -163,10 +155,6 @@
       <div class="youtube-access-card" role="document">
         <div class="youtube-access-icon" aria-hidden="true">★</div>
         <h1 id="youtubeAccessTitle"></h1>
-        <p class="youtube-access-lead" id="youtubeAccessLead"></p>
-
-        <div class="youtube-access-status" id="youtubeAccessStatus"
-             role="status" aria-live="polite"></div>
         </div>
 
         <button type="button"
@@ -254,21 +242,6 @@
         letter-spacing: -.4px;
         color: #fff;
       }
-
-      .youtube-access-lead {
-        margin: 0 auto 12px;
-        max-width: 470px;
-        font-size: 1.05rem;
-        line-height: 1.55;
-        color: #f2f2f2;
-      }
-.youtube-access-status {
-        min-height: 22px;
-        margin: 0 0 12px;
-        color: #cfd3da;
-        font-weight: 700;
-        font-size: .84rem;
-      }
 .youtube-access-btn {
         width: 100%;
         border: 0;
@@ -313,10 +286,6 @@
           padding: 34px 22px 25px;
           border-radius: 20px;
         }
-
-        .youtube-access-lead {
-          font-size: .98rem;
-        }
 }
     `;
 
@@ -333,10 +302,6 @@
       q('youtubeAccessTitle').textContent = d.title;
     }
 
-    if (q('youtubeAccessLead')) {
-      q('youtubeAccessLead').textContent = d.lead;
-    }
-
     const button = q('youtubeAccessMember');
     if (button) {
       button.textContent = d.member;
@@ -346,11 +311,6 @@
         d.memberAria
       );
     }
-  }
-
-  function setStatusText(text) {
-    const el = wall && wall.querySelector('#youtubeAccessStatus');
-    if (el) el.textContent = text || '';
   }
   }
 
@@ -398,7 +358,6 @@
 
     writeAccessCache();
 
-    setStatusText('');
     document.documentElement.classList.remove('youtube-wall-locked');
     document.body.classList.remove('youtube-wall-locked');
 
@@ -433,13 +392,11 @@
       button.setAttribute('aria-disabled', 'true');
     }
 
-    setStatusText('');
-
     function tick() {
       const remaining = getRemainingSeconds();
       const elapsed = Math.max(0, WAIT_MS - Math.max(0, countdownEndsAt - Date.now()));
       const percent = (elapsed / WAIT_MS) * 100;
-      setStatusText('');
+
       if (remaining <= 0) {
         finishAccess();
       }
