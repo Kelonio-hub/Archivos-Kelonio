@@ -3,1765 +3,306 @@
     "tag": "Switch / DBI",
     "title": "DBI 912 - Russian version only",
     "link": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
-    "date": "2026-09-18T07:14:24.000Z",
-    "sourceUrl": "https://github.com/rashevskyv/dbi/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-mision-control",
-        "title": "Switch: Mission Control",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-dongle",
-        "title": "Switch: Dongle RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-02-pack-magic-errores",
-        "title": "Switch: Hack Pack (Fix CFW Errors)",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-01-pack-magic",
-        "title": "Switch: Hack Pack (Updater console)",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-semibrick",
-        "title": "Switch: Semibrick",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-09-18T07:14:24.000Z"
   },
   {
     "tag": "Switch / Rekado",
     "title": "Rekado 5.4",
     "link": "https://github.com/MenosGrante/Rekado/releases/tag/5.4",
-    "date": "2026-09-16T08:56:16.000Z",
-    "sourceUrl": "https://github.com/MenosGrante/Rekado/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-5-nand",
-        "title": "Switch: Nand",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-4-hack-erista",
-        "title": "Switch: Hack Erista",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-09-16T08:56:16.000Z"
   },
   {
     "tag": "Switch / Checkpoint",
     "title": "Checkpoint 5.2.0",
     "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.2.0",
-    "date": "2026-08-26T13:31:51.000Z",
-    "sourceUrl": "https://github.com/BernardoGiordano/Checkpoint/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-checkpoint",
-        "title": "Switch: Checkpoint",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-5-nand",
-        "title": "Switch: Nand",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-2-comprobar-mariko",
-        "title": "Switch: Comprobar Mariko",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-08-26T13:31:51.000Z"
   },
   {
     "tag": "Switch / Switch Theme Injector",
     "title": "NXThemesInstaller 3.0.1",
     "link": "https://github.com/exelix11/SwitchThemeInjector/releases/tag/nxt-3.0.1",
-    "date": "2026-08-19T20:37:45.000Z",
-    "sourceUrl": "https://github.com/exelix11/SwitchThemeInjector/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-nxthemes",
-        "title": "Switch: NXThemesInstaller",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-3-hack-mariko",
-        "title": "Switch: Hack Mariko + Lite",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-08-19T20:37:45.000Z"
   },
   {
     "tag": "Switch / nxdumptool",
     "title": "nxdumptool-rewrite (latest commit build)",
     "link": "https://github.com/DarkMatterCore/nxdumptool/releases/tag/rewrite-prerelease",
-    "date": "2026-08-04T00:08:48.000Z",
-    "sourceUrl": "https://github.com/DarkMatterCore/nxdumptool/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-nxdump",
-        "title": "Switch: NXDumpoTool",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-08-04T00:08:48.000Z"
   },
   {
     "tag": "Wii U / Inkay",
     "title": "v3.0.0",
     "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
-    "date": "2026-07-20T14:06:40.000Z",
-    "sourceUrl": "https://github.com/PretendoNetwork/Inkay/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-pretendo",
-        "title": "WiiU: Online",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-nusspli",
-        "title": "WiiU: Nusspli",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-hack",
-        "title": "WiiU: Hack Tiramisu/Aroma",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-ftp",
-        "title": "WiiU: FTP",
-        "category": "WII U"
-      }
-    ]
+    "date": "2026-07-20T14:06:40.000Z"
   },
   {
     "tag": "3DS / LUMA PINK",
     "title": "LUMA PINK 13.3.4",
     "link": "https://github.com/Kelonio-hub/Luma3DS_Pink/releases/tag/v13.3.4",
-    "date": "2026-07-09T23:11:05.000Z",
-    "sourceUrl": "https://github.com/Kelonio-hub/Luma3DS_Pink/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-yy-luma-arm11-core3",
-        "title": "Error Luma: ARM11 - Core 3",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-y-luma",
-        "title": "3DS: Luma Pink",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-arranque-roto",
-        "title": "3DS: Arranque Roto",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-launcher-argc",
-        "title": "Error Luma: Launcher (argc = 0)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-firm-patches",
-        "title": "Error Luma: Firm Patches",
-        "category": "3DS"
-      }
-    ]
+    "date": "2026-07-09T23:11:05.000Z"
   },
   {
     "tag": "Switch / Hekate",
     "title": "hekate v6.5.3 & Nyx v1.9.3",
     "link": "https://github.com/CTCaer/hekate/releases/tag/v6.5.3",
-    "date": "2026-06-30T22:38:31.000Z",
-    "sourceUrl": "https://github.com/CTCaer/hekate/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-5-nand",
-        "title": "Switch: Nand",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-eliminar-hack",
-        "title": "Switch: Eliminar Hack",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-dongle",
-        "title": "Switch: Dongle RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-4-hack-erista",
-        "title": "Switch: Hack Erista",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-3-hack-mariko",
-        "title": "Switch: Hack Mariko + Lite",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-06-30T22:38:31.000Z"
   },
   {
     "tag": "Switch / Mission Control",
     "title": "0.15.2",
     "link": "https://github.com/ndeadly/MissionControl/releases/tag/0.15.2",
-    "date": "2026-06-18T17:28:25.000Z",
-    "sourceUrl": "https://github.com/ndeadly/MissionControl/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-mision-control",
-        "title": "Switch: Mission Control",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-2-comprobar-mariko",
-        "title": "Switch: Comprobar Mariko",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-06-18T17:28:25.000Z"
   },
   {
     "tag": "Switch / CFW",
     "title": "Atmosphère 1.11.2",
     "link": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.11.2",
-    "date": "2026-06-16T22:01:02.000Z",
-    "sourceUrl": "https://github.com/Atmosphere-NX/Atmosphere/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-pplay",
-        "title": "Switch: pPlay",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-awoo",
-        "title": "Swtich: Awoo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla",
-        "title": "Switch: Tesla Overlay Menu",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-mision-control",
-        "title": "Switch: Mission Control",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-06-16T22:01:02.000Z"
   },
   {
     "tag": "Wii U / Nimbus",
     "title": "v2.1.1",
     "link": "https://github.com/PretendoNetwork/nimbus/releases/tag/v2.1.1",
-    "date": "2026-06-09T22:33:30.000Z",
-    "sourceUrl": "https://github.com/PretendoNetwork/nimbus/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-pretendo",
-        "title": "WiiU: Online",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-nusspli",
-        "title": "WiiU: Nusspli",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-hack",
-        "title": "WiiU: Hack Tiramisu/Aroma",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-ftp",
-        "title": "WiiU: FTP",
-        "category": "WII U"
-      }
-    ]
+    "date": "2026-06-09T22:33:30.000Z"
   },
   {
     "tag": "3DS / Nimbus",
     "title": "v2.1.1",
     "link": "https://github.com/PretendoNetwork/nimbus/releases/tag/v2.1.1",
-    "date": "2026-06-09T22:33:30.000Z",
-    "sourceUrl": "https://github.com/PretendoNetwork/nimbus/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-pretendo",
-        "title": "3DS: Online",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-hshop-1",
-        "title": "3DS: Hshop",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-ctrnand-v2",
-        "title": "3DS: Ctrtransfer v2",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-1-modelos-y-regiones",
-        "title": "3DS: Identificación de Modelos y Regiones",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-arm11-core1",
-        "title": "Error Luma: ARM11 - Core 1",
-        "category": "3DS"
-      }
-    ]
+    "date": "2026-06-09T22:33:30.000Z"
   },
   {
     "tag": "Wii / WiiFlow Lite",
     "title": "v5.6.2 June 4th, 2026",
     "link": "https://github.com/Fledge68/WiiFlow_Lite/releases/tag/v5.6.2",
-    "date": "2026-06-04T23:00:05.000Z",
-    "sourceUrl": "https://github.com/Fledge68/WiiFlow_Lite/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2026-06-04T23:00:05.000Z"
   },
   {
     "tag": "Wii U / WUP Installer GX2",
     "title": "v1.4",
     "link": "https://github.com/Fangal-Airbag/wup-installer-gx2/releases/tag/v1.4",
-    "date": "2026-05-24T21:28:08.000Z",
-    "sourceUrl": "https://github.com/Fangal-Airbag/wup-installer-gx2/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-wup-installer",
-        "title": "WiiU: Wup Installer",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-pretendo",
-        "title": "WiiU: Online",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-nusspli",
-        "title": "WiiU: Nusspli",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-hack",
-        "title": "WiiU: Hack Tiramisu/Aroma",
-        "category": "WII U"
-      }
-    ]
+    "date": "2026-05-24T21:28:08.000Z"
   },
   {
     "tag": "3DS / TWiLight Menu++",
     "title": "v27.24.1 (hotfix)",
     "link": "https://github.com/DS-Homebrew/TWiLightMenu/releases/tag/v27.24.1",
-    "date": "2026-05-24T03:18:20.000Z",
-    "sourceUrl": "https://github.com/DS-Homebrew/TWiLightMenu/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-zz-error-applet51",
-        "title": "FBI Error: Applet (51)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-errdisp-21",
-        "title": "Error Luma: ERRDISP 21",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-hshop-1",
-        "title": "3DS: Hshop",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-themely",
-        "title": "3DS: Themely",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-bax",
-        "title": "3DS: Bax",
-        "category": "3DS"
-      }
-    ]
+    "date": "2026-05-24T03:18:20.000Z"
   },
   {
     "tag": "Switch / 90DNS Tester",
     "title": "v1.1.0 - Target new libnx and console printing issues",
     "link": "https://github.com/meganukebmp/Switch_90DNS_tester/releases/tag/v1.1.0",
-    "date": "2026-04-26T22:50:53.000Z",
-    "sourceUrl": "https://github.com/meganukebmp/Switch_90DNS_tester/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-incognito",
-        "title": "Switch: Modo Incógnito",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-01-pack-magic",
-        "title": "Switch: Hack Pack (Updater console)",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-04-26T22:50:53.000Z"
   },
   {
     "tag": "Switch / EdiZon Overlay",
     "title": "v1.0.15",
     "link": "https://github.com/proferabg/EdiZon-Overlay/releases/tag/v1.0.15",
-    "date": "2026-04-24T23:05:20.000Z",
-    "sourceUrl": "https://github.com/proferabg/EdiZon-Overlay/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-systune",
-        "title": "Switch: Tesla SysTune",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla",
-        "title": "Switch: Tesla Overlay Menu",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-04-24T23:05:20.000Z"
   },
   {
     "tag": "Wii / Not64",
     "title": "20260410",
     "link": "https://github.com/extremscorner/not64/releases/tag/20260410",
-    "date": "2026-04-10T21:09:52.000Z",
-    "sourceUrl": "https://github.com/extremscorner/not64/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-not64",
-        "title": "Wii: Not64",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      }
-    ]
+    "date": "2026-04-10T21:09:52.000Z"
   },
   {
     "tag": "3DS / LUMA",
     "title": "v13.4",
     "link": "https://github.com/LumaTeam/Luma3DS/releases/tag/v13.4",
-    "date": "2026-04-03T23:48:44.000Z",
-    "sourceUrl": "https://github.com/LumaTeam/Luma3DS/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-act3ds",
-        "title": "3DS: Act3ds (Actualizar Hack 3DS)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-arranque-roto",
-        "title": "3DS: Arranque Roto",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-launcher-argc",
-        "title": "Error Luma: Launcher (argc = 0)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-firm-patches",
-        "title": "Error Luma: Firm Patches",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-errdisp-sd",
-        "title": "Error Luma: ERRDISP Sd",
-        "category": "3DS"
-      }
-    ]
+    "date": "2026-04-03T23:48:44.000Z"
   },
   {
     "tag": "3DS / GodMode9",
     "title": "GodMode9 v2.2.3 Tenth Anniversary Hotfix",
     "link": "https://github.com/d0k3/GodMode9/releases/tag/v2.2.3",
-    "date": "2026-03-31T13:36:06.000Z",
-    "sourceUrl": "https://github.com/d0k3/GodMode9/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-ctrnand-v2",
-        "title": "3DS: Ctrtransfer v2",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-semibrick",
-        "title": "3DS: SEMIBRICK",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-arranque-roto",
-        "title": "3DS: Arranque Roto",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-speculum",
-        "title": "3DS: Speculum",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-errdisp-30",
-        "title": "Error Luma: ERRDISP 30",
-        "category": "3DS"
-      }
-    ]
+    "date": "2026-03-31T13:36:06.000Z"
   },
   {
     "tag": "Switch / emuiibo",
     "title": "1.1.3 - AmiiboAPI changes",
     "link": "https://github.com/XorTroll/emuiibo/releases/tag/1.1.3",
-    "date": "2026-03-14T21:52:14.000Z",
-    "sourceUrl": "https://github.com/XorTroll/emuiibo/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-3-hack-mariko",
-        "title": "Switch: Hack Mariko + Lite",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2026-03-14T21:52:14.000Z"
   },
   {
     "tag": "Wii / CleanRip",
     "title": "2.4",
     "link": "https://github.com/emukidid/cleanrip/releases/tag/2.4",
-    "date": "2026-01-28T12:30:48.000Z",
-    "sourceUrl": "https://github.com/emukidid/cleanrip/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2026-01-28T12:30:48.000Z"
   },
   {
     "tag": "Wii / WiiLink24 Patcher",
     "title": "WiiLink Patcher v2.1.3",
     "link": "https://github.com/WiiLink24/WiiLink24-Patcher/releases/tag/v2.1.3",
-    "date": "2026-01-26T18:25:25.000Z",
-    "sourceUrl": "https://github.com/WiiLink24/WiiLink24-Patcher/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2026-01-26T18:25:25.000Z"
   },
   {
     "tag": "Wii / RiiConnect24 Patcher",
     "title": "RiiConnect24 Patcher v1.6.0/v1.2.0",
     "link": "https://github.com/KcrPL/RiiConnect24-Patcher/releases/tag/v1.6.0%2Fv1.2.0",
-    "date": "2025-12-07T21:38:03.000Z",
-    "sourceUrl": "https://github.com/RiiConnect24/RiiConnect24-Patcher/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-online",
-        "title": "Wii: Online",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      }
-    ]
+    "date": "2025-12-07T21:38:03.000Z"
   },
   {
     "tag": "Switch / JKSV",
     "title": "JKSV 12/02/2025",
     "link": "https://github.com/J-D-K/JKSV/releases/tag/12%2F02%2F2025",
-    "date": "2025-12-02T14:08:19.000Z",
-    "sourceUrl": "https://github.com/J-D-K/JKSV/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-jksv",
-        "title": "Switch: Jksv",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-02-pack-magic-errores",
-        "title": "Switch: Hack Pack (Fix CFW Errors)",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2025-12-02T14:08:19.000Z"
   },
   {
     "tag": "Switch / ftpd",
     "title": "ftpd pro v3.2.1",
     "link": "https://github.com/mtheall/ftpd/releases/tag/v3.2.1",
-    "date": "2025-11-19T01:28:40.000Z",
-    "sourceUrl": "https://github.com/mtheall/ftpd/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-2-comprobar-mariko",
-        "title": "Switch: Comprobar Mariko",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-ftp",
-        "title": "Switch: FTP",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2025-11-19T01:28:40.000Z"
   },
   {
     "tag": "Wii / mGBA",
     "title": "0.10.5",
     "link": "https://github.com/mgba-emu/mgba/releases/tag/0.10.5",
-    "date": "2025-11-18T12:29:22.000Z",
-    "sourceUrl": "https://github.com/mgba-emu/mgba/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-mgba",
-        "title": "Wii: mGBA",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      }
-    ]
+    "date": "2025-11-18T12:29:22.000Z"
   },
   {
     "tag": "Switch / sys-tune",
     "title": "sys-tune 2.1.0-beta.1",
     "link": "https://github.com/HookedBehemoth/sys-tune/releases/tag/v2.1.0-beta.1",
-    "date": "2025-11-16T18:23:56.000Z",
-    "sourceUrl": "https://github.com/HookedBehemoth/sys-tune/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-2-comprobar-mariko",
-        "title": "Switch: Comprobar Mariko",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2025-11-16T18:23:56.000Z"
   },
   {
     "tag": "Wii / USB Loader GX",
     "title": "v4.0-r1283",
     "link": "https://github.com/wiidev/usbloadergx/releases/tag/v4.0-r1283",
-    "date": "2025-07-05T00:20:47.000Z",
-    "sourceUrl": "https://github.com/wiidev/usbloadergx/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-mini-usbloader-gx",
-        "title": "Wii Mini: USBLoader-GX",
-        "category": "WII MINI"
-      },
-      {
-        "slug": "wii-cfg",
-        "title": "Wii: CFG-Loader",
-        "category": "WII"
-      },
-      {
-        "slug": "vwii-usbloader",
-        "title": "vWii: USBLoader-GX",
-        "category": "VWII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      }
-    ]
+    "date": "2025-07-05T00:20:47.000Z"
   },
   {
     "tag": "Wii / d2x cIOS",
     "title": "d2x-v11-beta3",
     "link": "https://github.com/wiidev/d2x-cios/releases/tag/d2x-v11-beta3",
-    "date": "2025-03-24T05:40:04.000Z",
-    "sourceUrl": "https://github.com/wiidev/d2x-cios/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-cios",
-        "title": "Wii: Cios (Yawm)",
-        "category": "WII"
-      },
-      {
-        "slug": "vwii-cios-manuales",
-        "title": "vWii: Cios (D2X)",
-        "category": "VWII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-syscheck",
-        "title": "Wii: SysCheck",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-pimp-my-wii",
-        "title": "Wii: Pimp My Wii",
-        "category": "WII"
-      }
-    ]
+    "date": "2025-03-24T05:40:04.000Z"
   },
   {
     "tag": "Wii / CfgUSBLoader",
     "title": "Release 70r78.13",
     "link": "https://github.com/nitraiolo/CfgUSBLoader/releases/tag/r13",
-    "date": "2024-09-15T11:00:51.000Z",
-    "sourceUrl": "https://github.com/nitraiolo/CfgUSBLoader/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2024-09-15T11:00:51.000Z"
   },
   {
     "tag": "3DS / Anemone3DS",
     "title": "Anemone3DS - v3.0.1 Hotfix",
     "link": "https://github.com/astronautlevel2/Anemone3DS/releases/tag/v3.0.1",
-    "date": "2024-06-18T00:23:26.000Z",
-    "sourceUrl": "https://github.com/astronautlevel2/Anemone3DS/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-yy-luma-launcher-argc",
-        "title": "Error Luma: Launcher (argc = 0)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-arm11-core0",
-        "title": "Error Luma: ARM11 - Core 0",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-hshop-1",
-        "title": "3DS: Hshop",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-1-modelos-y-regiones",
-        "title": "3DS: Identificación de Modelos y Regiones",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-arm11-core1",
-        "title": "Error Luma: ARM11 - Core 1",
-        "category": "3DS"
-      }
-    ]
+    "date": "2024-06-18T00:23:26.000Z"
   },
   {
     "tag": "Wii / YAWM ModMii Edition",
     "title": "v1.1",
     "link": "https://github.com/modmii/YAWM-ModMii-Edition/releases/tag/1.1",
-    "date": "2024-05-25T22:07:57.000Z",
-    "sourceUrl": "https://github.com/modmii/YAWM-ModMii-Edition/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-syscheck",
-        "title": "Wii: SysCheck",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-eliminar-modmii",
-        "title": "Wii: Eliminar cIOS ModMii",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-cios",
-        "title": "Wii: Cios (Yawm)",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      }
-    ]
+    "date": "2024-05-25T22:07:57.000Z"
   },
   {
     "tag": "NDS / SafeNANDManager",
     "title": "v1.1.1",
     "link": "https://github.com/DS-Homebrew/SafeNANDManager/releases/tag/v1.1.1",
-    "date": "2024-05-23T05:45:33.000Z",
-    "sourceUrl": "https://github.com/DS-Homebrew/SafeNANDManager/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "nds-1-hack-memory",
-        "title": "NDSi: Hack MemoryPit",
-        "category": "NDSI"
-      }
-    ]
+    "date": "2024-05-23T05:45:33.000Z"
   },
   {
     "tag": "Wii / WiiMC-SSLC",
     "title": "WiiMC-SS v3.0.0 - 2024",
     "link": "https://github.com/SuperrSonic/WiiMC-SSLC/releases/tag/v3.0.0-2024",
-    "date": "2024-03-30T21:23:04.000Z",
-    "sourceUrl": "https://github.com/SuperrSonic/WiiMC-SSLC/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2024-03-30T21:23:04.000Z"
   },
   {
     "tag": "Wii / WiiSXRX 2022",
     "title": "WiiStation_Ver3.2",
     "link": "https://github.com/xjsxjs197/WiiSXRX_2022/releases/tag/WiiStation_Ver3.2",
-    "date": "2024-03-20T14:37:06.000Z",
-    "sourceUrl": "https://github.com/xjsxjs197/WiiSXRX_2022/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-trimear-dol",
-        "title": "Wii: Trimear Archivos .DOL",
-        "category": "WII"
-      }
-    ]
+    "date": "2024-03-20T14:37:06.000Z"
   },
   {
     "tag": "3DS / ThirdTube",
     "title": "v0.5.4",
     "link": "https://github.com/windows-server-2003/ThirdTube/releases/tag/v0.5.4",
-    "date": "2024-03-08T09:18:33.000Z",
-    "sourceUrl": "https://github.com/windows-server-2003/ThirdTube/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-youtube",
-        "title": "3DS: Thirdtube",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-semibrick",
-        "title": "3DS: SEMIBRICK",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-ronin",
-        "title": "3DS: RONIN",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-arranque-roto",
-        "title": "3DS: Arranque Roto",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-speculum",
-        "title": "3DS: Speculum",
-        "category": "3DS"
-      }
-    ]
+    "date": "2024-03-08T09:18:33.000Z"
   },
   {
     "tag": "3DS / FBI",
     "title": "Release 2.6.1",
     "link": "https://github.com/nh-server/FBI-NH/releases/tag/2.6.1",
-    "date": "2024-03-06T15:53:00.000Z",
-    "sourceUrl": "https://github.com/lifehackerhansol/FBI/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-hack-superskater",
-        "title": "3DS: Hack Superskater",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-zz-error-http40-http254",
-        "title": "FBI Error: Http (40) (254)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-zz-error-fs17",
-        "title": "FBI Error: FS (17)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-zz-error-applet51",
-        "title": "FBI Error: Applet (51)",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-zz-error-am32",
-        "title": "FBI Error: AM (32)",
-        "category": "3DS"
-      }
-    ]
+    "date": "2024-03-06T15:53:00.000Z"
   },
   {
     "tag": "Wii / Priiloader",
     "title": "Priiloader 0.10.0 : Version Kappa",
     "link": "https://github.com/DacoTaco/priiloader/releases/tag/0.10.0",
-    "date": "2023-10-23T16:09:31.000Z",
-    "sourceUrl": "https://github.com/DacoTaco/priiloader/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-syscheck",
-        "title": "Wii: SysCheck",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-priiloader",
-        "title": "Wii: Priiloader",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-pimp-my-wii",
-        "title": "Wii: Pimp My Wii",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-hack-wiibrand",
-        "title": "Wii: Hack Wiibrand",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-hack-letterbomb",
-        "title": "Wii: Hack Letterbomb",
-        "category": "WII"
-      }
-    ]
+    "date": "2023-10-23T16:09:31.000Z"
   },
   {
     "tag": "3DS / BootNTR",
     "title": "v2.13.7",
     "link": "https://github.com/Nanquitas/BootNTR/releases/tag/v2.13.7",
-    "date": "2023-07-20T20:21:04.000Z",
-    "sourceUrl": "https://github.com/Nanquitas/BootNTR/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-ctrnand-v2",
-        "title": "3DS: Ctrtransfer v2",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-semibrick",
-        "title": "3DS: SEMIBRICK",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-ronin",
-        "title": "3DS: RONIN",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-arranque-roto",
-        "title": "3DS: Arranque Roto",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-speculum",
-        "title": "3DS: Speculum",
-        "category": "3DS"
-      }
-    ]
+    "date": "2023-07-20T20:21:04.000Z"
   },
   {
     "tag": "Switch / Tesla Menu",
     "title": "libtelsa update",
     "link": "https://github.com/WerWolv/Tesla-Menu/releases/tag/v1.2.3",
-    "date": "2023-05-27T12:55:49.000Z",
-    "sourceUrl": "https://github.com/WerWolv/Tesla-Menu/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla",
-        "title": "Switch: Tesla Overlay Menu",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-systune",
-        "title": "Switch: Tesla SysTune",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2023-05-27T12:55:49.000Z"
   },
   {
     "tag": "Wii / SysCheck ModMii",
     "title": "v2.5.0",
     "link": "https://github.com/modmii/SysCheck-ModMii-Edition/releases/tag/2.5.0",
-    "date": "2023-03-11T09:00:58.000Z",
-    "sourceUrl": "https://github.com/modmii/SysCheck-ModMii-Edition/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-syscheck",
-        "title": "Wii: SysCheck",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-eliminar-modmii",
-        "title": "Wii: Eliminar cIOS ModMii",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      }
-    ]
+    "date": "2023-03-11T09:00:58.000Z"
   },
   {
     "tag": "Switch / NxNandManager",
     "title": "NxNandManager_v5.2",
     "link": "https://github.com/eliboa/NxNandManager/releases/tag/v5.2",
-    "date": "2022-04-21T07:58:46.000Z",
-    "sourceUrl": "https://github.com/eliboa/NxNandManager/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-nxnandmanager",
-        "title": "Switch: NXNandManager",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-2-comprobar-mariko",
-        "title": "Switch: Comprobar Mariko",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2022-04-21T07:58:46.000Z"
   },
   {
     "tag": "Switch / TegraRcmGUI",
     "title": "TegraRcmGUI_v2.6",
     "link": "https://github.com/eliboa/TegraRcmGUI/releases/tag/2.6",
-    "date": "2022-04-15T13:24:11.000Z",
-    "sourceUrl": "https://github.com/eliboa/TegraRcmGUI/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-eliminar-hack",
-        "title": "Switch: Eliminar Hack",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2022-04-15T13:24:11.000Z"
   },
   {
     "tag": "Switch / pplay",
     "title": "pPlay v3.8",
     "link": "https://github.com/Cpasjuste/pplay/releases/tag/v3.8",
-    "date": "2022-02-09T23:21:31.000Z",
-    "sourceUrl": "https://github.com/Cpasjuste/pplay/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-pplay",
-        "title": "Switch: pPlay",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2022-02-09T23:21:31.000Z"
   },
   {
     "tag": "Wii U / Homebrew Launcher",
     "title": "Release v1.5",
     "link": "https://github.com/dimok789/homebrew_launcher/releases/tag/v1.5",
-    "date": "2022-01-03T16:17:02.000Z",
-    "sourceUrl": "https://github.com/dimok789/homebrew_launcher/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-nusspli",
-        "title": "WiiU: Nusspli",
-        "category": "WII U"
-      },
-      {
-        "slug": "3ds-menuhax67",
-        "title": "3DS: Menuhax67",
-        "category": "3DS"
-      },
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-pretendo",
-        "title": "WiiU: Online",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-hack",
-        "title": "WiiU: Hack Tiramisu/Aroma",
-        "category": "WII U"
-      }
-    ]
+    "date": "2022-01-03T16:17:02.000Z"
   },
   {
     "tag": "Switch / eBookReaderSwitch",
     "title": "Touch Controls!",
     "link": "https://github.com/SeanOMik/eBookReaderSwitch/releases/tag/0.4.0",
-    "date": "2021-07-30T22:10:54.000Z",
-    "sourceUrl": "https://github.com/SeanOMik/eBookReaderSwitch/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "sw-tesla-emuiibo",
-        "title": "Switch: Tesla Emuiibo",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tesla-edizon",
-        "title": "Switch: Tesla Edizon",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-tegra",
-        "title": "Switch: Tegra RCM",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-rekado",
-        "title": "Switch: Rekado",
-        "category": "SWITCH"
-      },
-      {
-        "slug": "sw-pplay",
-        "title": "Switch: pPlay",
-        "category": "SWITCH"
-      }
-    ]
+    "date": "2021-07-30T22:10:54.000Z"
   },
   {
     "tag": "3DS / LimePlayer3DS",
     "title": "Beta 3 - Late pandemic release",
     "link": "https://github.com/oreo639/LimePlayer3DS/releases/tag/v0.0.10",
-    "date": "2021-07-19T02:41:21.000Z",
-    "sourceUrl": "https://github.com/oreo639/LimePlayer3DS/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "3ds-limeplayer",
-        "title": "3DS: LimePlayer",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-hack-superskater",
-        "title": "3DS: Hack Superskater",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-yy-luma-arm11-core3",
-        "title": "Error Luma: ARM11 - Core 3",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-semibrick",
-        "title": "3DS: SEMIBRICK",
-        "category": "3DS"
-      },
-      {
-        "slug": "3ds-ronin",
-        "title": "3DS: RONIN",
-        "category": "3DS"
-      }
-    ]
+    "date": "2021-07-19T02:41:21.000Z"
   },
   {
     "tag": "Wii / TeconMoon's WiiVC Injector",
     "title": "TeconMoon's WiiVC Injector 3.0.1 mod 12",
     "link": "https://github.com/timefox/TeconMoon-s-WiiVC-Injector-Mod/releases/tag/v3.0.1mod12",
-    "date": "2020-06-02T10:43:53.000Z",
-    "sourceUrl": "https://github.com/timefox/TeconMoon-s-WiiVC-Injector-Mod/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiiflow",
-        "title": "Wii: WiiFlow",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-usbloader-gx",
-        "title": "Wii: USBLoader-GX",
-        "category": "WII"
-      }
-    ]
+    "date": "2020-06-02T10:43:53.000Z"
   },
   {
     "tag": "Wii U / FTPiiU",
     "title": "Release v0.4",
     "link": "https://github.com/dimok789/ftpiiu/releases/tag/v0.4",
-    "date": "2016-11-01T20:19:54.000Z",
-    "sourceUrl": "https://github.com/dimok789/ftpiiu/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-u-tecomoon",
-        "title": "WiiU: Teconmoon",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-pretendo",
-        "title": "WiiU: Online",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-nusspli",
-        "title": "WiiU: Nusspli",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-hack",
-        "title": "WiiU: Hack Tiramisu/Aroma",
-        "category": "WII U"
-      },
-      {
-        "slug": "wii-u-ftp",
-        "title": "WiiU: FTP",
-        "category": "WII U"
-      }
-    ]
+    "date": "2016-11-01T20:19:54.000Z"
   },
   {
     "tag": "Wii / WfcPatcher",
     "title": "Version 1.6",
     "link": "https://github.com/AdmiralCurtiss/WfcPatcher/releases/tag/v1.6",
-    "date": "2015-10-18T17:15:55.000Z",
-    "sourceUrl": "https://github.com/AdmiralCurtiss/WfcPatcher/releases.atom",
-    "sourceType": "release-feed",
-    "relatedGuides": [
-      {
-        "slug": "wii-syscheck",
-        "title": "Wii: SysCheck",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-hack-wiibrand",
-        "title": "Wii: Hack Wiibrand",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-hack-letterbomb",
-        "title": "Wii: Hack Letterbomb",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-yawm",
-        "title": "Wii: Yawm",
-        "category": "WII"
-      },
-      {
-        "slug": "wii-wiistation",
-        "title": "Wii: WiiStation",
-        "category": "WII"
-      }
-    ]
+    "date": "2015-10-18T17:15:55.000Z"
   }
 ]
