@@ -1,17 +1,12 @@
-/* Kelonio — Muro de acceso por membresía de YouTube
+/*
+ * Kelonio — Muro de acceso por suscripción/membresía
  *
- * Flujo:
- *  1. Si existe una autorización local válida (<24 h), se desbloquea la guía.
- *  2. Si no existe, se muestra un muro.
- *  3. El usuario pulsa "Hacerse miembro" y se abre el canal de Kelonio en
- *     una pestaña nueva.
- *  4. Comienza una cuenta atrás de 60 segundos.
- *  5. Al finalizar los 60 segundos, se guarda el acceso durante 24 horas
- *     y se desbloquea la guía.
- *
- * IMPORTANTE:
- * Este sistema ya no usa Google OAuth ni YouTube Data API. El acceso se basa
- * en la espera de 60 segundos y en un caché local de 24 horas.
+ * Funcionamiento:
+ * - Muestra únicamente "Acceso a la guía" y el botón "Suscribirse".
+ * - El botón abre directamente la página /join de Kelonio en una pestaña nueva.
+ * - Tras 60 segundos se concede el acceso.
+ * - El acceso queda guardado en caché durante 24 horas.
+ * - No usa OAuth, tokens ni YouTube Data API.
  */
 
 (function () {
@@ -20,159 +15,131 @@
   if (window.__kelonioYoutubeWallLoaded) return;
   window.__kelonioYoutubeWallLoaded = true;
 
-  const C = window.KELONIO_YOUTUBE_CONFIG || {};
-  const CHANNEL_URL = String(
-    C.joinUrl || 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join'
+  const CONFIG = window.KELONIO_YOUTUBE_CONFIG || {};
+  const JOIN_URL = String(
+    CONFIG.joinUrl ||
+    'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join'
   );
 
-  const CACHE_KEY = 'kelonio.youtube.access.v12';
+  const CACHE_KEY = 'kelonio.youtube.access.v13';
   const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
   const WAIT_MS = 60 * 1000;
 
   const DICT = {
     es: {
       title: 'Acceso a la guía',
-      member: 'Suscribirse',
-      memberAria: 'Suscribirse al canal de YouTube de Kelonio',
-      success: 'Acceso concedido. Abriendo la guía…',
+      subscribe: 'Suscribirse',
+      aria: 'Suscribirse al canal de YouTube de Kelonio'
     },
     en: {
       title: 'Guide access',
-      member: 'Become a member',
-      memberAria: 'Become a member of the Kelonio YouTube channel',
-      success: 'Access granted. Opening the guide…',
+      subscribe: 'Subscribe',
+      aria: 'Subscribe to the Kelonio YouTube channel'
     },
     fr: {
       title: 'Accès au guide',
-      member: 'Devenir membre',
-      memberAria: 'Devenir membre de la chaîne YouTube de Kelonio',
-      success: 'Accès accordé. Ouverture du guide…',
+      subscribe: 'S’abonner',
+      aria: 'S’abonner à la chaîne YouTube de Kelonio'
     },
     de: {
       title: 'Zugriff auf die Anleitung',
-      member: 'Mitglied werden',
-      memberAria: 'Mitglied des Kelonio-YouTube-Kanals werden',
-      success: 'Zugriff gewährt. Anleitung wird geöffnet…',
+      subscribe: 'Abonnieren',
+      aria: 'Den Kelonio-YouTube-Kanal abonnieren'
     },
     it: {
       title: 'Accesso alla guida',
-      member: 'Diventa membro',
-      memberAria: 'Diventa membro del canale YouTube di Kelonio',
-      success: 'Accesso concesso. Apertura della guida…',
+      subscribe: 'Iscriviti',
+      aria: 'Iscriviti al canale YouTube di Kelonio'
     },
     pt: {
       title: 'Acesso ao guia',
-      member: 'Tornar-se membro',
-      memberAria: 'Tornar-se membro do canal do YouTube de Kelonio',
-      success: 'Acesso concedido. A abrir o guia…',
+      subscribe: 'Subscrever',
+      aria: 'Subscrever o canal do YouTube de Kelonio'
     },
     ja: {
       title: 'ガイドへのアクセス',
-      member: 'メンバーになる',
-      memberAria: 'Kelonio YouTube チャンネルのメンバーになる',
-      success: 'アクセスが許可されました。ガイドを開きます…',
+      subscribe: 'チャンネル登録',
+      aria: 'Kelonio YouTube チャンネルに登録'
     },
     ko: {
       title: '가이드 이용',
-      member: '멤버 되기',
-      memberAria: 'Kelonio YouTube 채널의 멤버 되기',
-      success: '접근이 허용되었습니다. 가이드를 엽니다…',
+      subscribe: '구독하기',
+      aria: 'Kelonio YouTube 채널 구독하기'
     }
   };
 
   let wall = null;
   let unlocked = false;
-  let busy = false;
-  let countdownTimer = null;
-  let countdownEndsAt = 0;
+  let waiting = false;
+  let waitTimer = null;
+  let waitEndsAt = 0;
 
-  function readAccessCache() {
+  function getLanguage() {
+    try {
+      const current = window.idiomaActual;
+      if (typeof current === 'string' && DICT[current]) return current;
+    } catch (_) {}
+
+    const raw = String(
+      document.documentElement.lang ||
+      navigator.language ||
+      'es'
+    ).toLowerCase();
+
+    const code = raw.split('-')[0];
+    return DICT[code] ? code : 'es';
+  }
+
+  function t() {
+    return DICT[getLanguage()] || DICT.es;
+  }
+
+  function readCache() {
     try {
       const raw = localStorage.getItem(CACHE_KEY);
-      if (!raw) return null;
+      if (!raw) return false;
 
       const data = JSON.parse(raw);
-      if (!data || typeof data !== 'object') return null;
+      const verifiedAt = Number(data && data.verifiedAt || 0);
 
-      const verifiedAt = Number(data.verifiedAt || 0);
-      const age = Date.now() - verifiedAt;
-
-      if (!verifiedAt || age < 0 || age >= CACHE_TTL_MS) {
+      if (
+        !data ||
+        data.verified !== true ||
+        !verifiedAt ||
+        Date.now() - verifiedAt < 0 ||
+        Date.now() - verifiedAt >= CACHE_TTL_MS
+      ) {
         localStorage.removeItem(CACHE_KEY);
-        return null;
+        return false;
       }
 
-      return {
-        verified: data.verified === true,
-        verifiedAt
-      };
+      return true;
     } catch (_) {
-      return null;
+      return false;
     }
   }
 
-  function writeAccessCache() {
+  function writeCache() {
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        version: 12,
+        version: 13,
         verified: true,
         verifiedAt: Date.now()
       }));
     } catch (_) {}
   }
 
-  function lang() {
-    try {
-      const l = typeof window.idiomaActual === 'string' ? window.idiomaActual : '';
-      if (l && DICT[l]) return l;
-    } catch (_) {}
-
-    const raw = String(
-      document.documentElement.lang || navigator.language || 'es'
-    ).toLowerCase();
-
-    const k = raw.split('-')[0];
-    return DICT[k] ? k : 'es';
-  }
-
-  function t() {
-    return DICT[lang()] || DICT.es;
-  }
-
-  function buildWall() {
-    wall = document.getElementById('accessWallOverlay');
-
-    if (!wall) {
-      wall = document.createElement('div');
-      wall.id = 'accessWallOverlay';
-      wall.setAttribute('role', 'dialog');
-      wall.setAttribute('aria-modal', 'true');
-      wall.setAttribute('aria-labelledby', 'youtubeAccessTitle');
-      document.body.prepend(wall);
+  function clearLegacyStaticWall() {
+    /*
+     * La plantilla de las guías puede traer un muro estático antiguo.
+     * buildWall() lo reutiliza y sustituye completamente su contenido.
+     */
+    const existing = document.getElementById('accessWallOverlay');
+    if (existing) {
+      existing.classList.remove('youtube-wall-hidden');
+      existing.innerHTML = '';
     }
-
-    wall.innerHTML = `
-      <div class="youtube-access-card" role="document">
-        <div class="youtube-access-icon" aria-hidden="true">★</div>
-        <h1 id="youtubeAccessTitle"></h1>
-        </div>
-
-        <button type="button"
-                class="youtube-access-btn"
-                id="youtubeAccessMember"></button>
-      </div>
-    `;
-
-    injectStyles();
-    refreshTexts();
-
-    const button = wall.querySelector('#youtubeAccessMember');
-    if (button) {
-      button.disabled = false;
-      button.setAttribute('aria-disabled', 'false');
-    }
-
-    return wall;
+    return existing;
   }
 
   function injectStyles() {
@@ -194,7 +161,8 @@
         align-items: center;
         justify-content: center;
         padding: 24px;
-        background: rgba(8,9,12,.96);
+        box-sizing: border-box;
+        background: rgba(8, 9, 12, .96);
         backdrop-filter: blur(12px);
         color: #fff;
         opacity: 1;
@@ -211,47 +179,40 @@
 
       .youtube-access-card {
         width: min(92vw, 560px);
-        padding: 42px 34px 32px;
+        box-sizing: border-box;
+        padding: 42px 34px 34px;
         text-align: center;
         border-radius: 24px;
-        background: linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));
-        border: 1px solid rgba(255,255,255,.12);
+        background: linear-gradient(
+          180deg,
+          rgba(28, 31, 39, .98),
+          rgba(18, 20, 26, .98)
+        );
+        border: 1px solid rgba(255, 255, 255, .12);
         box-shadow:
-          0 25px 80px rgba(0,0,0,.45),
-          0 0 0 1px rgba(229,9,20,.06);
-      }
-
-      .youtube-access-icon {
-        width: 62px;
-        height: 62px;
-        margin: 0 auto 22px;
-        border-radius: 50%;
-        background: #e50914;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        font-weight: 900;
-        box-shadow: 0 10px 30px rgba(229,9,20,.3);
+          0 25px 80px rgba(0, 0, 0, .45),
+          0 0 0 1px rgba(229, 9, 20, .06);
       }
 
       .youtube-access-card h1 {
-        margin: 0 0 12px;
-        font-size: clamp(1.65rem,4vw,2.2rem);
+        margin: 0 0 24px;
+        font-size: clamp(1.65rem, 4vw, 2.2rem);
+        line-height: 1.2;
         font-weight: 900;
         letter-spacing: -.4px;
         color: #fff;
       }
-.youtube-access-btn {
+
+      .youtube-access-btn {
         width: 100%;
         border: 0;
         border-radius: 12px;
         padding: 14px 20px;
         background: #e50914;
         color: #fff;
-        font: 900 1rem/1.2 'Segoe UI',system-ui,sans-serif;
+        font: 900 1rem/1.2 'Segoe UI', system-ui, sans-serif;
         cursor: pointer;
-        box-shadow: 0 10px 26px rgba(229,9,20,.25);
+        box-shadow: 0 10px 26px rgba(229, 9, 20, .25);
         transition:
           transform .18s ease,
           filter .18s ease,
@@ -261,7 +222,7 @@
       .youtube-access-btn:hover:not(:disabled) {
         transform: translateY(-2px);
         filter: brightness(1.08);
-        box-shadow: 0 14px 32px rgba(229,9,20,.34);
+        box-shadow: 0 14px 32px rgba(229, 9, 20, .34);
       }
 
       .youtube-access-btn:focus-visible {
@@ -273,11 +234,8 @@
         opacity: .72;
         cursor: wait;
       }
-.youtube-access-youtube:hover {
-        text-decoration: underline;
-        color: #fff;
-      }
-@media(max-width:600px) {
+
+      @media (max-width: 600px) {
         #accessWallOverlay {
           padding: 16px;
         }
@@ -286,7 +244,7 @@
           padding: 34px 22px 25px;
           border-radius: 20px;
         }
-}
+      }
     `;
 
     document.head.appendChild(style);
@@ -296,76 +254,106 @@
     if (!wall) return;
 
     const d = t();
-    const q = (id) => wall.querySelector('#' + id);
+    const title = wall.querySelector('#youtubeAccessTitle');
+    const button = wall.querySelector('#youtubeAccessSubscribe');
 
-    if (q('youtubeAccessTitle')) {
-      q('youtubeAccessTitle').textContent = d.title;
-    }
+    if (title) title.textContent = d.title;
 
-    const button = q('youtubeAccessMember');
     if (button) {
-      button.textContent = d.member;
-      button.disabled = busy || unlocked;
-      button.setAttribute(
-        'aria-label',
-        d.memberAria
-      );
+      button.textContent = d.subscribe;
+      button.setAttribute('aria-label', d.aria);
+      button.disabled = waiting || unlocked;
+      button.setAttribute('aria-disabled', String(button.disabled));
     }
   }
+
+  function buildWall() {
+    wall = clearLegacyStaticWall();
+
+    if (!wall) {
+      wall = document.createElement('div');
+      wall.id = 'accessWallOverlay';
+      document.body.prepend(wall);
+    }
+
+    wall.setAttribute('role', 'dialog');
+    wall.setAttribute('aria-modal', 'true');
+    wall.setAttribute('aria-labelledby', 'youtubeAccessTitle');
+
+    wall.innerHTML = `
+      <div class="youtube-access-card" role="document">
+        <h1 id="youtubeAccessTitle"></h1>
+        <button
+          type="button"
+          class="youtube-access-btn"
+          id="youtubeAccessSubscribe">
+        </button>
+      </div>
+    `;
+
+    injectStyles();
+    refreshTexts();
+
+    const button = wall.querySelector('#youtubeAccessSubscribe');
+    if (button) {
+      button.addEventListener('click', startAccess, { once: true });
+    }
+
+    return wall;
   }
 
-  function openChannel() {
-    /*
-     * Se abre en una pestaña nueva para que la guía siga activa y pueda
-     * completar la cuenta atrás de 60 segundos.
-     */
+  function openMembershipPage() {
     try {
-      const popup = window.open(
-        CHANNEL_URL,
-        '_blank',
-        'noopener,noreferrer'
-      );
+      const popup = window.open(JOIN_URL, '_blank', 'noopener,noreferrer');
 
-      if (!popup) {
-        const link = wall && wall.querySelector('#youtubeAccessOpenYoutube');
-        if (link) link.click();
-        return false;
+      if (popup) {
+        try {
+          popup.opener = null;
+        } catch (_) {}
+        return;
       }
+    } catch (_) {}
 
-      try {
-        popup.opener = null;
-      } catch (_) {}
+    /*
+     * Si el navegador bloquea window.open, usamos una navegación del enlace
+     * equivalente. El enlace no se muestra como texto en el muro.
+     */
+    const a = document.createElement('a');
+    a.href = JOIN_URL;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.click();
+  }
 
-      return true;
-    } catch (_) {
-      const link = wall && wall.querySelector('#youtubeAccessOpenYoutube');
-      if (link) link.click();
-      return false;
-    }
+  function startAccess() {
+    if (waiting || unlocked) return;
+
+    waiting = true;
+    waitEndsAt = Date.now() + WAIT_MS;
+    refreshTexts();
+
+    waitTimer = window.setInterval(() => {
+      if (Date.now() >= waitEndsAt) {
+        finishAccess();
+      }
+    }, 250);
   }
 
   function finishAccess() {
     if (unlocked) return;
 
-    if (countdownTimer) {
-      window.clearInterval(countdownTimer);
-      countdownTimer = null;
+    if (waitTimer) {
+      window.clearInterval(waitTimer);
+      waitTimer = null;
     }
 
-    countdownEndsAt = 0;
-    busy = false;
+    waiting = false;
+    waitEndsAt = 0;
     unlocked = true;
-
-    writeAccessCache();
+    writeCache();
 
     document.documentElement.classList.remove('youtube-wall-locked');
     document.body.classList.remove('youtube-wall-locked');
-
-    const button = wall && wall.querySelector('#youtubeAccessMember');
-    if (button) {
-      button.disabled = true;
-      button.textContent = d.ready;
-    }
 
     if (wall) {
       wall.classList.add('youtube-wall-hidden');
@@ -374,122 +362,19 @@
       }, 380);
     }
 
-    showMemberCta();
-
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-    }));
-  }
-
-  function startCountdown() {
-    if (busy || unlocked) return;
-
-    busy = true;
-    countdownEndsAt = Date.now() + WAIT_MS;
-
-    const button = wall && wall.querySelector('#youtubeAccessMember');
-    if (button) {
-      button.disabled = true;
-      button.setAttribute('aria-disabled', 'true');
-    }
-
-    function tick() {
-      const remaining = getRemainingSeconds();
-      const elapsed = Math.max(0, WAIT_MS - Math.max(0, countdownEndsAt - Date.now()));
-      const percent = (elapsed / WAIT_MS) * 100;
-
-      if (remaining <= 0) {
-        finishAccess();
-      }
-    }
-
-    tick();
-    countdownTimer = window.setInterval(tick, 250);
-  }
-
-  function handleMemberClick() {
-    if (busy || unlocked) return;
-
-    openChannel();
-    startCountdown();
-  }
-
-  function showMemberCta() {
-    const videos = Array.from(
-      document.querySelectorAll('.guide-content .video-container')
+    document.dispatchEvent(
+      new CustomEvent('kelonio:youtubeAccessGranted', {
+        detail: {
+          source: 'member-60s-cache-24h'
+        }
+      })
     );
-
-    if (!videos.length || document.getElementById('youtube-cta-box')) return;
-
-    const last = videos[videos.length - 1];
-    const box = document.createElement('section');
-
-    box.id = 'youtube-cta-box';
-    box.className = 'youtube-cta-box';
-    box.innerHTML = `
-      <div class="youtube-cta-actions">
-        <a class="youtube-cta-member"
-           target="_blank"
-           rel="noopener noreferrer sponsored"></a>
-      </div>
-    `;
-
-    const style = document.createElement('style');
-    style.textContent = `
-      .youtube-cta-box {
-        width: 100%;
-        margin: 4px 0 30px;
-        padding: 17px 0 5px;
-        border-top: 1px solid var(--glass-border);
-        text-align: center;
-      }
-
-      .youtube-cta-member {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 11px 18px;
-        border-radius: 10px;
-        background: var(--red);
-        color: #fff !important;
-        text-decoration: none !important;
-        font: 900 .86rem/1.15 'Segoe UI',system-ui,sans-serif;
-        box-shadow: 0 6px 18px rgba(0,0,0,.18);
-        transition: filter .18s ease, transform .18s ease;
-      }
-
-      .youtube-cta-member:hover {
-        filter: brightness(1.08);
-        transform: translateY(-2px);
-      }
-
-      .youtube-cta-member:focus-visible {
-        outline: 2px solid currentColor;
-        outline-offset: 3px;
-      }
-    `;
-
-    box.appendChild(style);
-    last.insertAdjacentElement('afterend', box);
-
-    const link = box.querySelector('.youtube-cta-member');
-    if (!link) return;
-
-    link.href = CHANNEL_URL;
-    link.textContent = t().member;
-    link.setAttribute('aria-label', t().memberAria);
   }
 
-  function unlockFromCache(cached) {
-    if (!cached || !cached.verified) return;
-
+  function unlockFromCache() {
     unlocked = true;
 
     wall = document.getElementById('accessWallOverlay');
-    injectStyles();
-
-    document.documentElement.classList.remove('youtube-wall-locked');
-    document.body.classList.remove('youtube-wall-locked');
-
     if (wall) {
       wall.classList.add('youtube-wall-hidden');
       window.setTimeout(() => {
@@ -497,22 +382,24 @@
       }, 380);
     }
 
-    showMemberCta();
+    document.documentElement.classList.remove('youtube-wall-locked');
+    document.body.classList.remove('youtube-wall-locked');
 
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-        source: 'local-cache-24h'
-      }
-    }));
+    document.dispatchEvent(
+      new CustomEvent('kelonio:youtubeAccessGranted', {
+        detail: {
+          source: 'local-cache-24h'
+        }
+      })
+    );
   }
 
   function showWall() {
     if (!wall) buildWall();
 
     wall.classList.remove('youtube-wall-hidden');
-
     document.documentElement.classList.add('youtube-wall-locked');
     document.body.classList.add('youtube-wall-locked');
-
     refreshTexts();
   }
 
@@ -523,42 +410,30 @@
 
     if (!videos.length) return;
 
-    const cached = readAccessCache();
-
-    if (cached && cached.verified) {
-      unlockFromCache(cached);
+    if (readCache()) {
+      unlockFromCache();
       return;
     }
 
-    buildWall();
     showWall();
-
-    const button = wall.querySelector('#youtubeAccessMember');
-
-    if (button) {
-      button.addEventListener('click', handleMemberClick);
-    }
   }
 
-  document.addEventListener('kelonio:languageChanged', () => {
-    refreshTexts();
+  document.addEventListener('kelonio:languageChanged', refreshTexts);
 
-    const member = document.querySelector(
-      '#youtube-cta-box .youtube-cta-member'
-    );
-
-    if (member) {
-      member.textContent = t().member;
-      member.setAttribute('aria-label', t().memberAria);
-    }
-  });
+  /*
+   * Funciona tanto si el script se carga antes como después de
+   * DOMContentLoaded.
+   */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrap, { once: true });
+  } else {
+    bootstrap();
+  }
 
   window.addEventListener('beforeunload', () => {
-    if (countdownTimer) {
-      window.clearInterval(countdownTimer);
-      countdownTimer = null;
+    if (waitTimer) {
+      window.clearInterval(waitTimer);
+      waitTimer = null;
     }
   });
-
-  document.addEventListener('DOMContentLoaded', bootstrap, { once: true });
 })();
