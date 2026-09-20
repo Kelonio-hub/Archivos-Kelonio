@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-# Opcional: Evitar que los buscadores indexen la plantilla vacía
-Disallow: /guias/plantilla.html
-
-Sitemap: https://kelonio-hub.github.io/Archivos-Kelonio/sitemap.xml
