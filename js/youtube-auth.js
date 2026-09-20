@@ -1,8 +1,17 @@
 /* Kelonio — Muro de acceso por suscripción a YouTube
  *
- * Acceso condicionado a una suscripción real al canal configurado.
- * Usa Google Identity Services + YouTube Data API, sin bots ni
- * automatización de la interfaz de YouTube.
+ * Modelo recomendado para una web estática:
+ *   1) Google Identity Services autentica/autorizan la cuenta.
+ *   2) YouTube Data API comprueba la suscripción real a CHANNEL_ID.
+ *   3) El desbloqueo solo vive en memoria mientras esta página está abierta.
+ *
+ * IMPORTANTE:
+ * Este script NO guarda una autorización en localStorage/sessionStorage y
+ * NO suscribe automáticamente al usuario. En una web estática de GitHub
+ * Pages, el cliente nunca puede convertirse en una frontera de seguridad
+ * absoluta: quien controle el navegador puede modificar el DOM/JS. Para
+ * protección real del recurso, la verificación debe terminar en un backend
+ * o función serverless que entregue una autorización temporal.
  */
 (function () {
   'use strict';
@@ -11,153 +20,222 @@
   window.__kelonioYoutubeWallLoaded = true;
 
   const C = window.KELONIO_YOUTUBE_CONFIG || {};
-  const CLIENT_ID = String(C.clientId || '');
-  const CHANNEL_ID = String(C.channelId || '');
-  const CHANNEL_URL = String(C.channelUrl || 'https://www.youtube.com/');
-  const JOIN_URL = String(C.joinUrl || (CHANNEL_URL.replace(/\/$/, '') + '/join'));
-  const YT_SCOPE = 'https://www.googleapis.com/auth/youtube';
+  const CLIENT_ID = String(C.clientId || '').trim();
+  const CHANNEL_ID = String(C.channelId || '').trim();
+  const CHANNEL_URL = String(C.channelUrl || 'https://www.youtube.com/').trim();
+  const SUBSCRIBE_URL = String(
+    C.subscribeUrl || (CHANNEL_URL.replace(/\/$/, '') + '?sub_confirmation=1')
+  ).trim();
+  const YT_SCOPE = String(
+    C.scope || 'https://www.googleapis.com/auth/youtube.readonly'
+  ).trim();
   const API = 'https://www.googleapis.com/youtube/v3';
   const GIS_URL = 'https://accounts.google.com/gsi/client';
-  const CONFIG_OK = /^\d[\w-]*\.apps\.googleusercontent\.com$/.test(CLIENT_ID) && !CLIENT_ID.startsWith('PON_AQUI');
-  const CACHE_KEY = 'kelonio.youtube.access.v11';
-  const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
+  const CONFIG_OK =
+    /^\d[\w-]*\.apps\.googleusercontent\.com$/.test(CLIENT_ID) &&
+    !CLIENT_ID.startsWith('PON_AQUI') &&
+    /^[A-Za-z0-9_-]{10,}$/.test(CHANNEL_ID) &&
+    /^https:\/\/.+/.test(CHANNEL_URL) &&
+    /^https:\/\/.+/.test(SUBSCRIBE_URL);
+
+  const ORIGIN_OK = !Array.isArray(C.allowedOrigins) || C.allowedOrigins.length === 0 ||
+    C.allowedOrigins.map(String).includes(window.location.origin);
+
+  const REQUEST_TIMEOUT_MS = Number(C.requestTimeoutMs || 20000);
 
   const DICT = {
     es: {
       title: 'Acceso a la guía',
       lead: 'Para continuar, suscríbete al canal de Kelonio en YouTube.',
-      detail: 'La suscripción se comprueba con tu cuenta de Google y, una vez verificada, tendrás acceso a la guía.',
-      subscribe: 'Suscribirme con Google',
+      detail: 'Abre YouTube para suscribirte y después vuelve aquí para verificar la suscripción con tu cuenta de Google.',
+      subscribe: 'Suscribirme en YouTube',
+      verify: 'Verificar mi suscripción',
       checking: 'Comprobando tu suscripción…',
-      subscribing: 'Suscribiendo…',
-      subscribed: 'Suscripción verificada ✓',
+      authorizing: 'Autorizando el acceso a YouTube…',
+      verified: 'Suscripción verificada ✓',
       success: 'Suscripción verificada. Abriendo la guía…',
       auth: 'Necesitamos autorización de YouTube para comprobar tu suscripción.',
-      needConfig: 'El acceso por suscripción necesita configurar el Client ID de Google.',
-      error: 'No se ha podido verificar la suscripción. Inténtalo de nuevo.',
-
-      subscribeAria: 'Suscribirme al canal de YouTube con mi cuenta de Google',
+      changeAccount: 'Cambiar cuenta de Google',
+      needConfig: 'El acceso por suscripción no está configurado correctamente.',
+      originError: 'Esta página no está configurada como origen autorizado en Google Cloud.',
+      notSubscribed: 'No aparece una suscripción activa al canal de Kelonio con esta cuenta.',
+      apiError: 'YouTube no ha podido completar la comprobación. Inténtalo de nuevo.',
+      rateLimit: 'Se ha alcanzado temporalmente el límite de solicitudes de YouTube. Inténtalo de nuevo más tarde.',
       owner: 'Propietario de Kelonio detectado ✓',
-      ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.'
+      ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.',
+      subscribeAria: 'Abrir YouTube para suscribirme al canal de Kelonio',
+      verifyAria: 'Verificar si mi cuenta está suscrita al canal de Kelonio',
+      changeAccountAria: 'Cambiar la cuenta de Google utilizada para verificar la suscripción',
+      openYoutube: 'Abrir canal de YouTube'
     },
     en: {
       title: 'Guide access',
       lead: 'To continue, subscribe to the Kelonio channel on YouTube.',
-      detail: 'Your subscription is checked with your Google account. Once verified, you will have access to the guide.',
-      subscribe: 'Subscribe with Google',
+      detail: 'Open YouTube to subscribe, then return here to verify the subscription with your Google account.',
+      subscribe: 'Subscribe on YouTube',
+      verify: 'Verify my subscription',
       checking: 'Checking your subscription…',
-      subscribing: 'Subscribing…',
-      subscribed: 'Subscription verified ✓',
+      authorizing: 'Authorizing YouTube access…',
+      verified: 'Subscription verified ✓',
       success: 'Subscription verified. Opening the guide…',
-      auth: 'YouTube authorization is needed to check your subscription.',
-      needConfig: 'Subscription access requires the Google Client ID to be configured.',
-      error: 'The subscription could not be verified. Please try again.',
-   
-      subscribeAria: 'Subscribe to the YouTube channel with my Google account',
+      auth: 'YouTube authorization is needed to verify your subscription.',
+      changeAccount: 'Change Google account',
+      needConfig: 'Subscription access is not configured correctly.',
+      originError: 'This page is not configured as an authorized origin in Google Cloud.',
+      notSubscribed: 'This account does not appear to have an active subscription to the Kelonio channel.',
+      apiError: 'YouTube could not complete the verification. Please try again.',
+      rateLimit: 'YouTube request limits have been reached temporarily. Please try again later.',
       owner: 'Kelonio owner detected ✓',
-      ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.'
+      ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.',
+      subscribeAria: 'Open YouTube to subscribe to the Kelonio channel',
+      verifyAria: 'Verify whether my account is subscribed to the Kelonio channel',
+      changeAccountAria: 'Change the Google account used to verify the subscription',
+      openYoutube: 'Open YouTube channel'
     },
     fr: {
       title: 'Accès au guide',
       lead: 'Pour continuer, abonnez-vous à la chaîne Kelonio sur YouTube.',
-      detail: 'Votre abonnement est vérifié avec votre compte Google. Une fois vérifié, vous aurez accès au guide.',
-      subscribe: "M'abonner avec Google",
+      detail: 'Ouvrez YouTube pour vous abonner, puis revenez ici pour vérifier l’abonnement avec votre compte Google.',
+      subscribe: "M’abonner sur YouTube",
+      verify: 'Vérifier mon abonnement',
       checking: 'Vérification de votre abonnement…',
-      subscribing: 'Abonnement en cours…',
-      subscribed: 'Abonnement vérifié ✓',
+      authorizing: 'Autorisation de l’accès à YouTube…',
+      verified: 'Abonnement vérifié ✓',
       success: 'Abonnement vérifié. Ouverture du guide…',
-      auth: "Une autorisation YouTube est nécessaire pour vérifier votre abonnement.",
-      needConfig: "L'accès par abonnement nécessite de configurer le Client ID Google.",
-      error: "Impossible de vérifier l'abonnement. Réessayez.",
-
-      subscribeAria: 'S’abonner à la chaîne YouTube avec mon compte Google',
+      auth: 'Une autorisation YouTube est nécessaire pour vérifier votre abonnement.',
+      changeAccount: 'Changer de compte Google',
+      needConfig: 'L’accès par abonnement n’est pas correctement configuré.',
+      originError: 'Cette page n’est pas configurée comme origine autorisée dans Google Cloud.',
+      notSubscribed: 'Aucun abonnement actif à la chaîne Kelonio n’est associé à ce compte.',
+      apiError: 'YouTube n’a pas pu terminer la vérification. Réessayez.',
+      rateLimit: 'La limite temporaire de requêtes YouTube a été atteinte. Réessayez plus tard.',
       owner: 'Propriétaire de Kelonio détecté ✓',
-      ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est déverrouillé automatiquement.'
+      ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est automatiquement déverrouillé.',
+      subscribeAria: 'Ouvrir YouTube pour m’abonner à la chaîne Kelonio',
+      verifyAria: 'Vérifier si mon compte est abonné à la chaîne Kelonio',
+      changeAccountAria: 'Changer le compte Google utilisé pour vérifier l’abonnement',
+      openYoutube: 'Ouvrir la chaîne YouTube'
     },
     de: {
       title: 'Zugriff auf die Anleitung',
       lead: 'Um fortzufahren, abonniere den Kelonio-Kanal auf YouTube.',
-      detail: 'Dein Abonnement wird mit deinem Google-Konto geprüft. Nach der Bestätigung erhältst du Zugriff auf die Anleitung.',
-      subscribe: 'Mit Google abonnieren',
+      detail: 'Öffne YouTube, um den Kanal zu abonnieren, und kehre anschließend hierher zurück, um das Abonnement mit deinem Google-Konto zu prüfen.',
+      subscribe: 'Auf YouTube abonnieren',
+      verify: 'Mein Abonnement prüfen',
       checking: 'Abonnement wird geprüft…',
-      subscribing: 'Abonnement wird durchgeführt…',
-      subscribed: 'Abonnement bestätigt ✓',
+      authorizing: 'YouTube-Zugriff wird autorisiert…',
+      verified: 'Abonnement bestätigt ✓',
       success: 'Abonnement bestätigt. Anleitung wird geöffnet…',
       auth: 'Zur Prüfung deines Abonnements ist eine YouTube-Autorisierung erforderlich.',
-      needConfig: 'Für den Zugriff per Abonnement muss die Google Client-ID konfiguriert werden.',
-      error: 'Das Abonnement konnte nicht überprüft werden. Bitte erneut versuchen.',
-
-      subscribeAria: 'Den YouTube-Kanal mit meinem Google-Konto abonnieren',
+      changeAccount: 'Google-Konto wechseln',
+      needConfig: 'Der Zugriff per Abonnement ist nicht korrekt konfiguriert.',
+      originError: 'Diese Seite ist in Google Cloud nicht als autorisierte Quelle eingerichtet.',
+      notSubscribed: 'Für dieses Konto wurde kein aktives Abonnement des Kelonio-Kanals gefunden.',
+      apiError: 'YouTube konnte die Prüfung nicht abschließen. Bitte erneut versuchen.',
+      rateLimit: 'Das YouTube-Anfragelimit wurde vorübergehend erreicht. Bitte später erneut versuchen.',
       owner: 'Kelonio-Inhaber erkannt ✓',
-      ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.'
+      ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.',
+      subscribeAria: 'YouTube öffnen, um den Kelonio-Kanal zu abonnieren',
+      verifyAria: 'Prüfen, ob mein Konto den Kelonio-Kanal abonniert hat',
+      changeAccountAria: 'Das für die Abonnementprüfung verwendete Google-Konto wechseln',
+      openYoutube: 'YouTube-Kanal öffnen'
     },
     it: {
       title: 'Accesso alla guida',
       lead: 'Per continuare, iscriviti al canale Kelonio su YouTube.',
-      detail: 'La tua iscrizione viene verificata con il tuo account Google. Dopo la verifica avrai accesso alla guida.',
-      subscribe: 'Iscriviti con Google',
+      detail: 'Apri YouTube per iscriverti, poi torna qui per verificare l’iscrizione con il tuo account Google.',
+      subscribe: 'Iscriviti su YouTube',
+      verify: 'Verifica la mia iscrizione',
       checking: 'Controllo dell’iscrizione…',
-      subscribing: 'Iscrizione in corso…',
-      subscribed: 'Iscrizione verificata ✓',
+      authorizing: 'Autorizzazione dell’accesso a YouTube…',
+      verified: 'Iscrizione verificata ✓',
       success: 'Iscrizione verificata. Apertura della guida…',
       auth: 'È necessaria l’autorizzazione di YouTube per verificare la tua iscrizione.',
-      needConfig: 'Per l’accesso tramite iscrizione è necessario configurare il Client ID Google.',
-      error: 'Non è stato possibile verificare l’iscrizione. Riprova.',
-
-      subscribeAria: 'Iscriviti al canale YouTube con il mio account Google',
+      changeAccount: 'Cambia account Google',
+      needConfig: 'L’accesso tramite iscrizione non è configurato correttamente.',
+      originError: 'Questa pagina non è configurata come origine autorizzata in Google Cloud.',
+      notSubscribed: 'Con questo account non risulta un’iscrizione attiva al canale Kelonio.',
+      apiError: 'YouTube non ha potuto completare la verifica. Riprova.',
+      rateLimit: 'È stato raggiunto temporaneamente il limite di richieste di YouTube. Riprova più tardi.',
       owner: 'Proprietario Kelonio rilevato ✓',
-      ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.'
+      ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.',
+      subscribeAria: 'Apri YouTube per iscriverti al canale Kelonio',
+      verifyAria: 'Verifica se il mio account è iscritto al canale Kelonio',
+      changeAccountAria: 'Cambia l’account Google usato per verificare l’iscrizione',
+      openYoutube: 'Apri il canale YouTube'
     },
     pt: {
       title: 'Acesso ao guia',
       lead: 'Para continuar, subscreva o canal Kelonio no YouTube.',
-      detail: 'A sua subscrição é verificada com a sua conta Google. Depois de verificada, terá acesso ao guia.',
-      subscribe: 'Subscrever com Google',
+      detail: 'Abra o YouTube para subscrever e depois volte aqui para verificar a subscrição com a sua conta Google.',
+      subscribe: 'Subscrever no YouTube',
+      verify: 'Verificar a minha subscrição',
       checking: 'A verificar a subscrição…',
-      subscribing: 'A subscrever…',
-      subscribed: 'Subscrição verificada ✓',
+      authorizing: 'A autorizar o acesso ao YouTube…',
+      verified: 'Subscrição verificada ✓',
       success: 'Subscrição verificada. A abrir o guia…',
       auth: 'É necessária autorização do YouTube para verificar a sua subscrição.',
-      needConfig: 'O acesso por subscrição requer a configuração do Client ID da Google.',
-      error: 'Não foi possível verificar a subscrição. Tente novamente.',
-
-      subscribeAria: 'Subscrever o canal do YouTube com a minha conta Google',
+      changeAccount: 'Mudar de conta Google',
+      needConfig: 'O acesso por subscrição não está configurado corretamente.',
+      originError: 'Esta página não está configurada como origem autorizada no Google Cloud.',
+      notSubscribed: 'Esta conta não parece ter uma subscrição ativa do canal Kelonio.',
+      apiError: 'O YouTube não conseguiu concluir a verificação. Tente novamente.',
+      rateLimit: 'O limite temporário de pedidos do YouTube foi atingido. Tente novamente mais tarde.',
       owner: 'Proprietário da Kelonio detetado ✓',
-      ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.'
+      ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.',
+      subscribeAria: 'Abrir o YouTube para subscrever o canal Kelonio',
+      verifyAria: 'Verificar se a minha conta subscreveu o canal Kelonio',
+      changeAccountAria: 'Mudar a conta Google usada para verificar a subscrição',
+      openYoutube: 'Abrir canal do YouTube'
     },
     ja: {
       title: 'ガイドへのアクセス',
       lead: '続行するには、YouTube の Kelonio チャンネルに登録してください。',
-      detail: 'Google アカウントでチャンネル登録を確認します。確認が完了すると、このガイドにアクセスできます。',
-      subscribe: 'Google でチャンネル登録',
+      detail: 'YouTube を開いて登録したあと、ここに戻って Google アカウントで登録状況を確認してください。',
+      subscribe: 'YouTube で登録する',
+      verify: '登録状況を確認',
       checking: '登録状況を確認中…',
-      subscribing: 'チャンネル登録中…',
-      subscribed: '登録を確認しました ✓',
+      authorizing: 'YouTube へのアクセスを承認中…',
+      verified: '登録を確認しました ✓',
       success: '登録を確認しました。ガイドを開きます…',
       auth: '登録状況を確認するには YouTube の認証が必要です。',
-      needConfig: '登録によるアクセスには Google Client ID の設定が必要です。',
-      error: '登録状況を確認できませんでした。もう一度お試しください。',
-
-      subscribeAria: 'Google アカウントで YouTube チャンネルに登録',
+      changeAccount: 'Google アカウントを変更',
+      needConfig: '登録によるアクセスが正しく設定されていません。',
+      originError: 'このページは Google Cloud で承認済みのオリジンとして設定されていません。',
+      notSubscribed: 'このアカウントでは Kelonio チャンネルへの有効な登録が確認できませんでした。',
+      apiError: 'YouTube で確認を完了できませんでした。もう一度お試しください。',
+      rateLimit: 'YouTube の一時的なリクエスト上限に達しました。後でもう一度お試しください。',
       owner: 'Kelonio オーナーを確認しました ✓',
-      ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。'
+      ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。',
+      subscribeAria: 'YouTube を開いて Kelonio チャンネルを登録',
+      verifyAria: '自分のアカウントが Kelonio チャンネルを登録しているか確認',
+      changeAccountAria: '登録確認に使用する Google アカウントを変更',
+      openYoutube: 'YouTube チャンネルを開く'
     },
     ko: {
       title: '가이드 이용',
       lead: '계속하려면 YouTube에서 Kelonio 채널을 구독하세요.',
-      detail: 'Google 계정으로 구독 여부를 확인합니다. 확인되면 가이드에 접근할 수 있습니다.',
-      subscribe: 'Google로 구독하기',
+      detail: 'YouTube를 열어 구독한 다음 이 페이지로 돌아와 Google 계정으로 구독 여부를 확인하세요.',
+      subscribe: 'YouTube에서 구독하기',
+      verify: '내 구독 확인',
       checking: '구독 확인 중…',
-      subscribing: '구독하는 중…',
-      subscribed: '구독 확인 완료 ✓',
+      authorizing: 'YouTube 액세스 승인 중…',
+      verified: '구독 확인 완료 ✓',
       success: '구독이 확인되었습니다. 가이드를 엽니다…',
       auth: '구독 여부를 확인하려면 YouTube 인증이 필요합니다.',
-      needConfig: '구독을 통한 접근을 사용하려면 Google Client ID 설정이 필요합니다.',
-      error: '구독을 확인할 수 없습니다. 다시 시도해 주세요.',
-
-      subscribeAria: 'Google 계정으로 YouTube 채널 구독',
+      changeAccount: 'Google 계정 변경',
+      needConfig: '구독을 통한 접근이 올바르게 구성되지 않았습니다.',
+      originError: '이 페이지가 Google Cloud에서 승인된 출처로 구성되어 있지 않습니다.',
+      notSubscribed: '이 계정에서는 Kelonio 채널의 활성 구독이 확인되지 않았습니다.',
+      apiError: 'YouTube에서 확인을 완료할 수 없습니다. 다시 시도해 주세요.',
+      rateLimit: 'YouTube 요청 한도에 일시적으로 도달했습니다. 나중에 다시 시도해 주세요.',
       owner: 'Kelonio 소유자 확인 ✓',
-      ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.'
+      ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.',
+      subscribeAria: 'YouTube를 열어 Kelonio 채널 구독',
+      verifyAria: '내 계정이 Kelonio 채널을 구독했는지 확인',
+      changeAccountAria: '구독 확인에 사용할 Google 계정 변경',
+      openYoutube: 'YouTube 채널 열기'
     }
   };
 
@@ -169,43 +247,7 @@
   let ownerDetected = false;
   let wall = null;
   let gisLoadPromise = null;
-
-  function readAccessCache() {
-    try {
-      const raw = localStorage.getItem(CACHE_KEY);
-      if (!raw) return null;
-      const data = JSON.parse(raw);
-      if (!data || typeof data !== 'object') return null;
-      const verifiedAt = Number(data.verifiedAt || 0);
-      const age = Date.now() - verifiedAt;
-      if (!verifiedAt || age < 0 || age >= CACHE_TTL_MS) {
-        localStorage.removeItem(CACHE_KEY);
-        return null;
-      }
-      return {
-        verified: data.verified === true,
-        owner: data.owner === true,
-        verifiedAt
-      };
-    } catch (_) {
-      return null;
-    }
-  }
-
-  function writeAccessCache(kind) {
-    try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify({
-        version: 11,
-        verified: true,
-        owner: kind === 'owner',
-        verifiedAt: Date.now()
-      }));
-    } catch (_) {}
-  }
-
-  function clearAccessCache() {
-    try { localStorage.removeItem(CACHE_KEY); } catch (_) {}
-  }
+  let tokenRequestInFlight = null;
 
   function lang() {
     try {
@@ -240,21 +282,17 @@
         <p class="youtube-access-lead" id="youtubeAccessLead"></p>
         <p class="youtube-access-detail" id="youtubeAccessDetail"></p>
         <div class="youtube-access-status" id="youtubeAccessStatus" role="status" aria-live="polite"></div>
-        <button type="button" class="youtube-access-btn" id="youtubeAccessSubscribe"></button>
+        <div class="youtube-access-actions">
+          <a class="youtube-access-btn youtube-access-subscribe" id="youtubeAccessSubscribe" target="_blank" rel="noopener noreferrer"></a>
+          <button type="button" class="youtube-access-btn youtube-access-verify" id="youtubeAccessVerify"></button>
+        </div>
+        <button type="button" class="youtube-access-change" id="youtubeAccessChange"></button>
         <a class="youtube-access-youtube" id="youtubeAccessOpenYoutube" target="_blank" rel="noopener noreferrer"></a>
         <div class="youtube-access-brand">YouTube · Kelonio</div>
       </div>`;
 
     injectStyles();
     refreshTexts();
-    // Keep the button disabled until GIS has initialized and the silent
-    // background check has finished. This prevents a click from racing with
-    // the silent token request and overwriting its callback.
-    const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-    if (subscribeButton) {
-      subscribeButton.disabled = true;
-      subscribeButton.setAttribute('aria-disabled', 'true');
-    }
     return wall;
   }
 
@@ -265,19 +303,26 @@
     style.id = 'kelonio-youtube-wall-style';
     style.textContent = `
       html.youtube-wall-locked, body.youtube-wall-locked{overflow:hidden!important}
-      #accessWallOverlay{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,9,12,.96);backdrop-filter:blur(12px);color:#fff;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .35s ease,visibility .35s ease}
+      #accessWallOverlay{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(8,9,12,.97);backdrop-filter:blur(12px);color:#fff;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .28s ease,visibility .28s ease}
       #accessWallOverlay.youtube-wall-hidden{opacity:0;visibility:hidden;pointer-events:none}
-      .youtube-access-card{width:min(92vw,560px);padding:42px 34px 32px;text-align:center;border-radius:24px;background:linear-gradient(180deg,rgba(28,31,39,.98),rgba(18,20,26,.98));border:1px solid rgba(255,255,255,.12);box-shadow:0 25px 80px rgba(0,0,0,.45),0 0 0 1px rgba(229,9,20,.06)}
+      .youtube-access-card{width:min(92vw,560px);padding:42px 34px 32px;text-align:center;border-radius:24px;background:linear-gradient(180deg,rgba(28,31,39,.99),rgba(18,20,26,.99));border:1px solid rgba(255,255,255,.12);box-shadow:0 25px 80px rgba(0,0,0,.5),0 0 0 1px rgba(229,9,20,.06)}
       .youtube-access-icon{width:62px;height:44px;margin:0 auto 22px;border-radius:12px;background:#e50914;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;box-shadow:0 10px 30px rgba(229,9,20,.3)}
       .youtube-access-card h1{margin:0 0 12px;font-size:clamp(1.65rem,4vw,2.2rem);font-weight:900;letter-spacing:-.4px;color:#fff}
       .youtube-access-lead{margin:0 auto 12px;max-width:470px;font-size:1.05rem;line-height:1.55;color:#f2f2f2}
       .youtube-access-detail{margin:0 auto 22px;max-width:470px;font-size:.92rem;line-height:1.5;color:#aeb3bd}
-      .youtube-access-status{min-height:22px;margin:0 0 12px;color:#cfd3da;font-weight:700;font-size:.84rem}
-      .youtube-access-btn{width:100%;border:0;border-radius:12px;padding:14px 20px;background:#e50914;color:#fff;font:900 1rem/1.2 'Segoe UI',system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 26px rgba(229,9,20,.25);transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
-      .youtube-access-btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 14px 32px rgba(229,9,20,.34)}
-      .youtube-access-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
-      .youtube-access-btn:disabled{opacity:.72;cursor:wait}
-      .youtube-access-youtube{display:block;margin:13px 0 0;color:#aeb3bd;text-decoration:none;font-size:.8rem;font-weight:700}
+      .youtube-access-status{min-height:22px;margin:0 0 13px;color:#d7dbe2;font-weight:700;font-size:.84rem}
+      .youtube-access-actions{display:grid;gap:10px}
+      .youtube-access-btn{display:flex;align-items:center;justify-content:center;width:100%;box-sizing:border-box;border:0;border-radius:12px;padding:14px 20px;color:#fff;font:900 1rem/1.2 'Segoe UI',system-ui,sans-serif;text-decoration:none;cursor:pointer;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease,opacity .18s ease}
+      .youtube-access-subscribe{background:#e50914;box-shadow:0 10px 26px rgba(229,9,20,.25)}
+      .youtube-access-verify{background:#2e333d;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+      .youtube-access-btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08)}
+      .youtube-access-subscribe:hover{box-shadow:0 14px 32px rgba(229,9,20,.34)}
+      .youtube-access-verify:hover{box-shadow:0 12px 26px rgba(0,0,0,.3)}
+      .youtube-access-btn:focus-visible,.youtube-access-change:focus-visible,.youtube-access-youtube:focus-visible{outline:2px solid #fff;outline-offset:3px}
+      .youtube-access-btn:disabled{opacity:.65;cursor:wait;transform:none!important}
+      .youtube-access-change{display:block;margin:12px auto 0;padding:4px 8px;background:none;border:0;color:#aeb3bd;font:700 .78rem/1.4 'Segoe UI',system-ui,sans-serif;cursor:pointer}
+      .youtube-access-change:hover{color:#fff;text-decoration:underline}
+      .youtube-access-youtube{display:block;margin:10px 0 0;color:#7f8692;text-decoration:none;font-size:.78rem;font-weight:700}
       .youtube-access-youtube:hover{text-decoration:underline;color:#fff}
       .youtube-access-brand{margin-top:24px;color:#686e79;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
       @media(max-width:600px){#accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
@@ -294,18 +339,34 @@
     if (q('youtubeAccessLead')) q('youtubeAccessLead').textContent = d.lead;
     if (q('youtubeAccessDetail')) q('youtubeAccessDetail').textContent = d.detail;
 
+    const subscribe = q('youtubeAccessSubscribe');
+    if (subscribe) {
+      subscribe.textContent = d.subscribe;
+      subscribe.href = SUBSCRIBE_URL;
+      subscribe.setAttribute('aria-label', d.subscribeAria);
+      subscribe.setAttribute('title', d.subscribeAria);
+    }
+
+    const verify = q('youtubeAccessVerify');
+    if (verify) {
+      verify.textContent = busy ? d.checking : d.verify;
+      verify.disabled = busy || unlocked || ownerDetected;
+      verify.setAttribute('aria-disabled', String(verify.disabled));
+      verify.setAttribute('aria-label', d.verifyAria);
+    }
+
+    const change = q('youtubeAccessChange');
+    if (change) {
+      change.textContent = d.changeAccount;
+      change.disabled = busy || !gisReady;
+      change.setAttribute('aria-disabled', String(change.disabled));
+      change.setAttribute('aria-label', d.changeAccountAria);
+    }
+
     const open = q('youtubeAccessOpenYoutube');
     if (open) {
       open.textContent = d.openYoutube;
       open.href = CHANNEL_URL;
-      open.setAttribute('aria-label', d.openYoutube);
-    }
-
-    const button = q('youtubeAccessSubscribe');
-    if (button) {
-      button.textContent = busy ? d.subscribing : (ownerDetected ? d.owner : (unlocked ? d.subscribed : d.subscribe));
-      button.disabled = busy || unlocked || ownerDetected;
-      button.setAttribute('aria-label', d.subscribeAria);
     }
   }
 
@@ -314,44 +375,58 @@
     if (el) el.textContent = custom || t()[key] || '';
   }
 
-
   function removeLegacyMemberCta() {
-    document.querySelectorAll('#youtube-cta-box, .youtube-cta-box').forEach(el => el.remove());
-    document.querySelectorAll('.youtube-cta-member').forEach(el => {
+    document.querySelectorAll('#youtube-cta-box, .youtube-cta-box').forEach((el) => el.remove());
+    document.querySelectorAll('.youtube-cta-member').forEach((el) => {
       const box = el.closest('#youtube-cta-box, .youtube-cta-box');
       if (box) box.remove();
     });
   }
 
-  function hideWall(cacheKind) {
-    unlocked = true;
-    writeAccessCache(cacheKind === 'owner' ? 'owner' : 'subscription');
+  function lockPage() {
+    document.documentElement.classList.add('youtube-wall-locked');
+    document.body.classList.add('youtube-wall-locked');
+  }
+
+  function unlockPage() {
     document.documentElement.classList.remove('youtube-wall-locked');
     document.body.classList.remove('youtube-wall-locked');
+  }
+
+  function hideWall(kind) {
+    unlocked = true;
+    lockPage();
 
     if (wall) {
       refreshTexts();
-      setStatus('success');
-      wall.classList.add('youtube-wall-hidden');
+      setStatus('success', kind === 'owner' ? t().ownerDetail : t().success);
       window.setTimeout(() => {
-        if (wall) wall.remove();
-      }, 380);
+        unlockPage();
+        wall.classList.add('youtube-wall-hidden');
+        window.setTimeout(() => {
+          if (wall) wall.remove();
+          wall = null;
+        }, 280);
+      }, 120);
+    } else {
+      unlockPage();
     }
 
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted'));
+    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
+      detail: { source: kind === 'owner' ? 'youtube-owner-check' : 'youtube-subscription-check' }
+    }));
   }
 
   function showWall() {
     if (!wall) buildWall();
     wall.classList.remove('youtube-wall-hidden');
-    document.documentElement.classList.add('youtube-wall-locked');
-    document.body.classList.add('youtube-wall-locked');
+    lockPage();
     refreshTexts();
   }
 
   function loadGIS() {
-    if (!CONFIG_OK || !CHANNEL_ID) {
-      return Promise.reject(new Error('not_configured'));
+    if (!CONFIG_OK || !ORIGIN_OK) {
+      return Promise.reject(new Error(!ORIGIN_OK ? 'origin_not_allowed' : 'not_configured'));
     }
 
     if (window.google && google.accounts && google.accounts.oauth2) {
@@ -396,35 +471,38 @@
     });
 
     gisReady = true;
+    refreshTexts();
     return true;
   }
 
-  function isRecoverableOAuthError(message) {
-    return [
-      'interaction_required',
-      'consent_required',
-      'login_required',
-      'access_denied',
-      'oauth_error'
-    ].includes(String(message || ''));
+  function normalizeGoogleError(err) {
+    return String((err && (err.type || err.error || err.message || err.error_description)) || 'oauth_error');
   }
 
   function tokenRequest(promptValue) {
-    return new Promise((resolve, reject) => {
+    if (tokenRequestInFlight) return tokenRequestInFlight;
+
+    tokenRequestInFlight = new Promise((resolve, reject) => {
       if (!gisReady || !tokenClient) {
         reject(new Error('gis_not_ready'));
         return;
       }
 
+      let settled = false;
+      const finish = (fn, value) => {
+        if (settled) return;
+        settled = true;
+        fn(value);
+      };
+
       tokenClient.callback = (resp) => {
         if (!resp || !resp.access_token) {
-          reject(new Error((resp && (resp.error || resp.error_description)) || 'no_token'));
+          finish(reject, new Error(normalizeGoogleError(resp) || 'no_token'));
           return;
         }
 
         const grantedScope = String(resp.scope || '').split(/\s+/).filter(Boolean);
         let scopeOk = grantedScope.includes(YT_SCOPE);
-
         try {
           if (typeof google.accounts.oauth2.hasGrantedAllScopes === 'function') {
             scopeOk = google.accounts.oauth2.hasGrantedAllScopes(resp, YT_SCOPE);
@@ -432,36 +510,51 @@
         } catch (_) {}
 
         if (!scopeOk) {
-          reject(new Error('scope_not_granted'));
+          finish(reject, new Error('scope_not_granted'));
           return;
         }
 
         accessToken = resp.access_token;
-        resolve(resp);
+        finish(resolve, resp);
       };
 
       tokenClient.error_callback = (err) => {
-        reject(new Error((err && (err.type || err.error || err.message)) || 'oauth_error'));
+        finish(reject, new Error(normalizeGoogleError(err)));
       };
 
       try {
         const request = promptValue ? { prompt: promptValue } : {};
         tokenClient.requestAccessToken(request);
       } catch (err) {
-        reject(err instanceof Error ? err : new Error('oauth_error'));
+        finish(reject, err instanceof Error ? err : new Error('oauth_error'));
       }
+    }).finally(() => {
+      tokenRequestInFlight = null;
     });
+
+    return tokenRequestInFlight;
   }
 
   async function apiFetch(url, options) {
+    if (!accessToken) throw new Error('unauthorized');
+
     const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 20000);
+    const timer = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
     try {
       const headers = Object.assign({}, (options && options.headers) || {}, {
         Authorization: 'Bearer ' + accessToken
       });
-      return await fetch(url, Object.assign({}, options || {}, { headers, signal: controller.signal }));
+      const response = await fetch(url, Object.assign({}, options || {}, {
+        headers,
+        signal: controller.signal,
+        cache: 'no-store'
+      }));
+      if (response.status === 401) accessToken = null;
+      return response;
+    } catch (error) {
+      if (error && error.name === 'AbortError') throw new Error('request_timeout');
+      throw error;
     } finally {
       window.clearTimeout(timer);
     }
@@ -477,18 +570,14 @@
     });
 
     const response = await apiFetch(API + '/channels?' + params.toString());
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (!response.ok) {
-      throw new Error('owner_check_failed_' + response.status);
-    }
+    if (response.status === 401) throw new Error('unauthorized');
+    if (response.status === 403) throw new Error('forbidden');
+    if (!response.ok) throw new Error('owner_check_failed_' + response.status);
 
     const data = await response.json();
-    return Array.isArray(data.items) && data.items.some((item) => String(item && item.id || '') === CHANNEL_ID);
+    return Array.isArray(data.items) && data.items.some(
+      (item) => String(item && item.id || '') === CHANNEL_ID
+    );
   }
 
   async function checkSubscription() {
@@ -502,248 +591,156 @@
     });
 
     const response = await apiFetch(API + '/subscriptions?' + params.toString());
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (!response.ok) {
-      throw new Error('check_failed_' + response.status);
-    }
+    if (response.status === 401) throw new Error('unauthorized');
+    if (response.status === 403) throw new Error('forbidden');
+    if (response.status === 429) throw new Error('rate_limit');
+    if (!response.ok) throw new Error('subscription_check_failed_' + response.status);
 
     const data = await response.json();
     return Array.isArray(data.items) && data.items.length > 0;
   }
 
-  async function subscribe() {
-    const response = await apiFetch(API + '/subscriptions?part=snippet', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        snippet: {
-          resourceId: {
-            kind: 'youtube#channel',
-            channelId: CHANNEL_ID
-          }
-        }
-      })
-    });
-
-    if (response.status === 401) {
-      accessToken = null;
-      throw new Error('unauthorized');
-    }
-
-    if (response.ok) return true;
-
-    // In case the subscription was created between the initial check and insert.
-    if (response.status === 400) {
-      try {
-        const data = await response.json();
-        const duplicated = data && data.error && Array.isArray(data.error.errors) &&
-          data.error.errors.some((item) => item && item.reason === 'subscriptionDuplicate');
-        if (duplicated) return true;
-      } catch (_) {}
-    }
-
-    throw new Error('insert_failed_' + response.status);
-  }
-
-  async function ensureSubscription() {
+  async function verifyCurrentAccount(promptValue) {
     if (busy || unlocked) return;
-
-    // GIS is preloaded and the button remains disabled until the initial
-    // silent check completes. requestAccessToken() therefore runs directly
-    // from this click, preserving the user gesture required for Google's
-    // account/consent UI.
     if (!gisReady) {
       setStatus('auth');
       return;
     }
 
     busy = true;
+    accessToken = null;
+    ownerDetected = false;
     refreshTexts();
-    setStatus('subscribing');
+    setStatus('authorizing');
 
     try {
-      if (!accessToken) {
-        // No prompt override: reuse a previous grant if it exists; otherwise
-        // Google opens the account/consent flow. Crucially, this call is made
-        // directly from the button click, with no awaited request before it.
-        await tokenRequest('');
-      }
+      await tokenRequest(promptValue || '');
+      setStatus('checking');
 
       if (await checkOwnerChannel()) {
         ownerDetected = true;
-        const d = t();
         refreshTexts();
-        setStatus(null, d.ownerDetail || d.owner);
         hideWall('owner');
         return;
       }
 
-      let subscribed = await checkSubscription();
+      const subscribed = await checkSubscription();
       if (!subscribed) {
-        try {
-          await subscribe();
-        } catch (error) {
-          if (error.message === 'unauthorized') {
-            throw new Error('reauthorization_needed');
-          } else {
-            throw error;
-          }
-        }
+        setStatus('notSubscribed');
+        return;
       }
-
-      // The insert call itself is the authoritative success response. Re-check
-      // once when possible so the UI only unlocks after the API confirms it.
-      let verified = false;
-      for (let attempt = 0; attempt < 3 && !verified; attempt += 1) {
-        try {
-          verified = await checkSubscription();
-        } catch (error) {
-          if (error.message === 'unauthorized') {
-            throw new Error('reauthorization_needed');
-          }
-          throw error;
-        }
-
-        if (!verified && attempt < 2) {
-          await new Promise((resolve) => window.setTimeout(resolve, 800));
-        }
-      }
-
-      if (!verified) throw new Error('verification_failed');
 
       hideWall('subscription');
     } catch (error) {
       accessToken = null;
-      clearAccessCache();
-      const message = error && error.message ? error.message : '';
-      const text = message === 'not_configured'
-        ? t().needConfig
-        : (message === 'reauthorization_needed' || message === 'scope_not_granted' || isRecoverableOAuthError(message)
-          ? t().auth
-          : t().error);
-      setStatus(null, text);
+      const message = String(error && error.message || '');
+
+      if (message === 'origin_not_allowed') {
+        setStatus('originError');
+      } else if (message === 'not_configured' || message === 'gis_not_ready') {
+        setStatus('needConfig');
+      } else if (message === 'scope_not_granted' ||
+                 message === 'interaction_required' ||
+                 message === 'consent_required' ||
+                 message === 'login_required' ||
+                 message === 'access_denied') {
+        setStatus('auth');
+      } else if (message === 'rate_limit') {
+        setStatus('rateLimit');
+      } else {
+        setStatus('apiError');
+      }
     } finally {
       busy = false;
-      if (wall) {
-        refreshTexts();
-        if (!unlocked && !ownerDetected && gisReady) {
-          const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-          if (subscribeButton) {
-            subscribeButton.disabled = false;
-            subscribeButton.setAttribute('aria-disabled', 'false');
-          }
-        }
-      }
+      if (wall && !unlocked) refreshTexts();
     }
   }
 
-  function unlockFromCache(cached) {
-    ownerDetected = cached.owner === true;
-    unlocked = true;
+  function changeAccount() {
+    if (busy || !gisReady) return;
+    verifyCurrentAccount('select_account');
+  }
 
-    // La plantilla de las guías incluye un muro estático para evitar que
-    // el contenido aparezca antes de que cargue este script. En una
-    // recarga con caché válida ese muro ya existe en el DOM, por lo que
-    // debemos ocultarlo explícitamente antes de salir de bootstrap().
-    wall = document.getElementById('accessWallOverlay');
-    injectStyles();
-    document.documentElement.classList.remove('youtube-wall-locked');
-    document.body.classList.remove('youtube-wall-locked');
-
-    if (wall) {
-      wall.classList.add('youtube-wall-hidden');
-      window.setTimeout(() => {
-        if (wall) wall.remove();
-      }, 380);
+  function prepareStaticWall() {
+    const staticWall = document.getElementById('accessWallOverlay');
+    if (staticWall) {
+      wall = staticWall;
+      injectStyles();
+      lockPage();
     }
-
-    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-      detail: { source: 'local-cache-24h', owner: cached.owner }
-    }));
   }
 
   async function bootstrap() {
     const videos = document.querySelectorAll('.guide-content .video-container');
     if (!videos.length) {
-      // Defense in depth: non-video guides must never inherit the YouTube wall
-      // from an older template or a stale DOM state.
-      document.documentElement.classList.remove('youtube-wall-locked');
-      document.body.classList.remove('youtube-wall-locked');
+      unlockPage();
       const legacyWall = document.getElementById('accessWallOverlay');
       if (legacyWall) legacyWall.remove();
       return;
     }
 
-    const cached = readAccessCache();
-    if (cached && cached.verified) {
-      unlockFromCache(cached);
-      return;
-    }
+    prepareStaticWall();
 
     buildWall();
     showWall();
 
-    const button = wall.querySelector('#youtubeAccessSubscribe');
-    button.addEventListener('click', ensureSubscription);
+    const verify = wall.querySelector('#youtubeAccessVerify');
+    const subscribe = wall.querySelector('#youtubeAccessSubscribe');
+    const change = wall.querySelector('#youtubeAccessChange');
 
-    if (!CONFIG_OK || !CHANNEL_ID) {
-      setStatus('needConfig');
+    if (verify) verify.addEventListener('click', () => verifyCurrentAccount(''));
+    if (change) change.addEventListener('click', changeAccount);
+
+    // The subscribe link is intentionally just a navigation action. It never
+    // grants access by itself; only a subsequent API verification can unlock.
+    if (subscribe) subscribe.addEventListener('click', () => {
+      window.setTimeout(() => {
+        if (!unlocked) setStatus('checking');
+      }, 0);
+    });
+
+    if (!CONFIG_OK || !ORIGIN_OK) {
+      setStatus(!ORIGIN_OK ? 'originError' : 'needConfig');
+      refreshTexts();
       return;
     }
 
     try {
-      setStatus('checking');
+      setStatus('authorizing');
       await loadGIS();
       if (!initGIS()) throw new Error('gis_not_ready');
 
-      // Silent detection: if this browser already has a Google session and
-      // already granted this app access to YouTube, no consent UI is shown.
+      // Silent attempt only reuses a grant already made to this browser/app.
+      // If Google requires interaction, no access is granted and the button
+      // remains available for the user to authorize explicitly.
       try {
         await tokenRequest('none');
-        try {
-          if (await checkOwnerChannel()) {
-            ownerDetected = true;
-            const d = t();
-            refreshTexts();
-            setStatus(null, d.ownerDetail || d.owner);
-            hideWall('owner');
-            return;
-          }
-        } catch (ownerError) {
-          if (ownerError.message === 'unauthorized') throw ownerError;
+        setStatus('checking');
+
+        if (await checkOwnerChannel()) {
+          ownerDetected = true;
+          refreshTexts();
+          hideWall('owner');
+          return;
         }
+
         if (await checkSubscription()) {
           hideWall('subscription');
           return;
         }
+
         accessToken = null;
-        refreshTexts();
-        setStatus('auth');
+        setStatus('notSubscribed');
       } catch (_) {
         accessToken = null;
-        refreshTexts();
         setStatus('auth');
       }
-
-      if (!unlocked) {
-        const subscribeButton = wall.querySelector('#youtubeAccessSubscribe');
-        if (subscribeButton) {
-          subscribeButton.disabled = false;
-          subscribeButton.setAttribute('aria-disabled', 'false');
-        }
-      }
-    } catch (_) {
-      setStatus('auth');
-      const subscribeButton = wall && wall.querySelector('#youtubeAccessSubscribe');
-      if (subscribeButton) {
-        subscribeButton.disabled = false;
-        subscribeButton.setAttribute('aria-disabled', 'false');
-      }
+    } catch (error) {
+      accessToken = null;
+      const message = String(error && error.message || '');
+      setStatus(message === 'origin_not_allowed' ? 'originError' : 'needConfig');
+    } finally {
+      if (!unlocked) refreshTexts();
     }
   }
 
@@ -751,5 +748,8 @@
     refreshTexts();
   });
 
-  document.addEventListener('DOMContentLoaded', () => { removeLegacyMemberCta(); bootstrap(); }, { once: true });
+  document.addEventListener('DOMContentLoaded', () => {
+    removeLegacyMemberCta();
+    bootstrap();
+  }, { once: true });
 })();
