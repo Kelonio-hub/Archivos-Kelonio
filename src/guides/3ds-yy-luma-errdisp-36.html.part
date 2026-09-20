@@ -1,0 +1,32 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Error Luma ErrDisp 36</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="image-container"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Error ErrDisp 36" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/errdisp-36.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div></div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Este error aparece habitualmente al configurar el perfil en la consola.
+        </div>
+<h2 id="txt_h2_req">Motivos del Error</h2>
+<ul>
+<li id="txt_req1"><strong>Posibilidad 1:</strong> Existen problemas de Wifi, o bien en la propia antena de la consola (error de hardware) o bien es un error en el propio entorno red (error en el router o tipo de conexión).</li>
+<li id="txt_req2"><strong>Posibilidad 2:</strong> Existen daños internos en la app de E-shop.</li>
+</ul>
+<div aria-hidden="true" id="recommended-product-box"></div>
+<h2 id="txt_h2_step1">PASO 1: Solucionar problemas de conexión</h2>
+<ol>
+<li id="txt_s1_1">Probar a conectarse desde otra conexión Wifi diferente a la habitual (por ejemplo, compartiendo datos desde un teléfono móvil).</li>
+<li id="txt_s1_2">Si la conexión falla en todas las redes, será necesario reparar o sustituir la antena Wifi de la consola.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Solucionar daños internos (E-shop)</h2>
+<ol>
+<li id="txt_s2_1">Si el fallo no es de hardware, se debe reparar restableciendo tu sistema mediante nuestra guía de <a class="mini-btn" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-nand.html" target="_blank">NAND</a> o realizando la transferencia a <a class="mini-btn" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-ctrnand-v1.html" target="_blank">CTRNAND</a>.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: #2ecc71; margin-top: 30px;">
+<strong>✅ ¡Solucionado!</strong> Aplicando estos métodos, tu consola volverá a funcionar correctamente.
+        </div>
+</div>

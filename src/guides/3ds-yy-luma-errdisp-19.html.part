@@ -1,0 +1,61 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Error Luma ERRDISP 19</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="error-img-container"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Luma Error ERRDISP 19" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/errdisp-19.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div></div>
+<div class="alert-box" id="txt_alert1">
+</div>
+<h2 id="txt_h2_motive">Motivo del Error</h2>
+<p id="txt_motive_desc"></p>
+<h2 id="txt_h2_solutions">Soluciones Progresivas</h2>
+<ul>
+<li>
+<span id="txt_sol1"></span><br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-twlfix.html" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-twlfix.html" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+<li>
+<span id="txt_sol2"></span>
+</li>
+<li>
+<span id="txt_sol3"></span><br/>
+<a class="dl-btn" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-nand.html" id="btn_sol3" target="_blank">Ver Guía NAND</a>
+</li>
+<li>
+<span id="txt_sol4"></span><br/>
+<a class="dl-btn" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-ctrnand-v1.html" id="btn_sol4" target="_blank">Ver Guía CTRNAND</a>
+</li>
+<li>
+<span id="txt_sol5"></span><br/>
+<a class="dl-btn" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-blue-lazarus.html" id="btn_sol5" target="_blank">Ver Guía Blue Lazarus</a>
+</li>
+</ul>
+</div>

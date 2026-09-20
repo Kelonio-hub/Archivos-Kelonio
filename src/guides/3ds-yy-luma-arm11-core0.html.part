@@ -1,0 +1,59 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Error Luma ARM11 - CORE0</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="image-container"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Error Luma ARM11 - CORE0" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/arm11-core0.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div></div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Su aparición influye directamente a la ruta [0] Tarjeta SD pudiendo corromperla y dejando inoperativo su contenido.
+        </div>
+<h2 id="txt_h2_req">Causas Comunes</h2>
+<ul>
+<li id="txt_req1">En esta ocasión, algún homebrew precisa de la SD (por ejemplo el uso de FTP, FBI, Anemone, Checkpoint...), lo que podría ocasionar en ella la introducción de archivos corruptos o llevarla a un sobreesfuerzo. Esto generaría la pantalla de aviso Arm11 Core 0 y, muy probablemente, la corrupción de la tarjeta.</li>
+<li id="txt_req2">SU APARICIÓN TAMBIÉN PUEDE VERSE AFECTADA POR ARM11 CORE 1: En ocasiones, el fallo puede iniciarse en la ruta [1] Sysnand Ctrnand (con aviso de ARM11 Core 1) pero afectar de forma secundaria a la ruta [0] Tarjeta SD. La posibilidad de que se dé una corrupción de SD y un fallo del CTrnand son muy comunes.</li>
+<li><span id="txt_req3">Soluciones Progresivas:</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/sd-guiformat.html" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/sd-guiformat.html" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">PASO 1: Formatear la Tarjeta SD</h2>
+<ol>
+<li id="txt_s1_1">Eliminar el archivo corrupto de la SD si este ha sido identificado recientemente tras usar algún homebrew.</li>
+<li id="txt_s1_2">Formatear por completo la tarjeta SD utilizando la herramienta Guiformat de forma segura.</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Reinstalar Archivos Base</h2>
+<ol>
+<li id="txt_s2_1">Realizar el proceso de Act3ds si se han perdido los archivos de arranque indispensables en la raíz de la tarjeta debido a la corrupción. Puedes acceder desde aquí: <a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-act3ds.html" style="color:var(--red); font-weight:bold;" target="_blank">Guía Act3ds</a>.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: #2ecc71; margin-top: 30px;">
+<strong>✅ ¡Completado!</strong> Siguiendo estos pasos progresivos reestructurarás los archivos corruptos, solucionando los fallos críticos de lectura en Core 0.
+        </div>
+<p id="txt_footer">Recuerda mantener copias de seguridad de tus archivos de guardado y utilizar memorias SD de marcas fiables.</p>
+</div>

@@ -1,0 +1,59 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">ERROR FBI : ERROR CAM (11) 0 (20)</h1>
+</div>
+</div>
+<div class="guide-content">
+<div style="text-align: center; margin-bottom: 30px;"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Error CAM" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/error-cam11-cam20.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div></div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Este error está directamente relacionado con un fallo en la cámara de la consola al utilizar la aplicación FBI.
+        </div>
+<h2 id="txt_h2_req">Por qué ocurre</h2>
+<ul>
+<li id="txt_req1"><strong>Error 20:</strong> La cámara se ha desconectado o ha fallado repentinamente al intentar escanear un código QR.</li>
+<li id="txt_req2"><strong>Error 11:</strong> La cámara está rota, ya sea a nivel de software o de hardware.</li>
+<li style="display:none;"><span id="txt_req3"></span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="#" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="#" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">SOLUCIÓN 1: Descartar error de Software</h2>
+<ol>
+<li id="txt_s1_1">Restablece la consola usando el <a href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3ds-ctrnand-v1.html" target="_blank">CTRNAND v1</a> para comprobar si el error de cámara es por software corrupto.</li>
+<li id="txt_s1_2">Si tras realizar el restablecimiento la cámara sigue fallando, podría tratarse de un error de Hardware irremediable mediante software.</li>
+</ol>
+<h2 id="txt_h2_step2">SOLUCIÓN 2: Evitar el uso de la cámara</h2>
+<ol>
+<li id="txt_s2_1">Probar con otros métodos de instalación manual (no remotos). Copia tus archivos `.cia` directamente en la tarjeta SD e instálalos desde el menú SD del FBI.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: #2ecc71; margin-top: 30px;">
+<strong>✅ Alternativa viable:</strong> Aunque tu cámara no funcione, puedes seguir usando la consola e instalar aplicaciones manualmente sin problema.
+        </div>
+<p id="txt_footer">Si tienes más dudas o tu problema persiste, únete a nuestra comunidad de Discord para recibir asistencia personalizada.</p>
+</div>

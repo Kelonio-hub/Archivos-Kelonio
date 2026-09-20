@@ -1,0 +1,76 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">RONIN</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/PohCKwiwE9E" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/PohCKwiwE9E?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/PohCKwiwE9E/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Información:</strong> El vídeo explica cómo instalar RONIN (Homebrew de Nintendo 3DS) y detalla cada una de sus funciones avanzadas.
+</div>
+<h2 id="txt_h2_req">Requisitos e Información General</h2>
+<ul>
+<li id="txt_req1">Consola de la familia Nintendo 3DS modificada.</li>
+<li id="txt_req2">Tarjeta SD con espacio suficiente.</li>
+<li><span id="txt_req3">Archivos de RONIN</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://www.mediafire.com/folder/ep770sa6pf31c/RONIN" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://www.mediafire.com/folder/ep770sa6pf31c/RONIN" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<h2 id="txt_h2_step1">Detalles de la versión</h2>
+<ul>
+<li><strong id="txt_type_label">Tipo:</strong> <span id="txt_type_value">Homebrew de Nintendo 3DS</span></li>
+<li><strong id="txt_revision_label">Revisión:</strong> <span id="txt_revision_value">Septiembre de 2026</span></li>
+<li><strong id="txt_language_support_label">Soporte idiomático:</strong> <span id="txt_language_support_value">ESP, ENG, FRA, DEU, ITA, POR, JPN, KOR</span></li>
+</ul>
+<h2 id="txt_h2_step2">Funciones principales de RONIN</h2>
+<ol>
+<li><strong id="txt_feat1_title">Instalaciones seguras:</strong> <span id="txt_feat1_desc">Al ser un fork de FBI, incluye verificación previa a su instalación mediante tarjeta SD, QR, URL y servidor de red.</span></li>
+<li><strong id="txt_feat2_title">Sección de títulos y tickets:</strong> <span id="txt_feat2_desc">Sin posibilidad de visualizar los títulos del sistema para evitar eliminaciones erróneas.</span></li>
+<li><strong id="txt_feat3_title">Recuperación de tickets:</strong> <span id="txt_feat3_desc">Permite recuperar los tickets de iconos desaparecidos (inspirado en Faketik).</span></li>
+<li><strong id="txt_feat4_title">Importar semillas:</strong> <span id="txt_feat4_desc">Permite importar la semilla (seed) de los títulos.</span></li>
+<li><strong id="txt_feat5_title">Gestión de partidas:</strong> <span id="txt_feat5_desc">Permite extraer e importar partidas guardadas de tus juegos (inspirado en Checkpoint y JKSM).</span></li>
+<li><strong id="txt_feat6_title">Cambio de región:</strong> <span id="txt_feat6_desc">Permite cambiar la región de los juegos.</span></li>
+<li><strong id="txt_feat7_title">Cambio de idioma:</strong> <span id="txt_feat7_desc">Permite cambiar el idioma de los juegos, siempre que se encuentre disponible en su código (inspirado en LumaLocaleSwitch).</span></li>
+<li><strong id="txt_feat8_title">Información del sistema:</strong> <span id="txt_feat8_desc">Permite reconocer y mostrar la información completa de la consola.</span></li>
+<li><strong id="txt_feat9_title">Test de botones:</strong> <span id="txt_feat9_desc">Permite testear y reconocer los botones de la consola (inspirado en 3DSident y 3DSTest).</span></li>
+<li><strong id="txt_feat10_title">Dumper de NAND:</strong> <span id="txt_feat10_desc">Permite extraer e importar volcados de NAND.</span></li>
+<li><strong id="txt_feat11_title">Control parental:</strong> <span id="txt_feat11_desc">Permite descubrir el PIN del Control Parental.</span></li>
+<li><strong id="txt_feat12_title">Reparación NDS:</strong> <span id="txt_feat12_desc">Permite eliminar o reparar apps de NDS (inspirado en TWLFix).</span></li>
+<li><strong id="txt_feat13_title">Reproductor multimedia:</strong> <span id="txt_feat13_desc">Reproducción de música y fotografías integradas.</span></li>
+<li><strong id="txt_feat14_title">Reproductor de vídeos:</strong> <span id="txt_feat14_desc">Permite reproducir vídeo en la consola (inspirado en Tunavids).</span></li>
+<li><strong id="txt_feat15_title">Dumper de DSP:</strong> <span id="txt_feat15_desc">Permite extraer el firmware DSP (inspirado en DSP1).</span></li>
+<li><strong id="txt_feat16_title">Calibración visual:</strong> <span id="txt_feat16_desc">Permite calibrar los colores de los textos del menú.</span></li>
+<li><strong id="txt_feat17_title">Gestor de temas:</strong> <span id="txt_feat17_desc">Permite descargar e instalar temas tanto en el Menú HOME como en el propio RONIN (inspirado en Themely y Anemone).</span></li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> RONIN ya está listo para ser aprovechado en tu consola Nintendo 3DS.
+</div>
+<p id="txt_footer">Disfruta de todas las herramientas multifunción de RONIN.</p>
+</div>

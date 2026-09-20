@@ -1,0 +1,30 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Error Luma Emunand Detected</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="image-container"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Error Luma Emunand Detected Diagram/Interface" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/emunand-detected.png" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div></div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Info:</strong> Explicación detallada de por qué ocurre este error crítico en tu consola custom firmware.
+        </div>
+<h2 id="txt_h2_req">Motivos</h2>
+<ul>
+<li id="txt_req1">La SD está sirviendo como sistema Emunand (un proceso descontinuado de hackeo clásico A9LH).</li>
+<li id="txt_req2">Al actualizar la consola a versiones de sistema no compatibles con entornos antiguos A9lh sale el error.</li>
+<li id="txt_req3">Al hackear la consola directamente de forma moderna con Boot9 (sin Emunand) y posteriormente intentar cargar de nuevo la Emunand antigua A9lh se genera el conflicto.</li>
+</ul>
+<div aria-hidden="true" id="recommended-product-box"></div>
+<h2 id="txt_h2_step1">Soluciones Progresivas</h2>
+<ol>
+<li id="txt_s1_1"><strong>Método 1:</strong> Utilizar otra tarjeta SD completamente limpia que no tenga configurada ninguna partición Emunand y proceder a hackear de forma nativa la consola utilizando Boot9.</li>
+<li id="txt_s1_2"><strong>Método 2:</strong> Eliminar la Emunand directamente desde la herramienta avanzada Godmode9 para poder seguir utilizando dicha tarjeta SD. Después de este proceso de limpieza, es obligatorio realizar el hackeo de forma nativa.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Enhorabuena!</strong> Consola lista para restaurar el sistema limpio y nativo.
+        </div>
+<p id="txt_footer">Asegúrate de realizar copias de seguridad de tus archivos importantes antes de eliminar particiones en la consola.</p>
+</div>

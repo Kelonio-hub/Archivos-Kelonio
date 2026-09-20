@@ -1,0 +1,37 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">Error QR [Generado por App Hshop]</h1>
+</div>
+</div>
+<div class="guide-content">
+<div style="text-align: center; margin-bottom: 30px;"><div class="alert-box">
+<div id="txt_error_img" style="margin-bottom: 15px;"></div>
+<img alt="Error QR Hshop 3DS" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/errror%20qr.jpg" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"/>
+</div>",
+      
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ ¡IMPORTANTE!:</strong> Si sufres este error, pide ayuda de inmediato en nuestro servidor de <a href="https://discord.gg/8Fv8GDg" style="color:var(--red); font-weight:bold;" target="_blank">Discord (La Presa)</a>.
+        </div>
+<h2 id="txt_h2_info">Información Recopilada Hasta El Momento</h2>
+<ul id="txt_info_content">
+<li>Todos los casos registrados sobre error QR tenían o habían utilizado la app Hshop.</li>
+<li>El índice de aparición del error es más habitual en consolas modelo NEW que en modelos OLD.</li>
+<li>El creador de Hshop admite que el proceso de descarga/instalación de las NEW es más elevado, requiriendo tirar más del procesador/RAM de la consola.</li>
+<li>Los creadores de la Guide y del Discord Nintendo Homebrew relacionan dicho error a un fallo en la RAM de la consola.</li>
+</ul>
+<h2 id="txt_h2_sol">Posibles Soluciones</h2>
+<ol id="txt_sol_content">
+<li><strong>Vía Hardware:</strong> La solución más efectiva, lamentablemente, es el cambio total de la placa de la consola.</li>
+<li><strong>Vía Software:</strong> En pocas ocasiones funciona, pero se basa en la restauración de la NAND o la aplicación del CTRNAND desde programas antiguos como Decrypt9 o Hourglass9.</li>
+<li><strong>Blue Lazarus:</strong> Una vez restaurada la NAND, puede que sigas sin acceso al HOME, pero sí a Godmode9. Se debe aplicar Blue Lazarus. Esto puede generar un "Arranque Eterno" (la consola se queda en "Abriendo Home" por horas o días). Se debe realizar Blue Lazarus tantas veces como sea necesario hasta que cargue (si no carga, hay que recurrir a solución por hardware).</li>
+</ol>
+<h2 id="txt_h2_peculiar">Otras Peculiaridades</h2>
+<ul id="txt_peculiar_content">
+<li>El Godmode9 no se ejecuta normalmente porque es incapaz de reconocer las rutas internas de la consola debido al fallo.</li>
+<li>Si escaneas el QR, te llevará a un contacto con el creador del Godmode9, quien afirma que este error es un aviso de que algo va mal a nivel interno, no un error provocado por GM9.</li>
+<li>El creador de Hshop se desliga de responsabilidades y asocia este error a un mal funcionamiento de Luma, Boot9, GM9 o a la "calidad de la SD".</li>
+<li>La excusa de la "mala calidad de la SD" (hardware externo) para justificar un fallo de RAM o rutas (software/hardware interno) oculta el verdadero problema. Nintendo nunca especificó un modelo de SD que pudiera dañar así la consola.</li>
+<li>El proceso de descarga en Hshop es mucho más elevado y pesado que en FBI, Freeshop o la E-shop oficial de Nintendo, lo cual atestigua por qué no existía este error QR antes de 2020.</li>
+</ul>
+</div>

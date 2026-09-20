@@ -1,0 +1,59 @@
+<div class="guide-header">
+<div class="guide-title-container">
+<h1 id="txt_title">R4 KERNEL</h1>
+</div>
+</div>
+<div class="guide-content">
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> NO TODAS LAS R4 SON FLASHEABLES[cite: 1]. Comprobar R4 compatibles en la lista de abajo[cite: 1]. Las R4 de franja trasera ROJA SON FALSAS y no permiten el Flasheo[cite: 1].
+        </div>
+<h2 id="txt_h2_req">Modelos R4 y Requisitos</h2>
+<ul>
+<li id="txt_req1"><strong>Modelos Preflasheados:</strong> R4i-SDHC B9S, Ace3DS X[cite: 1].</li>
+<li id="txt_req2"><strong>Modelos siempre compatibles:</strong> Ace3DS Plus, R4Infinity 3, R4i Gold 3DS, R4i-SDHC 3DS RTS, R4i-SDHC 3DS RTS Deluxe Edition[cite: 1].</li>
+<li><span id="txt_req3">Archivos Kernel[cite: 1]</span> <br/>
+<!-- ================= INICIO WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+<div class="kelonio-download-widget kelonio-download-widget" id="paypal-support-widget">
+<label class="pp-title-style" id="pp-title"></label>
+<div class="pp-subtitle-style" id="pp-subtitle"></div>
+<div style="margin-bottom: 15px;">
+<select aria-label="Acceso a los archivos" class="pp-select-style" id="pp-amount">
+<option id="pp-membership" selected="" value="membership"></option>
+<option id="pp-free" value="0"></option>
+<option id="pp-other-amount" value="custom"></option>
+</select>
+<input class="pp-custom-style" id="pp-custom-amount" min="0.50" step="0.50" type="number"/>
+<div class="pp-membership-area" hidden="" id="pp-membership-area">
+<div class="pp-membership-msg" id="pp-membership-msg"></div>
+<div class="pp-membership-actions" id="pp-membership-actions">
+<a class="pp-membership-join" href="https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join" id="pp-membership-join" rel="noopener noreferrer" target="_blank">Hacerse miembro</a>
+<a aria-disabled="true" class="pp-membership-download" href="https://mega.nz/folder/3ZFA3YiT#ySki-s1rSO8TZ4_QC9C_3Q" id="pp-membership-download" rel="noopener noreferrer" target="_blank">Descargar Archivos</a>
+</div>
+</div>
+</div>
+<div class="pp-button-container-style" id="paypal-button-container"></div>
+<div class="pp-loading-style" id="pp-paypal-loading"></div>
+<div class="pp-success-style" id="pp-success-msg"></div>
+<a href="https://mega.nz/folder/3ZFA3YiT#ySki-s1rSO8TZ4_QC9C_3Q" id="pp-download-btn" rel="noopener noreferrer" style="display:none; background: var(--red); color: white; text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; font-size:1.1rem; width:100%; cursor:pointer; box-sizing:border-box;" target="_blank"></a>
+</div>
+<!-- ================= FIN WIDGET ARCHIVOS / MEMBRESÍA / PAYPAL V19 ================= -->
+</li>
+</ul>
+<div aria-hidden="true" id="recommended-product-box"></div>
+<h2 id="txt_h2_step1">PASO 1: Advertencias sobre el Uso de R4</h2>
+<ol>
+<li id="txt_s1_1">Todas las R4 tienen Bomba Temporal y para su funcionamiento se deberá modificar la FECHA de la Consola a un año de vida útil de la R4 (ej: R4 de 2010 = fecha entre 2010 y 2015)[cite: 1].</li>
+<li id="txt_s1_2">Las R4 una vez flasheadas pueden restaurarse sin problema (ver sección 💾r4-flashear-y-restaurar)[cite: 1].</li>
+</ol>
+<h2 id="txt_h2_step2">PASO 2: Restricciones por Año y Consola</h2>
+<ol>
+<li id="txt_s2_1"><strong>Modelos compatibles (2014-2021):</strong> R4iSDHC GOLD Pro 20XX, R4iSDHC RTS LITE 20XX, R4iSDHC Dual-Core 20XX[cite: 1].<br/>
+<strong>Compatibles por Firmware:</strong> R4i Gold 3DS Deluxe "Starter" y Gateway Blue (V. de consola entre 4.1 y 4.5)[cite: 1]. R4i Ultra y Acekard 2i (V. de consola 4.3 o inferior, o V. consola NDS 1.4.4 o inferior)[cite: 1].</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: #2ecc71; margin-top: 30px;">
+<strong>✅ ¡Atención!</strong> Modelos Semicompatibles (algunos funcionan y otros no): DSTT, R4 3D Revolution[cite: 1].
+        </div>
+<p id="txt_footer">A continuación se muestra una imagen con las R4 flasheables[cite: 1]:<br/><br/>
+<img alt="R4 Flasheables" src="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/R4%20flasheables.webp" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--glass-border); box-shadow: 0 4px 15px rgba(0,0,0,0.5);"/>
+</p>
+</div>
