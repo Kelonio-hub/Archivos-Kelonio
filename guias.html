@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title id="pageTitle">Centro de Guías | La Presa</title>
+<title id="pageTitle">Guías y Tutoriales | La Presa</title>
 <link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
 <style>
 
@@ -141,11 +142,10 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 }
 
 </style>
-
 <!-- ==========================================================
      CANONICAL & HREFLANG (8 IDIOMAS + INGLÉS POR DEFECTO)
 =========================================================== -->
-<link href="https://kelonio-hub.github.io/Archivos-Kelonio/" rel="canonical"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias.html" rel="canonical"/>
 <link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=es" hreflang="es" rel="alternate"/>
 <link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=en" hreflang="en" rel="alternate"/>
 <link href="https://kelonio-hub.github.io/Archivos-Kelonio/?lang=fr" hreflang="fr" rel="alternate"/>
@@ -270,8 +270,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
     }
   })();
 </script>
-
-</head>
+<meta content="Guías y tutoriales paso a paso para Nintendo 3DS, Switch, Wii, Wii U y otras plataformas." name="description"/></head>
 <body>
 <header class="topbar">
 <div class="topbar-left">
@@ -306,7 +305,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <path d="M5 21a2 2 0 0 0-2-2"></path>
 </svg>
 <span class="radar-badge" id="radarBadge"></span>
-</button>
+</button><a aria-label="Asistente de guías" class="social-icon-btn" href="recomendador.html" id="assistantBtn" title="Asistente de guías">🤖</a>
 <input id="fileSearch" placeholder="Buscar guías..." type="text"/>
 <div class="config-group">
 <div class="theme-dots-container" id="themeDots"></div>
@@ -610,105 +609,39 @@ function renderNoticias() {
 /* ================= LECTURA DINÁMICA: CARGA INSTANTÁNEA (0ms) + FETCH SILENCIOSO ================= */
 async function cargarDatosGuias() {
   const loader = document.getElementById('mainLoader');
-  const cacheData = localStorage.getItem('guiasCache_v2');
-  const cacheTime = localStorage.getItem('guiasCacheTime_v2');
-  
-  if (cacheData) {
-    try {
-      todasLasGuias = JSON.parse(cacheData);
-      categoriasUnicas.clear();
-      todasLasGuias.forEach(n => {
-        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
-      });
-      loader.style.display = 'none';
-      renderFilterButtons();
-      renderNoticias();
-      console.log("⚡ Guías cargadas instantáneamente desde caché local.");
-    } catch (e) {
-      console.warn("Caché local dañado. Limpiando para descarga fresca...");
-      localStorage.removeItem('guiasCache_v2');
-    }
-  } else {
-    loader.style.display = 'block';
-  }
-
-  const TREINTA_MINUTOS_MS = 30 * 60 * 1000;
-  if (cacheTime && (Date.now() - parseInt(cacheTime) < TREINTA_MINUTOS_MS)) {
-    console.log("🛡️ Caché muy reciente. Se omite la petición en segundo plano a GitHub.");
-    return;
-  }
-
+  const cacheKey = 'guiasCache_v3';
   try {
-    console.log("🔄 Buscando updates en GitHub en segundo plano...");
-    const repo = 'Kelonio-hub/Archivos-Kelonio'; 
-    const apiURL = `https://api.github.com/repos/${repo}/contents/guias`;
-    
-    const response = await fetch(apiURL, { cache: "no-store" });
-    if (!response.ok) {
-      if (response.status === 403) {
-        console.warn("⚠️ Límite de la API de GitHub alcanzado. Se mantienen los datos locales.");
-      }
-      throw new Error("No se pudo contactar con la API de GitHub");
-    }
-    
-    const archivos = await response.json();
-    const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html');
-    const langs = ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'];
-
-    const PromesasGuias = htmlFiles.map(async (file) => {
-      try {
-        const res = await fetch(file.download_url + '?t=' + new Date().getTime());
-        const htmlText = await res.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, 'text/html');
-        
-        const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';
-        const date = doc.querySelector('meta[name="guide-date"]')?.content || '2024-01-01';
-        
-        let titles = {}, descs = {};
-        langs.forEach(l => {
-            titles[l] = doc.querySelector(`meta[name="guide-title-${l}"]`)?.content || doc.querySelector('meta[name="guide-title"]')?.content || file.name.replace('.html', '');
-            descs[l] = doc.querySelector(`meta[name="guide-desc-${l}"]`)?.content || doc.querySelector('meta[name="guide-desc"]')?.content || '';
-        });
-
-        return { tag, date, titles, descs, link: `guias/${file.name}` };
-      } catch (fileError) {
-        return null;
-      }
-    });
-
-    const resultados = await Promise.all(PromesasGuias);
-    const nuevasGuias = resultados.filter(g => g !== null);
-    nuevasGuias.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-    localStorage.setItem('guiasCacheTime_v2', Date.now());
-
-    const cambiosDetectados = JSON.stringify(nuevasGuias) !== JSON.stringify(todasLasGuias);
-
-    if (cambiosDetectados) {
-      console.log("✨ ¡Nuevos contenidos detectados! Actualizando la vista en vivo...");
-      todasLasGuias = nuevasGuias;
-      localStorage.setItem('guiasCache_v2', JSON.stringify(todasLasGuias));
-      
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      todasLasGuias = JSON.parse(cached);
       categoriasUnicas.clear();
-      todasLasGuias.forEach(n => {
-        if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase());
-      });
-
-      loader.style.display = 'none';
+      todasLasGuias.forEach(n => { if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase()); });
       renderFilterButtons();
       renderNoticias();
-    } else {
-      console.log("👍 Las guías mostradas ya eran la versión más reciente.");
       loader.style.display = 'none';
+    } else {
+      loader.style.display = 'block';
     }
 
+    const response = await fetch('guias/guide-index.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const nuevasGuias = await response.json();
+    nuevasGuias.sort((a,b) => new Date(b.date) - new Date(a.date) || String(a.titles?.es||'').localeCompare(String(b.titles?.es||'')));
+    const same = JSON.stringify(nuevasGuias) === JSON.stringify(todasLasGuias);
+    todasLasGuias = nuevasGuias;
+    localStorage.setItem(cacheKey, JSON.stringify(nuevasGuias));
+    categoriasUnicas.clear();
+    todasLasGuias.forEach(n => { if (n.tag) categoriasUnicas.add(n.tag.split('/')[0].trim().toUpperCase()); });
+    loader.style.display = 'none';
+    renderFilterButtons();
+    renderNoticias();
+    console.log(same ? '✅ Índice local de guías al día.' : '✨ Índice local de guías actualizado.');
   } catch (error) {
-    console.error("Error en la comprobación en segundo plano:", error.message);
     loader.style.display = 'none';
     if (!todasLasGuias.length) {
-      updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudieron cargar las guías. Revisa tu conexión o espera un momento.</p>`;
+      updatesGrid.innerHTML = `<p style="text-align:center; grid-column:1/-1; color:var(--red);">No se pudo cargar el índice local de guías.</p>`;
     }
+    console.warn('No se pudo cargar guide-index.json:', error.message);
   }
 }
 
