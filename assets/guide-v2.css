@@ -1,0 +1,16 @@
+/* V2 shared improvements */
+.sidebar-category, .sidebar-link, .social-icon-btn, .back-btn, .assistant-nav { text-decoration:none; }
+.sidebar-category { cursor:pointer; }
+.sidebar-category:focus-visible, .sidebar-link:focus-visible, .back-btn:focus-visible, .social-icon-btn:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.sidebar-fallback { border:1px dashed var(--glass-border); border-radius:12px; padding:12px; }
+.pp-title-style{font-size:1.1rem;font-weight:bold;display:block;margin-bottom:5px;color:var(--red)}
+.pp-subtitle-style{font-size:.85rem;color:#666;margin-bottom:15px}
+.pp-select-style{padding:10px;border-radius:8px;border:1px solid #ccc;width:100%;font-size:1rem;font-weight:bold;margin-bottom:10px;cursor:pointer}
+.pp-custom-style{display:none;padding:10px;border-radius:8px;border:1px solid #ccc;width:100%;font-size:1rem;box-sizing:border-box}
+.pp-button-container-style{display:none;margin-top:15px}
+.pp-loading-style{display:none;text-align:center;margin:10px 0;font-weight:800;font-size:.85rem;color:#777}
+.pp-success-style{display:none;text-align:center;background:#e8f5e9;color:#2e7d32;padding:15px;border-radius:8px;margin-bottom:15px;font-weight:bold}
+.pp-download-style{display:none;background:var(--red);color:#fff;text-align:center;padding:12px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:1.1rem;width:100%;cursor:pointer;box-sizing:border-box}
+.assistant-nav{font-size:1.15rem;display:inline-flex;align-items:center;justify-content:center;}
+.mobile-sidebar-toggle{display:none}
+@media(max-width:760px){.mobile-sidebar-toggle{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px 14px;margin-bottom:10px;border:1px solid var(--glass-border);border-radius:10px;background:var(--btn-bg);color:var(--text-main);font-weight:800;cursor:pointer}.sidebar.mobile-hidden{display:none!important}.sidebar.mobile-open{display:block!important}}
