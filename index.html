@@ -271,6 +271,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
   })();
 </script>
 
+<link href="assets/asistente-guia.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="topbar">
@@ -310,7 +311,7 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <input id="fileSearch" placeholder="Buscar guías..." type="text"/>
 <div class="config-group">
 <div class="theme-dots-container" id="themeDots"></div>
-<select id="languageSelector"></select>
+<select id="languageSelector" data-assistant-lang aria-label="Idioma"></select>
 </div>
 </nav>
 </header>
@@ -326,6 +327,38 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <p class="hero-warning" id="heroWarning"></p>
 <div class="console-buttons" id="consoleButtons"></div>
 </div>
+
+<section class="guide-assistant-panel" id="guideAssistantPanel" aria-labelledby="guideAssistantTitle">
+  <div class="guide-assistant-intro">
+    <div class="guide-assistant-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 5.02 4 7.5v8C4 17.98 7.58 20 12 20s8-2.02 8-4.5v-8C20 5.02 16.42 3 12 3Zm0 2c3.37 0 6 1.4 6 2.5S15.37 10 12 10 6 8.6 6 7.5 8.63 5 12 5Zm0 13c-3.37 0-6-1.4-6-2.5v-1.87c1.47 1.08 3.68 1.72 6 1.72s4.53-.64 6-1.72v1.87c0 1.1-2.63 2.5-6 2.5Zm0-5c-3.37 0-6-1.4-6-2.5V8.63C7.47 9.71 9.68 10.35 12 10.35s4.53-.64 6-1.72v1.87c0 1.1-2.63 2.5-6 2.5Z"/></svg>
+    </div>
+    <div class="guide-assistant-copy">
+      <p class="guide-assistant-eyebrow" id="guideAssistantEyebrow">ASISTENTE DE GUÍAS</p>
+      <h2 class="guide-assistant-title" id="guideAssistantTitle">¿No sabes qué guía necesitas?</h2>
+      <p class="guide-assistant-desc" id="guideAssistantDesc">Elige tu consola y lo que quieres hacer. Te llevaremos directamente a las guías que encajan con tu duda.</p>
+    </div>
+    <button class="guide-assistant-toggle" id="guideAssistantToggle" type="button" aria-expanded="false" aria-controls="embeddedGuideAssistant">Abrir asistente</button>
+  </div>
+  <div class="embedded-guide-assistant" id="embeddedGuideAssistant" hidden>
+    <div class="assistant-tools">
+      <input id="assistantSearch" type="search" autocomplete="off" enterkeyhint="search" spellcheck="false" placeholder="Buscar guías..." aria-label="Buscar guías dentro del asistente"/>
+    </div>
+    <div class="assistant-content" aria-live="polite">
+      <div class="assistant-meta">
+        <div class="assistant-breadcrumb" id="assistantBreadcrumb"></div>
+        <div class="assistant-actions">
+          <button class="assistant-nav-btn" id="assistantBack" type="button">← Volver</button>
+          <button class="assistant-nav-btn" id="assistantRestart" type="button">Reiniciar</button>
+        </div>
+      </div>
+      <h3 class="assistant-question" id="assistantQuestion"></h3>
+      <div class="assistant-helper" id="assistantHelper"></div>
+      <div class="assistant-grid" id="assistantOptions"></div>
+    </div>
+  </div>
+</section>
+
 <main class="updates-container" id="updatesGrid">
 <div class="loader-container" id="mainLoader">
 <div class="spinner"></div>
@@ -336,14 +369,14 @@ body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text
 <script>
 /* ================= DICCIONARIO COMPLETO ================= */
 const translations = {
-  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi" },
-  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi" },
-  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi" },
-  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi" },
-  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo passo per ottenere il massimo dalle tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi" },
-  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Guias e tutoriais passo a passo para tirar o máximo proveito das tuas consolas.", search: "Procurar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhuma guia encontrada.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi" },
-  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート" },
-  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기" }
+  es: { title: "Guías y Tutoriales | La Presa", heroTitle: "Centro de Guías", heroDesc: "Guías y tutoriales paso a paso para sacar el máximo provecho a tus consolas.", search: "Buscar guías...", all: "Todas", read: "📖 Leer Guía", empty: "No se encontraron guías.", products: "Productos", videos: "Vídeos", radar: "Radar de Actualizaciones", guides: "Guías", discord: "Únete a Discord", kofi: "Apóyanos en Ko-fi", assistantEyebrow: "ASISTENTE DE GUÍAS", assistantPrompt: "¿No sabes qué guía necesitas?", assistantDesc: "Elige tu consola y lo que quieres hacer. Te llevaremos directamente a las guías que encajan con tu duda.", assistantOpen: "Abrir asistente", assistantClose: "Cerrar asistente" },
+  en: { title: "Guides & Tutorials | La Presa", heroTitle: "Guides Center", heroDesc: "Step-by-step manuals and tutorials to get the most out of your consoles.", search: "Search guides...", all: "All", read: "📖 Read Guide", empty: "No guides found.", products: "Products", videos: "Videos", radar: "Update Radar", guides: "Guides", discord: "Join Discord", kofi: "Support us on Ko-fi", assistantEyebrow: "GUIDE ASSISTANT", assistantPrompt: "Not sure which guide you need?", assistantDesc: "Choose your console and what you want to do. We’ll take you straight to the guides that match your question.", assistantOpen: "Open assistant", assistantClose: "Close assistant" },
+  fr: { title: "Guides et Tutoriels | La Presa", heroTitle: "Centre de Guides", heroDesc: "Manuels et tutoriels étape par étape pour vos consoles.", search: "Rechercher des guides...", all: "Toutes", read: "📖 Lire le Guide", empty: "Aucun guide trouvé.", products: "Produits", videos: "Vidéos", radar: "Radar des Mises à jour", guides: "Guides", discord: "Rejoindre Discord", kofi: "Soutenez-nous sur Ko-fi", assistantEyebrow: "ASSISTANT DES GUIDES", assistantPrompt: "Tu ne sais pas quel guide choisir ?", assistantDesc: "Choisis ta console et ce que tu veux faire. Nous t’emmènerons directement vers les guides adaptés à ta question.", assistantOpen: "Ouvrir l’assistant", assistantClose: "Fermer l’assistant" },
+  de: { title: "Anleitungen & Tutorials | La Presa", heroTitle: "Anleitungszentrum", heroDesc: "Schritt-für-Schritt-Anleitungen und Tutorials für deine Konsolen.", search: "Anleitungen suchen...", all: "Alle", read: "📖 Anleitung lesen", empty: "Keine Anleitungen gefunden.", products: "Produkte", videos: "Videos", radar: "Update-Radar", guides: "Anleitungen", discord: "Treten Sie Discord bei", kofi: "Unterstützen Sie uns auf Ko-fi", assistantEyebrow: "ANLEITUNGSASSISTENT", assistantPrompt: "Du weißt nicht, welche Anleitung du brauchst?", assistantDesc: "Wähle deine Konsole und dein Ziel. Wir führen dich direkt zu den passenden Anleitungen.", assistantOpen: "Assistent öffnen", assistantClose: "Assistent schließen" },
+  it: { title: "Guide e Tutorial | La Presa", heroTitle: "Centro Guide", heroDesc: "Manuali e tutorial passo passo per ottenere il massimo dalle tue console.", search: "Cerca guide...", all: "Tutte", read: "📖 Leggi Guida", empty: "Nessuna guida trovata.", products: "Prodotti", videos: "Video", radar: "Radar Aggiornamenti", guides: "Guide", discord: "Unisciti a Discord", kofi: "Supportaci su Ko-fi", assistantEyebrow: "ASSISTENTE GUIDE", assistantPrompt: "Non sai quale guida ti serve?", assistantDesc: "Scegli la tua console e cosa vuoi fare. Ti porteremo direttamente alle guide più adatte alla tua domanda.", assistantOpen: "Apri assistente", assistantClose: "Chiudi assistente" },
+  pt: { title: "Guias e Tutoriais | La Presa", heroTitle: "Centro de Guias", heroDesc: "Guias e tutoriais passo a passo para tirar o máximo proveito das tuas consolas.", search: "Procurar guias...", all: "Todas", read: "📖 Ler Guia", empty: "Nenhuma guia encontrada.", products: "Produtos", videos: "Vídeos", radar: "Radar de Atualizações", guides: "Guias", discord: "Junte-se ao Discord", kofi: "Apoie-nos no Ko-fi", assistantEyebrow: "ASSISTENTE DE GUIAS", assistantPrompt: "Não sabes de que guia precisas?", assistantDesc: "Escolhe a tua consola e o que queres fazer. Vamos levar-te diretamente aos guias que correspondem à tua dúvida.", assistantOpen: "Abrir assistente", assistantClose: "Fechar assistente" },
+  ja: { title: "ガイドとチュートリアル | La Presa", heroTitle: "ガイドセンター", heroDesc: "コンソールを最大限に活用するためのステップバイステップのガイド。", search: "ガイドを検索...", all: "すべて", read: "📖 ガイドを読む", empty: "ガイドが見つかりませんでした。", products: "製品", videos: "ビデオ", radar: "更新レーダー", guides: "ガイド", discord: "Discordに参加する", kofi: "Ko-fiでサポート", assistantEyebrow: "ガイドアシスタント", assistantPrompt: "どのガイドが必要かわかりませんか？", assistantDesc: "ゲーム機と目的を選ぶと、質問に合うガイドへ直接案内します。", assistantOpen: "アシスタントを開く", assistantClose: "アシスタントを閉じる" },
+  ko: { title: "가이드 및 튜토리얼 | La Presa", heroTitle: "가이드 센터", heroDesc: "콘솔을 최대한 활용하기 위한 단계별 매뉴얼 및 튜토리얼.", search: "가이드 검색...", all: "모든", read: "📖 가이드 읽기", empty: "가이드를 찾을 수 없습니다.", products: "제품", videos: "비디오", radar: "업데이트 레이더", guides: "가이드", discord: "Discord 가입하기", kofi: "Ko-fi에서 지원하기", assistantEyebrow: "가이드 도우미", assistantPrompt: "어떤 가이드가 필요한지 모르시겠나요?", assistantDesc: "콘솔과 원하는 작업을 선택하면 질문에 맞는 가이드로 바로 안내합니다.", assistantOpen: "도우미 열기", assistantClose: "도우미 닫기" }
 };
 
 /* ================= VARIABLES GLOBALES ================= */
@@ -464,6 +497,7 @@ function createLanguageSelector(){
   selector.addEventListener('change', e => {
     idiomaActual = e.target.value; localStorage.setItem('preferredLanguage', idiomaActual);
     updateLanguage(); renderFilterButtons(); renderNoticias();
+    window.dispatchEvent(new CustomEvent('lapresa:languagechange', { detail: { lang: idiomaActual } }));
   });
 }
 
@@ -480,6 +514,17 @@ function updateLanguage(){
   document.getElementById('heroDesc').textContent = t.heroDesc;
   document.getElementById('heroWarning').textContent = t.heroWarning;
   fileSearch.placeholder = t.search;
+
+  // Asistente de Guías integrado en esta página
+  const assistantEyebrow = document.getElementById('guideAssistantEyebrow');
+  const assistantTitle = document.getElementById('guideAssistantTitle');
+  const assistantDesc = document.getElementById('guideAssistantDesc');
+  const assistantToggle = document.getElementById('guideAssistantToggle');
+  const assistantPanel = document.getElementById('guideAssistantPanel');
+  if (assistantEyebrow) assistantEyebrow.textContent = t.assistantEyebrow || 'ASISTENTE DE GUÍAS';
+  if (assistantTitle) assistantTitle.textContent = t.assistantPrompt || '¿No sabes qué guía necesitas?';
+  if (assistantDesc) assistantDesc.textContent = t.assistantDesc || '';
+  if (assistantToggle) assistantToggle.textContent = assistantPanel?.classList.contains('open') ? (t.assistantClose || 'Cerrar asistente') : (t.assistantOpen || 'Abrir asistente');
 
   if (document.getElementById('videosBtn')) {
     const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
@@ -733,5 +778,32 @@ window.onload = () => {
   verificarNotificacionesRadar();
 };
 </script>
+
+<script src="assets/asistente.js"></script>
+<script>
+(function(){
+  const panel = document.getElementById('guideAssistantPanel');
+  const content = document.getElementById('embeddedGuideAssistant');
+  const toggle = document.getElementById('guideAssistantToggle');
+  if(!panel || !content || !toggle) return;
+  const setOpen = (open, updateHash=true) => {
+    panel.classList.toggle('open', open);
+    content.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    const lang = localStorage.getItem('preferredLanguage') || 'en';
+    const t = (window.LAPRESA_ASSISTANT && window.LAPRESA_ASSISTANT.syncExternalLanguage) ? window.LAPRESA_ASSISTANT.syncExternalLanguage : null;
+    // Re-render so button copy and assistant state remain synchronized.
+    if(t) t(lang);
+    if(open){
+      if(updateHash) history.replaceState(null,'','#asistente');
+      setTimeout(()=>document.getElementById('assistantSearch')?.focus({preventScroll:true}),60);
+    }
+  };
+  toggle.addEventListener('click',()=>setOpen(content.hidden));
+  if(location.hash === '#asistente') setOpen(true, false);
+  window.addEventListener('hashchange',()=>{ if(location.hash==='#asistente') setOpen(true,false); });
+})();
+</script>
+
 </body>
 </html>
