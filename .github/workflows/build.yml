@@ -1,0 +1,35 @@
+name: Build and validate site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validation dependency
+        run: python -m pip install beautifulsoup4
+      - name: Normalize internal guide references
+        run: python scripts/normalize_guide_refs.py
+      - name: Build canonical guides
+        run: python scripts/build_site.py && python scripts/generate_sitemap.py
+      - name: Validate site
+        run: python scripts/validate_site.py && python scripts/check_links.py
+      - name: Commit generated site
+        if: github.event_name == 'push'
+        run: |
+          git config user.name 'SiteBuilderBot'
+          git config user.email 'actions@github.com'
+          git add guias sitemap.xml search-index.json data/guide-index.json data/guides.json
+          git diff --cached --quiet || (git commit -m 'chore: build canonical guide pages [skip ci]' && git push)
