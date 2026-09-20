@@ -22,7 +22,7 @@
 
   const C = window.KELONIO_YOUTUBE_CONFIG || {};
   const CHANNEL_URL = String(
-    C.channelUrl || 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw'
+    C.joinUrl || 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join'
   );
 
   const CACHE_KEY = 'kelonio.youtube.access.v12';
@@ -33,98 +33,58 @@
     es: {
       title: 'Acceso a la guía',
       lead: 'Para continuar, hazte miembro del canal de Kelonio en YouTube.',
-      detail: 'Pulsa el botón para abrir el canal de Kelonio en una nueva pestaña. Cuando transcurran 60 segundos, la guía se desbloqueará durante 24 horas.',
       member: 'Hacerse miembro',
       memberAria: 'Hacerse miembro del canal de YouTube de Kelonio',
-      opening: 'Abriendo el canal de Kelonio…',
-      countdown: 'Acceso disponible en {seconds} segundos…',
       success: 'Acceso concedido. Abriendo la guía…',
-      openChannel: 'Abrir canal de Kelonio en YouTube',
-      ready: 'Acceso disponible.'
     },
     en: {
       title: 'Guide access',
       lead: 'To continue, become a member of the Kelonio channel on YouTube.',
-      detail: 'Press the button to open the Kelonio channel in a new tab. After 60 seconds, the guide will be unlocked for 24 hours.',
       member: 'Become a member',
       memberAria: 'Become a member of the Kelonio YouTube channel',
-      opening: 'Opening the Kelonio channel…',
-      countdown: 'Access available in {seconds} seconds…',
       success: 'Access granted. Opening the guide…',
-      openChannel: 'Open Kelonio channel on YouTube',
-      ready: 'Access available.'
     },
     fr: {
       title: 'Accès au guide',
       lead: 'Pour continuer, devenez membre de la chaîne Kelonio sur YouTube.',
-      detail: 'Appuyez sur le bouton pour ouvrir la chaîne Kelonio dans un nouvel onglet. Après 60 secondes, le guide sera débloqué pendant 24 heures.',
       member: 'Devenir membre',
       memberAria: 'Devenir membre de la chaîne YouTube de Kelonio',
-      opening: 'Ouverture de la chaîne Kelonio…',
-      countdown: 'Accès disponible dans {seconds} secondes…',
       success: 'Accès accordé. Ouverture du guide…',
-      openChannel: 'Ouvrir la chaîne Kelonio sur YouTube',
-      ready: 'Accès disponible.'
     },
     de: {
       title: 'Zugriff auf die Anleitung',
       lead: 'Um fortzufahren, werde Mitglied des Kelonio-Kanals auf YouTube.',
-      detail: 'Klicke auf die Schaltfläche, um den Kelonio-Kanal in einem neuen Tab zu öffnen. Nach 60 Sekunden wird die Anleitung für 24 Stunden freigeschaltet.',
       member: 'Mitglied werden',
       memberAria: 'Mitglied des Kelonio-YouTube-Kanals werden',
-      opening: 'Kelonio-Kanal wird geöffnet…',
-      countdown: 'Zugriff in {seconds} Sekunden verfügbar…',
       success: 'Zugriff gewährt. Anleitung wird geöffnet…',
-      openChannel: 'Kelonio-Kanal auf YouTube öffnen',
-      ready: 'Zugriff verfügbar.'
     },
     it: {
       title: 'Accesso alla guida',
       lead: 'Per continuare, diventa membro del canale Kelonio su YouTube.',
-      detail: 'Premi il pulsante per aprire il canale Kelonio in una nuova scheda. Dopo 60 secondi, la guida sarà sbloccata per 24 ore.',
       member: 'Diventa membro',
       memberAria: 'Diventa membro del canale YouTube di Kelonio',
-      opening: 'Apertura del canale Kelonio…',
-      countdown: 'Accesso disponibile tra {seconds} secondi…',
       success: 'Accesso concesso. Apertura della guida…',
-      openChannel: 'Apri il canale Kelonio su YouTube',
-      ready: 'Accesso disponibile.'
     },
     pt: {
       title: 'Acesso ao guia',
       lead: 'Para continuar, torne-se membro do canal Kelonio no YouTube.',
-      detail: 'Prima o botão para abrir o canal Kelonio num novo separador. Após 60 segundos, o guia ficará desbloqueado durante 24 horas.',
       member: 'Tornar-se membro',
       memberAria: 'Tornar-se membro do canal do YouTube de Kelonio',
-      opening: 'A abrir o canal Kelonio…',
-      countdown: 'Acesso disponível em {seconds} segundos…',
       success: 'Acesso concedido. A abrir o guia…',
-      openChannel: 'Abrir o canal Kelonio no YouTube',
-      ready: 'Acesso disponível.'
     },
     ja: {
       title: 'ガイドへのアクセス',
       lead: '続行するには、YouTube の Kelonio チャンネルのメンバーになってください。',
-      detail: 'ボタンを押すと Kelonio チャンネルを新しいタブで開きます。60 秒後、ガイドが 24 時間利用できるようになります。',
       member: 'メンバーになる',
       memberAria: 'Kelonio YouTube チャンネルのメンバーになる',
-      opening: 'Kelonio チャンネルを開いています…',
-      countdown: '{seconds} 秒後にアクセスできます…',
       success: 'アクセスが許可されました。ガイドを開きます…',
-      openChannel: 'YouTube で Kelonio チャンネルを開く',
-      ready: 'アクセスできます。'
     },
     ko: {
       title: '가이드 이용',
       lead: '계속하려면 YouTube에서 Kelonio 채널의 멤버가 되어 주세요.',
-      detail: '버튼을 누르면 새 탭에서 Kelonio 채널이 열립니다. 60초가 지나면 24시간 동안 가이드가 잠금 해제됩니다.',
       member: '멤버 되기',
       memberAria: 'Kelonio YouTube 채널의 멤버 되기',
-      opening: 'Kelonio 채널을 여는 중…',
-      countdown: '{seconds}초 후 이용할 수 있습니다…',
       success: '접근이 허용되었습니다. 가이드를 엽니다…',
-      openChannel: 'YouTube에서 Kelonio 채널 열기',
-      ready: '이용할 수 있습니다.'
     }
   };
 
@@ -204,25 +164,14 @@
         <div class="youtube-access-icon" aria-hidden="true">★</div>
         <h1 id="youtubeAccessTitle"></h1>
         <p class="youtube-access-lead" id="youtubeAccessLead"></p>
-        <p class="youtube-access-detail" id="youtubeAccessDetail"></p>
 
         <div class="youtube-access-status" id="youtubeAccessStatus"
              role="status" aria-live="polite"></div>
-
-        <div class="youtube-access-progress" aria-hidden="true">
-          <div class="youtube-access-progress-bar" id="youtubeAccessProgressBar"></div>
         </div>
 
         <button type="button"
                 class="youtube-access-btn"
                 id="youtubeAccessMember"></button>
-
-        <a class="youtube-access-youtube"
-           id="youtubeAccessOpenYoutube"
-           target="_blank"
-           rel="noopener noreferrer"></a>
-
-        <div class="youtube-access-brand">YouTube · Kelonio</div>
       </div>
     `;
 
@@ -313,41 +262,14 @@
         line-height: 1.55;
         color: #f2f2f2;
       }
-
-      .youtube-access-detail {
-        margin: 0 auto 22px;
-        max-width: 470px;
-        font-size: .92rem;
-        line-height: 1.5;
-        color: #aeb3bd;
-      }
-
-      .youtube-access-status {
+.youtube-access-status {
         min-height: 22px;
         margin: 0 0 12px;
         color: #cfd3da;
         font-weight: 700;
         font-size: .84rem;
       }
-
-      .youtube-access-progress {
-        width: 100%;
-        height: 8px;
-        margin: 0 0 18px;
-        overflow: hidden;
-        border-radius: 999px;
-        background: rgba(255,255,255,.08);
-      }
-
-      .youtube-access-progress-bar {
-        width: 0%;
-        height: 100%;
-        border-radius: inherit;
-        background: #e50914;
-        transition: width .25s linear;
-      }
-
-      .youtube-access-btn {
+.youtube-access-btn {
         width: 100%;
         border: 0;
         border-radius: 12px;
@@ -378,31 +300,11 @@
         opacity: .72;
         cursor: wait;
       }
-
-      .youtube-access-youtube {
-        display: block;
-        margin: 13px 0 0;
-        color: #aeb3bd;
-        text-decoration: none;
-        font-size: .8rem;
-        font-weight: 700;
-      }
-
-      .youtube-access-youtube:hover {
+.youtube-access-youtube:hover {
         text-decoration: underline;
         color: #fff;
       }
-
-      .youtube-access-brand {
-        margin-top: 24px;
-        color: #686e79;
-        font-size: .72rem;
-        font-weight: 800;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-      }
-
-      @media(max-width:600px) {
+@media(max-width:600px) {
         #accessWallOverlay {
           padding: 16px;
         }
@@ -415,11 +317,7 @@
         .youtube-access-lead {
           font-size: .98rem;
         }
-
-        .youtube-access-detail {
-          font-size: .86rem;
-        }
-      }
+}
     `;
 
     document.head.appendChild(style);
@@ -439,22 +337,9 @@
       q('youtubeAccessLead').textContent = d.lead;
     }
 
-    if (q('youtubeAccessDetail')) {
-      q('youtubeAccessDetail').textContent = d.detail;
-    }
-
-    const open = q('youtubeAccessOpenYoutube');
-    if (open) {
-      open.textContent = d.openChannel;
-      open.href = CHANNEL_URL;
-      open.setAttribute('aria-label', d.openChannel);
-    }
-
     const button = q('youtubeAccessMember');
     if (button) {
-      button.textContent = busy
-        ? d.countdown.replace('{seconds}', getRemainingSeconds())
-        : d.member;
+      button.textContent = d.member;
       button.disabled = busy || unlocked;
       button.setAttribute(
         'aria-label',
@@ -467,17 +352,6 @@
     const el = wall && wall.querySelector('#youtubeAccessStatus');
     if (el) el.textContent = text || '';
   }
-
-  function getRemainingSeconds() {
-    if (!countdownEndsAt) return 60;
-    return Math.max(0, Math.ceil((countdownEndsAt - Date.now()) / 1000));
-  }
-
-  function setProgress(percent) {
-    const bar = wall && wall.querySelector('#youtubeAccessProgressBar');
-    if (bar) {
-      bar.style.width = Math.max(0, Math.min(100, percent)) + '%';
-    }
   }
 
   function openChannel() {
@@ -524,10 +398,7 @@
 
     writeAccessCache();
 
-    const d = t();
-    setStatusText(d.success);
-    setProgress(100);
-
+    setStatusText('');
     document.documentElement.classList.remove('youtube-wall-locked');
     document.body.classList.remove('youtube-wall-locked');
 
@@ -547,7 +418,6 @@
     showMemberCta();
 
     document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-      detail: { source: 'member-60s-cache-24h' }
     }));
   }
 
@@ -563,22 +433,13 @@
       button.setAttribute('aria-disabled', 'true');
     }
 
-    const d = t();
-    setStatusText(d.opening);
+    setStatusText('');
 
     function tick() {
       const remaining = getRemainingSeconds();
       const elapsed = Math.max(0, WAIT_MS - Math.max(0, countdownEndsAt - Date.now()));
       const percent = (elapsed / WAIT_MS) * 100;
-
-      setStatusText(
-        remaining > 0
-          ? d.countdown.replace('{seconds}', String(remaining))
-          : d.ready
-      );
-
-      setProgress(percent);
-
+      setStatusText('');
       if (remaining <= 0) {
         finishAccess();
       }
@@ -682,7 +543,6 @@
     showMemberCta();
 
     document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
-      detail: {
         source: 'local-cache-24h'
       }
     }));
@@ -733,15 +593,6 @@
     if (member) {
       member.textContent = t().member;
       member.setAttribute('aria-label', t().memberAria);
-    }
-
-    if (busy && countdownEndsAt) {
-      const remaining = getRemainingSeconds();
-      setStatusText(
-        remaining > 0
-          ? t().countdown.replace('{seconds}', String(remaining))
-          : t().ready
-      );
     }
   });
 
