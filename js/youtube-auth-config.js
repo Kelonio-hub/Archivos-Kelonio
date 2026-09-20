@@ -6,6 +6,7 @@
  *
  * En Google Cloud, este cliente OAuth debe tener como origen JavaScript:
  *   https://kelonio-hub.github.io
+ *   https://kelonio.eu.org
  *
  * Activa YouTube Data API v3 en el mismo proyecto de Google Cloud.
  *
@@ -18,7 +19,8 @@ window.KELONIO_YOUTUBE_CONFIG = Object.freeze({
   subscribeUrl: 'https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw?sub_confirmation=1',
   scope: 'https://www.googleapis.com/auth/youtube.readonly',
   allowedOrigins: [
-    'https://kelonio-hub.github.io'
+    'https://kelonio-hub.github.io',
+    'https://kelonio.eu.org'
   ],
   requestTimeoutMs: 20000
 });
