@@ -328,6 +328,8 @@
   function startAccess() {
     if (waiting || unlocked) return;
 
+    openMembershipPage();
+
     waiting = true;
     waitEndsAt = Date.now() + WAIT_MS;
     refreshTexts();
