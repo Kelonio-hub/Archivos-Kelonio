@@ -1,17 +1,17 @@
 /* Kelonio — Muro de acceso por suscripción a YouTube
  *
- * Modelo recomendado para una web estática:
- *   1) Google Identity Services autentica/autorizan la cuenta.
+ * Modelo para una web estática:
+ *   1) Google Identity Services autoriza la cuenta.
  *   2) YouTube Data API comprueba la suscripción real a CHANNEL_ID.
- *   3) El desbloqueo solo vive en memoria mientras esta página está abierta.
+ *   3) Tras una comprobación correcta, se guarda una caché local temporal
+ *      para no repetir la comprobación cada vez que se abre o recarga una guía.
  *
  * IMPORTANTE:
- * Este script NO guarda una autorización en localStorage/sessionStorage y
- * NO suscribe automáticamente al usuario. En una web estática de GitHub
- * Pages, el cliente nunca puede convertirse en una frontera de seguridad
- * absoluta: quien controle el navegador puede modificar el DOM/JS. Para
- * protección real del recurso, la verificación debe terminar en un backend
- * o función serverless que entregue una autorización temporal.
+ * La caché local es una optimización de UX, no una frontera de seguridad.
+ * En una web estática de GitHub Pages, quien controle el navegador puede
+ * modificar el JavaScript o el almacenamiento local. Para proteger realmente
+ * un recurso privado hace falta una validación adicional en servidor.
+ * Este script NO suscribe automáticamente al usuario.
  */
 (function () {
   'use strict';
@@ -44,11 +44,18 @@
 
   const REQUEST_TIMEOUT_MS = Number(C.requestTimeoutMs || 20000);
 
+  // Caché temporal para evitar pedir autorización/verificación en cada
+  // apertura o recarga. Se invalida al cambiar de versión, canal, origen
+  // o cuando pasan 24 horas. No debe considerarse una prueba criptográfica.
+  const CACHE_KEY = 'kelonio.youtube.access.v12';
+  const CACHE_VERSION = 12;
+  const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
   const DICT = {
     es: {
       title: 'Acceso a la guía',
       lead: 'Para continuar, suscríbete al canal de Kelonio en YouTube.',
-      detail: 'Abre YouTube para suscribirte y después vuelve aquí para verificar la suscripción con tu cuenta de Google.',
+      detail: 'Usa el botón superior para suscribirte en YouTube y, después, el botón de verificación para comprobar tu suscripción.',
       subscribe: 'Suscribirme en YouTube',
       verify: 'Verificar mi suscripción',
       checking: 'Comprobando tu suscripción…',
@@ -56,7 +63,6 @@
       verified: 'Suscripción verificada ✓',
       success: 'Suscripción verificada. Abriendo la guía…',
       auth: 'Necesitamos autorización de YouTube para comprobar tu suscripción.',
-      changeAccount: 'Cambiar cuenta de Google',
       needConfig: 'El acceso por suscripción no está configurado correctamente.',
       originError: 'Esta página no está configurada como origen autorizado en Google Cloud.',
       notSubscribed: 'No aparece una suscripción activa al canal de Kelonio con esta cuenta.',
@@ -66,13 +72,11 @@
       ownerDetail: 'Esta cuenta administra el canal de Kelonio. La guía se desbloquea automáticamente.',
       subscribeAria: 'Abrir YouTube para suscribirme al canal de Kelonio',
       verifyAria: 'Verificar si mi cuenta está suscrita al canal de Kelonio',
-      changeAccountAria: 'Cambiar la cuenta de Google utilizada para verificar la suscripción',
-      openYoutube: 'Abrir canal de YouTube'
     },
     en: {
       title: 'Guide access',
       lead: 'To continue, subscribe to the Kelonio channel on YouTube.',
-      detail: 'Open YouTube to subscribe, then return here to verify the subscription with your Google account.',
+      detail: 'Use the top button to subscribe on YouTube, then return and use the verification button.',
       subscribe: 'Subscribe on YouTube',
       verify: 'Verify my subscription',
       checking: 'Checking your subscription…',
@@ -80,7 +84,6 @@
       verified: 'Subscription verified ✓',
       success: 'Subscription verified. Opening the guide…',
       auth: 'YouTube authorization is needed to verify your subscription.',
-      changeAccount: 'Change Google account',
       needConfig: 'Subscription access is not configured correctly.',
       originError: 'This page is not configured as an authorized origin in Google Cloud.',
       notSubscribed: 'This account does not appear to have an active subscription to the Kelonio channel.',
@@ -90,13 +93,11 @@
       ownerDetail: 'This account manages the Kelonio channel. The guide is unlocked automatically.',
       subscribeAria: 'Open YouTube to subscribe to the Kelonio channel',
       verifyAria: 'Verify whether my account is subscribed to the Kelonio channel',
-      changeAccountAria: 'Change the Google account used to verify the subscription',
-      openYoutube: 'Open YouTube channel'
     },
     fr: {
       title: 'Accès au guide',
       lead: 'Pour continuer, abonnez-vous à la chaîne Kelonio sur YouTube.',
-      detail: 'Ouvrez YouTube pour vous abonner, puis revenez ici pour vérifier l’abonnement avec votre compte Google.',
+      detail: 'Utilisez le bouton supérieur pour vous abonner sur YouTube, puis revenez ici et utilisez le bouton de vérification.',
       subscribe: "M’abonner sur YouTube",
       verify: 'Vérifier mon abonnement',
       checking: 'Vérification de votre abonnement…',
@@ -104,7 +105,6 @@
       verified: 'Abonnement vérifié ✓',
       success: 'Abonnement vérifié. Ouverture du guide…',
       auth: 'Une autorisation YouTube est nécessaire pour vérifier votre abonnement.',
-      changeAccount: 'Changer de compte Google',
       needConfig: 'L’accès par abonnement n’est pas correctement configuré.',
       originError: 'Cette page n’est pas configurée comme origine autorisée dans Google Cloud.',
       notSubscribed: 'Aucun abonnement actif à la chaîne Kelonio n’est associé à ce compte.',
@@ -114,13 +114,11 @@
       ownerDetail: 'Ce compte gère la chaîne Kelonio. Le guide est automatiquement déverrouillé.',
       subscribeAria: 'Ouvrir YouTube pour m’abonner à la chaîne Kelonio',
       verifyAria: 'Vérifier si mon compte est abonné à la chaîne Kelonio',
-      changeAccountAria: 'Changer le compte Google utilisé pour vérifier l’abonnement',
-      openYoutube: 'Ouvrir la chaîne YouTube'
     },
     de: {
       title: 'Zugriff auf die Anleitung',
       lead: 'Um fortzufahren, abonniere den Kelonio-Kanal auf YouTube.',
-      detail: 'Öffne YouTube, um den Kanal zu abonnieren, und kehre anschließend hierher zurück, um das Abonnement mit deinem Google-Konto zu prüfen.',
+      detail: 'Verwende den oberen Button, um den Kanal auf YouTube zu abonnieren. Kehre danach zurück und nutze den Prüf-Button.',
       subscribe: 'Auf YouTube abonnieren',
       verify: 'Mein Abonnement prüfen',
       checking: 'Abonnement wird geprüft…',
@@ -128,7 +126,6 @@
       verified: 'Abonnement bestätigt ✓',
       success: 'Abonnement bestätigt. Anleitung wird geöffnet…',
       auth: 'Zur Prüfung deines Abonnements ist eine YouTube-Autorisierung erforderlich.',
-      changeAccount: 'Google-Konto wechseln',
       needConfig: 'Der Zugriff per Abonnement ist nicht korrekt konfiguriert.',
       originError: 'Diese Seite ist in Google Cloud nicht als autorisierte Quelle eingerichtet.',
       notSubscribed: 'Für dieses Konto wurde kein aktives Abonnement des Kelonio-Kanals gefunden.',
@@ -138,13 +135,11 @@
       ownerDetail: 'Dieses Konto verwaltet den Kelonio-Kanal. Die Anleitung wird automatisch freigeschaltet.',
       subscribeAria: 'YouTube öffnen, um den Kelonio-Kanal zu abonnieren',
       verifyAria: 'Prüfen, ob mein Konto den Kelonio-Kanal abonniert hat',
-      changeAccountAria: 'Das für die Abonnementprüfung verwendete Google-Konto wechseln',
-      openYoutube: 'YouTube-Kanal öffnen'
     },
     it: {
       title: 'Accesso alla guida',
       lead: 'Per continuare, iscriviti al canale Kelonio su YouTube.',
-      detail: 'Apri YouTube per iscriverti, poi torna qui per verificare l’iscrizione con il tuo account Google.',
+      detail: 'Usa il pulsante superiore per iscriverti su YouTube, poi torna qui e usa il pulsante di verifica.',
       subscribe: 'Iscriviti su YouTube',
       verify: 'Verifica la mia iscrizione',
       checking: 'Controllo dell’iscrizione…',
@@ -152,7 +147,6 @@
       verified: 'Iscrizione verificata ✓',
       success: 'Iscrizione verificata. Apertura della guida…',
       auth: 'È necessaria l’autorizzazione di YouTube per verificare la tua iscrizione.',
-      changeAccount: 'Cambia account Google',
       needConfig: 'L’accesso tramite iscrizione non è configurato correttamente.',
       originError: 'Questa pagina non è configurata come origine autorizzata in Google Cloud.',
       notSubscribed: 'Con questo account non risulta un’iscrizione attiva al canale Kelonio.',
@@ -162,13 +156,11 @@
       ownerDetail: 'Questo account gestisce il canale Kelonio. La guida viene sbloccata automaticamente.',
       subscribeAria: 'Apri YouTube per iscriverti al canale Kelonio',
       verifyAria: 'Verifica se il mio account è iscritto al canale Kelonio',
-      changeAccountAria: 'Cambia l’account Google usato per verificare l’iscrizione',
-      openYoutube: 'Apri il canale YouTube'
     },
     pt: {
       title: 'Acesso ao guia',
       lead: 'Para continuar, subscreva o canal Kelonio no YouTube.',
-      detail: 'Abra o YouTube para subscrever e depois volte aqui para verificar a subscrição com a sua conta Google.',
+      detail: 'Use o botão superior para subscrever no YouTube e depois volte aqui para usar o botão de verificação.',
       subscribe: 'Subscrever no YouTube',
       verify: 'Verificar a minha subscrição',
       checking: 'A verificar a subscrição…',
@@ -176,7 +168,6 @@
       verified: 'Subscrição verificada ✓',
       success: 'Subscrição verificada. A abrir o guia…',
       auth: 'É necessária autorização do YouTube para verificar a sua subscrição.',
-      changeAccount: 'Mudar de conta Google',
       needConfig: 'O acesso por subscrição não está configurado corretamente.',
       originError: 'Esta página não está configurada como origem autorizada no Google Cloud.',
       notSubscribed: 'Esta conta não parece ter uma subscrição ativa do canal Kelonio.',
@@ -186,13 +177,11 @@
       ownerDetail: 'Esta conta gere o canal Kelonio. O guia é desbloqueado automaticamente.',
       subscribeAria: 'Abrir o YouTube para subscrever o canal Kelonio',
       verifyAria: 'Verificar se a minha conta subscreveu o canal Kelonio',
-      changeAccountAria: 'Mudar a conta Google usada para verificar a subscrição',
-      openYoutube: 'Abrir canal do YouTube'
     },
     ja: {
       title: 'ガイドへのアクセス',
       lead: '続行するには、YouTube の Kelonio チャンネルに登録してください。',
-      detail: 'YouTube を開いて登録したあと、ここに戻って Google アカウントで登録状況を確認してください。',
+      detail: '上のボタンで YouTube にチャンネル登録し、その後ここに戻って確認ボタンを使用してください。',
       subscribe: 'YouTube で登録する',
       verify: '登録状況を確認',
       checking: '登録状況を確認中…',
@@ -200,7 +189,6 @@
       verified: '登録を確認しました ✓',
       success: '登録を確認しました。ガイドを開きます…',
       auth: '登録状況を確認するには YouTube の認証が必要です。',
-      changeAccount: 'Google アカウントを変更',
       needConfig: '登録によるアクセスが正しく設定されていません。',
       originError: 'このページは Google Cloud で承認済みのオリジンとして設定されていません。',
       notSubscribed: 'このアカウントでは Kelonio チャンネルへの有効な登録が確認できませんでした。',
@@ -210,13 +198,11 @@
       ownerDetail: 'このアカウントは Kelonio チャンネルを管理しています。ガイドを自動的に開きます。',
       subscribeAria: 'YouTube を開いて Kelonio チャンネルを登録',
       verifyAria: '自分のアカウントが Kelonio チャンネルを登録しているか確認',
-      changeAccountAria: '登録確認に使用する Google アカウントを変更',
-      openYoutube: 'YouTube チャンネルを開く'
     },
     ko: {
       title: '가이드 이용',
       lead: '계속하려면 YouTube에서 Kelonio 채널을 구독하세요.',
-      detail: 'YouTube를 열어 구독한 다음 이 페이지로 돌아와 Google 계정으로 구독 여부를 확인하세요.',
+      detail: '위 버튼으로 YouTube 채널을 구독한 다음 여기로 돌아와 확인 버튼을 사용하세요.',
       subscribe: 'YouTube에서 구독하기',
       verify: '내 구독 확인',
       checking: '구독 확인 중…',
@@ -224,7 +210,6 @@
       verified: '구독 확인 완료 ✓',
       success: '구독이 확인되었습니다. 가이드를 엽니다…',
       auth: '구독 여부를 확인하려면 YouTube 인증이 필요합니다.',
-      changeAccount: 'Google 계정 변경',
       needConfig: '구독을 통한 접근이 올바르게 구성되지 않았습니다.',
       originError: '이 페이지가 Google Cloud에서 승인된 출처로 구성되어 있지 않습니다.',
       notSubscribed: '이 계정에서는 Kelonio 채널의 활성 구독이 확인되지 않았습니다.',
@@ -234,8 +219,6 @@
       ownerDetail: '이 계정은 Kelonio 채널을 관리합니다. 가이드가 자동으로 잠금 해제됩니다.',
       subscribeAria: 'YouTube를 열어 Kelonio 채널 구독',
       verifyAria: '내 계정이 Kelonio 채널을 구독했는지 확인',
-      changeAccountAria: '구독 확인에 사용할 Google 계정 변경',
-      openYoutube: 'YouTube 채널 열기'
     }
   };
 
@@ -248,6 +231,64 @@
   let wall = null;
   let gisLoadPromise = null;
   let tokenRequestInFlight = null;
+
+  function clearAccessCache() {
+    try {
+      localStorage.removeItem(CACHE_KEY);
+    } catch (_) {}
+  }
+
+  function readAccessCache() {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      if (!data || typeof data !== 'object') return null;
+
+      const verifiedAt = Number(data.verifiedAt || 0);
+      const age = Date.now() - verifiedAt;
+      const compatible =
+        Number(data.version) === CACHE_VERSION &&
+        String(data.channelId || '') === CHANNEL_ID &&
+        String(data.origin || '') === window.location.origin &&
+        Boolean(data.verified);
+
+      if (!compatible || !verifiedAt || age < 0 || age >= CACHE_TTL_MS) {
+        clearAccessCache();
+        return null;
+      }
+
+      return {
+        owner: data.owner === true,
+        verifiedAt
+      };
+    } catch (_) {
+      clearAccessCache();
+      return null;
+    }
+  }
+
+  function writeAccessCache(kind) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        version: CACHE_VERSION,
+        verified: true,
+        owner: kind === 'owner',
+        channelId: CHANNEL_ID,
+        origin: window.location.origin,
+        verifiedAt: Date.now()
+      }));
+    } catch (_) {}
+  }
+
+  function cacheForcedOff() {
+    try {
+      const params = new URLSearchParams(window.location.search || '');
+      return params.get('youtube-recheck') === '1';
+    } catch (_) {
+      return false;
+    }
+  }
 
   function lang() {
     try {
@@ -286,8 +327,6 @@
           <a class="youtube-access-btn youtube-access-subscribe" id="youtubeAccessSubscribe" target="_blank" rel="noopener noreferrer"></a>
           <button type="button" class="youtube-access-btn youtube-access-verify" id="youtubeAccessVerify"></button>
         </div>
-        <button type="button" class="youtube-access-change" id="youtubeAccessChange"></button>
-        <a class="youtube-access-youtube" id="youtubeAccessOpenYoutube" target="_blank" rel="noopener noreferrer"></a>
         <div class="youtube-access-brand">YouTube · Kelonio</div>
       </div>`;
 
@@ -318,12 +357,8 @@
       .youtube-access-btn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.08)}
       .youtube-access-subscribe:hover{box-shadow:0 14px 32px rgba(229,9,20,.34)}
       .youtube-access-verify:hover{box-shadow:0 12px 26px rgba(0,0,0,.3)}
-      .youtube-access-btn:focus-visible,.youtube-access-change:focus-visible,.youtube-access-youtube:focus-visible{outline:2px solid #fff;outline-offset:3px}
       .youtube-access-btn:disabled{opacity:.65;cursor:wait;transform:none!important}
-      .youtube-access-change{display:block;margin:12px auto 0;padding:4px 8px;background:none;border:0;color:#aeb3bd;font:700 .78rem/1.4 'Segoe UI',system-ui,sans-serif;cursor:pointer}
-      .youtube-access-change:hover{color:#fff;text-decoration:underline}
-      .youtube-access-youtube{display:block;margin:10px 0 0;color:#7f8692;text-decoration:none;font-size:.78rem;font-weight:700}
-      .youtube-access-youtube:hover{text-decoration:underline;color:#fff}
+      .youtube-access-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
       .youtube-access-brand{margin-top:24px;color:#686e79;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
       @media(max-width:600px){#accessWallOverlay{padding:16px}.youtube-access-card{padding:34px 22px 25px;border-radius:20px}.youtube-access-lead{font-size:.98rem}.youtube-access-detail{font-size:.86rem}}
     `;
@@ -355,19 +390,6 @@
       verify.setAttribute('aria-label', d.verifyAria);
     }
 
-    const change = q('youtubeAccessChange');
-    if (change) {
-      change.textContent = d.changeAccount;
-      change.disabled = busy || !gisReady;
-      change.setAttribute('aria-disabled', String(change.disabled));
-      change.setAttribute('aria-label', d.changeAccountAria);
-    }
-
-    const open = q('youtubeAccessOpenYoutube');
-    if (open) {
-      open.textContent = d.openYoutube;
-      open.href = CHANNEL_URL;
-    }
   }
 
   function setStatus(key, custom) {
@@ -395,6 +417,7 @@
 
   function hideWall(kind) {
     unlocked = true;
+    writeAccessCache(kind);
     lockPage();
 
     if (wall) {
@@ -626,6 +649,7 @@
 
       const subscribed = await checkSubscription();
       if (!subscribed) {
+        clearAccessCache();
         setStatus('notSubscribed');
         return;
       }
@@ -633,6 +657,7 @@
       hideWall('subscription');
     } catch (error) {
       accessToken = null;
+      clearAccessCache();
       const message = String(error && error.message || '');
 
       if (message === 'origin_not_allowed') {
@@ -656,9 +681,26 @@
     }
   }
 
-  function changeAccount() {
-    if (busy || !gisReady) return;
-    verifyCurrentAccount('select_account');
+  function unlockFromCache(cached) {
+    unlocked = true;
+    ownerDetected = cached && cached.owner === true;
+    unlockPage();
+
+    const staticWall = document.getElementById('accessWallOverlay');
+    if (staticWall) {
+      staticWall.classList.add('youtube-wall-hidden');
+      window.setTimeout(() => {
+        if (staticWall && staticWall.parentNode) staticWall.remove();
+        if (wall === staticWall) wall = null;
+      }, 280);
+    }
+
+    document.dispatchEvent(new CustomEvent('kelonio:youtubeAccessGranted', {
+      detail: {
+        source: cached && cached.owner ? 'local-cache-owner-24h' : 'local-cache-24h',
+        verifiedAt: cached ? cached.verifiedAt : 0
+      }
+    }));
   }
 
   function prepareStaticWall() {
@@ -679,6 +721,19 @@
       return;
     }
 
+    // Normal reload/open path: a recent successful verification avoids any
+    // new Google prompt or YouTube API check. Use ?youtube-recheck=1 to force
+    // a fresh verification from the current Google account.
+    if (!cacheForcedOff()) {
+      const cached = readAccessCache();
+      if (cached) {
+        unlockFromCache(cached);
+        return;
+      }
+    } else {
+      clearAccessCache();
+    }
+
     prepareStaticWall();
 
     buildWall();
@@ -686,10 +741,7 @@
 
     const verify = wall.querySelector('#youtubeAccessVerify');
     const subscribe = wall.querySelector('#youtubeAccessSubscribe');
-    const change = wall.querySelector('#youtubeAccessChange');
-
     if (verify) verify.addEventListener('click', () => verifyCurrentAccount(''));
-    if (change) change.addEventListener('click', changeAccount);
 
     // The subscribe link is intentionally just a navigation action. It never
     // grants access by itself; only a subsequent API verification can unlock.
