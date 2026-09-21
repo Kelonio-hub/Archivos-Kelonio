@@ -1,5 +1,17 @@
 [
   {
+    "tag": "Switch / DBI",
+    "title": "DBI 912 - Russian version only",
+    "link": "https://github.com/rashevskyv/dbi/releases/tag/912ru",
+    "date": "2026-09-18T07:14:24.000Z"
+  },
+  {
+    "tag": "Switch / Rekado",
+    "title": "Rekado 5.4",
+    "link": "https://github.com/MenosGrante/Rekado/releases/tag/5.4",
+    "date": "2026-09-16T08:56:16.000Z"
+  },
+  {
     "tag": "Switch / Checkpoint",
     "title": "Checkpoint 5.2.0",
     "link": "https://github.com/BernardoGiordano/Checkpoint/releases/tag/v5.2.0",
@@ -22,12 +34,6 @@
     "title": "v3.0.0",
     "link": "https://github.com/PretendoNetwork/Inkay/releases/tag/v3.0.0",
     "date": "2026-07-20T14:06:40.000Z"
-  },
-  {
-    "tag": "Switch / DBI",
-    "title": "DBI 905 - Russian version only",
-    "link": "https://github.com/rashevskyv/dbi/releases/tag/905ru",
-    "date": "2026-07-17T11:40:26.000Z"
   },
   {
     "tag": "3DS / LUMA PINK",
@@ -160,12 +166,6 @@
     "title": "sys-tune 2.1.0-beta.1",
     "link": "https://github.com/HookedBehemoth/sys-tune/releases/tag/v2.1.0-beta.1",
     "date": "2025-11-16T18:23:56.000Z"
-  },
-  {
-    "tag": "Switch / Rekado",
-    "title": "Rekado 5.4",
-    "link": "https://github.com/MenosGrante/Rekado/releases/tag/5.4",
-    "date": "2025-08-28T09:58:50.000Z"
   },
   {
     "tag": "Wii / USB Loader GX",
