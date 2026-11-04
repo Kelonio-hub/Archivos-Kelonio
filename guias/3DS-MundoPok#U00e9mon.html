@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mundo Pokémon: POKEBANK | La Presa</title>
+<meta content="3DS" name="guide-tag"/>
+<meta content="2026-07-06" name="guide-date"/>
+<meta content="3DS: Mundo Pokémon" name="guide-title-es"/>
+<meta content="3DS: Pokémon World" name="guide-title-en"/>
+<meta content="3DS: Monde Pokémon" name="guide-title-fr"/>
+<meta content="3DS: Pokémon Welt" name="guide-title-de"/>
+<meta content="3DS: Mondo Pokémon" name="guide-title-it"/>
+<meta content="3DS: Mundo Pokémon" name="guide-title-pt"/>
+<meta content="3DS: ポケモンワールド" name="guide-title-ja"/>
+<meta content="3DS: 포켓몬 월드" name="guide-title-ko"/>
+<meta content="Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS." name="guide-desc-es"/>
+<meta content="Guide about Pokémon Bank, Poké Transfer Tool, PKSM and PKHeX for Nintendo 3DS." name="guide-desc-en"/>
+<meta content="Guide sur le Banque Pokémon, Poké Trasladador, PKSM et PKHeX pour Nintendo 3DS." name="guide-desc-fr"/>
+<meta content="Anleitung über Pokémon Bank, Poké Trasladador, PKSM und PKHeX für Nintendo 3DS." name="guide-desc-de"/>
+<meta content="Guida sul Banco Pokémon, Poké Trasladador, PKSM e PKHeX per Nintendo 3DS." name="guide-desc-it"/>
+<meta content="Guia sobre o Banco Pokémon, Poké Trasladador, PKSM e PKHeX para Nintendo 3DS." name="guide-desc-pt"/>
+<meta content="Nintendo 3DSのポケモンバンク、ポケトランスファー、PKSM、PKHeXに関するガイド。" name="guide-desc-ja"/>
+<meta content="Nintendo 3DS의 포켓몬은행, 포켓트랜스퍼, PKSM, PKHeX에 대한 가이드。" name="guide-desc-ko"/>
+<link href="https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif" rel="icon" type="image/gif"/>
+<style>
+
+/* ================= VARIABLES Y TEMA AUTOMÁTICO/MANUAL ================= */
+:root, :root[data-theme="dark"] {
+  --red: #007bff; /* Acento Azul por defecto */
+  --glow-rgb: 0, 123, 255; 
+  
+  --bg: #141414;
+  --text-main: #ffffff;
+  --text-muted: #cccccc;
+  --glass: rgba(20,20,20,0.5);
+  --glass-border: rgba(255,255,255,.08);
+  --topbar-bg: rgba(0,0,0,.88);
+  --card-bg: rgba(26, 29, 41, 0.4);
+  --input-bg: rgba(0,0,0,.8);
+  --btn-bg: rgba(255,255,255,0.05);
+  --btn-bg-hover: rgba(255,255,255,0.1);
+  --icon-color: #ffffff;
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f5f7;
+  --text-main: #1d1d1f;
+  --text-muted: #515154;
+  --glass: rgba(255,255,255,0.7);
+  --glass-border: rgba(0,0,0,.15);
+  --topbar-bg: rgba(255,255,255,.95);
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --input-bg: rgba(0,0,0,.05);
+  --btn-bg: rgba(0,0,0,.05);
+  --btn-bg-hover: rgba(0,0,0,.1);
+  --icon-color: #333333;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f5f5f7;
+    --text-main: #1d1d1f;
+    --text-muted: #515154;
+    --glass: rgba(255,255,255,0.7);
+    --glass-border: rgba(0,0,0,.15);
+    --topbar-bg: rgba(255,255,255,.95);
+    --card-bg: rgba(255, 255, 255, 0.6);
+    --input-bg: rgba(0,0,0,.05);
+    --btn-bg: rgba(0,0,0,.05);
+    --btn-bg-hover: rgba(0,0,0,.1);
+    --icon-color: #333333;
+  }
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif; background:var(--bg); color:var(--text-main); overflow-x:hidden; line-height: 1.6; transition: background 0.3s, color 0.3s; }
+
+/* ================= ACCESO DISNEY (Siempre oscuro) ================= */
+#accessWallOverlay { position: fixed; inset: 0; z-index: 99999999; background: #141414; display: flex; justify-content: center; align-items: center; font-family: 'Segoe UI', system-ui, sans-serif; color: #f9f9f9; transition: opacity 0.5s ease, visibility 0.5s ease; }
+.disney-access-card { width: 90%; max-width: 620px; background: rgba(26, 29, 41, 0.95); backdrop-filter: blur(14px); padding: 50px 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.15); text-align: center; box-shadow: 0 0 60px rgba(var(--glow-rgb), 0.25); }
+.disney-logo-title { font-size: 5.4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px; letter-spacing: -3px; }
+.disney-subtitle { font-size: 1.3rem; margin-bottom: 35px; opacity: 0.9; }
+.disney-progress-bar { height: 14px; background: #222; border-radius: 10px; margin: 30px 0; overflow: hidden; }
+.disney-progress-fill { height: 100%; width: 0%; background: var(--red); transition: width 0.7s ease; }
+.disney-step-btn { width: 100%; padding: 18px; margin: 12px 0; border-radius: 14px; border: none; background: rgba(255,255,255,0.1); color: white; font-size: 1.15rem; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.disney-step-btn:hover { background: rgba(255,255,255,0.25); }
+.disney-step-done { background: var(--red) !important; color: #fff !important; cursor: default; }
+#disneyProductsContainer { display: none; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 25px 0; max-height: 280px; overflow-y: auto; }
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.disney-aw-product { background: rgba(255,255,255,0.08); border: 2px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 12px; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+.disney-aw-product:hover { transform: translateY(-6px); border-color: var(--red); }
+.disney-aw-product img { width: 70px; height: 70px; object-fit: contain; }
+.disney-choose-badge { margin-top: 8px; font-size: 11px; background: var(--red); color: #fff; padding: 4px 12px; border-radius: 30px; font-weight: 800; }
+
+/* ================= MAIN HUB & TOPBAR ================= */
+#mainHub { display: none; opacity: 0; transition: opacity 0.5s ease; }
+.topbar { position:fixed; top:0; left:0; right:0; z-index:9998; background:var(--topbar-bg); backdrop-filter:blur(16px); display:flex; justify-content:space-between; align-items:center; padding:8px 3%; gap: 10px; border-bottom: 1px solid var(--glass-border); transition: background 0.3s, border-color 0.3s; }
+.logo { font-size:1.8rem; font-weight:900; color:var(--red); letter-spacing:-1.5px; transition: color 0.3s ease; text-decoration: none; cursor:pointer;}
+
+.topbar-left { display:flex; align-items:center; gap: 15px; flex-shrink: 0; }
+.social-group { display: flex; gap: 4px; border-left: 1px solid var(--glass-border); padding-left: 15px; transition: border-color 0.3s; }
+.social-icon-btn { background:transparent; border:none; cursor: pointer; color: var(--icon-color); opacity: 0.55; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 4px; position: relative;}
+.social-icon-btn:hover { opacity: 1; transform: scale(1.15); color: var(--red); }
+.radar-badge { position:absolute; top:-2px; right:-2px; width:10px; height:10px; background:var(--red); border-radius:50%; box-shadow:0 0 8px var(--red); display: none; }
+
+.right-tools { display:flex; align-items:center; gap:12px;}
+.back-btn { background:var(--btn-bg); border:1px solid var(--glass-border); border-radius:10px; padding:8px 15px; display:flex; align-items:center; gap:8px; cursor:pointer; transition: .3s ease; color:var(--text-main); font-weight:bold; font-size: 13px; text-decoration: none;}
+.back-btn:hover { background:var(--red); border-color:var(--red); transform:scale(1.05); color: white; }
+
+.config-group { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.theme-dots-container { display:flex; gap:5px; align-items: center; }
+.color-dot { width:12px; height:12px; border-radius:50%; cursor:pointer; border:1px solid rgba(128,128,128,0.4); transition:transform .2s, border-color .2s; }
+.color-dot:hover { transform:scale(1.3); }
+.color-dot.active-dot { border:2px solid var(--text-main); transform:scale(1.15); box-shadow: 0 0 8px rgba(128,128,128,0.6); }
+
+#languageSelector { background:var(--input-bg); border:1px solid var(--glass-border); color:var(--text-main); padding:4px 8px; border-radius:6px; outline: none; cursor: pointer; font-size:11px; transition: 0.3s; }
+#languageSelector option { background: var(--bg); color: var(--text-main); }
+
+/* ================= LAYOUT PRINCIPAL (GUIAS) ================= */
+.main-layout { display: flex; max-width: 1250px; margin: 80px auto 0; padding: 20px; gap: 30px; align-items: flex-start; }
+.sidebar { width: 280px; flex-shrink: 0; position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 12px; backdrop-filter: blur(10px); transition: background 0.3s, border-color 0.3s; }
+.sidebar::-webkit-scrollbar { width: 5px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--red); border-radius: 10px; }
+.sidebar-title { font-size: 1.05rem; color: var(--text-main); margin-bottom: 20px; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+.sidebar-group { margin-bottom: 20px; }
+.sidebar-category { display: flex; align-items: center; justify-content: space-between; background: var(--btn-bg); padding: 8px 12px; border-radius: 8px; font-weight: bold; color: var(--red); margin-bottom: 8px; cursor: pointer; user-select: none; transition: background 0.2s; }
+.sidebar-category:hover { background: var(--btn-bg-hover); }
+.sidebar-category .cat-left { display: flex; align-items: center; gap: 10px; }
+.sidebar-category img { width: 22px; height: 22px; object-fit: contain; }
+.toggle-icon { font-size: 12px; color: var(--text-main); transition: transform 0.3s ease; }
+.sidebar-group.collapsed .toggle-icon { transform: rotate(-90deg); }
+.sidebar-links-container { display: flex; flex-direction: column; overflow: hidden; }
+.sidebar-group.collapsed .sidebar-links-container { display: none; }
+.sidebar-link { display: block; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; padding: 8px 12px 8px 16px; border-left: 2px solid transparent; transition: 0.2s; margin-bottom: 2px; border-radius: 0 8px 8px 0; }
+.sidebar-link:hover { color: var(--text-main); border-left-color: var(--red); background: var(--btn-bg); transform: translateX(3px); }
+.sidebar-link.active { color: var(--text-main); border-left-color: var(--red); background: rgba(var(--glow-rgb), 0.15); font-weight: bold; }
+
+.guide-container { flex-grow: 1; min-width: 0; background: var(--glass); border-radius: 16px; padding: 40px; border: 1px solid var(--glass-border); transition: background 0.3s, border-color 0.3s; }
+.guide-header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--glass-border); }
+.guide-header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; color: var(--text-main); }
+.guide-tag { display: inline-block; background: var(--red); color: white; padding: 4px 12px; border-radius: 6px; font-weight: bold; font-size: 12px; margin-bottom: 15px; }
+.guide-content h2 { color: var(--red); font-size: 1.8rem; margin: 35px 0 15px; }
+.guide-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 15px; }
+.guide-content ul, .guide-content ol { margin: 15px 0 20px 25px; color: var(--text-muted); font-size: 1.1rem; }
+.guide-content li { margin-bottom: 8px; }
+
+.alert-box { background: rgba(var(--glow-rgb), 0.1); border-left: 4px solid var(--red); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; color: var(--text-main); }
+.dl-btn { display: inline-block; background: var(--red); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+.dl-btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(var(--glow-rgb), 0.4); }
+
+.mini-btn { background: var(--red); color: white !important; padding: 3px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-style: normal; margin: 0 4px; display: inline-block; transition: 0.3s; font-size: 0.9em; }
+.mini-btn:hover { transform: scale(1.05); filter: brightness(1.2); }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); border: 1px solid var(--glass-border); }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0; }
+
+#backToTopBtn { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: var(--red); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+#backToTopBtn:hover { transform: scale(1.1); }
+
+.guide-title-container h1 {
+  font-size: var(--title-size, 2.5rem) !important;
+  white-space: nowrap !important;
+  display: block !important;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: #0076f5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.3s, transform 0.2s;
+}
+#btn-back-to-top:active { transform: scale(0.9); }
+
+.mobile-sidebar-toggle {
+  display: none;
+  width: 100%;
+  padding: 14px;
+  background: #16161a;
+  color: #0076f5;
+  border: 2px solid #0076f5;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+@media(max-width: 950px) {
+  .topbar { position: relative; flex-direction: column; padding: 15px 4%; gap: 14px; align-items: center; }
+  .topbar-left { width: 100%; justify-content: center; gap: 15px; }
+  .right-tools { width: 100%; justify-content: center; flex-wrap: wrap; gap: 14px; }
+  .main-layout { flex-direction: column; margin-top: 15px; padding: 10px; }
+  .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
+  .guide-container { width: 100%; order: 1; padding: 20px !important; }
+}
+
+@media(max-width: 650px) {
+  .topbar-left { display: flex; justify-content: center; width: 100%; }
+  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
+  .social-group { border-left: none; padding-left: 0; gap: 12px; }
+  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
+  
+  .back-btn { 
+    width: auto !important; 
+    max-width: max-content;
+    margin: 8px auto !important; 
+    flex-basis: 100%;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
+  
+  .guide-content h2 { font-size: 1.4rem; }
+  .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
+
+  .mobile-sidebar-toggle { display: flex; }
+  .sidebar { display: none !important; }
+  .sidebar.active { display: block !important; margin-top: 10px; }
+  
+  #btn-back-to-top { display: flex; opacity: 0; pointer-events: none; }
+  #btn-back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+  table, pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    display: block !important;
+    white-space: nowrap;
+  }
+  code { word-break: break-all; }
+}
+
+
+/* ===== LA PRESA · pantalla de acceso renovada ===== */
+#accessWallOverlay {
+  padding: 24px;
+  overflow-y: auto;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 14% 18%, rgba(var(--glow-rgb, 0, 170, 255), .24), transparent 38%),
+    radial-gradient(ellipse at 88% 82%, rgba(229, 9, 20, .15), transparent 36%),
+    linear-gradient(135deg, #080d19 0%, #111a2b 52%, #090e1a 100%);
+}
+#accessWallOverlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .22;
+  background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse at center, #000 12%, transparent 78%);
+}
+.disney-access-card {
+  position: relative;
+  width: min(100%, 560px);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: clamp(28px, 5vw, 48px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(28,37,56,.97), rgba(12,18,32,.97));
+  box-shadow: 0 28px 90px rgba(0,0,0,.52),
+              0 0 58px rgba(var(--glow-rgb, 0, 170, 255), .16),
+              inset 0 1px 0 rgba(255,255,255,.08);
+  text-align: center;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,.25) transparent;
+}
+.disney-access-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(90deg, transparent, var(--red, #e50914), rgba(255,255,255,.85), transparent);
+}
+.disney-logo-title {
+  margin: 0 0 14px;
+  font-size: clamp(2.8rem, 8vw, 4.35rem);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -.075em;
+  color: #fff;
+  text-shadow: 0 5px 26px rgba(0,0,0,.22);
+}
+.disney-logo-title::after {
+  content: "✦";
+  display: block;
+  width: fit-content;
+  margin: 14px auto 0;
+  color: var(--red, #e50914);
+  font-size: 17px;
+  letter-spacing: 0;
+  text-shadow: 0 0 18px rgba(var(--glow-rgb, 0, 170, 255), .55);
+}
+.disney-subtitle {
+  max-width: 430px;
+  margin: 0 auto 25px;
+  color: rgba(245,248,255,.82);
+  font-size: clamp(1rem, 2.5vw, 1.12rem);
+  line-height: 1.65;
+  font-weight: 450;
+}
+.disney-progress-bar {
+  height: 9px;
+  margin: 25px 0 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  background: rgba(0,0,0,.28);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,.25);
+}
+.disney-progress-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--red, #e50914), #ff8a65);
+  box-shadow: 0 0 18px rgba(var(--glow-rgb, 0, 170, 255), .34);
+  transition: width .55s cubic-bezier(.2,.75,.25,1);
+}
+.disney-step-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 68px;
+  margin: 10px 0;
+  padding: 14px 19px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.045));
+  color: #f8faff;
+  text-align: left;
+  font-size: clamp(.98rem, 2.6vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.35;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0,0,0,.13);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.disney-step-btn span { flex: 1; }
+.aw-prime-mark {
+  display: grid;
+  flex: 0 0 52px !important;
+  width: 52px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(0,184,239,.62);
+  border-radius: 15px;
+  background: radial-gradient(circle at 27% 16%, rgba(0,191,255,.30), transparent 58%), linear-gradient(145deg, #071b32, #0a3d63 65%, #09243d);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.17), 0 0 0 3px rgba(0,168,224,.08), 0 7px 19px rgba(0,0,0,.24), 0 0 17px rgba(0,168,224,.15);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.aw-prime-mark svg { display: block; width: 49px; height: 37px; overflow: visible; }
+#disney-btn2:hover:not(.disney-step-done) .aw-prime-mark {
+  transform: translateY(-1px) scale(1.05);
+  border-color: rgba(0,205,255,.95);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 0 0 3px rgba(0,168,224,.12), 0 8px 22px rgba(0,0,0,.26), 0 0 23px rgba(0,184,239,.30);
+}
+#disney-btn1::before,
+#disney-btn2::before {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 12px;
+  background: rgba(255,255,255,.09);
+  color: #fff;
+  font-size: 14px;
+}
+#disney-btn1::before { content: "▶"; padding-left: 2px; }
+#disney-btn2::before { content: none; }
+.disney-step-btn:hover:not(.disney-step-done) {
+  transform: translateY(-2px);
+  border-color: rgba(var(--glow-rgb, 0, 170, 255), .6);
+  background: linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,.07));
+  box-shadow: 0 12px 28px rgba(0,0,0,.22), 0 0 22px rgba(var(--glow-rgb, 0, 170, 255), .10);
+}
+.disney-step-btn:focus-visible {
+  outline: 3px solid rgba(255,255,255,.9);
+  outline-offset: 3px;
+}
+.disney-step-done {
+  border-color: transparent !important;
+  background: linear-gradient(110deg, var(--red, #e50914), #a91435) !important;
+  color: #fff !important;
+  cursor: default;
+  box-shadow: 0 8px 24px rgba(229,9,20,.22);
+}
+.disney-step-done::before {
+  content: "✓" !important;
+  padding: 0 !important;
+  background: rgba(255,255,255,.18) !important;
+  border-color: rgba(255,255,255,.22) !important;
+  font-size: 19px !important;
+  font-weight: 900;
+}
+#disneyProductsContainer {
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 12px;
+  max-height: 260px;
+  margin: 18px 0 2px;
+  padding: 2px 3px 8px;
+}
+#disneyProductsContainer::-webkit-scrollbar { width: 6px; }
+#disneyProductsContainer::-webkit-scrollbar-thumb { background: var(--red, #e50914); border-radius: 10px; }
+.disney-aw-product {
+  min-height: 145px;
+  padding: 14px 12px;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 17px;
+  background: rgba(255,255,255,.06);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+.disney-aw-product:hover {
+  transform: translateY(-3px);
+  border-color: var(--red, #e50914);
+  background: rgba(255,255,255,.10);
+}
+.disney-aw-product img { width: 68px; height: 68px; object-fit: contain; }
+.disney-choose-badge {
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background: var(--red, #e50914);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+@media (max-width: 520px) {
+  #accessWallOverlay { padding: 14px; align-items: center; }
+  .disney-access-card {
+    width: 100%;
+    max-height: calc(100dvh - 28px);
+    padding: 30px 20px 24px;
+    border-radius: 23px;
+  }
+  .disney-logo-title { font-size: clamp(2.65rem, 13vw, 3.5rem); }
+  .disney-subtitle { margin-bottom: 20px; font-size: .98rem; }
+  .disney-step-btn { min-height: 62px; gap: 12px; padding: 12px 14px; border-radius: 15px; }
+  #disney-btn1::before, #disney-btn2::before { flex-basis: 34px; width: 34px; height: 34px; }
+  #disneyProductsContainer { grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); max-height: 230px; }
+}
+@media (max-height: 680px) and (min-width: 521px) {
+  .disney-access-card { padding-top: 25px; padding-bottom: 25px; }
+  .disney-logo-title { font-size: 3.1rem; margin-bottom: 9px; }
+  .disney-logo-title::after { margin-top: 8px; }
+  .disney-subtitle { margin-bottom: 14px; }
+  .disney-progress-bar { margin: 16px 0; }
+  .disney-step-btn { min-height: 58px; margin: 7px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .disney-progress-fill, .disney-step-btn, .disney-aw-product { transition: none !important; }
+  .disney-step-btn:hover, .disney-aw-product:hover { transform: none !important; }
+}
+/* ===== fin del rediseño ===== */
+
+
+/* ===== LA PRESA · acceso en tres opciones ===== */
+#accessWallOverlay {
+  overflow-y: auto;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(12px, 2.2vw, 28px);
+  box-sizing: border-box;
+  background: radial-gradient(circle at 12% 10%, rgba(var(--glow-rgb, 0,170,255),.16), transparent 32%),
+              radial-gradient(circle at 92% 88%, rgba(229,9,20,.12), transparent 34%), #10131c;
+}
+.disney-access-card {
+  width: min(100%, 1240px);
+  max-width: 1240px;
+  margin: auto;
+  padding: clamp(20px, 3vw, 34px);
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(29,34,49,.98), rgba(18,22,34,.98));
+  border: 1px solid rgba(255,255,255,.13);
+  box-shadow: 0 24px 90px rgba(0,0,0,.42), 0 0 55px rgba(var(--glow-rgb,0,170,255),.12);
+  text-align: left;
+}
+.aw-gate-header { text-align: center; }
+.disney-logo-title {
+  font-size: clamp(2.5rem, 5vw, 4.1rem);
+  line-height: 1;
+  margin: 0 0 12px;
+  letter-spacing: -.055em;
+  text-shadow: 0 8px 35px rgba(var(--glow-rgb,0,170,255),.24);
+}
+.disney-subtitle {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  color: rgba(245,248,255,.78);
+  font-size: clamp(.94rem, 1.5vw, 1.08rem);
+  line-height: 1.5;
+}
+.disney-progress-bar { width: min(100%, 560px); height: 9px; margin: 18px auto 26px; background: rgba(255,255,255,.10); }
+.disney-progress-fill { border-radius: inherit; background: linear-gradient(90deg, var(--red,#e50914), #4aa9ff); }
+.aw-options-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.aw-option-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 21px;
+  border: 1px solid rgba(255,255,255,.11);
+  background: linear-gradient(150deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
+  box-shadow: 0 10px 30px rgba(0,0,0,.16);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.aw-option-card:hover { transform: translateY(-2px); border-color: rgba(var(--glow-rgb,0,170,255),.42); box-shadow: 0 16px 34px rgba(0,0,0,.22); }
+.aw-option-paypal { border-color: rgba(255,197,74,.35); background: linear-gradient(155deg, rgba(255,197,74,.10), rgba(255,255,255,.035) 55%); }
+.aw-option-kicker { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 13px; }
+.aw-option-number { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: rgba(var(--glow-rgb,0,170,255),.17); color: #fff; font-size: .82rem; font-weight: 900; letter-spacing: .06em; }
+.aw-option-tag { padding: 5px 10px; border-radius: 30px; background: rgba(78,205,137,.14); color: #8be2b0; font-size: .68rem; font-weight: 900; letter-spacing: .08em; }
+.aw-option-tag-voluntary { background: rgba(255,197,74,.14); color: #ffd782; }
+.aw-option-card h2 { color: #fff; font-size: clamp(1.2rem, 2vw, 1.45rem); margin: 0 0 8px; line-height: 1.2; }
+.aw-option-description { color: rgba(239,243,250,.72); line-height: 1.5; font-size: .88rem; margin: 0 0 14px; min-height: 66px; }
+.aw-option-card .disney-step-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; margin: 0 0 10px; padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,.12); border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.055));
+  color: #fff; font-size: .94rem; font-weight: 800;
+}
+.aw-option-card .disney-step-btn:hover:not(.disney-step-done) { background: linear-gradient(135deg, rgba(var(--glow-rgb,0,170,255),.28), rgba(255,255,255,.08)); }
+.aw-option-card .disney-step-done { background: linear-gradient(110deg, var(--red,#e50914), #a91435) !important; }
+
+#disneyProductsContainer {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 350px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 2px 3px 4px;
+}
+.disney-aw-product { min-height: 118px; padding: 9px 7px; border-radius: 13px; border-width: 1px; }
+.disney-aw-product img { width: 48px; height: 48px; }
+.disney-aw-product span { font-size: .72rem; line-height: 1.25; text-align: center; }
+.disney-choose-badge { font-size: .59rem; padding: 4px 8px; }
+.aw-paypal-label { color: rgba(255,255,255,.86); font-size: .81rem; font-weight: 800; margin: 2px 0 9px; }
+.aw-amount-options { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 7px; margin-bottom: 12px; }
+.aw-amount-chip { min-height: 38px; border-radius: 11px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: #fff; font-size: .86rem; font-weight: 800; cursor: pointer; transition: .18s ease; }
+.aw-amount-chip:hover { border-color: rgba(255,197,74,.6); }
+.aw-amount-chip.is-selected { background: rgba(255,197,74,.17); border-color: #ffc54a; color: #ffdc91; box-shadow: 0 0 0 2px rgba(255,197,74,.08); }
+.aw-custom-label { color: rgba(255,255,255,.68); font-size: .74rem; margin: 0 0 5px; }
+.aw-custom-amount { width: 100%; height: 41px; box-sizing: border-box; padding: 0 12px; border: 1px solid rgba(255,255,255,.15); border-radius: 11px; outline: none; background: rgba(0,0,0,.18); color: #fff; font: inherit; font-size: .86rem; margin-bottom: 10px; }
+.aw-custom-amount:focus { border-color: #ffc54a; box-shadow: 0 0 0 3px rgba(255,197,74,.12); }
+.aw-custom-amount::placeholder { color: rgba(255,255,255,.42); }
+#aw-paypal-button-container { min-height: 42px; }
+#aw-paypal-button-container iframe { border-radius: 24px !important; }
+.aw-paypal-status { color: #ffd782; font-size: .76rem; line-height: 1.4; min-height: 18px; margin: 7px 0 0; text-align: center; }
+
+@media (max-width: 980px) { .aw-options-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .aw-option-paypal { grid-column: 1 / -1; } }
+@media (max-width: 650px) {
+  #accessWallOverlay { padding: 10px; }
+  .disney-access-card { padding: 19px 14px; border-radius: 20px; }
+  .aw-options-grid { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .aw-option-paypal { grid-column: auto; }
+  .aw-option-card { padding: 17px; }
+  .aw-option-description { min-height: 0; }
+  #disneyProductsContainer { grid-template-columns: repeat(2, minmax(0,1fr)); max-height: 330px; }
+  .disney-progress-bar { margin: 15px auto 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .aw-option-card, .aw-amount-chip { transition: none !important; } .aw-option-card:hover { transform: none; } }
+.disney-access-card { position: relative; }
+.aw-gate-language { position: absolute; top: 17px; right: 20px; z-index: 5; display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,.78); }
+.aw-gate-language select { max-width: 150px; padding: 8px 28px 8px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.08); color: #fff; font: inherit; font-size: .76rem; font-weight: 750; cursor: pointer; outline: none; }
+.aw-gate-language select:focus-visible { outline: 2px solid #ffc54a; outline-offset: 2px; }
+.aw-gate-language select option { background: #fff; color: #222; }
+.aw-youtube-subscribe-btn { gap: 10px; }
+.aw-youtube-icon { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 25px; height: 25px; }
+.aw-youtube-icon svg { display: block; width: 25px; height: 25px; }
+#disney-btn1.aw-youtube-subscribe-btn::before { content: none !important; display: none !important; }
+.aw-youtube-subscribe-btn .aw-youtube-icon { flex: 0 0 25px !important; width: 25px; height: 25px; }
+.aw-youtube-subscribe-btn.is-verifying { cursor: wait; }
+.aw-option-giveaway .disney-step-btn.is-verifying { cursor: wait; opacity: .7; }
+.aw-custom-label[style*="display:none"] { display: none !important; }
+@media (max-width: 650px) { .aw-gate-language { position: static; justify-content: flex-end; margin: -4px 0 9px; } .aw-gate-language select { max-width: 170px; } }
+/* ===== fin del acceso en tres opciones ===== */
+
+</style>
+
+<!-- ==========================================================
+     CANONICAL & HREFLANG (8 IDIOMAS + INGLÉS POR DEFECTO)
+=========================================================== -->
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html" rel="canonical"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=es" hreflang="es" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=fr" hreflang="fr" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=de" hreflang="de" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=pt" hreflang="pt" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=ja" hreflang="ja" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=ko" hreflang="ko" rel="alternate"/>
+<link href="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html?lang=en" hreflang="x-default" rel="alternate"/>
+<!-- ==========================================================
+     OPEN GRAPH & TWITTER CARDS
+=========================================================== -->
+<meta content="website" property="og:type"/>
+<meta content="La Presa" property="og:site_name"/>
+<meta content="Mundo Pokémon: POKEBANK" property="og:title"/>
+<meta content="Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS." property="og:description"/>
+<meta content="https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html" property="og:url"/>
+<meta content="https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg" property="og:image"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mundo Pokémon: POKEBANK" name="twitter:title"/>
+<meta content="Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS." name="twitter:description"/>
+<meta content="https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization",
+  "name": "La Presa",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Lucario.gif"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html#webpage",
+  "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html",
+  "name": "Mundo Pokémon: POKEBANK | La Presa",
+  "description": "Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS.",
+  "inLanguage": [
+    "es",
+    "en",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "ja",
+    "ko"
+  ],
+  "publisher": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg"
+  },
+  "mainEntity": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html#howto"
+  },
+  "dateModified": "2026-07-06"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guías",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "3DS",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias.html#3ds"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Mundo Pokémon: POKEBANK",
+      "item": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html#howto",
+  "name": "Mundo Pokémon: POKEBANK",
+  "description": "Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS.",
+  "image": "https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg",
+  "totalTime": "PT15M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "EUR",
+    "value": "0"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "La Presa"
+  },
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "POKEBANK: Permite almacenar Pokémon de 6ª Generación y traspasarlos a Pokémon Home. Más Información"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "POKÉ TRASLADADOR: Permite almacenar Pokémon de 3ª a 5ª Generación y traspasarlos a Pokémon Home. Más Información"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Archivos necesarios (Mundo Pokémon):"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Herramienta 1: PKSM (Consola)",
+      "text": "PKSM permite crear, editar y clonar Pokémon directamente desde los juegos en tu consola. Todos los Pokémon que hayan sido modificados o creados con PKSM (siendo legales) podrán ser traspasados sin problemas al POKEBANK.",
+      "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html#txt_h2_step1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Herramienta 2: PKHex (PC)",
+      "text": "PKHEX permite crear, editar y clonar Pokémon desde tu ordenador. Precisa de la extracción e importación de tu partida de guardado mediante el uso de checkpoint-3ds o jksm-3ds . Al igual que PKSM, permite traspasar las criaturas resultantes al POKEBANK.",
+      "url": "https://kelonio-hub.github.io/Archivos-Kelonio/guias/3DS-MundoPok%C3%A9mon.html#txt_h2_step2"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Mundo Pokémon: POKEBANK - Tutorial",
+  "description": "Guía sobre el Banco Pokémon, Poké Trasladador, PKSM y PKHeX para Nintendo 3DS.",
+  "thumbnailUrl": "https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg",
+  "uploadDate": "2026-07-06",
+  "embedUrl": "https://www.youtube.com/embed/6GROvOTf_B4",
+  "publisher": {
+    "@id": "https://kelonio-hub.github.io/Archivos-Kelonio/#organization"
+  }
+}
+</script>
+
+<style>
+/* --- PARCHE RESPONSIVO MAESTRO --- */
+.guide-title-container h1 {
+  font-size: var(--title-size, 2.5rem) !important;
+  white-space: nowrap !important;
+  display: block !important;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: #0076f5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.3s, transform 0.2s;
+}
+#btn-back-to-top:active { transform: scale(0.9); }
+
+.mobile-sidebar-toggle {
+  display: none;
+  width: 100%;
+  padding: 14px;
+  background: #16161a;
+  color: #0076f5;
+  border: 2px solid #0076f5;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+@media(max-width: 950px) {
+  .topbar { position: relative; flex-direction: column; padding: 15px 4%; gap: 14px; align-items: center; }
+  .topbar-left { width: 100%; justify-content: center; gap: 15px; }
+  .right-tools { width: 100%; justify-content: center; flex-wrap: wrap; gap: 14px; }
+  .main-layout { flex-direction: column; margin-top: 15px; padding: 10px; }
+  .sidebar { width: 100%; position: static; max-height: none; order: 2; margin-top: 20px; }
+  .guide-container { width: 100%; order: 1; padding: 20px !important; }
+}
+
+@media(max-width: 650px) {
+  .topbar-left { display: flex; justify-content: center; width: 100%; }
+  .right-tools { display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 16px !important; align-items: center; }
+  .social-group { border-left: none; padding-left: 0; gap: 12px; }
+  .social-icon-btn { display: inline-flex !important; width: auto !important; margin: 0; min-width: 44px; min-height: 44px; }
+  
+  .back-btn { 
+    width: auto !important; 
+    max-width: max-content;
+    margin: 8px auto !important; 
+    flex-basis: 100%;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .config-group { width: 100%; flex-direction: row; justify-content: center; gap: 18px; order: 4; margin-top: 4px; }
+  .guide-title-container { padding: 12px 15px; border-radius: 12px; }
+  
+  .guide-content h2 { font-size: 1.4rem; }
+  .guide-content p, .guide-content li { font-size: 1.05rem; word-break: break-word; }
+
+  .mobile-sidebar-toggle { display: flex; }
+  .sidebar { display: none !important; }
+  .sidebar.active { display: block !important; margin-top: 10px; }
+  
+  #btn-back-to-top { display: flex; opacity: 0; pointer-events: none; }
+  #btn-back-to-top.visible { opacity: 1; pointer-events: auto; }
+
+  table, pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    display: block !important;
+    white-space: nowrap;
+  }
+  code { word-break: break-all; }
+}
+
+
+/* ===== LA PRESA · diseño integrado en la propia guía ===== */
+body {
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(var(--glow-rgb), .095), transparent 34%),
+    radial-gradient(ellipse at 90% 76%, rgba(var(--glow-rgb), .055), transparent 32%),
+    var(--bg);
+}
+#mainHub { min-height: 100vh; }
+.topbar {
+  box-shadow: 0 10px 32px rgba(0,0,0,.12);
+  border-bottom-color: var(--glass-border);
+}
+.logo { text-shadow: 0 5px 22px rgba(var(--glow-rgb), .16); }
+.social-icon-btn {
+  border-radius: 11px;
+  transition: color .2s ease, background .2s ease, opacity .2s ease, transform .2s ease;
+}
+.social-icon-btn:hover { background: rgba(var(--glow-rgb), .10); }
+.back-btn {
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(0,0,0,.08);
+}
+.main-layout {
+  max-width: 1360px;
+  gap: 24px;
+  padding: 24px;
+}
+.sidebar {
+  border-radius: 21px;
+  padding: 20px 14px;
+  background: linear-gradient(155deg, var(--card-bg), var(--glass));
+  box-shadow: 0 18px 46px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter: blur(16px);
+}
+.sidebar-title {
+  padding: 10px 9px 15px;
+  border-bottom: 1px solid var(--glass-border);
+  letter-spacing: .12em;
+}
+.sidebar-category {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.sidebar-category:hover {
+  border-color: var(--glass-border);
+  background: var(--btn-bg-hover);
+}
+.sidebar-link {
+  border-radius: 0 10px 10px 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.sidebar-link.active {
+  border-left-width: 3px;
+  border-radius: 0 10px 10px 0;
+}
+.guide-container {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  padding: clamp(24px, 3.2vw, 44px);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  border-radius: 26px;
+  background: linear-gradient(145deg, var(--glass), var(--card-bg));
+  box-shadow: 0 24px 70px rgba(0,0,0,.13), inset 0 1px 0 rgba(255,255,255,.055);
+}
+.guide-container::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(90deg, transparent, var(--red), rgba(255,255,255,.82), transparent);
+  opacity: .9;
+}
+.guide-header {
+  margin-bottom: 30px;
+  padding: 0 0 26px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.guide-title-container {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 42px) clamp(18px, 3vw, 32px);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(var(--glow-rgb), .17), transparent 48%),
+    linear-gradient(145deg, var(--card-bg), var(--glass));
+  box-shadow: 0 15px 38px rgba(0,0,0,.10), inset 0 1px 0 rgba(255,255,255,.06);
+}
+.guide-title-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+.guide-title-container h1 {
+  position: relative;
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(1.9rem, 4.1vw, 3.1rem) !important;
+  font-weight: 900;
+  line-height: 1.13;
+  letter-spacing: -.045em;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  text-shadow: 0 5px 24px rgba(0,0,0,.10);
+}
+.guide-content {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+.guide-content h2 {
+  margin: 38px 0 17px;
+  padding: 11px 15px;
+  border-left: 4px solid var(--red);
+  border-radius: 0 13px 13px 0;
+  background: linear-gradient(90deg, rgba(var(--glow-rgb), .12), rgba(var(--glow-rgb), .025));
+  color: var(--text-main);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  line-height: 1.3;
+}
+.guide-content h3 {
+  margin: 25px 0 12px;
+  color: var(--text-main);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+.guide-content p { line-height: 1.8; }
+.guide-content ul, .guide-content ol { padding-left: 1.35em; line-height: 1.8; }
+.guide-content li { padding-left: 2px; }
+.guide-content li::marker { color: var(--red); font-weight: 800; }
+.guide-content a:not(.mini-btn):not(.dl-btn) {
+  color: var(--red);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.guide-content a:not(.mini-btn):not(.dl-btn):hover { filter: brightness(1.18); }
+.alert-box {
+  padding: 17px 20px;
+  border: 1px solid rgba(var(--glow-rgb), .20);
+  border-left: 4px solid var(--red);
+  border-radius: 0 15px 15px 0;
+  background: linear-gradient(110deg, rgba(var(--glow-rgb), .13), rgba(var(--glow-rgb), .045));
+  box-shadow: 0 10px 26px rgba(0,0,0,.07);
+  line-height: 1.7;
+}
+.video-container, .video-wrapper {
+  border: 1px solid var(--glass-border);
+  border-radius: 19px;
+  box-shadow: 0 18px 42px rgba(0,0,0,.18);
+  background: rgba(0,0,0,.16);
+}
+.guide-content img, .guide-image, .guide-img, .error-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+.image-container, .screenshot-container, .error-img-container, .guide-image-container {
+  max-width: 100%;
+  margin: 18px auto;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.guide-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 15px;
+  background: #0b1220;
+  color: #edf4ff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 10px 26px rgba(0,0,0,.12);
+  line-height: 1.65;
+  tab-size: 2;
+}
+.guide-content :not(pre) > code {
+  padding: .16em .42em;
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: var(--text-main);
+  overflow-wrap: anywhere;
+}
+.guide-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card-bg);
+}
+.guide-content th {
+  background: rgba(var(--glow-rgb), .13);
+  color: var(--text-main);
+  text-align: left;
+}
+.guide-content th, .guide-content td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+}
+.guide-content tr:last-child td { border-bottom: 0; }
+.guide-content th:last-child, .guide-content td:last-child { border-right: 0; }
+.guide-content blockquote {
+  margin: 20px 0;
+  padding: 16px 20px;
+  border-left: 3px solid var(--red);
+  border-radius: 0 13px 13px 0;
+  background: var(--btn-bg);
+  color: var(--text-muted);
+}
+.dl-btn, .mini-btn {
+  border-radius: 11px;
+  box-shadow: 0 7px 18px rgba(var(--glow-rgb), .18);
+}
+.dl-btn {
+  padding: 12px 19px;
+  background: linear-gradient(110deg, var(--red), #315edc);
+}
+.dl-btn:hover, .mini-btn:hover { transform: translateY(-2px); }
+.mobile-sidebar-toggle {
+  border: 1px solid rgba(var(--glow-rgb), .45);
+  border-radius: 13px;
+  background: linear-gradient(120deg, rgba(var(--glow-rgb), .16), var(--card-bg));
+  color: var(--text-main);
+  box-shadow: 0 8px 22px rgba(0,0,0,.09);
+}
+#btn-back-to-top {
+  background: linear-gradient(145deg, var(--red), #315edc);
+  box-shadow: 0 10px 28px rgba(var(--glow-rgb), .30);
+}
+#btn-back-to-top:focus-visible, .mobile-sidebar-toggle:focus-visible,
+.social-icon-btn:focus-visible, .back-btn:focus-visible,
+.sidebar a:focus-visible, .guide-content a:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+@media (max-width: 950px) {
+  .main-layout { gap: 16px; padding: 16px; }
+  .guide-container { border-radius: 22px; }
+  .sidebar { border-radius: 18px; }
+}
+@media (max-width: 650px) {
+  .main-layout { padding: 10px; gap: 12px; }
+  .guide-container {
+    padding: 22px 17px !important;
+    border-radius: 19px;
+  }
+  .guide-header { margin-bottom: 22px; padding-bottom: 20px; }
+  .guide-title-container { padding: 25px 17px; border-radius: 17px; }
+  .guide-title-container h1 { font-size: clamp(1.75rem, 8vw, 2.4rem) !important; }
+  .guide-content h2 { margin-top: 29px; padding: 10px 12px; }
+  .alert-box { padding: 14px 15px; }
+  .guide-content pre { padding: 14px; border-radius: 12px; }
+  .guide-content table { min-width: 480px; }
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .guide-content pre {
+    border-color: rgba(20,35,60,.14);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-icon-btn, .back-btn, .dl-btn, .mini-btn, .sidebar-link { transition: none !important; }
+  .dl-btn:hover, .mini-btn:hover, .sidebar-link:hover { transform: none !important; }
+}
+/* ===== fin del diseño integrado en la guía ===== */
+
+</style>
+</head>
+<body>
+<div id="accessWallOverlay" style="display: none;">
+  <section class="disney-access-card" aria-labelledby="aw-main-title">
+    <header class="aw-gate-header">
+      <div class="aw-gate-language" aria-label="Language selector">
+        <span aria-hidden="true">🌐</span>
+        <select id="accessLanguageSelector" aria-label="Seleccionar idioma"></select>
+      </div>
+      <h1 class="disney-logo-title" id="aw-main-title">LA PRESA</h1>
+      <p class="disney-subtitle" id="txt_awGateSubtitle">Elige cómo quieres apoyar el proyecto y acceder a la guía.</p>
+      <div class="disney-progress-bar" role="progressbar" aria-label="Progreso de acceso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="disney-progress-fill" id="disney-progress"></div></div>
+    </header>
+    <div class="aw-options-grid">
+      <article class="aw-option-card aw-option-subscribe">
+        <div class="aw-option-kicker"><span class="aw-option-number">01</span><span class="aw-option-tag" id="txt_awFreeTag">GRATIS</span></div>
+        <h2 id="txt_awSubscribeTitle">Suscribirse</h2>
+        <p class="aw-option-description" id="txt_awSubscribeDescription">Apoya el canal de YouTube. Después, completa la selección de un producto para acceder gratis.</p>
+        <button class="disney-step-btn aw-youtube-subscribe-btn" id="disney-btn1" type="button">
+          <span class="aw-youtube-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="img" focusable="false"><path fill="#FF0033" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8Z"/><path fill="#fff" d="m9.6 15.7 6.3-3.7-6.3-3.7v7.4Z"/></svg></span>
+          <span id="txt_awSubscribeButton">Abrir YouTube y suscribirme</span>
+        </button>
+      </article>
+      <article class="aw-option-card aw-option-giveaway">
+        <div class="aw-option-kicker"><span class="aw-option-number">02</span><span class="aw-option-tag aw-free-tag-giveaway">GRATIS</span></div>
+        <h2 id="txt_awGiftTitle">Amazon Prime</h2>
+        <p class="aw-option-description" id="txt_awGiftDescription">Visita Amazon Prime para completar esta opción gratuita.</p>
+        <button class="disney-step-btn" id="disney-btn2" type="button"><span class="aw-prime-mark" aria-hidden="true"><svg viewBox="0 0 56 42" xmlns="http://www.w3.org/2000/svg" focusable="false"><text x="2" y="20" fill="#16C8FF" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="800" letter-spacing="-1.2">prime</text><path d="M5 25 C16 37 38 37.5 50 25.5" fill="none" stroke="#FFB000" stroke-width="3" stroke-linecap="round"/><path d="M44.5 24.8 L51 25.5 L47.3 31.2" fill="none" stroke="#FFB000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span id="txt_awGiveawayButton">Amazon Prime</span></button>
+        <div id="disneyProductsContainer" aria-label="Productos"></div>
+      </article>
+      <article class="aw-option-card aw-option-paypal">
+        <div class="aw-option-kicker"><span class="aw-option-number">03</span><span class="aw-option-tag aw-option-tag-voluntary" id="txt_awVoluntaryTag">OPCIONAL</span></div>
+        <h2 id="txt_awPaypalTitle">Contribuir con PayPal</h2>
+        <p class="aw-option-description" id="txt_awPaypalDescription">Haz una aportación voluntaria y accede directamente a la guía, sin completar los otros dos pasos.</p>
+        <div class="aw-paypal-label" id="txt_awPaypalAmountLabel">Elige la cantidad de tu aportación</div>
+        <div class="aw-amount-options" id="aw-amount-options" role="group" aria-label="Importe de la contribución">
+          <button type="button" class="aw-amount-chip is-selected" data-aw-amount="1" aria-pressed="true">1 €</button>
+          <button type="button" class="aw-amount-chip" data-aw-amount="2" aria-pressed="false">2 €</button>
+          <button type="button" class="aw-amount-chip" data-aw-amount="3" aria-pressed="false">3 €</button>
+          <button type="button" class="aw-amount-chip" data-aw-amount="5" aria-pressed="false">5 €</button>
+          <button type="button" class="aw-amount-chip" data-aw-amount="10" aria-pressed="false">10 €</button>
+          <button type="button" class="aw-amount-chip" data-aw-amount="custom" id="txt_awPaypalCustomLabel" aria-pressed="false">Otra cantidad (€)</button>
+        </div>
+        <label class="aw-custom-label" for="aw-paypal-custom-amount" id="txt_awPaypalCustomPlaceholder" style="display:none">Otra cantidad (€)</label>
+        <input id="aw-paypal-custom-amount" class="aw-custom-amount" type="number" min="0.50" max="10000" step="0.01" inputmode="decimal" placeholder="Otra cantidad (€)" style="display:none" />
+        <div id="aw-paypal-button-container" aria-live="polite"></div>
+        <p class="aw-paypal-status" id="aw-paypal-status" role="status" aria-live="polite"></p>
+      </article>
+    </div>
+  </section>
+</div>
+<div id="mainHub">
+<div class="topbar">
+<div class="topbar-left">
+<div class="logo" onclick="window.location.href='../index.html'">LA PRESA</div>
+<div class="social-group">
+<button class="social-icon-btn" id="discordBtn" onclick="window.open('https://discord.gg/8Fv8GDg', '_blank')" title="Discord">
+<svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
+</button>
+<button class="social-icon-btn" id="kofiBtn" onclick="window.open('https://ko-fi.com/lapresa', '_blank')" title="Ko-fi">
+<svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"></path></svg>
+</button>
+</div>
+</div>
+<div class="right-tools">
+<button class="social-icon-btn" id="guideBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/guias.html', '_self')" title="Guías">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zM21 18.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"></path></svg>
+</button>
+<button class="social-icon-btn" id="productsBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/productos.html', '_self')" title="Productos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1v2zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg>
+</button>
+<!-- BOTÓN RADAR ESTILO SATÉLITE ORBITAL -->
+<button class="social-icon-btn" id="videosBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/videoteca.html', '_self')" title="Vídeos">
+<svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+</button>
+<button class="social-icon-btn" id="radarBtn" onclick="window.open('https://kelonio-hub.github.io/Archivos-Kelonio/actualizaciones.html', '_self')" title="Radar de Actualizaciones">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24">
+<path d="M13 7 9 3 5 7l4 4" fill="rgba(255,255,255,0.08)"></path>
+<path d="m17 11 4 4-4 4-4-4" fill="rgba(255,255,255,0.08)"></path>
+<path d="m8 12 4 4 6-6-4-4Z" fill="currentColor"></path>
+<path d="m16 8 3-3"></path>
+<path d="M9 21a6 6 0 0 0-6-6"></path>
+<path d="M5 21a2 2 0 0 0-2-2"></path>
+</svg>
+<span class="radar-badge" id="radarBadge"></span>
+</button>
+<a class="back-btn" href="../guias.html">
+<span id="txt_backBtnText">← Volver a las Guías</span>
+</a>
+<div class="config-group">
+<div class="theme-dots-container" id="themeDots"></div>
+<select id="languageSelector"></select>
+</div>
+</div>
+</div>
+<div class="main-layout">
+<aside class="sidebar" id="guideSidebar">
+<div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>
+</aside>
+<main class="guide-container">
+<div class="guide-header">
+  <div class="guide-title-container">
+    <h1 id="txt_title">Mundo Pokémon: POKEBANK</h1>
+  </div>
+</div>
+<div class="guide-content">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/6GROvOTf_B4" srcdoc="&lt;style&gt;*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;object-fit:cover;height:100%}span{width:60px;height:40px;background-color:#e50914;border-radius:10px;text-align:center;line-height:40px;color:white;font-size:20px;left:50%;top:50%;transform:translate(-50%,-50%);transition:transform 0.2s}a:hover span{transform:translate(-50%,-50%) scale(1.1)}&lt;/style&gt;&lt;a href=https://www.youtube.com/embed/6GROvOTf_B4?autoplay=1&gt;&lt;img src=https://img.youtube.com/vi/6GROvOTf_B4/maxresdefault.jpg alt='Video'&gt;&lt;span&gt;▶&lt;/span&gt;&lt;/a&gt;">
+</iframe>
+</div>
+<div class="alert-box" id="txt_alert1">
+<strong>⚠️ Importante:</strong> Los Pokémon creados o modificados pueden ser traspasados al Pokébank y Pokémon Home si cumplen con las normas de legalidad del juego. </div>
+<h2 id="txt_h2_req">Información y Descargas</h2>
+<ul>
+<li id="txt_req1"><strong>POKEBANK:</strong> Permite almacenar Pokémon de 6ª Generación y traspasarlos a Pokémon Home. <a href="https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon" target="_blank">Más Información</a></li>
+<li id="txt_req2"><strong>POKÉ TRASLADADOR:</strong> Permite almacenar Pokémon de 3ª a 5ª Generación y traspasarlos a Pokémon Home. <a href="https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon" target="_blank">Más Información</a></li>
+<li><span id="txt_req3">Archivos necesarios (Mundo Pokémon):</span> <br/>
+<!-- ================= INICIO WIDGET PAYPAL MULTI-IDIOMA REDISEÑADO ================= -->
+<style id="paypal-support-styles">
+#paypal-support-widget{--pp-accent:var(--red,#1677e8);--pp-text:var(--text-main,#f5f7fb);--pp-muted:var(--text-muted,#aeb7c5);--pp-surface:var(--card-bg,rgba(255,255,255,.045));--pp-border:var(--glass-border,rgba(255,255,255,.12));width:100%;max-width:920px;margin:24px auto;padding:clamp(18px,3vw,28px);border:1px solid var(--pp-border);border-radius:24px;background:linear-gradient(135deg,rgba(0,123,255,.10),transparent 46%),var(--pp-surface);box-shadow:0 16px 42px rgba(0,0,0,.13);color:var(--pp-text);font-family:inherit;box-sizing:border-box;text-align:left}
+#paypal-support-widget *{box-sizing:border-box}
+#paypal-support-widget .pp-header{text-align:center;margin:0 auto 22px;max-width:680px}
+#paypal-support-widget .pp-header h3{margin:0 0 7px;color:var(--pp-text);font-size:clamp(1.2rem,2.6vw,1.65rem);line-height:1.25;font-weight:800;letter-spacing:-.02em}
+#paypal-support-widget .pp-header p{margin:0;color:var(--pp-muted);font-size:.96rem;line-height:1.55}
+#paypal-support-widget .pp-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+#paypal-support-widget .pp-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:clamp(17px,2.5vw,23px);border:1px solid var(--pp-border);border-radius:19px;background:rgba(255,255,255,.035);backdrop-filter:blur(8px)}
+:root[data-theme="light"] #paypal-support-widget .pp-card{background:rgba(255,255,255,.72)}
+#paypal-support-widget .pp-card-top{display:flex;align-items:center;gap:9px;margin-bottom:13px}
+#paypal-support-widget .pp-icon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:12px;background:rgba(0,123,255,.13);font-size:19px}
+#paypal-support-widget .pp-badge{display:inline-flex;align-items:center;width:max-content;max-width:100%;padding:5px 9px;border-radius:999px;background:rgba(0,123,255,.12);color:var(--pp-accent);font-size:.7rem;font-weight:800;letter-spacing:.035em;text-transform:uppercase}
+#paypal-support-widget .pp-card h4{margin:0 0 7px;color:var(--pp-text);font-size:1.13rem;line-height:1.3;font-weight:800}
+#paypal-support-widget .pp-card p{margin:0 0 18px;color:var(--pp-muted);font-size:.9rem;line-height:1.55}
+#paypal-support-widget .pp-download-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:48px;margin-top:auto;padding:12px 16px;border:0;border-radius:12px;background:var(--pp-accent);color:#fff!important;text-align:center;text-decoration:none!important;font-size:.96rem;font-weight:800;line-height:1.3;box-shadow:0 7px 18px rgba(0,123,255,.2);transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+#paypal-support-widget .pp-download-btn:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 10px 22px rgba(0,123,255,.26)}
+#paypal-support-widget .pp-amount-label{display:block;margin:0 0 9px;color:var(--pp-text);font-size:.83rem;font-weight:750}
+#paypal-support-widget .pp-amount-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:12px}
+#paypal-support-widget .pp-amount-option{min-width:0;min-height:42px;padding:8px 5px;border:1px solid var(--pp-border);border-radius:10px;background:rgba(127,127,127,.07);color:var(--pp-text);font:inherit;font-size:.91rem;font-weight:750;cursor:pointer;transition:background .16s ease,border-color .16s ease,transform .16s ease}
+#paypal-support-widget .pp-amount-option:hover{border-color:var(--pp-accent);transform:translateY(-1px)}
+#paypal-support-widget .pp-amount-option[aria-pressed="true"]{border-color:var(--pp-accent);background:var(--pp-accent);color:#fff;box-shadow:0 5px 14px rgba(0,123,255,.2)}
+#paypal-support-widget .pp-custom-input{display:block;width:100%;min-height:44px;margin:0 0 11px;padding:10px 12px;border:1px solid var(--pp-border);border-radius:10px;background:var(--input-bg,rgba(127,127,127,.08));color:var(--pp-text);font:inherit;font-size:.95rem}
+#paypal-support-widget .pp-custom-input:focus{outline:2px solid var(--pp-accent);outline-offset:2px}
+#paypal-support-widget .pp-note{margin:0 0 11px!important;font-size:.76rem!important;text-align:center}
+#paypal-support-widget #paypal-button-container{min-height:45px;margin-top:auto}
+#paypal-support-widget .pp-status{display:none;margin:10px 0 0;padding:10px 12px;border-radius:10px;font-size:.83rem;line-height:1.45}
+#paypal-support-widget .pp-status.pp-error{background:rgba(220,53,69,.11);border:1px solid rgba(220,53,69,.28);color:#dc5968}
+#paypal-support-widget .pp-status.pp-success{display:none;background:rgba(34,197,94,.11);border:1px solid rgba(34,197,94,.25);color:#31a66a;font-weight:750}
+#paypal-support-widget .pp-footnote{margin:16px 0 0;color:var(--pp-muted);font-size:.76rem;line-height:1.45;text-align:center}
+#paypal-support-widget button:focus-visible,#paypal-support-widget a:focus-visible{outline:3px solid var(--pp-accent);outline-offset:3px}
+@media(max-width:680px){#paypal-support-widget{margin:18px 0;padding:16px;border-radius:18px}#paypal-support-widget .pp-columns{grid-template-columns:1fr;gap:12px}#paypal-support-widget .pp-header{margin-bottom:17px}#paypal-support-widget .pp-card{padding:17px}#paypal-support-widget .pp-card p{margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){#paypal-support-widget *{transition:none!important}}
+</style>
+<div id="paypal-support-widget" aria-labelledby="pp-section-title">
+  <div class="pp-header">
+    <h3 id="pp-section-title"></h3>
+    <p id="pp-section-subtitle"></p>
+  </div>
+  <div class="pp-columns">
+    <section class="pp-card pp-card--free" aria-labelledby="pp-free-title">
+      <div class="pp-card-top"><span class="pp-icon" aria-hidden="true">↓</span><span class="pp-badge" id="pp-free-badge"></span></div>
+      <h4 id="pp-free-title"></h4>
+      <p id="pp-free-description"></p>
+      <a href="https://www.mediafire.com/folder/f7nlpuxx74bbc/MUNDO+POKÉMON" id="pp-download-btn" class="pp-download-btn" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⇩</span><span id="pp-download-label"></span></a>
+    </section>
+    <section class="pp-card pp-card--support" aria-labelledby="pp-support-title">
+      <div class="pp-card-top"><span class="pp-icon" aria-hidden="true">♡</span><span class="pp-badge" id="pp-support-badge"></span></div>
+      <h4 id="pp-support-title"></h4>
+      <p id="pp-support-description"></p>
+      <label class="pp-amount-label" id="pp-amount-label"></label>
+      <div class="pp-amount-grid" id="pp-amount-group" role="group" aria-label="Donation amount">
+        <button type="button" class="pp-amount-option" data-amount="1" aria-pressed="true">1 €</button>
+        <button type="button" class="pp-amount-option" data-amount="2" aria-pressed="false">2 €</button>
+        <button type="button" class="pp-amount-option" data-amount="3" aria-pressed="false">3 €</button>
+        <button type="button" class="pp-amount-option" data-amount="5" aria-pressed="false">5 €</button>
+        <button type="button" class="pp-amount-option" data-amount="10" aria-pressed="false">10 €</button>
+        
+        <button type="button" class="pp-amount-option" data-amount="custom" aria-pressed="false" id="pp-custom-option"></button>
+      </div>
+      <input type="number" id="pp-custom-amount" class="pp-custom-input" min="0.50" step="0.01" inputmode="decimal" style="display:none" aria-label="Custom amount">
+      <p class="pp-note" id="pp-paypal-note"></p>
+      <div id="paypal-button-container" aria-live="polite"></div>
+      <div id="pp-error-msg" class="pp-status pp-error" role="alert"></div>
+      <div id="pp-success-msg" class="pp-status pp-success" role="status"></div>
+    </section>
+  </div>
+  <p class="pp-footnote" id="pp-footnote"></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const legacyCopy = {
+        es: { title: "¡Ahora puedes aportar al proyecto! [ARCHIVOS]", subtitle: "(La opción gratuita siempre estará disponible)", free: "Gratis", other: "Otro importe", placeholder: "Ej: 2.50", download: "Descargar Archivos", success: "Gracias por apoyar el proyecto. Tu pago se ha recibido correctamente." },
+        en: { title: "You can now support the project! [FILES]", subtitle: "(The free option will always be available)", free: "Free", other: "Other amount", placeholder: "Ex: 2.50", download: "Download Files", success: "Thank you for supporting the project. Your payment was successful." },
+        fr: { title: "Vous pouvez désormais soutenir le projet! [FICHIERS]", subtitle: "(L'option gratuite sera toujours disponible)", free: "Gratuit", other: "Autre montant", placeholder: "Ex: 2.50", download: "Télécharger les fichiers", success: "Merci de soutenir le projet. Votre paiement a bien été reçu." },
+        it: { title: "Ora puoi sostenere il progetto! [FILE]", subtitle: "(L'opzione gratuita sarà sempre disponibile)", free: "Gratis", other: "Altro importo", placeholder: "Es: 2.50", download: "Scarica i file", success: "Grazie per aver sostenuto il progetto. Il tuo pagamento è stato ricevuto correttamente." },
+        de: { title: "Du kannst das Projekt jetzt unterstützen! [DATEIEN]", subtitle: "(Die kostenlose Option wird immer verfügbar sein)", free: "Kostenlos", other: "Anderer Betrag", placeholder: "Bsp: 2.50", download: "Dateien herunterladen", success: "Danke, dass du das Projekt unterstützt. Deine Zahlung war erfolgreich." },
+        pt: { title: "Agora você pode apoiar o projeto! [ARQUIVOS]", subtitle: "(A opção gratuita estará sempre disponível)", free: "Grátis", other: "Outro valor", placeholder: "Ex: 2.50", download: "Baixar Arquivos", success: "Obrigado por apoiar o projeto. Seu pagamento foi recebido com sucesso." },
+        ja: { title: "プロジェクトを支援できるようになりました！ [ファイル]", subtitle: "（無料オプションは常に利用可能です）", free: "無料", other: "その他の金額", placeholder: "例: 2.50", download: "ファイルをダウンロード", success: "プロジェクトをご支援いただきありがとうございます。お支払いが正常に完了しました。" },
+        ko: { title: "이제 프로젝트를 후원할 수 있습니다! [파일]", subtitle: "(무료 옵션은 항상 제공됩니다)", free: "무료", other: "기타 금액", placeholder: "예: 2.50", download: "파일 다운로드", success: "프로젝트를 지원해 주셔서 감사합니다. 결제가 성공적으로 완료되었습니다." }
+    };
+  const uiText = {"es":{"sectionTitle":"¿Te está siendo útil esta guía?","sectionSubtitle":"Puedes descargar los archivos gratis o colaborar voluntariamente con el proyecto.","footnote":"La aportación se procesa de forma segura a través de PayPal.","freeBadge":"Siempre gratis","freeTitle":"Descarga gratuita","freeDescription":"Accede a los archivos sin pagar. La descarga seguirá estando disponible para todos.","download":"Descargar gratis","supportBadge":"Aportación voluntaria","supportTitle":"Apoya el proyecto","supportDescription":"Tu ayuda permite mantener las guías y seguir creando contenido.","amountLabel":"Elige una cantidad","custom":"Otra cantidad","customPlaceholder":"Introduce el importe en euros","paypalNote":"Pago único y voluntario · No es una suscripción","validation":"Introduce una cantidad válida de al menos 0,50 €.","loading":"Conectando con PayPal…","loadError":"No se ha podido cargar PayPal. Comprueba tu conexión y vuelve a intentarlo.","paymentError":"No se ha podido completar la operación. Puedes intentarlo de nuevo.","cancel":"Has cancelado el pago. No se ha realizado ningún cargo.","successTitle":"¡Muchas gracias por tu apoyo!"},"en":{"sectionTitle":"Finding this guide helpful?","sectionSubtitle":"You can download the files for free or voluntarily support the project.","footnote":"Contributions are processed securely by PayPal.","freeBadge":"Always free","freeTitle":"Free download","freeDescription":"Get the files without paying. The download will always remain available to everyone.","download":"Download for free","supportBadge":"Voluntary contribution","supportTitle":"Support the project","supportDescription":"Your support helps us maintain the guides and create more content.","amountLabel":"Choose an amount","custom":"Other amount","customPlaceholder":"Enter an amount in euros","paypalNote":"One-time voluntary payment · Not a subscription","validation":"Enter a valid amount of at least €0.50.","loading":"Connecting to PayPal…","loadError":"PayPal could not be loaded. Check your connection and try again.","paymentError":"The payment could not be completed. Please try again.","cancel":"You cancelled the payment. You have not been charged.","successTitle":"Thank you so much for your support!"},"fr":{"sectionTitle":"Ce guide vous est utile ?","sectionSubtitle":"Vous pouvez télécharger les fichiers gratuitement ou soutenir le projet librement.","footnote":"La contribution est traitée de manière sécurisée par PayPal.","freeBadge":"Toujours gratuit","freeTitle":"Téléchargement gratuit","freeDescription":"Accédez aux fichiers sans payer. Le téléchargement restera toujours accessible à tous.","download":"Télécharger gratuitement","supportBadge":"Contribution volontaire","supportTitle":"Soutenir le projet","supportDescription":"Votre soutien nous aide à maintenir les guides et à créer de nouveaux contenus.","amountLabel":"Choisissez un montant","custom":"Autre montant","customPlaceholder":"Saisissez le montant en euros","paypalNote":"Paiement unique et volontaire · Sans abonnement","validation":"Saisissez un montant valide d’au moins 0,50 €.","loading":"Connexion à PayPal…","loadError":"Impossible de charger PayPal. Vérifiez votre connexion et réessayez.","paymentError":"Le paiement n’a pas pu être effectué. Veuillez réessayer.","cancel":"Vous avez annulé le paiement. Aucun montant n’a été débité.","successTitle":"Merci beaucoup pour votre soutien !"},"it":{"sectionTitle":"Questa guida ti è utile?","sectionSubtitle":"Puoi scaricare i file gratuitamente oppure sostenere il progetto in modo volontario.","footnote":"Il contributo viene elaborato in modo sicuro tramite PayPal.","freeBadge":"Sempre gratuito","freeTitle":"Download gratuito","freeDescription":"Ottieni i file senza pagare. Il download resterà sempre disponibile per tutti.","download":"Scarica gratis","supportBadge":"Contributo volontario","supportTitle":"Sostieni il progetto","supportDescription":"Il tuo aiuto ci permette di mantenere le guide e creare nuovi contenuti.","amountLabel":"Scegli un importo","custom":"Altro importo","customPlaceholder":"Inserisci l’importo in euro","paypalNote":"Pagamento unico e volontario · Non è un abbonamento","validation":"Inserisci un importo valido di almeno 0,50 €.","loading":"Connessione a PayPal…","loadError":"Impossibile caricare PayPal. Controlla la connessione e riprova.","paymentError":"Non è stato possibile completare il pagamento. Riprova.","cancel":"Hai annullato il pagamento. Non è stato effettuato alcun addebito.","successTitle":"Grazie mille per il tuo supporto!"},"de":{"sectionTitle":"Hilft dir dieser Guide weiter?","sectionSubtitle":"Du kannst die Dateien kostenlos herunterladen oder das Projekt freiwillig unterstützen.","footnote":"Der Beitrag wird sicher über PayPal abgewickelt.","freeBadge":"Immer kostenlos","freeTitle":"Kostenloser Download","freeDescription":"Lade die Dateien ohne Bezahlung herunter. Der Download bleibt für alle kostenlos verfügbar.","download":"Kostenlos herunterladen","supportBadge":"Freiwilliger Beitrag","supportTitle":"Projekt unterstützen","supportDescription":"Deine Unterstützung hilft uns, die Anleitungen zu pflegen und neue Inhalte zu erstellen.","amountLabel":"Betrag auswählen","custom":"Anderer Betrag","customPlaceholder":"Betrag in Euro eingeben","paypalNote":"Einmalige freiwillige Zahlung · Kein Abonnement","validation":"Bitte gib einen gültigen Betrag von mindestens 0,50 € ein.","loading":"Verbindung zu PayPal…","loadError":"PayPal konnte nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.","paymentError":"Die Zahlung konnte nicht abgeschlossen werden. Bitte versuche es erneut.","cancel":"Du hast die Zahlung abgebrochen. Es wurde nichts abgebucht.","successTitle":"Vielen Dank für deine Unterstützung!"},"pt":{"sectionTitle":"Este guia está a ser útil?","sectionSubtitle":"Podes descarregar os ficheiros gratuitamente ou apoiar voluntariamente o projeto.","footnote":"O pagamento é processado de forma segura pelo PayPal.","freeBadge":"Sempre gratuito","freeTitle":"Transferência gratuita","freeDescription":"Acede aos ficheiros sem pagar. A transferência continuará disponível gratuitamente para todos.","download":"Descarregar grátis","supportBadge":"Contribuição voluntária","supportTitle":"Apoiar o projeto","supportDescription":"O teu apoio ajuda-nos a manter os guias e a criar mais conteúdo.","amountLabel":"Escolhe um valor","custom":"Outro valor","customPlaceholder":"Introduz o valor em euros","paypalNote":"Pagamento único e voluntário · Não é uma subscrição","validation":"Introduz um valor válido de pelo menos 0,50 €.","loading":"A ligar ao PayPal…","loadError":"Não foi possível carregar o PayPal. Verifica a ligação e tenta novamente.","paymentError":"Não foi possível concluir o pagamento. Tenta novamente.","cancel":"Cancelaste o pagamento. Não foi cobrado qualquer valor.","successTitle":"Muito obrigado pelo teu apoio!"},"ja":{"sectionTitle":"このガイドは役に立ちましたか？","sectionSubtitle":"ファイルは無料でダウンロードできます。プロジェクトへの支援も任意で受け付けています。","footnote":"お支払いはPayPalを通じて安全に処理されます。","freeBadge":"いつでも無料","freeTitle":"無料ダウンロード","freeDescription":"お支払いなしでファイルを入手できます。ダウンロードは今後も誰でも無料で利用できます。","download":"無料でダウンロード","supportBadge":"任意のご支援","supportTitle":"プロジェクトを応援","supportDescription":"ご支援はガイドの維持と新しいコンテンツの作成に役立ちます。","amountLabel":"金額を選択","custom":"その他の金額","customPlaceholder":"金額をユーロで入力","paypalNote":"一回限りの任意のお支払い・定期購入ではありません","validation":"0.50 €以上の有効な金額を入力してください。","loading":"PayPalに接続中…","loadError":"PayPalを読み込めませんでした。接続を確認して再試行してください。","paymentError":"お支払いを完了できませんでした。もう一度お試しください。","cancel":"お支払いがキャンセルされました。請求は発生していません。","successTitle":"ご支援いただき、ありがとうございます！"},"ko":{"sectionTitle":"이 가이드가 도움이 되었나요?","sectionSubtitle":"파일은 무료로 다운로드할 수 있으며, 프로젝트 후원은 선택 사항입니다.","footnote":"결제는 PayPal을 통해 안전하게 처리됩니다.","freeBadge":"항상 무료","freeTitle":"무료 다운로드","freeDescription":"결제 없이 파일을 이용하세요. 다운로드는 앞으로도 누구나 무료로 이용할 수 있습니다.","download":"무료로 다운로드","supportBadge":"자율 후원","supportTitle":"프로젝트 후원하기","supportDescription":"여러분의 후원은 가이드를 유지하고 새로운 콘텐츠를 만드는 데 도움이 됩니다.","amountLabel":"금액 선택","custom":"다른 금액","customPlaceholder":"유로 금액 입력","paypalNote":"일회성 자율 결제 · 정기 구독이 아닙니다","validation":"0.50 € 이상의 올바른 금액을 입력해 주세요.","loading":"PayPal에 연결하는 중…","loadError":"PayPal을 불러오지 못했습니다. 연결을 확인한 후 다시 시도해 주세요.","paymentError":"결제를 완료하지 못했습니다. 다시 시도해 주세요.","cancel":"결제가 취소되었습니다. 청구된 금액은 없습니다.","successTitle":"후원해 주셔서 정말 감사합니다!"}};
+  const clientId = "BAAVNxy3Tb2YimilSFmYtRneRHtNa9WqZwfcVXSwpX88LHG9OCSn7hwPMTassgMIf5oyVHms5YdsmQpUZk";
+  const locales = { es:'es_ES', en:'en_US', fr:'fr_FR', it:'it_IT', de:'de_DE', pt:'pt_PT', ja:'ja_JP', ko:'ko_KR' };
+  const root = document.getElementById('paypal-support-widget');
+  if (!root) return;
+
+  const amountButtons = Array.from(root.querySelectorAll('.pp-amount-option'));
+  const customInput = root.querySelector('#pp-custom-amount');
+  const paypalContainer = root.querySelector('#paypal-button-container');
+  const errorMsg = root.querySelector('#pp-error-msg');
+  const successMsg = root.querySelector('#pp-success-msg');
+  const languageSelector = document.getElementById('languageSelector');
+  let selectedAmount = '1';
+  let activeLang = 'en';
+
+  function getLang() {
+    const candidates = [
+      languageSelector && languageSelector.value,
+      (() => { try { return window.localStorage.getItem('preferredLanguage'); } catch (_) { return ''; } })(),
+      navigator.language || navigator.userLanguage || 'en'
+    ];
+    for (const candidate of candidates) {
+      const code = String(candidate || '').substring(0,2).toLowerCase();
+      if (uiText[code]) return code;
+    }
+    return 'en';
+  }
+
+  function setError(message) {
+    errorMsg.textContent = message;
+    errorMsg.style.display = 'block';
+  }
+  function clearError() {
+    errorMsg.textContent = '';
+    errorMsg.style.display = 'none';
+  }
+  function getAmount() {
+    const raw = selectedAmount === 'custom' ? String(customInput.value || '').trim().replace(',', '.') : selectedAmount;
+    const amount = Number(raw);
+    if (!Number.isFinite(amount) || amount < 0.5) return null;
+    return amount.toFixed(2);
+  }
+
+  function chooseAmount(value) {
+    selectedAmount = value;
+    amountButtons.forEach(button => {
+      const active = button.dataset.amount === value;
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    customInput.style.display = value === 'custom' ? 'block' : 'none';
+    if (value !== 'custom') customInput.value = '';
+    clearError();
+  }
+
+  amountButtons.forEach(button => button.addEventListener('click', () => chooseAmount(button.dataset.amount)));
+  customInput.addEventListener('input', clearError);
+
+  function renderPayPal() {
+    if (!window.paypal || typeof window.paypal.Buttons !== 'function') {
+      setError(uiText[activeLang].loadError);
+      return;
+    }
+    paypalContainer.innerHTML = '';
+    try {
+      window.paypal.Buttons({
+        style: { layout:'vertical', color:'gold', shape:'pill', label:'paypal', tagline:false },
+        onClick: function(data, actions) {
+          if (!getAmount()) {
+            setError(uiText[activeLang].validation);
+            return actions.reject();
+          }
+          clearError();
+          return actions.resolve();
+        },
+        createOrder: function(data, actions) {
+          const amount = getAmount();
+          if (!amount) {
+            setError(uiText[activeLang].validation);
+            return Promise.reject(new Error('Invalid contribution amount'));
+          }
+          return actions.order.create({
+            purchase_units: [{ amount: { currency_code:'EUR', value:amount } }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function() {
+            successMsg.textContent = legacyCopy[activeLang]?.success || uiText[activeLang].successTitle;
+            successMsg.style.display = 'block';
+            clearError();
+          }).catch(function() {
+            setError(uiText[activeLang].paymentError);
+          });
+        },
+        onCancel: function() {
+          setError(uiText[activeLang].cancel);
+        },
+        onError: function() {
+          setError(uiText[activeLang].paymentError);
+        }
+      }).render('#paypal-button-container').catch(function() {
+        setError(uiText[activeLang].paymentError);
+      });
+    } catch (error) {
+      setError(uiText[activeLang].paymentError);
+    }
+  }
+
+  function loadPayPalSDK(lang) {
+    const scriptId = 'paypal-sdk-script';
+    const previous = document.getElementById(scriptId);
+    if (previous) previous.remove();
+    if (window.paypal) {
+      try { delete window.paypal; } catch (_) { window.paypal = undefined; }
+    }
+    paypalContainer.innerHTML = '<div style="text-align:center;color:var(--text-muted,#999);font-size:.82rem;padding:10px 0">' + uiText[lang].loading + '</div>';
+    const script = document.createElement('script');
+    script.id = scriptId;
+    script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(clientId) + '&currency=EUR&locale=' + encodeURIComponent(locales[lang] || 'en_US');
+    script.onload = function() { renderPayPal(); if (typeof awRenderPayPal === 'function') awRenderPayPal(); };
+    script.onerror = function() { setError(uiText[activeLang].loadError); };
+    document.body.appendChild(script);
+  }
+
+  function updateLanguage(reloadSDK) {
+    activeLang = getLang();
+    const t = uiText[activeLang];
+    root.querySelector('#pp-section-title').textContent = t.sectionTitle;
+    root.querySelector('#pp-section-subtitle').textContent = t.sectionSubtitle;
+    root.querySelector('#pp-free-badge').textContent = t.freeBadge;
+    root.querySelector('#pp-free-title').textContent = t.freeTitle;
+    root.querySelector('#pp-free-description').textContent = t.freeDescription;
+    root.querySelector('#pp-download-label').textContent = t.download;
+    root.querySelector('#pp-amount-group').setAttribute('aria-label', t.amountLabel);
+    root.querySelector('#pp-support-badge').textContent = t.supportBadge;
+    root.querySelector('#pp-support-title').textContent = t.supportTitle;
+    root.querySelector('#pp-support-description').textContent = t.supportDescription;
+    root.querySelector('#pp-amount-label').textContent = t.amountLabel;
+    root.querySelector('#pp-custom-option').textContent = t.custom;
+    customInput.placeholder = t.customPlaceholder;
+    customInput.setAttribute('aria-label', t.customPlaceholder);
+    root.querySelector('#pp-paypal-note').textContent = t.paypalNote;
+    root.querySelector('#pp-footnote').textContent = t.footnote;
+    successMsg.textContent = legacyCopy[activeLang]?.success || t.successTitle;
+    errorMsg.textContent = '';
+    errorMsg.style.display = 'none';
+    if (reloadSDK) loadPayPalSDK(activeLang);
+  }
+
+  window.refreshGuidePayPalLanguage = function() { updateLanguage(false); };
+
+  if (languageSelector) {
+    languageSelector.addEventListener('change', () => setTimeout(() => updateLanguage(true), 80));
+  }
+  chooseAmount('1');
+  updateLanguage(true);
+});
+</script>
+<!-- ================= FIN WIDGET PAYPAL MULTI-IDIOMA REDISEÑADO ================= -->
+</li>
+</ul>
+<p style="font-size: 14px; color: #888;"><em id="txt_reqNote">* Puedes visualizar nuestros <a class="mini-btn" href="../productos.html">productos</a></em></p>
+<h2 id="txt_h2_step1">Herramienta 1: PKSM (Consola)</h2>
+<ol>
+<li id="txt_s1_1">PKSM permite crear, editar y clonar Pokémon directamente desde los juegos en tu consola.</li>
+<li id="txt_s1_2">Todos los Pokémon que hayan sido modificados o creados con PKSM (siendo legales) podrán ser traspasados sin problemas al POKEBANK.</li>
+</ol>
+<h2 id="txt_h2_step2">Herramienta 2: PKHex (PC)</h2>
+<ol>
+<li id="txt_s2_1">PKHEX permite crear, editar y clonar Pokémon desde tu ordenador. Precisa de la extracción e importación de tu partida de guardado mediante el uso de <strong>checkpoint-3ds</strong> o <strong>jksm-3ds</strong>. Al igual que PKSM, permite traspasar las criaturas resultantes al POKEBANK.</li>
+</ol>
+<div class="alert-box" id="txt_alert2" style="border-left-color: var(--green); margin-top: 30px;">
+<strong>✅ ¡Excelente!</strong> Con estas herramientas y servicios tendrás control absoluto de tus cajas Pokémon para llevarlos al POKEBANK y Pokémon Home. </div>
+<p id="txt_footer">Explora el resto de nuestras guías y utilidades para exprimir tu consola al máximo.</p>
+</div>
+</main>
+</div>
+</div>
+<button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+<script>
+  /* ================= 4. DICCIONARIO PARA LOS 8 IDIOMAS ================= */
+  const translations = {
+    es: {
+      txt_awGateSubtitle: "Elige cómo quieres apoyar el proyecto y acceder a la guía.",
+      txt_awSubscribeTitle: "Suscribirse",
+      txt_awSubscribeDescription: "Apoya el canal de YouTube. Después, completa la selección de un producto para acceder gratis.",
+      txt_awSubscribeButton: "Abrir YouTube y suscribirme",
+      txt_awVerifying: "Verificando...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Visita Amazon Prime para completar esta opción gratuita.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Contribuir con PayPal",
+      txt_awPaypalDescription: "Haz una aportación voluntaria y accede directamente a la guía, sin completar los otros dos pasos.",
+      txt_awPaypalAmountLabel: "Elige la cantidad de tu aportación",
+      txt_awPaypalCustomPlaceholder: "Otra cantidad (€)",
+      txt_awFreeTag: "GRATIS",
+      txt_awVoluntaryTag: "OPCIONAL",
+      txt_awPaypalCustomLabel: "Otra cantidad (€)",
+      txt_awChooseProduct: "ELEGIR",
+      txt_backBtnText: "← Volver a las Guías", txt_otherGuides: "Otras Guías",
+      txt_awSubtitle: "¡Ya casi lo tienes! Completa estos dos pasos para acceder a la guía.", txt_awYtBtn: "1. Suscribirse al canal", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Vídeos", radar: "Radar de Actualizaciones", txt_products: "Productos", txt_guides: "Guías", txt_discord: "Únete a Discord", txt_kofi: "Apóyanos en Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "Mundo Pokémon: POKEBANK",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Los Pokémon creados o modificados pueden ser traspasados al Pokébank y Pokémon Home si cumplen con las normas de legalidad del juego.",
+      txt_h2_req: "Información y Descargas", 
+      txt_req1: "<strong>POKEBANK:</strong> Permite almacenar Pokémon de 6ª Generación y traspasarlos a Pokémon Home. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Más Información</a>", 
+      txt_req2: "<strong>POKÉ TRASLADADOR:</strong> Permite almacenar Pokémon de 3ª a 5ª Generación y traspasarlos a Pokémon Home. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Más Información</a>", 
+      txt_req3: "Archivos necesarios (Mundo Pokémon):", 
+      txt_reqBtn: "Descargar Archivos", 
+      txt_reqNote: "* Puedes visualizar nuestros <a href='../productos.html' class='mini-btn'>productos</a>",
+      
+      txt_h2_step1: "Herramienta 1: PKSM (Consola)",
+      txt_s1_1: "PKSM permite crear, editar y clonar Pokémon directamente desde los juegos en tu consola.", 
+      txt_s1_2: "Todos los Pokémon que hayan sido modificados o creados con PKSM (siendo legales) podrán ser traspasados sin problemas al POKEBANK.",
+      
+      txt_h2_step2: "Herramienta 2: PKHex (PC)",
+      txt_s2_1: "PKHEX permite crear, editar y clonar Pokémon desde tu ordenador. Precisa de la extracción e importación de tu partida de guardado mediante el uso de <strong>checkpoint-3ds</strong> o <strong>jksm-3ds</strong>. Al igual que PKSM, permite traspasar las criaturas resultantes al POKEBANK.",
+
+      txt_alert2: "<strong>✅ ¡Excelente!</strong> Con estas herramientas y servicios tendrás control absoluto de tus cajas Pokémon para llevarlos al POKEBANK y Pokémon Home.", 
+      txt_footer: "Explora el resto de nuestras guías y utilidades para exprimir tu consola al máximo."
+    },
+    en: {
+      txt_awGateSubtitle: "Choose how you would like to support the project and access the guide.",
+      txt_awSubscribeTitle: "Subscribe",
+      txt_awSubscribeDescription: "Support the YouTube channel. Then choose a product to unlock the guide for free.",
+      txt_awSubscribeButton: "Open YouTube and subscribe",
+      txt_awVerifying: "Verifying...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Visit Amazon Prime to complete this free option.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Contribute with PayPal",
+      txt_awPaypalDescription: "Make a voluntary contribution and access the guide directly, without completing the other two steps.",
+      txt_awPaypalAmountLabel: "Choose your contribution amount",
+      txt_awPaypalCustomPlaceholder: "Other amount (€)",
+      txt_awFreeTag: "FREE",
+      txt_awVoluntaryTag: "OPTIONAL",
+      txt_awPaypalCustomLabel: "Other amount (€)",
+      txt_awChooseProduct: "CHOOSE",
+      txt_backBtnText: "← Back to Guides", txt_otherGuides: "Other Guides",
+      txt_awSubtitle: "You're almost there! Complete these two steps to open the guide.", txt_awYtBtn: "1. Subscribe to channel", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Videos", radar: "Updates Radar", txt_products: "Products", txt_guides: "Guides", txt_discord: "Join Discord", txt_kofi: "Support us on Ko-fi",
+      
+      txt_tag: "3DS",
+      txt_title: "Pokémon World: POKEBANK",
+      txt_alert1: "<strong>⚠️ Important:</strong> Created or modified Pokémon can be transferred to Pokébank and Pokémon Home if they meet the game's legality rules.",
+      txt_h2_req: "Information & Downloads", 
+      txt_req1: "<strong>POKEBANK:</strong> Stores 6th Gen Pokémon and transfers them to Pokémon Home. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>More Info</a>", 
+      txt_req2: "<strong>POKÉ TRANSPORTER:</strong> Stores 3rd to 5th Gen Pokémon and transfers them to Pokémon Home. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>More Info</a>", 
+      txt_req3: "Required files (Pokémon World):", 
+      txt_reqBtn: "Download Files", 
+      txt_reqNote: "* You can check our <a href='../productos.html' class='mini-btn'>products</a>",
+      
+      txt_h2_step1: "Tool 1: PKSM (Console)",
+      txt_s1_1: "PKSM allows you to create, edit, and clone Pokémon directly from the games on your console.", 
+      txt_s1_2: "All Pokémon modified or created with PKSM (that are legal) can be safely transferred to POKEBANK.",
+      
+      txt_h2_step2: "Tool 2: PKHex (PC)",
+      txt_s2_1: "PKHEX allows you to create, edit, and clone Pokémon from your computer. It requires extracting and importing your save file using <strong>checkpoint-3ds</strong> or <strong>jksm-3ds</strong>. Like PKSM, it allows transferring the resulting creatures to POKEBANK.",
+
+      txt_alert2: "<strong>✅ Excellent!</strong> With these tools and services you will have absolute control of your Pokémon boxes to bring them to POKEBANK and Pokémon Home.", 
+      txt_footer: "Explore the rest of our guides and utilities to get the most out of your console."
+    },
+    fr: {
+      txt_awGateSubtitle: "Choisissez comment soutenir le projet et accéder au guide.",
+      txt_awSubscribeTitle: "S’abonner",
+      txt_awSubscribeDescription: "Soutenez la chaîne YouTube, puis choisissez un produit pour accéder gratuitement au guide.",
+      txt_awSubscribeButton: "Ouvrir YouTube et s’abonner",
+      txt_awVerifying: "Vérification...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Visitez Amazon Prime pour terminer cette option gratuite.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Contribuer avec PayPal",
+      txt_awPaypalDescription: "Faites une contribution volontaire et accédez directement au guide, sans effectuer les deux autres étapes.",
+      txt_awPaypalAmountLabel: "Choisissez le montant de votre contribution",
+      txt_awPaypalCustomPlaceholder: "Autre montant (€)",
+      txt_awFreeTag: "GRATUIT",
+      txt_awVoluntaryTag: "FACULTATIF",
+      txt_awPaypalCustomLabel: "Autre montant (€)",
+      txt_awChooseProduct: "CHOISIR",
+      txt_backBtnText: "← Retour aux Guides", txt_otherGuides: "Autres Guides",
+      txt_awSubtitle: "Vous y êtes presque ! Suivez ces deux étapes pour accéder au guide.", txt_awYtBtn: "1. S'abonner à la chaîne", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Vidéos", radar: "Radar des Mises à jour", txt_products: "Produits", txt_guides: "Guides", txt_discord: "Rejoindre Discord", txt_kofi: "Soutenez-nous sur Ko-fi",
+      txt_tag: "3DS", txt_title: "Monde Pokémon : POKEBANK",
+      txt_alert1: "<strong>⚠️ Important:</strong> Les Pokémon créés ou modifiés peuvent être transférés vers Pokébank et Pokémon Home s'ils respectent les règles de légalité.",
+      txt_h2_req: "Informations et Téléchargements", 
+      txt_req1: "<strong>POKEBANK:</strong> Stocke les Pokémon de 6ème Génération. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Plus d'infos</a>", 
+      txt_req2: "<strong>POKÉ TRANSFERT:</strong> Stocke les Pokémon de la 3ème à la 5ème Génération. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Plus d'infos</a>", 
+      txt_req3: "Fichiers requis :", txt_reqBtn: "Télécharger les Fichiers", txt_reqNote: "* Voir nos <a href='../productos.html' class='mini-btn'>produits</a>",
+      txt_h2_step1: "Outil 1 : PKSM (Console)", txt_s1_1: "Créez, éditez et clonez des Pokémon directement sur votre console.", txt_s1_2: "Les Pokémon légaux créés avec PKSM peuvent être transférés vers POKEBANK.",
+      txt_h2_step2: "Outil 2 : PKHex (PC)", txt_s2_1: "Nécessite l'extraction de votre sauvegarde (avec checkpoint-3ds ou jksm-3ds) pour éditer sur PC.",
+      txt_alert2: "<strong>✅ Terminé!</strong> Vous avez maintenant le contrôle total de vos boîtes Pokémon.", txt_footer: "Explorez nos autres guides."
+    },
+    de: {
+      txt_awGateSubtitle: "Wähle, wie du das Projekt unterstützen und auf den Leitfaden zugreifen möchtest.",
+      txt_awSubscribeTitle: "Abonnieren",
+      txt_awSubscribeDescription: "Unterstütze den YouTube-Kanal und wähle anschließend ein Produkt, um den Leitfaden kostenlos freizuschalten.",
+      txt_awSubscribeButton: "YouTube öffnen und abonnieren",
+      txt_awVerifying: "Wird überprüft...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Besuche Amazon Prime, um diese kostenlose Option abzuschließen.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Mit PayPal beitragen",
+      txt_awPaypalDescription: "Leiste einen freiwilligen Beitrag und erhalte direkten Zugriff, ohne die beiden anderen Schritte abzuschließen.",
+      txt_awPaypalAmountLabel: "Wähle deinen Beitragsbetrag",
+      txt_awPaypalCustomPlaceholder: "Anderer Betrag (€)",
+      txt_awFreeTag: "KOSTENLOS",
+      txt_awVoluntaryTag: "FREIWILLIG",
+      txt_awPaypalCustomLabel: "Anderer Betrag (€)",
+      txt_awChooseProduct: "AUSWÄHLEN",
+      txt_backBtnText: "← Zurück zu den Anleitungen", txt_otherGuides: "Andere Anleitungen",
+      txt_awSubtitle: "Fast geschafft! Schließe diese zwei Schritte ab, um die Anleitung zu öffnen.", txt_awYtBtn: "1. Kanal abonnieren", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Videos", radar: "Update-Radar", txt_products: "Produkte", txt_guides: "Anleitungen", txt_discord: "Discord beitreten", txt_kofi: "Unterstützen Sie uns",
+      txt_tag: "3DS", txt_title: "Pokémon Welt: POKEBANK",
+      txt_alert1: "<strong>⚠️ Wichtig:</strong> Erstellte/modifizierte Pokémon können übertragen werden, wenn sie legal sind.",
+      txt_h2_req: "Informationen & Downloads", 
+      txt_req1: "<strong>POKEBANK:</strong> Speichert Gen 6 Pokémon. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Mehr Info</a>", 
+      txt_req2: "<strong>POKÉMOVER:</strong> Speichert Gen 3-5 Pokémon. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Mehr Info</a>", 
+      txt_req3: "Benötigte Dateien:", txt_reqBtn: "Dateien Herunterladen", txt_reqNote: "* Entdecken Sie unsere <a href='../productos.html' class='mini-btn'>Produkte</a>",
+      txt_h2_step1: "Werkzeug 1: PKSM (Konsole)", txt_s1_1: "Pokémon direkt auf der Konsole erstellen/bearbeiten.", txt_s1_2: "Legale PKSM Pokémon können auf die POKEBANK übertragen werden.",
+      txt_h2_step2: "Werkzeug 2: PKHex (PC)", txt_s2_1: "Erfordert Checkpoint-3ds oder jksm-3ds zum Extrahieren der Speicherdaten.",
+      txt_alert2: "<strong>✅ Geschafft!</strong>", txt_footer: "Viel Spaß mit Ihren anderen Anleitungen."
+    },
+    it: {
+      txt_awGateSubtitle: "Scegli come sostenere il progetto e accedere alla guida.",
+      txt_awSubscribeTitle: "Iscriviti",
+      txt_awSubscribeDescription: "Sostieni il canale YouTube, poi scegli un prodotto per accedere gratuitamente alla guida.",
+      txt_awSubscribeButton: "Apri YouTube e iscriviti",
+      txt_awVerifying: "Verifica in corso...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Visita Amazon Prime per completare questa opzione gratuita.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Contribuisci con PayPal",
+      txt_awPaypalDescription: "Fai una contribuzione volontaria e accedi direttamente alla guida, senza completare gli altri due passaggi.",
+      txt_awPaypalAmountLabel: "Scegli l’importo del contributo",
+      txt_awPaypalCustomPlaceholder: "Altro importo (€)",
+      txt_awFreeTag: "GRATIS",
+      txt_awVoluntaryTag: "FACOLTATIVO",
+      txt_awPaypalCustomLabel: "Altro importo (€)",
+      txt_awChooseProduct: "SCEGLI",
+      txt_backBtnText: "← Torna alle Guide", txt_otherGuides: "Altre Guide",
+      txt_awSubtitle: "Ci sei quasi! Completa questi due passaggi per accedere alla guida.", txt_awYtBtn: "1. Iscriviti al canale", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Video", radar: "Radar Aggiornamenti", txt_products: "Prodotti", txt_guides: "Guide", txt_discord: "Unisciti a Discord", txt_kofi: "Supportaci su Ko-fi",
+      txt_tag: "3DS", txt_title: "Mondo Pokémon: POKEBANK",
+      txt_alert1: "<strong>⚠️ Importante:</strong> I Pokémon creati/modificati possono essere trasferiti se legali.",
+      txt_h2_req: "Informazioni e Download", 
+      txt_req1: "<strong>POKEBANK:</strong> Archivia Pokémon di 6ª Gen. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Info</a>", 
+      txt_req2: "<strong>POKÉ TRASFERITORE:</strong> Archivia Pokémon dalla 3ª alla 5ª Gen. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Info</a>", 
+      txt_req3: "File richiesti:", txt_reqBtn: "Scarica File", txt_reqNote: "* Guarda i nostri <a href='../productos.html' class='mini-btn'>prodotti</a>",
+      txt_h2_step1: "Strumento 1: PKSM (Console)", txt_s1_1: "Crea e modifica Pokémon direttamente sulla tua console.", txt_s1_2: "I Pokémon legali creati con PKSM possono andare nella POKEBANK.",
+      txt_h2_step2: "Strumento 2: PKHex (PC)", txt_s2_1: "Richiede l'estrazione del salvataggio tramite checkpoint-3ds o jksm-3ds.",
+      txt_alert2: "<strong>✅ Finito!</strong>", txt_footer: "Esplora il resto delle nostre guide."
+    },
+    pt: {
+      txt_awGateSubtitle: "Escolhe como queres apoiar o projeto e aceder ao guia.",
+      txt_awSubscribeTitle: "Subscrever",
+      txt_awSubscribeDescription: "Apoia o canal do YouTube e, depois, escolhe um produto para desbloquear o guia gratuitamente.",
+      txt_awSubscribeButton: "Abrir o YouTube e subscrever",
+      txt_awVerifying: "A verificar...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Visita a Amazon Prime para concluir esta opção gratuita.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "Contribuir com PayPal",
+      txt_awPaypalDescription: "Faz uma contribuição voluntária e acede diretamente ao guia, sem concluir os outros dois passos.",
+      txt_awPaypalAmountLabel: "Escolhe o valor da contribuição",
+      txt_awPaypalCustomPlaceholder: "Outro valor (€)",
+      txt_awFreeTag: "GRÁTIS",
+      txt_awVoluntaryTag: "OPCIONAL",
+      txt_awPaypalCustomLabel: "Outro valor (€)",
+      txt_awChooseProduct: "ESCOLHER",
+      txt_backBtnText: "← Voltar aos Guias", txt_otherGuides: "Outros Guias",
+      txt_awSubtitle: "Está quase! Conclua estas duas etapas para acessar o guia.", txt_awYtBtn: "1. Inscrever-se no canal", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "Vídeos", radar: "Radar de Atualizações", txt_products: "Produtos", txt_guides: "Guias", txt_discord: "Entre no Discord", txt_kofi: "Apoie no Ko-fi",
+      txt_tag: "3DS", txt_title: "Mundo Pokémon: POKEBANK",
+      txt_alert1: "<strong>⚠️ Importante:</strong> Pokémon criados/modificados podem ser transferidos se legais.",
+      txt_h2_req: "Informações e Downloads", 
+      txt_req1: "<strong>POKEBANK:</strong> Armazena Pokémon da 6ª Geração. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Mais Info</a>", 
+      txt_req2: "<strong>POKÉ TRANSPORTER:</strong> Armazena Pokémon da 3ª à 5ª Geração. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>Mais Info</a>", 
+      txt_req3: "Arquivos necessários:", txt_reqBtn: "Baixar Arquivos", txt_reqNote: "* Veja nossos <a href='../productos.html' class='mini-btn'>produtos</a>",
+      txt_h2_step1: "Ferramenta 1: PKSM (Console)", txt_s1_1: "Crie e edite Pokémon diretamente no seu console.", txt_s1_2: "Pokémon legais do PKSM podem ir para o POKEBANK.",
+      txt_h2_step2: "Ferramenta 2: PKHex (PC)", txt_s2_1: "Requer extrair o save com checkpoint-3ds ou jksm-3ds.",
+      txt_alert2: "<strong>✅ Pronto!</strong>", txt_footer: "Explore o resto dos nossos guias."
+    },
+    ja: {
+      txt_awGateSubtitle: "プロジェクトへの協力方法を選んでガイドにアクセスしてください。",
+      txt_awSubscribeTitle: "チャンネル登録",
+      txt_awSubscribeDescription: "YouTubeチャンネルを応援し、続けて商品を1つ選ぶと無料でガイドにアクセスできます。",
+      txt_awSubscribeButton: "YouTubeを開いて登録する",
+      txt_awVerifying: "確認中...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Amazon Primeにアクセスして、この無料オプションを完了してください。",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "PayPalで支援する",
+      txt_awPaypalDescription: "任意の金額を支援すると、ほかの2つの手順を行わずにガイドへ直接アクセスできます。",
+      txt_awPaypalAmountLabel: "支援する金額を選択",
+      txt_awPaypalCustomPlaceholder: "任意の金額 (€)",
+      txt_awFreeTag: "無料",
+      txt_awVoluntaryTag: "任意",
+      txt_awPaypalCustomLabel: "金額を入力 (€)",
+      txt_awChooseProduct: "選択",
+      txt_backBtnText: "← ガイドに戻る", txt_otherGuides: "他のガイド",
+      txt_awSubtitle: "あと少しです！次の2つのステップを完了してガイドを開きましょう。", txt_awYtBtn: "1. チャンネル登録", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "ビデオ", radar: "アップデートレーダー", txt_products: "製品", txt_guides: "ガイド", txt_discord: "Discordに参加", txt_kofi: "Ko-fiでサポート",
+      txt_tag: "3DS", txt_title: "ポケモンワールド: POKEBANK",
+      txt_alert1: "<strong>⚠️ 重要:</strong> 作成または変更されたポケモンは、合法であれば転送できます。",
+      txt_h2_req: "情報とダウンロード", 
+      txt_req1: "<strong>POKEBANK:</strong> 第6世代のポケモンを保存。 <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>詳細情報</a>", 
+      txt_req2: "<strong>ポケムーバー:</strong> 第3世代から第5世代のポケモンを保存。 <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>詳細情報</a>", 
+      txt_req3: "必要なファイル:", txt_reqBtn: "ファイルをダウンロード", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>製品</a>を見る",
+      txt_h2_step1: "ツール 1: PKSM (コンソール)", txt_s1_1: "コンソールで直接ポケモンを作成/編集します。", txt_s1_2: "合法的なPKSMポケモンはPOKEBANKに転送できます。",
+      txt_h2_step2: "ツール 2: PKHex (PC)", txt_s2_1: "checkpoint-3ds または jksm-3ds でセーブデータを抽出する必要があります。",
+      txt_alert2: "<strong>✅ 完了！</strong>", txt_footer: "他のガイドもご覧ください。"
+    },
+    ko: {
+      txt_awGateSubtitle: "프로젝트를 응원하고 가이드에 접속할 방법을 선택하세요.",
+      txt_awSubscribeTitle: "구독하기",
+      txt_awSubscribeDescription: "YouTube 채널을 응원한 다음 제품 하나를 선택하면 가이드를 무료로 이용할 수 있습니다.",
+      txt_awSubscribeButton: "YouTube 열고 구독하기",
+      txt_awVerifying: "확인 중...",
+      txt_awGiftTitle: "Amazon Prime",
+      txt_awGiftDescription: "Amazon Prime을 방문하면 이 무료 옵션이 완료됩니다.",
+      txt_awGiveawayButton: "Amazon Prime",
+      txt_awPaypalTitle: "PayPal로 후원하기",
+      txt_awPaypalDescription: "자발적으로 후원하면 앞의 두 단계를 완료하지 않고 바로 가이드에 접속할 수 있습니다.",
+      txt_awPaypalAmountLabel: "후원 금액 선택",
+      txt_awPaypalCustomPlaceholder: "직접 금액 입력 (€)",
+      txt_awFreeTag: "무료",
+      txt_awVoluntaryTag: "선택 사항",
+      txt_awPaypalCustomLabel: "직접 금액 입력 (€)",
+      txt_awChooseProduct: "선택",
+      txt_backBtnText: "← 가이드로 돌아가기", txt_otherGuides: "다른 가이드",
+      txt_awSubtitle: "콘텐츠 잠금을 해제하려면 단계를 완료하세요.", txt_awYtBtn: "1. 채널 구독", txt_awGiftBtn: "2. Amazon Prime",
+      txt_videos: "비디오", radar: "업데이트 레이더", txt_products: "제품", txt_guides: "가이드", txt_discord: "Discord 참여", txt_kofi: "Ko-fi 지원",
+      txt_tag: "3DS", txt_title: "포켓몬 월드: POKEBANK",
+      txt_alert1: "<strong>⚠️ 중요:</strong> 생성 또는 수정된 포켓몬은 합법적인 경우 전송할 수 있습니다.",
+      txt_h2_req: "정보 및 다운로드", 
+      txt_req1: "<strong>POKEBANK:</strong> 6세대 포켓몬 저장. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>추가 정보</a>", 
+      txt_req2: "<strong>포켓무버:</strong> 3세대에서 5세대 포켓몬 저장. <a href='https://www.pokexperto.net/index2.php?seccion=3ds/banco_pokemon' target='_blank' style='color:var(--red);'>추가 정보</a>", 
+      txt_req3: "필요한 파일:", txt_reqBtn: "파일 다운로드", txt_reqNote: "* <a href='../productos.html' class='mini-btn'>제품</a> 확인",
+      txt_h2_step1: "도구 1: PKSM (콘솔)", txt_s1_1: "콘솔에서 직접 포켓몬을 생성/편집합니다.", txt_s1_2: "합법적인 PKSM 포켓몬은 POKEBANK로 전송할 수 있습니다.",
+      txt_h2_step2: "도구 2: PKHex (PC)", txt_s2_1: "checkpoint-3ds 또는 jksm-3ds를 사용하여 저장 파일을 추출해야 합니다.",
+      txt_alert2: "<strong>✅ 완료!</strong>", txt_footer: "다른 가이드를 탐색해 보세요."
+    }
+  };
+
+  /* ================= LÓGICA CORE (NO TOCAR) ================= */
+  let idiomaActual = 'en'; 
+  let accessGranted = false;
+  let s1 = false; let s1Verifying = false; let s2 = false; let s2Verifying = false; let accessProductsData = [];
+
+  function comprobarAccesoTemporal() {
+      const tokenGuardado = localStorage.getItem("_lp_auth_tk");
+      const tokenValidoHoy = btoa("lapresa_secreto_" + new Date().toDateString());
+      if (tokenGuardado === tokenValidoHoy) { accessGranted = true; } else { localStorage.removeItem("_lp_auth_tk"); accessGranted = false; }
+  }
+
+  function iniciarAppPrincipal() {
+      document.getElementById('mainHub').style.display = 'block';
+      setTimeout(() => document.getElementById('mainHub').style.opacity = '1', 50);
+      cargarSidebar();
+  }
+
+  document.getElementById('disney-btn1').onclick = function() {
+      if (s1 || s1Verifying) return;
+      const btn = this;
+      window.open("https://www.youtube.com/channel/UCJbYmHLNcrPUUA9oyBGtsKw/join", "_blank");
+      s1Verifying = true;
+      const btnLabel = document.getElementById('txt_awSubscribeButton');
+      btn.classList.add('is-verifying');
+      btn.setAttribute('aria-busy', 'true');
+      btn.style.opacity = '0.7';
+      btnLabel.textContent = (translations[idiomaActual] || translations.en).txt_awVerifying || 'Verifying...';
+      setTimeout(() => {
+        s1Verifying = false;
+        s1 = true;
+        btn.classList.add('disney-step-done');
+        btn.classList.remove('is-verifying');
+        btn.removeAttribute('aria-busy');
+        btnLabel.textContent = '✅';
+        btn.style.opacity = '1';
+        checkProgressDisney();
+      }, 20000);
+  };
+
+    document.getElementById('disney-btn2').onclick = function() {
+      if (s2 || s2Verifying) return;
+      const btn = this;
+      window.open('https://www.amazon.es/pruebaprime?tag=kelonio-21', '_blank', 'noopener,noreferrer');
+      s2Verifying = true;
+      const btnLabel = document.getElementById('txt_awGiveawayButton');
+      const t = translations[idiomaActual] || translations.en;
+      btn.classList.add('is-verifying');
+      btn.setAttribute('aria-busy', 'true');
+      btn.style.opacity = '0.7';
+      if (btnLabel) btnLabel.textContent = t.txt_awVerifying || 'Verifying...';
+      setTimeout(() => {
+        s2Verifying = false;
+        completarSorteoDisney();
+      }, 20000);
+    };
+
+  async function cargarProductosDisney() {
+      const base = 'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/productos/';
+      let all = [];
+      for (let f of ['switch.json', 'ps5.json', 'sd_usb.json', '3ds.json']) { 
+          try { 
+              let res = await fetch(base + f + '?t=' + Date.now(), { cache: "no-store" }); 
+              if (res.ok) { 
+                  let data = await res.json(); 
+                  all = all.concat(Array.isArray(data) ? data : Object.values(data)); 
+              } 
+          } catch(e){}
+      }
+      if (all.length >= 6) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } else if (all.length > 0) { all.sort(() => 0.5 - Math.random()); accessProductsData = all.slice(0, 6); renderProductosDisney(); } 
+  }
+
+  function renderProductosDisney() {
+      const cont = document.getElementById('disneyProductsContainer'); cont.innerHTML = ''; cont.style.display = 'grid';
+      accessProductsData.forEach(p => {
+          let title = (typeof p.label === 'string') ? p.label : (p.label ? (p.label[idiomaActual] || p.label['en'] || p.label['es'] || 'Producto') : 'Producto');
+          const img = p.img || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+          let url = p.url || '#'; if (url !== '#' && !url.includes('tag=')) url += (url.includes('?')?'&':'?') + 'tag=kelonio-21';
+          const div = document.createElement('div'); div.className = 'disney-aw-product';
+          const chooseLabel = (translations[idiomaActual] || translations['en']).txt_awChooseProduct || 'CHOOSE';
+          div.innerHTML = `<img src="${img}" alt=""><span>${title}</span><div class="disney-choose-badge">${chooseLabel}</div>`;
+          div.onclick = () => { window.open(url, "_blank"); completarSorteoDisney(); };
+          cont.appendChild(div);
+      });
+  }
+
+  function completarSorteoDisney() {
+      if (s2) return;
+      s2 = true;
+      const btn2 = document.getElementById('disney-btn2');
+      btn2.classList.remove('is-verifying');
+      btn2.classList.add('disney-step-done');
+      btn2.removeAttribute('aria-busy');
+      btn2.style.opacity = '1';
+      const btnLabel = document.getElementById('txt_awGiveawayButton');
+      if (btnLabel) btnLabel.textContent = '✅';
+      document.getElementById('disneyProductsContainer').style.display = 'none';
+      checkProgressDisney();
+  }
+
+
+  function checkProgressDisney() {
+      const count = (s1 ? 1 : 0) + (s2 ? 1 : 0);
+      const progressValue = count * 50;
+      const fill = document.getElementById('disney-progress');
+      if (fill) fill.style.width = progressValue + "%";
+      const progressBar = document.querySelector('.disney-progress-bar');
+      if (progressBar) progressBar.setAttribute('aria-valuenow', String(progressValue));
+      if (count === 2) unlockByContribution();
+    }
+
+
+  /* ===== Acceso alternativo mediante contribución voluntaria PayPal ===== */
+  const awPaypalMessages = {"es": {"invalid": "Introduce una cantidad válida de al menos 0,50 €.", "confirmFail": "No se ha podido confirmar el pago. Puedes intentarlo de nuevo.", "paymentFail": "No se ha podido completar el pago. Inténtalo de nuevo.", "cancel": "Has cancelado el pago. No se ha realizado ningún cargo.", "unavailable": "PayPal no está disponible ahora. Puedes usar la opción gratuita.", "thanks": "¡Gracias por tu contribución! Abriendo la guía…"}, "en": {"invalid": "Please enter a valid amount of at least €0.50.", "confirmFail": "The payment could not be confirmed. Please try again.", "paymentFail": "The payment could not be completed. Please try again.", "cancel": "Payment cancelled. No charge was made.", "unavailable": "PayPal is unavailable right now. You can use the free option.", "thanks": "Thank you for your contribution! Opening the guide…"}, "fr": {"invalid": "Veuillez saisir un montant valide d’au moins 0,50 €.", "confirmFail": "Le paiement n’a pas pu être confirmé. Veuillez réessayer.", "paymentFail": "Le paiement n’a pas pu être effectué. Veuillez réessayer.", "cancel": "Paiement annulé. Aucun montant n’a été débité.", "unavailable": "PayPal est indisponible. Vous pouvez utiliser l’option gratuite.", "thanks": "Merci pour votre contribution ! Ouverture du guide…"}, "de": {"invalid": "Bitte gib einen gültigen Betrag von mindestens 0,50 € ein.", "confirmFail": "Die Zahlung konnte nicht bestätigt werden. Bitte versuche es erneut.", "paymentFail": "Die Zahlung konnte nicht abgeschlossen werden. Bitte versuche es erneut.", "cancel": "Zahlung abgebrochen. Es wurde nichts berechnet.", "unavailable": "PayPal ist derzeit nicht verfügbar. Du kannst die kostenlose Option nutzen.", "thanks": "Vielen Dank für deinen Beitrag! Der Leitfaden wird geöffnet…"}, "it": {"invalid": "Inserisci un importo valido di almeno 0,50 €.", "confirmFail": "Impossibile confermare il pagamento. Riprova.", "paymentFail": "Impossibile completare il pagamento. Riprova.", "cancel": "Pagamento annullato. Non è stato addebitato nulla.", "unavailable": "PayPal non è disponibile. Puoi usare l’opzione gratuita.", "thanks": "Grazie per il tuo contributo! Apertura della guida…"}, "pt": {"invalid": "Introduz um valor válido de pelo menos 0,50 €.", "confirmFail": "Não foi possível confirmar o pagamento. Tenta novamente.", "paymentFail": "Não foi possível concluir o pagamento. Tenta novamente.", "cancel": "Pagamento cancelado. Não foi cobrado qualquer valor.", "unavailable": "O PayPal não está disponível. Podes usar a opção gratuita.", "thanks": "Obrigado pela tua contribuição! A abrir o guia…"}, "ja": {"invalid": "0.50 €以上の有効な金額を入力してください。", "confirmFail": "支払いを確認できませんでした。もう一度お試しください。", "paymentFail": "支払いを完了できませんでした。もう一度お試しください。", "cancel": "支払いはキャンセルされました。請求は発生していません。", "unavailable": "現在PayPalを利用できません。無料の方法を選択できます。", "thanks": "ご支援ありがとうございます。ガイドを開いています…"}, "ko": {"invalid": "최소 0.50 € 이상의 올바른 금액을 입력하세요.", "confirmFail": "결제를 확인할 수 없습니다. 다시 시도해 주세요.", "paymentFail": "결제를 완료할 수 없습니다. 다시 시도해 주세요.", "cancel": "결제가 취소되었습니다. 청구된 금액은 없습니다.", "unavailable": "현재 PayPal을 사용할 수 없습니다. 무료 옵션을 이용할 수 있습니다.", "thanks": "후원해 주셔서 감사합니다! 가이드를 여는 중…"}, "ru": {"invalid": "Введите корректную сумму не менее 0,50 €.", "confirmFail": "Не удалось подтвердить платёж. Попробуйте ещё раз.", "paymentFail": "Не удалось завершить платёж. Попробуйте ещё раз.", "cancel": "Платёж отменён. Средства не списаны.", "unavailable": "PayPal сейчас недоступен. Можно воспользоваться бесплатным вариантом.", "thanks": "Спасибо за поддержку! Открываем руководство…"}};
+  function awPaypalMessage(key) { return ((awPaypalMessages[idiomaActual] || awPaypalMessages.en)[key] || awPaypalMessages.en[key]); }
+  let awSelectedAmount = '1';
+  let awPaypalMounted = false;
+  const awPaypalClientId = 'BAAVNxy3Tb2YimilSFmYtRneRHtNa9WqZwfcVXSwpX88LHG9OCSn7hwPMTassgMIf5oyVHms5YdsmQpUZk';
+  const awPaypalLocales = { es:'es_ES', en:'en_US', fr:'fr_FR', de:'de_DE', it:'it_IT', pt:'pt_PT', ja:'ja_JP', ko:'ko_KR' };
+
+  function awPaypalStatus(message, isError) {
+    const el = document.getElementById('aw-paypal-status');
+    if (!el) return;
+    el.textContent = message || '';
+    el.style.color = isError ? '#ff9b9b' : '#ffd782';
+  }
+
+  function awGetAmount() {
+    const input = document.getElementById('aw-paypal-custom-amount');
+    const raw = awSelectedAmount === 'custom'
+      ? String(input && input.value || '').trim().replace(',', '.')
+      : awSelectedAmount;
+    const amount = Number(raw);
+    if (!Number.isFinite(amount) || amount < 0.50 || amount > 10000) return null;
+    return amount.toFixed(2);
+  }
+
+  function awInitAmountPicker() {
+    const input = document.getElementById('aw-paypal-custom-amount');
+    const label = document.getElementById('txt_awPaypalCustomPlaceholder');
+    document.querySelectorAll('.aw-amount-chip').forEach(button => {
+      button.addEventListener('click', () => {
+        awSelectedAmount = button.dataset.awAmount;
+        const isCustom = awSelectedAmount === 'custom';
+        if (input) {
+          input.value = '';
+          input.style.display = isCustom ? 'block' : 'none';
+        }
+        if (label) label.style.display = isCustom ? 'block' : 'none';
+        document.querySelectorAll('.aw-amount-chip').forEach(chip => {
+          const selected = chip === button;
+          chip.classList.toggle('is-selected', selected);
+          chip.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        });
+        awPaypalStatus('', false);
+        if (isCustom && input) input.focus();
+      });
+    });
+    if (input) input.addEventListener('input', () => awPaypalStatus('', false));
+  }
+
+  function awRenderPayPal() {
+    if (awPaypalMounted || !window.paypal || typeof window.paypal.Buttons !== 'function') return;
+    const target = document.getElementById('aw-paypal-button-container');
+    if (!target) return;
+    awPaypalMounted = true;
+    target.innerHTML = '';
+    try {
+      window.paypal.Buttons({
+        style: { layout:'vertical', color:'gold', shape:'pill', label:'paypal', tagline:false, height:40 },
+        onClick: function(data, actions) {
+          if (!awGetAmount()) {
+            awPaypalStatus(awPaypalMessage('invalid'), true);
+            return actions.reject();
+          }
+          awPaypalStatus('', false);
+          return actions.resolve();
+        },
+        createOrder: function(data, actions) {
+          const amount = awGetAmount();
+          if (!amount) return Promise.reject(new Error('Invalid contribution amount'));
+          return actions.order.create({ purchase_units: [{ amount: { currency_code:'EUR', value:amount }, description:'Contribución voluntaria a La Presa' }] });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            const completed = orderData && (orderData.status === 'COMPLETED' ||
+              (orderData.purchase_units || []).some(unit => (unit.payments?.captures || []).some(capture => capture.status === 'COMPLETED')));
+            if (!completed) {
+              awPaypalStatus(awPaypalMessage('confirmFail'), true);
+              return;
+            }
+            awPaypalStatus(awPaypalMessage('thanks'), false);
+            unlockByContribution();
+          }).catch(function() {
+            awPaypalStatus(awPaypalMessage('paymentFail'), true);
+          });
+        },
+        onCancel: function() { awPaypalStatus(awPaypalMessage('cancel'), true); },
+        onError: function() { awPaypalStatus(awPaypalMessage('unavailable'), true); }
+      }).render('#aw-paypal-button-container').catch(function() {
+        awPaypalMounted = false;
+        awPaypalStatus(awPaypalMessage('unavailable'), true);
+      });
+    } catch (error) {
+      awPaypalMounted = false;
+      awPaypalStatus(awPaypalMessage('unavailable'), true);
+    }
+  }
+
+  function initAccessPayPal() {
+    awInitAmountPicker();
+    if (window.paypal && typeof window.paypal.Buttons === 'function') { awRenderPayPal(); return; }
+    const existingScript = document.querySelector('script[src*="paypal.com/sdk/js"]');
+    if (existingScript) {
+      existingScript.addEventListener('load', awRenderPayPal, { once:true });
+      existingScript.addEventListener('error', function() { awPaypalStatus(awPaypalMessage('unavailable'), true); }, { once:true });
+      return;
+    }
+    const lang = idiomaActual || 'es';
+    const script = document.createElement('script');
+    script.id = 'paypal-access-sdk-script';
+    script.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(awPaypalClientId) + '&currency=EUR&locale=' + encodeURIComponent(awPaypalLocales[lang] || 'en_US');
+    script.onload = awRenderPayPal;
+    script.onerror = function() { awPaypalStatus(awPaypalMessage('unavailable'), true); };
+    document.body.appendChild(script);
+  }
+
+  function unlockByContribution() {
+    if (accessGranted) return;
+    accessGranted = true;
+    localStorage.setItem('_lp_auth_tk', btoa('lapresa_secreto_' + new Date().toDateString()));
+    const overlay = document.getElementById('accessWallOverlay');
+    const progress = document.getElementById('disney-progress');
+    const progressBar = document.querySelector('.disney-progress-bar');
+    if (progress) progress.style.width = '100%';
+    if (progressBar) progressBar.setAttribute('aria-valuenow', '100');
+    setTimeout(() => {
+      overlay.style.opacity = '0';
+      setTimeout(() => { overlay.style.display = 'none'; iniciarAppPrincipal(); }, 500);
+    }, 650);
+  }
+  /* ===== fin del acceso alternativo PayPal ===== */
+
+  const themeDotsContainer = document.getElementById('themeDots');
+  const paletaTemas = { rojo: { hex: '#e50914', rgb: '229, 9, 20' }, naranja: { hex: '#ff6600', rgb: '255, 102, 0' }, amarillo: { hex: '#ffcc00', rgb: '255, 204, 0' }, verde: { hex: '#2ecc71', rgb: '46, 204, 113' }, azul: { hex: '#00aaff', rgb: '0, 170, 255' }, violeta: { hex: '#9b59b6', rgb: '155, 89, 182' }, rosa: { hex: '#ff80ab', rgb: '255, 128, 171' } };
+  function initThemeDots() {
+  const savedTheme = localStorage.getItem('selectedThemeColor') || 'azul';
+  const savedMode = localStorage.getItem('selectedMode') || 'dark';
+  
+  const themeDotsContainer = document.querySelector('.theme-dots-container');
+  if(!themeDotsContainer) return;
+  themeDotsContainer.innerHTML = '';
+  
+  // 1. Botones de colores de acento
+  Object.keys(paletaTemas).forEach(colorKey => {
+    const dot = document.createElement('div'); 
+    dot.className = 'color-dot theme-color-dot'; 
+    dot.style.backgroundColor = paletaTemas[colorKey].hex;
+    dot.setAttribute('title', `Tema ${colorKey}`);
+    if (colorKey === savedTheme) dot.classList.add('active-dot');
+    dot.addEventListener('click', () => {
+      document.querySelectorAll('.theme-color-dot').forEach(d => d.classList.remove('active-dot'));
+      dot.classList.add('active-dot'); 
+      localStorage.setItem('selectedThemeColor', colorKey); 
+      applyTheme(colorKey);
+    });
+    themeDotsContainer.appendChild(dot);
+  });
+
+  // Separador visual
+  const separador = document.createElement('div');
+  separador.style.width = '2px';
+  separador.style.backgroundColor = 'var(--glass-border)';
+  separador.style.margin = '0 6px';
+  separador.style.borderRadius = '2px';
+  themeDotsContainer.appendChild(separador);
+
+  // 2. Botón MODO OSCURO (Negro)
+  const dotOscuro = document.createElement('div');
+  dotOscuro.className = 'color-dot mode-dot';
+  dotOscuro.style.backgroundColor = '#141414';
+  dotOscuro.style.border = '1px solid #555';
+  dotOscuro.setAttribute('title', 'Forzar Modo Oscuro');
+  
+  // 3. Botón MODO CLARO (Blanco)
+  const dotClaro = document.createElement('div');
+  dotClaro.className = 'color-dot mode-dot';
+  dotClaro.style.backgroundColor = '#f8f9fa';
+  dotClaro.style.border = '1px solid #ccc';
+  dotClaro.setAttribute('title', 'Forzar Modo Claro');
+
+  // Restaurar configuración al cargar
+  if (savedMode === 'dark') {
+    dotOscuro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedMode === 'light') {
+    dotClaro.classList.add('active-dot');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+
+  // Eventos de click
+  dotOscuro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotOscuro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  });
+
+  dotClaro.addEventListener('click', () => {
+    document.querySelectorAll('.mode-dot').forEach(d => d.classList.remove('active-dot'));
+    dotClaro.classList.add('active-dot');
+    localStorage.setItem('selectedMode', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  });
+
+  themeDotsContainer.appendChild(dotOscuro);
+  themeDotsContainer.appendChild(dotClaro);
+
+  applyTheme(savedTheme);
+}
+  function applyTheme(colorKey) { const theme = paletaTemas[colorKey] || paletaTemas.rojo; document.documentElement.style.setProperty('--red', theme.hex); document.documentElement.style.setProperty('--glow-rgb', theme.rgb); }
+
+  function createLanguageSelector(){
+    const selectors = [document.getElementById('languageSelector'), document.getElementById('accessLanguageSelector')].filter(Boolean);
+    const langs = { es:'Español', en:'English', fr:'Français', de:'Deutsch', it:'Italiano', pt:'Português', ja:'日本語', ko:'한국어' };
+    selectors.forEach(selector => {
+      selector.innerHTML = '';
+      Object.keys(langs).forEach(code => {
+        const opt = document.createElement('option');
+        opt.value = code;
+        opt.textContent = langs[code];
+        selector.appendChild(opt);
+      });
+    });
+
+    let savedLang = '';
+    try { savedLang = localStorage.getItem('preferredLanguage') || ''; } catch (_) {}
+    const browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0].toLowerCase();
+    if (savedLang && translations[savedLang]) idiomaActual = savedLang;
+    else if (translations[browserLang]) idiomaActual = browserLang;
+    else idiomaActual = 'en';
+
+    selectors.forEach(selector => {
+      selector.value = idiomaActual;
+      selector.addEventListener('change', e => {
+        idiomaActual = translations[e.target.value] ? e.target.value : 'en';
+        try { localStorage.setItem('preferredLanguage', idiomaActual); } catch (_) {}
+        selectors.forEach(other => { other.value = idiomaActual; });
+        updateLanguage();
+        if (accessProductsData.length > 0) renderProductosDisney();
+        if (accessGranted) cargarSidebar();
+        if (typeof window.refreshGuidePayPalLanguage === 'function') window.refreshGuidePayPalLanguage();
+      });
+    });
+  }
+
+  function updateLanguage(){
+    const t = translations[idiomaActual] || translations['en'];
+    Object.keys(t).forEach(key => {
+        const element = document.getElementById(key);
+        if (element && key !== 'txt_awSubscribeButton' && key !== 'txt_awGiveawayButton' && !element.classList.contains('disney-step-done')) {
+            element.innerHTML = t[key];
+        }
+    });
+    const subscribeLabel = document.getElementById('txt_awSubscribeButton');
+    if (subscribeLabel) {
+      subscribeLabel.textContent = s1 ? '✅' : (s1Verifying ? (t.txt_awVerifying || 'Verifying...') : (t.txt_awSubscribeButton || 'Subscribe'));
+    }
+    const giveawayLabel = document.getElementById('txt_awGiveawayButton');
+    if (giveawayLabel) {
+      giveawayLabel.textContent = s2 ? '✅' : (s2Verifying ? (t.txt_awVerifying || 'Verifying...') : (t.txt_awGiveawayButton || 'Amazon Prime'));
+    }
+    document.documentElement.lang = idiomaActual;
+    document.querySelectorAll('.aw-free-tag-giveaway').forEach(el => { el.textContent = t.txt_awFreeTag || 'FREE'; });
+    const awCustomAmount = document.getElementById('aw-paypal-custom-amount');
+    if (awCustomAmount) awCustomAmount.placeholder = t.txt_awPaypalCustomPlaceholder || 'Other amount (€)';
+    
+    if (document.getElementById('videosBtn')) {
+    const dictVideos = { es: 'Vídeos', en: 'Videos', fr: 'Vidéos', de: 'Videos', it: 'Video', pt: 'Vídeos', ja: 'ビデオ', ko: '비디오' };
+    document.getElementById('videosBtn').title = (t && t.videos) ? t.videos : (dictVideos[idiomaActual] || 'Vídeos');
+  }
+  if (document.getElementById('radarBtn')) document.getElementById('radarBtn').title = t.txt_radar || "Radar";
+    if (document.getElementById('productsBtn')) document.getElementById('productsBtn').title = t.txt_products || "Products";
+    if (document.getElementById('guideBtn')) document.getElementById('guideBtn').title = t.txt_guides || "Guides";
+    if (document.getElementById('discordBtn')) document.getElementById('discordBtn').title = t.txt_discord || "Discord";
+    if (document.getElementById('kofiBtn')) document.getElementById('kofiBtn').title = t.txt_kofi || "Ko-fi";
+  }
+
+/* ==========================================================================
+     SISTEMA DE MENÚ DINÁMICO: STALE-WHILE-REVALIDATE + PROMISE.ALL
+     ========================================================================== */
+
+  async function cargarSidebar() {
+    const sidebar = document.getElementById('guideSidebar');
+    const cacheKey = '_lp_sidebar_cache';
+    
+    // --- PASO 1: CARGA INSTANTÁNEA DESDE CACHÉ (0ms) ---
+    const cacheGuardado = localStorage.getItem(cacheKey);
+    if (cacheGuardado) {
+      try {
+        const guiasCacheadas = JSON.parse(cacheGuardado);
+        renderSidebarMenu(guiasCacheadas);
+      } catch (e) {
+        console.warn("Error al leer caché del sidebar, limpiando...", e);
+        localStorage.removeItem(cacheKey);
+      }
+    } else {
+      sidebar.innerHTML = `<div style="text-align:center; color:#aaa; font-size:13px; padding: 20px;">Cargando menú...</div>`;
+    }
+
+    // --- PASO 2: FETCH EN SEGUNDO PLANO (SILENCIOSO) ---
+    try {
+      const repo = 'Kelonio-hub/Archivos-Kelonio'; 
+      const apiURL = `https://api.github.com/repos/${repo}/contents/guias?t=` + Date.now();
+      const response = await fetch(apiURL, { cache: "no-store" }); 
+      if (!response.ok) throw new Error("Error en la respuesta de GitHub");
+      
+      const archivos = await response.json(); 
+      const htmlFiles = archivos.filter(f => f.name.endsWith('.html') && f.name !== 'plantilla.html'); 
+      
+      // Peticiones en paralelo y blindadas contra fallos individuales
+      const guiasPromesas = htmlFiles.map(async (file) => {
+        try {
+          const res = await fetch(file.download_url + '?t=' + Date.now(), { cache: "no-store" }); 
+          if (!res.ok) return null;
+          const htmlText = await res.text();
+          const parser = new DOMParser(); 
+          const doc = parser.parseFromString(htmlText, 'text/html'); 
+          const tag = doc.querySelector('meta[name="guide-tag"]')?.content || 'INFO';  
+          let titles = {};
+          ['es', 'en', 'fr', 'de', 'it', 'pt', 'ja', 'ko'].forEach(lang => { 
+            titles[lang] = doc.querySelector(`meta[name="guide-title-${lang}"]`)?.content || file.name.replace('.html', ''); 
+          });
+          return { tag, titles, link: file.name };
+        } catch (err) {
+          return null; // Si una guía falla, no rompe el resto del menú
+        }
+      });
+
+      const resultados = await Promise.all(guiasPromesas);
+      const todasLasGuias = resultados.filter(guia => guia !== null);
+
+      // Orden determinista para evitar falsos positivos al comparar textos
+      todasLasGuias.sort((a, b) => a.link.localeCompare(b.link));
+
+      // --- PASO 3: COMPARACIÓN Y ACTUALIZACIÓN ---
+      const nuevaDataString = JSON.stringify(todasLasGuias);
+      
+      if (cacheGuardado !== nuevaDataString) {
+        localStorage.setItem(cacheKey, nuevaDataString);
+        
+        // Si es la primera vez que entra (sin caché), renderizamos directo
+        if (!cacheGuardado) {
+          renderSidebarMenu(todasLasGuias);
+        } else {
+          // Si ya estaba viendo el caché y hubo cambios, mostramos el aviso elegante
+          mostrarAvisoActualizacion(todasLasGuias);
+        }
+      }
+    } catch (error) { 
+      if (!cacheGuardado) {
+        sidebar.innerHTML = `<p style="color:#aaa; text-align:center; font-size:13px; margin-top:20px;">No se pudo cargar el menú dinámico.</p>`; 
+      }
+      console.warn("Sincronización en segundo plano interrumpida:", error);
+    }
+  }
+
+  // --- FUNCIÓN AUXILIAR 1: RENDERIZADO DEL HTML ---
+  function renderSidebarMenu(todasLasGuias) {
+    const sidebar = document.getElementById('guideSidebar');
+    const t = translations[idiomaActual] || translations['en']; 
+    let htmlContent = `<div class="sidebar-title" id="txt_otherGuides">${t.txt_otherGuides || 'Other Guides'}</div>`; 
+    
+    const ordenDeseado = ['SWITCH', '3DS', 'NDSI', 'WII', 'WII MINI', 'WII U', 'VWII', 'SONY','XBOX','SD'];
+    const iconMap = { 'SWITCH':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Switch.png', '3DS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%203DS.png', 'NDSI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'NDS':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20NDS.png', 'WII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Wii.png', 'WII MINI':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20Mini.png', 'WII U':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20WiiU.png', 'VWII':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20vWii.png', 'SONY':'https://api.iconify.design/ri:playstation-line.svg?color=%23ffffff', 'XBOX':'https://api.iconify.design/ri:xbox-line.svg?color=%23ffffff', 'SD':'https://raw.githubusercontent.com/Kelonio-hub/Link-3DS/main/img/Logo%20SD.png' }; 
+    
+    let grupos = {}; 
+    todasLasGuias.forEach(g => { 
+      let cat = g.tag.split('/')[0].trim().toUpperCase(); 
+      if(!grupos[cat]) grupos[cat] = []; 
+      grupos[cat].push(g); 
+    }); 
+    
+    let currentFile = window.location.pathname.split('/').pop() || ''; 
+
+    const renderGroup = (cat, guias) => { 
+      let iconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png'; 
+      let hasActive = guias.some(g => g.link.replace('guias/', '') === currentFile); 
+      let groupClass = hasActive ? "sidebar-group" : "sidebar-group collapsed"; 
+
+      htmlContent += `<div class="${groupClass}">
+          <div class="sidebar-category" onclick="this.parentElement.classList.toggle('collapsed')">
+              <div class="cat-left"><img src="${iconSrc}"> ${cat}</div>
+              <span class="toggle-icon">▼</span>
+          </div>
+          <div class="sidebar-links-container">`; 
+
+      guias.forEach(g => {  
+        let linkName = g.link.replace('guias/', '');  
+        let isActive = (currentFile === linkName) ? 'active' : '';  
+        let displayTitle = g.titles ? (g.titles[idiomaActual] || g.titles['en'] || g.titles['es']) : (g.title || g.link); 
+        
+        // Obtenemos el mismo icono de la categoría para el enlace individual
+        let linkIconSrc = iconMap[cat] || 'https://raw.githubusercontent.com/Kelonio-hub/Archivos-Kelonio/main/img/Logo%20Zip.png';
+        
+        // Añadimos la imagen antes del texto del enlace con alineación flex
+        htmlContent += `<a href="${linkName}" class="sidebar-link ${isActive}" style="display: flex; align-items: center; gap: 8px;">
+            <img src="${linkIconSrc}" style="width: 16px; height: 16px; object-fit: contain; opacity: 0.8;">
+            <span>${displayTitle}</span>
+        </a>`;  
+      });
+      htmlContent += `</div></div>`; 
+    };
+
+    ordenDeseado.forEach(cat => { 
+      if(grupos[cat] && grupos[cat].length > 0) { 
+        renderGroup(cat, grupos[cat]); 
+        delete grupos[cat]; 
+      }
+    });
+
+    Object.keys(grupos).forEach(cat => { 
+      renderGroup(cat, grupos[cat]); 
+    });
+
+    sidebar.innerHTML = htmlContent; 
+  }
+
+  // --- FUNCIÓN AUXILIAR 2: NOTIFICACIÓN DE ACTUALIZACIÓN ---
+  function mostrarAvisoActualizacion(nuevasGuias) {
+    const sidebar = document.getElementById('guideSidebar');
+    if (!document.getElementById('updateBanner')) {
+      const aviso = document.createElement('div');
+      aviso.id = 'updateBanner';
+      aviso.style.cssText = "background: rgba(var(--glow-rgb), 0.25); border: 1px solid var(--red); color: #fff; padding: 10px; border-radius: 8px; font-size: 12px; text-align: center; margin-bottom: 15px; cursor: pointer; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.3);";
+      aviso.innerHTML = "✨ Hay nuevas guías disponibles<br><span style='font-size: 11px; text-decoration: underline; opacity: 0.9;'>Haz clic para actualizar el menú</span>";
+      
+      aviso.onmouseover = () => aviso.style.transform = "scale(1.02)";
+      aviso.onmouseout = () => aviso.style.transform = "scale(1)";
+      
+      aviso.onclick = () => {
+        renderSidebarMenu(nuevasGuias);
+        aviso.remove();
+      };
+      
+      // Inserta el aviso justo debajo del título "Otras Guías"
+      if (sidebar.firstChild) {
+        sidebar.insertBefore(aviso, sidebar.children[1] || sidebar.firstChild);
+      } else {
+        sidebar.appendChild(aviso);
+      }
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    cargarSidebar();
+  });
+
+  const mybutton = document.getElementById("backToTopBtn");
+  window.onscroll = function() { mybutton.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none"; };
+  window.onload = () => { initThemeDots(); createLanguageSelector(); updateLanguage(); comprobarAccesoTemporal(); if(accessGranted) { iniciarAppPrincipal(); } else { document.getElementById('accessWallOverlay').style.display = 'flex'; cargarProductosDisney(); initAccessPayPal(); } };
+</script>
+<script id="mobile-enhancer">
+            function adaptarLetraTitulo() {
+              const el = document.getElementById('txt_title');
+              if (!el) return;
+              const contenedor = el.parentElement;
+              if (!contenedor || contenedor.clientWidth === 0) return;
+              
+              // Reseteamos al tamaño máximo teórico para medir de forma limpia
+              el.style.setProperty('--title-size', window.innerWidth <= 650 ? '1.5rem' : '2.5rem');
+              
+              let tamañoActual = parseFloat(window.getComputedStyle(el).fontSize);
+              let limiteSeguridad = 0;
+              
+              // Bucle de compresión milimétrica
+              while (el.scrollWidth > contenedor.clientWidth && tamañoActual > 8 && limiteSeguridad < 100) {
+                tamañoActual -= 0.5;
+                el.style.setProperty('--title-size', tamañoActual + 'px');
+                limiteSeguridad++;
+              }
+            }
+
+            function inicializarMejorasMoviles() {
+              adaptarLetraTitulo();
+              
+              if (document.getElementById('mejoras-moviles-ready')) return;
+
+              // Botón Volver Arriba
+              const btnTop = document.createElement('button');
+              btnTop.id = 'btn-back-to-top';
+              btnTop.innerHTML = '↑';
+              document.body.appendChild(btnTop);
+
+              window.addEventListener('scroll', () => {
+                if (window.innerWidth <= 650) {
+                  if (window.scrollY > 400) btnTop.classList.add('visible');
+                  else btnTop.classList.remove('visible');
+                }
+              });
+              btnTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              });
+
+              // Menú Desplegable
+              const sidebar = document.querySelector('.sidebar');
+              const mainLayout = document.querySelector('.main-layout');
+              if (sidebar && mainLayout) {
+                const btnMenu = document.createElement('button');
+                btnMenu.className = 'mobile-sidebar-toggle';
+                btnMenu.innerHTML = '☰ Ver Otras Guías';
+                mainLayout.insertBefore(btnMenu, mainLayout.firstChild);
+
+                btnMenu.addEventListener('click', () => {
+                  sidebar.classList.toggle('active');
+                  if (sidebar.classList.contains('active')) {
+                    btnMenu.innerHTML = '✕ Cerrar Otras Guías';
+                    sidebar.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    btnMenu.innerHTML = '☰ Ver Otras Guías';
+                  }
+                });
+              }
+
+              const marca = document.createElement('div');
+              marca.id = 'mejoras-moviles-ready';
+              marca.style.display = 'none';
+              document.body.appendChild(marca);
+            }
+
+            // RED DE SEGURIDAD INTERNA (Multi-disparador anti-retardo)
+            window.addEventListener('resize', adaptarLetraTitulo);
+            document.addEventListener('DOMContentLoaded', inicializarMejorasMoviles);
+            window.addEventListener('load', adaptarLetraTitulo);
+            
+            // Si el navegador soporta la API de fuentes, recalcula al cargar la tipografía exacta
+            if (document.fonts) {
+              document.fonts.ready.then(adaptarLetraTitulo);
+            }
+            
+            // Ráfaga de seguridad por si la conexión o el dispositivo son lentos
+            setTimeout(adaptarLetraTitulo, 50);
+            setTimeout(adaptarLetraTitulo, 300);
+            setTimeout(adaptarLetraTitulo, 600);
+            </script>
+</body>
+</html>
